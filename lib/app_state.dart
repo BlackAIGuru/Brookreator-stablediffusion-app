@@ -33,6 +33,12 @@ class FFAppState extends ChangeNotifier {
   set username(String value) {
     _username = value;
   }
+
+  bool _pageviewstatus = false;
+  bool get pageviewstatus => _pageviewstatus;
+  set pageviewstatus(bool value) {
+    _pageviewstatus = value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

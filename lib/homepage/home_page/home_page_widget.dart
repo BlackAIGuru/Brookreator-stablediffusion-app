@@ -7,6 +7,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,12 @@ import 'home_page_model.dart';
 export 'home_page_model.dart';
 
 class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({super.key});
+  const HomePageWidget({
+    super.key,
+    bool? pageview,
+  })  : pageview = pageview ?? true;
+
+  final bool pageview;
 
   @override
   _HomePageWidgetState createState() => _HomePageWidgetState();
@@ -30,6 +36,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => HomePageModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      while (FFAppState().pageviewstatus == false) {
+        await Future.delayed(const Duration(milliseconds: 300));
+        await _model.pageViewController?.nextPage(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.ease,
+        );
+      }
+    });
 
     _model.tabBarController = TabController(
       vsync: this,

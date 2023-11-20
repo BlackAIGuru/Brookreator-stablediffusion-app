@@ -84,7 +84,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, params) => HomePageWidget(
+            pageview: params.getParam('pageview', ParamType.bool),
+          ),
         ),
         FFRoute(
           name: 'AIPortrait_Start',
