@@ -34,10 +34,16 @@ class FFAppState extends ChangeNotifier {
     _username = value;
   }
 
-  bool _pageviewstatus = false;
+  bool _pageviewstatus = true;
   bool get pageviewstatus => _pageviewstatus;
   set pageviewstatus(bool value) {
     _pageviewstatus = value;
+  }
+
+  int _currentpageindex = 0;
+  int get currentpageindex => _currentpageindex;
+  set currentpageindex(int value) {
+    _currentpageindex = value;
   }
 }
 

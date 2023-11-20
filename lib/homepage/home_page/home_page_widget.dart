@@ -39,12 +39,22 @@ class _HomePageWidgetState extends State<HomePageWidget>
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
-      while (FFAppState().pageviewstatus == false) {
-        await Future.delayed(const Duration(milliseconds: 300));
+      while (FFAppState().pageviewstatus == true) {
+        await Future.delayed(const Duration(milliseconds: 2500));
         await _model.pageViewController?.nextPage(
           duration: const Duration(milliseconds: 300),
           curve: Curves.ease,
         );
+        setState(() {
+          FFAppState().currentpageindex = _model.pageViewCurrentIndex;
+        });
+        if (FFAppState().currentpageindex == 3) {
+          await _model.pageViewController?.animateToPage(
+            0,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.ease,
+          );
+        }
       }
     });
 
