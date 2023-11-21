@@ -74,7 +74,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                         fontSize: 11.0,
                         fontWeight: FontWeight.w500,
                       ),
-              labelColor: Colors.black,
+              labelColor: const Color(0xFF406AFF),
               unselectedLabelColor: Colors.black,
               backgroundColor: Colors.white,
               unselectedBackgroundColor: const Color(0xFFEDEDED),
@@ -94,7 +94,6 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
                       child: FaIcon(
                         FontAwesomeIcons.link,
-                        color: Color(0xFF406AFF),
                         size: 16.0,
                       ),
                     ),
@@ -105,10 +104,23 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                     ),
                   ],
                 ),
-                Tab(
-                  text: FFLocalizations.of(context).getText(
-                    '064vdh2y' /* QR Code */,
-                  ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Padding(
+                      padding:
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
+                      child: Icon(
+                        Icons.file_upload_outlined,
+                        size: 20.0,
+                      ),
+                    ),
+                    Tab(
+                      text: FFLocalizations.of(context).getText(
+                        '064vdh2y' /* QR Code */,
+                      ),
+                    ),
+                  ],
                 ),
               ],
               controller: _model.tabBarController,

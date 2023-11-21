@@ -1,4 +1,4 @@
-import '/components/uploadbutton/uploadbutton_widget.dart';
+import '/components/imagesize_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -57,9 +57,9 @@ class _ExperWidgetState extends State<ExperWidget> {
           child: Align(
             alignment: const AlignmentDirectional(0.00, 0.00),
             child: wrapWithModel(
-              model: _model.uploadbuttonModel,
+              model: _model.imagesizeModel,
               updateCallback: () => setState(() {}),
-              child: const UploadbuttonWidget(),
+              child: const ImagesizeWidget(),
             ),
           ),
         ),

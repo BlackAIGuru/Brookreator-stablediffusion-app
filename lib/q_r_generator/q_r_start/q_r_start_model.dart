@@ -25,14 +25,6 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
 
   int carouselCurrentIndex = 1;
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
   // Model for slidebar component.
   late SlidebarModel slidebarModel;
   // Model for qrtoggle component.
@@ -60,12 +52,6 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     label60Model.dispose();
     tabBarController?.dispose();
     qrtoggleModel1.dispose();
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
-
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
-
     slidebarModel.dispose();
     qrtoggleModel2.dispose();
     uploadbuttonModel1.dispose();

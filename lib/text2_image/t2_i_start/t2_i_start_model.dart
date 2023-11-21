@@ -1,3 +1,4 @@
+import '/components/imagesize_widget.dart';
 import '/components/label60/label60_widget.dart';
 import '/components/slidebar/slidebar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -26,6 +27,8 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   String? Function(BuildContext, String?)? textController2Validator;
   // State field(s) for Switch widget.
   bool? switchValue;
+  // Model for imagesize component.
+  late ImagesizeModel imagesizeModel;
   // Model for slidebar component.
   late SlidebarModel slidebarModel;
 
@@ -34,6 +37,7 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   @override
   void initState(BuildContext context) {
     label60Model = createModel(context, () => Label60Model());
+    imagesizeModel = createModel(context, () => ImagesizeModel());
     slidebarModel = createModel(context, () => SlidebarModel());
   }
 
@@ -47,6 +51,7 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
     textFieldFocusNode2?.dispose();
     textController2?.dispose();
 
+    imagesizeModel.dispose();
     slidebarModel.dispose();
   }
 

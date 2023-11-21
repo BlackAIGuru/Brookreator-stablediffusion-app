@@ -130,6 +130,7 @@ class _UploadvideobuttonWidgetState extends State<UploadvideobuttonWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
+                            color: Colors.black,
                             fontSize: 13.0,
                             fontWeight: FontWeight.w600,
                           ),

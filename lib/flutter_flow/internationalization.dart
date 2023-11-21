@@ -285,85 +285,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // AIPortrait_Start
-  {
-    'rccsnfz6': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
-    '3mid1w8i': {
-      'en': 'Step 1',
-      'th': 'ขั้นตอนที่ 1',
-    },
-    'psw26b31': {
-      'en': ' : Select Style',
-      'th': ': เลือกสไตล์',
-    },
-    '07uufh2g': {
-      'en': 'Korean',
-      'th': 'เกาหลี',
-    },
-    'f1q9nnrg': {
-      'en': 'Anime',
-      'th': 'อะนิเมะ',
-    },
-    '71t0r68g': {
-      'en': 'Retro',
-      'th': 'ย้อนยุค',
-    },
-    'dhnw8k6a': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'h1ilowlq': {
-      'en': ' : Generate Image',
-      'th': ': สร้างภาพ',
-    },
-    'a6tsobka': {
-      'en': 'Model Name',
-      'th': 'ชื่อรุ่น',
-    },
-    '1j4hh3r9': {
-      'en': '',
-      'th': '',
-    },
-    '9a1lqnh3': {
-      'en': 'E.g. (Alice, Belle, Emma01)',
-      'th': 'E.g. (Alice, Belle, Emma01)',
-    },
-    'm0cck5at': {
-      'en': 'Model1',
-      'th': 'รุ่น1',
-    },
-    't5nyf6qg': {
-      'en': 'Upload',
-      'th': 'ที่อัพโหลด',
-    },
-    '8upy2nko': {
-      'en': ' 0 / 12 ',
-      'th': '0 / 12',
-    },
-    'd5a3ufv7': {
-      'en': 'images',
-      'th': 'ภาพ',
-    },
-    'g4dhzt2q': {
-      'en': 'Please select 12 photos of your face to build model.',
-      'th': 'โปรดเลือกรูปถ่ายใบหน้าของคุณ 12 รูปเพื่อสร้างแบบจำลอง',
-    },
-    'nl3j3qva': {
-      'en': 'Uploading Guide',
-      'th': 'คู่มือการอัพโหลด',
-    },
-    'p1hmi326': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
-    'sxg9hpj8': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
   // MyPictures_Open
   {
     '9swlsfwi': {
@@ -432,6 +353,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'h28j8xmv': {
       'en': 'Buy Credit',
       'th': 'ซื้อเครดิต',
+    },
+    'l9hlvsuq': {
+      'en': '60',
+      'th': '60',
     },
     'bycdemw8': {
       'en': 'Choose a package that fits your needs',
@@ -1810,20 +1735,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': '( 30 หน่วยกิต )',
     },
     'ixgc0d0f': {
-      'en': 'Smooth',
+      'en': 'Video',
       'th': 'เรียบ',
     },
     '1qf31g7d': {
       'en': '( 100 Credits )',
       'th': '( 100 หน่วยกิต )',
-    },
-    'x86hykqi': {
-      'en': 'Ultra Smooth',
-      'th': 'เรียบเนียนเป็นพิเศษ',
-    },
-    'hzk76ym9': {
-      'en': '( 200 Credits )',
-      'th': '( 200 หน่วยกิต )',
     },
     'a2t05au0': {
       'en': 'Generate ( 6 Credits )',
@@ -1836,9 +1753,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // QR_Start
   {
-    'lqst1k7w': {
+    'vpw8w4g4': {
       'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
+      'th': 'ข้อความเป็นรูปภาพ',
     },
     'w8t6fd99': {
       'en': 'QR Prompt',
@@ -1903,44 +1820,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b4nki6b3': {
       'en': 'Tree House',
       'th': 'บ้านต้นไม้',
-    },
-    '4bl5vq5v': {
-      'en': 'Image description',
-      'th': 'คำอธิบายรูปภาพ',
-    },
-    '2e87mvky': {
-      'en': 'Insert keywords in English',
-      'th': 'ใส่คำสำคัญเป็นภาษาอังกฤษ',
-    },
-    'rh9cnn08': {
-      'en': 'I want to dream of ...',
-      'th': 'I want to dream of ...',
-    },
-    '3w9u4wws': {
-      'en':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-      'th':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-    },
-    'wsn0csab': {
-      'en': 'Unwanted Keywords (Optional)',
-      'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
-    },
-    'e15g521q': {
-      'en':
-          'Remove from image. Example: color red, big objects, mountain scenes, etc.',
-      'th':
-          'ลบออกจากภาพ ตัวอย่าง: color red, big objects, mountain scenes, etc.',
-    },
-    'whic6rg5': {
-      'en': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
-      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
-    },
-    'f8jhpu4z': {
-      'en':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-      'th':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
     },
     '859s7ttt': {
       'en': 'Generate ( 6 Credits )',
@@ -2249,6 +2128,85 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'สร้าง ( 6 หน่วยกิต )',
     },
     'f61rugif': {
+      'en': 'Home',
+      'th': 'บ้าน',
+    },
+  },
+  // AIPortrait_Start
+  {
+    'b2phjhxr': {
+      'en': 'AI Portrait',
+      'th': 'ข้อความเป็นรูปภาพ',
+    },
+    '8cnbq8m0': {
+      'en': 'Step 1',
+      'th': 'ขั้นตอนที่ 1',
+    },
+    'jm8982ch': {
+      'en': ' : Select Style',
+      'th': ': เลือกสไตล์',
+    },
+    '6pkurzrn': {
+      'en': 'Korean',
+      'th': 'เกาหลี',
+    },
+    '2f39eesg': {
+      'en': 'Anime',
+      'th': 'อะนิเมะ',
+    },
+    'kgq5f8kl': {
+      'en': 'Retro',
+      'th': 'ย้อนยุค',
+    },
+    'awkbn8ct': {
+      'en': 'Step 2',
+      'th': 'ขั้นตอนที่ 2',
+    },
+    '0gqrjxw6': {
+      'en': ' : Generate Image',
+      'th': ': สร้างภาพ',
+    },
+    'fww31o1t': {
+      'en': 'Model Name',
+      'th': 'ชื่อรุ่น',
+    },
+    '32i9wk82': {
+      'en': '',
+      'th': '',
+    },
+    'z75fk30w': {
+      'en': 'E.g. (Alice, Belle, Emma01)',
+      'th': 'E.g. (Alice, Belle, Emma01)',
+    },
+    'qtfbkqbr': {
+      'en': 'Model1',
+      'th': 'รุ่น1',
+    },
+    'w8ntgc3p': {
+      'en': 'Upload',
+      'th': 'ที่อัพโหลด',
+    },
+    'zbq9e46r': {
+      'en': ' 0 / 12 ',
+      'th': '0 / 12',
+    },
+    '1ri98sei': {
+      'en': 'images',
+      'th': 'ภาพ',
+    },
+    '6387pz0w': {
+      'en': 'Please select 12 photos of your face to build model.',
+      'th': 'โปรดเลือกรูปถ่ายใบหน้าของคุณ 12 รูปเพื่อสร้างแบบจำลอง',
+    },
+    '56xppndv': {
+      'en': 'Uploading Guide',
+      'th': 'คู่มือการอัพโหลด',
+    },
+    '5yp3vfbg': {
+      'en': 'Generate ( 6 Credits )',
+      'th': 'สร้าง ( 6 หน่วยกิต )',
+    },
+    'oltds1oq': {
       'en': 'Home',
       'th': 'บ้าน',
     },
@@ -2678,6 +2636,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'n1rj6vvv': {
       'en': 'Sign in with Google',
       'th': 'ลงชื่อเข้าใช้งานด้วย Google',
+    },
+  },
+  // imagesize
+  {
+    'im1so1rs': {
+      'en': 'Width (px)',
+      'th': '',
+    },
+    'rrtjqwje': {
+      'en': 'The width of the generated image.',
+      'th': '',
+    },
+    'zssns26a': {
+      'en': 'Height (px)',
+      'th': '',
+    },
+    'fd9ghpoe': {
+      'en': 'The heigth of the generated image.',
+      'th': '',
     },
   },
   // Miscellaneous

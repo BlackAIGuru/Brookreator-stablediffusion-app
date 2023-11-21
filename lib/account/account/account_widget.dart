@@ -166,6 +166,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Inter',
+                                    color: Colors.black,
                                     fontWeight: FontWeight.w600,
                                   ),
                             ),
@@ -177,20 +178,18 @@ class _AccountWidgetState extends State<AccountWidget> {
                                       0.0, 0.0, 1.0, 0.0),
                                   child: FlutterFlowLanguageSelector(
                                     width: 130.0,
-                                    height: 35.0,
+                                    height: 37.0,
                                     backgroundColor: const Color(0xFFF4F4F4),
                                     borderColor: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     dropdownColor: const Color(0xFFF4F4F4),
-                                    dropdownIconColor:
-                                        FlutterFlowTheme.of(context)
-                                            .primaryText,
+                                    dropdownIconColor: Colors.black,
                                     textStyle: GoogleFonts.getFont(
                                       'Inter',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontWeight: FontWeight.normal,
-                                      fontSize: 13.0,
+                                      fontSize: 12.0,
                                     ),
                                     hideFlags: false,
                                     flagSize: 20.0,
@@ -267,6 +266,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
+                                      color: Colors.black,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
@@ -334,6 +334,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
+                                      color: Colors.black,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),
@@ -405,6 +406,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
+                                      color: Colors.black,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),

@@ -147,7 +147,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                     .bodyMedium
                                     .override(
                                       fontFamily: 'Inter',
-                                      color: const Color(0xEAFFFFFF),
+                                      color: FlutterFlowTheme.of(context).info,
                                       fontWeight: FontWeight.w600,
                                     ),
                               ),

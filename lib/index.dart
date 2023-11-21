@@ -1,7 +1,5 @@
 // Export pages
 export '/homepage/home_page/home_page_widget.dart' show HomePageWidget;
-export '/a_iportrait/a_i_portrait_start/a_i_portrait_start_widget.dart'
-    show AIPortraitStartWidget;
 export '/homepage/my_pictures_open/my_pictures_open_widget.dart'
     show MyPicturesOpenWidget;
 export '/account/buy_credit/buy_credit_widget.dart' show BuyCreditWidget;
@@ -27,3 +25,5 @@ export '/exper/exper_widget.dart' show ExperWidget;
 export '/homepage/forgotpassword/forgotpassword_widget.dart'
     show ForgotpasswordWidget;
 export '/text2_image/t2_i_start/t2_i_start_widget.dart' show T2IStartWidget;
+export '/a_iportrait/a_i_portrait_start/a_i_portrait_start_widget.dart'
+    show AIPortraitStartWidget;

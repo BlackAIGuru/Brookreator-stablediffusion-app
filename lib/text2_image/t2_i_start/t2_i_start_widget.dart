@@ -1,3 +1,4 @@
+import '/components/imagesize_widget.dart';
 import '/components/label60/label60_widget.dart';
 import '/components/slidebar/slidebar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -1339,9 +1340,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'Plus Jakarta Sans',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .primaryText,
+                                                                    color: const Color(
+                                                                        0xB36F6F6F),
                                                                   ),
                                                           alignLabelWithHint:
                                                               false,
@@ -2147,75 +2147,111 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                             ],
                                           ),
                                         ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 10.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.max,
-                                            children: [
+                                        Column(
+                                          mainAxisSize: MainAxisSize.max,
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      0.0, 0.0, 0.0, 10.0),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.max,
+                                                children: [
+                                                  Align(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            -1.00, 0.00),
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  19.0,
+                                                                  12.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      child: Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '35l3lhcj' /* Resize manually */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Inter',
+                                                              fontSize: 13.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Flexible(
+                                                    child: Align(
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                              1.00, 0.00),
+                                                      child: Padding(
+                                                        padding:
+                                                            const EdgeInsetsDirectional
+                                                                .fromSTEB(
+                                                                    0.0,
+                                                                    10.0,
+                                                                    0.0,
+                                                                    0.0),
+                                                        child: Switch.adaptive(
+                                                          value: _model
+                                                                  .switchValue ??=
+                                                              false,
+                                                          onChanged:
+                                                              (newValue) async {
+                                                            setState(() => _model
+                                                                    .switchValue =
+                                                                newValue);
+                                                          },
+                                                          activeColor:
+                                                              const Color(0xFF0957DE),
+                                                          activeTrackColor:
+                                                              const Color(0x8A0957DE),
+                                                          inactiveTrackColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .alternate,
+                                                          inactiveThumbColor:
+                                                              FlutterFlowTheme.of(
+                                                                      context)
+                                                                  .secondaryText,
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                            if (_model.switchValue ?? true)
                                               Align(
                                                 alignment: const AlignmentDirectional(
-                                                    -1.00, 0.00),
+                                                    0.00, 0.00),
                                                 child: Padding(
                                                   padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          19.0, 12.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '35l3lhcj' /* Resize manually */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily: 'Inter',
-                                                          fontSize: 13.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Flexible(
-                                                child: Align(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          1.00, 0.00),
-                                                  child: Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 10.0,
-                                                                0.0, 0.0),
-                                                    child: Switch.adaptive(
-                                                      value:
-                                                          _model.switchValue ??=
-                                                              false,
-                                                      onChanged:
-                                                          (newValue) async {
-                                                        setState(() =>
-                                                            _model.switchValue =
-                                                                newValue);
-                                                      },
-                                                      activeColor:
-                                                          const Color(0xFF0957DE),
-                                                      activeTrackColor:
-                                                          const Color(0x8A0957DE),
-                                                      inactiveTrackColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .alternate,
-                                                      inactiveThumbColor:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
+                                                          20.0, 0.0, 20.0, 0.0),
+                                                  child: Container(
+                                                    decoration: const BoxDecoration(),
+                                                    child: wrapWithModel(
+                                                      model:
+                                                          _model.imagesizeModel,
+                                                      updateCallback: () =>
+                                                          setState(() {}),
+                                                      child: const ImagesizeWidget(),
                                                     ),
                                                   ),
                                                 ),
                                               ),
-                                            ],
-                                          ),
+                                          ],
                                         ),
                                       ],
                                     ),
@@ -2253,26 +2289,30 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                   child: FFButtonWidget(
-                    onPressed: () async {
-                      await showModalBottomSheet(
-                        isScrollControlled: true,
-                        backgroundColor: Colors.transparent,
-                        enableDrag: false,
-                        context: context,
-                        builder: (context) {
-                          return GestureDetector(
-                            onTap: () => _model.unfocusNode.canRequestFocus
-                                ? FocusScope.of(context)
-                                    .requestFocus(_model.unfocusNode)
-                                : FocusScope.of(context).unfocus(),
-                            child: Padding(
-                              padding: MediaQuery.viewInsetsOf(context),
-                              child: const ImageresultWidget(),
-                            ),
-                          );
-                        },
-                      ).then((value) => safeSetState(() {}));
-                    },
+                    onPressed: (_model.textController1.text == '') ||
+                            (_model.textController2.text == '')
+                        ? null
+                        : () async {
+                            await showModalBottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              enableDrag: false,
+                              context: context,
+                              builder: (context) {
+                                return GestureDetector(
+                                  onTap: () =>
+                                      _model.unfocusNode.canRequestFocus
+                                          ? FocusScope.of(context)
+                                              .requestFocus(_model.unfocusNode)
+                                          : FocusScope.of(context).unfocus(),
+                                  child: Padding(
+                                    padding: MediaQuery.viewInsetsOf(context),
+                                    child: const ImageresultWidget(),
+                                  ),
+                                );
+                              },
+                            ).then((value) => safeSetState(() {}));
+                          },
                     text: FFLocalizations.of(context).getText(
                       'yfgjz951' /* Generate ( 6 Credits ) */,
                     ),
@@ -2287,7 +2327,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Plus Jakarta Sans',
-                                color: Colors.white,
+                                color: FlutterFlowTheme.of(context).info,
                               ),
                       elevation: 3.0,
                       borderSide: const BorderSide(
@@ -2295,6 +2335,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                         width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(26.0),
+                      disabledColor: const Color(0x7B406AFF),
+                      disabledTextColor: FlutterFlowTheme.of(context).info,
                     ),
                   ),
                 ),

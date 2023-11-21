@@ -494,7 +494,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Plus Jakarta Sans',
-                                color: Colors.white,
+                                color: FlutterFlowTheme.of(context).info,
                                 fontWeight: FontWeight.w600,
                               ),
                       elevation: 3.0,

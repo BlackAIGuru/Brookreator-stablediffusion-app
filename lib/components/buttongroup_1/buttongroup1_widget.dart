@@ -144,9 +144,9 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                     print('Button pressed ...');
                   },
                   text: '',
-                  icon: Icon(
+                  icon: const Icon(
                     Icons.keyboard_control,
-                    color: FlutterFlowTheme.of(context).secondaryText,
+                    color: Colors.black,
                     size: 15.0,
                   ),
                   options: FFButtonOptions(

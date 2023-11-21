@@ -136,6 +136,7 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Plus Jakarta Sans',
+                            color: Colors.black,
                             fontSize: 13.0,
                             fontWeight: FontWeight.w600,
                           ),

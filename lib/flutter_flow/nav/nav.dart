@@ -89,11 +89,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'AIPortrait_Start',
-          path: '/aIPortraitStart',
-          builder: (context, params) => const AIPortraitStartWidget(),
-        ),
-        FFRoute(
           name: 'MyPictures_Open',
           path: '/myPicturesOpen',
           builder: (context, params) => const MyPicturesOpenWidget(),
@@ -187,6 +182,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'T2I_Start',
           path: '/t2IStart',
           builder: (context, params) => const T2IStartWidget(),
+        ),
+        FFRoute(
+          name: 'AIPortrait_Start',
+          path: '/aIPortraitStart',
+          builder: (context, params) => const AIPortraitStartWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

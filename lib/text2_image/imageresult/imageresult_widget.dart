@@ -273,10 +273,9 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                         print('Button pressed ...');
                                       },
                                       text: '',
-                                      icon: Icon(
+                                      icon: const Icon(
                                         Icons.keyboard_control,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
+                                        color: Colors.black,
                                         size: 15.0,
                                       ),
                                       options: FFButtonOptions(

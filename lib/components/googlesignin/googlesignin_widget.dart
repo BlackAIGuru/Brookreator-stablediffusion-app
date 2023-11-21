@@ -76,7 +76,7 @@ class _GooglesigninWidgetState extends State<GooglesigninWidget> {
                   textStyle: GoogleFonts.getFont(
                     'Roboto',
                     color: const Color(0xFF606060),
-                    fontSize: 17.0,
+                    fontSize: 15.0,
                   ),
                   elevation: 4.0,
                   borderSide: const BorderSide(

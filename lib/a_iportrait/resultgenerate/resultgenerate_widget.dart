@@ -1,6 +1,5 @@
 import '/components/buttongroup_1/buttongroup1_widget.dart';
 import '/components/buttongroup_2/buttongroup2_widget.dart';
-import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -90,23 +89,25 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
-                      child: FlutterFlowIconButton(
-                        borderColor:
-                            FlutterFlowTheme.of(context).primaryBackground,
-                        borderRadius: 30.0,
-                        borderWidth: 2.0,
-                        buttonSize: 44.0,
-                        icon: Icon(
-                          Icons.close,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 30.0,
+                    Align(
+                      alignment: const AlignmentDirectional(1.00, -1.00),
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            Navigator.pop(context);
+                          },
+                          child: Icon(
+                            Icons.close,
+                            color: FlutterFlowTheme.of(context).secondaryText,
+                            size: 30.0,
+                          ),
                         ),
-                        onPressed: () async {
-                          Navigator.pop(context);
-                        },
                       ),
                     ),
                   ],

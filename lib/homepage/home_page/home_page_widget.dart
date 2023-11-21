@@ -525,7 +525,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           'Inter',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .secondaryText,
                                                                       fontSize:
                                                                           12.0,
                                                                       fontWeight:
@@ -734,7 +734,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           'Inter',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .secondaryText,
                                                                       fontSize:
                                                                           12.0,
                                                                       fontWeight:
@@ -943,7 +943,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           'Inter',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .secondaryText,
                                                                       fontSize:
                                                                           12.0,
                                                                       fontWeight:
@@ -1152,7 +1152,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           'Inter',
                                                                       color: FlutterFlowTheme.of(
                                                                               context)
-                                                                          .primaryText,
+                                                                          .secondaryText,
                                                                       fontSize:
                                                                           12.0,
                                                                       fontWeight:
@@ -1262,20 +1262,19 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                 child: TabBar(
                                   labelColor: const Color(0xFF0957DE),
                                   unselectedLabelColor:
-                                      FlutterFlowTheme.of(context)
-                                          .secondaryText,
+                                      FlutterFlowTheme.of(context).primaryText,
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
                                         fontFamily: 'Plus Jakarta Sans',
                                         fontSize: 15.0,
-                                        fontWeight: FontWeight.bold,
+                                        fontWeight: FontWeight.w600,
                                       ),
                                   unselectedLabelStyle: const TextStyle(),
                                   indicatorColor: const Color(0xFF2781FB),
-                                  indicatorWeight: 3.0,
+                                  indicatorWeight: 4.0,
                                   padding: const EdgeInsetsDirectional.fromSTEB(
-                                      5.0, 10.0, 5.0, 0.0),
+                                      0.0, 10.0, 0.0, 0.0),
                                   tabs: [
                                     Tab(
                                       text: FFLocalizations.of(context).getText(

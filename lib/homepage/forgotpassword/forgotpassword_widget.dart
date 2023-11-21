@@ -212,7 +212,7 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
                 alignment: const AlignmentDirectional(0.00, 0.00),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(15.0, 25.0, 15.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       if (_model.emailAddressController.text.isEmpty) {

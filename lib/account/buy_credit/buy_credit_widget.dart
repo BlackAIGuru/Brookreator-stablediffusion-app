@@ -1,4 +1,3 @@
-import '/components/label60/label60_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -99,13 +98,55 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
-                        child: Container(
-                          height: 33.0,
-                          decoration: const BoxDecoration(),
-                          child: wrapWithModel(
-                            model: _model.label60Model,
-                            updateCallback: () => setState(() {}),
-                            child: const Label60Widget(),
+                        child: InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.pushNamed('Account');
+                          },
+                          child: Container(
+                            width: 80.0,
+                            height: 30.0,
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(30.0),
+                              border: Border.all(
+                                color: const Color(0xFFE4E4E4),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      15.0, 0.0, 0.0, 0.0),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'l9hlvsuq' /* 60 */,
+                                    ),
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .override(
+                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontSize: 18.0,
+                                        ),
+                                  ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 20.0, 0.0),
+                                  child: Icon(
+                                    Icons.monetization_on_outlined,
+                                    color: Color(0xFF406AFF),
+                                    size: 24.0,
+                                  ),
+                                ),
+                              ].divide(const SizedBox(width: 10.0)),
+                            ),
                           ),
                         ),
                       ),
