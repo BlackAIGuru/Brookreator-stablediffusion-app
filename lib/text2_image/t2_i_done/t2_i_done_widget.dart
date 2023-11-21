@@ -1,5 +1,5 @@
 import '/auth/base_auth_user_provider.dart';
-import '/components/label60/label60_widget.dart';
+import '/components/credit/credit_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -92,7 +92,7 @@ class _T2IDoneWidgetState extends State<T2IDoneWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('HomePage');
+                                context.pushNamed('HomePagedemo');
                               },
                               child: FaIcon(
                                 FontAwesomeIcons.chevronLeft,
@@ -126,9 +126,9 @@ class _T2IDoneWidgetState extends State<T2IDoneWidget> {
                                 height: 33.0,
                                 decoration: const BoxDecoration(),
                                 child: wrapWithModel(
-                                  model: _model.label60Model,
+                                  model: _model.creditModel,
                                   updateCallback: () => setState(() {}),
-                                  child: const Label60Widget(),
+                                  child: const CreditWidget(),
                                 ),
                               ),
                             ),

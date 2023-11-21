@@ -82,16 +82,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const OpenAppScreenWidget(),
         ),
         FFRoute(
-          name: 'HomePage',
-          path: '/homePage',
-          builder: (context, params) => HomePageWidget(
+          name: 'HomePagedemo',
+          path: '/homePagedemo',
+          builder: (context, params) => HomePagedemoWidget(
             pageview: params.getParam('pageview', ParamType.bool),
           ),
-        ),
-        FFRoute(
-          name: 'MyPictures_Open',
-          path: '/myPicturesOpen',
-          builder: (context, params) => const MyPicturesOpenWidget(),
         ),
         FFRoute(
           name: 'Buy_Credit',
@@ -154,11 +149,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const T2IResultWidget(),
         ),
         FFRoute(
-          name: 'AIVideo_Start',
-          path: '/aIVideoStart',
-          builder: (context, params) => const AIVideoStartWidget(),
-        ),
-        FFRoute(
           name: 'QR_Start',
           path: '/qRStart',
           builder: (context, params) => const QRStartWidget(),
@@ -167,11 +157,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'OpenAppScreen',
           path: '/openAppScreen',
           builder: (context, params) => const OpenAppScreenWidget(),
-        ),
-        FFRoute(
-          name: 'exper',
-          path: '/exper',
-          builder: (context, params) => const ExperWidget(),
         ),
         FFRoute(
           name: 'Forgotpassword',
@@ -187,6 +172,23 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'AIPortrait_Start',
           path: '/aIPortraitStart',
           builder: (context, params) => const AIPortraitStartWidget(),
+        ),
+        FFRoute(
+          name: 'AIVideo_Start',
+          path: '/aIVideoStart',
+          builder: (context, params) => const AIVideoStartWidget(),
+        ),
+        FFRoute(
+          name: 'HomePage',
+          path: '/homePage',
+          builder: (context, params) => HomePageWidget(
+            pageview: params.getParam('pageview', ParamType.bool),
+          ),
+        ),
+        FFRoute(
+          name: 'QR_Startdemo',
+          path: '/qRStartdemo',
+          builder: (context, params) => const QRStartdemoWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

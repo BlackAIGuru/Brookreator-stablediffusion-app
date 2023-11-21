@@ -131,7 +131,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Plus Jakarta Sans',
-                                    fontSize: 10.0,
+                                    fontSize: 11.0,
                                   ),
                         ),
                       ),
@@ -141,7 +141,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontSize: 11.0,
                             ),
                       ),
                       Text(
@@ -150,7 +150,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontSize: 11.0,
                             ),
                       ),
                       Text(
@@ -159,7 +159,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontSize: 11.0,
                             ),
                       ),
                       Text(
@@ -168,7 +168,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontSize: 11.0,
                             ),
                       ),
                       Text(
@@ -177,7 +177,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontSize: 11.0,
                             ),
                       ),
                       Text(

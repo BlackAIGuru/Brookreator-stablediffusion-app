@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'label60_widget.dart' show Label60Widget;
+import 'cropimage_widget.dart' show CropimageWidget;
 import 'package:flutter/material.dart';
 
-class Label60Model extends FlutterFlowModel<Label60Widget> {
+class CropimageModel extends FlutterFlowModel<CropimageWidget> {
   /// Initialization and disposal methods.
 
   @override

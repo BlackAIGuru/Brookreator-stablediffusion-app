@@ -1,6 +1,6 @@
 import '/a_iportrait/resultgenerate/resultgenerate_widget.dart';
 import '/a_iportrait/uplodingguide/uplodingguide_widget.dart';
-import '/components/label60/label60_widget.dart';
+import '/components/credit/credit_widget.dart';
 import '/components/slidebar/slidebar_widget.dart';
 import '/components/uploadbutton/uploadbutton_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -141,9 +141,9 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                         height: 33.0,
                                         decoration: const BoxDecoration(),
                                         child: wrapWithModel(
-                                          model: _model.label60Model,
+                                          model: _model.creditModel,
                                           updateCallback: () => setState(() {}),
-                                          child: const Label60Widget(),
+                                          child: const CreditWidget(),
                                         ),
                                       ),
                                     ),

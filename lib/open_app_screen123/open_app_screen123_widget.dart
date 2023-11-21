@@ -361,7 +361,7 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                       const EdgeInsetsDirectional.fromSTEB(52.0, 121.0, 52.0, 69.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('HomePage');
+                      context.pushNamed('HomePagedemo');
                     },
                     text: FFLocalizations.of(context).getText(
                       'o7eik5h9' /* Start Generate */,

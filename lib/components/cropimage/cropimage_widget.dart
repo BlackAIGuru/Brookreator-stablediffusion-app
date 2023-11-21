@@ -4,18 +4,18 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'crop_image_model.dart';
-export 'crop_image_model.dart';
+import 'cropimage_model.dart';
+export 'cropimage_model.dart';
 
-class CropImageWidget extends StatefulWidget {
-  const CropImageWidget({super.key});
+class CropimageWidget extends StatefulWidget {
+  const CropimageWidget({super.key});
 
   @override
-  _CropImageWidgetState createState() => _CropImageWidgetState();
+  _CropimageWidgetState createState() => _CropimageWidgetState();
 }
 
-class _CropImageWidgetState extends State<CropImageWidget> {
-  late CropImageModel _model;
+class _CropimageWidgetState extends State<CropimageWidget> {
+  late CropimageModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -26,7 +26,7 @@ class _CropImageWidgetState extends State<CropImageWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CropImageModel());
+    _model = createModel(context, () => CropimageModel());
   }
 
   @override

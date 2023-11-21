@@ -1,4 +1,4 @@
-import '/components/label60/label60_widget.dart';
+import '/components/credit/credit_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 't2_i_done_widget.dart' show T2IDoneWidget;
 import 'package:carousel_slider/carousel_slider.dart';
@@ -8,8 +8,8 @@ class T2IDoneModel extends FlutterFlowModel<T2IDoneWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Model for label60 component.
-  late Label60Model label60Model;
+  // Model for credit component.
+  late CreditModel creditModel;
   // State field(s) for Carousel widget.
   CarouselController? carouselController;
 
@@ -32,13 +32,13 @@ class T2IDoneModel extends FlutterFlowModel<T2IDoneWidget> {
 
   @override
   void initState(BuildContext context) {
-    label60Model = createModel(context, () => Label60Model());
+    creditModel = createModel(context, () => CreditModel());
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    label60Model.dispose();
+    creditModel.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 

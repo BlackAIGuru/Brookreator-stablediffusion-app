@@ -98,6 +98,8 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: ScrollbarThemeData(
+          thickness: MaterialStateProperty.all(3.0),
+          radius: const Radius.circular(30.0),
           thumbColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.dragged)) {
               return const Color(0xff1371ff);
@@ -107,11 +109,14 @@ class _MyAppState extends State<MyApp> {
             }
             return const Color(0xff1371ff);
           }),
+          minThumbLength: 5.0,
         ),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         scrollbarTheme: ScrollbarThemeData(
+          thickness: MaterialStateProperty.all(3.0),
+          radius: const Radius.circular(30.0),
           thumbColor: MaterialStateProperty.resolveWith((states) {
             if (states.contains(MaterialState.dragged)) {
               return const Color(0xff1371ff);
@@ -121,6 +126,7 @@ class _MyAppState extends State<MyApp> {
             }
             return const Color(0xff1371ff);
           }),
+          minThumbLength: 5.0,
         ),
       ),
       themeMode: _themeMode,

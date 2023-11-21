@@ -68,7 +68,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                             const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'im1so1rs' /* Width (px) */,
+                            '8zjuhx80' /* Width (px) */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -86,7 +86,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'rrtjqwje' /* The width of the generated ima... */,
+                            '2cup3of9' /* The width of the generated ima... */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -158,7 +158,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                             const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'zssns26a' /* Height (px) */,
+                            'ju5c4eza' /* Height (px) */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -176,7 +176,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
-                            'fd9ghpoe' /* The heigth of the generated im... */,
+                            'fpjsyedb' /* The heigth of the generated im... */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(

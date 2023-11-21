@@ -1,18 +1,15 @@
-import '/components/credit/credit_widget.dart';
 import '/components/footbar/footbar_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'home_page_widget.dart' show HomePageWidget;
+import 'home_pagedemo_widget.dart' show HomePagedemoWidget;
 import 'package:flutter/material.dart';
 
-class HomePageModel extends FlutterFlowModel<HomePageWidget> {
+class HomePagedemoModel extends FlutterFlowModel<HomePagedemoWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   // Model for signinicon component.
   late SigniniconModel signiniconModel;
-  // Model for credit component.
-  late CreditModel creditModel;
   // State field(s) for PageView widget.
   PageController? pageViewController;
 
@@ -34,7 +31,6 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   @override
   void initState(BuildContext context) {
     signiniconModel = createModel(context, () => SigniniconModel());
-    creditModel = createModel(context, () => CreditModel());
     footbarModel = createModel(context, () => FootbarModel());
   }
 
@@ -42,7 +38,6 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   void dispose() {
     unfocusNode.dispose();
     signiniconModel.dispose();
-    creditModel.dispose();
     tabBarController?.dispose();
     footbarModel.dispose();
   }

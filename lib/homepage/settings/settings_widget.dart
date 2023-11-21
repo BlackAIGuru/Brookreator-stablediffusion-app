@@ -72,14 +72,14 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           alignment: const AlignmentDirectional(-1.00, 0.00),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                20.0, 0.0, 0.0, 0.0),
+                                20.0, 3.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('HomePage');
+                                context.safePop();
                               },
                               child: FaIcon(
                                 FontAwesomeIcons.chevronLeft,

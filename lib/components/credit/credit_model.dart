@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'crop_image_widget.dart' show CropImageWidget;
+import 'credit_widget.dart' show CreditWidget;
 import 'package:flutter/material.dart';
 
-class CropImageModel extends FlutterFlowModel<CropImageWidget> {
+class CreditModel extends FlutterFlowModel<CreditWidget> {
   /// Initialization and disposal methods.
 
   @override

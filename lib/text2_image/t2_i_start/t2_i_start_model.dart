@@ -1,5 +1,5 @@
-import '/components/imagesize_widget.dart';
-import '/components/label60/label60_widget.dart';
+import '/components/credit/credit_widget.dart';
+import '/components/imagesize/imagesize_widget.dart';
 import '/components/slidebar/slidebar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 't2_i_start_widget.dart' show T2IStartWidget;
@@ -10,8 +10,8 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Model for label60 component.
-  late Label60Model label60Model;
+  // Model for credit component.
+  late CreditModel creditModel;
   // State field(s) for Carousel widget.
   CarouselController? carouselController;
 
@@ -36,7 +36,7 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
 
   @override
   void initState(BuildContext context) {
-    label60Model = createModel(context, () => Label60Model());
+    creditModel = createModel(context, () => CreditModel());
     imagesizeModel = createModel(context, () => ImagesizeModel());
     slidebarModel = createModel(context, () => SlidebarModel());
   }
@@ -44,7 +44,7 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    label60Model.dispose();
+    creditModel.dispose();
     textFieldFocusNode1?.dispose();
     textController1?.dispose();
 

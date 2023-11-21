@@ -1,5 +1,5 @@
-import '/components/imagesize_widget.dart';
-import '/components/label60/label60_widget.dart';
+import '/components/credit/credit_widget.dart';
+import '/components/imagesize/imagesize_widget.dart';
 import '/components/slidebar/slidebar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -147,9 +147,9 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                         height: 33.0,
                                         decoration: const BoxDecoration(),
                                         child: wrapWithModel(
-                                          model: _model.label60Model,
+                                          model: _model.creditModel,
                                           updateCallback: () => setState(() {}),
-                                          child: const Label60Widget(),
+                                          child: const CreditWidget(),
                                         ),
                                       ),
                                     ),
@@ -393,52 +393,57 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                             ),
                                           ],
                                         ),
-                                        Stack(
+                                        Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
-                                          children: [
-                                            Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.00, 0.00),
-                                              child: ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(10.0),
-                                                child: Image.asset(
-                                                  'assets/images/Aquatic_Sci-Fi.jpg',
-                                                  width: 101.0,
-                                                  height: 106.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                            ),
-                                            Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.00, 1.00),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 12.0),
-                                                child: Text(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                    'wkr608cc' /* Aquatic Sci-Fi */,
+                                              const AlignmentDirectional(0.00, 0.00),
+                                          child: Stack(
+                                            alignment:
+                                                const AlignmentDirectional(0.0, 0.0),
+                                            children: [
+                                              Align(
+                                                alignment: const AlignmentDirectional(
+                                                    0.00, 0.00),
+                                                child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          10.0),
+                                                  child: Image.asset(
+                                                    'assets/images/Aquatic_Sci-Fi.jpg',
+                                                    width: 101.0,
+                                                    height: 106.0,
+                                                    fit: BoxFit.cover,
                                                   ),
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
-                                                      .bodyMedium
-                                                      .override(
-                                                        fontFamily: 'Inter',
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .primaryBackground,
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                      ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
+                                              Align(
+                                                alignment: const AlignmentDirectional(
+                                                    0.00, 1.00),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 0.0, 12.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      'wkr608cc' /* Aquatic Sci-Fi */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily: 'Inter',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                         Stack(
                                           alignment:
