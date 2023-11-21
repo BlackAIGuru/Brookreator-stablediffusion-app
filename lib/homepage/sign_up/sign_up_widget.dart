@@ -485,11 +485,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           return;
                         }
 
+                        context.pushNamedAuth('HomePage', context.mounted);
+
                         setState(() {
                           FFAppState().username = _model.nameController.text;
                         });
-
-                        context.goNamedAuth('HomePage', context.mounted);
                       },
                       text: FFLocalizations.of(context).getText(
                         'mj981gg7' /* Sign Up */,

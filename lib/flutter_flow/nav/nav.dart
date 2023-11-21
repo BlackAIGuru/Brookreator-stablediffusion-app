@@ -144,11 +144,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const MyPictureWidget(),
         ),
         FFRoute(
-          name: 'T2I_Start',
-          path: '/t2IStart',
-          builder: (context, params) => const T2IStartWidget(),
-        ),
-        FFRoute(
           name: 'Generating',
           path: '/generating',
           builder: (context, params) => const GeneratingWidget(),
@@ -187,6 +182,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Forgotpassword',
           path: '/forgotpassword',
           builder: (context, params) => const ForgotpasswordWidget(),
+        ),
+        FFRoute(
+          name: 'T2I_Start',
+          path: '/t2IStart',
+          builder: (context, params) => const T2IStartWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

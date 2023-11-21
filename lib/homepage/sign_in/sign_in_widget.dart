@@ -388,7 +388,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   return;
                                 }
 
-                                context.goNamedAuth(
+                                context.pushNamedAuth(
                                     'HomePage', context.mounted);
                               },
                               text: FFLocalizations.of(context).getText(

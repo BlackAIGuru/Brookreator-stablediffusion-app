@@ -1428,187 +1428,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'รูปของฉัน',
     },
   },
-  // T2I_Start
-  {
-    'ijk0j3kq': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'bxx21zl0': {
-      'en': 'Step 1',
-      'th': 'ขั้นตอนที่ 1',
-    },
-    'bbgkgg2u': {
-      'en': ' : Select a Theme',
-      'th': ': เลือกธีม',
-    },
-    '6mohkesr': {
-      'en': 'None',
-      'th': 'ไม่มี',
-    },
-    'mp5nhy3v': {
-      'en': 'Flower Field',
-      'th': 'ทุ่งดอกไม้',
-    },
-    '3nhwdj7h': {
-      'en': 'Biker',
-      'th': 'ไบค์เกอร์',
-    },
-    'e4vl3npi': {
-      'en': 'Ancient-Ruins',
-      'th': 'ซากปรักหักพังโบราณ',
-    },
-    'k3j41iwi': {
-      'en': 'Aquatic Sci-Fi',
-      'th': 'ไซไฟทางน้ำ',
-    },
-    'a6igct3x': {
-      'en': 'Bedroom in Rome',
-      'th': 'ห้องนอนในโรม',
-    },
-    '8fo0l80k': {
-      'en': 'Birthday Cat',
-      'th': 'วันเกิดแมว',
-    },
-    'bpq8tgaf': {
-      'en': 'Christmas',
-      'th': 'คริสต์มาส',
-    },
-    'mg8wr6ca': {
-      'en': 'Dreamy Globe',
-      'th': 'ลูกโลกแห่งความฝัน',
-    },
-    'gwqv1sim': {
-      'en': 'Futuristic Car',
-      'th': 'รถยนต์แห่งอนาคต',
-    },
-    '8lou56cm': {
-      'en': 'Hunter',
-      'th': 'ฮันเตอร์',
-    },
-    'wkdanefy': {
-      'en': 'Lazy Peach',
-      'th': 'ขี้เกียจพีช',
-    },
-    'ierh5y3q': {
-      'en': 'Lunar Year',
-      'th': 'ปีจันทรคติ',
-    },
-    'kowynm4p': {
-      'en': 'Prototype Sketch',
-      'th': 'ร่างต้นแบบ',
-    },
-    'zcv7d79l': {
-      'en': 'Rainbow Hoodie',
-      'th': 'เสื้อฮู้ดสีรุ้ง',
-    },
-    'rhc656tl': {
-      'en': 'Space Explorer',
-      'th': 'นักสำรวจอวกาศ',
-    },
-    'rs9ysm5y': {
-      'en': 'Thai Contemporary',
-      'th': 'ไทยร่วมสมัย',
-    },
-    'f05jyvnu': {
-      'en': 'Utopia',
-      'th': 'ยูโทเปีย',
-    },
-    'h8vu2a93': {
-      'en': 'Watercolor',
-      'th': 'สีน้ำ',
-    },
-    '3apupjlg': {
-      'en': 'Wonderland',
-      'th': 'วันเดอร์แลนด์',
-    },
-    'eixsmczb': {
-      'en': 'Homey Café',
-      'th': 'โฮมมีคาเฟ่',
-    },
-    'xxd4klg7': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'jqx6wly8': {
-      'en': ' : Image description',
-      'th': ': คำอธิบายรูปภาพ',
-    },
-    '4k4fbcp1': {
-      'en': 'Insert keywords in English',
-      'th': 'ใส่คำสำคัญเป็นภาษาอังกฤษ',
-    },
-    'uvai4zs5': {
-      'en': 'I want to dream of ...',
-      'th': 'I want to dream of ...',
-    },
-    'xy2vvcin': {
-      'en':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-      'th':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-    },
-    'e6g8hbsx': {
-      'en': 'Unwanted Keywords (Optional)',
-      'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
-    },
-    '7rl2po5x': {
-      'en':
-          'Remove from image. Example: color red, big objects, mountain scenes, etc.',
-      'th':
-          'ลบออกจากภาพ ตัวอย่าง: color red, big objects, mountain scenes, etc.',
-    },
-    '53cx3wkf': {
-      'en': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
-      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
-    },
-    'bn30zlta': {
-      'en':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-      'th':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-    },
-    'r1j7qi1b': {
-      'en': 'Aspect Ratio',
-      'th': 'อัตราส่วนภาพ',
-    },
-    'jis7l13e': {
-      'en': 'Images generated with different ratios may appear different.',
-      'th': 'รูปภาพที่สร้างด้วยอัตราส่วนที่ต่างกันอาจดูแตกต่างออกไป',
-    },
-    'z2q63tfw': {
-      'en': ' Square (1:1)',
-      'th': 'สี่เหลี่ยมจัตุรัส (1:1)',
-    },
-    '7kx9vxwu': {
-      'en': 'Mobile (9:16)',
-      'th': 'มือถือ (9:16)',
-    },
-    'f5tnr3tw': {
-      'en': ' Portrait (3:4)',
-      'th': 'แนวตั้ง (3:4)',
-    },
-    'bacvy54f': {
-      'en': 'Desktop (16:9)',
-      'th': 'เดสก์ท็อป (16:9)',
-    },
-    '93t0ikaj': {
-      'en': 'Landscape (4:3)',
-      'th': 'ทิวทัศน์ (4:3)',
-    },
-    '3v7nxniq': {
-      'en': 'Resize manually',
-      'th': 'ปรับขนาดด้วยตนเอง',
-    },
-    'la0z998e': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
-    '8emnn9ft': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
   // Generating
   {
     'gpufxo49': {
@@ -2249,6 +2068,187 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ส่งลิ้งค์',
     },
     'vdbvm3dm': {
+      'en': 'Home',
+      'th': 'บ้าน',
+    },
+  },
+  // T2I_Start
+  {
+    '0hp2lrj7': {
+      'en': 'Text to Image',
+      'th': 'ข้อความเป็นรูปภาพ',
+    },
+    '5seit9sf': {
+      'en': 'Step 1',
+      'th': 'ขั้นตอนที่ 1',
+    },
+    '951d25qe': {
+      'en': ' : Select a Theme',
+      'th': ': เลือกธีม',
+    },
+    'gpa8i6f4': {
+      'en': 'None',
+      'th': 'ไม่มี',
+    },
+    'zlatdqqt': {
+      'en': 'Flower Field',
+      'th': 'ทุ่งดอกไม้',
+    },
+    'gt76liza': {
+      'en': 'Biker',
+      'th': 'ไบค์เกอร์',
+    },
+    '94igcqkl': {
+      'en': 'Ancient-Ruins',
+      'th': 'ซากปรักหักพังโบราณ',
+    },
+    'wkr608cc': {
+      'en': 'Aquatic Sci-Fi',
+      'th': 'ไซไฟทางน้ำ',
+    },
+    '2a71nfmp': {
+      'en': 'Bedroom in Rome',
+      'th': 'ห้องนอนในโรม',
+    },
+    'e2fgs95o': {
+      'en': 'Birthday Cat',
+      'th': 'วันเกิดแมว',
+    },
+    'geprm2q0': {
+      'en': 'Christmas',
+      'th': 'คริสต์มาส',
+    },
+    'nbb8tt61': {
+      'en': 'Dreamy Globe',
+      'th': 'ลูกโลกแห่งความฝัน',
+    },
+    'hxm15gvm': {
+      'en': 'Futuristic Car',
+      'th': 'รถยนต์แห่งอนาคต',
+    },
+    '1d8x97v8': {
+      'en': 'Hunter',
+      'th': 'ฮันเตอร์',
+    },
+    '54gjq6kh': {
+      'en': 'Lazy Peach',
+      'th': 'ขี้เกียจพีช',
+    },
+    'miqgqskx': {
+      'en': 'Lunar Year',
+      'th': 'ปีจันทรคติ',
+    },
+    '9837zd13': {
+      'en': 'Prototype Sketch',
+      'th': 'ร่างต้นแบบ',
+    },
+    'cgqm1p4h': {
+      'en': 'Rainbow Hoodie',
+      'th': 'เสื้อฮู้ดสีรุ้ง',
+    },
+    'brfu1dnu': {
+      'en': 'Space Explorer',
+      'th': 'นักสำรวจอวกาศ',
+    },
+    'sisc6cpl': {
+      'en': 'Thai Contemporary',
+      'th': 'ไทยร่วมสมัย',
+    },
+    'gvd8wu74': {
+      'en': 'Utopia',
+      'th': 'ยูโทเปีย',
+    },
+    'rcw70yfk': {
+      'en': 'Watercolor',
+      'th': 'สีน้ำ',
+    },
+    'pkqqb29l': {
+      'en': 'Wonderland',
+      'th': 'วันเดอร์แลนด์',
+    },
+    'ur4lavo0': {
+      'en': 'Homey Café',
+      'th': 'โฮมมีคาเฟ่',
+    },
+    '1q3vi1ml': {
+      'en': 'Step 2',
+      'th': 'ขั้นตอนที่ 2',
+    },
+    'dtmyerw2': {
+      'en': ' : Image description',
+      'th': ': คำอธิบายรูปภาพ',
+    },
+    'oa666tkv': {
+      'en': 'Insert keywords in English',
+      'th': 'ใส่คำสำคัญเป็นภาษาอังกฤษ',
+    },
+    'rxztyixl': {
+      'en': 'I want to dream of ...',
+      'th': 'I want to dream of ...',
+    },
+    'p3am17de': {
+      'en':
+          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
+      'th':
+          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
+    },
+    'w5pcslz9': {
+      'en': 'Unwanted Keywords (Optional)',
+      'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
+    },
+    'e8q8ratg': {
+      'en':
+          'Remove from image. Example: color red, big objects, mountain scenes, etc.',
+      'th':
+          'ลบออกจากภาพ ตัวอย่าง: color red, big objects, mountain scenes, etc.',
+    },
+    '30l2s20c': {
+      'en': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
+      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
+    },
+    'k4yhyr2o': {
+      'en':
+          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
+      'th':
+          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
+    },
+    '5xre5825': {
+      'en': 'Aspect Ratio',
+      'th': 'อัตราส่วนภาพ',
+    },
+    'fairv7mt': {
+      'en': 'Images generated with different ratios may appear different.',
+      'th': 'รูปภาพที่สร้างด้วยอัตราส่วนที่ต่างกันอาจดูแตกต่างออกไป',
+    },
+    'odkok090': {
+      'en': ' Square (1:1)',
+      'th': 'สี่เหลี่ยมจัตุรัส (1:1)',
+    },
+    '7gtpmxam': {
+      'en': 'Mobile (9:16)',
+      'th': 'มือถือ (9:16)',
+    },
+    '5pe83r41': {
+      'en': ' Portrait (3:4)',
+      'th': 'แนวตั้ง (3:4)',
+    },
+    'rhtv71of': {
+      'en': 'Desktop (16:9)',
+      'th': 'เดสก์ท็อป (16:9)',
+    },
+    'e37pf8uc': {
+      'en': 'Landscape (4:3)',
+      'th': 'ทิวทัศน์ (4:3)',
+    },
+    '35l3lhcj': {
+      'en': 'Resize manually',
+      'th': 'ปรับขนาดด้วยตนเอง',
+    },
+    'yfgjz951': {
+      'en': 'Generate ( 6 Credits )',
+      'th': 'สร้าง ( 6 หน่วยกิต )',
+    },
+    'f61rugif': {
       'en': 'Home',
       'th': 'บ้าน',
     },

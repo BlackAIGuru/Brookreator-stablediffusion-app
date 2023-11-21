@@ -15,7 +15,6 @@ export '/homepage/settings/settings_widget.dart' show SettingsWidget;
 export '/homepage/sign_in/sign_in_widget.dart' show SignInWidget;
 export '/homepage/sign_up/sign_up_widget.dart' show SignUpWidget;
 export '/homepage/my_picture/my_picture_widget.dart' show MyPictureWidget;
-export '/text2_image/t2_i_start/t2_i_start_widget.dart' show T2IStartWidget;
 export '/text2_image/generating/generating_widget.dart' show GeneratingWidget;
 export '/text2_image/t2_i_done/t2_i_done_widget.dart' show T2IDoneWidget;
 export '/text2_image/t2_i_result/t2_i_result_widget.dart' show T2IResultWidget;
@@ -27,3 +26,4 @@ export '/homepage/open_app_screen/open_app_screen_widget.dart'
 export '/exper/exper_widget.dart' show ExperWidget;
 export '/homepage/forgotpassword/forgotpassword_widget.dart'
     show ForgotpasswordWidget;
+export '/text2_image/t2_i_start/t2_i_start_widget.dart' show T2IStartWidget;
