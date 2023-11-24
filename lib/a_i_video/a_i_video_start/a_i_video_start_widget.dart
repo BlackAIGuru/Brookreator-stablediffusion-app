@@ -252,9 +252,8 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryText,
+                                                            : const Color(0xFFE4E4E4),
+                                                        width: 2.0,
                                                       ),
                                                     ),
                                                     child: Stack(
@@ -330,12 +329,12 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                                         0.0,
                                                                         0.0,
                                                                         0.0,
-                                                                        5.0),
+                                                                        7.0),
                                                             child: Text(
                                                               FFLocalizations.of(
                                                                       context)
                                                                   .getText(
-                                                                'nwixgohu' /* AI Face */,
+                                                                'f7v57dti' /* AI Face */,
                                                               ),
                                                               style: FlutterFlowTheme
                                                                       .of(context)
@@ -345,7 +344,12 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                                         'NotoSansThai',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
-                                                                        .primaryBackground,
+                                                                        .info,
+                                                                    fontSize:
+                                                                        12.0,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w600,
                                                                     useGoogleFonts:
                                                                         false,
                                                                   ),
@@ -373,9 +377,7 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                               10.0),
                                                       border: Border.all(
                                                         color:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .secondaryText,
+                                                            const Color(0xFFE4E4E4),
                                                       ),
                                                     ),
                                                     alignment:
@@ -407,8 +409,9 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: const Color(
-                                                                    0xFFB0B0B0),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -522,7 +525,7 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                               'NotoSansThai',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
-                                                              .secondaryText,
+                                                              .primaryText,
                                                           fontSize: 12.0,
                                                           useGoogleFonts: false,
                                                         ),
@@ -645,7 +648,7 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                   },
                                                   child: Container(
                                                     width: 100.0,
-                                                    height: 55.0,
+                                                    height: 70.0,
                                                     decoration: BoxDecoration(
                                                       color: _model
                                                                   .selectvideotype ==
@@ -664,23 +667,21 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryText,
+                                                            : const Color(0xFFE4E4E4),
+                                                        width: 2.0,
                                                       ),
                                                     ),
                                                     child: Column(
                                                       mainAxisSize:
-                                                          MainAxisSize.max,
+                                                          MainAxisSize.min,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
                                                       children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      10.0,
-                                                                      0.0,
-                                                                      0.0),
+                                                        Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.00, 0.00),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -693,42 +694,41 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                                 .override(
                                                                   fontFamily:
                                                                       'NotoSansThai',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryText,
                                                                   fontSize:
                                                                       12.0,
                                                                   fontWeight:
                                                                       FontWeight
-                                                                          .w500,
+                                                                          .w600,
                                                                   useGoogleFonts:
                                                                       false,
                                                                 ),
                                                           ),
                                                         ),
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'vckl0hak' /* ( 30 Credits ) */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'NotoSansThai',
-                                                                  fontSize:
-                                                                      10.0,
-                                                                  useGoogleFonts:
-                                                                      false,
-                                                                ),
+                                                        Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'vckl0hak' /* ( 30 Credits ) */,
                                                           ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
+                                                                fontSize: 10.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                         ),
                                                       ],
                                                     ),
@@ -756,7 +756,7 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                   },
                                                   child: Container(
                                                     width: 100.0,
-                                                    height: 55.0,
+                                                    height: 70.0,
                                                     decoration: BoxDecoration(
                                                       color: _model
                                                                   .selectvideotype ==
@@ -775,71 +775,62 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryText,
+                                                            : const Color(0xFFE4E4E4),
+                                                        width: 2.0,
                                                       ),
                                                     ),
                                                     child: Column(
                                                       mainAxisSize:
-                                                          MainAxisSize.max,
+                                                          MainAxisSize.min,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
                                                       children: [
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      10.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'mzzl721a' /* Video */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'NotoSansThai',
-                                                                  fontSize:
-                                                                      12.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w500,
-                                                                  useGoogleFonts:
-                                                                      false,
-                                                                ),
+                                                        Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'mzzl721a' /* Video */,
                                                           ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
+                                                                fontSize: 12.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                         ),
-                                                        Padding(
-                                                          padding:
-                                                              const EdgeInsetsDirectional
-                                                                  .fromSTEB(
-                                                                      0.0,
-                                                                      5.0,
-                                                                      0.0,
-                                                                      0.0),
-                                                          child: Text(
-                                                            FFLocalizations.of(
-                                                                    context)
-                                                                .getText(
-                                                              'bky6xqnc' /* ( 100 Credits ) */,
-                                                            ),
-                                                            style: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .bodyMedium
-                                                                .override(
-                                                                  fontFamily:
-                                                                      'NotoSansThai',
-                                                                  fontSize:
-                                                                      10.0,
-                                                                  useGoogleFonts:
-                                                                      false,
-                                                                ),
+                                                        Text(
+                                                          FFLocalizations.of(
+                                                                  context)
+                                                              .getText(
+                                                            'bky6xqnc' /* ( 100 Credits ) */,
                                                           ),
+                                                          style: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .secondaryText,
+                                                                fontSize: 10.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w500,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                         ),
                                                       ],
                                                     ),
@@ -916,9 +907,6 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                             useGoogleFonts: false,
                           ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
-                        width: 1.0,
-                      ),
                       borderRadius: BorderRadius.circular(25.0),
                       disabledColor: const Color(0x581371FF),
                       disabledTextColor:

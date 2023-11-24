@@ -116,6 +116,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                       value: _model.sliderValue ??= 5.0,
                       divisions: 8,
                       onChanged: (newValue) {
+                        newValue = double.parse(newValue.toStringAsFixed(2));
                         setState(() => _model.sliderValue = newValue);
                       },
                     ),

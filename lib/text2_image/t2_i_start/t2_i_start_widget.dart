@@ -1,6 +1,5 @@
 import '/components/credit/credit_widget.dart';
 import '/components/imagesize/imagesize_widget.dart';
-import '/components/slidebar/slidebar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -313,7 +312,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .secondaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -404,7 +403,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -495,7 +494,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -586,7 +585,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -689,7 +688,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                       'NotoSansThai',
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
-                                                                      .primaryBackground,
+                                                                      .info,
                                                                   fontSize:
                                                                       12.0,
                                                                   fontWeight:
@@ -787,7 +786,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 11.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -883,7 +882,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -979,7 +978,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1075,7 +1074,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1171,7 +1170,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1267,7 +1266,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1363,7 +1362,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1459,7 +1458,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1555,7 +1554,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1651,7 +1650,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1747,7 +1746,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1843,7 +1842,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 10.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -1939,7 +1938,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -2035,7 +2034,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -2131,7 +2130,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -2227,7 +2226,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
-                                                                    .primaryBackground,
+                                                                    .info,
                                                                 fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
@@ -2557,8 +2556,9 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: const Color(
-                                                                    0xCB181818),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
                                                                 fontSize: 12.0,
                                                                 useGoogleFonts:
                                                                     false,
@@ -2806,8 +2806,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             Colors.transparent,
                                                         onTap: () async {
                                                           setState(() {
-                                                            FFAppState()
-                                                                .selectedSize = 1;
+                                                            _model.selectsize =
+                                                                1;
                                                           });
                                                           setState(() {
                                                             _model.imagewidth =
@@ -2835,8 +2835,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           height: 35.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: FFAppState()
-                                                                        .selectedSize ==
+                                                            color: _model.selectsize ==
                                                                     1
                                                                 ? const Color(
                                                                     0xFFF0F4FA)
@@ -2848,15 +2847,15 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     .circular(
                                                                         10.0),
                                                             border: Border.all(
-                                                              color: FFAppState()
-                                                                          .selectedSize ==
+                                                              color: _model
+                                                                          .selectsize ==
                                                                       1
                                                                   ? FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary
-                                                                  : FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .secondaryText,
+                                                                  : const Color(
+                                                                      0xFFE4E4E4),
+                                                              width: 2.0,
                                                             ),
                                                           ),
                                                           alignment:
@@ -2886,7 +2885,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                         17.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: FFAppState().selectedSize ==
+                                                                      color: _model.selectsize ==
                                                                               1
                                                                           ? const Color(
                                                                               0xFFF0F4FA)
@@ -2905,11 +2904,11 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                       ],
                                                                       borderRadius:
                                                                           BorderRadius.circular(
-                                                                              2.0),
+                                                                              3.0),
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: FFAppState().selectedSize ==
+                                                                        color: _model.selectsize ==
                                                                                 1
                                                                             ? FlutterFlowTheme.of(context).primary
                                                                             : FlutterFlowTheme.of(context).secondaryText,
@@ -2957,8 +2956,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         setState(() {
-                                                          FFAppState()
-                                                              .selectedSize = 2;
+                                                          _model.selectsize = 2;
                                                         });
                                                         setState(() {
                                                           _model.imagewidth =
@@ -2985,8 +2983,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         height: 35.0,
                                                         decoration:
                                                             BoxDecoration(
-                                                          color: FFAppState()
-                                                                      .selectedSize ==
+                                                          color: _model
+                                                                      .selectsize ==
                                                                   2
                                                               ? const Color(
                                                                   0xFFF0F4FA)
@@ -2998,15 +2996,15 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                   .circular(
                                                                       10.0),
                                                           border: Border.all(
-                                                            color: FFAppState()
-                                                                        .selectedSize ==
+                                                            color: _model
+                                                                        .selectsize ==
                                                                     2
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
-                                                                : FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
+                                                                : const Color(
+                                                                    0xFFE4E4E4),
+                                                            width: 2.0,
                                                           ),
                                                         ),
                                                         alignment:
@@ -3029,7 +3027,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                 height: 24.0,
                                                                 decoration:
                                                                     BoxDecoration(
-                                                                  color: FFAppState().selectedSize ==
+                                                                  color: _model
+                                                                              .selectsize ==
                                                                           2
                                                                       ? const Color(
                                                                           0xFFF0F4FA)
@@ -3050,10 +3049,10 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                   borderRadius:
                                                                       BorderRadius
                                                                           .circular(
-                                                                              2.0),
+                                                                              3.0),
                                                                   border: Border
                                                                       .all(
-                                                                    color: FFAppState().selectedSize ==
+                                                                    color: _model.selectsize ==
                                                                             2
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .primary
@@ -3116,8 +3115,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             Colors.transparent,
                                                         onTap: () async {
                                                           setState(() {
-                                                            FFAppState()
-                                                                .selectedSize = 3;
+                                                            _model.selectsize =
+                                                                3;
                                                           });
                                                           setState(() {
                                                             _model.imagewidth =
@@ -3145,8 +3144,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           height: 35.0,
                                                           decoration:
                                                               BoxDecoration(
-                                                            color: FFAppState()
-                                                                        .selectedSize ==
+                                                            color: _model.selectsize ==
                                                                     3
                                                                 ? const Color(
                                                                     0xFFF0F4FA)
@@ -3158,15 +3156,15 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     .circular(
                                                                         10.0),
                                                             border: Border.all(
-                                                              color: FFAppState()
-                                                                          .selectedSize ==
+                                                              color: _model
+                                                                          .selectsize ==
                                                                       3
                                                                   ? FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary
-                                                                  : FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .secondaryText,
+                                                                  : const Color(
+                                                                      0xFFE4E4E4),
+                                                              width: 2.0,
                                                             ),
                                                           ),
                                                           alignment:
@@ -3190,7 +3188,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                   height: 20.0,
                                                                   decoration:
                                                                       BoxDecoration(
-                                                                    color: FFAppState().selectedSize ==
+                                                                    color: _model.selectsize ==
                                                                             3
                                                                         ? const Color(
                                                                             0xFFF0F4FA)
@@ -3209,11 +3207,11 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     ],
                                                                     borderRadius:
                                                                         BorderRadius.circular(
-                                                                            2.0),
+                                                                            3.0),
                                                                     border:
                                                                         Border
                                                                             .all(
-                                                                      color: FFAppState().selectedSize == 3
+                                                                      color: _model.selectsize == 3
                                                                           ? FlutterFlowTheme.of(context)
                                                                               .primary
                                                                           : FlutterFlowTheme.of(context)
@@ -3259,8 +3257,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         setState(() {
-                                                          FFAppState()
-                                                              .selectedSize = 4;
+                                                          _model.selectsize = 4;
                                                         });
                                                         setState(() {
                                                           _model.imagewidth =
@@ -3287,8 +3284,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         height: 35.0,
                                                         decoration:
                                                             BoxDecoration(
-                                                          color: FFAppState()
-                                                                      .selectedSize ==
+                                                          color: _model
+                                                                      .selectsize ==
                                                                   4
                                                               ? const Color(
                                                                   0xFFF0F4FA)
@@ -3300,15 +3297,15 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                   .circular(
                                                                       10.0),
                                                           border: Border.all(
-                                                            color: FFAppState()
-                                                                        .selectedSize ==
+                                                            color: _model
+                                                                        .selectsize ==
                                                                     4
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
-                                                                : FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondaryText,
+                                                                : const Color(
+                                                                    0xFFE4E4E4),
+                                                            width: 2.0,
                                                           ),
                                                         ),
                                                         alignment:
@@ -3331,7 +3328,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                 height: 13.5,
                                                                 decoration:
                                                                     BoxDecoration(
-                                                                  color: FFAppState().selectedSize ==
+                                                                  color: _model
+                                                                              .selectsize ==
                                                                           4
                                                                       ? const Color(
                                                                           0xFFF0F4FA)
@@ -3352,10 +3350,10 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                   borderRadius:
                                                                       BorderRadius
                                                                           .circular(
-                                                                              2.0),
+                                                                              3.0),
                                                                   border: Border
                                                                       .all(
-                                                                    color: FFAppState().selectedSize ==
+                                                                    color: _model.selectsize ==
                                                                             4
                                                                         ? FlutterFlowTheme.of(context)
                                                                             .primary
@@ -3419,8 +3417,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                               .transparent,
                                                           onTap: () async {
                                                             setState(() {
-                                                              FFAppState()
-                                                                  .selectedSize = 5;
+                                                              _model.selectsize =
+                                                                  5;
                                                             });
                                                             setState(() {
                                                               _model.imagewidth =
@@ -3448,8 +3446,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             height: 35.0,
                                                             decoration:
                                                                 BoxDecoration(
-                                                              color: FFAppState()
-                                                                          .selectedSize ==
+                                                              color: _model
+                                                                          .selectsize ==
                                                                       5
                                                                   ? const Color(
                                                                       0xFFF0F4FA)
@@ -3462,15 +3460,15 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                           10.0),
                                                               border:
                                                                   Border.all(
-                                                                color: FFAppState()
-                                                                            .selectedSize ==
+                                                                color: _model
+                                                                            .selectsize ==
                                                                         5
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
+                                                                    : const Color(
+                                                                        0xFFE4E4E4),
+                                                                width: 2.0,
                                                               ),
                                                             ),
                                                             alignment:
@@ -3495,7 +3493,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                         15.0,
                                                                     decoration:
                                                                         BoxDecoration(
-                                                                      color: FFAppState().selectedSize ==
+                                                                      color: _model.selectsize ==
                                                                               5
                                                                           ? const Color(
                                                                               0xFFF0F4FA)
@@ -3514,11 +3512,11 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                       ],
                                                                       borderRadius:
                                                                           BorderRadius.circular(
-                                                                              2.0),
+                                                                              3.0),
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: FFAppState().selectedSize ==
+                                                                        color: _model.selectsize ==
                                                                                 5
                                                                             ? FlutterFlowTheme.of(context).primary
                                                                             : FlutterFlowTheme.of(context).secondaryText,
@@ -3761,10 +3759,323 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
-                                child: wrapWithModel(
-                                  model: _model.slidebarModel,
-                                  updateCallback: () => setState(() {}),
-                                  child: const SlidebarWidget(),
+                                child: Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 10.0, 0.0, 10.0),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.max,
+                                    children: [
+                                      Align(
+                                        alignment:
+                                            const AlignmentDirectional(-1.00, 0.00),
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  5.0, 0.0, 0.0, 0.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              Align(
+                                                alignment: const AlignmentDirectional(
+                                                    -1.00, 0.00),
+                                                child: Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          10.0, 0.0, 0.0, 0.0),
+                                                  child: Text(
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                      '76nh3gbv' /* Step 3 */,
+                                                    ),
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'NotoSansThai',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
+                                                          fontSize: 15.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                                  ),
+                                                ),
+                                              ),
+                                              Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'q7x1t5zz' /*  : Number of Images */,
+                                                ),
+                                                style:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'NotoSansThai',
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          useGoogleFonts: false,
+                                                        ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment:
+                                            const AlignmentDirectional(-1.00, -1.00),
+                                        child: Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 5.0, 0.0, 0.0),
+                                          child: Text(
+                                            FFLocalizations.of(context).getText(
+                                              'lxwy2251' /* Select number of images to gen... */,
+                                            ),
+                                            style: FlutterFlowTheme.of(context)
+                                                .bodyMedium
+                                                .override(
+                                                  fontFamily: 'NotoSansThai',
+                                                  fontSize: 12.0,
+                                                  useGoogleFonts: false,
+                                                ),
+                                          ),
+                                        ),
+                                      ),
+                                      Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Stack(
+                                            children: [
+                                              Align(
+                                                alignment: const AlignmentDirectional(
+                                                    0.00, 0.00),
+                                                child: Slider(
+                                                  activeColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .primary,
+                                                  inactiveColor:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .alternate,
+                                                  min: 1.0,
+                                                  max: 9.0,
+                                                  value: _model
+                                                      .t2isliderValue ??= 5.0,
+                                                  divisions: 8,
+                                                  onChanged: (newValue) {
+                                                    newValue = double.parse(
+                                                        newValue
+                                                            .toStringAsFixed(
+                                                                2));
+                                                    setState(() =>
+                                                        _model.t2isliderValue =
+                                                            newValue);
+                                                  },
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 40.0, 0.0, 0.0),
+                                                child: Row(
+                                                  mainAxisSize:
+                                                      MainAxisSize.max,
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment
+                                                          .spaceBetween,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  25.0,
+                                                                  0.0,
+                                                                  0.0,
+                                                                  0.0),
+                                                      child: Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          'pjczq5uk' /* 1 */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'NotoSansThai',
+                                                              fontSize: 12.0,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'v87x5m8u' /* 2 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'xrdcwuhx' /* 3 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'wxfdtt8z' /* 4 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'grqm87ra' /* 5 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '33xy6n2y' /* 6 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'diw6boqg' /* 7 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'jjn4jo0c' /* 8 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                fontSize: 12.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  25.0,
+                                                                  0.0),
+                                                      child: Text(
+                                                        FFLocalizations.of(
+                                                                context)
+                                                            .getText(
+                                                          '42xmirxf' /* 9 */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'NotoSansThai',
+                                                              fontSize: 12.0,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                            ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ),
@@ -3805,7 +4116,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                             ).then((value) => safeSetState(() {}));
                           },
                     text:
-                        'Create Model ( ${_model.slidebarModel.sliderValue?.toString()} Credits )',
+                        'Create Model ( ${_model.t2isliderValue?.toString()} Credits )',
                     icon: Icon(
                       Icons.auto_awesome_sharp,
                       color: FlutterFlowTheme.of(context).primaryBackground,
@@ -3828,9 +4139,6 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                             useGoogleFonts: false,
                           ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
-                        width: 1.0,
-                      ),
                       borderRadius: BorderRadius.circular(25.0),
                       disabledColor: const Color(0x581371FF),
                       disabledTextColor:

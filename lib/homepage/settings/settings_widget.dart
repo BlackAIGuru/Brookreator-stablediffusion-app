@@ -261,7 +261,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 1.0, 0.0),
                                   child: FlutterFlowLanguageSelector(
-                                    width: 130.0,
+                                    width: 150.0,
                                     height: 35.0,
                                     backgroundColor:
                                         FlutterFlowTheme.of(context)
@@ -282,7 +282,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                     ),
                                     hideFlags: false,
                                     flagSize: 20.0,
-                                    flagTextGap: 8.0,
+                                    flagTextGap: 9.0,
                                     currentLanguage: FFLocalizations.of(context)
                                         .languageCode,
                                     languages: FFLocalizations.languages(),

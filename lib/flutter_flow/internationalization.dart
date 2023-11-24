@@ -1976,6 +1976,54 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Resize manually',
       'th': 'ปรับขนาดด้วยตนเอง',
     },
+    '76nh3gbv': {
+      'en': 'Step 3',
+      'th': 'ขั้นตอนที่ 3',
+    },
+    'q7x1t5zz': {
+      'en': ' : Number of Images',
+      'th': ': จำนวนภาพ',
+    },
+    'lxwy2251': {
+      'en': 'Select number of images to generate.',
+      'th': 'เลือกจำนวนภาพที่จะสร้าง',
+    },
+    'pjczq5uk': {
+      'en': '1',
+      'th': '1',
+    },
+    'v87x5m8u': {
+      'en': '2',
+      'th': '2',
+    },
+    'xrdcwuhx': {
+      'en': '3',
+      'th': '3',
+    },
+    'wxfdtt8z': {
+      'en': '4',
+      'th': '4',
+    },
+    'grqm87ra': {
+      'en': '5',
+      'th': '5',
+    },
+    '33xy6n2y': {
+      'en': '6',
+      'th': '6',
+    },
+    'diw6boqg': {
+      'en': '7',
+      'th': '7',
+    },
+    'jjn4jo0c': {
+      'en': '8',
+      'th': '8',
+    },
+    '42xmirxf': {
+      'en': '9',
+      'th': '9',
+    },
     'f61rugif': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -2051,6 +2099,54 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Uploading Guide',
       'th': 'คู่มือการอัพโหลด',
     },
+    '7k4iwh6m': {
+      'en': 'Step 3',
+      'th': 'ขั้นตอนที่ 3',
+    },
+    'l1oiyn09': {
+      'en': ' : Number of Images',
+      'th': ': จำนวนภาพ',
+    },
+    '76k815id': {
+      'en': 'Select number of images to generate.',
+      'th': 'เลือกจำนวนภาพที่จะสร้าง',
+    },
+    'u1j6c0s1': {
+      'en': '1',
+      'th': '1',
+    },
+    'mxnsc2ig': {
+      'en': '2',
+      'th': '2',
+    },
+    'k7etqetw': {
+      'en': '3',
+      'th': '3',
+    },
+    'kbe2gd23': {
+      'en': '4',
+      'th': '4',
+    },
+    '1otpdeoi': {
+      'en': '5',
+      'th': '5',
+    },
+    '2utoeuqc': {
+      'en': '6',
+      'th': '6',
+    },
+    'eo4a5fyx': {
+      'en': '7',
+      'th': '7',
+    },
+    '2m7l8a0c': {
+      'en': '8',
+      'th': '8',
+    },
+    'pvbme7ut': {
+      'en': '9',
+      'th': '9',
+    },
     'oltds1oq': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -2070,7 +2166,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' : Select Style',
       'th': ': เลือกสไตล์',
     },
-    'nwixgohu': {
+    'f7v57dti': {
       'en': 'AI Face',
       'th': '',
     },
@@ -2454,10 +2550,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '2h9hhh4r': {
       'en': 'Page Title',
-      'th': '',
-    },
-    '1qwfyhxl': {
-      'en': 'AI Face',
       'th': '',
     },
     'ifu8coiu': {

@@ -387,7 +387,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 0.0, 30.0, 0.0, 20.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                GoRouter.of(context).prepareAuthEvent(true);
+                                GoRouter.of(context).prepareAuthEvent();
 
                                 final user = await authManager.signInWithEmail(
                                   context,
@@ -398,11 +398,8 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   return;
                                 }
 
-                                context.pushNamedAuth(
-                                  'HomePage',
-                                  context.mounted,
-                                  ignoreRedirect: true,
-                                );
+                                context.goNamedAuth(
+                                    'HomePage', context.mounted);
                               },
                               text: FFLocalizations.of(context).getText(
                                 'h6trimte' /* Sign In */,

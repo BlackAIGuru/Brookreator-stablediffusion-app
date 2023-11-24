@@ -45,12 +45,6 @@ class FFAppState extends ChangeNotifier {
   set currentpageindex(int value) {
     _currentpageindex = value;
   }
-
-  int _selectedSize = 0;
-  int get selectedSize => _selectedSize;
-  set selectedSize(int value) {
-    _selectedSize = value;
-  }
 }
 
 LatLng? _latLngFromString(String? val) {

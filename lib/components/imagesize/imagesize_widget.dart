@@ -44,7 +44,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
       alignment: const AlignmentDirectional(0.00, 0.00),
       child: Container(
         width: double.infinity,
-        height: 180.0,
+        height: 200.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),

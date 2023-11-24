@@ -55,7 +55,7 @@ class _AccountWidgetState extends State<AccountWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Colors.white,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
           child: Padding(
@@ -184,23 +184,28 @@ class _AccountWidgetState extends State<AccountWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 1.0, 0.0),
                                   child: FlutterFlowLanguageSelector(
-                                    width: 130.0,
-                                    height: 37.0,
-                                    backgroundColor: const Color(0xFFF4F4F4),
+                                    width: 150.0,
+                                    height: 35.0,
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                     borderColor: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    dropdownColor: const Color(0xFFF4F4F4),
-                                    dropdownIconColor: Colors.black,
+                                    dropdownColor: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                    dropdownIconColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryText,
                                     textStyle: TextStyle(
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontWeight: FontWeight.normal,
-                                      fontSize: 12.0,
+                                      fontSize: 13.0,
                                     ),
                                     hideFlags: false,
                                     flagSize: 20.0,
-                                    flagTextGap: 8.0,
+                                    flagTextGap: 9.0,
                                     currentLanguage: FFLocalizations.of(context)
                                         .languageCode,
                                     languages: FFLocalizations.languages(),

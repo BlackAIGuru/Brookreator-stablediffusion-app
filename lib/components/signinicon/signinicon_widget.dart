@@ -75,7 +75,7 @@ class _SigniniconWidgetState extends State<SigniniconWidget> {
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'NotoSansThai',
-                            color: Colors.black,
+                            color: FlutterFlowTheme.of(context).primaryText,
                             fontSize: 13.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: false,

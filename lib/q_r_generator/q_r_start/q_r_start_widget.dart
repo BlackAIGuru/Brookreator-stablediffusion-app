@@ -688,7 +688,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             textAlign: TextAlign.center,
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -747,7 +747,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -806,7 +806,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -865,7 +865,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -924,7 +924,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -983,7 +983,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -1042,7 +1042,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -1101,7 +1101,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 10.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -1160,7 +1160,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -1219,7 +1219,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -1278,7 +1278,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -1637,7 +1637,6 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
-                                                                  width: 1.0,
                                                                 ),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -1862,6 +1861,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                               ),
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                     fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     fontSize: 10.0,
                                                                                                     fontWeight: FontWeight.w500,
                                                                                                     useGoogleFonts: false,
@@ -2017,7 +2017,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             textAlign: TextAlign.center,
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2076,7 +2076,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2135,7 +2135,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2194,7 +2194,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2253,7 +2253,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2312,7 +2312,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2371,7 +2371,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2430,7 +2430,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 10.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2489,7 +2489,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2548,7 +2548,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2607,7 +2607,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                             ),
                                                                                             style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                   fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).primaryBackground,
+                                                                                                  color: FlutterFlowTheme.of(context).info,
                                                                                                   fontSize: 12.0,
                                                                                                   fontWeight: FontWeight.w600,
                                                                                                   useGoogleFonts: false,
@@ -2728,6 +2728,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                     fontFamily: 'NotoSansThai',
+                                                                                    color: FlutterFlowTheme.of(context).primaryText,
                                                                                     fontSize: 12.0,
                                                                                     useGoogleFonts: false,
                                                                                   ),
@@ -2968,7 +2969,6 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
-                                                                  width: 1.0,
                                                                 ),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -3617,8 +3617,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                       color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                       borderRadius: BorderRadius.circular(10.0),
                                                                                       border: Border.all(
-                                                                                        color: _model.linkqrscaleselected == 1 ? FlutterFlowTheme.of(context).primary : const Color(0x00000000),
-                                                                                        width: 1.5,
+                                                                                        color: _model.linkqrscaleselected == 1 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
                                                                                     ),
                                                                                     child: Align(
@@ -3655,7 +3655,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         borderRadius: BorderRadius.circular(10.0),
                                                                                         border: Border.all(
                                                                                           color: _model.linkqrscaleselected == 2 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                          width: 1.5,
+                                                                                          width: 2.0,
                                                                                         ),
                                                                                       ),
                                                                                       child: Align(
@@ -3693,7 +3693,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         borderRadius: BorderRadius.circular(10.0),
                                                                                         border: Border.all(
                                                                                           color: _model.linkqrscaleselected == 3 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                          width: 1.5,
+                                                                                          width: 2.0,
                                                                                         ),
                                                                                       ),
                                                                                       child: Align(
@@ -3776,7 +3776,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'none' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               alignment: const AlignmentDirectional(0.00, 0.00),
@@ -3814,7 +3814,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'facebook' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -3851,7 +3851,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'instogram' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -3888,7 +3888,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'line' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -3925,7 +3925,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'twitter' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -3962,7 +3962,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'linkedin' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -3999,7 +3999,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'github' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4036,7 +4036,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'youtube' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4073,7 +4073,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'tiktok' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4110,7 +4110,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'telegram' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4147,7 +4147,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'whatsapp' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4184,7 +4184,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'map' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4221,7 +4221,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.linklogoselected == 'promptpay' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -4482,7 +4482,6 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
-                                                                  width: 1.0,
                                                                 ),
                                                                 borderRadius:
                                                                     BorderRadius
@@ -4707,6 +4706,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                               ),
                                                                                               style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                                     fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
                                                                                                     fontSize: 10.0,
                                                                                                     fontWeight: FontWeight.w500,
                                                                                                     useGoogleFonts: false,
@@ -5006,7 +5006,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                       borderRadius: BorderRadius.circular(10.0),
                                                                                       border: Border.all(
                                                                                         color: _model.uploadqrscaleselected == 1 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                        width: 1.5,
+                                                                                        width: 2.0,
                                                                                       ),
                                                                                     ),
                                                                                     child: Align(
@@ -5043,7 +5043,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         borderRadius: BorderRadius.circular(10.0),
                                                                                         border: Border.all(
                                                                                           color: _model.uploadqrscaleselected == 2 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                          width: 1.5,
+                                                                                          width: 2.0,
                                                                                         ),
                                                                                       ),
                                                                                       child: Align(
@@ -5081,7 +5081,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         borderRadius: BorderRadius.circular(10.0),
                                                                                         border: Border.all(
                                                                                           color: _model.uploadqrscaleselected == 3 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                          width: 1.5,
+                                                                                          width: 2.0,
                                                                                         ),
                                                                                       ),
                                                                                       child: Align(
@@ -5164,7 +5164,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'none' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               alignment: const AlignmentDirectional(0.00, 0.00),
@@ -5202,7 +5202,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'facebook' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5239,7 +5239,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'instogram' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5276,7 +5276,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'line' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5313,7 +5313,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'twitter' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5350,7 +5350,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'linkedin' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5387,7 +5387,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'github' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5424,7 +5424,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'youtube' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5461,7 +5461,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'tiktok' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5498,7 +5498,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'telegram' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5535,7 +5535,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'whatsapp' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5572,7 +5572,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'map' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5609,7 +5609,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                                 borderRadius: BorderRadius.circular(5.0),
                                                                                                 border: Border.all(
                                                                                                   color: _model.qrlogoselected == 'promptpay' ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
-                                                                                                  width: 1.5,
+                                                                                                  width: 2.0,
                                                                                                 ),
                                                                                               ),
                                                                                               child: Padding(
@@ -5872,7 +5872,6 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     const BorderSide(
                                                                   color: Colors
                                                                       .transparent,
-                                                                  width: 1.0,
                                                                 ),
                                                                 borderRadius:
                                                                     BorderRadius

@@ -153,13 +153,14 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                       ),
                                     ),
                                   ),
-                                  const Flexible(
+                                  Flexible(
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(0.00, 0.00),
+                                          const AlignmentDirectional(0.00, 0.00),
                                       child: Icon(
                                         Icons.monetization_on_outlined,
-                                        color: Color(0xFF406AFF),
+                                        color: FlutterFlowTheme.of(context)
+                                            .primary,
                                         size: 24.0,
                                       ),
                                     ),
@@ -220,13 +221,16 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
-                                    child: Material(
-                                      color: Colors.transparent,
-                                      elevation: 12.0,
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        setState(() {
+                                          _model.selectpackage = 1;
+                                        });
+                                      },
                                       child: Container(
                                         width:
                                             MediaQuery.sizeOf(context).width *
@@ -238,7 +242,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                           borderRadius:
                                               BorderRadius.circular(10.0),
                                           border: Border.all(
-                                            color: const Color(0xFF406AFF),
+                                            color: _model.selectpackage == 1
+                                                ? FlutterFlowTheme.of(context)
+                                                    .primary
+                                                : const Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
@@ -268,20 +275,23 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         'oihwok9s' /* Starter */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'NotoSansThai',
-                                                            color: const Color(
-                                                                0xFF406AFF),
-                                                            fontSize: 18.0,
-                                                            fontWeight:
-                                                                FontWeight.w600,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                                fontSize: 18.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
                                                   ),
                                                 ),
@@ -388,62 +398,316 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 5.0, 0.0),
-                                    child: Container(
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.28,
-                                      height: 126.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                        border: Border.all(
-                                          color: const Color(0xFFD9D9D9),
-                                          width: 2.0,
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        setState(() {
+                                          _model.selectpackage = 2;
+                                        });
+                                      },
+                                      child: Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.28,
+                                        height: 126.0,
+                                        decoration: BoxDecoration(
+                                          color: _model.selectpackage == 2
+                                              ? const Color(0xFFF0F4FA)
+                                              : FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                          border: Border.all(
+                                            color: _model.selectpackage == 2
+                                                ? FlutterFlowTheme.of(context)
+                                                    .primary
+                                                : const Color(0xFFD9D9D9),
+                                            width: 2.0,
+                                          ),
                                         ),
-                                      ),
-                                      alignment:
-                                          const AlignmentDirectional(0.00, 0.00),
-                                      child: Align(
                                         alignment:
                                             const AlignmentDirectional(0.00, 0.00),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Flexible(
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.00, -1.00),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 15.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'vo4t7f6x' /* Standard */,
+                                        child: Align(
+                                          alignment:
+                                              const AlignmentDirectional(0.00, 0.00),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Flexible(
+                                                child: Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, -1.00),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 15.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'vo4t7f6x' /* Standard */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                                fontSize: 18.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color:
-                                                              const Color(0xFF406AFF),
-                                                          fontSize: 18.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          useGoogleFonts: false,
-                                                        ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                            Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.00, 0.00),
-                                              child: RichText(
+                                              Align(
+                                                alignment: const AlignmentDirectional(
+                                                    0.00, 0.00),
+                                                child: RichText(
+                                                  textScaleFactor:
+                                                      MediaQuery.of(context)
+                                                          .textScaleFactor,
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          '1wneynnl' /* 449 */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'NotoSansThai',
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 19.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                            ),
+                                                      ),
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'nrio6a1h' /*  THB */,
+                                                        ),
+                                                        style: const TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 12.0,
+                                                        ),
+                                                      )
+                                                    ],
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium,
+                                                  ),
+                                                ),
+                                              ),
+                                              Align(
+                                                alignment: const AlignmentDirectional(
+                                                    0.00, 0.00),
+                                                child: RichText(
+                                                  textScaleFactor:
+                                                      MediaQuery.of(context)
+                                                          .textScaleFactor,
+                                                  text: TextSpan(
+                                                    children: [
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'dpobhju6' /* 497 THB */,
+                                                        ),
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyMedium
+                                                            .override(
+                                                              fontFamily:
+                                                                  'NotoSansThai',
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 8.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .normal,
+                                                              decoration:
+                                                                  TextDecoration
+                                                                      .lineThrough,
+                                                              useGoogleFonts:
+                                                                  false,
+                                                            ),
+                                                      ),
+                                                      TextSpan(
+                                                        text:
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                          'ufevgb07' /*  Save 10% */,
+                                                        ),
+                                                        style: const TextStyle(
+                                                          color:
+                                                              Color(0xFFFF0000),
+                                                          fontWeight:
+                                                              FontWeight.w600,
+                                                          fontSize: 10.0,
+                                                        ),
+                                                      )
+                                                    ],
+                                                    style: FlutterFlowTheme.of(
+                                                            context)
+                                                        .bodyMedium,
+                                                  ),
+                                                ),
+                                              ),
+                                              Flexible(
+                                                child: Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, 1.00),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 15.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '2b15eog9' /* 500 credits */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: const Color(
+                                                                    0xD3000000),
+                                                                fontSize: 14.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Flexible(
+                                child: Align(
+                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        5.0, 0.0, 0.0, 0.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        setState(() {
+                                          _model.selectpackage = 3;
+                                        });
+                                      },
+                                      child: Container(
+                                        width:
+                                            MediaQuery.sizeOf(context).width *
+                                                0.28,
+                                        height: 126.0,
+                                        decoration: BoxDecoration(
+                                          color: _model.selectpackage == 3
+                                              ? const Color(0xFFF0F4FA)
+                                              : FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(10.0),
+                                          border: Border.all(
+                                            color: _model.selectpackage == 3
+                                                ? FlutterFlowTheme.of(context)
+                                                    .primary
+                                                : const Color(0xFFD9D9D9),
+                                            width: 2.0,
+                                          ),
+                                        ),
+                                        alignment:
+                                            const AlignmentDirectional(0.00, 0.00),
+                                        child: Align(
+                                          alignment:
+                                              const AlignmentDirectional(0.00, 0.00),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              Flexible(
+                                                child: Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, -1.00),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 15.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '37tnx018' /* Value Pack */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                                fontSize: 18.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ),
+                                              RichText(
                                                 textScaleFactor:
                                                     MediaQuery.of(context)
                                                         .textScaleFactor,
@@ -453,7 +717,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       text: FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        '1wneynnl' /* 449 */,
+                                                        'o26esquy' /* 599 */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -473,7 +737,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       text: FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'nrio6a1h' /*  THB */,
+                                                        '0fn8rm9s' /*  THB */,
                                                       ),
                                                       style: const TextStyle(
                                                         fontWeight:
@@ -487,11 +751,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       .bodyMedium,
                                                 ),
                                               ),
-                                            ),
-                                            Align(
-                                              alignment: const AlignmentDirectional(
-                                                  0.00, 0.00),
-                                              child: RichText(
+                                              RichText(
                                                 textScaleFactor:
                                                     MediaQuery.of(context)
                                                         .textScaleFactor,
@@ -501,7 +761,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       text: FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'dpobhju6' /* 497 THB */,
+                                                        'mkng8rqa' /* 1200 THB */,
                                                       ),
                                                       style: FlutterFlowTheme
                                                               .of(context)
@@ -525,7 +785,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       text: FFLocalizations.of(
                                                               context)
                                                           .getText(
-                                                        'ufevgb07' /*  Save 10% */,
+                                                        '4ukxfhmk' /*  Save 50% */,
                                                       ),
                                                       style: const TextStyle(
                                                         color:
@@ -541,223 +801,44 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       .bodyMedium,
                                                 ),
                                               ),
-                                            ),
-                                            Flexible(
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.00, 1.00),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 15.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '2b15eog9' /* 500 credits */,
+                                              Flexible(
+                                                child: Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, 1.00),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(0.0, 0.0,
+                                                                0.0, 15.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        'lc42w9yf' /* 1200 credits */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: const Color(
+                                                                    0xD3000000),
+                                                                fontSize: 14.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color:
-                                                              const Color(0xD3000000),
-                                                          fontSize: 14.0,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
                                                   ),
                                                 ),
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Flexible(
-                                child: Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: Container(
-                                      width: MediaQuery.sizeOf(context).width *
-                                          0.28,
-                                      height: 126.0,
-                                      decoration: BoxDecoration(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryBackground,
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                        border: Border.all(
-                                          color: const Color(0xFFD9D9D9),
-                                          width: 2.0,
-                                        ),
-                                      ),
-                                      alignment:
-                                          const AlignmentDirectional(0.00, 0.00),
-                                      child: Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
-                                        child: Column(
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: [
-                                            Flexible(
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.00, -1.00),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 15.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '37tnx018' /* Value Pack */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color:
-                                                              const Color(0xFF406AFF),
-                                                          fontSize: 18.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            RichText(
-                                              textScaleFactor:
-                                                  MediaQuery.of(context)
-                                                      .textScaleFactor,
-                                              text: TextSpan(
-                                                children: [
-                                                  TextSpan(
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'o26esquy' /* 599 */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color: Colors.black,
-                                                          fontSize: 19.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                  ),
-                                                  TextSpan(
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '0fn8rm9s' /*  THB */,
-                                                    ),
-                                                    style: const TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontSize: 12.0,
-                                                    ),
-                                                  )
-                                                ],
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
-                                              ),
-                                            ),
-                                            RichText(
-                                              textScaleFactor:
-                                                  MediaQuery.of(context)
-                                                      .textScaleFactor,
-                                              text: TextSpan(
-                                                children: [
-                                                  TextSpan(
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'mkng8rqa' /* 1200 THB */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color: Colors.black,
-                                                          fontSize: 8.0,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          decoration:
-                                                              TextDecoration
-                                                                  .lineThrough,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                  ),
-                                                  TextSpan(
-                                                    text: FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '4ukxfhmk' /*  Save 50% */,
-                                                    ),
-                                                    style: const TextStyle(
-                                                      color: Color(0xFFFF0000),
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontSize: 10.0,
-                                                    ),
-                                                  )
-                                                ],
-                                                style:
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyMedium,
-                                              ),
-                                            ),
-                                            Flexible(
-                                              child: Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.00, 1.00),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 15.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'lc42w9yf' /* 1200 credits */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color:
-                                                              const Color(0xD3000000),
-                                                          fontSize: 14.0,
-                                                          fontWeight:
-                                                              FontWeight.normal,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -784,13 +865,13 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         'hj0ndkrb' /* Continue */,
                       ),
                       options: FFButtonOptions(
-                        width: 361.0,
-                        height: 42.0,
+                        width: 390.0,
+                        height: 45.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(
-                            24.0, 0.0, 24.0, 0.0),
+                            25.0, 0.0, 25.0, 0.0),
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: const Color(0xFF406AFF),
+                        color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'NotoSansThai',
@@ -801,7 +882,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                           color: Colors.transparent,
                           width: 1.0,
                         ),
-                        borderRadius: BorderRadius.circular(26.0),
+                        borderRadius: BorderRadius.circular(25.0),
                       ),
                     ),
                   ),

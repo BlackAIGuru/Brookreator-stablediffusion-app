@@ -5,7 +5,6 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'sign_up_model.dart';
 export 'sign_up_model.dart';
@@ -578,21 +577,21 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         color: Colors.transparent,
                                         size: 20.0,
                                       ),
-                                      options: FFButtonOptions(
+                                      options: const FFButtonOptions(
                                         width: double.infinity,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 8.0, 0.0),
                                         color: Colors.white,
-                                        textStyle: GoogleFonts.getFont(
-                                          'Roboto',
-                                          color: const Color(0xFF606060),
-                                          fontSize: 17.0,
+                                        textStyle: TextStyle(
+                                          fontFamily: 'NotoSansThai',
+                                          color: Color(0xFF606060),
+                                          fontSize: 14.0,
                                         ),
                                         elevation: 4.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 0.0,
                                         ),

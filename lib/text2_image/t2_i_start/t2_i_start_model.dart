@@ -1,6 +1,5 @@
 import '/components/credit/credit_widget.dart';
 import '/components/imagesize/imagesize_widget.dart';
-import '/components/slidebar/slidebar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 't2_i_start_widget.dart' show T2IStartWidget;
 import 'package:carousel_slider/carousel_slider.dart';
@@ -12,6 +11,8 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   int? imagewidth;
 
   int? imageheight;
+
+  int? selectsize;
 
   ///  State fields for stateful widgets in this page.
 
@@ -35,8 +36,8 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   bool? manualswitchValue;
   // Model for imagesize component.
   late ImagesizeModel imagesizeModel;
-  // Model for slidebar component.
-  late SlidebarModel slidebarModel;
+  // State field(s) for t2islider widget.
+  double? t2isliderValue;
 
   /// Initialization and disposal methods.
 
@@ -44,7 +45,6 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   void initState(BuildContext context) {
     creditModel = createModel(context, () => CreditModel());
     imagesizeModel = createModel(context, () => ImagesizeModel());
-    slidebarModel = createModel(context, () => SlidebarModel());
   }
 
   @override
@@ -58,7 +58,6 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
     negativepromptController?.dispose();
 
     imagesizeModel.dispose();
-    slidebarModel.dispose();
   }
 
   /// Action blocks are added here.

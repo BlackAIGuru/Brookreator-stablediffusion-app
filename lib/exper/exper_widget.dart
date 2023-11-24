@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -91,67 +92,89 @@ class _ExperWidgetState extends State<ExperWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Row(
+          child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Container(
-                width: 100.0,
-                height: 135.0,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/images/AI_video.png',
-                        width: 300.0,
-                        height: 200.0,
-                        fit: BoxFit.cover,
+              const Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [],
+              ),
+              SizedBox(
+                width: double.infinity,
+                height: 180.0,
+                child: CarouselSlider(
+                  items: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
                       ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.00, 1.00),
-                      child: Container(
-                        width: 100.0,
-                        height: 58.0,
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [Color(0x04000000), Color(0xD4000000)],
-                            stops: [0.0, 1.0],
-                            begin: AlignmentDirectional(0.0, -1.0),
-                            end: AlignmentDirectional(0, 1.0),
-                          ),
-                          borderRadius: BorderRadius.only(
-                            bottomLeft: Radius.circular(10.0),
-                            bottomRight: Radius.circular(10.0),
-                            topLeft: Radius.circular(0.0),
-                            topRight: Radius.circular(0.0),
-                          ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/856/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
-                    Align(
-                      alignment: const AlignmentDirectional(0.00, 1.00),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            '1qwfyhxl' /* AI Face */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'NotoSansThai',
-                                    color: FlutterFlowTheme.of(context)
-                                        .primaryBackground,
-                                    useGoogleFonts: false,
-                                  ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/864/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/353/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8.0),
+                        child: Image.network(
+                          'https://picsum.photos/seed/94/600',
+                          width: 300.0,
+                          height: 200.0,
+                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
                   ],
+                  carouselController: _model.carouselController ??=
+                      CarouselController(),
+                  options: CarouselOptions(
+                    initialPage: 1,
+                    viewportFraction: 0.5,
+                    disableCenter: true,
+                    enlargeCenterPage: true,
+                    enlargeFactor: 0.25,
+                    enableInfiniteScroll: true,
+                    scrollDirection: Axis.horizontal,
+                    autoPlay: false,
+                    onPageChanged: (index, _) =>
+                        _model.carouselCurrentIndex = index,
+                  ),
                 ),
               ),
             ],
