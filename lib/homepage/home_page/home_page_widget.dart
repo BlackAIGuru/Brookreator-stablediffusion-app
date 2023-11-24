@@ -1310,10 +1310,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               effect: smooth_page_indicator
                                                   .ExpandingDotsEffect(
                                                 expansionFactor: 3.0,
-                                                spacing: 8.0,
+                                                spacing: 7.0,
                                                 radius: 16.0,
-                                                dotWidth: 16.0,
-                                                dotHeight: 8.0,
+                                                dotWidth: 9.0,
+                                                dotHeight: 9.0,
                                                 dotColor: const Color(0x8A0957DE),
                                                 activeDotColor:
                                                     FlutterFlowTheme.of(context)

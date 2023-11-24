@@ -126,7 +126,7 @@ class _UploadvideobuttonWidgetState extends State<UploadvideobuttonWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
-                        'yjsp19vf' /* Upload Videos */,
+                        'yjsp19vf' /* Upload Video */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'NotoSansThai',

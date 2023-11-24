@@ -86,10 +86,11 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
-                                fontFamily: 'Inter',
+                                fontFamily: 'NotoSansThai',
                                 color: const Color(0xFF2D2D2D),
                                 fontSize: 30.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: false,
                               ),
                         ),
                       ),
@@ -153,9 +154,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyLarge
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       fontSize: 20.0,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ].divide(const SizedBox(width: 10.0)),
@@ -319,9 +321,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ].divide(const SizedBox(width: 10.0)),
@@ -337,10 +340,11 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: 'Inter',
+                                fontFamily: 'NotoSansThai',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 14.0,
                                 fontWeight: FontWeight.w500,
+                                useGoogleFonts: false,
                               ),
                         ),
                       ),
@@ -465,9 +469,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 20.0,
                                     fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ].divide(const SizedBox(width: 10.0)),

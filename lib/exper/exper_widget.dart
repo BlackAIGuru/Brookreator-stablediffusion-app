@@ -91,159 +91,64 @@ class _ExperWidgetState extends State<ExperWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: Column(
+          child: Row(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Flexible(
-                child: GridView(
-                  padding: EdgeInsets.zero,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 10.0,
-                    mainAxisSpacing: 10.0,
-                    childAspectRatio: 1.0,
-                  ),
-                  scrollDirection: Axis.vertical,
+              Container(
+                width: 100.0,
+                height: 135.0,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                ),
+                child: Stack(
                   children: [
-                    Container(
-                      width: 150.0,
-                      height: 35.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.circular(10.0),
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10.0),
+                      child: Image.asset(
+                        'assets/images/AI_video.png',
+                        width: 300.0,
+                        height: 200.0,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.00, 1.00),
+                      child: Container(
+                        width: 100.0,
+                        height: 58.0,
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Color(0x04000000), Color(0xD4000000)],
+                            stops: [0.0, 1.0],
+                            begin: AlignmentDirectional(0.0, -1.0),
+                            end: AlignmentDirectional(0, 1.0),
+                          ),
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(10.0),
+                            bottomRight: Radius.circular(10.0),
+                            topLeft: Radius.circular(0.0),
+                            topRight: Radius.circular(0.0),
+                          ),
                         ),
                       ),
-                      alignment: const AlignmentDirectional(0.00, 0.00),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Align(
-                            alignment: const AlignmentDirectional(-1.00, 0.00),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 0.0, 10.0, 0.0),
-                              child: Container(
-                                width: 17.0,
-                                height: 17.0,
-                                decoration: BoxDecoration(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryBackground,
-                                  border: Border.all(
+                    ),
+                    Align(
+                      alignment: const AlignmentDirectional(0.00, 1.00),
+                      child: Padding(
+                        padding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                        child: Text(
+                          FFLocalizations.of(context).getText(
+                            '1qwfyhxl' /* AI Face */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
+                                        .primaryBackground,
+                                    useGoogleFonts: false,
                                   ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'kix5mhc7' /* Square (1:1) */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Inter',
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  fontSize: 12.0,
-                                ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 150.0,
-                      height: 35.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.circular(10.0),
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondaryText,
                         ),
-                      ),
-                      alignment: const AlignmentDirectional(0.00, 0.00),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                20.0, 0.0, 10.0, 0.0),
-                            child: Container(
-                              width: 13.5,
-                              height: 24.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                border: Border.all(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'wdey5xj3' /* Mobile (9:16) */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Inter',
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  fontSize: 12.0,
-                                ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 150.0,
-                      height: 35.0,
-                      decoration: BoxDecoration(
-                        color: FlutterFlowTheme.of(context).secondaryBackground,
-                        borderRadius: BorderRadius.circular(10.0),
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                        ),
-                      ),
-                      alignment: const AlignmentDirectional(0.00, 0.00),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                20.0, 0.0, 10.0, 0.0),
-                            child: Container(
-                              width: 15.0,
-                              height: 20.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
-                                border: Border.all(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Text(
-                            FFLocalizations.of(context).getText(
-                              'xdob8bcs' /*  Portrait (3:4) */,
-                            ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Inter',
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  fontSize: 12.0,
-                                ),
-                          ),
-                        ],
                       ),
                     ),
                   ],

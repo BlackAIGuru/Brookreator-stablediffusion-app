@@ -2392,6 +2392,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: const Color(
                                                                     0xB36F6F6F),
+                                                                fontSize: 12.0,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -2593,6 +2594,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .primaryText,
+                                                                fontSize: 12.0,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -2612,6 +2614,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                     'NotoSansThai',
                                                                 color: const Color(
                                                                     0xB36F6F6F),
+                                                                fontSize: 12.0,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -3801,9 +3804,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                               },
                             ).then((value) => safeSetState(() {}));
                           },
-                    text: FFLocalizations.of(context).getText(
-                      'yfgjz951' /* Generate ( 6 Credits ) */,
-                    ),
+                    text:
+                        'Create Model ( ${_model.slidebarModel.sliderValue?.toString()} Credits )',
                     icon: Icon(
                       Icons.auto_awesome_sharp,
                       color: FlutterFlowTheme.of(context).primaryBackground,

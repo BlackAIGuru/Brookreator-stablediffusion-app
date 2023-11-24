@@ -216,60 +216,172 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                 const EdgeInsetsDirectional.fromSTEB(
                                                     30.0, 0.0, 30.0, 0.0),
                                             child: Row(
-                                              mainAxisSize: MainAxisSize.max,
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceAround,
                                               children: [
-                                                Stack(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.0, 1.0),
-                                                  children: [
-                                                    ClipRRect(
+                                                InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    setState(() {
+                                                      _model.selectvideostyle =
+                                                          1;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 135.0,
+                                                    decoration: BoxDecoration(
+                                                      color: FlutterFlowTheme
+                                                              .of(context)
+                                                          .secondaryBackground,
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               10.0),
-                                                      child: Image.asset(
-                                                        'assets/images/cartoon-vdo.221e0c42.jpg',
-                                                        width: 101.0,
-                                                        height: 135.0,
-                                                        fit: BoxFit.cover,
+                                                      border: Border.all(
+                                                        color: _model
+                                                                    .selectvideostyle ==
+                                                                1
+                                                            ? FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primary
+                                                            : FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
                                                       ),
                                                     ),
-                                                    Container(
-                                                      width: 100.0,
-                                                      height: 58.0,
-                                                      decoration: const BoxDecoration(
-                                                        gradient:
-                                                            LinearGradient(
-                                                          colors: [
-                                                            Color(0x04000000),
-                                                            Color(0xD4000000)
-                                                          ],
-                                                          stops: [0.0, 1.0],
-                                                          begin:
-                                                              AlignmentDirectional(
-                                                                  0.0, -1.0),
-                                                          end:
-                                                              AlignmentDirectional(
-                                                                  0, 1.0),
+                                                    child: Stack(
+                                                      children: [
+                                                        ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10.0),
+                                                          child: Image.asset(
+                                                            'assets/images/AI_video.png',
+                                                            width: 300.0,
+                                                            height: 200.0,
+                                                            fit: BoxFit.cover,
+                                                          ),
                                                         ),
-                                                        borderRadius:
-                                                            BorderRadius.only(
-                                                          bottomLeft:
-                                                              Radius.circular(
-                                                                  10.0),
-                                                          bottomRight:
-                                                              Radius.circular(
-                                                                  10.0),
-                                                          topLeft:
-                                                              Radius.circular(
-                                                                  0.0),
-                                                          topRight:
-                                                              Radius.circular(
-                                                                  0.0),
+                                                        Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.00, 1.00),
+                                                          child: Container(
+                                                            width: 100.0,
+                                                            height: 58.0,
+                                                            decoration:
+                                                                const BoxDecoration(
+                                                              gradient:
+                                                                  LinearGradient(
+                                                                colors: [
+                                                                  Color(
+                                                                      0x04000000),
+                                                                  Color(
+                                                                      0xD4000000)
+                                                                ],
+                                                                stops: [
+                                                                  0.0,
+                                                                  1.0
+                                                                ],
+                                                                begin:
+                                                                    AlignmentDirectional(
+                                                                        0.0,
+                                                                        -1.0),
+                                                                end:
+                                                                    AlignmentDirectional(
+                                                                        0, 1.0),
+                                                              ),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        10.0),
+                                                                bottomRight: Radius
+                                                                    .circular(
+                                                                        10.0),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        0.0),
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        0.0),
+                                                              ),
+                                                            ),
+                                                          ),
                                                         ),
+                                                        Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.00, 1.00),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        0.0,
+                                                                        0.0,
+                                                                        5.0),
+                                                            child: Text(
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                                'nwixgohu' /* AI Face */,
+                                                              ),
+                                                              style: FlutterFlowTheme
+                                                                      .of(context)
+                                                                  .bodyMedium
+                                                                  .override(
+                                                                    fontFamily:
+                                                                        'NotoSansThai',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primaryBackground,
+                                                                    useGoogleFonts:
+                                                                        false,
+                                                                  ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                ),
+                                                Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, 0.00),
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 135.0,
+                                                    decoration: BoxDecoration(
+                                                      color:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .alternate,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10.0),
+                                                      border: Border.all(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .secondaryText,
                                                       ),
                                                     ),
-                                                    Align(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            0.00, 0.00),
+                                                    child: Align(
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.00, 0.00),
@@ -277,15 +389,15 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         padding:
                                                             const EdgeInsetsDirectional
                                                                 .fromSTEB(
+                                                                    3.0,
                                                                     0.0,
-                                                                    0.0,
-                                                                    0.0,
-                                                                    5.0),
+                                                                    3.0,
+                                                                    0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'ou0t57ld' /* Homey Café */,
+                                                            'hipug6o7' /* Coming Soon.. */,
                                                           ),
                                                           textAlign:
                                                               TextAlign.center,
@@ -295,88 +407,14 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryBackground,
-                                                                fontSize: 12.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
+                                                                color: const Color(
+                                                                    0xFFB0B0B0),
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
                                                         ),
                                                       ),
                                                     ),
-                                                  ],
-                                                ),
-                                                Align(
-                                                  alignment:
-                                                      const AlignmentDirectional(
-                                                          0.00, 0.00),
-                                                  child: Stack(
-                                                    alignment:
-                                                        const AlignmentDirectional(
-                                                            0.0, 0.0),
-                                                    children: [
-                                                      Align(
-                                                        alignment:
-                                                            const AlignmentDirectional(
-                                                                0.00, 0.00),
-                                                        child: Container(
-                                                          width: 101.0,
-                                                          height: 135.0,
-                                                          decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .alternate,
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10.0),
-                                                          ),
-                                                          alignment:
-                                                              const AlignmentDirectional(
-                                                                  0.00, 0.00),
-                                                          child: Align(
-                                                            alignment:
-                                                                const AlignmentDirectional(
-                                                                    0.00, 0.00),
-                                                            child: Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          3.0,
-                                                                          0.0,
-                                                                          3.0,
-                                                                          0.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'hipug6o7' /* Coming Soon.. */,
-                                                                ),
-                                                                textAlign:
-                                                                    TextAlign
-                                                                        .center,
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'NotoSansThai',
-                                                                      color: const Color(
-                                                                          0xFFB0B0B0),
-                                                                      useGoogleFonts:
-                                                                          false,
-                                                                    ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ],
                                                   ),
                                                 ),
                                               ].divide(const SizedBox(width: 14.0)),
@@ -482,6 +520,9 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
                                                           fontSize: 12.0,
                                                           useGoogleFonts: false,
                                                         ),
@@ -851,9 +892,8 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                               },
                             ).then((value) => safeSetState(() {}));
                           },
-                    text: FFLocalizations.of(context).getText(
-                      'bmooa60x' /* Generate ( 6 Credits ) */,
-                    ),
+                    text:
+                        'Generate ( ${_model.selectvideotype == 1 ? '30' : '100'} Credits )',
                     icon: Icon(
                       Icons.auto_awesome_sharp,
                       color: FlutterFlowTheme.of(context).primaryBackground,

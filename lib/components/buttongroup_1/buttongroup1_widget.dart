@@ -1,4 +1,4 @@
-import '/components/deleteimage_widget.dart';
+import '/components/deleteimage/deleteimage_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';

@@ -1976,10 +1976,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Resize manually',
       'th': 'ปรับขนาดด้วยตนเอง',
     },
-    'yfgjz951': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
     'f61rugif': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -2040,7 +2036,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ที่อัพโหลด',
     },
     'zbq9e46r': {
-      'en': ' 0 / 12 ',
+      'en': ' 0 / 10 ',
       'th': '0 / 12',
     },
     '1ri98sei': {
@@ -2054,10 +2050,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '56xppndv': {
       'en': 'Uploading Guide',
       'th': 'คู่มือการอัพโหลด',
-    },
-    '5yp3vfbg': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
     },
     'oltds1oq': {
       'en': 'Home',
@@ -2078,9 +2070,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' : Select Style',
       'th': ': เลือกสไตล์',
     },
-    'ou0t57ld': {
-      'en': 'Homey Café',
-      'th': 'โฮมมีคาเฟ่',
+    'nwixgohu': {
+      'en': 'AI Face',
+      'th': '',
     },
     'hipug6o7': {
       'en': 'Coming Soon..',
@@ -2121,10 +2113,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bky6xqnc': {
       'en': '( 100 Credits )',
       'th': '( 100 หน่วยกิต )',
-    },
-    'bmooa60x': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
     },
     '2oa3mnak': {
       'en': 'Home',
@@ -2464,20 +2452,12 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // exper
   {
-    'kix5mhc7': {
-      'en': 'Square (1:1)',
-      'th': '',
-    },
-    'wdey5xj3': {
-      'en': 'Mobile (9:16)',
-      'th': '',
-    },
-    'xdob8bcs': {
-      'en': ' Portrait (3:4)',
-      'th': '',
-    },
     '2h9hhh4r': {
       'en': 'Page Title',
+      'th': '',
+    },
+    '1qwfyhxl': {
+      'en': 'AI Face',
       'th': '',
     },
     'ifu8coiu': {
@@ -2886,7 +2866,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   // uploadvideobutton
   {
     'yjsp19vf': {
-      'en': 'Upload Videos',
+      'en': 'Upload Video',
       'th': 'อัปโหลดวิดีโอ',
     },
     'efgv49la': {

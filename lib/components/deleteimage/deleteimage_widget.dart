@@ -59,9 +59,10 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                   'ca0h5lq6' /* Are you sure? */,
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
-                      fontFamily: 'Inter',
+                      fontFamily: 'NotoSansThai',
                       fontSize: 17.0,
                       fontWeight: FontWeight.w600,
+                      useGoogleFonts: false,
                     ),
               ),
             ),
@@ -89,10 +90,11 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
-                            fontFamily: 'Inter',
+                            fontFamily: 'NotoSansThai',
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
                             fontSize: 14.0,
+                            useGoogleFonts: false,
                           ),
                       elevation: 3.0,
                       borderSide: const BorderSide(
@@ -118,9 +120,10 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                       color: FlutterFlowTheme.of(context).alternate,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Inter',
+                                fontFamily: 'NotoSansThai',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 14.0,
+                                useGoogleFonts: false,
                               ),
                       elevation: 3.0,
                       borderSide: const BorderSide(

@@ -1416,8 +1416,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                   child: Slider(
                                                                                     activeColor: FlutterFlowTheme.of(context).primary,
                                                                                     inactiveColor: FlutterFlowTheme.of(context).alternate,
-                                                                                    min: 0.0,
-                                                                                    max: 8.0,
+                                                                                    min: 1.0,
+                                                                                    max: 9.0,
                                                                                     value: _model.linkSliderValue ??= 5.0,
                                                                                     divisions: 8,
                                                                                     onChanged: (newValue) {
@@ -1626,8 +1626,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'NotoSansThai',
-                                                                      color: Colors
-                                                                          .white,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryBackground,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -1648,7 +1649,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 disabledTextColor:
                                                                     FlutterFlowTheme.of(
                                                                             context)
-                                                                        .info,
+                                                                        .secondaryBackground,
                                                               ),
                                                             ),
                                                           ),
@@ -2744,8 +2745,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                   child: Slider(
                                                                                     activeColor: FlutterFlowTheme.of(context).primary,
                                                                                     inactiveColor: FlutterFlowTheme.of(context).alternate,
-                                                                                    min: 0.0,
-                                                                                    max: 8.0,
+                                                                                    min: 1.0,
+                                                                                    max: 9.0,
                                                                                     value: _model.qrSliderValue ??= 5.0,
                                                                                     divisions: 8,
                                                                                     onChanged: (newValue) {
@@ -2956,8 +2957,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'NotoSansThai',
-                                                                      color: Colors
-                                                                          .white,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryBackground,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2978,7 +2980,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 disabledTextColor:
                                                                     FlutterFlowTheme.of(
                                                                             context)
-                                                                        .info,
+                                                                        .secondaryBackground,
                                                               ),
                                                             ),
                                                           ),
@@ -4469,8 +4471,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'NotoSansThai',
-                                                                      color: Colors
-                                                                          .white,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryBackground,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -4491,7 +4494,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 disabledTextColor:
                                                                     FlutterFlowTheme.of(
                                                                             context)
-                                                                        .info,
+                                                                        .secondaryBackground,
                                                               ),
                                                             ),
                                                           ),
@@ -5858,8 +5861,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     .override(
                                                                       fontFamily:
                                                                           'NotoSansThai',
-                                                                      color: Colors
-                                                                          .white,
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .primaryBackground,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -5880,7 +5884,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 disabledTextColor:
                                                                     FlutterFlowTheme.of(
                                                                             context)
-                                                                        .info,
+                                                                        .secondaryBackground,
                                                               ),
                                                             ),
                                                           ),

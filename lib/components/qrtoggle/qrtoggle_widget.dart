@@ -76,7 +76,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                         fontWeight: FontWeight.w500,
                       ),
               labelColor: const Color(0xFF406AFF),
-              unselectedLabelColor: Colors.black,
+              unselectedLabelColor: FlutterFlowTheme.of(context).primaryText,
               backgroundColor: Colors.white,
               unselectedBackgroundColor: const Color(0xFFEDEDED),
               borderColor: const Color(0xFFEDEDED),

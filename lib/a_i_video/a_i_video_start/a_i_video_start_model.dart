@@ -9,6 +9,8 @@ class AIVideoStartModel extends FlutterFlowModel<AIVideoStartWidget> {
 
   int? selectvideotype;
 
+  int? selectvideostyle;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
