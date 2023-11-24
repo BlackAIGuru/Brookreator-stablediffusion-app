@@ -240,7 +240,7 @@ class _ForgotpasswordWidgetState extends State<ForgotpasswordWidget> {
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0xFF0957DE),
+                      color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context).titleSmall,
                       elevation: 3.0,
                       borderSide: const BorderSide(

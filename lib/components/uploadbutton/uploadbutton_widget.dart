@@ -48,6 +48,8 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
         highlightColor: Colors.transparent,
         onTap: () async {
           final selectedMedia = await selectMedia(
+            maxWidth: 1024.00,
+            maxHeight: 1024.00,
             mediaSource: MediaSource.photoGallery,
             multiImage: true,
           );
@@ -105,6 +107,7 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                     child: Image.asset(
                       'assets/images/Rectangle_165.png',
                       width: 300.0,
+                      height: 127.0,
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -135,10 +138,11 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                         'txzummh5' /* Upload Images */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily: 'NotoSansThai',
                             color: Colors.black,
                             fontSize: 13.0,
                             fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),
@@ -153,9 +157,10 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                         '54pvszqt' /* File types : PNG/JPG, maximum ... */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily: 'NotoSansThai',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 10.0,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),

@@ -63,20 +63,16 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   children: [
                     Align(
                       alignment: const AlignmentDirectional(-1.00, 0.00),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            '8zjuhx80' /* Width (px) */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
-                                    fontSize: 13.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          '8zjuhx80' /* Width (px) */,
                         ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 13.0,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ),
                     Align(
@@ -90,8 +86,9 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),
@@ -108,15 +105,14 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   child: SizedBox(
                     width: double.infinity,
                     child: Slider(
-                      activeColor: const Color(0xFF0957DE),
+                      activeColor: FlutterFlowTheme.of(context).primary,
                       inactiveColor: FlutterFlowTheme.of(context).alternate,
-                      min: 0.0,
-                      max: 2560.0,
-                      value: _model.sliderValue1 ??= 640.0,
+                      min: 512.0,
+                      max: 1024.0,
+                      value: _model.widthsliderValue ??= 512.0,
                       divisions: 8,
                       onChanged: (newValue) {
-                        newValue = double.parse(newValue.toStringAsFixed(0));
-                        setState(() => _model.sliderValue1 = newValue);
+                        setState(() => _model.widthsliderValue = newValue);
                       },
                     ),
                   ),
@@ -134,12 +130,10 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   alignment: const AlignmentDirectional(0.00, 0.00),
                   child: Text(
                     valueOrDefault<String>(
-                      _model.sliderValue1?.toString(),
+                      _model.widthsliderValue?.toString(),
                       '640',
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
-                        ),
+                    style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
                 ),
               ],
@@ -153,20 +147,16 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   children: [
                     Align(
                       alignment: const AlignmentDirectional(-1.00, 0.00),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'ju5c4eza' /* Height (px) */,
-                          ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
-                                    fontSize: 13.0,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          'ju5c4eza' /* Height (px) */,
                         ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 13.0,
+                              fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
+                            ),
                       ),
                     ),
                     Align(
@@ -180,8 +170,9 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),
@@ -197,15 +188,14 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   child: SizedBox(
                     width: double.infinity,
                     child: Slider(
-                      activeColor: const Color(0xFF0957DE),
+                      activeColor: FlutterFlowTheme.of(context).primary,
                       inactiveColor: FlutterFlowTheme.of(context).alternate,
-                      min: 0.0,
-                      max: 2560.0,
-                      value: _model.sliderValue2 ??= 640.0,
+                      min: 512.0,
+                      max: 1024.0,
+                      value: _model.heightsliderValue ??= 512.0,
                       divisions: 8,
                       onChanged: (newValue) {
-                        newValue = double.parse(newValue.toStringAsFixed(0));
-                        setState(() => _model.sliderValue2 = newValue);
+                        setState(() => _model.heightsliderValue = newValue);
                       },
                     ),
                   ),
@@ -223,12 +213,10 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   alignment: const AlignmentDirectional(0.00, 0.00),
                   child: Text(
                     valueOrDefault<String>(
-                      _model.sliderValue2?.toString(),
+                      _model.heightsliderValue?.toString(),
                       '640',
                     ),
-                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                          fontFamily: 'Inter',
-                        ),
+                    style: FlutterFlowTheme.of(context).bodyMedium,
                   ),
                 ),
               ],

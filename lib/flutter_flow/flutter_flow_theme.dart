@@ -130,7 +130,7 @@ class LightModeTheme extends FlutterFlowTheme {
   @Deprecated('Use tertiary instead')
   Color get tertiaryColor => tertiary;
 
-  late Color primary = const Color(0xFF4B39EF);
+  late Color primary = const Color(0xFF1371FF);
   late Color secondary = const Color(0xFF39D2C0);
   late Color tertiary = const Color(0xFFEE8B60);
   late Color alternate = const Color(0xFFE0E3E7);
@@ -191,107 +191,107 @@ class ThemeTypography extends Typography {
 
   final FlutterFlowTheme theme;
 
-  String get displayLargeFamily => 'Plus Jakarta Sans';
-  TextStyle get displayLarge => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get displayLargeFamily => 'NotoSansThai';
+  TextStyle get displayLarge => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 64.0,
       );
-  String get displayMediumFamily => 'Plus Jakarta Sans';
-  TextStyle get displayMedium => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get displayMediumFamily => 'NotoSansThai';
+  TextStyle get displayMedium => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 44.0,
       );
-  String get displaySmallFamily => 'Plus Jakarta Sans';
-  TextStyle get displaySmall => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get displaySmallFamily => 'NotoSansThai';
+  TextStyle get displaySmall => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 36.0,
       );
-  String get headlineLargeFamily => 'Plus Jakarta Sans';
-  TextStyle get headlineLarge => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get headlineLargeFamily => 'NotoSansThai';
+  TextStyle get headlineLarge => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 32.0,
       );
-  String get headlineMediumFamily => 'Plus Jakarta Sans';
-  TextStyle get headlineMedium => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get headlineMediumFamily => 'NotoSansThai';
+  TextStyle get headlineMedium => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 24.0,
       );
-  String get headlineSmallFamily => 'Plus Jakarta Sans';
-  TextStyle get headlineSmall => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get headlineSmallFamily => 'NotoSansThai';
+  TextStyle get headlineSmall => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 24.0,
       );
-  String get titleLargeFamily => 'Plus Jakarta Sans';
-  TextStyle get titleLarge => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get titleLargeFamily => 'NotoSansThai';
+  TextStyle get titleLarge => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.w500,
         fontSize: 22.0,
       );
-  String get titleMediumFamily => 'Plus Jakarta Sans';
-  TextStyle get titleMedium => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get titleMediumFamily => 'NotoSansThai';
+  TextStyle get titleMedium => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.info,
         fontWeight: FontWeight.normal,
         fontSize: 18.0,
       );
-  String get titleSmallFamily => 'Plus Jakarta Sans';
-  TextStyle get titleSmall => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get titleSmallFamily => 'NotoSansThai';
+  TextStyle get titleSmall => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.info,
         fontWeight: FontWeight.w500,
         fontSize: 16.0,
       );
-  String get labelLargeFamily => 'Plus Jakarta Sans';
-  TextStyle get labelLarge => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get labelLargeFamily => 'NotoSansThai';
+  TextStyle get labelLarge => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get labelMediumFamily => 'Plus Jakarta Sans';
-  TextStyle get labelMedium => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get labelMediumFamily => 'NotoSansThai';
+  TextStyle get labelMedium => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get labelSmallFamily => 'Plus Jakarta Sans';
-  TextStyle get labelSmall => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get labelSmallFamily => 'NotoSansThai';
+  TextStyle get labelSmall => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.secondaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,
       );
-  String get bodyLargeFamily => 'Plus Jakarta Sans';
-  TextStyle get bodyLarge => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get bodyLargeFamily => 'NotoSansThai';
+  TextStyle get bodyLarge => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 16.0,
       );
-  String get bodyMediumFamily => 'Plus Jakarta Sans';
-  TextStyle get bodyMedium => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get bodyMediumFamily => 'NotoSansThai';
+  TextStyle get bodyMedium => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 14.0,
       );
-  String get bodySmallFamily => 'Plus Jakarta Sans';
-  TextStyle get bodySmall => GoogleFonts.getFont(
-        'Plus Jakarta Sans',
+  String get bodySmallFamily => 'NotoSansThai';
+  TextStyle get bodySmall => TextStyle(
+        fontFamily: 'NotoSansThai',
         color: theme.primaryText,
         fontWeight: FontWeight.normal,
         fontSize: 12.0,

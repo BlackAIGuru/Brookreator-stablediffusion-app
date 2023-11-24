@@ -53,14 +53,15 @@ class _TabbarWidgetState extends State<TabbarWidget>
           child: FlutterFlowButtonTabBar(
             useToggleButtonStyle: true,
             labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
-                  fontFamily: 'Plus Jakarta Sans',
+                  fontFamily: 'NotoSansThai',
                   fontSize: 12.0,
                   fontWeight: FontWeight.w600,
+                  useGoogleFonts: false,
                 ),
             unselectedLabelStyle: const TextStyle(),
             labelColor: FlutterFlowTheme.of(context).primaryBackground,
             unselectedLabelColor: FlutterFlowTheme.of(context).primaryText,
-            backgroundColor: const Color(0xFF0957DE),
+            backgroundColor: FlutterFlowTheme.of(context).primary,
             unselectedBackgroundColor: FlutterFlowTheme.of(context).alternate,
             borderColor: FlutterFlowTheme.of(context).primaryBackground,
             unselectedBorderColor: FlutterFlowTheme.of(context).alternate,

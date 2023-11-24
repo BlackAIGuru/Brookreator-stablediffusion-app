@@ -119,9 +119,10 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -155,9 +156,10 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                           useToggleButtonStyle: true,
                           labelStyle:
                               FlutterFlowTheme.of(context).titleMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                           unselectedLabelStyle: const TextStyle(),
                           labelColor:
@@ -221,12 +223,13 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color:
                                                               const Color(0xFF406AFF),
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                               Text(
@@ -281,12 +284,13 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color:
                                                               const Color(0xFF406AFF),
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   Text(
@@ -1574,8 +1578,9 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color: Colors.white,
+                                              useGoogleFonts: false,
                                             ),
                                         elevation: 3.0,
                                         borderSide: const BorderSide(
@@ -1623,12 +1628,13 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color:
                                                               const Color(0xFF406AFF),
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   TextSpan(
@@ -1690,12 +1696,13 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color:
                                                               const Color(0xFF406AFF),
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                   TextSpan(
@@ -1959,7 +1966,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFF406AFF),
@@ -2003,7 +2010,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2047,7 +2054,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2091,7 +2098,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2135,7 +2142,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2179,7 +2186,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2223,7 +2230,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2267,7 +2274,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2311,7 +2318,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2355,7 +2362,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2399,7 +2406,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2443,7 +2450,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2487,7 +2494,7 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                                             borderRadius:
                                                                 BorderRadius
                                                                     .circular(
-                                                                        10.0),
+                                                                        15.0),
                                                             border: Border.all(
                                                               color: const Color(
                                                                   0xFFE4E4E4),
@@ -2590,8 +2597,9 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color: Colors.white,
+                                              useGoogleFonts: false,
                                             ),
                                         elevation: 3.0,
                                         borderSide: const BorderSide(

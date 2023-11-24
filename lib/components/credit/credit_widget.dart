@@ -46,7 +46,7 @@ class _CreditWidgetState extends State<CreditWidget> {
         hoverColor: Colors.transparent,
         highlightColor: Colors.transparent,
         onTap: () async {
-          context.pushNamed('Buy_Credit');
+          context.pushNamed('Account');
         },
         child: Container(
           width: 70.0,
@@ -73,21 +73,22 @@ class _CreditWidgetState extends State<CreditWidget> {
                         '6x8qo4eu' /* 60 */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
-                            color: Colors.black,
+                            fontFamily: 'NotoSansThai',
+                            color: FlutterFlowTheme.of(context).primaryText,
                             fontSize: 18.0,
                             fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),
                 ),
               ),
-              const Flexible(
+              Flexible(
                 child: Align(
-                  alignment: AlignmentDirectional(0.00, 0.00),
+                  alignment: const AlignmentDirectional(0.00, 0.00),
                   child: Icon(
                     Icons.monetization_on_outlined,
-                    color: Color(0xFF406AFF),
+                    color: FlutterFlowTheme.of(context).primary,
                     size: 24.0,
                   ),
                 ),

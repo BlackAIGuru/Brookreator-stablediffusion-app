@@ -100,9 +100,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyLarge.override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: 22.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),
@@ -116,10 +117,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         'ch5aqi77' /* Please fill in to complete you... */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily: 'NotoSansThai',
                             color: FlutterFlowTheme.of(context).primaryText,
                             fontSize: 16.0,
                             fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),
@@ -161,10 +163,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   context)
                                               .labelMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
+                                                useGoogleFonts: false,
                                               ),
                                           alignLabelWithHint: false,
                                           hintText: FFLocalizations.of(context)
@@ -175,10 +178,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium
                                                   .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
+                                                    fontFamily: 'NotoSansThai',
                                                     color: const Color(0xB36F6F6F),
                                                     fontSize: 13.0,
+                                                    useGoogleFonts: false,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -223,10 +226,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
+                                              useGoogleFonts: false,
                                             ),
                                         textAlign: TextAlign.start,
                                         keyboardType: TextInputType.name,
@@ -257,10 +261,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   context)
                                               .labelMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
+                                                useGoogleFonts: false,
                                               ),
                                           alignLabelWithHint: false,
                                           hintText: FFLocalizations.of(context)
@@ -271,10 +276,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium
                                                   .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
+                                                    fontFamily: 'NotoSansThai',
                                                     color: const Color(0xB36F6F6F),
                                                     fontSize: 13.0,
+                                                    useGoogleFonts: false,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -319,10 +324,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
+                                              useGoogleFonts: false,
                                             ),
                                         textAlign: TextAlign.start,
                                         keyboardType:
@@ -354,10 +360,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                   context)
                                               .labelMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
+                                                useGoogleFonts: false,
                                               ),
                                           alignLabelWithHint: false,
                                           hintText: FFLocalizations.of(context)
@@ -368,10 +375,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .labelMedium
                                                   .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
+                                                    fontFamily: 'NotoSansThai',
                                                     color: const Color(0xB36F6F6F),
                                                     fontSize: 13.0,
+                                                    useGoogleFonts: false,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
                                             borderSide: BorderSide(
@@ -432,10 +439,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
+                                              useGoogleFonts: false,
                                             ),
                                         textAlign: TextAlign.start,
                                         cursorColor: const Color(0xFF0957DE),
@@ -457,10 +465,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
                                       fontSize: 12.0,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -501,11 +510,12 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: const Color(0xFF0957DE),
+                        color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
-                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontFamily: 'NotoSansThai',
                                   color: Colors.white,
+                                  useGoogleFonts: false,
                                 ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
@@ -529,9 +539,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           style: FlutterFlowTheme.of(context)
                               .bodyMedium
                               .override(
-                                fontFamily: 'Plus Jakarta Sans',
+                                fontFamily: 'NotoSansThai',
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
+                                useGoogleFonts: false,
                                 lineHeight: 1.4,
                               ),
                         ),
@@ -623,9 +634,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -644,9 +656,11 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      color: const Color(0xFF0957DE),
+                                      fontFamily: 'NotoSansThai',
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
                                       fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
                                       lineHeight: 1.4,
                                     ),
                               ),

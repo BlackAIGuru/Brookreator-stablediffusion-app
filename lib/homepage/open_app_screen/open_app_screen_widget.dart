@@ -113,7 +113,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily: 'NotoSansThai',
                                             fontSize: () {
                                               if (MediaQuery.sizeOf(context)
                                                       .height <=
@@ -134,6 +134,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               }
                                             }(),
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -150,10 +151,11 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -209,7 +211,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily: 'NotoSansThai',
                                             fontSize: () {
                                               if (MediaQuery.sizeOf(context)
                                                       .height <=
@@ -230,6 +232,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               }
                                             }(),
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -246,10 +249,11 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -305,7 +309,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily: 'NotoSansThai',
                                             fontSize: () {
                                               if (MediaQuery.sizeOf(context)
                                                       .height <=
@@ -326,6 +330,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               }
                                             }(),
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -342,10 +347,11 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -401,7 +407,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Plus Jakarta Sans',
+                                            fontFamily: 'NotoSansThai',
                                             fontSize: () {
                                               if (MediaQuery.sizeOf(context)
                                                       .height <=
@@ -422,6 +428,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               }
                                             }(),
                                             fontWeight: FontWeight.bold,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -438,10 +445,11 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -490,12 +498,13 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           24.0, 13.0, 24.0, 13.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0xFF0957DE),
+                      color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Plus Jakarta Sans',
+                                fontFamily: 'NotoSansThai',
                                 color: FlutterFlowTheme.of(context).info,
                                 fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
                               ),
                       elevation: 3.0,
                       borderSide: const BorderSide(

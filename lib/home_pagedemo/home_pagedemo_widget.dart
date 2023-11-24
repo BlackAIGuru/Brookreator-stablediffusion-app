@@ -426,11 +426,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 19.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -451,11 +453,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 13.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -635,11 +639,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 19.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -660,11 +666,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 13.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -844,11 +852,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 19.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -869,11 +879,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 13.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -1053,11 +1065,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 19.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w600,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -1078,11 +1092,13 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 13.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -1239,8 +1255,9 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -1257,9 +1274,10 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .titleLarge
                                       .override(
-                                        fontFamily: 'Plus Jakarta Sans',
+                                        fontFamily: 'NotoSansThai',
                                         fontSize: 15.0,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                   unselectedLabelStyle: const TextStyle(),
                                   indicatorColor: const Color(0xFF2781FB),
@@ -1360,12 +1378,14 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .info,
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -1410,9 +1430,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1473,9 +1495,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -1520,9 +1544,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1583,9 +1609,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -1630,9 +1658,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1689,9 +1719,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                 .titleSmall
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                      'NotoSansThai',
                                                                   fontSize:
                                                                       10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                         ),
@@ -1738,9 +1770,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1797,9 +1831,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                 .titleSmall
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                      'NotoSansThai',
                                                                   fontSize:
                                                                       10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                         ),
@@ -1846,9 +1882,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1926,9 +1964,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -1958,9 +1998,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -2036,9 +2078,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -2068,9 +2112,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -2125,9 +2171,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                 .titleSmall
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                      'NotoSansThai',
                                                                   fontSize:
                                                                       10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                         ),
@@ -2171,9 +2219,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -2251,9 +2301,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -2283,9 +2335,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -2340,9 +2394,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                 .titleSmall
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                      'NotoSansThai',
                                                                   fontSize:
                                                                       10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                         ),
@@ -2389,9 +2445,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -2448,9 +2506,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                 .titleSmall
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                      'NotoSansThai',
                                                                   fontSize:
                                                                       10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                         ),
@@ -2494,9 +2554,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -2574,9 +2636,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                       .titleSmall
                                                                       .override(
                                                                         fontFamily:
-                                                                            'Plus Jakarta Sans',
+                                                                            'NotoSansThai',
                                                                         fontSize:
                                                                             6.0,
+                                                                        useGoogleFonts:
+                                                                            false,
                                                                       ),
                                                                 ),
                                                               ),
@@ -2606,9 +2670,11 @@ class _HomePagedemoWidgetState extends State<HomePagedemoWidget>
                                                                   .titleSmall
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Plus Jakarta Sans',
+                                                                        'NotoSansThai',
                                                                     fontSize:
                                                                         10.0,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),

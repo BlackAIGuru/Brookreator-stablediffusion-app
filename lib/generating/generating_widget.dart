@@ -116,8 +116,9 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .titleMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 20.0,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -136,8 +137,9 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
-                                        fontFamily: 'Plus Jakarta Sans',
+                                        fontFamily: 'NotoSansThai',
                                         fontSize: 18.0,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -155,8 +157,9 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .titleMedium
                                       .override(
-                                        fontFamily: 'Plus Jakarta Sans',
+                                        fontFamily: 'NotoSansThai',
                                         fontSize: 13.0,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ),
@@ -195,11 +198,11 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                               FlutterFlowTheme.of(context)
                                                   .titleSmall
                                                   .override(
-                                                    fontFamily:
-                                                        'Plus Jakarta Sans',
+                                                    fontFamily: 'NotoSansThai',
                                                     color: Colors.white,
                                                     fontSize: 12.0,
                                                     fontWeight: FontWeight.w600,
+                                                    useGoogleFonts: false,
                                                   ),
                                           elevation: 3.0,
                                           borderSide: const BorderSide(
@@ -230,10 +233,11 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                         textStyle: FlutterFlowTheme.of(context)
                                             .titleSmall
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color: Colors.black,
                                               fontSize: 12.0,
                                               fontWeight: FontWeight.w600,
+                                              useGoogleFonts: false,
                                             ),
                                         elevation: 3.0,
                                         borderSide: const BorderSide(

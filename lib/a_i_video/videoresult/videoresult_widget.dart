@@ -80,10 +80,11 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                           style: FlutterFlowTheme.of(context)
                               .headlineMedium
                               .override(
-                                fontFamily: 'Inter',
+                                fontFamily: 'NotoSansThai',
                                 color: const Color(0xFF2D2D2D),
                                 fontSize: 18.0,
                                 fontWeight: FontWeight.bold,
+                                useGoogleFonts: false,
                               ),
                         ),
                       ),
@@ -180,10 +181,11 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     color: Colors.white,
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -200,10 +202,11 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     color: Colors.white,
                                     fontSize: 12.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),

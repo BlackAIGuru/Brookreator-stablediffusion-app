@@ -117,9 +117,10 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 fontSize: 27.0,
                                                 fontWeight: FontWeight.bold,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         Align(
@@ -133,11 +134,11 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                  fontFamily: 'NotoSansThai',
                                                   color: FlutterFlowTheme.of(
                                                           context)
                                                       .secondaryText,
+                                                  useGoogleFonts: false,
                                                   lineHeight: 1.4,
                                                 ),
                                           ),
@@ -185,10 +186,10 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                  fontFamily: 'NotoSansThai',
                                                   fontSize: 27.0,
                                                   fontWeight: FontWeight.bold,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Align(
@@ -205,7 +206,8 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            'NotoSansThai',
+                                                        useGoogleFonts: false,
                                                         lineHeight: 1.4,
                                                       ),
                                             ),
@@ -252,9 +254,10 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 fontSize: 27.0,
                                                 fontWeight: FontWeight.bold,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         Text(
@@ -299,9 +302,10 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               fontSize: 27.0,
                                               fontWeight: FontWeight.bold,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                       Text(
@@ -311,7 +315,8 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
+                                              useGoogleFonts: false,
                                               lineHeight: 1.4,
                                             ),
                                       ),
@@ -376,9 +381,10 @@ class _OpenAppScreen123WidgetState extends State<OpenAppScreen123Widget> {
                       color: const Color(0xFF0957DE),
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'Plus Jakarta Sans',
+                                fontFamily: 'NotoSansThai',
                                 color: Colors.white,
                                 fontWeight: FontWeight.w600,
+                                useGoogleFonts: false,
                               ),
                       elevation: 3.0,
                       borderSide: const BorderSide(

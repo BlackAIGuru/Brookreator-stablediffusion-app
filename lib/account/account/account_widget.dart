@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'account_model.dart';
 export 'account_model.dart';
@@ -64,62 +63,56 @@ class _AccountWidgetState extends State<AccountWidget> {
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
-                Material(
-                  color: Colors.transparent,
-                  elevation: 5.0,
-                  shape: RoundedRectangleBorder(
+                Container(
+                  decoration: BoxDecoration(
+                    color: FlutterFlowTheme.of(context).primaryBackground,
                     borderRadius: BorderRadius.circular(5.0),
                   ),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      borderRadius: BorderRadius.circular(5.0),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Flexible(
-                          child: Stack(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 3.0, 0.0, 0.0),
-                                child: InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.pushNamed('HomePage');
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.chevronLeft,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 22.0,
-                                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Flexible(
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 3.0, 0.0, 0.0),
+                              child: InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.pushNamed('HomePage');
+                                },
+                                child: FaIcon(
+                                  FontAwesomeIcons.chevronLeft,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryText,
+                                  size: 22.0,
                                 ),
                               ),
-                              Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
-                                child: Text(
-                                  FFLocalizations.of(context).getText(
-                                    'b5lrz3hz' /* Account */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyLarge
-                                      .override(
-                                        fontFamily: 'Plus Jakarta Sans',
-                                        fontSize: 22.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                            ),
+                            Align(
+                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              child: Text(
+                                FFLocalizations.of(context).getText(
+                                  'b5lrz3hz' /* Account */,
                                 ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyLarge
+                                    .override(
+                                      fontFamily: 'NotoSansThai',
+                                      fontSize: 22.0,
+                                      fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
+                                    ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 Padding(
@@ -178,9 +171,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     color: Colors.black,
                                     fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                             Flexible(
@@ -197,8 +191,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         .primaryBackground,
                                     dropdownColor: const Color(0xFFF4F4F4),
                                     dropdownIconColor: Colors.black,
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
+                                    textStyle: TextStyle(
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontWeight: FontWeight.normal,
@@ -278,9 +272,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       color: Colors.black,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -346,9 +341,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       color: Colors.black,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -418,9 +414,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       color: Colors.black,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],

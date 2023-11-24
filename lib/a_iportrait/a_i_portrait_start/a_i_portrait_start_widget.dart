@@ -84,72 +84,66 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                         header: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 0.0),
-                          child: Material(
-                            color: Colors.transparent,
-                            elevation: 5.0,
-                            shape: RoundedRectangleBorder(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
                               borderRadius: BorderRadius.circular(10.0),
                             ),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              child: Stack(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 3.0, 0.0, 0.0),
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        context.pushNamed('HomePage');
-                                      },
-                                      child: FaIcon(
-                                        FontAwesomeIcons.chevronLeft,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 22.0,
-                                      ),
+                            child: Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      10.0, 3.0, 0.0, 0.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('HomePage');
+                                    },
+                                    child: FaIcon(
+                                      FontAwesomeIcons.chevronLeft,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 22.0,
                                     ),
                                   ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'b2phjhxr' /* AI Portrait */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .override(
-                                            fontFamily: 'Plus Jakarta Sans',
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'b2phjhxr' /* AI Portrait */,
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(1.00, 0.00),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 10.0, 0.0),
-                                      child: Container(
-                                        height: 33.0,
-                                        decoration: const BoxDecoration(),
-                                        child: wrapWithModel(
-                                          model: _model.creditModel,
-                                          updateCallback: () => setState(() {}),
-                                          child: const CreditWidget(),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'NotoSansThai',
+                                          fontSize: 22.0,
+                                          fontWeight: FontWeight.bold,
+                                          useGoogleFonts: false,
                                         ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 10.0, 0.0),
+                                    child: Container(
+                                      height: 33.0,
+                                      decoration: const BoxDecoration(),
+                                      child: wrapWithModel(
+                                        model: _model.creditModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: const CreditWidget(),
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -193,12 +187,13 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            'NotoSansThai',
                                                         color:
                                                             const Color(0xFF406AFF),
                                                         fontSize: 15.0,
                                                         fontWeight:
                                                             FontWeight.bold,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                                 Text(
@@ -211,13 +206,14 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            'NotoSansThai',
                                                         color:
                                                             FlutterFlowTheme.of(
                                                                     context)
                                                                 .primaryText,
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                            FontWeight.w600,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -323,7 +319,7 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'NotoSansThai',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .primaryBackground,
@@ -332,6 +328,8 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -429,7 +427,7 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'NotoSansThai',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .primaryBackground,
@@ -438,6 +436,8 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -539,7 +539,7 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                   .bodyMedium
                                                                   .override(
                                                                     fontFamily:
-                                                                        'Inter',
+                                                                        'NotoSansThai',
                                                                     color: FlutterFlowTheme.of(
                                                                             context)
                                                                         .primaryBackground,
@@ -548,6 +548,8 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
+                                                                    useGoogleFonts:
+                                                                        false,
                                                                   ),
                                                             ),
                                                           ),
@@ -620,9 +622,10 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                       .bodyMedium
                                                       .override(
                                                         fontFamily:
-                                                            'Plus Jakarta Sans',
+                                                            'NotoSansThai',
                                                         fontWeight:
                                                             FontWeight.bold,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ],
@@ -771,8 +774,9 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                         .bodySmall
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           fontSize: 14.0,
+                                                          useGoogleFonts: false,
                                                         ),
                                                     validator: _model
                                                         .textControllerValidator
@@ -805,12 +809,14 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                 .bodyMedium
                                                                 .override(
                                                                   fontFamily:
-                                                                      'Plus Jakarta Sans',
+                                                                      'NotoSansThai',
                                                                   fontSize:
                                                                       13.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
+                                                                  useGoogleFonts:
+                                                                      false,
                                                                 ),
                                                           ),
                                                           TextSpan(
@@ -1062,9 +1068,10 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily: 'NotoSansThai',
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
+                            useGoogleFonts: false,
                           ),
                       elevation: 3.0,
                       borderSide: const BorderSide(

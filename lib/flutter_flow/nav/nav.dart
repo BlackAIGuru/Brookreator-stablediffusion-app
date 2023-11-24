@@ -139,16 +139,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const GeneratingWidget(),
         ),
         FFRoute(
-          name: 'T2I_Done',
-          path: '/t2IDone',
-          builder: (context, params) => const T2IDoneWidget(),
-        ),
-        FFRoute(
-          name: 'T2I_Result',
-          path: '/t2IResult',
-          builder: (context, params) => const T2IResultWidget(),
-        ),
-        FFRoute(
           name: 'QR_Start',
           path: '/qRStart',
           builder: (context, params) => const QRStartWidget(),
@@ -189,6 +179,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'QR_Startdemo',
           path: '/qRStartdemo',
           builder: (context, params) => const QRStartdemoWidget(),
+        ),
+        FFRoute(
+          name: 'exper',
+          path: '/exper',
+          builder: (context, params) => const ExperWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

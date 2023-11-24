@@ -107,77 +107,117 @@ class _HomePageWidgetState extends State<HomePageWidget>
                     children: [
                       StickyHeader(
                         overlapHeaders: false,
-                        header: Material(
-                          color: Colors.transparent,
-                          elevation: 5.0,
-                          shape: RoundedRectangleBorder(
+                        header: Container(
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color:
+                                FlutterFlowTheme.of(context).primaryBackground,
                             borderRadius: BorderRadius.circular(5.0),
                           ),
-                          child: Container(
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .primaryBackground,
-                              borderRadius: BorderRadius.circular(5.0),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 10.0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Align(
-                                    alignment:
-                                        const AlignmentDirectional(-1.00, 0.00),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          15.0, 0.0, 0.0, 0.0),
-                                      child: InkWell(
-                                        splashColor: Colors.transparent,
-                                        focusColor: Colors.transparent,
-                                        hoverColor: Colors.transparent,
-                                        highlightColor: Colors.transparent,
-                                        onTap: () async {
-                                          await launchURL(
-                                              'https://www.brookreator.ai/');
-                                        },
-                                        child: ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
-                                          child: Image.asset(
-                                            'assets/images/brookreator.ab39d8ca.png',
-                                            width: 196.0,
-                                            height: 40.0,
-                                            fit: BoxFit.cover,
-                                          ),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 10.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Align(
+                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        15.0, 0.0, 0.0, 0.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        await launchURL(
+                                            'https://www.brookreator.ai/');
+                                      },
+                                      child: ClipRRect(
+                                        borderRadius:
+                                            BorderRadius.circular(8.0),
+                                        child: Image.asset(
+                                          'assets/images/brookreator.ab39d8ca.png',
+                                          width: 196.0,
+                                          height: 40.0,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
                                     ),
                                   ),
-                                  Flexible(
-                                    child: Builder(
-                                      builder: (context) {
-                                        if (!loggedIn) {
-                                          return Align(
-                                            alignment: const AlignmentDirectional(
-                                                1.00, 0.00),
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 15.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.start,
-                                                children: [
-                                                  wrapWithModel(
-                                                    model:
-                                                        _model.signiniconModel,
-                                                    updateCallback: () =>
-                                                        setState(() {}),
-                                                    child: const SigniniconWidget(),
+                                ),
+                                Flexible(
+                                  child: Builder(
+                                    builder: (context) {
+                                      if (!loggedIn) {
+                                        return Align(
+                                          alignment:
+                                              const AlignmentDirectional(1.00, 0.00),
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 15.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.start,
+                                              children: [
+                                                wrapWithModel(
+                                                  model: _model.signiniconModel,
+                                                  updateCallback: () =>
+                                                      setState(() {}),
+                                                  child: const SigniniconWidget(),
+                                                ),
+                                                InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    context
+                                                        .pushNamed('Settings');
+                                                  },
+                                                  child: Icon(
+                                                    Icons.settings_outlined,
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryText,
+                                                    size: 24.0,
                                                   ),
-                                                  InkWell(
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        );
+                                      } else {
+                                        return Align(
+                                          alignment:
+                                              const AlignmentDirectional(1.00, 0.00),
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 15.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.end,
+                                              children: [
+                                                wrapWithModel(
+                                                  model: _model.creditModel,
+                                                  updateCallback: () =>
+                                                      setState(() {}),
+                                                  child: const CreditWidget(),
+                                                ),
+                                                Padding(
+                                                  padding: const EdgeInsetsDirectional
+                                                      .fromSTEB(
+                                                          0.0, 0.0, 10.0, 0.0),
+                                                  child: InkWell(
                                                     splashColor:
                                                         Colors.transparent,
                                                     focusColor:
@@ -187,127 +227,78 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     highlightColor:
                                                         Colors.transparent,
                                                     onTap: () async {
-                                                      context.pushNamed(
-                                                          'Settings');
+                                                      context
+                                                          .pushNamed('Account');
                                                     },
-                                                    child: Icon(
-                                                      Icons.settings_outlined,
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .secondaryText,
-                                                      size: 24.0,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                          );
-                                        } else {
-                                          return Align(
-                                            alignment: const AlignmentDirectional(
-                                                1.00, 0.00),
-                                            child: Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 15.0, 0.0),
-                                              child: Row(
-                                                mainAxisSize: MainAxisSize.min,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.end,
-                                                children: [
-                                                  wrapWithModel(
-                                                    model: _model.creditModel,
-                                                    updateCallback: () =>
-                                                        setState(() {}),
-                                                    child: const CreditWidget(),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                10.0, 0.0),
-                                                    child: InkWell(
-                                                      splashColor:
-                                                          Colors.transparent,
-                                                      focusColor:
-                                                          Colors.transparent,
-                                                      hoverColor:
-                                                          Colors.transparent,
-                                                      highlightColor:
-                                                          Colors.transparent,
-                                                      onTap: () async {
-                                                        context.pushNamed(
-                                                            'Account');
-                                                      },
-                                                      child: Container(
-                                                        width: 30.0,
-                                                        height: 30.0,
-                                                        decoration:
-                                                            BoxDecoration(
+                                                    child: Container(
+                                                      width: 30.0,
+                                                      height: 30.0,
+                                                      decoration: BoxDecoration(
+                                                        color:
+                                                            const Color(0xFF808080),
+                                                        borderRadius:
+                                                            BorderRadius
+                                                                .circular(30.0),
+                                                        shape:
+                                                            BoxShape.rectangle,
+                                                        border: Border.all(
                                                           color:
-                                                              const Color(0xFF808080),
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      30.0),
-                                                          shape: BoxShape
-                                                              .rectangle,
-                                                          border: Border.all(
-                                                            color: const Color(
-                                                                0xFFE4E4E4),
-                                                          ),
+                                                              const Color(0xFFE4E4E4),
                                                         ),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.min,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            Flexible(
-                                                              child: Align(
-                                                                alignment:
-                                                                    const AlignmentDirectional(
-                                                                        0.00,
-                                                                        0.00),
-                                                                child: Text(
-                                                                  FFLocalizations.of(
-                                                                          context)
-                                                                      .getText(
-                                                                    '3qy9pnrm' /* NA */,
-                                                                  ),
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        fontFamily:
-                                                                            'Inter',
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .accent4,
-                                                                        fontSize:
-                                                                            15.0,
-                                                                        fontWeight:
-                                                                            FontWeight.w600,
-                                                                      ),
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          Flexible(
+                                                            child: Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.00,
+                                                                      0.00),
+                                                              child: Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  '3qy9pnrm' /* NA */,
                                                                 ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'NotoSansThai',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .accent4,
+                                                                      fontSize:
+                                                                          15.0,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w600,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
                                                               ),
                                                             ),
-                                                          ],
-                                                        ),
+                                                          ),
+                                                        ],
                                                       ),
                                                     ),
                                                   ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
-                                          );
-                                        }
-                                      },
-                                    ),
+                                          ),
+                                        );
+                                      }
+                                    },
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -459,11 +450,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 19.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -486,11 +479,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 13.0,
                                                                             fontWeight:
                                                                                 FontWeight.w500,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -541,10 +536,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
-                                                                                fontFamily: 'Inter',
+                                                                                fontFamily: 'NotoSansThai',
                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w600,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                           elevation:
                                                                               3.0,
@@ -692,11 +688,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 19.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -719,11 +717,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 13.0,
                                                                             fontWeight:
                                                                                 FontWeight.w500,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -774,10 +774,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
-                                                                                fontFamily: 'Inter',
+                                                                                fontFamily: 'NotoSansThai',
                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w600,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                           elevation:
                                                                               3.0,
@@ -924,11 +925,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 19.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -951,11 +954,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 13.0,
                                                                             fontWeight:
                                                                                 FontWeight.w500,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -1006,10 +1011,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
-                                                                                fontFamily: 'Inter',
+                                                                                fontFamily: 'NotoSansThai',
                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w600,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                           elevation:
                                                                               3.0,
@@ -1157,11 +1163,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 19.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -1184,11 +1192,13 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           .bodyMedium
                                                                           .override(
                                                                             fontFamily:
-                                                                                'Plus Jakarta Sans',
+                                                                                'NotoSansThai',
                                                                             fontSize:
                                                                                 13.0,
                                                                             fontWeight:
                                                                                 FontWeight.w500,
+                                                                            useGoogleFonts:
+                                                                                false,
                                                                           ),
                                                                     ),
                                                                   ),
@@ -1239,10 +1249,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                           textStyle: FlutterFlowTheme.of(context)
                                                                               .titleSmall
                                                                               .override(
-                                                                                fontFamily: 'Inter',
+                                                                                fontFamily: 'NotoSansThai',
                                                                                 color: FlutterFlowTheme.of(context).secondaryText,
                                                                                 fontSize: 12.0,
                                                                                 fontWeight: FontWeight.w600,
+                                                                                useGoogleFonts: false,
                                                                               ),
                                                                           elevation:
                                                                               3.0,
@@ -1296,16 +1307,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                   curve: Curves.ease,
                                                 );
                                               },
-                                              effect: const smooth_page_indicator
+                                              effect: smooth_page_indicator
                                                   .ExpandingDotsEffect(
                                                 expansionFactor: 3.0,
                                                 spacing: 8.0,
                                                 radius: 16.0,
                                                 dotWidth: 16.0,
                                                 dotHeight: 8.0,
-                                                dotColor: Color(0x8A0957DE),
+                                                dotColor: const Color(0x8A0957DE),
                                                 activeDotColor:
-                                                    Color(0xFF0957DE),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
                                                 paintStyle: PaintingStyle.fill,
                                               ),
                                             ),
@@ -1345,10 +1357,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyLarge
                                                 .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                  fontFamily: 'NotoSansThai',
                                                   fontSize: 17.0,
                                                   fontWeight: FontWeight.w600,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -1359,7 +1371,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                             Align(
                                               alignment: const Alignment(0.0, 0),
                                               child: TabBar(
-                                                labelColor: const Color(0xFF0957DE),
+                                                labelColor:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
                                                 unselectedLabelColor:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
@@ -1368,15 +1382,17 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .titleLarge
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           fontSize: 13.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                 unselectedLabelStyle:
                                                     const TextStyle(),
                                                 indicatorColor:
-                                                    const Color(0xFF2781FB),
+                                                    FlutterFlowTheme.of(context)
+                                                        .primary,
                                                 indicatorWeight: 4.0,
                                                 padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -1500,9 +1516,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'v2eu0wg4' /* Flower Field */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     color: FlutterFlowTheme.of(context).info,
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -1533,8 +1550,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'ej1jbw9i' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -1603,8 +1621,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'tc3qsdn0' /* Korean */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -1635,8 +1654,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'mzszpdgc' /* AI Portrait */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -1714,8 +1734,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'zug1j5i1' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -1739,8 +1760,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'ypweb8au' /* Joan Miro */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -1807,8 +1829,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'cg1nucuy' /* Rainbow */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -1839,8 +1862,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     '3jtwhlml' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -1904,8 +1928,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               '31dnrm0e' /* Cartoon */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
+                                                                                  fontFamily: 'NotoSansThai',
                                                                                   fontSize: 10.0,
+                                                                                  useGoogleFonts: false,
                                                                                 ),
                                                                           ),
                                                                         ),
@@ -1936,8 +1961,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                   ),
                                                                                   textAlign: TextAlign.center,
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2015,8 +2041,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     '7hsrk3o4' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2040,8 +2067,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'esabicih' /* Foodies */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2103,8 +2131,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               '1akpklqt' /* Anime */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
+                                                                                  fontFamily: 'NotoSansThai',
                                                                                   fontSize: 10.0,
+                                                                                  useGoogleFonts: false,
                                                                                 ),
                                                                           ),
                                                                         ),
@@ -2135,8 +2164,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                   ),
                                                                                   textAlign: TextAlign.center,
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2227,8 +2257,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     '9742e68l' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2252,8 +2283,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 '7bvw1v7o' /* Biker */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2329,8 +2361,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'g6u3wekh' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2354,8 +2387,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'kclgdo2a' /* Neon Sci-fi Lady */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2431,8 +2465,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'slbi4hrd' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2456,8 +2491,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'vn2f2j11' /* Lunar Year */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2533,8 +2569,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'g8ayiz4i' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2558,8 +2595,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'v3owgbjd' /* Cyberpunk */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2621,8 +2659,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               'wby7hhqy' /* Homey Cafe​ */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
+                                                                                  fontFamily: 'NotoSansThai',
                                                                                   fontSize: 10.0,
+                                                                                  useGoogleFonts: false,
                                                                                 ),
                                                                           ),
                                                                         ),
@@ -2652,8 +2691,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     '8tbgq2vk' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2731,8 +2771,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'ox1wxvb8' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2756,8 +2797,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 '8vctzokp' /* Galaxy */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2833,8 +2875,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     '0jk502pd' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -2858,8 +2901,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 '8d1ox130' /* Birthday Cat */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -2921,8 +2965,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               'aje5d39z' /* Peach */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
+                                                                                  fontFamily: 'NotoSansThai',
                                                                                   fontSize: 10.0,
+                                                                                  useGoogleFonts: false,
                                                                                 ),
                                                                           ),
                                                                         ),
@@ -2953,8 +2998,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                   ),
                                                                                   textAlign: TextAlign.start,
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -3018,8 +3064,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               '5abp87fo' /* Aquatic Sci-Fi */,
                                                                             ),
                                                                             style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                  fontFamily: 'Plus Jakarta Sans',
+                                                                                  fontFamily: 'NotoSansThai',
                                                                                   fontSize: 10.0,
+                                                                                  useGoogleFonts: false,
                                                                                 ),
                                                                           ),
                                                                         ),
@@ -3049,8 +3096,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'a85ymd5o' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -3128,8 +3176,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                     'j432knps' /* QR Generator */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                        fontFamily: 'Plus Jakarta Sans',
+                                                                                        fontFamily: 'NotoSansThai',
                                                                                         fontSize: 6.0,
+                                                                                        useGoogleFonts: false,
                                                                                       ),
                                                                                 ),
                                                                               ),
@@ -3153,8 +3202,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 'hznb4esn' /* Maneki Neko */,
                                                                               ),
                                                                               style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'Plus Jakarta Sans',
+                                                                                    fontFamily: 'NotoSansThai',
                                                                                     fontSize: 10.0,
+                                                                                    useGoogleFonts: false,
                                                                                   ),
                                                                             ),
                                                                           ),
@@ -3201,7 +3251,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   alignment: const AlignmentDirectional(0.00, 1.00),
                   child: Container(
                     width: double.infinity,
-                    height: 60.0,
+                    height: 59.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),

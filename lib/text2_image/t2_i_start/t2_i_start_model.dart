@@ -7,24 +7,30 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
+  ///  Local state fields for this page.
+
+  int? imagewidth;
+
+  int? imageheight;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   // Model for credit component.
   late CreditModel creditModel;
-  // State field(s) for Carousel widget.
-  CarouselController? carouselController;
+  // State field(s) for selectModel widget.
+  CarouselController? selectModelController;
 
-  int carouselCurrentIndex = 2;
+  int selectModelCurrentIndex = 2;
 
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode1;
-  TextEditingController? textController1;
-  String? Function(BuildContext, String?)? textController1Validator;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode2;
-  TextEditingController? textController2;
-  String? Function(BuildContext, String?)? textController2Validator;
+  // State field(s) for prompt widget.
+  FocusNode? promptFocusNode;
+  TextEditingController? promptController;
+  String? Function(BuildContext, String?)? promptControllerValidator;
+  // State field(s) for negativeprompt widget.
+  FocusNode? negativepromptFocusNode;
+  TextEditingController? negativepromptController;
+  String? Function(BuildContext, String?)? negativepromptControllerValidator;
   // State field(s) for Switch widget.
   bool? switchValue;
   // Model for imagesize component.
@@ -45,11 +51,11 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   void dispose() {
     unfocusNode.dispose();
     creditModel.dispose();
-    textFieldFocusNode1?.dispose();
-    textController1?.dispose();
+    promptFocusNode?.dispose();
+    promptController?.dispose();
 
-    textFieldFocusNode2?.dispose();
-    textController2?.dispose();
+    negativepromptFocusNode?.dispose();
+    negativepromptController?.dispose();
 
     imagesizeModel.dispose();
     slidebarModel.dispose();

@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  aligned_dialog: 0.0.6
   auto_size_text: 3.0.0
   cached_network_image: 3.2.1
   carousel_slider: 4.2.1
@@ -150,6 +151,83 @@ flutter:
     - assets/rive_animations/
     - assets/pdfs/
   fonts:
+    - family: 'NotoSansThai_Condensed'
+      fonts:
+        - asset: assets/fonts/NotoSansThai_Condensed-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/NotoSansThai_Condensed-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/NotoSansThai_Condensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSansThai_Condensed-Regular.ttf
+        - asset: assets/fonts/NotoSansThai_Condensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansThai_Condensed-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansThai_Condensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSansThai_Condensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSansThai_Condensed-Black.ttf
+          weight: 900
+    - family: 'NotoSansThai_ExtraCondensed'
+      fonts:
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-Regular.ttf
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSansThai_ExtraCondensed-Black.ttf
+          weight: 900
+    - family: 'NotoSansThai_SemiCondensed'
+      fonts:
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-Regular.ttf
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSansThai_SemiCondensed-Black.ttf
+          weight: 900
+    - family: 'NotoSansThai'
+      fonts:
+        - asset: assets/fonts/NotoSansThai-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/NotoSansThai-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/NotoSansThai-Light.ttf
+          weight: 300
+        - asset: assets/fonts/NotoSansThai-Regular.ttf
+        - asset: assets/fonts/NotoSansThai-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/NotoSansThai-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/NotoSansThai-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/NotoSansThai-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/NotoSansThai-Black.ttf
+          weight: 900
+
     - family: Icomoon
       fonts:
         - asset: assets/fonts/icomoon.ttf

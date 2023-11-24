@@ -93,7 +93,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: () {
                                       if (MediaQuery.sizeOf(context).height <=
                                           750.0) {
@@ -111,6 +111,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       }
                                     }(),
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -127,9 +128,10 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -180,7 +182,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: () {
                                       if (MediaQuery.sizeOf(context).height <=
                                           750.0) {
@@ -198,6 +200,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       }
                                     }(),
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -214,9 +217,10 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -267,7 +271,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: () {
                                       if (MediaQuery.sizeOf(context).height <=
                                           750.0) {
@@ -285,6 +289,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       }
                                     }(),
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -301,9 +306,10 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -354,7 +360,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     fontSize: () {
                                       if (MediaQuery.sizeOf(context).height <=
                                           750.0) {
@@ -372,6 +378,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       }
                                     }(),
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -388,9 +395,10 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),

@@ -1,8 +1,7 @@
+import '/components/buttongroup_1/buttongroup1_widget.dart';
 import '/components/buttongroup_2/buttongroup2_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -89,9 +88,10 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 18.0,
                                           fontWeight: FontWeight.bold,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -137,174 +137,10 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              15.0, 10.0, 15.0, 0.0),
-                          child: Container(
-                            width: double.infinity,
-                            height: 33.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Stack(
-                                  children: [
-                                    FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: FFLocalizations.of(context).getText(
-                                        '8tmq204r' /* Download */,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 109.0,
-                                        height: 31.12,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            32.0, 0.0, 6.0, 0.0),
-                                        iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: Colors.transparent,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Plus Jakarta Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 12.0,
-                                            ),
-                                        borderSide: const BorderSide(
-                                          color: Color(0xFF5A7FFF),
-                                          width: 1.2,
-                                        ),
-                                        borderRadius:
-                                            BorderRadius.circular(50.0),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          16.52, 10.04, 0.0, 0.0),
-                                      child: ClipRRect(
-                                        borderRadius:
-                                            BorderRadius.circular(0.0),
-                                        child: Image.asset(
-                                          'assets/images/_icon__share_ios_.png',
-                                          width: 11.47,
-                                          height: 11.04,
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Flexible(
-                                  child: Align(
-                                    alignment:
-                                        const AlignmentDirectional(-1.00, 0.00),
-                                    child: ToggleIcon(
-                                      onPressed: () async {
-                                        setState(() =>
-                                            FFAppState().toggleselected =
-                                                !FFAppState().toggleselected);
-                                      },
-                                      value: FFAppState().toggleselected,
-                                      onIcon: const Icon(
-                                        Icons.favorite_sharp,
-                                        color: Color(0xFF0957DE),
-                                        size: 20.0,
-                                      ),
-                                      offIcon: Icon(
-                                        Icons.favorite_border,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 20.0,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
-                                  child: FFButtonWidget(
-                                    onPressed: () {
-                                      print('Button pressed ...');
-                                    },
-                                    text: '',
-                                    icon: const Icon(
-                                      Icons.share_rounded,
-                                      color: Color(0xFF5A7FFF),
-                                      size: 20.0,
-                                    ),
-                                    options: FFButtonOptions(
-                                      width: 50.0,
-                                      height: 28.0,
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          5.0, 0.0, 0.0, 0.0),
-                                      iconPadding:
-                                          const EdgeInsetsDirectional.fromSTEB(
-                                              0.0, 0.0, 0.0, 0.0),
-                                      color: Colors.transparent,
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Plus Jakarta Sans',
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryText,
-                                            fontSize: 20.0,
-                                          ),
-                                      borderSide: const BorderSide(
-                                        color: Color(0xFF5A7FFF),
-                                        width: 1.2,
-                                      ),
-                                      borderRadius: BorderRadius.circular(50.0),
-                                    ),
-                                  ),
-                                ),
-                                Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        5.0, 0.0, 0.0, 0.0),
-                                    child: FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
-                                      },
-                                      text: '',
-                                      icon: const Icon(
-                                        Icons.keyboard_control,
-                                        color: Colors.black,
-                                        size: 15.0,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 50.0,
-                                        height: 28.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            10.0, 0.0, 0.0, 0.0),
-                                        iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: const Color(0xCCC4C4C4),
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'Plus Jakarta Sans',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryText,
-                                              fontSize: 60.0,
-                                            ),
-                                        borderRadius:
-                                            BorderRadius.circular(50.0),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                        wrapWithModel(
+                          model: _model.buttongroup1Model,
+                          updateCallback: () => setState(() {}),
+                          child: const Buttongroup1Widget(),
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
@@ -377,13 +213,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                 enlargeFactor: 0.3,
                                 enableInfiniteScroll: true,
                                 scrollDirection: Axis.horizontal,
-                                autoPlay: true,
-                                autoPlayAnimationDuration:
-                                    const Duration(milliseconds: 800),
-                                autoPlayInterval:
-                                    const Duration(milliseconds: (800 + 2000)),
-                                autoPlayCurve: Curves.linear,
-                                pauseAutoPlayInFiniteScroll: true,
+                                autoPlay: false,
                                 onPageChanged: (index, _) =>
                                     _model.carouselCurrentIndex = index,
                               ),
@@ -418,12 +248,13 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
-                                              fontFamily: 'Plus Jakarta Sans',
+                                              fontFamily: 'NotoSansThai',
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
                                               fontSize: 10.0,
                                               fontWeight: FontWeight.w500,
+                                              useGoogleFonts: false,
                                             ),
                                       ),
                                     ),
@@ -440,9 +271,10 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -460,12 +292,13 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
                                                 fontSize: 10.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -483,9 +316,10 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 fontSize: 13.0,
                                                 fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                       ),
@@ -514,13 +348,14 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText,
                                                           fontSize: 10.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -538,13 +373,14 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
                                                           fontSize: 13.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -569,13 +405,14 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .secondaryText,
                                                           fontSize: 10.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -593,13 +430,14 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryText,
                                                           fontSize: 13.0,
                                                           fontWeight:
                                                               FontWeight.w500,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),

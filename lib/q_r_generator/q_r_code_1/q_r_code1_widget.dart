@@ -77,9 +77,10 @@ class _QRCode1WidgetState extends State<QRCode1Widget> {
                         'h48qjjdg' /* Maneki Neko */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily: 'NotoSansThai',
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
+                            useGoogleFonts: false,
                           ),
                     ),
                     Flexible(

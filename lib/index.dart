@@ -11,9 +11,7 @@ export '/homepage/settings/settings_widget.dart' show SettingsWidget;
 export '/homepage/sign_in/sign_in_widget.dart' show SignInWidget;
 export '/homepage/sign_up/sign_up_widget.dart' show SignUpWidget;
 export '/homepage/my_picture/my_picture_widget.dart' show MyPictureWidget;
-export '/text2_image/generating/generating_widget.dart' show GeneratingWidget;
-export '/text2_image/t2_i_done/t2_i_done_widget.dart' show T2IDoneWidget;
-export '/text2_image/t2_i_result/t2_i_result_widget.dart' show T2IResultWidget;
+export '/generating/generating_widget.dart' show GeneratingWidget;
 export '/q_r_generator/q_r_start/q_r_start_widget.dart' show QRStartWidget;
 export '/homepage/open_app_screen/open_app_screen_widget.dart'
     show OpenAppScreenWidget;
@@ -26,3 +24,4 @@ export '/a_i_video/a_i_video_start/a_i_video_start_widget.dart'
     show AIVideoStartWidget;
 export '/homepage/home_page/home_page_widget.dart' show HomePageWidget;
 export '/q_r_startdemo/q_r_startdemo_widget.dart' show QRStartdemoWidget;
+export '/exper/exper_widget.dart' show ExperWidget;

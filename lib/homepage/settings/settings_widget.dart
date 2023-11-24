@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'settings_model.dart';
 export 'settings_model.dart';
@@ -98,9 +97,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             ),
                             style:
                                 FlutterFlowTheme.of(context).bodyLarge.override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       fontSize: 22.0,
                                       fontWeight: FontWeight.bold,
+                                      useGoogleFonts: false,
                                     ),
                           ),
                         ),
@@ -146,9 +146,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context).info,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -201,10 +202,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -245,10 +247,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
                                     fontWeight: FontWeight.w600,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                             Flexible(
@@ -260,15 +263,18 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   child: FlutterFlowLanguageSelector(
                                     width: 130.0,
                                     height: 35.0,
-                                    backgroundColor: const Color(0xFFE0E3E7),
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryBackground,
                                     borderColor: FlutterFlowTheme.of(context)
                                         .primaryBackground,
-                                    dropdownColor: const Color(0xFFE0E3E7),
+                                    dropdownColor: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
                                     dropdownIconColor:
                                         FlutterFlowTheme.of(context)
                                             .primaryText,
-                                    textStyle: GoogleFonts.getFont(
-                                      'Inter',
+                                    textStyle: TextStyle(
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontWeight: FontWeight.normal,
@@ -335,10 +341,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Inter',
+                                      fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
                                       fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ],
@@ -403,10 +410,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   style: FlutterFlowTheme.of(context)
                                       .bodyMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'NotoSansThai',
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
                                         fontWeight: FontWeight.w600,
+                                        useGoogleFonts: false,
                                       ),
                                 ),
                               ],

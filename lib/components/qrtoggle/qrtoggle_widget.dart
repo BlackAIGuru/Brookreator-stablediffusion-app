@@ -64,9 +64,10 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
             child: FlutterFlowButtonTabBar(
               useToggleButtonStyle: true,
               labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
-                    fontFamily: 'Inter',
+                    fontFamily: 'NotoSansThai',
                     fontSize: 11.0,
                     fontWeight: FontWeight.w500,
+                    useGoogleFonts: false,
                   ),
               unselectedLabelStyle:
                   FlutterFlowTheme.of(context).titleMedium.override(
@@ -171,9 +172,10 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Inter',
+                                            fontFamily: 'NotoSansThai',
                                             fontSize: 12.0,
                                             fontWeight: FontWeight.w500,
+                                            useGoogleFonts: false,
                                           ),
                                     ),
                                   ),
@@ -195,9 +197,10 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                     labelStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
+                                          useGoogleFonts: false,
                                         ),
                                     alignLabelWithHint: false,
                                     hintText:
@@ -207,9 +210,10 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                     hintStyle: FlutterFlowTheme.of(context)
                                         .labelMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           color: const Color(0xB36F6F6F),
                                           fontSize: 12.0,
+                                          useGoogleFonts: false,
                                         ),
                                     enabledBorder: OutlineInputBorder(
                                       borderSide: const BorderSide(
@@ -261,10 +265,11 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                   style: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Inter',
+                                        fontFamily: 'NotoSansThai',
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
                                         fontSize: 12.0,
+                                        useGoogleFonts: false,
                                       ),
                                   textAlign: TextAlign.justify,
                                   cursorColor: const Color(0xFF0957DE),
@@ -320,6 +325,8 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                         onTap: () async {
                                           final selectedMedia =
                                               await selectMedia(
+                                            maxWidth: 1024.00,
+                                            maxHeight: 1024.00,
                                             mediaSource:
                                                 MediaSource.photoGallery,
                                             multiImage: false,
@@ -438,10 +445,12 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                           .bodyMedium
                                                           .override(
                                                             fontFamily:
-                                                                'Plus Jakarta Sans',
+                                                                'NotoSansThai',
                                                             fontSize: 10.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
+                                                            useGoogleFonts:
+                                                                false,
                                                           ),
                                                     ),
                                                   ),
@@ -467,11 +476,13 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Plus Jakarta Sans',
+                                                                    'NotoSansThai',
                                                                 color: FlutterFlowTheme.of(
                                                                         context)
                                                                     .secondaryText,
                                                                 fontSize: 8.0,
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                     ),
                                                   ),
@@ -505,10 +516,12 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                           context)
                                                       .bodyMedium
                                                       .override(
-                                                        fontFamily: 'Inter',
+                                                        fontFamily:
+                                                            'NotoSansThai',
                                                         fontSize: 10.0,
                                                         fontWeight:
                                                             FontWeight.w500,
+                                                        useGoogleFonts: false,
                                                       ),
                                                 ),
                                               ),

@@ -72,78 +72,72 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                         header: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 0.0),
-                          child: Material(
-                            color: Colors.transparent,
-                            elevation: 5.0,
-                            shape: RoundedRectangleBorder(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .primaryBackground,
                               borderRadius: BorderRadius.circular(10.0),
                             ),
-                            child: Container(
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .primaryBackground,
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              child: Stack(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 3.0, 0.0, 0.0),
-                                    child: InkWell(
-                                      splashColor: Colors.transparent,
-                                      focusColor: Colors.transparent,
-                                      hoverColor: Colors.transparent,
-                                      highlightColor: Colors.transparent,
-                                      onTap: () async {
-                                        context.pushNamed('HomePage');
-                                      },
-                                      child: FaIcon(
-                                        FontAwesomeIcons.chevronLeft,
-                                        color: FlutterFlowTheme.of(context)
-                                            .secondaryText,
-                                        size: 22.0,
-                                      ),
+                            child: Stack(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      10.0, 3.0, 0.0, 0.0),
+                                  child: InkWell(
+                                    splashColor: Colors.transparent,
+                                    focusColor: Colors.transparent,
+                                    hoverColor: Colors.transparent,
+                                    highlightColor: Colors.transparent,
+                                    onTap: () async {
+                                      context.pushNamed('HomePage');
+                                    },
+                                    child: FaIcon(
+                                      FontAwesomeIcons.chevronLeft,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 22.0,
                                     ),
                                   ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
-                                    child: Text(
-                                      FFLocalizations.of(context).getText(
-                                        'niine03l' /* AI Video (15 sec) */,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyLarge
-                                          .override(
-                                            fontFamily: 'Plus Jakarta Sans',
-                                            fontSize: 22.0,
-                                            fontWeight: FontWeight.bold,
-                                          ),
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                  child: Text(
+                                    FFLocalizations.of(context).getText(
+                                      'niine03l' /* AI Video (15 sec) */,
                                     ),
-                                  ),
-                                  Align(
-                                    alignment: const AlignmentDirectional(1.00, 0.00),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 10.0, 0.0),
-                                      child: Container(
-                                        height: 33.0,
-                                        decoration: const BoxDecoration(),
-                                        child: wrapWithModel(
-                                          model: _model.creditModel,
-                                          updateCallback: () => setState(() {}),
-                                          child: const CreditWidget(),
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyLarge
+                                        .override(
+                                          fontFamily: 'NotoSansThai',
+                                          fontSize: 22.0,
+                                          fontWeight: FontWeight.bold,
+                                          useGoogleFonts: false,
                                         ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 10.0, 0.0),
+                                    child: Container(
+                                      height: 33.0,
+                                      decoration: const BoxDecoration(),
+                                      child: wrapWithModel(
+                                        model: _model.creditModel,
+                                        updateCallback: () => setState(() {}),
+                                        child: const CreditWidget(),
                                       ),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                           ),
                         ),
                         content: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 15.0, 0.0, 0.0),
+                              15.0, 15.0, 15.0, 0.0),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -165,11 +159,11 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                  fontFamily: 'NotoSansThai',
                                                   color: const Color(0xFF406AFF),
                                                   fontSize: 15.0,
                                                   fontWeight: FontWeight.bold,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                           Text(
@@ -179,10 +173,12 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w600,
+                                                  fontFamily: 'NotoSansThai',
+                                                  color: FlutterFlowTheme.of(
+                                                          context)
+                                                      .primaryText,
+                                                  fontWeight: FontWeight.bold,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ],
@@ -242,7 +238,7 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                 child: Padding(
                                                   padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
-                                                          0.0, 0.0, 0.0, 7.75),
+                                                          0.0, 0.0, 0.0, 5.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -253,13 +249,15 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          fontFamily:
+                                                              'NotoSansThai',
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primaryBackground,
                                                           fontSize: 12.0,
                                                           fontWeight:
                                                               FontWeight.w600,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -317,9 +315,11 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                               .bodyMedium
                                                               .override(
                                                                 fontFamily:
-                                                                    'Inter',
+                                                                    'NotoSansThai',
                                                                 color: const Color(
                                                                     0xFFB0B0B0),
+                                                                useGoogleFonts:
+                                                                    false,
                                                               ),
                                                         ),
                                                       ),
@@ -371,12 +371,14 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          fontFamily:
+                                                              'NotoSansThai',
                                                           color:
                                                               const Color(0xFF406AFF),
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -391,9 +393,10 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ],
@@ -414,9 +417,9 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                                  fontFamily:
-                                                      'Plus Jakarta Sans',
+                                                  fontFamily: 'NotoSansThai',
                                                   fontSize: 12.0,
+                                                  useGoogleFonts: false,
                                                 ),
                                           ),
                                         ),
@@ -471,12 +474,14 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             context)
                                                         .bodyMedium
                                                         .override(
-                                                          fontFamily: 'Inter',
+                                                          fontFamily:
+                                                              'NotoSansThai',
                                                           color:
                                                               const Color(0xFF406AFF),
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                                   ),
                                                 ),
@@ -491,9 +496,10 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         .bodyMedium
                                                         .override(
                                                           fontFamily:
-                                                              'Plus Jakarta Sans',
+                                                              'NotoSansThai',
                                                           fontWeight:
                                                               FontWeight.bold,
+                                                          useGoogleFonts: false,
                                                         ),
                                               ),
                                             ],
@@ -550,11 +556,13 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 12.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -577,8 +585,10 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 10.0,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -628,11 +638,13 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 12.0,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -655,8 +667,10 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                             .bodyMedium
                                                             .override(
                                                               fontFamily:
-                                                                  'Plus Jakarta Sans',
+                                                                  'NotoSansThai',
                                                               fontSize: 10.0,
+                                                              useGoogleFonts:
+                                                                  false,
                                                             ),
                                                       ),
                                                     ),
@@ -723,9 +737,10 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
-                            fontFamily: 'Plus Jakarta Sans',
+                            fontFamily: 'NotoSansThai',
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
+                            useGoogleFonts: false,
                           ),
                       elevation: 3.0,
                       borderSide: const BorderSide(

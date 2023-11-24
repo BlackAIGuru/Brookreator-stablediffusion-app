@@ -1319,308 +1319,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // T2I_Done
-  {
-    'ewv84t33': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'lmluypr1': {
-      'en': 'Step 1',
-      'th': 'ขั้นตอนที่ 1',
-    },
-    '6mwcr0dh': {
-      'en': ' : Select a Theme',
-      'th': ': เลือกธีม',
-    },
-    'n4zxn4c8': {
-      'en': 'Homey Café',
-      'th': 'โฮมมีคาเฟ่',
-    },
-    '9667ooeh': {
-      'en': 'Flower Field',
-      'th': 'ทุ่งดอกไม้',
-    },
-    'ku6hunkd': {
-      'en': 'Biker',
-      'th': 'ไบค์เกอร์',
-    },
-    'lwgxbxzo': {
-      'en': 'Flower Field',
-      'th': 'ทุ่งดอกไม้',
-    },
-    '1hgsa3za': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'ds3nwqn1': {
-      'en': ' : Image description',
-      'th': ': คำอธิบายรูปภาพ',
-    },
-    '9xim41h6': {
-      'en':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-      'th':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-    },
-    'v8lcdfg8': {
-      'en': 'Unwanted Keywords (Optional)',
-      'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
-    },
-    '6eu77m6k': {
-      'en':
-          'Remove from image. Example: color red, big objects, mountain scenes, etc.',
-      'th':
-          'ลบออกจากภาพ ตัวอย่าง: color red, big objects, mountain scenes, etc.',
-    },
-    'uohfjdq6': {
-      'en':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-      'th':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-    },
-    'qkscln3i': {
-      'en': 'Aspect Ratio',
-      'th': 'อัตราส่วนภาพ',
-    },
-    'a3iomssd': {
-      'en': 'Images generated with different ratios may appear different.',
-      'th': 'รูปภาพที่สร้างด้วยอัตราส่วนที่ต่างกันอาจดูแตกต่างออกไป',
-    },
-    'ebs63ghb': {
-      'en': ' Square (1:1)',
-      'th': 'สี่เหลี่ยมจัตุรัส (1:1)',
-    },
-    'mradwquk': {
-      'en': 'Mobile (9:16)',
-      'th': 'มือถือ (9:16)',
-    },
-    'cyhe70lx': {
-      'en': ' Portrait (3:4)',
-      'th': 'แนวตั้ง (3:4)',
-    },
-    'szizkri9': {
-      'en': 'Desktop (16:9)',
-      'th': 'เดสก์ท็อป (16:9)',
-    },
-    '4etsqllk': {
-      'en': 'Landscape (4:3)',
-      'th': 'ทิวทัศน์ (4:3)',
-    },
-    'i4og8rgi': {
-      'en': 'Resize manually',
-      'th': 'ปรับขนาดด้วยตนเอง',
-    },
-    '3qknouum': {
-      'en': 'Step 3',
-      'th': 'ขั้นตอนที่ 3',
-    },
-    'me9h657x': {
-      'en': ' : Number of Images',
-      'th': ': จำนวนภาพ',
-    },
-    'hq9xif4m': {
-      'en': 'Select number of images to generate.',
-      'th': 'เลือกจำนวนภาพที่จะสร้าง',
-    },
-    'ke5j624a': {
-      'en': '1',
-      'th': '1',
-    },
-    'coehmnu3': {
-      'en': '2',
-      'th': '2',
-    },
-    '9nedgdae': {
-      'en': '3',
-      'th': '3',
-    },
-    'lnsxfkw8': {
-      'en': '4',
-      'th': '4',
-    },
-    't2ze3fy0': {
-      'en': '5',
-      'th': '5',
-    },
-    'qsuou851': {
-      'en': '6',
-      'th': '6',
-    },
-    '2hhfyuy0': {
-      'en': '7',
-      'th': '7',
-    },
-    'mxzhjk79': {
-      'en': '8',
-      'th': '8',
-    },
-    'yeqy6kxe': {
-      'en': '9',
-      'th': '9',
-    },
-    'gu3tsb9e': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
-    '7voupqsn': {
-      'en': 'Done',
-      'th': 'เสร็จแล้ว',
-    },
-    'txp79l9n': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
-  // T2I_Result
-  {
-    '3ik5q0tj': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'e5zu1cqw': {
-      'en': 'Step 1',
-      'th': 'ขั้นตอนที่ 1',
-    },
-    'ne09i1h3': {
-      'en': ' : Select a Theme',
-      'th': ': เลือกธีม',
-    },
-    'qu4geg0g': {
-      'en': 'Homey Café',
-      'th': 'โฮมมีคาเฟ่',
-    },
-    '5jvmy10g': {
-      'en': 'Flower Field',
-      'th': 'ทุ่งดอกไม้',
-    },
-    'agmhw704': {
-      'en': 'Biker',
-      'th': 'ไบค์เกอร์',
-    },
-    'uxuwt9qu': {
-      'en': 'Flower Field',
-      'th': 'ทุ่งดอกไม้',
-    },
-    'qgeoekel': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'alr8yoar': {
-      'en': ' : Image description',
-      'th': ': คำอธิบายรูปภาพ',
-    },
-    'r4vj6k0e': {
-      'en':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-      'th':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-    },
-    '8xnkfhb9': {
-      'en': 'Unwanted Keywords (Optional)',
-      'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
-    },
-    'geiie9de': {
-      'en':
-          'Remove from image. Example: color red, big objects, mountain scenes, etc.',
-      'th':
-          'ลบออกจากภาพ ตัวอย่าง: color red, big objects, mountain scenes, etc.',
-    },
-    'tvdeeyxx': {
-      'en':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-      'th':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-    },
-    'vq9doiwj': {
-      'en': 'Aspect Ratio',
-      'th': 'อัตราส่วนภาพ',
-    },
-    'r5gindgr': {
-      'en': 'Images generated with different ratios may appear different.',
-      'th': 'รูปภาพที่สร้างด้วยอัตราส่วนที่ต่างกันอาจดูแตกต่างออกไป',
-    },
-    'k4wmrinm': {
-      'en': ' Square (1:1)',
-      'th': 'สี่เหลี่ยมจัตุรัส (1:1)',
-    },
-    'tnueumpa': {
-      'en': 'Mobile (9:16)',
-      'th': 'มือถือ (9:16)',
-    },
-    'yfvuvrml': {
-      'en': ' Portrait (3:4)',
-      'th': 'แนวตั้ง (3:4)',
-    },
-    '54ne65x7': {
-      'en': 'Desktop (16:9)',
-      'th': 'เดสก์ท็อป (16:9)',
-    },
-    'yderw3e2': {
-      'en': 'Landscape (4:3)',
-      'th': 'ทิวทัศน์ (4:3)',
-    },
-    '2ogknuxt': {
-      'en': 'Resize manually',
-      'th': 'ปรับขนาดด้วยตนเอง',
-    },
-    '079n7lwp': {
-      'en': 'Step 3',
-      'th': 'ขั้นตอนที่ 3',
-    },
-    'hcazxee3': {
-      'en': ' : Number of Images',
-      'th': ': จำนวนภาพ',
-    },
-    'levsxh8d': {
-      'en': 'Select number of images to generate.',
-      'th': 'เลือกจำนวนภาพที่จะสร้าง',
-    },
-    'oq7oa827': {
-      'en': '1',
-      'th': '1',
-    },
-    '089f8jax': {
-      'en': '2',
-      'th': '2',
-    },
-    'o7fohyzt': {
-      'en': '3',
-      'th': '3',
-    },
-    'zbth26ry': {
-      'en': '4',
-      'th': '4',
-    },
-    'tgjqrjqu': {
-      'en': '5',
-      'th': '5',
-    },
-    '1vysgx9m': {
-      'en': '6',
-      'th': '6',
-    },
-    'wp4j5o8j': {
-      'en': '7',
-      'th': '7',
-    },
-    'kyz5h01b': {
-      'en': '8',
-      'th': '8',
-    },
-    'i5909qdn': {
-      'en': '9',
-      'th': '9',
-    },
-    'e037aco6': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
-    'uhrbm5a5': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
   // QR_Start
   {
     'vpw8w4g4': {
@@ -1650,6 +1348,18 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wibgn5x4': {
       'en': 'https://www.example.com/my-long-url',
       'th': 'https://www.example.com/my-long-url',
+    },
+    'ypejhmwm': {
+      'en': 'Field is required',
+      'th': '',
+    },
+    '3trskza2': {
+      'en': 'URL not correct',
+      'th': '',
+    },
+    'ywsm9cc1': {
+      'en': 'Please choose an option from the dropdown',
+      'th': '',
     },
     'pxw014hb': {
       'en': 'Step 2',
@@ -1891,13 +1601,25 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Link /URL',
       'th': 'ลิงค์ /URL',
     },
-    'ijy2aqg5': {
+    '6d1fraht': {
       'en': 'Example : https://www.example.com/',
       'th': 'ตัวอย่าง : https://www.example.com/',
     },
-    'xkxogh0h': {
+    '6aet8vbw': {
       'en': 'https://www.example.com/my-long-url',
       'th': 'https://www.example.com/my-long-url',
+    },
+    '3yj4wn8l': {
+      'en': 'Field is required',
+      'th': '',
+    },
+    'b47jys9w': {
+      'en': 'URL not correct',
+      'th': '',
+    },
+    'zdhvzb6u': {
+      'en': 'Please choose an option from the dropdown',
+      'th': '',
     },
     'd6glvjtr': {
       'en': 'Step 2',
@@ -2194,25 +1916,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Images generated with different ratios may appear different.',
       'th': 'รูปภาพที่สร้างด้วยอัตราส่วนที่ต่างกันอาจดูแตกต่างออกไป',
     },
-    'odkok090': {
-      'en': ' Square (1:1)',
-      'th': 'สี่เหลี่ยมจัตุรัส (1:1)',
+    '9gw34sie': {
+      'en': 'Square (1:1)',
+      'th': '',
     },
-    '7gtpmxam': {
+    'dw71q0x6': {
       'en': 'Mobile (9:16)',
-      'th': 'มือถือ (9:16)',
+      'th': '',
     },
-    '5pe83r41': {
+    '8hrpdbnk': {
       'en': ' Portrait (3:4)',
-      'th': 'แนวตั้ง (3:4)',
+      'th': '',
     },
-    'rhtv71of': {
+    'l9zu23o8': {
       'en': 'Desktop (16:9)',
-      'th': 'เดสก์ท็อป (16:9)',
+      'th': '',
     },
-    'e37pf8uc': {
+    'n7wu58jj': {
       'en': 'Landscape (4:3)',
-      'th': 'ทิวทัศน์ (4:3)',
+      'th': '',
+    },
+    'vy0j565k': {
+      'en': 'Landscape (4:3)',
+      'th': '',
     },
     '35l3lhcj': {
       'en': 'Resize manually',
@@ -2704,6 +2430,29 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
+  // exper
+  {
+    'kix5mhc7': {
+      'en': 'Square (1:1)',
+      'th': '',
+    },
+    'wdey5xj3': {
+      'en': 'Mobile (9:16)',
+      'th': '',
+    },
+    'xdob8bcs': {
+      'en': ' Portrait (3:4)',
+      'th': '',
+    },
+    '2h9hhh4r': {
+      'en': 'Page Title',
+      'th': '',
+    },
+    'ifu8coiu': {
+      'en': 'Home',
+      'th': '',
+    },
+  },
   // footbar
   {
     've30jo30': {
@@ -2858,10 +2607,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wi8d4mya': {
       'en': 'Create a space that seamlessly merges organic shapes',
       'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
-    },
-    '8tmq204r': {
-      'en': 'Download',
-      'th': 'ดาวน์โหลด',
     },
     '0acpismy': {
       'en': 'Image description',
@@ -3148,6 +2893,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '6x8qo4eu': {
       'en': '60',
       'th': '60',
+    },
+  },
+  // deleteimage
+  {
+    'ca0h5lq6': {
+      'en': 'Are you sure?',
+      'th': '',
+    },
+    'wn1lrolc': {
+      'en': 'Delete',
+      'th': '',
+    },
+    'wl011z39': {
+      'en': 'Cancel',
+      'th': '',
     },
   },
   // Miscellaneous

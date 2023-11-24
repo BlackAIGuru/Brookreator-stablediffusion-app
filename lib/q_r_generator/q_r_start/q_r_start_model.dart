@@ -9,6 +9,8 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  final formKey1 = GlobalKey<FormState>();
+  final formKey2 = GlobalKey<FormState>();
   // Model for credit component.
   late CreditModel creditModel;
   // State field(s) for TabBar widget.
@@ -25,6 +27,21 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   FocusNode? promptLinkFocusNode;
   TextEditingController? promptLinkController;
   String? Function(BuildContext, String?)? promptLinkControllerValidator;
+  String? _promptLinkControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        'ypejhmwm' /* Field is required */,
+      );
+    }
+
+    if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        '3trskza2' /* URL not correct */,
+      );
+    }
+    return null;
+  }
+
   // State field(s) for Carousel widget.
   CarouselController? carouselController1;
 
@@ -52,6 +69,21 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   FocusNode? uploadLinkFocusNode;
   TextEditingController? uploadLinkController;
   String? Function(BuildContext, String?)? uploadLinkControllerValidator;
+  String? _uploadLinkControllerValidator(BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return FFLocalizations.of(context).getText(
+        '3yj4wn8l' /* Field is required */,
+      );
+    }
+
+    if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
+      return FFLocalizations.of(context).getText(
+        'b47jys9w' /* URL not correct */,
+      );
+    }
+    return null;
+  }
+
   // Model for uploadbutton component.
   late UploadbuttonModel uploadbuttonModel1;
   // Model for uploadbutton component.
@@ -70,6 +102,8 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   @override
   void initState(BuildContext context) {
     creditModel = createModel(context, () => CreditModel());
+    promptLinkControllerValidator = _promptLinkControllerValidator;
+    uploadLinkControllerValidator = _uploadLinkControllerValidator;
     uploadbuttonModel1 = createModel(context, () => UploadbuttonModel());
     uploadbuttonModel2 = createModel(context, () => UploadbuttonModel());
     uploadbuttonModel3 = createModel(context, () => UploadbuttonModel());

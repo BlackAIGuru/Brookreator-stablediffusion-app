@@ -86,10 +86,11 @@ class _CardWidgetState extends State<CardWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
                                     fontSize: 20.0,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -115,11 +116,12 @@ class _CardWidgetState extends State<CardWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Inter',
+                                    fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     fontSize: 17.0,
                                     fontWeight: FontWeight.w500,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                         Padding(
@@ -131,11 +133,12 @@ class _CardWidgetState extends State<CardWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'NotoSansThai',
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 12.0,
                                   fontWeight: FontWeight.normal,
+                                  useGoogleFonts: false,
                                 ),
                           ),
                         ),
@@ -175,11 +178,12 @@ class _CardWidgetState extends State<CardWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Plus Jakarta Sans',
+                                    fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
                                   ),
                             ),
                           ),
@@ -224,10 +228,11 @@ class _CardWidgetState extends State<CardWidget> {
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'NotoSansThai',
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   fontSize: 14.0,
+                                  useGoogleFonts: false,
                                 ),
                             elevation: 3.0,
                             borderSide: const BorderSide(

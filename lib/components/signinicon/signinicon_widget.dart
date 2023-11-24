@@ -74,10 +74,11 @@ class _SigniniconWidgetState extends State<SigniniconWidget> {
                         'sivaokxw' /* Sign In */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
+                            fontFamily: 'NotoSansThai',
                             color: Colors.black,
                             fontSize: 13.0,
                             fontWeight: FontWeight.w600,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),

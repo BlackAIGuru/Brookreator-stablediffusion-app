@@ -44,57 +44,68 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Flexible(
-          child: Container(
-            width: MediaQuery.sizeOf(context).width * 0.4,
-            height: 35.0,
-            decoration: BoxDecoration(
-              color: FlutterFlowTheme.of(context).secondaryBackground,
-              borderRadius: BorderRadius.circular(27.0),
-              shape: BoxShape.rectangle,
-              border: Border.all(
-                color: const Color(0x816F6F6F),
+          child: InkWell(
+            splashColor: Colors.transparent,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            onTap: () async {
+              context.pushNamed('MyPicture');
+            },
+            child: Container(
+              width: MediaQuery.sizeOf(context).width * 0.4,
+              height: 35.0,
+              decoration: BoxDecoration(
+                color: FlutterFlowTheme.of(context).secondaryBackground,
+                borderRadius: BorderRadius.circular(27.0),
+                shape: BoxShape.rectangle,
+                border: Border.all(
+                  color: const Color(0x816F6F6F),
+                ),
               ),
-            ),
-            child: Align(
-              alignment: const AlignmentDirectional(0.00, 0.00),
-              child: Stack(
-                children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              0.0, 0.0, 4.0, 0.0),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(0.0),
-                            child: Image.asset(
-                              'assets/images/_icon__media_image_list_.png',
-                              width: 14.0,
-                              height: 14.0,
-                              fit: BoxFit.cover,
+              child: Align(
+                alignment: const AlignmentDirectional(0.00, 0.00),
+                child: Stack(
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Align(
+                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 5.0, 0.0),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(0.0),
+                              child: Image.asset(
+                                'assets/images/_icon__media_image_list_.png',
+                                width: 14.0,
+                                height: 14.0,
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'rbh8sny6' /* My Pictures */,
+                        Align(
+                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'rbh8sny6' /* My Pictures */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'NotoSansThai',
+                                  fontSize: 12.0,
+                                  fontWeight: FontWeight.w600,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    fontSize: 12.0,
-                                    fontWeight: FontWeight.w600,
-                                  ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -113,12 +124,13 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
               height: 36.0,
               padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
               iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-              color: const Color(0xFF406AFF),
+              color: FlutterFlowTheme.of(context).primary,
               textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                    fontFamily: 'Plus Jakarta Sans',
+                    fontFamily: 'NotoSansThai',
                     color: Colors.white,
                     fontSize: 14.0,
                     fontWeight: FontWeight.w600,
+                    useGoogleFonts: false,
                   ),
               elevation: 3.0,
               borderSide: const BorderSide(

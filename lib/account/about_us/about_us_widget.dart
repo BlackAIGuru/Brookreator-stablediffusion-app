@@ -63,55 +63,49 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                 children: [
                   StickyHeader(
                     overlapHeaders: false,
-                    header: Material(
-                      color: Colors.transparent,
-                      elevation: 5.0,
-                      shape: RoundedRectangleBorder(
+                    header: Container(
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primaryBackground,
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).primaryBackground,
-                          borderRadius: BorderRadius.circular(5.0),
-                        ),
-                        child: Stack(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  20.0, 3.0, 0.0, 0.0),
-                              child: InkWell(
-                                splashColor: Colors.transparent,
-                                focusColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                highlightColor: Colors.transparent,
-                                onTap: () async {
-                                  context.pushNamed('Account');
-                                },
-                                child: FaIcon(
-                                  FontAwesomeIcons.chevronLeft,
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  size: 22.0,
-                                ),
+                      child: Stack(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                20.0, 3.0, 0.0, 0.0),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('Account');
+                              },
+                              child: FaIcon(
+                                FontAwesomeIcons.chevronLeft,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 22.0,
                               ),
                             ),
-                            Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  'dtl6adx5' /* About Us */,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyLarge
-                                    .override(
-                                      fontFamily: 'Plus Jakarta Sans',
-                                      fontSize: 22.0,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                          ),
+                          Align(
+                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'dtl6adx5' /* About Us */,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyLarge
+                                  .override(
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 22.0,
+                                    fontWeight: FontWeight.bold,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                     content: Padding(
@@ -135,9 +129,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -154,9 +149,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -178,9 +174,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -197,9 +194,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -221,9 +219,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -240,9 +239,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -264,9 +264,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -283,9 +284,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
                                           fontWeight: FontWeight.normal,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -304,9 +306,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Plus Jakarta Sans',
+                                      fontFamily: 'NotoSansThai',
                                       fontSize: 15.0,
                                       fontWeight: FontWeight.w500,
+                                      useGoogleFonts: false,
                                     ),
                               ),
                             ),
@@ -326,9 +329,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -345,9 +349,10 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Plus Jakarta Sans',
+                                          fontFamily: 'NotoSansThai',
                                           fontSize: 15.0,
                                           fontWeight: FontWeight.w600,
+                                          useGoogleFonts: false,
                                         ),
                                   ),
                                 ),
@@ -370,12 +375,13 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.bold,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         TextSpan(
@@ -410,12 +416,13 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.bold,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         TextSpan(
@@ -450,12 +457,13 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-                                                fontFamily: 'Plus Jakarta Sans',
+                                                fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 16.0,
                                                 fontWeight: FontWeight.bold,
+                                                useGoogleFonts: false,
                                               ),
                                         ),
                                         TextSpan(

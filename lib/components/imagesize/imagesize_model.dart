@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 class ImagesizeModel extends FlutterFlowModel<ImagesizeWidget> {
   ///  State fields for stateful widgets in this component.
 
-  // State field(s) for Slider widget.
-  double? sliderValue1;
-  // State field(s) for Slider widget.
-  double? sliderValue2;
+  // State field(s) for widthslider widget.
+  double? widthsliderValue;
+  // State field(s) for heightslider widget.
+  double? heightsliderValue;
 
   /// Initialization and disposal methods.
 

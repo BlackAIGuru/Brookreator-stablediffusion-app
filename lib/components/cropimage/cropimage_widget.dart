@@ -78,10 +78,11 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                         style: FlutterFlowTheme.of(context)
                             .headlineMedium
                             .override(
-                              fontFamily: 'Inter',
+                              fontFamily: 'NotoSansThai',
                               color: const Color(0xFF2D2D2D),
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -126,10 +127,11 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                           'qa9m6x2r' /* Please zoom the photo to adjus... */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily: 'NotoSansThai',
                               color: FlutterFlowTheme.of(context).primaryText,
                               fontSize: 12.0,
                               fontWeight: FontWeight.w500,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -173,8 +175,9 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                     color: const Color(0xFF406AFF),
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                          fontFamily: 'Plus Jakarta Sans',
+                          fontFamily: 'NotoSansThai',
                           color: Colors.white,
+                          useGoogleFonts: false,
                         ),
                     elevation: 3.0,
                     borderSide: const BorderSide(

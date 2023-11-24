@@ -60,10 +60,11 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                         '27y9ohxp' /* Step 3 */,
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'Inter',
-                            color: const Color(0xFF406AFF),
+                            fontFamily: 'NotoSansThai',
+                            color: FlutterFlowTheme.of(context).primary,
                             fontSize: 15.0,
                             fontWeight: FontWeight.bold,
+                            useGoogleFonts: false,
                           ),
                     ),
                   ),
@@ -73,8 +74,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                     '4fvankfb' /*  : Number of Images */,
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'Plus Jakarta Sans',
+                        fontFamily: 'NotoSansThai',
                         fontWeight: FontWeight.bold,
+                        useGoogleFonts: false,
                       ),
                 ),
               ],
@@ -84,14 +86,15 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
         Align(
           alignment: const AlignmentDirectional(-1.00, -1.00),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(19.0, 5.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 0.0, 0.0),
             child: Text(
               FFLocalizations.of(context).getText(
                 'xxpp0td6' /* Select number of images to gen... */,
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'Plus Jakarta Sans',
+                    fontFamily: 'NotoSansThai',
                     fontSize: 12.0,
+                    useGoogleFonts: false,
                   ),
             ),
           ),
@@ -104,10 +107,10 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                 Align(
                   alignment: const AlignmentDirectional(0.00, 0.00),
                   child: Slider(
-                    activeColor: const Color(0xFF0957DE),
+                    activeColor: FlutterFlowTheme.of(context).primary,
                     inactiveColor: FlutterFlowTheme.of(context).alternate,
-                    min: 0.0,
-                    max: 8.0,
+                    min: 1.0,
+                    max: 9.0,
                     value: _model.sliderValue ??= 5.0,
                     divisions: 8,
                     onChanged: (newValue) {
@@ -116,7 +119,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 37.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -130,8 +133,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    fontSize: 11.0,
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),
@@ -140,8 +144,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           'vp4jqt0k' /* 2 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 11.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Text(
@@ -149,8 +154,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           'y8fj65p9' /* 3 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 11.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Text(
@@ -158,8 +164,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           'czhixkcl' /* 4 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 11.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Text(
@@ -167,8 +174,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           'enmlai99' /* 5 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 11.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Text(
@@ -176,8 +184,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           'qgvgs4gs' /* 6 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 11.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Text(
@@ -185,8 +194,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           'r9mtqoss' /* 7 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Text(
@@ -194,8 +204,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           's3k54gki' /* 8 */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'Plus Jakarta Sans',
-                              fontSize: 10.0,
+                              fontFamily: 'NotoSansThai',
+                              fontSize: 12.0,
+                              useGoogleFonts: false,
                             ),
                       ),
                       Padding(
@@ -207,8 +218,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    fontSize: 10.0,
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
                                   ),
                         ),
                       ),

@@ -98,9 +98,10 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                           '2dj0k2yh' /* My Pictures */,
                         ),
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
-                              fontFamily: 'Plus Jakarta Sans',
+                              fontFamily: 'NotoSansThai',
                               fontSize: 22.0,
                               fontWeight: FontWeight.bold,
+                              useGoogleFonts: false,
                             ),
                       ),
                     ),
@@ -122,15 +123,17 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                             labelStyle: FlutterFlowTheme.of(context)
                                 .titleMedium
                                 .override(
-                                  fontFamily: 'Inter',
+                                  fontFamily: 'NotoSansThai',
                                   fontSize: 15.0,
                                   fontWeight: FontWeight.w600,
+                                  useGoogleFonts: false,
                                 ),
                             unselectedLabelStyle: const TextStyle(),
-                            indicatorColor: const Color(0xFF406AFF),
+                            indicatorColor:
+                                FlutterFlowTheme.of(context).primary,
                             indicatorWeight: 3.0,
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 10.0),
+                                20.0, 10.0, 20.0, 10.0),
                             tabs: [
                               Tab(
                                 text: FFLocalizations.of(context).getText(
