@@ -5,6 +5,10 @@ import 'a_i_video_start_widget.dart' show AIVideoStartWidget;
 import 'package:flutter/material.dart';
 
 class AIVideoStartModel extends FlutterFlowModel<AIVideoStartWidget> {
+  ///  Local state fields for this page.
+
+  int? selectvideotype;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

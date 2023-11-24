@@ -222,7 +222,8 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                               lineHeight: 5.0,
                               animation: true,
                               animateFromLastPercent: true,
-                              progressColor: const Color(0xFF0B64EA),
+                              progressColor:
+                                  FlutterFlowTheme.of(context).primary,
                               backgroundColor:
                                   FlutterFlowTheme.of(context).accent4,
                               barRadius: const Radius.circular(10.0),

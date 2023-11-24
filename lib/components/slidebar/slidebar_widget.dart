@@ -40,13 +40,13 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
   Widget build(BuildContext context) {
     context.watch<FFAppState>();
 
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Align(
-          alignment: const AlignmentDirectional(-1.00, 0.00),
-          child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+    return Padding(
+      padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Align(
+            alignment: const AlignmentDirectional(-1.00, 0.00),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -82,54 +82,67 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
               ],
             ),
           ),
-        ),
-        Align(
-          alignment: const AlignmentDirectional(-1.00, -1.00),
-          child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 0.0, 0.0),
-            child: Text(
-              FFLocalizations.of(context).getText(
-                'xxpp0td6' /* Select number of images to gen... */,
+          Align(
+            alignment: const AlignmentDirectional(-1.00, -1.00),
+            child: Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 0.0, 0.0),
+              child: Text(
+                FFLocalizations.of(context).getText(
+                  'xxpp0td6' /* Select number of images to gen... */,
+                ),
+                style: FlutterFlowTheme.of(context).bodyMedium.override(
+                      fontFamily: 'NotoSansThai',
+                      fontSize: 12.0,
+                      useGoogleFonts: false,
+                    ),
               ),
-              style: FlutterFlowTheme.of(context).bodyMedium.override(
-                    fontFamily: 'NotoSansThai',
-                    fontSize: 12.0,
-                    useGoogleFonts: false,
-                  ),
             ),
           ),
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Stack(
-              children: [
-                Align(
-                  alignment: const AlignmentDirectional(0.00, 0.00),
-                  child: Slider(
-                    activeColor: FlutterFlowTheme.of(context).primary,
-                    inactiveColor: FlutterFlowTheme.of(context).alternate,
-                    min: 1.0,
-                    max: 9.0,
-                    value: _model.sliderValue ??= 5.0,
-                    divisions: 8,
-                    onChanged: (newValue) {
-                      setState(() => _model.sliderValue = newValue);
-                    },
+          Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Stack(
+                children: [
+                  Align(
+                    alignment: const AlignmentDirectional(0.00, 0.00),
+                    child: Slider(
+                      activeColor: FlutterFlowTheme.of(context).primary,
+                      inactiveColor: FlutterFlowTheme.of(context).alternate,
+                      min: 1.0,
+                      max: 9.0,
+                      value: _model.sliderValue ??= 5.0,
+                      divisions: 8,
+                      onChanged: (newValue) {
+                        setState(() => _model.sliderValue = newValue);
+                      },
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
-                        child: Text(
+                  Padding(
+                    padding:
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              25.0, 0.0, 0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'sx4pbo47' /* 1 */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'NotoSansThai',
+                                  fontSize: 12.0,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ),
+                        Text(
                           FFLocalizations.of(context).getText(
-                            'sx4pbo47' /* 1 */,
+                            'vp4jqt0k' /* 2 */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -138,83 +151,9 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                                     useGoogleFonts: false,
                                   ),
                         ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'vp4jqt0k' /* 2 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'y8fj65p9' /* 3 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'czhixkcl' /* 4 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'enmlai99' /* 5 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'qgvgs4gs' /* 6 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          'r9mtqoss' /* 7 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Text(
-                        FFLocalizations.of(context).getText(
-                          's3k54gki' /* 8 */,
-                        ),
-                        style: FlutterFlowTheme.of(context).bodyMedium.override(
-                              fontFamily: 'NotoSansThai',
-                              fontSize: 12.0,
-                              useGoogleFonts: false,
-                            ),
-                      ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 25.0, 0.0),
-                        child: Text(
+                        Text(
                           FFLocalizations.of(context).getText(
-                            'pwf34jas' /* 9 */,
+                            'y8fj65p9' /* 3 */,
                           ),
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
@@ -223,15 +162,86 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                                     useGoogleFonts: false,
                                   ),
                         ),
-                      ),
-                    ],
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'czhixkcl' /* 4 */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
+                                  ),
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'enmlai99' /* 5 */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
+                                  ),
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'qgvgs4gs' /* 6 */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
+                                  ),
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            'r9mtqoss' /* 7 */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
+                                  ),
+                        ),
+                        Text(
+                          FFLocalizations.of(context).getText(
+                            's3k54gki' /* 8 */,
+                          ),
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    fontSize: 12.0,
+                                    useGoogleFonts: false,
+                                  ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 0.0, 25.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'pwf34jas' /* 9 */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'NotoSansThai',
+                                  fontSize: 12.0,
+                                  useGoogleFonts: false,
+                                ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      ],
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

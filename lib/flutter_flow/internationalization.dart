@@ -2090,7 +2090,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '( 100 Credits )',
       'th': '( 100 หน่วยกิต )',
     },
-    '0ejhkkaq': {
+    'bmooa60x': {
       'en': 'Generate ( 6 Credits )',
       'th': 'สร้าง ( 6 หน่วยกิต )',
     },

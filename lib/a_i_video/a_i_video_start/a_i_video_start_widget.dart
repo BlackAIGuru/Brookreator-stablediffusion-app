@@ -62,7 +62,7 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 60.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 100.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -137,160 +137,139 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                         ),
                         content: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
-                              15.0, 15.0, 15.0, 0.0),
+                              15.0, 10.0, 15.0, 0.0),
                           child: SingleChildScrollView(
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          15.0, 0.0, 0.0, 20.0),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.max,
-                                        children: [
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'yjtqew0f' /* Step 1 */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'NotoSansThai',
-                                                  color: const Color(0xFF406AFF),
-                                                  fontSize: 15.0,
-                                                  fontWeight: FontWeight.bold,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                          Text(
-                                            FFLocalizations.of(context).getText(
-                                              'a8hmgrii' /*  : Select Style */,
-                                            ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'NotoSansThai',
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .primaryText,
-                                                  fontWeight: FontWeight.bold,
-                                                  useGoogleFonts: false,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: Card(
+                                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    elevation: 3.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
                                     ),
-                                    Padding(
+                                    child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
-                                          30.0, 0.0, 30.0, 0.0),
-                                      child: Row(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
-                                          Stack(
-                                            alignment:
-                                                const AlignmentDirectional(0.0, 1.0),
-                                            children: [
-                                              ClipRRect(
-                                                borderRadius:
-                                                    BorderRadius.circular(10.0),
-                                                child: Image.asset(
-                                                  'assets/images/cartoon-vdo.221e0c42.jpg',
-                                                  width: 101.0,
-                                                  height: 135.0,
-                                                  fit: BoxFit.cover,
-                                                ),
-                                              ),
-                                              Container(
-                                                width: 100.0,
-                                                height: 58.0,
-                                                decoration: const BoxDecoration(
-                                                  gradient: LinearGradient(
-                                                    colors: [
-                                                      Color(0x04000000),
-                                                      Color(0xD4000000)
-                                                    ],
-                                                    stops: [0.0, 1.0],
-                                                    begin: AlignmentDirectional(
-                                                        0.0, -1.0),
-                                                    end: AlignmentDirectional(
-                                                        0, 1.0),
-                                                  ),
-                                                  borderRadius:
-                                                      BorderRadius.only(
-                                                    bottomLeft:
-                                                        Radius.circular(10.0),
-                                                    bottomRight:
-                                                        Radius.circular(10.0),
-                                                    topLeft:
-                                                        Radius.circular(0.0),
-                                                    topRight:
-                                                        Radius.circular(0.0),
-                                                  ),
-                                                ),
-                                              ),
-                                              Align(
-                                                alignment: const AlignmentDirectional(
-                                                    0.00, 0.00),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 5.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      'ou0t57ld' /* Homey Café */,
-                                                    ),
-                                                    textAlign: TextAlign.center,
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .primaryBackground,
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.w600,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                          Align(
-                                            alignment: const AlignmentDirectional(
-                                                0.00, 0.00),
-                                            child: Stack(
-                                              alignment: const AlignmentDirectional(
-                                                  0.0, 0.0),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    15.0, 0.0, 0.0, 20.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
                                               children: [
-                                                Align(
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'yjtqew0f' /* Step 1 */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'NotoSansThai',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                        fontSize: 15.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: false,
+                                                      ),
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    'a8hmgrii' /*  : Select Style */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'NotoSansThai',
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: false,
+                                                      ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    30.0, 0.0, 30.0, 0.0),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.max,
+                                              children: [
+                                                Stack(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, 0.00),
-                                                  child: Container(
-                                                    width: 101.0,
-                                                    height: 135.0,
-                                                    decoration: BoxDecoration(
-                                                      color:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .alternate,
+                                                          0.0, 1.0),
+                                                  children: [
+                                                    ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
                                                               10.0),
+                                                      child: Image.asset(
+                                                        'assets/images/cartoon-vdo.221e0c42.jpg',
+                                                        width: 101.0,
+                                                        height: 135.0,
+                                                        fit: BoxFit.cover,
+                                                      ),
                                                     ),
-                                                    alignment:
-                                                        const AlignmentDirectional(
-                                                            0.00, 0.00),
-                                                    child: Align(
+                                                    Container(
+                                                      width: 100.0,
+                                                      height: 58.0,
+                                                      decoration: const BoxDecoration(
+                                                        gradient:
+                                                            LinearGradient(
+                                                          colors: [
+                                                            Color(0x04000000),
+                                                            Color(0xD4000000)
+                                                          ],
+                                                          stops: [0.0, 1.0],
+                                                          begin:
+                                                              AlignmentDirectional(
+                                                                  0.0, -1.0),
+                                                          end:
+                                                              AlignmentDirectional(
+                                                                  0, 1.0),
+                                                        ),
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  10.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  10.0),
+                                                          topLeft:
+                                                              Radius.circular(
+                                                                  0.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  0.0),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    Align(
                                                       alignment:
                                                           const AlignmentDirectional(
                                                               0.00, 0.00),
@@ -298,15 +277,15 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         padding:
                                                             const EdgeInsetsDirectional
                                                                 .fromSTEB(
-                                                                    3.0,
                                                                     0.0,
-                                                                    3.0,
-                                                                    0.0),
+                                                                    0.0,
+                                                                    0.0,
+                                                                    5.0),
                                                         child: Text(
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                            'hipug6o7' /* Coming Soon.. */,
+                                                            'ou0t57ld' /* Homey Café */,
                                                           ),
                                                           textAlign:
                                                               TextAlign.center,
@@ -316,77 +295,186 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: const Color(
-                                                                    0xFFB0B0B0),
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryBackground,
+                                                                fontSize: 12.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
                                                         ),
                                                       ),
                                                     ),
+                                                  ],
+                                                ),
+                                                Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          0.00, 0.00),
+                                                  child: Stack(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            0.0, 0.0),
+                                                    children: [
+                                                      Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                0.00, 0.00),
+                                                        child: Container(
+                                                          width: 101.0,
+                                                          height: 135.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .alternate,
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10.0),
+                                                          ),
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.00, 0.00),
+                                                          child: Align(
+                                                            alignment:
+                                                                const AlignmentDirectional(
+                                                                    0.00, 0.00),
+                                                            child: Padding(
+                                                              padding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          3.0,
+                                                                          0.0,
+                                                                          3.0,
+                                                                          0.0),
+                                                              child: Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'hipug6o7' /* Coming Soon.. */,
+                                                                ),
+                                                                textAlign:
+                                                                    TextAlign
+                                                                        .center,
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'NotoSansThai',
+                                                                      color: const Color(
+                                                                          0xFFB0B0B0),
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
                                                   ),
+                                                ),
+                                              ].divide(const SizedBox(width: 14.0)),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                      0.0, 0.0, 0.0, 10.0),
+                                  child: Card(
+                                    clipBehavior: Clip.antiAliasWithSaveLayer,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    elevation: 3.0,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 10.0),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Align(
+                                            alignment: const AlignmentDirectional(
+                                                -1.00, 0.00),
+                                            child: Row(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Align(
+                                                  alignment:
+                                                      const AlignmentDirectional(
+                                                          -1.00, 0.00),
+                                                  child: Padding(
+                                                    padding:
+                                                        const EdgeInsetsDirectional
+                                                            .fromSTEB(15.0, 0.0,
+                                                                0.0, 0.0),
+                                                    child: Text(
+                                                      FFLocalizations.of(
+                                                              context)
+                                                          .getText(
+                                                        '09ww8asw' /* Step 2 */,
+                                                      ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primary,
+                                                                fontSize: 15.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Text(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                    's2kar2qj' /*  : Upload Video */,
+                                                  ),
+                                                  style: FlutterFlowTheme.of(
+                                                          context)
+                                                      .bodyMedium
+                                                      .override(
+                                                        fontFamily:
+                                                            'NotoSansThai',
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        useGoogleFonts: false,
+                                                      ),
                                                 ),
                                               ],
                                             ),
                                           ),
-                                        ].divide(const SizedBox(width: 14.0)),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Card(
-                                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  elevation: 1.0,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                  ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(-1.00, 0.00),
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 15.0, 0.0, 0.0),
-                                          child: Row(
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              Align(
-                                                alignment: const AlignmentDirectional(
-                                                    -1.00, 0.00),
-                                                child: Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          15.0, 0.0, 0.0, 0.0),
-                                                  child: Text(
-                                                    FFLocalizations.of(context)
-                                                        .getText(
-                                                      '09ww8asw' /* Step 2 */,
-                                                    ),
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color:
-                                                              const Color(0xFF406AFF),
-                                                          fontSize: 15.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
+                                          Align(
+                                            alignment: const AlignmentDirectional(
+                                                -1.00, -1.00),
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(
+                                                      15.0, 5.0, 0.0, 10.0),
+                                              child: Text(
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  's2kar2qj' /*  : Upload Video */,
+                                                  '1yd0rs56' /* Video duration is limited to 1... */,
                                                 ),
                                                 style:
                                                     FlutterFlowTheme.of(context)
@@ -394,67 +482,47 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
-                                                          fontWeight:
-                                                              FontWeight.bold,
+                                                          fontSize: 12.0,
                                                           useGoogleFonts: false,
                                                         ),
                                               ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(-1.00, -1.00),
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  15.0, 5.0, 0.0, 10.0),
-                                          child: Text(
-                                            FFLocalizations.of(context).getText(
-                                              '1yd0rs56' /* Video duration is limited to 1... */,
                                             ),
-                                            style: FlutterFlowTheme.of(context)
-                                                .bodyMedium
-                                                .override(
-                                                  fontFamily: 'NotoSansThai',
-                                                  fontSize: 12.0,
-                                                  useGoogleFonts: false,
-                                                ),
                                           ),
-                                        ),
+                                          Align(
+                                            alignment: const AlignmentDirectional(
+                                                0.00, 0.00),
+                                            child: wrapWithModel(
+                                              model:
+                                                  _model.uploadvideobuttonModel,
+                                              updateCallback: () =>
+                                                  setState(() {}),
+                                              child: const UploadvideobuttonWidget(),
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
-                                        child: wrapWithModel(
-                                          model: _model.uploadvideobuttonModel,
-                                          updateCallback: () => setState(() {}),
-                                          child: const UploadvideobuttonWidget(),
-                                        ),
-                                      ),
-                                    ],
+                                    ),
                                   ),
                                 ),
                                 Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
                                   color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                  elevation: 1.0,
+                                      .secondaryBackground,
+                                  elevation: 3.0,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8.0),
+                                    borderRadius: BorderRadius.circular(10.0),
                                   ),
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-                                      Align(
-                                        alignment:
-                                            const AlignmentDirectional(-1.00, 0.00),
-                                        child: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 15.0, 0.0, 0.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 10.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        Align(
+                                          alignment:
+                                              const AlignmentDirectional(-1.00, 0.00),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
@@ -476,8 +544,9 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
-                                                          color:
-                                                              const Color(0xFF406AFF),
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primary,
                                                           fontSize: 15.0,
                                                           fontWeight:
                                                               FontWeight.bold,
@@ -505,183 +574,242 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                             ],
                                           ),
                                         ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            15.0, 15.0, 15.0, 20.0),
-                                        child: Row(
-                                          mainAxisSize: MainAxisSize.min,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      0.0, 0.0, 10.0, 0.0),
-                                              child: Container(
-                                                width: 100.0,
-                                                height: 54.0,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          10.0),
-                                                  border: Border.all(
-                                                    color: const Color(0xFF5A7FFF),
-                                                    width: 1.2,
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  15.0, 10.0, 15.0, 10.0),
+                                          child: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
+                                            children: [
+                                              Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        0.0, 0.0, 10.0, 0.0),
+                                                child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    setState(() {
+                                                      _model.selectvideotype =
+                                                          1;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 55.0,
+                                                    decoration: BoxDecoration(
+                                                      color: _model
+                                                                  .selectvideotype ==
+                                                              1
+                                                          ? const Color(0xFFF0F4FA)
+                                                          : FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryBackground,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10.0),
+                                                      border: Border.all(
+                                                        color: _model
+                                                                    .selectvideotype ==
+                                                                1
+                                                            ? FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primary
+                                                            : FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
+                                                      ),
+                                                    ),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      10.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'r6yxvw9w' /* Flipbook */,
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  fontSize:
+                                                                      12.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      5.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'vckl0hak' /* ( 30 Credits ) */,
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  fontSize:
+                                                                      10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'r6yxvw9w' /* Flipbook */,
-                                                        ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  5.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'vckl0hak' /* ( 30 Credits ) */,
-                                                        ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              fontSize: 10.0,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
                                               ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsetsDirectional
-                                                  .fromSTEB(
-                                                      10.0, 0.0, 0.0, 0.0),
-                                              child: Container(
-                                                width: 100.0,
-                                                height: 54.0,
-                                                decoration: BoxDecoration(
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryBackground,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          10.0),
-                                                  border: Border.all(
-                                                    color: const Color(0xFFE8E8E8),
-                                                    width: 1.2,
+                                              Padding(
+                                                padding: const EdgeInsetsDirectional
+                                                    .fromSTEB(
+                                                        10.0, 0.0, 0.0, 0.0),
+                                                child: InkWell(
+                                                  splashColor:
+                                                      Colors.transparent,
+                                                  focusColor:
+                                                      Colors.transparent,
+                                                  hoverColor:
+                                                      Colors.transparent,
+                                                  highlightColor:
+                                                      Colors.transparent,
+                                                  onTap: () async {
+                                                    setState(() {
+                                                      _model.selectvideotype =
+                                                          2;
+                                                    });
+                                                  },
+                                                  child: Container(
+                                                    width: 100.0,
+                                                    height: 55.0,
+                                                    decoration: BoxDecoration(
+                                                      color: _model
+                                                                  .selectvideotype ==
+                                                              2
+                                                          ? const Color(0xFFF0F4FA)
+                                                          : FlutterFlowTheme.of(
+                                                                  context)
+                                                              .secondaryBackground,
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10.0),
+                                                      border: Border.all(
+                                                        color: _model
+                                                                    .selectvideotype ==
+                                                                2
+                                                            ? FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primary
+                                                            : FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryText,
+                                                      ),
+                                                    ),
+                                                    child: Column(
+                                                      mainAxisSize:
+                                                          MainAxisSize.max,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      10.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'mzzl721a' /* Video */,
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  fontSize:
+                                                                      12.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsetsDirectional
+                                                                  .fromSTEB(
+                                                                      0.0,
+                                                                      5.0,
+                                                                      0.0,
+                                                                      0.0),
+                                                          child: Text(
+                                                            FFLocalizations.of(
+                                                                    context)
+                                                                .getText(
+                                                              'bky6xqnc' /* ( 100 Credits ) */,
+                                                            ),
+                                                            style: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  fontSize:
+                                                                      10.0,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
                                                   ),
                                                 ),
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  children: [
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'mzzl721a' /* Video */,
-                                                        ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  5.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: Text(
-                                                        FFLocalizations.of(
-                                                                context)
-                                                            .getText(
-                                                          'bky6xqnc' /* ( 100 Credits ) */,
-                                                        ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              fontSize: 10.0,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
                                               ),
-                                            ),
-                                          ],
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                    ],
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -724,16 +852,21 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                             ).then((value) => safeSetState(() {}));
                           },
                     text: FFLocalizations.of(context).getText(
-                      '0ejhkkaq' /* Generate ( 6 Credits ) */,
+                      'bmooa60x' /* Generate ( 6 Credits ) */,
+                    ),
+                    icon: Icon(
+                      Icons.auto_awesome_sharp,
+                      color: FlutterFlowTheme.of(context).primaryBackground,
+                      size: 15.0,
                     ),
                     options: FFButtonOptions(
-                      width: 396.0,
-                      height: 48.0,
+                      width: 390.0,
+                      height: 45.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0xFF406AFF),
+                      color: FlutterFlowTheme.of(context).primary,
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
@@ -744,13 +877,12 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                           ),
                       elevation: 3.0,
                       borderSide: const BorderSide(
-                        color: Colors.transparent,
                         width: 1.0,
                       ),
-                      borderRadius: BorderRadius.circular(26.0),
-                      disabledColor: const Color(0x7B406AFF),
+                      borderRadius: BorderRadius.circular(25.0),
+                      disabledColor: const Color(0x581371FF),
                       disabledTextColor:
-                          FlutterFlowTheme.of(context).primaryBackground,
+                          FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                   ),
                 ),
