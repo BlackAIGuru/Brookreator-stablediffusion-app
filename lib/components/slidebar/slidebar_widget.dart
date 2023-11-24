@@ -47,39 +47,42 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
         children: [
           Align(
             alignment: const AlignmentDirectional(-1.00, 0.00),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Align(
-                  alignment: const AlignmentDirectional(-1.00, 0.00),
-                  child: Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
-                    child: Text(
-                      FFLocalizations.of(context).getText(
-                        '27y9ohxp' /* Step 3 */,
+            child: Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Align(
+                    alignment: const AlignmentDirectional(-1.00, 0.00),
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+                      child: Text(
+                        FFLocalizations.of(context).getText(
+                          '27y9ohxp' /* Step 3 */,
+                        ),
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'NotoSansThai',
+                              color: FlutterFlowTheme.of(context).primary,
+                              fontSize: 15.0,
+                              fontWeight: FontWeight.bold,
+                              useGoogleFonts: false,
+                            ),
                       ),
-                      style: FlutterFlowTheme.of(context).bodyMedium.override(
-                            fontFamily: 'NotoSansThai',
-                            color: FlutterFlowTheme.of(context).primary,
-                            fontSize: 15.0,
-                            fontWeight: FontWeight.bold,
-                            useGoogleFonts: false,
-                          ),
                     ),
                   ),
-                ),
-                Text(
-                  FFLocalizations.of(context).getText(
-                    '4fvankfb' /*  : Number of Images */,
+                  Text(
+                    FFLocalizations.of(context).getText(
+                      '4fvankfb' /*  : Number of Images */,
+                    ),
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'NotoSansThai',
+                          fontWeight: FontWeight.bold,
+                          useGoogleFonts: false,
+                        ),
                   ),
-                  style: FlutterFlowTheme.of(context).bodyMedium.override(
-                        fontFamily: 'NotoSansThai',
-                        fontWeight: FontWeight.bold,
-                        useGoogleFonts: false,
-                      ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Align(

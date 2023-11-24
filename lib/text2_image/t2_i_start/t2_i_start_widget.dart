@@ -181,7 +181,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  10.0, 0.0, 0.0, 0.0),
+                                                  15.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
@@ -2301,7 +2301,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
+                                                            .fromSTEB(5.0, 0.0,
                                                                 0.0, 10.0),
                                                     child: Row(
                                                       mainAxisSize:
@@ -3685,12 +3685,12 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                                 1.00, 0.00),
                                                         child: Switch.adaptive(
                                                           value: _model
-                                                                  .switchValue ??=
+                                                                  .manualswitchValue ??=
                                                               false,
                                                           onChanged:
                                                               (newValue) async {
                                                             setState(() => _model
-                                                                    .switchValue =
+                                                                    .manualswitchValue =
                                                                 newValue);
                                                           },
                                                           activeColor:
@@ -3713,7 +3713,8 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   ],
                                                 ),
                                               ),
-                                              if (_model.switchValue ?? true)
+                                              if (_model.manualswitchValue ??
+                                                  true)
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(

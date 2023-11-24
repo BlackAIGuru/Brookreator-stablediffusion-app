@@ -1462,7 +1462,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': '9',
     },
     'fzl4glxn': {
-      'en': 'Generate ( 6 Credits )',
+      'en': 'Generate',
       'th': 'สร้าง ( 6 หน่วยกิต )',
     },
     'stkv3hkd': {
@@ -1470,7 +1470,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'คิวอาร์โค้ด',
     },
     'r27cvlwr': {
-      'en': 'Upload Images',
+      'en': 'Upload QR Code',
       'th': 'อัพโหลดรูปภาพ',
     },
     'tfmt3zin': {
@@ -1481,108 +1481,108 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Example',
       'th': 'ตัวอย่าง',
     },
-    '7giykbob': {
+    'apxbxpmf': {
       'en': 'Step 2',
       'th': 'ขั้นตอนที่ 2',
     },
-    'qfvrxh3v': {
+    'q2v2fn1i': {
       'en': ' : Select a Theme',
       'th': ': เลือกธีม',
     },
-    '9s19uhrv': {
+    'rxjfopk7': {
       'en': 'Maneki Neko',
       'th': 'มาเนกิเนโกะ',
     },
-    'ks1z4uz8': {
+    '8590zmc0': {
       'en': 'Cyberpunk',
       'th': 'ไซเบอร์พังค์',
     },
-    'f8uk0k64': {
+    '4ayivlfv': {
       'en': 'Foodies',
       'th': 'นักชิม',
     },
-    '3e5b3lww': {
+    'h5eqe51a': {
       'en': 'Galaxy',
       'th': 'กาแล็กซี',
     },
-    'j0ls8zri': {
+    'jnq6qdcr': {
       'en': 'Jade Dragon',
       'th': 'มังกรหยก',
     },
-    'v28w3ska': {
+    '52zv3xzd': {
       'en': 'Joan Miro',
       'th': 'โจน มิโร',
     },
-    '910i920n': {
+    'zjou2yzw': {
       'en': 'Low Poly',
       'th': 'โพลีต่ำ',
     },
-    'hcgfuczr': {
+    'qu7ea2aw': {
       'en': 'Neon Camouflage',
       'th': 'ลายพรางนีออน',
     },
-    'hlpdm7ae': {
+    '8e194bh8': {
       'en': 'Neon Sci-fi Lady',
       'th': 'นีออนไซไฟเลดี้',
     },
-    'ucbp4dso': {
+    'htki0o99': {
       'en': 'Stormy Night',
       'th': 'คืนที่มีพายุ',
     },
-    '0i4jkjr8': {
+    'uskmokce': {
       'en': 'Tree House',
       'th': 'บ้านต้นไม้',
     },
-    '78w42pdd': {
+    'wa9y53uw': {
       'en': 'Step 3',
       'th': 'ขั้นตอนที่ 3',
     },
-    'ksoicwgc': {
+    'b13z763k': {
       'en': ' : Number of Images',
       'th': ': จำนวนภาพ',
     },
-    '0dudp1sm': {
+    '8pnhq3u0': {
       'en': 'Select number of images to generate.',
       'th': 'เลือกจำนวนภาพที่จะสร้าง',
     },
-    'psmkdbu3': {
+    'kpv8s1lg': {
       'en': '1',
       'th': '1',
     },
-    'xjfzlg9i': {
+    '4xk9nuoc': {
       'en': '2',
       'th': '2',
     },
-    '7r64hsfd': {
+    'njmo5i20': {
       'en': '3',
       'th': '3',
     },
-    'nzniw92v': {
+    '44pje0vk': {
       'en': '4',
       'th': '4',
     },
-    'dg2v20ot': {
+    'nrh2b9r0': {
       'en': '5',
       'th': '5',
     },
-    'yk6prfxv': {
+    'gijw02a8': {
       'en': '6',
       'th': '6',
     },
-    '4fkglfye': {
+    'w6ir9y7e': {
       'en': '7',
       'th': '7',
     },
-    '4l0uua91': {
+    'myia0fsi': {
       'en': '8',
       'th': '8',
     },
-    '0b35v2oj': {
+    'f513rmi6': {
       'en': '9',
       'th': '9',
     },
     'jbxpfp8o': {
-      'en': 'Generate ( 6 Credits )',
+      'en': 'Generate',
       'th': 'สร้าง ( 6 หน่วยกิต )',
     },
     'u1x05isp': {
@@ -1633,6 +1633,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Background Image',
       'th': 'ภาพพื้นหลัง',
     },
+    'zt3gijka': {
+      'en': 'Upload Background',
+      'th': 'อัพโหลดรูปภาพ',
+    },
+    'u00hj7r5': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
     'uvvcvih1': {
       'en': 'QR Scale',
       'th': 'มาตราส่วน QR',
@@ -1641,8 +1649,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Middle Logo (Optional)',
       'th': 'โลโก้กลาง (ไม่จำเป็น)',
     },
+    'vss22atf': {
+      'en': 'Upload Logo',
+      'th': 'อัพโหลดรูปภาพ',
+    },
+    '12jtedkb': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
     'jf7tgrkg': {
-      'en': 'Generate ( 60 Credits )',
+      'en': 'Generate',
       'th': 'สร้าง ( 60 หน่วยกิต )',
     },
     '9tdpm58b': {
@@ -1661,28 +1677,44 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Example',
       'th': 'ตัวอย่าง',
     },
-    'qll7p8s6': {
+    's6v7ynmz': {
       'en': 'Step 2',
       'th': 'ขั้นตอนที่ 2',
     },
-    'zdqysgf4': {
+    'd2y68pxv': {
       'en': ': Upload Photos',
       'th': ': อัพโหลดรูปภาพ',
     },
-    'mn3xdv4i': {
+    '49zra2pa': {
       'en': 'Background Image',
       'th': 'ภาพพื้นหลัง',
     },
-    'c3zhvt12': {
+    '4s3yuj5v': {
+      'en': 'Upload Background',
+      'th': 'อัพโหลดรูปภาพ',
+    },
+    'l92zshm2': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    'l1vfbxnv': {
       'en': 'QR Scale',
       'th': 'มาตราส่วน QR',
     },
-    '5d71le5d': {
+    'hhpzl40b': {
       'en': 'Middle Logo (Optional)',
       'th': 'โลโก้กลาง (ไม่จำเป็น)',
     },
+    '4kxgdq65': {
+      'en': 'Upload Logo',
+      'th': 'อัพโหลดรูปภาพ',
+    },
+    '3i9i14qf': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
     'i3mvhhsf': {
-      'en': 'Generate ( 60 Credits )',
+      'en': 'Generate',
       'th': 'สร้าง ( 60 หน่วยกิต )',
     },
     'tcauinlm': {

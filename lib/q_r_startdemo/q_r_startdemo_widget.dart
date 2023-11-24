@@ -257,11 +257,16 @@ class _QRStartdemoWidgetState extends State<QRStartdemoWidget>
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryBackground,
                                           ),
-                                          child: wrapWithModel(
-                                            model: _model.qrtoggleModel1,
-                                            updateCallback: () =>
-                                                setState(() {}),
-                                            child: const QrtoggleWidget(),
+                                          child: Column(
+                                            mainAxisSize: MainAxisSize.max,
+                                            children: [
+                                              wrapWithModel(
+                                                model: _model.qrtoggleModel1,
+                                                updateCallback: () =>
+                                                    setState(() {}),
+                                                child: const QrtoggleWidget(),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                         Column(

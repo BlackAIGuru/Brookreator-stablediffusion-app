@@ -1,11 +1,20 @@
 import '/components/credit/credit_widget.dart';
-import '/components/uploadbutton/uploadbutton_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'q_r_start_widget.dart' show QRStartWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class QRStartModel extends FlutterFlowModel<QRStartWidget> {
+  ///  Local state fields for this page.
+
+  int? linkqrscaleselected;
+
+  int? uploadqrscaleselected;
+
+  String linklogoselected = '';
+
+  String? qrlogoselected;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -42,24 +51,24 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     return null;
   }
 
-  // State field(s) for Carousel widget.
-  CarouselController? carouselController1;
+  // State field(s) for link_selectmodel widget.
+  CarouselController? linkSelectmodelController;
 
-  int carouselCurrentIndex1 = 1;
+  int linkSelectmodelCurrentIndex = 1;
 
-  // State field(s) for Slider widget.
-  double? sliderValue1;
+  // State field(s) for link_slider widget.
+  double? linkSliderValue;
   bool isDataUploading1 = false;
   FFUploadedFile uploadedLocalFile1 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
-  // State field(s) for Carousel widget.
-  CarouselController? carouselController2;
+  // State field(s) for qr_selectmodel widget.
+  CarouselController? qrSelectmodelController;
 
-  int carouselCurrentIndex2 = 1;
+  int qrSelectmodelCurrentIndex = 1;
 
-  // State field(s) for Slider widget.
-  double? sliderValue2;
+  // State field(s) for qr_slider widget.
+  double? qrSliderValue;
   // State field(s) for TabBar widget.
   TabController? tabBarController3;
   int get tabBarCurrentIndex3 =>
@@ -84,18 +93,21 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     return null;
   }
 
-  // Model for uploadbutton component.
-  late UploadbuttonModel uploadbuttonModel1;
-  // Model for uploadbutton component.
-  late UploadbuttonModel uploadbuttonModel2;
   bool isDataUploading2 = false;
-  FFUploadedFile uploadedLocalFile2 =
+  List<FFUploadedFile> uploadedLocalFiles2 = [];
+
+  bool isDataUploading3 = false;
+  List<FFUploadedFile> uploadedLocalFiles3 = [];
+
+  bool isDataUploading4 = false;
+  FFUploadedFile uploadedLocalFile4 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
-  // Model for uploadbutton component.
-  late UploadbuttonModel uploadbuttonModel3;
-  // Model for uploadbutton component.
-  late UploadbuttonModel uploadbuttonModel4;
+  bool isDataUploading5 = false;
+  List<FFUploadedFile> uploadedLocalFiles5 = [];
+
+  bool isDataUploading6 = false;
+  List<FFUploadedFile> uploadedLocalFiles6 = [];
 
   /// Initialization and disposal methods.
 
@@ -104,10 +116,6 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     creditModel = createModel(context, () => CreditModel());
     promptLinkControllerValidator = _promptLinkControllerValidator;
     uploadLinkControllerValidator = _uploadLinkControllerValidator;
-    uploadbuttonModel1 = createModel(context, () => UploadbuttonModel());
-    uploadbuttonModel2 = createModel(context, () => UploadbuttonModel());
-    uploadbuttonModel3 = createModel(context, () => UploadbuttonModel());
-    uploadbuttonModel4 = createModel(context, () => UploadbuttonModel());
   }
 
   @override
@@ -122,11 +130,6 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     tabBarController3?.dispose();
     uploadLinkFocusNode?.dispose();
     uploadLinkController?.dispose();
-
-    uploadbuttonModel1.dispose();
-    uploadbuttonModel2.dispose();
-    uploadbuttonModel3.dispose();
-    uploadbuttonModel4.dispose();
   }
 
   /// Action blocks are added here.

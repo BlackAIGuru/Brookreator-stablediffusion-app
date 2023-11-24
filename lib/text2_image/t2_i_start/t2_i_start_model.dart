@@ -31,8 +31,8 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   FocusNode? negativepromptFocusNode;
   TextEditingController? negativepromptController;
   String? Function(BuildContext, String?)? negativepromptControllerValidator;
-  // State field(s) for Switch widget.
-  bool? switchValue;
+  // State field(s) for manualswitch widget.
+  bool? manualswitchValue;
   // Model for imagesize component.
   late ImagesizeModel imagesizeModel;
   // Model for slidebar component.
