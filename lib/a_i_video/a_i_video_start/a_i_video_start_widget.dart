@@ -265,8 +265,8 @@ class _AIVideoStartWidgetState extends State<AIVideoStartWidget> {
                                                                       10.0),
                                                           child: Image.asset(
                                                             'assets/images/AI_video.png',
-                                                            width: 300.0,
-                                                            height: 200.0,
+                                                            width: 100.0,
+                                                            height: 135.0,
                                                             fit: BoxFit.cover,
                                                           ),
                                                         ),

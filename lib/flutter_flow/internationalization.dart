@@ -1489,47 +1489,47 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' : Select a Theme',
       'th': ': เลือกธีม',
     },
-    'rxjfopk7': {
+    'h2ma7cov': {
       'en': 'Maneki Neko',
       'th': 'มาเนกิเนโกะ',
     },
-    '8590zmc0': {
+    '0vtn3o9b': {
       'en': 'Cyberpunk',
       'th': 'ไซเบอร์พังค์',
     },
-    '4ayivlfv': {
+    '81d9dbyn': {
       'en': 'Foodies',
       'th': 'นักชิม',
     },
-    'h5eqe51a': {
+    'vuxsw3uv': {
       'en': 'Galaxy',
       'th': 'กาแล็กซี',
     },
-    'jnq6qdcr': {
+    'w98m9zwc': {
       'en': 'Jade Dragon',
       'th': 'มังกรหยก',
     },
-    '52zv3xzd': {
+    'aqrklqtx': {
       'en': 'Joan Miro',
       'th': 'โจน มิโร',
     },
-    'zjou2yzw': {
+    'smwot51o': {
       'en': 'Low Poly',
       'th': 'โพลีต่ำ',
     },
-    'qu7ea2aw': {
+    '21g2dylf': {
       'en': 'Neon Camouflage',
       'th': 'ลายพรางนีออน',
     },
-    '8e194bh8': {
+    'uhmpqhms': {
       'en': 'Neon Sci-fi Lady',
       'th': 'นีออนไซไฟเลดี้',
     },
-    'htki0o99': {
+    'ocr1pg76': {
       'en': 'Stormy Night',
       'th': 'คืนที่มีพายุ',
     },
-    'uskmokce': {
+    'i94z4mpf': {
       'en': 'Tree House',
       'th': 'บ้านต้นไม้',
     },

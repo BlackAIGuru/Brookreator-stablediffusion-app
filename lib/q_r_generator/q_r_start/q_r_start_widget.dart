@@ -644,649 +644,748 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                               items: [
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      ClipRRect(
-                                                                                        borderRadius: BorderRadius.circular(10.0),
-                                                                                        child: Image.asset(
-                                                                                          'assets/images/Maneki_Neko.jpg',
-                                                                                          width: 101.0,
-                                                                                          height: 106.0,
-                                                                                          fit: BoxFit.cover,
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 0 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              '9eltv43x' /* Maneki Neko */,
-                                                                                            ),
-                                                                                            textAlign: TextAlign.center,
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
-                                                                                ),
-                                                                                Align(
-                                                                                  alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        ClipRRect(
                                                                                           borderRadius: BorderRadius.circular(10.0),
                                                                                           child: Image.asset(
-                                                                                            'assets/images/Cyberpunk.jpg',
+                                                                                            'assets/images/Maneki_Neko.jpg',
                                                                                             width: 101.0,
                                                                                             height: 106.0,
                                                                                             fit: BoxFit.cover,
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'vyfzqqmp' /* Cyberpunk */,
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                '9eltv43x' /* Maneki Neko */,
+                                                                                              ),
+                                                                                              textAlign: TextAlign.center,
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Foodies.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 1 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'vr6zltm2' /* Foodies */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Cyberpunk.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'vyfzqqmp' /* Cyberpunk */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Galaxy.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 2 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'qnlaa78z' /* Galaxy */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Foodies.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'vr6zltm2' /* Foodies */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Jade_Dragon.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 3 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              't6hmoqjk' /* Jade Dragon */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Galaxy.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'qnlaa78z' /* Galaxy */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Joan_Miro.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 4 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'pisolpng' /* Joan Miro */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Jade_Dragon.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                't6hmoqjk' /* Jade Dragon */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Low_Poly.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 5 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'd0sezw13' /* Low Poly */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Joan_Miro.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'pisolpng' /* Joan Miro */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Neon_Camouflage.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 6 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'ojtutlpv' /* Neon Camouflage */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Low_Poly.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 10.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'd0sezw13' /* Low Poly */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Neon_Sci-fi_Lady.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 7 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'xysz2wk7' /* Neon Sci-fi Lady */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Neon_Camouflage.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'ojtutlpv' /* Neon Camouflage */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 10.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Stormy_Night.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 8 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'vibxcy2m' /* Stormy Night */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Neon_Sci-fi_Lady.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'xysz2wk7' /* Neon Sci-fi Lady */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Tree_House.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 9 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              '1gcfqt0x' /* Tree House */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Stormy_Night.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'vibxcy2m' /* Stormy Night */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                                Align(
+                                                                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.linkSelectmodelCurrentIndex == 10 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                    ],
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Tree_House.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                '1gcfqt0x' /* Tree House */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                               ],
@@ -1294,13 +1393,16 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                               options: CarouselOptions(
                                                                                 initialPage: 1,
                                                                                 viewportFraction: 0.3,
-                                                                                disableCenter: true,
+                                                                                disableCenter: false,
                                                                                 enlargeCenterPage: true,
                                                                                 enlargeFactor: 0.3,
                                                                                 enableInfiniteScroll: false,
                                                                                 scrollDirection: Axis.horizontal,
                                                                                 autoPlay: false,
-                                                                                onPageChanged: (index, _) => _model.linkSelectmodelCurrentIndex = index,
+                                                                                onPageChanged: (index, _) async {
+                                                                                  _model.linkSelectmodelCurrentIndex = index;
+                                                                                  setState(() {});
+                                                                                },
                                                                               ),
                                                                             ),
                                                                           ),
@@ -1973,649 +2075,748 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                               items: [
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      ClipRRect(
-                                                                                        borderRadius: BorderRadius.circular(10.0),
-                                                                                        child: Image.asset(
-                                                                                          'assets/images/Maneki_Neko.jpg',
-                                                                                          width: 101.0,
-                                                                                          height: 106.0,
-                                                                                          fit: BoxFit.cover,
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 0 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'rxjfopk7' /* Maneki Neko */,
-                                                                                            ),
-                                                                                            textAlign: TextAlign.center,
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                    ],
-                                                                                  ),
-                                                                                ),
-                                                                                Align(
-                                                                                  alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        ClipRRect(
                                                                                           borderRadius: BorderRadius.circular(10.0),
                                                                                           child: Image.asset(
-                                                                                            'assets/images/Cyberpunk.jpg',
+                                                                                            'assets/images/Maneki_Neko.jpg',
                                                                                             width: 101.0,
                                                                                             height: 106.0,
                                                                                             fit: BoxFit.cover,
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              '8590zmc0' /* Cyberpunk */,
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'h2ma7cov' /* Maneki Neko */,
+                                                                                              ),
+                                                                                              textAlign: TextAlign.center,
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Foodies.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 1 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              '4ayivlfv' /* Foodies */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Cyberpunk.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                '0vtn3o9b' /* Cyberpunk */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Galaxy.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 2 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'h5eqe51a' /* Galaxy */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Foodies.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                '81d9dbyn' /* Foodies */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Jade_Dragon.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 3 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'jnq6qdcr' /* Jade Dragon */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Galaxy.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'vuxsw3uv' /* Galaxy */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Joan_Miro.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 4 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              '52zv3xzd' /* Joan Miro */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Jade_Dragon.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'w98m9zwc' /* Jade Dragon */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Low_Poly.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 5 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'zjou2yzw' /* Low Poly */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Joan_Miro.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'aqrklqtx' /* Joan Miro */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Neon_Camouflage.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 6 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'qu7ea2aw' /* Neon Camouflage */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Low_Poly.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 10.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'smwot51o' /* Low Poly */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Neon_Sci-fi_Lady.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 7 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              '8e194bh8' /* Neon Sci-fi Lady */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Neon_Camouflage.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                '21g2dylf' /* Neon Camouflage */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 10.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Stormy_Night.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 8 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'htki0o99' /* Stormy Night */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Neon_Sci-fi_Lady.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
-                                                                                      ),
-                                                                                    ],
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'uhmpqhms' /* Neon Sci-fi Lady */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                                 Align(
                                                                                   alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                  child: Stack(
-                                                                                    alignment: const AlignmentDirectional(0.0, 1.0),
-                                                                                    children: [
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 0.00),
-                                                                                        child: ClipRRect(
-                                                                                          borderRadius: BorderRadius.circular(10.0),
-                                                                                          child: Image.asset(
-                                                                                            'assets/images/Tree_House.jpg',
-                                                                                            width: 101.0,
-                                                                                            height: 106.0,
-                                                                                            fit: BoxFit.cover,
-                                                                                          ),
-                                                                                        ),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 9 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                      Container(
-                                                                                        width: 100.0,
-                                                                                        height: 58.0,
-                                                                                        decoration: const BoxDecoration(
-                                                                                          gradient: LinearGradient(
-                                                                                            colors: [
-                                                                                              Color(0x04000000),
-                                                                                              Color(0xD4000000)
-                                                                                            ],
-                                                                                            stops: [0.0, 1.0],
-                                                                                            begin: AlignmentDirectional(0.0, -1.0),
-                                                                                            end: AlignmentDirectional(0, 1.0),
-                                                                                          ),
-                                                                                          borderRadius: BorderRadius.only(
-                                                                                            bottomLeft: Radius.circular(10.0),
-                                                                                            bottomRight: Radius.circular(10.0),
-                                                                                            topLeft: Radius.circular(0.0),
-                                                                                            topRight: Radius.circular(0.0),
-                                                                                          ),
-                                                                                        ),
-                                                                                      ),
-                                                                                      Align(
-                                                                                        alignment: const AlignmentDirectional(0.00, 1.00),
-                                                                                        child: Padding(
-                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
-                                                                                          child: Text(
-                                                                                            FFLocalizations.of(context).getText(
-                                                                                              'uskmokce' /* Tree House */,
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Stormy_Night.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
                                                                                             ),
-                                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                                  fontFamily: 'NotoSansThai',
-                                                                                                  color: FlutterFlowTheme.of(context).info,
-                                                                                                  fontSize: 12.0,
-                                                                                                  fontWeight: FontWeight.w600,
-                                                                                                  useGoogleFonts: false,
-                                                                                                ),
                                                                                           ),
                                                                                         ),
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'ocr1pg76' /* Stormy Night */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                ),
+                                                                                Align(
+                                                                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                  child: Container(
+                                                                                    decoration: BoxDecoration(
+                                                                                      borderRadius: BorderRadius.circular(10.0),
+                                                                                      border: Border.all(
+                                                                                        color: _model.qrSelectmodelCurrentIndex == 10 ? FlutterFlowTheme.of(context).primary : const Color(0xFFE4E4E4),
+                                                                                        width: 2.0,
                                                                                       ),
-                                                                                    ],
+                                                                                    ),
+                                                                                    child: Stack(
+                                                                                      alignment: const AlignmentDirectional(0.0, 1.0),
+                                                                                      children: [
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                          child: ClipRRect(
+                                                                                            borderRadius: BorderRadius.circular(10.0),
+                                                                                            child: Image.asset(
+                                                                                              'assets/images/Tree_House.jpg',
+                                                                                              width: 101.0,
+                                                                                              height: 106.0,
+                                                                                              fit: BoxFit.cover,
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Container(
+                                                                                          width: 100.0,
+                                                                                          height: 58.0,
+                                                                                          decoration: const BoxDecoration(
+                                                                                            gradient: LinearGradient(
+                                                                                              colors: [
+                                                                                                Color(0x04000000),
+                                                                                                Color(0xD4000000)
+                                                                                              ],
+                                                                                              stops: [0.0, 1.0],
+                                                                                              begin: AlignmentDirectional(0.0, -1.0),
+                                                                                              end: AlignmentDirectional(0, 1.0),
+                                                                                            ),
+                                                                                            borderRadius: BorderRadius.only(
+                                                                                              bottomLeft: Radius.circular(10.0),
+                                                                                              bottomRight: Radius.circular(10.0),
+                                                                                              topLeft: Radius.circular(0.0),
+                                                                                              topRight: Radius.circular(0.0),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                        Align(
+                                                                                          alignment: const AlignmentDirectional(0.00, 1.00),
+                                                                                          child: Padding(
+                                                                                            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 7.0),
+                                                                                            child: Text(
+                                                                                              FFLocalizations.of(context).getText(
+                                                                                                'i94z4mpf' /* Tree House */,
+                                                                                              ),
+                                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                    fontFamily: 'NotoSansThai',
+                                                                                                    color: FlutterFlowTheme.of(context).info,
+                                                                                                    fontSize: 12.0,
+                                                                                                    fontWeight: FontWeight.w600,
+                                                                                                    useGoogleFonts: false,
+                                                                                                  ),
+                                                                                            ),
+                                                                                          ),
+                                                                                        ),
+                                                                                      ],
+                                                                                    ),
                                                                                   ),
                                                                                 ),
                                                                               ],
@@ -2623,13 +2824,16 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                               options: CarouselOptions(
                                                                                 initialPage: 1,
                                                                                 viewportFraction: 0.3,
-                                                                                disableCenter: true,
+                                                                                disableCenter: false,
                                                                                 enlargeCenterPage: true,
                                                                                 enlargeFactor: 0.3,
                                                                                 enableInfiniteScroll: false,
                                                                                 scrollDirection: Axis.horizontal,
                                                                                 autoPlay: false,
-                                                                                onPageChanged: (index, _) => _model.qrSelectmodelCurrentIndex = index,
+                                                                                onPageChanged: (index, _) async {
+                                                                                  _model.qrSelectmodelCurrentIndex = index;
+                                                                                  setState(() {});
+                                                                                },
                                                                               ),
                                                                             ),
                                                                           ),
@@ -3755,6 +3959,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         mainAxisSpacing: 15.0,
                                                                                         childAspectRatio: 1.0,
                                                                                       ),
+                                                                                      shrinkWrap: true,
                                                                                       scrollDirection: Axis.vertical,
                                                                                       children: [
                                                                                         Align(
@@ -5143,6 +5348,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         mainAxisSpacing: 15.0,
                                                                                         childAspectRatio: 1.0,
                                                                                       ),
+                                                                                      shrinkWrap: true,
                                                                                       scrollDirection: Axis.vertical,
                                                                                       children: [
                                                                                         Align(

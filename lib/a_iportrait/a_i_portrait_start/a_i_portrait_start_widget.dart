@@ -275,7 +275,7 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                         10.0),
                                                             child: Image.asset(
                                                               'assets/images/Korean.jpg',
-                                                              width: 101.0,
+                                                              width: 100.0,
                                                               height: 135.0,
                                                               fit: BoxFit.cover,
                                                             ),
@@ -418,7 +418,7 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                         10.0),
                                                             child: Image.asset(
                                                               'assets/images/Anime.jpg',
-                                                              width: 101.0,
+                                                              width: 100.0,
                                                               height: 135.0,
                                                               fit: BoxFit.cover,
                                                             ),
@@ -558,7 +558,7 @@ class _AIPortraitStartWidgetState extends State<AIPortraitStartWidget> {
                                                                         10.0),
                                                             child: Image.asset(
                                                               'assets/images/Retro.jpg',
-                                                              width: 101.0,
+                                                              width: 100.0,
                                                               height: 135.0,
                                                               fit: BoxFit.cover,
                                                               alignment:
