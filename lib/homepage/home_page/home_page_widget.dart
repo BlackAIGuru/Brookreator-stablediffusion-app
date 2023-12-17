@@ -1,4 +1,4 @@
-import '/auth/base_auth_user_provider.dart';
+import '/auth/custom_auth/auth_util.dart';
 import '/components/credit/credit_widget.dart';
 import '/components/footbar/footbar_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
@@ -121,7 +121,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         15.0, 0.0, 0.0, 0.0),
@@ -153,7 +153,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       if (!loggedIn) {
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(1.00, 0.00),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
@@ -197,7 +197,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                       } else {
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(1.00, 0.00),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
@@ -257,8 +257,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                             child: Align(
                                                               alignment:
                                                                   const AlignmentDirectional(
-                                                                      0.00,
-                                                                      0.00),
+                                                                      0.0, 0.0),
                                                               child: Text(
                                                                 FFLocalizations.of(
                                                                         context)
@@ -346,7 +345,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              -1.00, 0.00),
+                                                              -1.0, 0.0),
                                                       child: Container(
                                                         width:
                                                             MediaQuery.sizeOf(
@@ -389,7 +388,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       child: Align(
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Container(
                                                           height:
                                                               double.infinity,
@@ -416,11 +415,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           ),
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  0.00, 0.00),
+                                                                  0.0, 0.0),
                                                           child: Align(
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Padding(
                                                               padding:
                                                                   const EdgeInsetsDirectional
@@ -437,8 +436,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -463,8 +462,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -492,8 +491,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            1.00,
-                                                                            1.00),
+                                                                            1.0,
+                                                                            1.0),
                                                                     child:
                                                                         Padding(
                                                                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -521,11 +520,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               64.0,
                                                                           height:
                                                                               25.0,
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                          padding:
+                                                                              const EdgeInsets.all(0.0),
                                                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
@@ -584,7 +580,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              -1.00, 0.00),
+                                                              -1.0, 0.0),
                                                       child: Container(
                                                         width:
                                                             MediaQuery.sizeOf(
@@ -627,7 +623,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       child: Align(
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Container(
                                                           height:
                                                               double.infinity,
@@ -654,11 +650,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           ),
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  0.00, 0.00),
+                                                                  0.0, 0.0),
                                                           child: Align(
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Padding(
                                                               padding:
                                                                   const EdgeInsetsDirectional
@@ -675,8 +671,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -701,8 +697,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -730,8 +726,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            1.00,
-                                                                            1.00),
+                                                                            1.0,
+                                                                            1.0),
                                                                     child:
                                                                         Padding(
                                                                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -759,11 +755,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               64.0,
                                                                           height:
                                                                               25.0,
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                          padding:
+                                                                              const EdgeInsets.all(0.0),
                                                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
@@ -822,7 +815,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              -1.00, 0.00),
+                                                              -1.0, 0.0),
                                                       child: Container(
                                                         width:
                                                             MediaQuery.sizeOf(
@@ -864,7 +857,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       child: Align(
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Container(
                                                           height:
                                                               double.infinity,
@@ -891,11 +884,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           ),
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  0.00, 0.00),
+                                                                  0.0, 0.0),
                                                           child: Align(
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Padding(
                                                               padding:
                                                                   const EdgeInsetsDirectional
@@ -912,8 +905,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -938,8 +931,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -967,8 +960,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            1.00,
-                                                                            1.00),
+                                                                            1.0,
+                                                                            1.0),
                                                                     child:
                                                                         Padding(
                                                                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -996,11 +989,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               64.0,
                                                                           height:
                                                                               25.0,
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                          padding:
+                                                                              const EdgeInsets.all(0.0),
                                                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
@@ -1059,7 +1049,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              -1.00, 0.00),
+                                                              -1.0, 0.0),
                                                       child: Container(
                                                         width:
                                                             MediaQuery.sizeOf(
@@ -1102,7 +1092,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                       child: Align(
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Container(
                                                           height:
                                                               double.infinity,
@@ -1129,11 +1119,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                           ),
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  0.00, 0.00),
+                                                                  0.0, 0.0),
                                                           child: Align(
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Padding(
                                                               padding:
                                                                   const EdgeInsetsDirectional
@@ -1150,8 +1140,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -1176,8 +1166,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            0.00,
-                                                                            0.00),
+                                                                            0.0,
+                                                                            0.0),
                                                                     child: Text(
                                                                       FFLocalizations.of(
                                                                               context)
@@ -1205,8 +1195,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                   Align(
                                                                     alignment:
                                                                         const AlignmentDirectional(
-                                                                            1.00,
-                                                                            1.00),
+                                                                            1.0,
+                                                                            1.0),
                                                                     child:
                                                                         Padding(
                                                                       padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1234,11 +1224,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                               64.0,
                                                                           height:
                                                                               25.0,
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0,
-                                                                              0.0),
+                                                                          padding:
+                                                                              const EdgeInsets.all(0.0),
                                                                           iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               0.0,
@@ -1285,7 +1272,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.00, 1.00),
+                                              const AlignmentDirectional(0.0, 1.0),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
@@ -1345,7 +1332,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.00, -1.00),
+                                            const AlignmentDirectional(-1.0, -1.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
@@ -1484,8 +1471,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -1501,8 +1488,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1526,8 +1513,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1544,7 +1531,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'ej1jbw9i' /* Text to Image */,
@@ -1589,8 +1576,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -1606,8 +1593,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1630,8 +1617,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1648,7 +1635,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'mzszpdgc' /* AI Portrait */,
@@ -1693,8 +1680,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -1710,8 +1697,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1728,7 +1715,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'zug1j5i1' /* QR Generator */,
@@ -1745,8 +1732,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1797,8 +1784,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -1814,8 +1801,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1838,8 +1825,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1856,7 +1843,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '3jtwhlml' /* Text to Image */,
@@ -1901,8 +1888,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -1936,8 +1923,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -1954,7 +1941,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'd9b2hdum' /* AI Video */,
@@ -2000,8 +1987,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2017,8 +2004,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2035,7 +2022,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '7hsrk3o4' /* QR Generator */,
@@ -2052,8 +2039,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2104,8 +2091,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2139,8 +2126,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2157,7 +2144,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'duzddpfs' /* AI Portrait */,
@@ -2203,8 +2190,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               InkWell(
                                                                             splashColor:
@@ -2233,8 +2220,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2251,7 +2238,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '9742e68l' /* Text to Image */,
@@ -2268,8 +2255,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2320,8 +2307,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2337,8 +2324,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2355,7 +2342,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'g6u3wekh' /* QR Generator */,
@@ -2372,8 +2359,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2424,8 +2411,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2441,8 +2428,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2459,7 +2446,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'slbi4hrd' /* Text to Image */,
@@ -2476,8 +2463,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2528,8 +2515,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2545,8 +2532,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2563,7 +2550,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'g8ayiz4i' /* QR Generator */,
@@ -2580,8 +2567,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2632,8 +2619,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2667,8 +2654,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2685,7 +2672,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     '8tbgq2vk' /* Text to Image */,
@@ -2730,8 +2717,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2747,8 +2734,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2765,7 +2752,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'ox1wxvb8' /* QR Generator */,
@@ -2782,8 +2769,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2834,8 +2821,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2851,8 +2838,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2869,10 +2856,10 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
-                                                                                    '0jk502pd' /* QR Generator */,
+                                                                                    '0jk502pd' /* Text to Image */,
                                                                                   ),
                                                                                   style: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                         fontFamily: 'NotoSansThai',
@@ -2886,8 +2873,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2938,8 +2925,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -2973,8 +2960,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -2991,7 +2978,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'vpb1hyex' /* Text to Image */,
@@ -3037,8 +3024,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -3072,8 +3059,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -3090,7 +3077,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'a85ymd5o' /* Text to Image */,
@@ -3135,8 +3122,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                       children: [
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.00,
-                                                                              0.00),
+                                                                              0.0,
+                                                                              0.0),
                                                                           child:
                                                                               ClipRRect(
                                                                             borderRadius:
@@ -3152,8 +3139,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              0.00),
+                                                                              -1.0,
+                                                                              0.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -3170,7 +3157,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                                 borderRadius: BorderRadius.circular(20.0),
                                                                               ),
                                                                               child: Align(
-                                                                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                 child: Text(
                                                                                   FFLocalizations.of(context).getText(
                                                                                     'j432knps' /* QR Generator */,
@@ -3187,8 +3174,8 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                                         ),
                                                                         Align(
                                                                           alignment: const AlignmentDirectional(
-                                                                              -1.00,
-                                                                              -1.00),
+                                                                              -1.0,
+                                                                              -1.0),
                                                                           child:
                                                                               Padding(
                                                                             padding: const EdgeInsetsDirectional.fromSTEB(
@@ -3248,7 +3235,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.00, 1.00),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Container(
                     width: double.infinity,
                     height: 59.0,
@@ -3256,7 +3243,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.00, 0.00),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: wrapWithModel(
                         model: _model.footbarModel,
                         updateCallback: () => setState(() {}),

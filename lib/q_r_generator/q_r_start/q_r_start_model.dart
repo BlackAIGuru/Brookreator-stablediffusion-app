@@ -7,30 +7,26 @@ import 'package:flutter/material.dart';
 class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   ///  Local state fields for this page.
 
-  int? linkqrscaleselected;
+  int? qrscaleselected;
 
-  int? uploadqrscaleselected;
-
-  String linklogoselected = '';
-
-  String? qrlogoselected;
+  String logoselected = '';
 
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  final formKey1 = GlobalKey<FormState>();
   final formKey2 = GlobalKey<FormState>();
+  final formKey1 = GlobalKey<FormState>();
   // Model for credit component.
   late CreditModel creditModel;
-  // State field(s) for TabBar widget.
-  TabController? tabBarController1;
-  int get tabBarCurrentIndex1 =>
-      tabBarController1 != null ? tabBarController1!.index : 0;
+  // State field(s) for QRgenerator widget.
+  TabController? qRgeneratorController;
+  int get qRgeneratorCurrentIndex =>
+      qRgeneratorController != null ? qRgeneratorController!.index : 0;
 
-  // State field(s) for TabBar widget.
-  TabController? tabBarController2;
-  int get tabBarCurrentIndex2 =>
-      tabBarController2 != null ? tabBarController2!.index : 0;
+  // State field(s) for QRPrompt widget.
+  TabController? qRPromptController;
+  int get qRPromptCurrentIndex =>
+      qRPromptController != null ? qRPromptController!.index : 0;
 
   // State field(s) for prompt_link widget.
   FocusNode? promptLinkFocusNode;
@@ -39,25 +35,18 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   String? _promptLinkControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        'ypejhmwm' /* Field is required */,
+        'c0ps9n3t' /* Field is required */,
       );
     }
 
     if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
       return FFLocalizations.of(context).getText(
-        '3trskza2' /* URL not correct */,
+        'xsnj5w6b' /* URL not correct */,
       );
     }
     return null;
   }
 
-  // State field(s) for link_selectmodel widget.
-  CarouselController? linkSelectmodelController;
-
-  int linkSelectmodelCurrentIndex = 1;
-
-  // State field(s) for link_slider widget.
-  double? linkSliderValue;
   bool isDataUploading1 = false;
   FFUploadedFile uploadedLocalFile1 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
@@ -67,12 +56,12 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
 
   int qrSelectmodelCurrentIndex = 1;
 
-  // State field(s) for qr_slider widget.
-  double? qrSliderValue;
-  // State field(s) for TabBar widget.
-  TabController? tabBarController3;
-  int get tabBarCurrentIndex3 =>
-      tabBarController3 != null ? tabBarController3!.index : 0;
+  // State field(s) for slider widget.
+  double? sliderValue;
+  // State field(s) for UploadImage widget.
+  TabController? uploadImageController;
+  int get uploadImageCurrentIndex =>
+      uploadImageController != null ? uploadImageController!.index : 0;
 
   // State field(s) for upload_link widget.
   FocusNode? uploadLinkFocusNode;
@@ -81,33 +70,27 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   String? _uploadLinkControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
-        '3yj4wn8l' /* Field is required */,
+        'tizrmshi' /* Field is required */,
       );
     }
 
     if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
       return FFLocalizations.of(context).getText(
-        'b47jys9w' /* URL not correct */,
+        '7ww4ggwo' /* URL not correct */,
       );
     }
     return null;
   }
 
   bool isDataUploading2 = false;
-  List<FFUploadedFile> uploadedLocalFiles2 = [];
+  FFUploadedFile uploadedLocalFile2 =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
 
   bool isDataUploading3 = false;
   List<FFUploadedFile> uploadedLocalFiles3 = [];
 
   bool isDataUploading4 = false;
-  FFUploadedFile uploadedLocalFile4 =
-      FFUploadedFile(bytes: Uint8List.fromList([]));
-
-  bool isDataUploading5 = false;
-  List<FFUploadedFile> uploadedLocalFiles5 = [];
-
-  bool isDataUploading6 = false;
-  List<FFUploadedFile> uploadedLocalFiles6 = [];
+  List<FFUploadedFile> uploadedLocalFiles4 = [];
 
   /// Initialization and disposal methods.
 
@@ -122,12 +105,12 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   void dispose() {
     unfocusNode.dispose();
     creditModel.dispose();
-    tabBarController1?.dispose();
-    tabBarController2?.dispose();
+    qRgeneratorController?.dispose();
+    qRPromptController?.dispose();
     promptLinkFocusNode?.dispose();
     promptLinkController?.dispose();
 
-    tabBarController3?.dispose();
+    uploadImageController?.dispose();
     uploadLinkFocusNode?.dispose();
     uploadLinkController?.dispose();
   }

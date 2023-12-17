@@ -41,7 +41,7 @@ class _QRCode2WidgetState extends State<QRCode2Widget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 500.0,
@@ -61,7 +61,7 @@ class _QRCode2WidgetState extends State<QRCode2Widget> {
           ),
         ),
         child: Align(
-          alignment: const AlignmentDirectional(0.00, 0.00),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -72,7 +72,7 @@ class _QRCode2WidgetState extends State<QRCode2Widget> {
                   children: [
                     Flexible(
                       child: Align(
-                        alignment: const AlignmentDirectional(1.00, -1.00),
+                        alignment: const AlignmentDirectional(1.0, -1.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 5.0, 0.0),

@@ -64,14 +64,14 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                 ),
               ),
               child: Align(
-                alignment: const AlignmentDirectional(0.00, 0.00),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Stack(
                   children: [
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 5.0, 0.0),
@@ -87,7 +87,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'rbh8sny6' /* My Pictures */,

@@ -1,7 +1,7 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -92,7 +92,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'ud5635oj' /* Create Account */,
@@ -126,7 +126,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   ),
                   Flexible(
                     child: Align(
-                      alignment: const AlignmentDirectional(0.00, 0.00),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 50.0, 0.0, 0.0),
@@ -456,7 +456,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   '0a9ypit3' /* Password must be 8 and contain... */,
@@ -479,32 +479,38 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 20.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 20.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        GoRouter.of(context).prepareAuthEvent();
-
-                        final user = await authManager.createAccountWithEmail(
-                          context,
+                        _model.signUpResult = await actions.signUp(
+                          _model.nameController.text,
                           _model.emailController.text,
                           _model.passwordController.text,
                         );
-                        if (user == null) {
-                          return;
+                        if (_model.signUpResult!) {
+                          context.pushNamed(
+                            'Email_Verify',
+                            queryParameters: {
+                              'email': serializeParam(
+                                _model.emailController.text,
+                                ParamType.String,
+                              ),
+                              'password': serializeParam(
+                                _model.passwordController.text,
+                                ParamType.String,
+                              ),
+                            }.withoutNulls,
+                          );
                         }
 
-                        context.pushNamedAuth('HomePage', context.mounted);
-
-                        setState(() {
-                          FFAppState().username = _model.nameController.text;
-                        });
+                        setState(() {});
                       },
                       text: FFLocalizations.of(context).getText(
                         'mj981gg7' /* Sign Up */,
                       ),
                       options: FFButtonOptions(
-                        width: 327.0,
-                        height: 52.0,
+                        width: 320.0,
+                        height: 50.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 0.0, 24.0, 0.0),
                         iconPadding:
@@ -546,7 +552,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 15.0, 0.0, 15.0),
@@ -556,18 +562,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               child: Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: FFButtonWidget(
-                                      onPressed: () async {
-                                        GoRouter.of(context).prepareAuthEvent();
-                                        final user = await authManager
-                                            .signInWithGoogle(context);
-                                        if (user == null) {
-                                          return;
-                                        }
-
-                                        context.goNamedAuth(
-                                            'HomePage', context.mounted);
+                                      onPressed: () {
+                                        print('Button pressed ...');
                                       },
                                       text: FFLocalizations.of(context).getText(
                                         'fwb0oypn' /* Sign Up with Google */,
@@ -599,8 +597,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        const AlignmentDirectional(-0.83, 0.00),
+                                    alignment: const AlignmentDirectional(-0.83, 0.0),
                                     child: Container(
                                       width: 22.0,
                                       height: 22.0,

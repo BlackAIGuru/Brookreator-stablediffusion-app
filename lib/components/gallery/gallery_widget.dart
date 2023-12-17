@@ -84,7 +84,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
               ),
               Tab(
                 text: FFLocalizations.of(context).getText(
-                  't1mh6kcx' /* AI portrait */,
+                  't1mh6kcx' /* AI Portrait */,
                 ),
               ),
               Tab(
@@ -122,7 +122,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -134,7 +134,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Container(
                                       width: 120.0,
                                       height: 105.0,
@@ -146,7 +146,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 17.0, 0.0, 0.0),
@@ -165,7 +165,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 33.0, 0.0, 0.0),
@@ -185,8 +185,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.00, -1.00),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 69.0, 0.0, 0.0),
@@ -206,8 +205,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.00, -1.00),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 80.0, 0.0, 0.0),
@@ -231,7 +229,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -243,7 +241,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Container(
                                       width: 118.0,
                                       height: 152.0,
@@ -255,7 +253,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 38.0, 0.0, 0.0),
@@ -274,8 +272,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.00, -1.00),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 100.0, 0.0, 0.0),
@@ -295,8 +292,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.00, -1.00),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 88.0, 0.0, 0.0),
@@ -316,8 +312,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     ),
                                   ),
                                   Align(
-                                    alignment:
-                                        const AlignmentDirectional(0.00, -1.00),
+                                    alignment: const AlignmentDirectional(0.0, -1.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 54.0, 0.0, 0.0),
@@ -341,7 +336,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -357,7 +352,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -373,7 +368,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -389,7 +384,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -405,7 +400,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -421,7 +416,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -429,7 +424,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                         width: 118.0,
                                         height: 225.0,
                                         fit: BoxFit.cover,
-                                        alignment: const Alignment(0.00, 0.00),
+                                        alignment: const Alignment(0.0, 0.0),
                                       ),
                                     ),
                                   ),
@@ -438,7 +433,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -454,7 +449,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -490,7 +485,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -506,7 +501,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -522,7 +517,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -538,7 +533,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -554,7 +549,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -570,7 +565,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -578,7 +573,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                         width: 118.0,
                                         height: 225.0,
                                         fit: BoxFit.cover,
-                                        alignment: const Alignment(0.00, 0.00),
+                                        alignment: const Alignment(0.0, 0.0),
                                       ),
                                     ),
                                   ),
@@ -587,7 +582,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -603,7 +598,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -619,7 +614,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -635,7 +630,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -651,7 +646,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -667,7 +662,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -683,7 +678,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -699,7 +694,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -735,7 +730,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -751,7 +746,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -767,7 +762,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -783,7 +778,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -799,7 +794,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -807,7 +802,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                         width: 118.0,
                                         height: 225.0,
                                         fit: BoxFit.cover,
-                                        alignment: const Alignment(0.00, 0.00),
+                                        alignment: const Alignment(0.0, 0.0),
                                       ),
                                     ),
                                   ),
@@ -837,7 +832,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -853,7 +848,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -869,7 +864,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -885,7 +880,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -901,7 +896,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -917,7 +912,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -925,7 +920,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                         width: 118.0,
                                         height: 225.0,
                                         fit: BoxFit.cover,
-                                        alignment: const Alignment(0.00, 0.00),
+                                        alignment: const Alignment(0.0, 0.0),
                                       ),
                                     ),
                                   ),
@@ -934,7 +929,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -950,7 +945,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -966,7 +961,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(
@@ -982,7 +977,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                           () => Stack(
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
                                       child: Image.asset(

@@ -56,7 +56,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.00, 0.00),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 15.0),
               child: SingleChildScrollView(
@@ -66,7 +66,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                     StickyHeader(
                       overlapHeaders: false,
                       header: Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Container(
                           decoration: BoxDecoration(
                             color:
@@ -95,7 +95,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Text(
                                   FFLocalizations.of(context).getText(
                                     'k6grmgv5' /* Privacy Policy */,
@@ -124,7 +124,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 0.0, 0.0),
@@ -144,7 +144,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -164,7 +164,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -178,7 +178,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -219,7 +219,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -260,7 +260,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -301,7 +301,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -320,7 +320,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 0.0, 0.0),
@@ -340,7 +340,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -365,7 +365,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 0.0, 0.0),
@@ -385,7 +385,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -405,7 +405,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -424,7 +424,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -443,7 +443,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -462,7 +462,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -486,7 +486,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -506,7 +506,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -526,7 +526,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -545,7 +545,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -564,7 +564,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -583,7 +583,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -602,7 +602,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -621,7 +621,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -640,7 +640,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -659,7 +659,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -678,7 +678,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -697,7 +697,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -716,7 +716,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -735,7 +735,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -754,7 +754,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -773,7 +773,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -792,7 +792,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -816,7 +816,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -836,7 +836,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -856,7 +856,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -875,7 +875,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -894,7 +894,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -913,7 +913,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -937,7 +937,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -957,7 +957,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -981,7 +981,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1002,7 +1002,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1022,7 +1022,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1042,7 +1042,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1062,7 +1062,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1087,7 +1087,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1108,7 +1108,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1128,7 +1128,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1153,7 +1153,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1174,7 +1174,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1199,7 +1199,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1220,7 +1220,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1245,7 +1245,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1266,7 +1266,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1291,7 +1291,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1312,7 +1312,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1337,7 +1337,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1358,7 +1358,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1378,7 +1378,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1403,7 +1403,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             30.0, 5.0, 30.0, 0.0),
@@ -1424,7 +1424,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, 0.00),
+                                          const AlignmentDirectional(-1.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             40.0, 5.0, 30.0, 0.0),
@@ -1445,7 +1445,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ],
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -1470,7 +1470,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -1490,7 +1490,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1510,7 +1510,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1530,7 +1530,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1550,7 +1550,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1575,7 +1575,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -1595,7 +1595,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -1615,7 +1615,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1656,7 +1656,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1697,7 +1697,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1743,7 +1743,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -1763,7 +1763,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -1783,7 +1783,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -1808,7 +1808,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -1828,7 +1828,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -1848,7 +1848,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -1868,7 +1868,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -1888,7 +1888,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -1907,7 +1907,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -1926,7 +1926,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -1945,7 +1945,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -1964,7 +1964,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         40.0, 5.0, 30.0, 0.0),
@@ -1983,7 +1983,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -2003,7 +2003,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -2023,7 +2023,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -2048,7 +2048,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 15.0, 30.0, 0.0),
@@ -2068,7 +2068,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, -1.00),
+                                  alignment: const AlignmentDirectional(-1.0, -1.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 10.0, 30.0, 0.0),
@@ -2088,7 +2088,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -2129,7 +2129,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
@@ -2172,7 +2172,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                               ],
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(-1.00, 0.00),
+                              alignment: const AlignmentDirectional(-1.0, 0.0),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     30.0, 5.0, 30.0, 0.0),

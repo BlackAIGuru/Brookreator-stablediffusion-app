@@ -1,4 +1,3 @@
-import '/components/googlesignin/googlesignin_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'sign_in_widget.dart' show SignInWidget;
 import 'package:flutter/material.dart';
@@ -48,8 +47,8 @@ class SignInModel extends FlutterFlowModel<SignInWidget> {
     return null;
   }
 
-  // Model for googlesignin component.
-  late GooglesigninModel googlesigninModel;
+  // Stores action output result for [Custom Action - signIn] action in Button widget.
+  String? accessToken;
 
   /// Initialization and disposal methods.
 
@@ -58,7 +57,6 @@ class SignInModel extends FlutterFlowModel<SignInWidget> {
     emailControllerValidator = _emailControllerValidator;
     passwordVisibility = false;
     passwordControllerValidator = _passwordControllerValidator;
-    googlesigninModel = createModel(context, () => GooglesigninModel());
   }
 
   @override
@@ -69,8 +67,6 @@ class SignInModel extends FlutterFlowModel<SignInWidget> {
 
     passwordFocusNode?.dispose();
     passwordController?.dispose();
-
-    googlesigninModel.dispose();
   }
 
   /// Action blocks are added here.

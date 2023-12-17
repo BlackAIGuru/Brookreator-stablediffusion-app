@@ -56,7 +56,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.00, 0.00),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -73,7 +73,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           children: [
                             Container(
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 0.6,
+                              height: MediaQuery.sizeOf(context).height * 0.65,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -82,7 +82,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 10.0),
@@ -139,7 +139,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 5.0, 20.0, 0.0),
@@ -171,7 +171,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           children: [
                             Container(
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 0.6,
+                              height: MediaQuery.sizeOf(context).height * 0.65,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -180,7 +180,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 10.0),
@@ -237,7 +237,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 5.0, 20.0, 0.0),
@@ -269,7 +269,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           children: [
                             Container(
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 0.6,
+                              height: MediaQuery.sizeOf(context).height * 0.65,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -278,7 +278,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 10.0),
@@ -335,7 +335,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 5.0, 20.0, 0.0),
@@ -367,7 +367,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           children: [
                             Container(
                               width: double.infinity,
-                              height: MediaQuery.sizeOf(context).height * 0.6,
+                              height: MediaQuery.sizeOf(context).height * 0.65,
                               decoration: BoxDecoration(
                                 color: FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -376,7 +376,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 10.0, 0.0, 10.0),
@@ -433,7 +433,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Padding(
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           20.0, 5.0, 20.0, 0.0),

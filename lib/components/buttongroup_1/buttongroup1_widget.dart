@@ -50,15 +50,15 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
-        alignment: const AlignmentDirectional(0.00, 0.00),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Align(
-          alignment: const AlignmentDirectional(0.00, 0.00),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Align(
-                alignment: const AlignmentDirectional(-1.00, 0.00),
+                alignment: const AlignmentDirectional(-1.0, 0.0),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                   child: FFButtonWidget(
@@ -76,8 +76,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                     options: FFButtonOptions(
                       width: 109.0,
                       height: double.infinity,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsets.all(0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primaryBackground,
@@ -99,7 +98,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
               ),
               Flexible(
                 child: Align(
-                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                  alignment: const AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                     child: Container(
@@ -111,7 +110,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                           color: FlutterFlowTheme.of(context).secondaryText,
                         ),
                       ),
-                      alignment: const AlignmentDirectional(0.00, 0.00),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: ToggleIcon(
                         onPressed: () async {
                           setState(() => FFAppState().toggleselected =
@@ -134,7 +133,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(1.00, 0.00),
+                alignment: const AlignmentDirectional(1.0, 0.0),
                 child: Builder(
                   builder: (context) => Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
@@ -158,9 +157,9 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                       },
                       text: '',
                       icon: const Icon(
-                        Icons.delete_sharp,
+                        FFIcons.kbin,
                         color: Color(0xADFF5963),
-                        size: 20.0,
+                        size: 15.0,
                       ),
                       options: FFButtonOptions(
                         width: 50.0,

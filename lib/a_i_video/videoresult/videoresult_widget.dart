@@ -41,7 +41,7 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 780.0,
@@ -90,7 +90,7 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(1.00, -1.00),
+                      alignment: const AlignmentDirectional(1.0, -1.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
@@ -136,7 +136,7 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.00, 1.00),
+                          alignment: const AlignmentDirectional(-1.0, 1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 18.0, 600.0, 0.0, 0.0),
@@ -147,13 +147,13 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                                 width: 13.62,
                                 height: 14.94,
                                 fit: BoxFit.cover,
-                                alignment: const Alignment(-1.00, -1.00),
+                                alignment: const Alignment(-1.0, -1.0),
                               ),
                             ),
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.00, 1.00),
+                          alignment: const AlignmentDirectional(-1.0, 1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 310.0, 600.0, 0.0, 0.0),
@@ -164,13 +164,13 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                                 width: 17.78,
                                 height: 15.8,
                                 fit: BoxFit.cover,
-                                alignment: const Alignment(-1.00, -1.00),
+                                alignment: const Alignment(-1.0, -1.0),
                               ),
                             ),
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.00, 1.00),
+                          alignment: const AlignmentDirectional(-1.0, 1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 40.0, 615.0, 0.0, 0.0),
@@ -191,7 +191,7 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.00, 1.00),
+                          alignment: const AlignmentDirectional(-1.0, 1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 265.0, 615.0, 0.0, 0.0),
@@ -212,7 +212,7 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(-1.00, -1.00),
+                          alignment: const AlignmentDirectional(-1.0, -1.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 40.98, 600.0, 0.0, 0.0),

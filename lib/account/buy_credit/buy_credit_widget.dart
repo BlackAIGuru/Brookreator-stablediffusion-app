@@ -86,7 +86,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'h28j8xmv' /* Buy Credit */,
@@ -101,7 +101,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.00, 0.00),
+                        alignment: const AlignmentDirectional(1.0, 0.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 10.0, 0.0),
@@ -131,8 +131,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                 children: [
                                   Flexible(
                                     child: Align(
-                                      alignment:
-                                          const AlignmentDirectional(0.00, 0.00),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
@@ -155,8 +154,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                   ),
                                   Flexible(
                                     child: Align(
-                                      alignment:
-                                          const AlignmentDirectional(0.00, 0.00),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.monetization_on_outlined,
                                         color: FlutterFlowTheme.of(context)
@@ -200,7 +198,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.00, -1.00),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'bycdemw8' /* Choose a package that fits you... */,
@@ -217,7 +215,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                             children: [
                               Flexible(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
@@ -237,8 +235,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 0.28,
                                         height: 126.0,
                                         decoration: BoxDecoration(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryBackground,
+                                          color: _model.selectpackage == 1
+                                              ? const Color(0xFFF0F4FA)
+                                              : FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
                                           borderRadius:
                                               BorderRadius.circular(10.0),
                                           border: Border.all(
@@ -250,10 +250,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                           ),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.00, 0.00),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             mainAxisAlignment:
@@ -263,7 +263,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 child: Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, -1.00),
+                                                          0.0, -1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -298,7 +298,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               ),
                                               Align(
                                                 alignment: const AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: RichText(
                                                   textScaleFactor:
                                                       MediaQuery.of(context)
@@ -352,7 +352,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 child: Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, 1.00),
+                                                          0.0, 1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -394,7 +394,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                               ),
                               Flexible(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 5.0, 0.0),
@@ -429,10 +429,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                           ),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.00, 0.00),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -440,7 +440,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 child: Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, -1.00),
+                                                          0.0, -1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -475,7 +475,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               ),
                                               Align(
                                                 alignment: const AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: RichText(
                                                   textScaleFactor:
                                                       MediaQuery.of(context)
@@ -527,7 +527,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               ),
                                               Align(
                                                 alignment: const AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: RichText(
                                                   textScaleFactor:
                                                       MediaQuery.of(context)
@@ -586,7 +586,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 child: Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, 1.00),
+                                                          0.0, 1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -628,7 +628,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                               ),
                               Flexible(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 0.0, 0.0),
@@ -663,10 +663,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                           ),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.00, 0.00),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.00, 0.00),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
@@ -674,7 +674,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 child: Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, -1.00),
+                                                          0.0, -1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -805,7 +805,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 child: Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, 1.00),
+                                                          0.0, 1.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -853,10 +853,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.00, 1.00),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 40.0, 10.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () {
                         print('Button pressed ...');

@@ -41,7 +41,7 @@ class _CropimageWidgetState extends State<CropimageWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         constraints: const BoxConstraints(
@@ -156,7 +156,7 @@ class _CropimageWidgetState extends State<CropimageWidget> {
               ),
             ),
             Align(
-              alignment: const AlignmentDirectional(0.00, 1.00),
+              alignment: const AlignmentDirectional(0.0, 1.0),
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(32.0, 23.0, 32.0, 0.0),
                 child: FFButtonWidget(

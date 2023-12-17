@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
@@ -40,23 +39,17 @@ class _GooglesigninWidgetState extends State<GooglesigninWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: SizedBox(
         width: 230.0,
         height: 44.0,
         child: Stack(
           children: [
             Align(
-              alignment: const AlignmentDirectional(0.00, 0.00),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: FFButtonWidget(
-                onPressed: () async {
-                  GoRouter.of(context).prepareAuthEvent();
-                  final user = await authManager.signInWithGoogle(context);
-                  if (user == null) {
-                    return;
-                  }
-
-                  context.goNamedAuth('HomePage', context.mounted);
+                onPressed: () {
+                  print('Button pressed ...');
                 },
                 text: FFLocalizations.of(context).getText(
                   'n1rj6vvv' /* Sign in with Google */,
@@ -86,7 +79,7 @@ class _GooglesigninWidgetState extends State<GooglesigninWidget> {
               ),
             ),
             Align(
-              alignment: const AlignmentDirectional(-0.83, 0.00),
+              alignment: const AlignmentDirectional(-0.83, 0.0),
               child: Container(
                 width: 22.0,
                 height: 22.0,

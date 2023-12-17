@@ -39,7 +39,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 860.0,
@@ -69,7 +69,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     const Align(
-                      alignment: AlignmentDirectional(-1.00, 0.00),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Icon(
                         Icons.light_mode,
                         color: Color(0xFFF79803),
@@ -78,7 +78,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: const AlignmentDirectional(-1.00, 0.00),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'sea1hok6' /* Uploading Guide */,
@@ -87,7 +87,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                               .headlineMedium
                               .override(
                                 fontFamily: 'NotoSansThai',
-                                color: const Color(0xFF2D2D2D),
+                                color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 30.0,
                                 fontWeight: FontWeight.w500,
                                 useGoogleFonts: false,
@@ -96,7 +96,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(1.00, -1.00),
+                      alignment: const AlignmentDirectional(1.0, -1.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
@@ -126,7 +126,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(-1.00, 0.00),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 5.0),
@@ -201,7 +201,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
@@ -247,7 +247,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
@@ -268,7 +268,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.asset(
@@ -349,7 +349,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),
@@ -360,7 +360,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(-1.00, 0.00),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: ClipRRect(
                                     borderRadius: BorderRadius.circular(8.0),
                                     child: Image.asset(
@@ -398,7 +398,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 5.0),

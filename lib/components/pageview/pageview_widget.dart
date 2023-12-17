@@ -66,7 +66,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 10.0),
@@ -116,7 +116,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 5.0, 20.0, 0.0),
@@ -155,7 +155,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 10.0),
@@ -205,7 +205,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 5.0, 20.0, 0.0),
@@ -244,7 +244,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 10.0),
@@ -294,7 +294,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 5.0, 20.0, 0.0),
@@ -333,7 +333,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 10.0, 0.0, 10.0),
@@ -383,7 +383,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   20.0, 5.0, 20.0, 0.0),
@@ -412,7 +412,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
             ),
           ),
           Align(
-            alignment: const AlignmentDirectional(0.00, 1.00),
+            alignment: const AlignmentDirectional(0.0, 1.0),
             child: smooth_page_indicator.SmoothPageIndicator(
               controller: _model.pageViewController ??=
                   PageController(initialPage: 0),

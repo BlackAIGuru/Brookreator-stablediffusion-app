@@ -43,7 +43,7 @@ class _QRCode1WidgetState extends State<QRCode1Widget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 650.0,
@@ -63,7 +63,7 @@ class _QRCode1WidgetState extends State<QRCode1Widget> {
           ),
         ),
         child: Align(
-          alignment: const AlignmentDirectional(0.00, 0.00),
+          alignment: const AlignmentDirectional(0.0, 0.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
@@ -85,7 +85,7 @@ class _QRCode1WidgetState extends State<QRCode1Widget> {
                     ),
                     Flexible(
                       child: Align(
-                        alignment: const AlignmentDirectional(1.00, -1.00),
+                        alignment: const AlignmentDirectional(1.0, -1.0),
                         child: Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 5.0, 0.0),
@@ -116,7 +116,7 @@ class _QRCode1WidgetState extends State<QRCode1Widget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(0.00, 0.00),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
@@ -218,11 +218,7 @@ class _QRCode1WidgetState extends State<QRCode1Widget> {
                       enlargeFactor: 0.3,
                       enableInfiniteScroll: true,
                       scrollDirection: Axis.horizontal,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                      autoPlayInterval: const Duration(milliseconds: (800 + 2000)),
-                      autoPlayCurve: Curves.linear,
-                      pauseAutoPlayInFiniteScroll: true,
+                      autoPlay: false,
                       onPageChanged: (index, _) =>
                           _model.carouselCurrentIndex = index,
                     ),

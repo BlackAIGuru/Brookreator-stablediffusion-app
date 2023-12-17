@@ -1,4 +1,4 @@
-import '/auth/base_auth_user_provider.dart';
+import '/auth/custom_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -68,7 +68,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     Stack(
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(-1.00, 0.00),
+                          alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 3.0, 0.0, 0.0),
@@ -90,7 +90,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'o6etembj' /* Setting */,
@@ -128,7 +128,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               const Align(
-                                alignment: AlignmentDirectional(0.00, 0.00),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       22.0, 0.0, 15.0, 0.0),
@@ -256,7 +256,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             ),
                             Flexible(
                               child: Align(
-                                alignment: const AlignmentDirectional(1.00, 0.00),
+                                alignment: const AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 1.0, 0.0),

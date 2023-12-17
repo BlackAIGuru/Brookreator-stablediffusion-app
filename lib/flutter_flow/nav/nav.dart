@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '/auth/base_auth_user_provider.dart';
+import '/auth/custom_auth/custom_auth_user_provider.dart';
 
 import '/index.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -20,8 +20,8 @@ class AppStateNotifier extends ChangeNotifier {
   static AppStateNotifier? _instance;
   static AppStateNotifier get instance => _instance ??= AppStateNotifier._();
 
-  BaseAuthUser? initialUser;
-  BaseAuthUser? user;
+  BrookreatorAuthUser? initialUser;
+  BrookreatorAuthUser? user;
   bool showSplashImage = true;
   String? _redirectLocation;
 
@@ -46,7 +46,7 @@ class AppStateNotifier extends ChangeNotifier {
   /// to perform subsequent actions (such as navigation) afterwards.
   void updateNotifyOnAuthChange(bool notify) => notifyOnAuthChange = notify;
 
-  void update(BaseAuthUser newUser) {
+  void update(BrookreatorAuthUser newUser) {
     final shouldUpdate =
         user?.uid == null || newUser.uid == null || user?.uid != newUser.uid;
     initialUser ??= newUser;
@@ -82,13 +82,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               : const OpenAppScreenWidget(),
         ),
         FFRoute(
-          name: 'HomePagedemo',
-          path: '/homePagedemo',
-          builder: (context, params) => HomePagedemoWidget(
-            pageview: params.getParam('pageview', ParamType.bool),
-          ),
-        ),
-        FFRoute(
           name: 'Buy_Credit',
           path: '/buyCredit',
           builder: (context, params) => const BuyCreditWidget(),
@@ -107,11 +100,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Privacy_Policy',
           path: '/privacyPolicy',
           builder: (context, params) => const PrivacyPolicyWidget(),
-        ),
-        FFRoute(
-          name: 'OpenAppScreen123',
-          path: '/openAppScreen123',
-          builder: (context, params) => const OpenAppScreen123Widget(),
         ),
         FFRoute(
           name: 'Settings',
@@ -139,19 +127,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const GeneratingWidget(),
         ),
         FFRoute(
-          name: 'QR_Start',
-          path: '/qRStart',
-          builder: (context, params) => const QRStartWidget(),
-        ),
-        FFRoute(
           name: 'OpenAppScreen',
           path: '/openAppScreen',
           builder: (context, params) => const OpenAppScreenWidget(),
-        ),
-        FFRoute(
-          name: 'Forgotpassword',
-          path: '/forgotpassword',
-          builder: (context, params) => const ForgotpasswordWidget(),
         ),
         FFRoute(
           name: 'T2I_Start',
@@ -176,14 +154,22 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: 'QR_Startdemo',
-          path: '/qRStartdemo',
-          builder: (context, params) => const QRStartdemoWidget(),
+          name: 'QR_Start',
+          path: '/qRStart',
+          builder: (context, params) => const QRStartWidget(),
         ),
         FFRoute(
-          name: 'exper',
-          path: '/exper',
-          builder: (context, params) => const ExperWidget(),
+          name: 'Email_Verify',
+          path: '/emailVerify',
+          builder: (context, params) => EmailVerifyWidget(
+            email: params.getParam('email', ParamType.String),
+            password: params.getParam('password', ParamType.String),
+          ),
+        ),
+        FFRoute(
+          name: 'Forgotpassword',
+          path: '/forgotpassword',
+          builder: (context, params) => const ForgotpasswordWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -378,13 +364,20 @@ class FFRoute {
                   key: state.pageKey,
                   child: child,
                   transitionDuration: transitionInfo.duration,
-                  transitionsBuilder: PageTransition(
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) =>
+                          PageTransition(
                     type: transitionInfo.transitionType,
                     duration: transitionInfo.duration,
                     reverseDuration: transitionInfo.duration,
                     alignment: transitionInfo.alignment,
                     child: child,
-                  ).transitionsBuilder,
+                  ).buildTransitions(
+                    context,
+                    animation,
+                    secondaryAnimation,
+                    child,
+                  ),
                 )
               : MaterialPage(key: state.pageKey, child: child);
         },

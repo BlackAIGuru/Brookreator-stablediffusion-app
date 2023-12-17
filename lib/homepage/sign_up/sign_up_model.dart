@@ -61,6 +61,9 @@ class SignUpModel extends FlutterFlowModel<SignUpWidget> {
     return null;
   }
 
+  // Stores action output result for [Custom Action - signUp] action in Button widget.
+  bool? signUpResult;
+
   /// Initialization and disposal methods.
 
   @override

@@ -119,7 +119,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '0hp2lrj7' /* Text to Image */,
@@ -135,7 +135,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(1.00, 0.00),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 10.0, 0.0),
@@ -176,7 +176,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.00, 0.00),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
@@ -253,7 +253,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -269,7 +269,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -309,7 +309,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -383,7 +383,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -423,7 +423,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -497,7 +497,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -537,7 +537,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -611,7 +611,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -651,7 +651,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -692,7 +692,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                             ),
                                             Align(
                                               alignment: const AlignmentDirectional(
-                                                  0.00, 0.00),
+                                                  0.0, 0.0),
                                               child: Container(
                                                 width: double.infinity,
                                                 height: double.infinity,
@@ -719,7 +719,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              0.00, 0.00),
+                                                              0.0, 0.0),
                                                       child: ClipRRect(
                                                         borderRadius:
                                                             BorderRadius
@@ -737,7 +737,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              0.00, 1.00),
+                                                              0.0, 1.0),
                                                       child: Container(
                                                         width: double.infinity,
                                                         height: 25.0,
@@ -778,7 +778,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              0.00, 1.00),
+                                                              0.0, 1.0),
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsetsDirectional
@@ -840,7 +840,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -856,7 +856,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: 101.0,
                                                       height: 25.0,
@@ -896,7 +896,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -959,7 +959,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -975,7 +975,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1015,7 +1015,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1078,7 +1078,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1094,7 +1094,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1134,7 +1134,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1197,7 +1197,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1213,7 +1213,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1253,7 +1253,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1316,7 +1316,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1332,7 +1332,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1383,7 +1383,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1446,7 +1446,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1462,7 +1462,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1502,7 +1502,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1565,7 +1565,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1581,7 +1581,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1621,7 +1621,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1684,7 +1684,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1700,7 +1700,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1740,7 +1740,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1803,7 +1803,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1819,7 +1819,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1859,7 +1859,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -1922,7 +1922,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -1938,7 +1938,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -1978,7 +1978,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2041,7 +2041,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -2057,7 +2057,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -2097,7 +2097,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2160,7 +2160,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -2176,7 +2176,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -2216,7 +2216,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2279,7 +2279,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -2295,7 +2295,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -2335,7 +2335,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2398,7 +2398,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -2414,7 +2414,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -2454,7 +2454,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2517,7 +2517,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -2533,7 +2533,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -2573,7 +2573,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2636,7 +2636,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 0.00),
+                                                            0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
                                                           BorderRadius.circular(
@@ -2652,7 +2652,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
@@ -2692,7 +2692,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   Align(
                                                     alignment:
                                                         const AlignmentDirectional(
-                                                            0.00, 1.00),
+                                                            0.0, 1.0),
                                                     child: Padding(
                                                       padding:
                                                           const EdgeInsetsDirectional
@@ -2758,7 +2758,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 10.0),
@@ -2771,7 +2771,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.00, 0.00),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -2779,7 +2779,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.00, 0.00),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
                                                 const EdgeInsetsDirectional.fromSTEB(
@@ -2790,7 +2790,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, 0.00),
+                                                          -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -2803,7 +2803,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         Align(
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  -1.00, 0.00),
+                                                                  -1.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
                                                                     context)
@@ -3001,7 +3001,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, 0.00),
+                                                          -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -3031,7 +3031,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, 0.00),
+                                                          -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -3204,7 +3204,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, 0.00),
+                                                          -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -3234,7 +3234,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, 0.00),
+                                                          -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -3325,8 +3325,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           });
                                                         },
                                                         child: Container(
-                                                          width: 150.0,
+                                                          width:
+                                                              MediaQuery.sizeOf(
+                                                                          context)
+                                                                      .width *
+                                                                  0.35,
                                                           height: 35.0,
+                                                          constraints:
+                                                              const BoxConstraints(
+                                                            maxWidth: 200.0,
+                                                          ),
                                                           decoration:
                                                               BoxDecoration(
                                                             color: _model.selectsize ==
@@ -3354,87 +3362,87 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           ),
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  0.00, 0.00),
-                                                          child: Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Align(
-                                                                alignment:
-                                                                    const AlignmentDirectional(
-                                                                        -1.00,
-                                                                        0.00),
-                                                                child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          20.0,
-                                                                          0.0,
-                                                                          10.0,
+                                                                  0.0, 0.0),
+                                                          child: Align(
+                                                            alignment:
+                                                                const AlignmentDirectional(
+                                                                    0.0, 0.0),
+                                                            child: Row(
+                                                              mainAxisSize:
+                                                                  MainAxisSize
+                                                                      .min,
+                                                              children: [
+                                                                Align(
+                                                                  alignment:
+                                                                      const AlignmentDirectional(
+                                                                          -1.0,
                                                                           0.0),
                                                                   child:
-                                                                      Container(
-                                                                    width: 17.0,
-                                                                    height:
-                                                                        17.0,
-                                                                    decoration:
-                                                                        BoxDecoration(
-                                                                      color: _model.selectsize ==
-                                                                              1
-                                                                          ? const Color(
-                                                                              0xFFF0F4FA)
-                                                                          : FlutterFlowTheme.of(context)
-                                                                              .secondaryBackground,
-                                                                      boxShadow: const [
-                                                                        BoxShadow(
-                                                                          blurRadius:
-                                                                              2.0,
-                                                                          color:
-                                                                              Color(0x33000000),
-                                                                          offset: Offset(
-                                                                              1.0,
-                                                                              1.0),
-                                                                        )
-                                                                      ],
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              3.0),
-                                                                      border:
-                                                                          Border
-                                                                              .all(
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Container(
+                                                                      width:
+                                                                          17.0,
+                                                                      height:
+                                                                          17.0,
+                                                                      decoration:
+                                                                          BoxDecoration(
                                                                         color: _model.selectsize ==
                                                                                 1
-                                                                            ? FlutterFlowTheme.of(context).primary
-                                                                            : FlutterFlowTheme.of(context).secondaryText,
-                                                                        width:
-                                                                            1.0,
+                                                                            ? const Color(0xFFF0F4FA)
+                                                                            : FlutterFlowTheme.of(context).secondaryBackground,
+                                                                        boxShadow: const [
+                                                                          BoxShadow(
+                                                                            blurRadius:
+                                                                                2.0,
+                                                                            color:
+                                                                                Color(0x33000000),
+                                                                            offset:
+                                                                                Offset(1.0, 1.0),
+                                                                          )
+                                                                        ],
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(3.0),
+                                                                        border:
+                                                                            Border.all(
+                                                                          color: _model.selectsize == 1
+                                                                              ? FlutterFlowTheme.of(context).primary
+                                                                              : FlutterFlowTheme.of(context).secondaryText,
+                                                                          width:
+                                                                              1.0,
+                                                                        ),
                                                                       ),
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ),
-                                                              Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  '9gw34sie' /* Square (1:1) */,
+                                                                Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    '9gw34sie' /* Square (1:1) */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'NotoSansThai',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            12.0,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'NotoSansThai',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      fontSize:
-                                                                          12.0,
-                                                                      useGoogleFonts:
-                                                                          false,
-                                                                    ),
-                                                              ),
-                                                            ],
+                                                              ],
+                                                            ),
                                                           ),
                                                         ),
                                                       ),
@@ -3473,8 +3481,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         });
                                                       },
                                                       child: Container(
-                                                        width: 150.0,
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                0.35,
                                                         height: 35.0,
+                                                        constraints:
+                                                            const BoxConstraints(
+                                                          maxWidth: 200.0,
+                                                        ),
                                                         decoration:
                                                             BoxDecoration(
                                                           color: _model
@@ -3503,81 +3519,85 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         ),
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                0.00, 0.00),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          20.0,
-                                                                          0.0,
-                                                                          10.0,
-                                                                          0.0),
-                                                              child: Container(
-                                                                width: 13.5,
-                                                                height: 24.0,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  color: _model
-                                                                              .selectsize ==
-                                                                          2
-                                                                      ? const Color(
-                                                                          0xFFF0F4FA)
-                                                                      : FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryBackground,
-                                                                  boxShadow: const [
-                                                                    BoxShadow(
-                                                                      blurRadius:
-                                                                          2.0,
-                                                                      color: Color(
-                                                                          0x33000000),
-                                                                      offset: Offset(
-                                                                          1.0,
-                                                                          1.0),
-                                                                    )
-                                                                  ],
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              3.0),
-                                                                  border: Border
-                                                                      .all(
+                                                                0.0, 0.0),
+                                                        child: Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Row(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .min,
+                                                            children: [
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0),
+                                                                child:
+                                                                    Container(
+                                                                  width: 13.5,
+                                                                  height: 24.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
                                                                     color: _model.selectsize ==
                                                                             2
-                                                                        ? FlutterFlowTheme.of(context)
-                                                                            .primary
+                                                                        ? const Color(
+                                                                            0xFFF0F4FA)
                                                                         : FlutterFlowTheme.of(context)
-                                                                            .secondaryText,
+                                                                            .secondaryBackground,
+                                                                    boxShadow: const [
+                                                                      BoxShadow(
+                                                                        blurRadius:
+                                                                            2.0,
+                                                                        color: Color(
+                                                                            0x33000000),
+                                                                        offset: Offset(
+                                                                            1.0,
+                                                                            1.0),
+                                                                      )
+                                                                    ],
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            3.0),
+                                                                    border:
+                                                                        Border
+                                                                            .all(
+                                                                      color: _model.selectsize == 2
+                                                                          ? FlutterFlowTheme.of(context)
+                                                                              .primary
+                                                                          : FlutterFlowTheme.of(context)
+                                                                              .secondaryText,
+                                                                    ),
                                                                   ),
                                                                 ),
                                                               ),
-                                                            ),
-                                                            Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'dw71q0x6' /* Mobile (9:16) */,
+                                                              Text(
+                                                                FFLocalizations.of(
+                                                                        context)
+                                                                    .getText(
+                                                                  'dw71q0x6' /* Mobile (9:16) */,
+                                                                ),
+                                                                style: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyMedium
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'NotoSansThai',
+                                                                      color: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .secondaryText,
+                                                                      fontSize:
+                                                                          12.0,
+                                                                      useGoogleFonts:
+                                                                          false,
+                                                                    ),
                                                               ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'NotoSansThai',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryText,
-                                                                    fontSize:
-                                                                        12.0,
-                                                                    useGoogleFonts:
-                                                                        false,
-                                                                  ),
-                                                            ),
-                                                          ],
+                                                            ],
+                                                          ),
                                                         ),
                                                       ),
                                                     ),
@@ -3634,8 +3654,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           });
                                                         },
                                                         child: Container(
-                                                          width: 150.0,
+                                                          width:
+                                                              MediaQuery.sizeOf(
+                                                                          context)
+                                                                      .width *
+                                                                  0.35,
                                                           height: 35.0,
+                                                          constraints:
+                                                              const BoxConstraints(
+                                                            maxWidth: 200.0,
+                                                          ),
                                                           decoration:
                                                               BoxDecoration(
                                                             color: _model.selectsize ==
@@ -3663,19 +3691,20 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           ),
                                                           alignment:
                                                               const AlignmentDirectional(
-                                                                  0.00, 0.00),
+                                                                  0.0, 0.0),
                                                           child: Row(
                                                             mainAxisSize:
                                                                 MainAxisSize
-                                                                    .max,
+                                                                    .min,
                                                             children: [
                                                               Padding(
-                                                                padding: const EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        20.0,
-                                                                        0.0,
-                                                                        10.0,
-                                                                        0.0),
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0),
                                                                 child:
                                                                     Container(
                                                                   width: 15.0,
@@ -3774,8 +3803,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         });
                                                       },
                                                       child: Container(
-                                                        width: 150.0,
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                0.35,
                                                         height: 35.0,
+                                                        constraints:
+                                                            const BoxConstraints(
+                                                          maxWidth: 200.0,
+                                                        ),
                                                         decoration:
                                                             BoxDecoration(
                                                           color: _model
@@ -3804,16 +3841,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         ),
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                0.00, 0.00),
+                                                                0.0, 0.0),
                                                         child: Row(
                                                           mainAxisSize:
-                                                              MainAxisSize.max,
+                                                              MainAxisSize.min,
                                                           children: [
                                                             Padding(
                                                               padding:
                                                                   const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          15.0,
+                                                                          0.0,
                                                                           0.0,
                                                                           10.0,
                                                                           0.0),
@@ -3936,8 +3973,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             });
                                                           },
                                                           child: Container(
-                                                            width: 150.0,
+                                                            width: MediaQuery
+                                                                        .sizeOf(
+                                                                            context)
+                                                                    .width *
+                                                                0.35,
                                                             height: 35.0,
+                                                            constraints:
+                                                                const BoxConstraints(
+                                                              maxWidth: 200.0,
+                                                            ),
                                                             decoration:
                                                                 BoxDecoration(
                                                               color: _model
@@ -3967,16 +4012,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             ),
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.00, 0.00),
+                                                                    0.0, 0.0),
                                                             child: Row(
                                                               mainAxisSize:
                                                                   MainAxisSize
-                                                                      .max,
+                                                                      .min,
                                                               children: [
                                                                 Padding(
                                                                   padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
-                                                                          15.0,
+                                                                          0.0,
                                                                           0.0,
                                                                           10.0,
                                                                           0.0),
@@ -4046,8 +4091,16 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     ),
                                                     Flexible(
                                                       child: Container(
-                                                        width: 150.0,
+                                                        width:
+                                                            MediaQuery.sizeOf(
+                                                                        context)
+                                                                    .width *
+                                                                0.35,
                                                         height: 35.0,
+                                                        constraints:
+                                                            const BoxConstraints(
+                                                          maxWidth: 200.0,
+                                                        ),
                                                         decoration:
                                                             BoxDecoration(
                                                           color: FlutterFlowTheme
@@ -4065,57 +4118,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                         ),
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                0.00, 0.00),
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.max,
-                                                          children: [
-                                                            Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          20.0,
-                                                                          0.0,
-                                                                          10.0,
-                                                                          0.0),
-                                                              child: Container(
-                                                                width: 20.0,
-                                                                height: 15.0,
-                                                                decoration:
-                                                                    BoxDecoration(
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .secondaryBackground,
-                                                                  border: Border
-                                                                      .all(
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryBackground,
-                                                                  ),
-                                                                ),
-                                                              ),
-                                                            ),
-                                                            Text(
-                                                              FFLocalizations.of(
-                                                                      context)
-                                                                  .getText(
-                                                                'vy0j565k' /* Landscape (4:3) */,
-                                                              ),
-                                                              style: FlutterFlowTheme
-                                                                      .of(context)
-                                                                  .bodyMedium
-                                                                  .override(
-                                                                    fontFamily:
-                                                                        'Inter',
-                                                                    color: FlutterFlowTheme.of(
-                                                                            context)
-                                                                        .secondaryBackground,
-                                                                    fontSize:
-                                                                        12.0,
-                                                                  ),
-                                                            ),
-                                                          ],
-                                                        ),
+                                                                0.0, 0.0),
                                                       ),
                                                     ),
                                                   ],
@@ -4142,7 +4145,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     Align(
                                                       alignment:
                                                           const AlignmentDirectional(
-                                                              -1.00, 0.00),
+                                                              -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
                                                             const EdgeInsetsDirectional
@@ -4177,7 +4180,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                       child: Align(
                                                         alignment:
                                                             const AlignmentDirectional(
-                                                                1.00, 0.00),
+                                                                1.0, 0.0),
                                                         child: Switch.adaptive(
                                                           value: _model
                                                                   .manualswitchValue ??=
@@ -4213,7 +4216,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          0.00, 0.00),
+                                                          0.0, 0.0),
                                                   child: Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -4261,7 +4264,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.00, 0.00),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
@@ -4271,7 +4274,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                             children: [
                                               Align(
                                                 alignment: const AlignmentDirectional(
-                                                    -1.00, 0.00),
+                                                    -1.0, 0.0),
                                                 child: Padding(
                                                   padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
@@ -4320,7 +4323,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.00, -1.00),
+                                            const AlignmentDirectional(-1.0, -1.0),
                                         child: Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
@@ -4346,7 +4349,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                             children: [
                                               Align(
                                                 alignment: const AlignmentDirectional(
-                                                    0.00, 0.00),
+                                                    0.0, 0.0),
                                                 child: Slider(
                                                   activeColor:
                                                       FlutterFlowTheme.of(
@@ -4581,9 +4584,10 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.00, 1.00),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                  padding:
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                   child: FFButtonWidget(
                     onPressed: (_model.promptController.text == '') ||
                             (_model.negativepromptController.text == '')

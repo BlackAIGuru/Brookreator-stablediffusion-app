@@ -65,7 +65,7 @@ class _CreditWidgetState extends State<CreditWidget> {
             children: [
               Flexible(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.00, 0.00),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                     child: Text(
@@ -85,7 +85,7 @@ class _CreditWidgetState extends State<CreditWidget> {
               ),
               Flexible(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.00, 0.00),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Icon(
                     Icons.monetization_on_outlined,
                     color: FlutterFlowTheme.of(context).primary,

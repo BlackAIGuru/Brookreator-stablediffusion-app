@@ -58,7 +58,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Align(
-                alignment: const AlignmentDirectional(-1.00, -1.00),
+                alignment: const AlignmentDirectional(-1.0, -1.0),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
                   child: ClipRRect(
@@ -73,7 +73,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.00, 0.00),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 1.0,
                   height: MediaQuery.sizeOf(context).height * 1.0,
@@ -81,7 +81,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                     color: Color(0xCA000000),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.00, 0.00),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Container(
                       width: double.infinity,
                       height: MediaQuery.sizeOf(context).height * 0.4,
@@ -89,12 +89,12 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                         color: Color(0xCB000000),
                       ),
                       child: Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Container(
                                 width: 108.0,
                                 height: 108.0,
@@ -107,7 +107,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                   ),
                                 ),
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.00, 0.00),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'gpufxo49' /* ~2 Min */,
@@ -125,7 +125,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 15.0),
@@ -145,7 +145,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     65.0, 0.0, 65.0, 50.0),
@@ -165,7 +165,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.00, 0.00),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: SingleChildScrollView(
                                 scrollDirection: Axis.horizontal,
                                 child: Row(
@@ -174,8 +174,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Align(
-                                      alignment:
-                                          const AlignmentDirectional(0.00, 0.00),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
                                       child: FFButtonWidget(
                                         onPressed: () {
                                           print('Button pressed ...');
@@ -224,8 +223,7 @@ class _GeneratingWidgetState extends State<GeneratingWidget> {
                                       options: FFButtonOptions(
                                         width: 134.0,
                                         height: 31.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 0.0),
+                                        padding: const EdgeInsets.all(0.0),
                                         iconPadding:
                                             const EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),

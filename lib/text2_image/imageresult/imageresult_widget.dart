@@ -47,7 +47,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 1.00),
+      alignment: const AlignmentDirectional(0.0, 1.0),
       child: Padding(
         padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
         child: Container(
@@ -77,7 +77,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                           children: [
                             Flexible(
                               child: Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       10.0, 0.0, 5.0, 0.0),
@@ -98,7 +98,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(1.00, -1.00),
+                              alignment: const AlignmentDirectional(1.0, -1.0),
                               child: Padding(
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 5.0, 15.0),
@@ -122,14 +122,14 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                           ],
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.00, 0.00),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 0.0),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(10.0),
                               child: Image.asset(
-                                'assets/images/t2idemo_1.png',
+                                'assets/images/t2idemo_4.png',
                                 width: double.infinity,
                                 height: 342.0,
                                 fit: BoxFit.cover,
@@ -237,30 +237,48 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
-                                      child: Text(
-                                        FFLocalizations.of(context).getText(
-                                          '0acpismy' /* Image description */,
-                                        ),
-                                        textAlign: TextAlign.start,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyMedium
-                                            .override(
-                                              fontFamily: 'NotoSansThai',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              fontSize: 10.0,
-                                              fontWeight: FontWeight.w500,
-                                              useGoogleFonts: false,
+                                    Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Align(
+                                          alignment:
+                                              const AlignmentDirectional(-1.0, -1.0),
+                                          child: Padding(
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 7.0, 0.0),
+                                            child: Text(
+                                              FFLocalizations.of(context)
+                                                  .getText(
+                                                '0acpismy' /* Image description */,
+                                              ),
+                                              textAlign: TextAlign.start,
+                                              style: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'NotoSansThai',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryText,
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
                                             ),
-                                      ),
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.content_copy,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 15.0,
+                                        ),
+                                      ],
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
@@ -279,33 +297,52 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                         ),
                                       ),
                                     ),
-                                    Align(
-                                      alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
-                                      child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 0.0),
-                                        child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'ngr7em9o' /* Unwanted Keywords (Optional) */,
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'NotoSansThai',
-                                                color:
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 10.0, 0.0, 0.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.max,
+                                        children: [
+                                          Align(
+                                            alignment: const AlignmentDirectional(
+                                                -1.0, -1.0),
+                                            child: Padding(
+                                              padding: const EdgeInsetsDirectional
+                                                  .fromSTEB(0.0, 0.0, 7.0, 0.0),
+                                              child: Text(
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'ngr7em9o' /* Unwanted Keywords (Optional) */,
+                                                ),
+                                                style:
                                                     FlutterFlowTheme.of(context)
-                                                        .secondaryText,
-                                                fontSize: 10.0,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
+                                                        .bodyMedium
+                                                        .override(
+                                                          fontFamily:
+                                                              'NotoSansThai',
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .secondaryText,
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.w500,
+                                                          useGoogleFonts: false,
+                                                        ),
                                               ),
-                                        ),
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.content_copy,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 15.0,
+                                          ),
+                                        ],
                                       ),
                                     ),
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.00, -1.00),
+                                          const AlignmentDirectional(-1.0, -1.0),
                                       child: Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
@@ -337,7 +374,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, -1.00),
+                                                          -1.0, -1.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -362,7 +399,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, -1.00),
+                                                          -1.0, -1.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -394,7 +431,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, -1.00),
+                                                          -1.0, -1.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(
@@ -419,7 +456,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                                 Align(
                                                   alignment:
                                                       const AlignmentDirectional(
-                                                          -1.00, -1.00),
+                                                          -1.0, -1.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
                                                         .getText(

@@ -90,7 +90,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'dtl6adx5' /* About Us */,
@@ -118,7 +118,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, -1.00),
+                                alignment: const AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 15.0, 0.0, 0.0),
@@ -138,7 +138,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
@@ -163,7 +163,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, -1.00),
+                                alignment: const AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 15.0, 0.0, 0.0),
@@ -183,7 +183,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
@@ -208,7 +208,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, -1.00),
+                                alignment: const AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 15.0, 0.0, 0.0),
@@ -228,7 +228,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
@@ -253,7 +253,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, -1.00),
+                                alignment: const AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 15.0, 0.0, 0.0),
@@ -273,7 +273,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
@@ -295,7 +295,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             ],
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(-1.00, 0.00),
+                            alignment: const AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   30.0, 20.0, 30.0, 0.0),
@@ -318,7 +318,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, -1.00),
+                                alignment: const AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 15.0, 0.0, 0.0),
@@ -338,7 +338,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, -1.00),
+                                alignment: const AlignmentDirectional(-1.0, -1.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 10.0, 30.0, 0.0),
@@ -358,7 +358,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 5.0, 30.0, 0.0),
@@ -399,7 +399,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 5.0, 30.0, 0.0),
@@ -440,7 +440,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(-1.00, 0.00),
+                                alignment: const AlignmentDirectional(-1.0, 0.0),
                                 child: Padding(
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 5.0, 30.0, 0.0),

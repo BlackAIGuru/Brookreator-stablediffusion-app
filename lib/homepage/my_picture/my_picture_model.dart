@@ -1,6 +1,5 @@
-import '/components/gallery/gallery_widget.dart';
-import '/components/tabbar/tabbar_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'my_picture_widget.dart' show MyPictureWidget;
 import 'package:flutter/material.dart';
 
@@ -13,25 +12,22 @@ class MyPictureModel extends FlutterFlowModel<MyPictureWidget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  // Model for gallery component.
-  late GalleryModel galleryModel;
-  // Model for tabbar component.
-  late TabbarModel tabbarModel;
+  // State field(s) for ChoiceChips widget.
+  String? choiceChipsValue1;
+  FormFieldController<List<String>>? choiceChipsValueController1;
+  // State field(s) for ChoiceChips widget.
+  String? choiceChipsValue2;
+  FormFieldController<List<String>>? choiceChipsValueController2;
 
   /// Initialization and disposal methods.
 
   @override
-  void initState(BuildContext context) {
-    galleryModel = createModel(context, () => GalleryModel());
-    tabbarModel = createModel(context, () => TabbarModel());
-  }
+  void initState(BuildContext context) {}
 
   @override
   void dispose() {
     unfocusNode.dispose();
     tabBarController?.dispose();
-    galleryModel.dispose();
-    tabbarModel.dispose();
   }
 
   /// Action blocks are added here.

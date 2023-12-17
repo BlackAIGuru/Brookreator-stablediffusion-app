@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -60,7 +59,7 @@ class _CardWidgetState extends State<CardWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Align(
-                alignment: const AlignmentDirectional(-1.00, 0.00),
+                alignment: const AlignmentDirectional(-1.0, 0.0),
                 child: Padding(
                   padding:
                       const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 20.0),
@@ -69,7 +68,7 @@ class _CardWidgetState extends State<CardWidget> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.00, 0.00),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Container(
                           width: 50.0,
                           height: 50.0,
@@ -78,7 +77,7 @@ class _CardWidgetState extends State<CardWidget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'yitq3k9b' /* NA */,
@@ -102,7 +101,7 @@ class _CardWidgetState extends State<CardWidget> {
               ),
               Flexible(
                 child: Align(
-                  alignment: const AlignmentDirectional(0.00, 0.00),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
@@ -128,7 +127,9 @@ class _CardWidgetState extends State<CardWidget> {
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               5.0, 5.0, 5.0, 0.0),
                           child: Text(
-                            currentUserEmail,
+                            FFLocalizations.of(context).getText(
+                              'g7t24qde' /* matthewbadertscher@gmail.com */,
+                            ),
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
@@ -157,7 +158,7 @@ class _CardWidgetState extends State<CardWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(1.00, 0.00),
+                alignment: const AlignmentDirectional(1.0, 0.0),
                 child: Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 15.0, 0.0),
                   child: Column(
@@ -188,7 +189,7 @@ class _CardWidgetState extends State<CardWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.00, 0.00),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 5.0, 0.0, 0.0),
@@ -199,7 +200,7 @@ class _CardWidgetState extends State<CardWidget> {
                                   width: 15.0,
                                   height: 15.0,
                                   fit: BoxFit.contain,
-                                  alignment: const Alignment(0.00, 0.00),
+                                  alignment: const Alignment(0.0, 0.0),
                                 ),
                               ),
                             ),
@@ -219,8 +220,7 @@ class _CardWidgetState extends State<CardWidget> {
                           options: FFButtonOptions(
                             width: 90.0,
                             height: 27.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 0.0, 0.0),
+                            padding: const EdgeInsets.all(0.0),
                             iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color:

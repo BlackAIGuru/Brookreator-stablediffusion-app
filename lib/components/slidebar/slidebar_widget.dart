@@ -46,14 +46,14 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
         mainAxisSize: MainAxisSize.max,
         children: [
           Align(
-            alignment: const AlignmentDirectional(-1.00, 0.00),
+            alignment: const AlignmentDirectional(-1.0, 0.0),
             child: Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(-1.00, 0.00),
+                    alignment: const AlignmentDirectional(-1.0, 0.0),
                     child: Padding(
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
@@ -86,7 +86,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
             ),
           ),
           Align(
-            alignment: const AlignmentDirectional(-1.00, -1.00),
+            alignment: const AlignmentDirectional(-1.0, -1.0),
             child: Padding(
               padding: const EdgeInsetsDirectional.fromSTEB(15.0, 5.0, 0.0, 0.0),
               child: Text(
@@ -107,7 +107,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
               Stack(
                 children: [
                   Align(
-                    alignment: const AlignmentDirectional(0.00, 0.00),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Slider(
                       activeColor: FlutterFlowTheme.of(context).primary,
                       inactiveColor: FlutterFlowTheme.of(context).alternate,

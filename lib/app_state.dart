@@ -28,12 +28,6 @@ class FFAppState extends ChangeNotifier {
     _toggleselected = value;
   }
 
-  String _username = '';
-  String get username => _username;
-  set username(String value) {
-    _username = value;
-  }
-
   bool _pageviewstatus = true;
   bool get pageviewstatus => _pageviewstatus;
   set pageviewstatus(bool value) {
@@ -44,6 +38,12 @@ class FFAppState extends ChangeNotifier {
   int get currentpageindex => _currentpageindex;
   set currentpageindex(int value) {
     _currentpageindex = value;
+  }
+
+  String _accessToken = '';
+  String get accessToken => _accessToken;
+  set accessToken(String value) {
+    _accessToken = value;
   }
 }
 

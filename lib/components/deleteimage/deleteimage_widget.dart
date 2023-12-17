@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -46,14 +47,14 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
         borderRadius: BorderRadius.circular(20.0),
       ),
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Align(
-        alignment: const AlignmentDirectional(0.00, 0.00),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Align(
-              alignment: const AlignmentDirectional(0.00, 0.00),
+              alignment: const AlignmentDirectional(0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'ca0h5lq6' /* Are you sure? */,
@@ -73,8 +74,14 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
+                    onPressed: () async {
+                      _model.apiResultuos =
+                          await BrookreatorGroup.removeFavouritesCall.call();
+                      if ((_model.apiResultuos?.succeeded ?? true)) {
+                        Navigator.pop(context);
+                      }
+
+                      setState(() {});
                     },
                     text: FFLocalizations.of(context).getText(
                       'wn1lrolc' /* Delete */,
@@ -82,8 +89,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                     options: FFButtonOptions(
                       width: MediaQuery.sizeOf(context).width * 0.2,
                       height: 30.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsets.all(0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: const Color(0xCCFF5963),
@@ -113,8 +119,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                     options: FFButtonOptions(
                       width: MediaQuery.sizeOf(context).width * 0.2,
                       height: 30.0,
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      padding: const EdgeInsets.all(0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,

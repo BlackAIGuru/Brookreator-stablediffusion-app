@@ -41,20 +41,20 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 200.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
-        alignment: const AlignmentDirectional(0.00, 0.00),
+        alignment: const AlignmentDirectional(0.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Align(
-              alignment: const AlignmentDirectional(-1.00, 0.00),
+              alignment: const AlignmentDirectional(-1.0, 0.0),
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                 child: Column(
@@ -62,7 +62,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.00, 0.00),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '8zjuhx80' /* Width (px) */,
@@ -76,7 +76,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.00, 0.00),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
@@ -127,7 +127,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                       color: FlutterFlowTheme.of(context).secondaryText,
                     ),
                   ),
-                  alignment: const AlignmentDirectional(0.00, 0.00),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     valueOrDefault<String>(
                       _model.widthsliderValue?.toString(),
@@ -139,14 +139,14 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
               ],
             ),
             Align(
-              alignment: const AlignmentDirectional(-1.00, 0.00),
+              alignment: const AlignmentDirectional(-1.0, 0.0),
               child: Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.00, 0.00),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'ju5c4eza' /* Height (px) */,
@@ -160,7 +160,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.00, 0.00),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
@@ -210,7 +210,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                       color: FlutterFlowTheme.of(context).secondaryText,
                     ),
                   ),
-                  alignment: const AlignmentDirectional(0.00, 0.00),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     valueOrDefault<String>(
                       _model.heightsliderValue?.toString(),

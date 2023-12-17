@@ -105,186 +105,6 @@ Locale createLocale(String language) => language.contains('_')
     : Locale(language);
 
 final kTranslationsMap = <Map<String, Map<String, String>>>[
-  // HomePagedemo
-  {
-    'l5y8412s': {
-      'en': '60',
-      'th': '60',
-    },
-    'nc3tpiea': {
-      'en': 'NA',
-      'th': 'นา',
-    },
-    'mshdin1z': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'emib5i2u': {
-      'en': 'Easily create an image from scratch with our AI image',
-      'th': 'สร้างภาพตั้งแต่เริ่มต้นได้อย่างง่ายดายด้วยภาพ AI ของเรา',
-    },
-    'sspot7wp': {
-      'en': 'Try Now',
-      'th': 'ลองตอนนี้',
-    },
-    'feixv45l': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
-    'mu01rbzp': {
-      'en':
-          'Train your own AI model to create limitless personalized portraits',
-      'th': 'ฝึกฝนโมเดล AI ของคุณเองเพื่อสร้างภาพบุคคลแบบไม่จำกัด',
-    },
-    'gkwte3gx': {
-      'en': 'Try Now',
-      'th': 'ลองตอนนี้',
-    },
-    'nrou638o': {
-      'en': 'AI Video (15 sec)',
-      'th': 'วิดีโอ AI (15 วินาที)',
-    },
-    'vv81bldm': {
-      'en': 'Change your video to your favorite style',
-      'th': 'เปลี่ยนวิดีโอของคุณให้เป็นสไตล์ที่คุณชื่นชอบ',
-    },
-    'dgawiuee': {
-      'en': 'Try Now',
-      'th': 'ลองตอนนี้',
-    },
-    'p4ozrslq': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
-    },
-    'a0560dw7': {
-      'en': 'Create custom QR Codes interated with any image you want!',
-      'th': 'สร้างรหัส QR ที่กำหนดเองโดยเชื่อมโยงกับภาพที่คุณต้องการ!',
-    },
-    'iydj44zk': {
-      'en': 'Try Now',
-      'th': 'ลองตอนนี้',
-    },
-    '1he967gc': {
-      'en': 'Templates Generate',
-      'th': 'เทมเพลตสร้าง',
-    },
-    'y6z8192x': {
-      'en': 'For You',
-      'th': 'สำหรับคุณ',
-    },
-    'kitm7mky': {
-      'en': 'Flower Field',
-      'th': 'ทุ่งดอกไม้',
-    },
-    'aukpmr1r': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'yl2kunmk': {
-      'en': 'Korean',
-      'th': 'เกาหลี',
-    },
-    'sg63pj91': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
-    'upn9f2g0': {
-      'en': 'Rainbow',
-      'th': 'รุ้ง',
-    },
-    'nfal42c1': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'ies6kcpx': {
-      'en': 'Cartoon',
-      'th': 'การ์ตูน',
-    },
-    'scpvdjvk': {
-      'en': 'AI Video',
-      'th': 'วิดีโอเอไอ',
-    },
-    'rzzjbe44': {
-      'en': 'Anime',
-      'th': 'อะนิเมะ',
-    },
-    '3mvkdvii': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
-    'g25yp6yy': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    '61nc1i0v': {
-      'en': 'Biker',
-      'th': 'ไบค์เกอร์',
-    },
-    '1r96kyfq': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    '4k3bqxyp': {
-      'en': 'Lunar Year',
-      'th': 'ปีจันทรคติ',
-    },
-    '69swsm0m': {
-      'en': 'Homey Cafe​',
-      'th': 'โฮมมี คาเฟ่',
-    },
-    '8du52u19': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    '2fodz4al': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
-    },
-    'bsfqbfv6': {
-      'en': 'Birthday Cat',
-      'th': 'วันเกิดแมว',
-    },
-    'yz49borw': {
-      'en': 'Peach',
-      'th': 'ลูกพีช',
-    },
-    'ojm57vos': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'nsjceu15': {
-      'en': 'Aquatic Sci-Fi',
-      'th': 'ไซไฟทางน้ำ',
-    },
-    'ao3lik1s': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    '8i10o2pq': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
-    },
-    'qn83r3q8': {
-      'en': 'Neon Sci-fi Lady',
-      'th': 'นีออนไซไฟเลดี้',
-    },
-    '61mnzeyp': {
-      'en': 'Halloween',
-      'th': 'วันฮาโลวีน',
-    },
-    'p8ogj9kw': {
-      'en': 'Christmas',
-      'th': 'คริสต์มาส',
-    },
-    'h2di10ml': {
-      'en': 'Studio',
-      'th': 'สตูดิโอ',
-    },
-    'e143zi4o': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
   // Buy_Credit
   {
     'h28j8xmv': {
@@ -377,6 +197,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'b5lrz3hz': {
       'en': 'Account',
       'th': 'บัญชี',
+    },
+    'sbcpsa53': {
+      'en': 'NA',
+      'th': 'นา',
+    },
+    'l8qcogmt': {
+      'en': 'Buy Credit',
+      'th': 'ซื้อเครดิต',
     },
     'y8tngjsd': {
       'en': 'Language',
@@ -1025,51 +853,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // OpenAppScreen123
-  {
-    '5a0yx8b3': {
-      'en': 'Elevating Creativity Through the Power of AI.',
-      'th': 'ยกระดับความคิดสร้างสรรค์ด้วยพลังของ AI',
-    },
-    'vj5dp84d': {
-      'en':
-          'Listen to the latest music releases and buy music event only using Disc. app',
-      'th': 'ฟังเพลงใหม่ล่าสุดและซื้อกิจกรรมเพลงโดยใช้แผ่นดิสก์เท่านั้น แอป',
-    },
-    '30wc2amc': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'd3zq7ti6': {
-      'en': 'Easily create an image from scratch with our AI image',
-      'th': 'สร้างภาพตั้งแต่เริ่มต้นได้อย่างง่ายดายด้วยภาพ AI ของเรา',
-    },
-    'xy8we081': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
-    '4mjm580g': {
-      'en':
-          'Train your own AI model to create limitless personalized portraits',
-      'th': 'ฝึกฝนโมเดล AI ของคุณเองเพื่อสร้างภาพบุคคลแบบไม่จำกัด',
-    },
-    'kywld9pg': {
-      'en': 'AI Video (15 sec)',
-      'th': 'วิดีโอ AI (15 วินาที)',
-    },
-    's4tp3k1x': {
-      'en': 'Change your video to your favorite style.',
-      'th': 'เปลี่ยนวิดีโอของคุณให้เป็นสไตล์ที่คุณชื่นชอบ',
-    },
-    'o7eik5h9': {
-      'en': 'Start Generate',
-      'th': 'เริ่มสร้าง',
-    },
-    '7pcppf0i': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
   // Settings
   {
     'o6etembj': {
@@ -1103,9 +886,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // SignIn
   {
-    '2oih9zxw': {
+    'hojft2la': {
       'en': 'Sign In',
-      'th': 'เข้าสู่ระบบ',
+      'th': 'สร้างบัญชี',
     },
     'l7owweah': {
       'en': 'Please sign in to your account',
@@ -1129,27 +912,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '00ghj3vm': {
       'en': 'Field is required',
-      'th': '',
+      'th': 'ต้องระบุข้อมูล',
     },
     'zd21aq1o': {
       'en': 'Invalid Email',
-      'th': '',
+      'th': 'อีเมลไม่ถูกต้อง',
     },
     'v50e81j4': {
       'en': 'Please choose an option from the dropdown',
-      'th': '',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
     },
     '45rftazb': {
       'en': 'Field is required',
-      'th': '',
+      'th': 'ต้องระบุข้อมูล',
     },
     '6hu1espu': {
       'en': 'Password should contain at least 6 characters',
-      'th': '',
+      'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
     },
     '7btabel9': {
       'en': 'Please choose an option from the dropdown',
-      'th': '',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
     },
     'pxmchqtr': {
       'en': 'Forgot Password?',
@@ -1162,6 +945,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2u35ewui': {
       'en': 'Or sign in using your social profile',
       'th': 'หรือลงชื่อเข้าใช้โดยใช้โปรไฟล์โซเชียลของคุณ',
+    },
+    'ofmksrx0': {
+      'en': 'Sign Up with Google',
+      'th': 'ลงทะเบียนกับ Google',
     },
     '9n4exasd': {
       'en': 'Don’t have account? ',
@@ -1212,35 +999,35 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cdo8assi': {
       'en': 'Field is required',
-      'th': '',
+      'th': 'ต้องระบุข้อมูล',
     },
     'w899uhnf': {
       'en': 'Please choose an option from the dropdown',
-      'th': '',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
     },
     '0zanvz29': {
       'en': 'Field is required',
-      'th': '',
+      'th': 'ต้องระบุข้อมูล',
     },
     'ht35x53h': {
       'en': 'Invalid Email',
-      'th': '',
+      'th': 'อีเมลไม่ถูกต้อง',
     },
     'a3a3t8ok': {
       'en': 'Please choose an option from the dropdown',
-      'th': '',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
     },
     'vkkx3eqh': {
       'en': 'Field is required',
-      'th': '',
+      'th': 'ต้องระบุข้อมูล',
     },
     'qltl6zk3': {
       'en': 'Password should contain at least 6 characters',
-      'th': '',
+      'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
     },
     'jrvvbq55': {
       'en': 'Please choose an option from the dropdown',
-      'th': '',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
     },
     '0a9ypit3': {
       'en': 'Password must be 8 and contain numeric',
@@ -1281,9 +1068,89 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My Pictures',
       'th': 'รูปภาพของฉัน',
     },
+    'ioov88pm': {
+      'en': 'All',
+      'th': 'ทั้งหมด',
+    },
+    'gwe9hta7': {
+      'en': 'Text to Image',
+      'th': 'ข้อความเป็นรูปภาพ',
+    },
+    'gzyrgr19': {
+      'en': 'AI Portrait',
+      'th': 'ภาพบุคคล AI',
+    },
+    '5mriddn4': {
+      'en': 'AI Video',
+      'th': 'วิดีโอเอไอ',
+    },
+    '8cs7u4wp': {
+      'en': 'Preview',
+      'th': 'ดูตัวอย่าง',
+    },
+    'p8t3sdsk': {
+      'en': 'QR Generator',
+      'th': 'เครื่องกำเนิด QR',
+    },
+    've1v279f': {
+      'en': 'All',
+      'th': 'ทั้งหมด',
+    },
+    'yfss128c': {
+      'en': '~2 min',
+      'th': '~2 นาที',
+    },
+    'bom45ihn': {
+      'en': 'Generating...',
+      'th': 'กำลังสร้าง...',
+    },
+    'fd4h3h20': {
+      'en': 'Text to Image',
+      'th': 'ข้อความเป็นรูปภาพ',
+    },
+    'v29c2cfq': {
+      'en': 'AI Video (15 sec)',
+      'th': 'วิดีโอ AI (15 วินาที)',
+    },
+    'bt3ob9v1': {
+      'en': 'Generating...',
+      'th': 'กำลังสร้าง...',
+    },
+    'vd2zsndk': {
+      'en': '~60 min',
+      'th': '~60 นาที',
+    },
     '91810kkp': {
       'en': 'Favourite',
       'th': 'ที่ชื่นชอบ',
+    },
+    '2dt9z681': {
+      'en': 'All',
+      'th': 'ทั้งหมด',
+    },
+    '7v7oiah1': {
+      'en': 'Text to Image',
+      'th': 'ข้อความเป็นรูปภาพ',
+    },
+    '56hvvyky': {
+      'en': 'AI Portrait',
+      'th': 'ภาพบุคคล AI',
+    },
+    'hhz4pioz': {
+      'en': 'AI Video',
+      'th': 'วิดีโอเอไอ',
+    },
+    'lmuyi4r5': {
+      'en': 'Preview',
+      'th': 'ดูตัวอย่าง',
+    },
+    'wgdmalu7': {
+      'en': 'QR Generator',
+      'th': 'เครื่องกำเนิด QR',
+    },
+    '95fzlw6b': {
+      'en': 'All',
+      'th': 'ทั้งหมด',
     },
     'fzywfdlv': {
       'en': 'My Picture',
@@ -1315,409 +1182,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ไปที่รูปภาพของฉัน',
     },
     '5mpj7j83': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
-  // QR_Start
-  {
-    'vpw8w4g4': {
-      'en': 'QR Generator',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'w8t6fd99': {
-      'en': 'QR Prompt',
-      'th': 'QR พร้อมท์',
-    },
-    '491zgphu': {
-      'en': 'Step 1',
-      'th': 'ขั้นตอนที่ 1',
-    },
-    '20pl38cc': {
-      'en': ' : Add QR Code Content *',
-      'th': ': เพิ่มเนื้อหา QR Code *',
-    },
-    'qmtnnkdr': {
-      'en': 'Link /URL',
-      'th': 'ลิงค์ /URL',
-    },
-    'ihradgwv': {
-      'en': 'Example : https://www.example.com/',
-      'th': 'ตัวอย่าง : https://www.example.com/',
-    },
-    'wibgn5x4': {
-      'en': 'https://www.example.com/my-long-url',
-      'th': 'https://www.example.com/my-long-url',
-    },
-    'ypejhmwm': {
-      'en': 'Field is required',
-      'th': '',
-    },
-    '3trskza2': {
-      'en': 'URL not correct',
-      'th': '',
-    },
-    'ywsm9cc1': {
-      'en': 'Please choose an option from the dropdown',
-      'th': '',
-    },
-    'pxw014hb': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'g4uzpy4a': {
-      'en': ' : Select a Theme',
-      'th': ': เลือกธีม',
-    },
-    '9eltv43x': {
-      'en': 'Maneki Neko',
-      'th': 'มาเนกิเนโกะ',
-    },
-    'vyfzqqmp': {
-      'en': 'Cyberpunk',
-      'th': 'ไซเบอร์พังค์',
-    },
-    'vr6zltm2': {
-      'en': 'Foodies',
-      'th': 'นักชิม',
-    },
-    'qnlaa78z': {
-      'en': 'Galaxy',
-      'th': 'กาแล็กซี',
-    },
-    't6hmoqjk': {
-      'en': 'Jade Dragon',
-      'th': 'มังกรหยก',
-    },
-    'pisolpng': {
-      'en': 'Joan Miro',
-      'th': 'โจน มิโร',
-    },
-    'd0sezw13': {
-      'en': 'Low Poly',
-      'th': 'โพลีต่ำ',
-    },
-    'ojtutlpv': {
-      'en': 'Neon Camouflage',
-      'th': 'ลายพรางนีออน',
-    },
-    'xysz2wk7': {
-      'en': 'Neon Sci-fi Lady',
-      'th': 'นีออนไซไฟเลดี้',
-    },
-    'vibxcy2m': {
-      'en': 'Stormy Night',
-      'th': 'คืนที่มีพายุ',
-    },
-    '1gcfqt0x': {
-      'en': 'Tree House',
-      'th': 'บ้านต้นไม้',
-    },
-    '880b6kjw': {
-      'en': 'Step 3',
-      'th': 'ขั้นตอนที่ 3',
-    },
-    '9cz3juak': {
-      'en': ' : Number of Images',
-      'th': ': จำนวนภาพ',
-    },
-    'hoxdtlax': {
-      'en': 'Select number of images to generate.',
-      'th': 'เลือกจำนวนภาพที่จะสร้าง',
-    },
-    'y5fxazk2': {
-      'en': '1',
-      'th': '1',
-    },
-    'xy7lf8n3': {
-      'en': '2',
-      'th': '2',
-    },
-    'kd26l1t5': {
-      'en': '3',
-      'th': '3',
-    },
-    '8xaz6ef7': {
-      'en': '4',
-      'th': '4',
-    },
-    'ibhzpiwt': {
-      'en': '5',
-      'th': '5',
-    },
-    'vmwryekq': {
-      'en': '6',
-      'th': '6',
-    },
-    'ek7o6ztk': {
-      'en': '7',
-      'th': '7',
-    },
-    '9zmyp5ju': {
-      'en': '8',
-      'th': '8',
-    },
-    'o12h3i9v': {
-      'en': '9',
-      'th': '9',
-    },
-    'fzl4glxn': {
-      'en': 'Generate',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
-    'stkv3hkd': {
-      'en': 'QR Code',
-      'th': 'คิวอาร์โค้ด',
-    },
-    'r27cvlwr': {
-      'en': 'Upload QR Code',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    'tfmt3zin': {
-      'en': 'File types : PNG/JPG, maximum size : 8 MB',
-      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
-    },
-    '2hil4t5c': {
-      'en': 'Example',
-      'th': 'ตัวอย่าง',
-    },
-    'apxbxpmf': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'q2v2fn1i': {
-      'en': ' : Select a Theme',
-      'th': ': เลือกธีม',
-    },
-    'h2ma7cov': {
-      'en': 'Maneki Neko',
-      'th': 'มาเนกิเนโกะ',
-    },
-    '0vtn3o9b': {
-      'en': 'Cyberpunk',
-      'th': 'ไซเบอร์พังค์',
-    },
-    '81d9dbyn': {
-      'en': 'Foodies',
-      'th': 'นักชิม',
-    },
-    'vuxsw3uv': {
-      'en': 'Galaxy',
-      'th': 'กาแล็กซี',
-    },
-    'w98m9zwc': {
-      'en': 'Jade Dragon',
-      'th': 'มังกรหยก',
-    },
-    'aqrklqtx': {
-      'en': 'Joan Miro',
-      'th': 'โจน มิโร',
-    },
-    'smwot51o': {
-      'en': 'Low Poly',
-      'th': 'โพลีต่ำ',
-    },
-    '21g2dylf': {
-      'en': 'Neon Camouflage',
-      'th': 'ลายพรางนีออน',
-    },
-    'uhmpqhms': {
-      'en': 'Neon Sci-fi Lady',
-      'th': 'นีออนไซไฟเลดี้',
-    },
-    'ocr1pg76': {
-      'en': 'Stormy Night',
-      'th': 'คืนที่มีพายุ',
-    },
-    'i94z4mpf': {
-      'en': 'Tree House',
-      'th': 'บ้านต้นไม้',
-    },
-    'wa9y53uw': {
-      'en': 'Step 3',
-      'th': 'ขั้นตอนที่ 3',
-    },
-    'b13z763k': {
-      'en': ' : Number of Images',
-      'th': ': จำนวนภาพ',
-    },
-    '8pnhq3u0': {
-      'en': 'Select number of images to generate.',
-      'th': 'เลือกจำนวนภาพที่จะสร้าง',
-    },
-    'kpv8s1lg': {
-      'en': '1',
-      'th': '1',
-    },
-    '4xk9nuoc': {
-      'en': '2',
-      'th': '2',
-    },
-    'njmo5i20': {
-      'en': '3',
-      'th': '3',
-    },
-    '44pje0vk': {
-      'en': '4',
-      'th': '4',
-    },
-    'nrh2b9r0': {
-      'en': '5',
-      'th': '5',
-    },
-    'gijw02a8': {
-      'en': '6',
-      'th': '6',
-    },
-    'w6ir9y7e': {
-      'en': '7',
-      'th': '7',
-    },
-    'myia0fsi': {
-      'en': '8',
-      'th': '8',
-    },
-    'f513rmi6': {
-      'en': '9',
-      'th': '9',
-    },
-    'jbxpfp8o': {
-      'en': 'Generate',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
-    },
-    'u1x05isp': {
-      'en': 'Upload Image',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    'gayxpv6p': {
-      'en': 'Step 1',
-      'th': 'ขั้นตอนที่ 1',
-    },
-    '4moto873': {
-      'en': ' : Add QR Code Content *',
-      'th': ': เพิ่มเนื้อหา QR Code *',
-    },
-    'tet1uefz': {
-      'en': 'Link /URL',
-      'th': 'ลิงค์ /URL',
-    },
-    '6d1fraht': {
-      'en': 'Example : https://www.example.com/',
-      'th': 'ตัวอย่าง : https://www.example.com/',
-    },
-    '6aet8vbw': {
-      'en': 'https://www.example.com/my-long-url',
-      'th': 'https://www.example.com/my-long-url',
-    },
-    '3yj4wn8l': {
-      'en': 'Field is required',
-      'th': '',
-    },
-    'b47jys9w': {
-      'en': 'URL not correct',
-      'th': '',
-    },
-    'zdhvzb6u': {
-      'en': 'Please choose an option from the dropdown',
-      'th': '',
-    },
-    'd6glvjtr': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'widwzzgf': {
-      'en': ': Upload Photos',
-      'th': ': อัพโหลดรูปภาพ',
-    },
-    'tjq72tz6': {
-      'en': 'Background Image',
-      'th': 'ภาพพื้นหลัง',
-    },
-    'zt3gijka': {
-      'en': 'Upload Background',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    'u00hj7r5': {
-      'en': 'File types : PNG/JPG, maximum size : 8 MB',
-      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
-    },
-    'uvvcvih1': {
-      'en': 'QR Scale',
-      'th': 'มาตราส่วน QR',
-    },
-    'x6a4nps8': {
-      'en': 'Middle Logo (Optional)',
-      'th': 'โลโก้กลาง (ไม่จำเป็น)',
-    },
-    'vss22atf': {
-      'en': 'Upload Logo',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    '12jtedkb': {
-      'en': 'File types : PNG/JPG, maximum size : 8 MB',
-      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
-    },
-    'jf7tgrkg': {
-      'en': 'Generate',
-      'th': 'สร้าง ( 60 หน่วยกิต )',
-    },
-    '9tdpm58b': {
-      'en': 'QR Code',
-      'th': 'คิวอาร์โค้ด',
-    },
-    'leg8a3v0': {
-      'en': 'Upload Images',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    'b9mb4c23': {
-      'en': 'File types : PNG/JPG, maximum size : 8 MB',
-      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
-    },
-    'gpn36o6c': {
-      'en': 'Example',
-      'th': 'ตัวอย่าง',
-    },
-    's6v7ynmz': {
-      'en': 'Step 2',
-      'th': 'ขั้นตอนที่ 2',
-    },
-    'd2y68pxv': {
-      'en': ': Upload Photos',
-      'th': ': อัพโหลดรูปภาพ',
-    },
-    '49zra2pa': {
-      'en': 'Background Image',
-      'th': 'ภาพพื้นหลัง',
-    },
-    '4s3yuj5v': {
-      'en': 'Upload Background',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    'l92zshm2': {
-      'en': 'File types : PNG/JPG, maximum size : 8 MB',
-      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
-    },
-    'l1vfbxnv': {
-      'en': 'QR Scale',
-      'th': 'มาตราส่วน QR',
-    },
-    'hhpzl40b': {
-      'en': 'Middle Logo (Optional)',
-      'th': 'โลโก้กลาง (ไม่จำเป็น)',
-    },
-    '4kxgdq65': {
-      'en': 'Upload Logo',
-      'th': 'อัพโหลดรูปภาพ',
-    },
-    '3i9i14qf': {
-      'en': 'File types : PNG/JPG, maximum size : 8 MB',
-      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
-    },
-    'i3mvhhsf': {
-      'en': 'Generate',
-      'th': 'สร้าง ( 60 หน่วยกิต )',
-    },
-    'tcauinlm': {
       'en': 'Home',
       'th': 'บ้าน',
     },
@@ -1763,39 +1227,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'เริ่มสร้าง',
     },
     'savhbhn2': {
-      'en': 'Home',
-      'th': 'บ้าน',
-    },
-  },
-  // Forgotpassword
-  {
-    'tlv7lvni': {
-      'en': 'Back',
-      'th': 'กลับ',
-    },
-    'oxcqeiqi': {
-      'en': 'Forgot Password',
-      'th': 'ลืมรหัสผ่าน',
-    },
-    'iljpt8h9': {
-      'en':
-          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
-      'th':
-          'เราจะส่งอีเมลพร้อมลิงก์เพื่อรีเซ็ตรหัสผ่านของคุณ โปรดป้อนอีเมลที่เชื่อมโยงกับบัญชีของคุณด้านล่าง',
-    },
-    '2sdtgztv': {
-      'en': 'Your email address...',
-      'th': 'ที่อยู่อีเมลของคุณ...',
-    },
-    'auq98fik': {
-      'en': 'Enter your email...',
-      'th': 'กรอกอีเมล์ของคุณ...',
-    },
-    'jczx6q44': {
-      'en': 'Send Link',
-      'th': 'ส่งลิ้งค์',
-    },
-    'vdbvm3dm': {
       'en': 'Home',
       'th': 'บ้าน',
     },
@@ -1927,8 +1358,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'e8q8ratg': {
       'en':
           'Remove from image. Example: color red, big objects, mountain scenes, etc.',
-      'th':
-          'ลบออกจากภาพ ตัวอย่าง: color red, big objects, mountain scenes, etc.',
+      'th': 'ลบออกจากภาพ ตัวอย่าง: สีแดง วัตถุขนาดใหญ่ ฉากภูเขา ฯลฯ',
     },
     '30l2s20c': {
       'en': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
@@ -1950,27 +1380,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '9gw34sie': {
       'en': 'Square (1:1)',
-      'th': '',
+      'th': 'สี่เหลี่ยมจัตุรัส (1:1)',
     },
     'dw71q0x6': {
       'en': 'Mobile (9:16)',
-      'th': '',
+      'th': 'มือถือ (9:16)',
     },
     '8hrpdbnk': {
       'en': ' Portrait (3:4)',
-      'th': '',
+      'th': 'แนวตั้ง (3:4)',
     },
     'l9zu23o8': {
       'en': 'Desktop (16:9)',
-      'th': '',
+      'th': 'เดสก์ท็อป (16:9)',
     },
     'n7wu58jj': {
       'en': 'Landscape (4:3)',
-      'th': '',
-    },
-    'vy0j565k': {
-      'en': 'Landscape (4:3)',
-      'th': '',
+      'th': 'ทิวทัศน์ (4:3)',
     },
     '35l3lhcj': {
       'en': 'Resize manually',
@@ -2156,7 +1582,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'niine03l': {
       'en': 'AI Video (15 sec)',
-      'th': 'ข้อความเป็นรูปภาพ',
+      'th': 'วิดีโอ AI (15 วินาที)',
     },
     'yjtqew0f': {
       'en': 'Step 1',
@@ -2168,7 +1594,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'f7v57dti': {
       'en': 'AI Face',
-      'th': '',
+      'th': 'เอไอ ใบหน้า',
     },
     'hipug6o7': {
       'en': 'Coming Soon..',
@@ -2181,6 +1607,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     's2kar2qj': {
       'en': ' : Upload Video',
       'th': ': อัพโหลดวิดีโอ',
+    },
+    'zmxmgdz1': {
+      'en': '*',
+      'th': '*',
     },
     '1yd0rs56': {
       'en': 'Video duration is limited to 15 seconds.',
@@ -2204,7 +1634,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'mzzl721a': {
       'en': 'Video',
-      'th': 'เรียบ',
+      'th': 'วีดีโอ',
     },
     'bky6xqnc': {
       'en': '( 100 Credits )',
@@ -2383,7 +1813,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'นีออนไซไฟเลดี้',
     },
     '0jk502pd': {
-      'en': 'QR Generator',
+      'en': 'Text to Image',
       'th': 'เครื่องกำเนิด QR',
     },
     '8d1ox130': {
@@ -2431,128 +1861,320 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // QR_Startdemo
+  // QR_Start
   {
-    'owhhdeu6': {
+    'sungsi2p': {
       'en': 'QR Generator',
-      'th': 'ข้อความเป็นรูปภาพ',
+      'th': 'เครื่องกำเนิด QR',
     },
     'n0bbyej0': {
       'en': 'QR Prompt',
       'th': 'QR พร้อมท์',
     },
-    'b3ql8fub': {
+    'o0fm6iw7': {
       'en': 'Step 1',
       'th': 'ขั้นตอนที่ 1',
     },
-    'v9oglf3s': {
-      'en': ' : Add QR Code Content *',
-      'th': ': เพิ่มเนื้อหา QR Code *',
+    '5c0ioexz': {
+      'en': ' : Add QR Code Content',
+      'th': ': เพิ่มเนื้อหารหัส QR',
     },
-    'sy2nigbw': {
+    'attkeg0p': {
+      'en': '*',
+      'th': '*',
+    },
+    'b5rn2x2g': {
+      'en': 'Link /URL',
+      'th': 'ลิงค์ /URL',
+    },
+    'fgx0zqza': {
+      'en': 'Example : https://www.example.com/',
+      'th': 'ตัวอย่าง : https://www.example.com/',
+    },
+    '5lb768i4': {
+      'en': 'https://www.example.com/my-long-url',
+      'th': 'https://www.example.com/my-long-url',
+    },
+    'c0ps9n3t': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    'xsnj5w6b': {
+      'en': 'URL not correct',
+      'th': 'URL ไม่ถูกต้อง',
+    },
+    'hg4wot5q': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
+    't8fefs0j': {
+      'en': 'QR Code',
+      'th': 'คิวอาร์โค้ด',
+    },
+    'zn7soqjk': {
+      'en': 'Upload QR Code',
+      'th': 'อัปโหลดรหัส QR',
+    },
+    'z4u6h1n3': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    'aimxo22s': {
+      'en': 'Example',
+      'th': 'ตัวอย่าง',
+    },
+    '4tq01134': {
       'en': 'Step 2',
       'th': 'ขั้นตอนที่ 2',
     },
-    '635i97wp': {
+    'xrrbwvd0': {
       'en': ' : Select a Theme',
       'th': ': เลือกธีม',
     },
-    'oyakmgo7': {
+    'rppvmpz1': {
       'en': 'Maneki Neko',
       'th': 'มาเนกิเนโกะ',
     },
-    'yp2swq51': {
+    'r5p42o3t': {
       'en': 'Cyberpunk',
       'th': 'ไซเบอร์พังค์',
     },
-    'jduurp92': {
+    '5wtqlnhx': {
       'en': 'Foodies',
       'th': 'นักชิม',
     },
-    'mplatngg': {
+    'h5eltghm': {
       'en': 'Galaxy',
       'th': 'กาแล็กซี',
     },
-    '6iuy6wjh': {
+    'ht46acdk': {
       'en': 'Jade Dragon',
       'th': 'มังกรหยก',
     },
-    't5r5cx7q': {
+    'y682i2e0': {
       'en': 'Joan Miro',
       'th': 'โจน มิโร',
     },
-    'w67bsydv': {
+    'v857fnso': {
       'en': 'Low Poly',
       'th': 'โพลีต่ำ',
     },
-    'z4yoabyo': {
+    '6esrnnjl': {
       'en': 'Neon Camouflage',
       'th': 'ลายพรางนีออน',
     },
-    '35g2kf9w': {
+    'kwmp5ptl': {
       'en': 'Neon Sci-fi Lady',
       'th': 'นีออนไซไฟเลดี้',
     },
-    'egste060': {
+    'ol38910z': {
       'en': 'Stormy Night',
       'th': 'คืนที่มีพายุ',
     },
-    'nv1tt6of': {
+    'z9vhjtir': {
       'en': 'Tree House',
       'th': 'บ้านต้นไม้',
     },
-    '8sn816gt': {
-      'en': 'Generate ( 6 Credits )',
-      'th': 'สร้าง ( 6 หน่วยกิต )',
+    'jopnxlej': {
+      'en': 'Step 3',
+      'th': 'ขั้นตอนที่ 3',
+    },
+    'tn0nmnap': {
+      'en': ' : Number of Images',
+      'th': ': จำนวนภาพ',
+    },
+    'd4e8xek1': {
+      'en': 'Select number of images to generate.',
+      'th': 'เลือกจำนวนภาพที่จะสร้าง',
+    },
+    'ntvyc8zd': {
+      'en': '1',
+      'th': '1',
+    },
+    '923lmtzc': {
+      'en': '2',
+      'th': '2',
+    },
+    'iul1pq9b': {
+      'en': '3',
+      'th': '3',
+    },
+    'o297erv6': {
+      'en': '4',
+      'th': '4',
+    },
+    'e4ice0ya': {
+      'en': '5',
+      'th': '5',
+    },
+    '7wprmfq3': {
+      'en': '6',
+      'th': '6',
+    },
+    'mk6jvg0b': {
+      'en': '7',
+      'th': '7',
+    },
+    'r2jwnf0s': {
+      'en': '8',
+      'th': '8',
+    },
+    'ty4ton5i': {
+      'en': '9',
+      'th': '9',
+    },
+    'muhcqo9z': {
+      'en': 'Generate',
+      'th': 'สร้าง',
     },
     '3kqyfyvy': {
       'en': 'Upload Image',
       'th': 'อัพโหลดรูปภาพ',
     },
-    'fzpptmtv': {
+    'byyluvi8': {
       'en': 'Step 1',
       'th': 'ขั้นตอนที่ 1',
     },
-    'hbaa0ouz': {
-      'en': ': Add QR Code Content *',
-      'th': ': เพิ่มเนื้อหา QR Code *',
+    '6mt6i1q1': {
+      'en': ' : Add QR Code Content',
+      'th': ': เพิ่มเนื้อหารหัส QR',
     },
-    '95nkliy0': {
+    'kcvj0gs8': {
+      'en': '*',
+      'th': '*',
+    },
+    'gnurfvxj': {
+      'en': 'Link /URL',
+      'th': 'ลิงค์ /URL',
+    },
+    '6ji7vegj': {
+      'en': 'Example : https://www.example.com/',
+      'th': 'ตัวอย่าง : https://www.example.com/',
+    },
+    'pbueixs6': {
+      'en': 'https://www.example.com/my-long-url',
+      'th': 'https://www.example.com/my-long-url',
+    },
+    'tizrmshi': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    '7ww4ggwo': {
+      'en': 'URL not correct',
+      'th': 'URL ไม่ถูกต้อง',
+    },
+    'nou9f13h': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
+    'jp6fjse7': {
+      'en': 'QR Code',
+      'th': 'คิวอาร์โค้ด',
+    },
+    'y06z8i14': {
+      'en': 'Upload QR Code',
+      'th': 'อัปโหลดรหัส QR',
+    },
+    'y1296ksn': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    'yutr9l0r': {
+      'en': 'Example',
+      'th': 'ตัวอย่าง',
+    },
+    '716c3tpw': {
       'en': 'Step 2',
       'th': 'ขั้นตอนที่ 2',
     },
-    '7vn3vab6': {
-      'en': ': Upload Photos',
+    'bspx675x': {
+      'en': ' : Upload Photos',
       'th': ': อัพโหลดรูปภาพ',
     },
-    'h2l5ipnx': {
+    '2zj20ysx': {
       'en': 'Background Image',
       'th': 'ภาพพื้นหลัง',
     },
-    'c0m7to8p': {
+    'ty6h3aka': {
+      'en': 'Upload Background',
+      'th': 'อัพโหลดพื้นหลัง',
+    },
+    'khr69jq2': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    'rbtfccaa': {
       'en': 'QR Scale',
       'th': 'มาตราส่วน QR',
     },
-    'mbcodycy': {
+    'oyajr8ai': {
       'en': 'Middle Logo (Optional)',
       'th': 'โลโก้กลาง (ไม่จำเป็น)',
     },
-    'jsi7p9ti': {
-      'en': 'Generate ( 60 Credits )',
-      'th': 'สร้าง ( 60 หน่วยกิต )',
+    'gr4nh9g7': {
+      'en': 'Upload Logo',
+      'th': 'อัพโหลดโลโก้',
+    },
+    '181b71mp': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    'wlrwielk': {
+      'en': 'Generate',
+      'th': 'สร้าง',
     },
     'vhjv3b3z': {
       'en': 'Home',
       'th': 'บ้าน',
     },
   },
-  // exper
+  // Email_Verify
   {
-    '2h9hhh4r': {
-      'en': 'Page Title',
+    '0b80se8z': {
+      'en': 'Verification Code',
+      'th': 'สร้างบัญชี',
+    },
+    '7lca2frp': {
+      'en': 'Enter the 6 digits code that you received on your e-mail',
       'th': '',
     },
-    'ifu8coiu': {
+    'tlry5c9v': {
+      'en': 'Confirm',
+      'th': 'ส่งลิ้งค์',
+    },
+    'tjalbxdh': {
+      'en': 'Resend Code',
+      'th': '',
+    },
+    'szu0s2bz': {
+      'en': 'Home',
+      'th': '',
+    },
+  },
+  // Forgotpassword
+  {
+    'eu4hhnov': {
+      'en': 'Forgot Password',
+      'th': 'สร้างบัญชี',
+    },
+    'vg6g2lyd': {
+      'en':
+          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
+      'th': '',
+    },
+    'zagqpa3u': {
+      'en': 'Your email address...',
+      'th': 'ที่อยู่อีเมลของคุณ...',
+    },
+    'tj49zhbh': {
+      'en': 'Enter your email...',
+      'th': 'กรอกอีเมล์ของคุณ...',
+    },
+    'a8f6j3tt': {
+      'en': 'Send Link',
+      'th': 'ส่งลิ้งค์',
+    },
+    '7pej2o29': {
       'en': 'Home',
       'th': '',
     },
@@ -2835,7 +2457,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ข้อความเป็นรูปภาพ',
     },
     't1mh6kcx': {
-      'en': 'AI portrait',
+      'en': 'AI Portrait',
       'th': 'ภาพเหมือนของเอไอ',
     },
     'clp8uj6i': {
@@ -2874,6 +2496,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'om12b3m9': {
       'en': 'John Smith',
       'th': 'จอห์นสมิ ธ',
+    },
+    'g7t24qde': {
+      'en': 'matthewbadertscher@gmail.com',
+      'th': '',
     },
     '4c8rhvol': {
       'en': '60',
@@ -2977,19 +2603,19 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '8zjuhx80': {
       'en': 'Width (px)',
-      'th': '',
+      'th': 'ความกว้าง (พิกเซล)',
     },
     '2cup3of9': {
       'en': 'The width of the generated image.',
-      'th': '',
+      'th': 'ความกว้างของรูปภาพที่สร้างขึ้น',
     },
     'ju5c4eza': {
       'en': 'Height (px)',
-      'th': '',
+      'th': 'ความสูง (พิกเซล)',
     },
     'fpjsyedb': {
       'en': 'The heigth of the generated image.',
-      'th': '',
+      'th': 'ความสูงของรูปภาพที่สร้างขึ้น',
     },
   },
   // credit
@@ -3003,30 +2629,35 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'ca0h5lq6': {
       'en': 'Are you sure?',
-      'th': '',
+      'th': 'คุณแน่ใจไหม?',
     },
     'wn1lrolc': {
       'en': 'Delete',
-      'th': '',
+      'th': 'ลบ',
     },
     'wl011z39': {
       'en': 'Cancel',
-      'th': '',
+      'th': 'ยกเลิก',
     },
   },
   // Miscellaneous
   {
     'n2ygup46': {
-      'en': '',
-      'th': '',
+      'en':
+          'In order to take a picture or video, this app requires permission to access the camera.',
+      'th': 'ในการถ่ายภาพหรือวิดีโอ แอปนี้ต้องได้รับสิทธิ์ในการเข้าถึงกล้อง',
     },
     'z8r5e1ib': {
-      'en': '',
-      'th': '',
+      'en':
+          'In order to upload data, this app requires permission to access the photo library.',
+      'th':
+          'ในการอัปโหลดข้อมูล แอปนี้ต้องได้รับสิทธิ์ในการเข้าถึงไลบรารีรูปภาพ',
     },
     'vvpphrm0': {
-      'en': '',
-      'th': '',
+      'en':
+          'In order to record audio for video, this app requires permission to access the microphone.',
+      'th':
+          'หากต้องการบันทึกเสียงสำหรับวิดีโอ แอปนี้ต้องได้รับสิทธิ์ในการเข้าถึงไมโครโฟน',
     },
     'cmgzhaac': {
       'en': '',

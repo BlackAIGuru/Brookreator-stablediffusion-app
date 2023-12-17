@@ -42,7 +42,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.00, 0.00),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 840.0,
@@ -90,7 +90,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(1.00, -1.00),
+                      alignment: const AlignmentDirectional(1.0, -1.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
@@ -133,7 +133,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                       child: const Buttongroup1Widget(),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.00, 0.00),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
                             const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
@@ -143,7 +143,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                           child: CarouselSlider(
                             items: [
                               Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
@@ -155,7 +155,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
@@ -167,7 +167,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
@@ -179,7 +179,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: const AlignmentDirectional(0.00, 0.00),
+                                alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
                                   child: Image.asset(
@@ -201,13 +201,7 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                               enlargeFactor: 0.3,
                               enableInfiniteScroll: true,
                               scrollDirection: Axis.horizontal,
-                              autoPlay: true,
-                              autoPlayAnimationDuration:
-                                  const Duration(milliseconds: 800),
-                              autoPlayInterval:
-                                  const Duration(milliseconds: (800 + 2000)),
-                              autoPlayCurve: Curves.linear,
-                              pauseAutoPlayInFiniteScroll: true,
+                              autoPlay: false,
                               onPageChanged: (index, _) =>
                                   _model.carouselCurrentIndex = index,
                             ),
