@@ -4,6 +4,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'imageresult_model.dart';
 export 'imageresult_model.dart';
@@ -268,11 +269,22 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                             ),
                                           ),
                                         ),
-                                        Icon(
-                                          Icons.content_copy,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                          size: 15.0,
+                                        InkWell(
+                                          splashColor: Colors.transparent,
+                                          focusColor: Colors.transparent,
+                                          hoverColor: Colors.transparent,
+                                          highlightColor: Colors.transparent,
+                                          onTap: () async {
+                                            await Clipboard.setData(
+                                                ClipboardData(
+                                                    text: FFAppState().prompt));
+                                          },
+                                          child: Icon(
+                                            Icons.content_copy,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                            size: 15.0,
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -283,9 +295,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'daktket1' /* Create a space that seamlessly... */,
-                                          ),
+                                          FFAppState().prompt,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -331,11 +341,24 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                               ),
                                             ),
                                           ),
-                                          Icon(
-                                            Icons.content_copy,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryText,
-                                            size: 15.0,
+                                          InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              await Clipboard.setData(
+                                                  ClipboardData(
+                                                      text: FFAppState()
+                                                          .negativeprompt));
+                                            },
+                                            child: Icon(
+                                              Icons.content_copy,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              size: 15.0,
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -347,9 +370,7 @@ class _ImageresultWidgetState extends State<ImageresultWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 5.0, 0.0, 0.0),
                                         child: Text(
-                                          FFLocalizations.of(context).getText(
-                                            'w13rl5py' /* EasyNegative, multiples, dupli... */,
-                                          ),
+                                          FFAppState().negativeprompt,
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(

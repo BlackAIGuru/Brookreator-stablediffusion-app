@@ -1,5 +1,4 @@
 import '/components/credit/credit_widget.dart';
-import '/components/imagesize/imagesize_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 't2_i_start_widget.dart' show T2IStartWidget;
 import 'package:carousel_slider/carousel_slider.dart';
@@ -34,17 +33,32 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
   String? Function(BuildContext, String?)? negativepromptControllerValidator;
   // State field(s) for manualswitch widget.
   bool? manualswitchValue;
-  // Model for imagesize component.
-  late ImagesizeModel imagesizeModel;
+  // State field(s) for widthslider widget.
+  double? widthsliderValue;
+  // Stores action output result for [Custom Action - changeToIngeger] action in widthslider widget.
+  int? widthsize;
+  // State field(s) for widthvalue widget.
+  FocusNode? widthvalueFocusNode;
+  TextEditingController? widthvalueController;
+  String? Function(BuildContext, String?)? widthvalueControllerValidator;
+  // State field(s) for heightslider widget.
+  double? heightsliderValue;
+  // Stores action output result for [Custom Action - changeToIngeger] action in heightslider widget.
+  int? heightsize;
+  // State field(s) for heightvalue widget.
+  FocusNode? heightvalueFocusNode;
+  TextEditingController? heightvalueController;
+  String? Function(BuildContext, String?)? heightvalueControllerValidator;
   // State field(s) for t2islider widget.
   double? t2isliderValue;
+  // Stores action output result for [Custom Action - changeToIngeger] action in t2islider widget.
+  int? imagenumber;
 
   /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
     creditModel = createModel(context, () => CreditModel());
-    imagesizeModel = createModel(context, () => ImagesizeModel());
   }
 
   @override
@@ -57,7 +71,11 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
     negativepromptFocusNode?.dispose();
     negativepromptController?.dispose();
 
-    imagesizeModel.dispose();
+    widthvalueFocusNode?.dispose();
+    widthvalueController?.dispose();
+
+    heightvalueFocusNode?.dispose();
+    heightvalueController?.dispose();
   }
 
   /// Action blocks are added here.

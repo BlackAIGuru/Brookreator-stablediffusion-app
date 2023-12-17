@@ -45,6 +45,30 @@ class FFAppState extends ChangeNotifier {
   set accessToken(String value) {
     _accessToken = value;
   }
+
+  String _prompt = '';
+  String get prompt => _prompt;
+  set prompt(String value) {
+    _prompt = value;
+  }
+
+  String _negativeprompt = '';
+  String get negativeprompt => _negativeprompt;
+  set negativeprompt(String value) {
+    _negativeprompt = value;
+  }
+
+  int _imagewidth = 0;
+  int get imagewidth => _imagewidth;
+  set imagewidth(int value) {
+    _imagewidth = value;
+  }
+
+  String _imageheight = '';
+  String get imageheight => _imageheight;
+  set imageheight(String value) {
+    _imageheight = value;
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

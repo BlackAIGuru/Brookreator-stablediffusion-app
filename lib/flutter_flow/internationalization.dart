@@ -1402,6 +1402,38 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Resize manually',
       'th': 'ปรับขนาดด้วยตนเอง',
     },
+    'bcjm1o9k': {
+      'en': 'Width (px)',
+      'th': 'ความกว้าง (พิกเซล)',
+    },
+    'iyh29fah': {
+      'en': 'The width of the generated image.',
+      'th': 'ความกว้างของรูปภาพที่สร้างขึ้น',
+    },
+    '02tul0x0': {
+      'en': '',
+      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
+    },
+    'ajcfi1tm': {
+      'en': '1024',
+      'th': '',
+    },
+    'qmel9n5q': {
+      'en': 'Height (px)',
+      'th': 'ความสูง (พิกเซล)',
+    },
+    'w8ywkcs2': {
+      'en': 'The heigth of the generated image.',
+      'th': 'ความสูงของรูปภาพที่สร้างขึ้น',
+    },
+    '9xkvvy9m': {
+      'en': '',
+      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
+    },
+    'v5xcgala': {
+      'en': '1024',
+      'th': '',
+    },
     '76nh3gbv': {
       'en': 'Step 3',
       'th': 'ขั้นตอนที่ 3',
@@ -2338,21 +2370,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Image description',
       'th': 'คำอธิบายรูปภาพ',
     },
-    'daktket1': {
-      'en':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-      'th':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
-    },
     'ngr7em9o': {
       'en': 'Unwanted Keywords (Optional)',
       'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
-    },
-    'w13rl5py': {
-      'en':
-          'EasyNegative, multiples, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
-      'th':
-          'EasyNegative, multiples, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
     },
     'hyoz44h1': {
       'en': 'Dimensions',
@@ -2609,6 +2629,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'The width of the generated image.',
       'th': 'ความกว้างของรูปภาพที่สร้างขึ้น',
     },
+    '33ny2oqd': {
+      'en': '1024',
+      'th': '',
+    },
     'ju5c4eza': {
       'en': 'Height (px)',
       'th': 'ความสูง (พิกเซล)',
@@ -2616,6 +2640,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'fpjsyedb': {
       'en': 'The heigth of the generated image.',
       'th': 'ความสูงของรูปภาพที่สร้างขึ้น',
+    },
+    'irr48n1w': {
+      'en': '1024',
+      'th': '',
     },
   },
   // credit

@@ -1,9 +1,10 @@
+import '/backend/api_requests/api_calls.dart';
 import '/components/credit/credit_widget.dart';
-import '/components/imagesize/imagesize_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/text2_image/imageresult/imageresult_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_debounce/easy_debounce.dart';
@@ -37,6 +38,26 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
     _model.negativepromptController ??= TextEditingController();
     _model.negativepromptFocusNode ??= FocusNode();
 
+    _model.widthvalueController ??= TextEditingController();
+    _model.widthvalueFocusNode ??= FocusNode();
+    _model.widthvalueFocusNode!.addListener(
+      () async {
+        setState(() {
+          _model.widthsliderValue =
+              double.parse(_model.widthvalueController.text);
+        });
+      },
+    );
+    _model.heightvalueController ??= TextEditingController();
+    _model.heightvalueFocusNode ??= FocusNode();
+    _model.heightvalueFocusNode!.addListener(
+      () async {
+        setState(() {
+          _model.widthsliderValue =
+              double.parse(_model.heightvalueController.text);
+        });
+      },
+    );
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
           _model.promptController?.text = FFLocalizations.of(context).getText(
             'p3am17de' /* Create a space that seamlessly... */,
@@ -44,6 +65,14 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
           _model.negativepromptController?.text =
               FFLocalizations.of(context).getText(
             'k4yhyr2o' /* EasyNegative, multiple bodies,... */,
+          );
+          _model.widthvalueController?.text =
+              FFLocalizations.of(context).getText(
+            'ajcfi1tm' /* 1024 */,
+          );
+          _model.heightvalueController?.text =
+              FFLocalizations.of(context).getText(
+            'v5xcgala' /* 1024 */,
           );
         }));
   }
@@ -3300,28 +3329,38 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             Colors.transparent,
                                                         onTap: () async {
                                                           setState(() {
-                                                            _model.selectsize =
-                                                                1;
-                                                          });
-                                                          setState(() {
                                                             _model.imagewidth =
                                                                 640;
                                                             _model.imageheight =
                                                                 640;
+                                                            _model.selectsize =
+                                                                1;
                                                           });
                                                           setState(() {
-                                                            _model.imagesizeModel
-                                                                    .widthsliderValue =
+                                                            _model.widthsliderValue =
                                                                 _model
                                                                     .imagewidth!
                                                                     .toDouble();
                                                           });
                                                           setState(() {
-                                                            _model.imagesizeModel
-                                                                    .heightsliderValue =
+                                                            _model.heightsliderValue =
                                                                 _model
                                                                     .imageheight!
                                                                     .toDouble();
+                                                          });
+                                                          setState(() {
+                                                            _model.widthvalueController
+                                                                    ?.text =
+                                                                _model
+                                                                    .imagewidth!
+                                                                    .toString();
+                                                          });
+                                                          setState(() {
+                                                            _model.heightvalueController
+                                                                    ?.text =
+                                                                _model
+                                                                    .imageheight!
+                                                                    .toString();
                                                           });
                                                         },
                                                         child: Container(
@@ -3458,26 +3497,35 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         setState(() {
-                                                          _model.selectsize = 2;
-                                                        });
-                                                        setState(() {
                                                           _model.imagewidth =
                                                               576;
                                                           _model.imageheight =
                                                               1024;
+                                                          _model.selectsize = 2;
                                                         });
                                                         setState(() {
-                                                          _model.imagesizeModel
-                                                                  .widthsliderValue =
+                                                          _model.widthsliderValue =
                                                               _model.imagewidth!
                                                                   .toDouble();
                                                         });
                                                         setState(() {
-                                                          _model.imagesizeModel
-                                                                  .heightsliderValue =
+                                                          _model.heightsliderValue =
                                                               _model
                                                                   .imageheight!
                                                                   .toDouble();
+                                                        });
+                                                        setState(() {
+                                                          _model.widthvalueController
+                                                                  ?.text =
+                                                              _model.imagewidth!
+                                                                  .toString();
+                                                        });
+                                                        setState(() {
+                                                          _model.heightvalueController
+                                                                  ?.text =
+                                                              _model
+                                                                  .imageheight!
+                                                                  .toString();
                                                         });
                                                       },
                                                       child: Container(
@@ -3629,28 +3677,38 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                             Colors.transparent,
                                                         onTap: () async {
                                                           setState(() {
-                                                            _model.selectsize =
-                                                                3;
-                                                          });
-                                                          setState(() {
                                                             _model.imagewidth =
                                                                 576;
                                                             _model.imageheight =
                                                                 768;
+                                                            _model.selectsize =
+                                                                3;
                                                           });
                                                           setState(() {
-                                                            _model.imagesizeModel
-                                                                    .widthsliderValue =
+                                                            _model.widthsliderValue =
                                                                 _model
                                                                     .imagewidth!
                                                                     .toDouble();
                                                           });
                                                           setState(() {
-                                                            _model.imagesizeModel
-                                                                    .heightsliderValue =
+                                                            _model.heightsliderValue =
                                                                 _model
                                                                     .imageheight!
                                                                     .toDouble();
+                                                          });
+                                                          setState(() {
+                                                            _model.widthvalueController
+                                                                    ?.text =
+                                                                _model
+                                                                    .imagewidth!
+                                                                    .toString();
+                                                          });
+                                                          setState(() {
+                                                            _model.heightvalueController
+                                                                    ?.text =
+                                                                _model
+                                                                    .imageheight!
+                                                                    .toString();
                                                           });
                                                         },
                                                         child: Container(
@@ -3780,26 +3838,35 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                           Colors.transparent,
                                                       onTap: () async {
                                                         setState(() {
-                                                          _model.selectsize = 4;
-                                                        });
-                                                        setState(() {
                                                           _model.imagewidth =
                                                               1024;
                                                           _model.imageheight =
                                                               576;
+                                                          _model.selectsize = 4;
                                                         });
                                                         setState(() {
-                                                          _model.imagesizeModel
-                                                                  .widthsliderValue =
+                                                          _model.widthsliderValue =
                                                               _model.imagewidth!
                                                                   .toDouble();
                                                         });
                                                         setState(() {
-                                                          _model.imagesizeModel
-                                                                  .heightsliderValue =
+                                                          _model.heightsliderValue =
                                                               _model
                                                                   .imageheight!
                                                                   .toDouble();
+                                                        });
+                                                        setState(() {
+                                                          _model.widthvalueController
+                                                                  ?.text =
+                                                              _model.imagewidth!
+                                                                  .toString();
+                                                        });
+                                                        setState(() {
+                                                          _model.heightvalueController
+                                                                  ?.text =
+                                                              _model
+                                                                  .imageheight!
+                                                                  .toString();
                                                         });
                                                       },
                                                       child: Container(
@@ -3948,28 +4015,38 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                               .transparent,
                                                           onTap: () async {
                                                             setState(() {
-                                                              _model.selectsize =
-                                                                  5;
-                                                            });
-                                                            setState(() {
                                                               _model.imagewidth =
                                                                   768;
                                                               _model.imageheight =
                                                                   576;
+                                                              _model.selectsize =
+                                                                  5;
                                                             });
                                                             setState(() {
-                                                              _model.imagesizeModel
-                                                                      .widthsliderValue =
+                                                              _model.widthsliderValue =
                                                                   _model
                                                                       .imagewidth!
                                                                       .toDouble();
                                                             });
                                                             setState(() {
-                                                              _model.imagesizeModel
-                                                                      .heightsliderValue =
+                                                              _model.heightsliderValue =
                                                                   _model
                                                                       .imageheight!
                                                                       .toDouble();
+                                                            });
+                                                            setState(() {
+                                                              _model.widthvalueController
+                                                                      ?.text =
+                                                                  _model
+                                                                      .imagewidth!
+                                                                      .toString();
+                                                            });
+                                                            setState(() {
+                                                              _model.heightvalueController
+                                                                      ?.text =
+                                                                  _model
+                                                                      .imageheight!
+                                                                      .toString();
                                                             });
                                                           },
                                                           child: Container(
@@ -4225,13 +4302,542 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     child: Container(
                                                       decoration:
                                                           const BoxDecoration(),
-                                                      child: wrapWithModel(
-                                                        model: _model
-                                                            .imagesizeModel,
-                                                        updateCallback: () =>
-                                                            setState(() {}),
-                                                        child:
-                                                            const ImagesizeWidget(),
+                                                      child: Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Container(
+                                                          width:
+                                                              double.infinity,
+                                                          height: 200.0,
+                                                          decoration:
+                                                              BoxDecoration(
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .secondaryBackground,
+                                                          ),
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Column(
+                                                            mainAxisSize:
+                                                                MainAxisSize
+                                                                    .min,
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .spaceEvenly,
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        -1.0,
+                                                                        0.0),
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          15.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .min,
+                                                                    mainAxisAlignment:
+                                                                        MainAxisAlignment
+                                                                            .start,
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
+                                                                            -1.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Text(
+                                                                          FFLocalizations.of(context)
+                                                                              .getText(
+                                                                            'bcjm1o9k' /* Width (px) */,
+                                                                          ),
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'NotoSansThai',
+                                                                                fontSize: 13.0,
+                                                                                fontWeight: FontWeight.w500,
+                                                                                useGoogleFonts: false,
+                                                                              ),
+                                                                        ),
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
+                                                                            -1.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              5.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'iyh29fah' /* The width of the generated ima... */,
+                                                                            ),
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  fontFamily: 'NotoSansThai',
+                                                                                  fontSize: 12.0,
+                                                                                  useGoogleFonts: false,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .start,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child:
+                                                                        SizedBox(
+                                                                      width: double
+                                                                          .infinity,
+                                                                      child:
+                                                                          Slider(
+                                                                        activeColor:
+                                                                            FlutterFlowTheme.of(context).primary,
+                                                                        inactiveColor:
+                                                                            FlutterFlowTheme.of(context).alternate,
+                                                                        min:
+                                                                            512.0,
+                                                                        max:
+                                                                            1024.0,
+                                                                        value: _model.widthsliderValue ??=
+                                                                            512.0,
+                                                                        divisions:
+                                                                            8,
+                                                                        onChanged:
+                                                                            (newValue) async {
+                                                                          setState(() =>
+                                                                              _model.widthsliderValue = newValue);
+                                                                          _model.widthsize =
+                                                                              await actions.changeToIngeger(
+                                                                            _model.widthsliderValue,
+                                                                          );
+                                                                          setState(
+                                                                              () {
+                                                                            _model.widthvalueController?.text =
+                                                                                _model.widthsize!.toString();
+                                                                          });
+
+                                                                          setState(
+                                                                              () {});
+                                                                        },
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    width: 55.0,
+                                                                    child:
+                                                                        TextFormField(
+                                                                      controller:
+                                                                          _model
+                                                                              .widthvalueController,
+                                                                      focusNode:
+                                                                          _model
+                                                                              .widthvalueFocusNode,
+                                                                      onChanged:
+                                                                          (_) =>
+                                                                              EasyDebounce.debounce(
+                                                                        '_model.widthvalueController',
+                                                                        const Duration(
+                                                                            milliseconds:
+                                                                                2000),
+                                                                        () async {
+                                                                          setState(
+                                                                              () {
+                                                                            _model.widthsliderValue =
+                                                                                double.parse(_model.widthvalueController.text);
+                                                                          });
+                                                                        },
+                                                                      ),
+                                                                      onFieldSubmitted:
+                                                                          (_) async {
+                                                                        setState(
+                                                                            () {
+                                                                          _model.widthsliderValue = double.parse(_model
+                                                                              .widthvalueController
+                                                                              .text);
+                                                                        });
+                                                                      },
+                                                                      textCapitalization:
+                                                                          TextCapitalization
+                                                                              .none,
+                                                                      obscureText:
+                                                                          false,
+                                                                      decoration:
+                                                                          InputDecoration(
+                                                                        isDense:
+                                                                            true,
+                                                                        labelStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .override(
+                                                                              fontFamily: 'NotoSansThai',
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                              fontSize: 12.0,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                        alignLabelWithHint:
+                                                                            false,
+                                                                        hintStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .override(
+                                                                              fontFamily: 'NotoSansThai',
+                                                                              color: const Color(0xB36F6F6F),
+                                                                              fontSize: 12.0,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                        enabledBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              const BorderSide(
+                                                                            color:
+                                                                                Color(0xB36F6F6F),
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        focusedBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              const BorderSide(
+                                                                            color:
+                                                                                Color(0xFF0957DE),
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        errorBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).error,
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        focusedErrorBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).error,
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0,
+                                                                            10.0),
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'NotoSansThai',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryText,
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      cursorColor:
+                                                                          const Color(
+                                                                              0xFF0957DE),
+                                                                      validator: _model
+                                                                          .widthvalueControllerValidator
+                                                                          .asValidator(
+                                                                              context),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        -1.0,
+                                                                        0.0),
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          15.0,
+                                                                          0.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child: Column(
+                                                                    mainAxisSize:
+                                                                        MainAxisSize
+                                                                            .max,
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
+                                                                            -1.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Text(
+                                                                          FFLocalizations.of(context)
+                                                                              .getText(
+                                                                            'qmel9n5q' /* Height (px) */,
+                                                                          ),
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyMedium
+                                                                              .override(
+                                                                                fontFamily: 'NotoSansThai',
+                                                                                fontSize: 13.0,
+                                                                                fontWeight: FontWeight.w500,
+                                                                                useGoogleFonts: false,
+                                                                              ),
+                                                                        ),
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
+                                                                            -1.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              5.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'w8ywkcs2' /* The heigth of the generated im... */,
+                                                                            ),
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  fontFamily: 'NotoSansThai',
+                                                                                  fontSize: 12.0,
+                                                                                  useGoogleFonts: false,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              Row(
+                                                                mainAxisSize:
+                                                                    MainAxisSize
+                                                                        .max,
+                                                                children: [
+                                                                  Flexible(
+                                                                    child:
+                                                                        SizedBox(
+                                                                      width: double
+                                                                          .infinity,
+                                                                      child:
+                                                                          Slider(
+                                                                        activeColor:
+                                                                            FlutterFlowTheme.of(context).primary,
+                                                                        inactiveColor:
+                                                                            FlutterFlowTheme.of(context).alternate,
+                                                                        min:
+                                                                            512.0,
+                                                                        max:
+                                                                            1024.0,
+                                                                        value: _model.heightsliderValue ??=
+                                                                            512.0,
+                                                                        divisions:
+                                                                            8,
+                                                                        onChanged:
+                                                                            (newValue) async {
+                                                                          setState(() =>
+                                                                              _model.heightsliderValue = newValue);
+                                                                          _model.heightsize =
+                                                                              await actions.changeToIngeger(
+                                                                            _model.heightsliderValue,
+                                                                          );
+                                                                          setState(
+                                                                              () {
+                                                                            _model.heightvalueController?.text =
+                                                                                _model.heightsize!.toString();
+                                                                          });
+
+                                                                          setState(
+                                                                              () {});
+                                                                        },
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                  SizedBox(
+                                                                    width: 55.0,
+                                                                    child:
+                                                                        TextFormField(
+                                                                      controller:
+                                                                          _model
+                                                                              .heightvalueController,
+                                                                      focusNode:
+                                                                          _model
+                                                                              .heightvalueFocusNode,
+                                                                      onChanged:
+                                                                          (_) =>
+                                                                              EasyDebounce.debounce(
+                                                                        '_model.heightvalueController',
+                                                                        const Duration(
+                                                                            milliseconds:
+                                                                                2000),
+                                                                        () async {
+                                                                          setState(
+                                                                              () {
+                                                                            _model.widthsliderValue =
+                                                                                double.parse(_model.heightvalueController.text);
+                                                                          });
+                                                                        },
+                                                                      ),
+                                                                      onFieldSubmitted:
+                                                                          (_) async {
+                                                                        setState(
+                                                                            () {
+                                                                          _model.widthsliderValue = double.parse(_model
+                                                                              .heightvalueController
+                                                                              .text);
+                                                                        });
+                                                                      },
+                                                                      textCapitalization:
+                                                                          TextCapitalization
+                                                                              .none,
+                                                                      obscureText:
+                                                                          false,
+                                                                      decoration:
+                                                                          InputDecoration(
+                                                                        isDense:
+                                                                            true,
+                                                                        labelStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .override(
+                                                                              fontFamily: 'NotoSansThai',
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                              fontSize: 12.0,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                        alignLabelWithHint:
+                                                                            false,
+                                                                        hintStyle: FlutterFlowTheme.of(context)
+                                                                            .labelMedium
+                                                                            .override(
+                                                                              fontFamily: 'NotoSansThai',
+                                                                              color: const Color(0xB36F6F6F),
+                                                                              fontSize: 12.0,
+                                                                              useGoogleFonts: false,
+                                                                            ),
+                                                                        enabledBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              const BorderSide(
+                                                                            color:
+                                                                                Color(0xB36F6F6F),
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        focusedBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              const BorderSide(
+                                                                            color:
+                                                                                Color(0xFF0957DE),
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        errorBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).error,
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        focusedErrorBorder:
+                                                                            OutlineInputBorder(
+                                                                          borderSide:
+                                                                              BorderSide(
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).error,
+                                                                            width:
+                                                                                1.0,
+                                                                          ),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(8.0),
+                                                                        ),
+                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0,
+                                                                            10.0),
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .labelMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'NotoSansThai',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).primaryText,
+                                                                            fontSize:
+                                                                                14.0,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                      textAlign:
+                                                                          TextAlign
+                                                                              .center,
+                                                                      cursorColor:
+                                                                          const Color(
+                                                                              0xFF0957DE),
+                                                                      validator: _model
+                                                                          .heightvalueControllerValidator
+                                                                          .asValidator(
+                                                                              context),
+                                                                    ),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -4364,7 +4970,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                   value: _model
                                                       .t2isliderValue ??= 5.0,
                                                   divisions: 8,
-                                                  onChanged: (newValue) {
+                                                  onChanged: (newValue) async {
                                                     newValue = double.parse(
                                                         newValue
                                                             .toStringAsFixed(
@@ -4372,6 +4978,13 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                                     setState(() =>
                                                         _model.t2isliderValue =
                                                             newValue);
+                                                    _model.imagenumber =
+                                                        await actions
+                                                            .changeToIngeger(
+                                                      _model.t2isliderValue,
+                                                    );
+
+                                                    setState(() {});
                                                   },
                                                 ),
                                               ),
@@ -4593,6 +5206,21 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                             (_model.negativepromptController.text == '')
                         ? null
                         : () async {
+                            setState(() {
+                              FFAppState().prompt =
+                                  _model.promptController.text;
+                              FFAppState().negativeprompt =
+                                  _model.negativepromptController.text;
+                            });
+                            await BrookreatorGroup.textToImageCall.call(
+                              prompt: _model.promptController.text,
+                              height: _model.imageheight,
+                              width: _model.imagewidth,
+                              negativePrompt:
+                                  _model.negativepromptController.text,
+                              accessToken: FFAppState().accessToken,
+                              sampler: 'k_euler_ancestral',
+                            );
                             await showModalBottomSheet(
                               isScrollControlled: true,
                               backgroundColor: Colors.transparent,
@@ -4614,7 +5242,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                             ).then((value) => safeSetState(() {}));
                           },
                     text:
-                        'Create Model ( ${_model.t2isliderValue?.toString()} Credits )',
+                        'Create Model ( ${_model.imagenumber?.toString()} Credits )',
                     icon: Icon(
                       Icons.auto_awesome_sharp,
                       color: FlutterFlowTheme.of(context).primaryBackground,
