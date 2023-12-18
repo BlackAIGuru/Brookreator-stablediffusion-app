@@ -60,7 +60,7 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
     );
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
           _model.promptController?.text = FFLocalizations.of(context).getText(
-            'p3am17de' /* Create a space that seamlessly... */,
+            'p3am17de' /* a blonde woman biker in a blac... */,
           );
           _model.negativepromptController?.text =
               FFLocalizations.of(context).getText(
@@ -68,11 +68,11 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
           );
           _model.widthvalueController?.text =
               FFLocalizations.of(context).getText(
-            'ajcfi1tm' /* 1024 */,
+            '2nhukpmo' /* 1024 */,
           );
           _model.heightvalueController?.text =
               FFLocalizations.of(context).getText(
-            'v5xcgala' /* 1024 */,
+            '11pyz6zz' /* 1024 */,
           );
         }));
   }
@@ -2776,6 +2776,23 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                                             onPageChanged: (index, _) async {
                                               _model.selectModelCurrentIndex =
                                                   index;
+                                              _model.prompt = await actions
+                                                  .selectT2IThemePrompt(
+                                                _model.selectModelCurrentIndex,
+                                              );
+                                              _model.negative = await actions
+                                                  .selectT2IThemeNegative(
+                                                _model.selectModelCurrentIndex,
+                                              );
+                                              setState(() {
+                                                _model.promptController?.text =
+                                                    _model.prompt!;
+                                              });
+                                              setState(() {
+                                                _model.negativepromptController
+                                                    ?.text = _model.negative!;
+                                              });
+
                                               setState(() {});
                                             },
                                           ),
@@ -5241,8 +5258,10 @@ class _T2IStartWidgetState extends State<T2IStartWidget> {
                               },
                             ).then((value) => safeSetState(() {}));
                           },
-                    text:
-                        'Create Model ( ${_model.imagenumber?.toString()} Credits )',
+                    text: 'Create Model ( ${valueOrDefault<String>(
+                      _model.imagenumber?.toString(),
+                      '5',
+                    )} Credits )',
                     icon: Icon(
                       Icons.auto_awesome_sharp,
                       color: FlutterFlowTheme.of(context).primaryBackground,

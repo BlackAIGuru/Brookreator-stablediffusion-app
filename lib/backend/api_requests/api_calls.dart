@@ -71,7 +71,7 @@ class GetAllImagesCall {
   }) async {
     return ApiManager.instance.makeApiCall(
       callName: 'GetAllImages',
-      apiUrl: '${BrookreatorGroup.baseUrl}/account/images?offset=0&limit=500',
+      apiUrl: '${BrookreatorGroup.baseUrl}/account/images?offset=0&limit=2',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',

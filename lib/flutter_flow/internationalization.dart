@@ -1347,7 +1347,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p3am17de': {
       'en':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
+          'a blonde woman biker in a black leather jacket and white tank top inside in a style of comic animation, colourful, chroma aberration, realism, romanticism, retro high saturated colour, Leica prime lenses, retro-futuristic',
       'th':
           'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
     },
@@ -1414,7 +1414,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
     },
-    'ajcfi1tm': {
+    '2nhukpmo': {
       'en': '1024',
       'th': '',
     },
@@ -1430,7 +1430,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '',
       'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
     },
-    'v5xcgala': {
+    '11pyz6zz': {
       'en': '1024',
       'th': '',
     },

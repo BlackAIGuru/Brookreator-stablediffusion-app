@@ -23,6 +23,10 @@ class T2IStartModel extends FlutterFlowModel<T2IStartWidget> {
 
   int selectModelCurrentIndex = 2;
 
+  // Stores action output result for [Custom Action - selectT2IThemePrompt] action in selectModel widget.
+  String? prompt;
+  // Stores action output result for [Custom Action - selectT2IThemeNegative] action in selectModel widget.
+  String? negative;
   // State field(s) for prompt widget.
   FocusNode? promptFocusNode;
   TextEditingController? promptController;
