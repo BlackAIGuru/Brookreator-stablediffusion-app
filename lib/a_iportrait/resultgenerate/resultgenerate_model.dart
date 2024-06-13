@@ -12,13 +12,10 @@ class ResultgenerateModel extends FlutterFlowModel<ResultgenerateWidget> {
   late Buttongroup1Model buttongroup1Model;
   // State field(s) for Carousel widget.
   CarouselController? carouselController;
-
   int carouselCurrentIndex = 1;
 
   // Model for buttongroup_2 component.
   late Buttongroup2Model buttongroup2Model;
-
-  /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
@@ -31,8 +28,4 @@ class ResultgenerateModel extends FlutterFlowModel<ResultgenerateWidget> {
     buttongroup1Model.dispose();
     buttongroup2Model.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

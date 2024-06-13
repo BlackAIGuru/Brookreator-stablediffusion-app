@@ -1,9 +1,7 @@
-import '/auth/custom_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +12,7 @@ class SettingsWidget extends StatefulWidget {
   const SettingsWidget({super.key});
 
   @override
-  _SettingsWidgetState createState() => _SettingsWidgetState();
+  State<SettingsWidget> createState() => _SettingsWidgetState();
 }
 
 class _SettingsWidgetState extends State<SettingsWidget> {
@@ -37,15 +35,6 @@ class _SettingsWidgetState extends State<SettingsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -99,6 +88,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 FlutterFlowTheme.of(context).bodyLarge.override(
                                       fontFamily: 'NotoSansThai',
                                       fontSize: 22.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: false,
                                     ),
@@ -148,6 +138,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context).info,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
@@ -166,7 +157,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          if (loggedIn) {
+                          if (FFAppState().Logined) {
                             context.pushNamed('Buy_Credit');
                           } else {
                             context.pushNamed('SignIn');
@@ -205,6 +196,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
@@ -250,6 +242,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                     fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
                                         .primaryText,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: false,
                                   ),
@@ -305,11 +298,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          if (loggedIn) {
-                            context.pushNamed('About_Us');
-                          } else {
-                            context.pushNamed('SignIn');
-                          }
+                          context.pushNamed('About_Us');
                         },
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -344,6 +333,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .primaryText,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
@@ -362,11 +352,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          if (loggedIn) {
-                            context.pushNamed('Privacy_Policy');
-                          } else {
-                            context.pushNamed('SignIn');
-                          }
+                          context.pushNamed('Privacy_Policy');
                         },
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
@@ -375,50 +361,38 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             color: FlutterFlowTheme.of(context).alternate,
                             borderRadius: BorderRadius.circular(10.0),
                           ),
-                          child: InkWell(
-                            splashColor: Colors.transparent,
-                            focusColor: Colors.transparent,
-                            hoverColor: Colors.transparent,
-                            highlightColor: Colors.transparent,
-                            onTap: () async {
-                              if (loggedIn) {
-                                context.pushNamed('Privacy_Policy');
-                              } else {
-                                context.pushNamed('SignIn');
-                              }
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      22.0, 0.0, 15.0, 0.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(0.0),
-                                    child: SvgPicture.asset(
-                                      'assets/images/56arq_5.svg',
-                                      width: 19.0,
-                                      height: 19.0,
-                                      fit: BoxFit.fill,
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    22.0, 0.0, 15.0, 0.0),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(0.0),
+                                  child: SvgPicture.asset(
+                                    'assets/images/56arq_5.svg',
+                                    width: 19.0,
+                                    height: 19.0,
+                                    fit: BoxFit.fill,
+                                  ),
+                                ),
+                              ),
+                              Text(
+                                FFLocalizations.of(context).getText(
+                                  'cgrlozka' /* Privacy Policy */,
+                                ),
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyMedium
+                                    .override(
+                                      fontFamily: 'NotoSansThai',
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.w600,
+                                      useGoogleFonts: false,
                                     ),
-                                  ),
-                                ),
-                                Text(
-                                  FFLocalizations.of(context).getText(
-                                    'cgrlozka' /* Privacy Policy */,
-                                  ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'NotoSansThai',
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
-                                        fontWeight: FontWeight.w600,
-                                        useGoogleFonts: false,
-                                      ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ),
                       ),

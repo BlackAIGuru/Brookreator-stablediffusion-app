@@ -111,10 +111,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Buy Credit',
       'th': 'ซื้อเครดิต',
     },
-    'eny13uby': {
-      'en': '60',
-      'th': '60',
-    },
     'bycdemw8': {
       'en': 'Choose a package that fits your needs',
       'th': 'เลือกแพ็คเกจที่เหมาะกับความต้องการของคุณ',
@@ -201,6 +197,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'sbcpsa53': {
       'en': 'NA',
       'th': 'นา',
+    },
+    '61noq1so': {
+      'en': 'John Smith',
+      'th': 'จอห์นสมิ ธ',
     },
     'l8qcogmt': {
       'en': 'Buy Credit',
@@ -705,7 +705,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'You can delete your personal data and withdraw consent by simply visiting the account tap on our website, then ticking the box that says, “delete your personal data and withdraw consent” and then ticking the box that says, “delete your account”, after that click ‘Deactivate Account’. Please note that, after you have ticked the 2 boxes and clicked “Deactivate Account”, your personal data and your account will be deleted, and you will neither be able to recover your data nor use the services on our website. At the same time, we will stop processing your personal data. If you would like to use the services on our website again after you have deleted your personal data, your account and also have withdrawn your consent, you have to register on our website, accept our terms and conditions, and accept our privacy policy once more.',
       'th':
-          'คุณสามารถลบข้อมูลส่วนบุคคลของคุณและถอนความยินยอมได้โดยไปที่บัญชีแตะบนเว็บไซต์ของเรา จากนั้นทำเครื่องหมายในช่องที่ระบุว่า “ลบข้อมูลส่วนบุคคลของคุณและถอนความยินยอม” จากนั้นทำเครื่องหมายในช่องที่ระบุว่า “ลบบัญชีของคุณ” หลังจากนั้น ที่คลิก \'ปิดใช้งานบัญชี\' โปรดทราบว่าหลังจากที่คุณทำเครื่องหมายที่ 2 ช่องแล้วคลิก "ปิดใช้งานบัญชี" ข้อมูลส่วนบุคคลและบัญชีของคุณจะถูกลบ และคุณจะไม่สามารถกู้คืนข้อมูลของคุณหรือใช้บริการบนเว็บไซต์ของเราได้ ในเวลาเดียวกัน เราจะหยุดการประมวลผลข้อมูลส่วนบุคคลของคุณ หากคุณต้องการใช้บริการบนเว็บไซต์ของเราอีกครั้งหลังจากที่คุณลบข้อมูลส่วนบุคคล บัญชีของคุณ และได้เพิกถอนความยินยอมแล้ว คุณต้องลงทะเบียนบนเว็บไซต์ของเรา ยอมรับข้อกำหนดและเงื่อนไขของเรา และยอมรับนโยบายความเป็นส่วนตัวของเราอีกครั้ง .',
+          'คุณสามารถลบข้อมูลส่วนบุคคลของคุณและถอนความยินยอมได้โดยไปที่บัญชีแตะบนเว็บไซต์ของเรา จากนั้นทำเครื่องหมายในช่องที่ระบุว่า “ลบข้อมูลส่วนบุคคลของคุณและถอนความยินยอม” จากนั้นทำเครื่องหมายในช่องที่ระบุว่า “ลบบัญชีของคุณ” หลังจากนั้น ที่คลิก \'ปิดใช้งานบัญชี\' โปรดทราบว่าหลังจากที่คุณทำเครื่องหมายที่ 2 ช่องแล้วคลิก \"ปิดใช้งานบัญชี\" ข้อมูลส่วนบุคคลและบัญชีของคุณจะถูกลบ และคุณจะไม่สามารถกู้คืนข้อมูลของคุณหรือใช้บริการบนเว็บไซต์ของเราได้ ในเวลาเดียวกัน เราจะหยุดการประมวลผลข้อมูลส่วนบุคคลของคุณ หากคุณต้องการใช้บริการบนเว็บไซต์ของเราอีกครั้งหลังจากที่คุณลบข้อมูลส่วนบุคคล บัญชีของคุณ และได้เพิกถอนความยินยอมแล้ว คุณต้องลงทะเบียนบนเว็บไซต์ของเรา ยอมรับข้อกำหนดและเงื่อนไขของเรา และยอมรับนโยบายความเป็นส่วนตัวของเราอีกครั้ง .',
     },
     'i4arv39a': {
       'en': 'Address',
@@ -947,7 +947,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'หรือลงชื่อเข้าใช้โดยใช้โปรไฟล์โซเชียลของคุณ',
     },
     'ofmksrx0': {
-      'en': 'Sign Up with Google',
+      'en': 'Sign In with Google',
       'th': 'ลงทะเบียนกับ Google',
     },
     '9n4exasd': {
@@ -997,6 +997,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Enter Your Password',
       'th': 'ใส่รหัสผ่านของคุณ',
     },
+    '1bi2afmh': {
+      'en': 'Confirm Password',
+      'th': 'ยืนยันรหัสผ่าน',
+    },
+    'eowkc6kv': {
+      'en': 'Confirm Your Password',
+      'th': 'ยืนยันรหัสผ่านของคุณ',
+    },
     'cdo8assi': {
       'en': 'Field is required',
       'th': 'ต้องระบุข้อมูล',
@@ -1025,13 +1033,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Password should contain at least 6 characters',
       'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
     },
+    '35qxvaxv': {
+      'en':
+          'Must be 8+ characters with number, symbol, capital and small letter.',
+      'th':
+          'รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษรและประกอบด้วยตัวอักษรพิมพ์ใหญ่ ตัวอักษรพิมพ์เล็ก ตัวเลข และอักขระพิเศษ (@\$!%*&)',
+    },
     'jrvvbq55': {
       'en': 'Please choose an option from the dropdown',
       'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
     },
+    'evfjzky6': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    'zz65jclg': {
+      'en': 'Password should contain at least 6 characters',
+      'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
+    },
+    '3si0ylp4': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
     '0a9ypit3': {
-      'en': 'Password must be 8 and contain numeric',
-      'th': 'รหัสผ่านต้องเป็นตัวเลข 8 และประกอบด้วยตัวเลข',
+      'en': 'Passwords don\'t match',
+      'th': 'รหัสผ่านไม่ตรงกัน',
     },
     'mj981gg7': {
       'en': 'Sign Up',
@@ -1068,122 +1094,69 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My Pictures',
       'th': 'รูปภาพของฉัน',
     },
-    'ioov88pm': {
+    'l2lqzkc2': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
-    'gwe9hta7': {
+    '0gu8q6iq': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'gzyrgr19': {
+    '3suc45w9': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    '5mriddn4': {
+    'fcosdq2g': {
       'en': 'AI Video',
       'th': 'วิดีโอเอไอ',
     },
-    '8cs7u4wp': {
-      'en': 'Preview',
+    'ntguwb39': {
+      'en': 'QR Generator',
       'th': 'ดูตัวอย่าง',
     },
-    'p8t3sdsk': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
+    'ksky8m77': {
+      'en': 'QR Classic',
+      'th': '',
     },
-    've1v279f': {
+    'yx5o8805': {
       'en': 'All',
       'th': 'ทั้งหมด',
-    },
-    'yfss128c': {
-      'en': '~2 min',
-      'th': '~2 นาที',
-    },
-    'bom45ihn': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    'fd4h3h20': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'v29c2cfq': {
-      'en': 'AI Video (15 sec)',
-      'th': 'วิดีโอ AI (15 วินาที)',
-    },
-    'bt3ob9v1': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    'vd2zsndk': {
-      'en': '~60 min',
-      'th': '~60 นาที',
     },
     '91810kkp': {
       'en': 'Favourite',
       'th': 'ที่ชื่นชอบ',
     },
-    '2dt9z681': {
+    'xynxi1s6': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
-    '7v7oiah1': {
+    'rx6vsfil': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    '56hvvyky': {
+    'wv4mwaam': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    'hhz4pioz': {
+    '7p9ksi9m': {
       'en': 'AI Video',
       'th': 'วิดีโอเอไอ',
     },
-    'lmuyi4r5': {
-      'en': 'Preview',
+    '4ug6f7qv': {
+      'en': 'QR Generator',
       'th': 'ดูตัวอย่าง',
     },
-    'wgdmalu7': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
+    'wkvj0bbm': {
+      'en': 'QR Classic',
+      'th': '',
     },
-    '95fzlw6b': {
+    'cqo6i4fh': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
     'fzywfdlv': {
       'en': 'My Picture',
       'th': 'รูปของฉัน',
-    },
-  },
-  // Generating
-  {
-    'gpufxo49': {
-      'en': '~2 Min',
-      'th': '~2 นาที',
-    },
-    'sz7txbrp': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    'yq72b5wa': {
-      'en':
-          'You can close this window. Your photos will be waiting for you in \'My Pictures.',
-      'th':
-          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
-    },
-    'dpms6htn': {
-      'en': 'Try More',
-      'th': 'ลองเพิ่มเติม',
-    },
-    'nguiyxw0': {
-      'en': 'Go to My Pictures',
-      'th': 'ไปที่รูปภาพของฉัน',
-    },
-    '5mpj7j83': {
-      'en': 'Home',
-      'th': 'บ้าน',
     },
   },
   // OpenAppScreen
@@ -1231,7 +1204,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // T2I_Start
+  // T2I
   {
     '0hp2lrj7': {
       'en': 'Text to Image',
@@ -1347,7 +1320,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'p3am17de': {
       'en':
-          'a blonde woman biker in a black leather jacket and white tank top inside in a style of comic animation, colourful, chroma aberration, realism, romanticism, retro high saturated colour, Leica prime lenses, retro-futuristic',
+          'Anime, portrait of a person, light smile, with wind, masterpiece, best quality, movie poster illustration, an extremely delicate, beautifully detailed sunny sky, straw hat, clear sky, epic clouds, farm, beautiful detailed eyes, on the flower field, summer clothes, (fine fabric emphasis:1.4), (watercolor:0.6), (dark brown eyes colour)',
       'th':
           'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
     },
@@ -1366,7 +1339,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'k4yhyr2o': {
       'en':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
+          'EasyNegative, UnrealisticDream, BadDream, bad anatomy, natural skin, blemish, moles, skin spots, crooked teeth, ugly teeth, weird teeth, weird hands, weird arm​, multiples, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
       'th':
           'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
     },
@@ -1412,11 +1385,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '02tul0x0': {
       'en': '',
-      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
+      'th': '',
     },
     '2nhukpmo': {
       'en': '1024',
-      'th': '',
+      'th': '1024',
     },
     'qmel9n5q': {
       'en': 'Height (px)',
@@ -1428,11 +1401,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '9xkvvy9m': {
       'en': '',
-      'th': '2 heads, 2 faces, ugly, tiling, poorly drawn hands..',
+      'th': '',
     },
     '11pyz6zz': {
       'en': '1024',
-      'th': '',
+      'th': '1024',
     },
     '76nh3gbv': {
       'en': 'Step 3',
@@ -1487,7 +1460,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // AIPortrait_Start
+  // AIPortrait
   {
     'b2phjhxr': {
       'en': 'AI Portrait',
@@ -1501,17 +1474,41 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' : Select Style',
       'th': ': เลือกสไตล์',
     },
-    '6pkurzrn': {
-      'en': 'Korean',
-      'th': 'เกาหลี',
+    'ruqi4myz': {
+      'en': 'Summer (Women)',
+      'th': '',
     },
-    '2f39eesg': {
-      'en': 'Anime',
-      'th': 'อะนิเมะ',
+    'qf5woorf': {
+      'en': 'Summer (Man)',
+      'th': '',
     },
-    'kgq5f8kl': {
-      'en': 'Retro',
-      'th': 'ย้อนยุค',
+    '76zwa9le': {
+      'en': 'Dune (Women)',
+      'th': '',
+    },
+    'lnhax2jc': {
+      'en': 'Dune (Man)',
+      'th': '',
+    },
+    'ij795nco': {
+      'en': 'CEO (Women)',
+      'th': '',
+    },
+    '0579uhv5': {
+      'en': 'CEO (Man)',
+      'th': '',
+    },
+    '2yheczmp': {
+      'en': 'My Baby',
+      'th': '',
+    },
+    'qgivmrxp': {
+      'en': 'Holiday (Women)',
+      'th': '',
+    },
+    'thbee5oz': {
+      'en': 'Holiday (Man)',
+      'th': '',
     },
     'awkbn8ct': {
       'en': 'Step 2',
@@ -1541,17 +1538,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Upload',
       'th': 'ที่อัพโหลด',
     },
-    'zbq9e46r': {
-      'en': ' 0 / 10 ',
-      'th': '0 / 12',
-    },
     '1ri98sei': {
       'en': 'images',
       'th': 'ภาพ',
     },
     '6387pz0w': {
-      'en': 'Please select 12 photos of your face to build model.',
+      'en': 'Please select 10 photos of your face to build model.',
       'th': 'โปรดเลือกรูปถ่ายใบหน้าของคุณ 12 รูปเพื่อสร้างแบบจำลอง',
+    },
+    'vyi68vw1': {
+      'en': 'Upload Images',
+      'th': 'อัพโหลดรูปภาพ',
+    },
+    '2eury0tz': {
+      'en': 'File types : PNG/JPG, maximum size : 8 MB',
+      'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
     },
     '56xppndv': {
       'en': 'Uploading Guide',
@@ -1610,7 +1611,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'บ้าน',
     },
   },
-  // AIVideo_Start
+  // AIVideo
   {
     'niine03l': {
       'en': 'AI Video (15 sec)',
@@ -1629,7 +1630,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'เอไอ ใบหน้า',
     },
     'hipug6o7': {
-      'en': 'Coming Soon..',
+      'en': 'Coming Soon...',
       'th': 'เร็วๆ นี้..',
     },
     '09ww8asw': {
@@ -1647,6 +1648,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '1yd0rs56': {
       'en': 'Video duration is limited to 15 seconds.',
       'th': 'ระยะเวลาของวิดีโอจำกัดอยู่ที่ 15 วินาที',
+    },
+    'i76l8beh': {
+      'en': 'Upload Video',
+      'th': 'อัปโหลดวิดีโอ',
+    },
+    'dyg9ne0e': {
+      'en': 'File types : MP4/MOV/HEVC, maximum size : 40 MB',
+      'th': 'ประเภทไฟล์ : MP4/MOV/HEVC ขนาดสูงสุด : 40 MB',
     },
     '7n77pygb': {
       'en': 'Step 3',
@@ -1732,161 +1741,169 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Try Now',
       'th': 'ลองตอนนี้',
     },
-    'kf94v934': {
-      'en': 'Templates Generate',
-      'th': 'เทมเพลตสร้าง',
-    },
-    '3cupmxtp': {
+    'yr0n1ge2': {
       'en': 'For You',
-      'th': 'สำหรับคุณ',
+      'th': 'ทั้งหมด',
     },
-    'v2eu0wg4': {
+    '83hkyq8r': {
+      'en': 'Halloween',
+      'th': 'ข้อความเป็นรูปภาพ',
+    },
+    'lwhs3xxc': {
+      'en': 'Christmas',
+      'th': 'ภาพบุคคล AI',
+    },
+    'j4pp44th': {
+      'en': 'Studio',
+      'th': 'วิดีโอเอไอ',
+    },
+    'm1pqrl1k': {
+      'en': 'Video',
+      'th': 'ดูตัวอย่าง',
+    },
+    '8pqxw1et': {
+      'en': 'Animi',
+      'th': 'เครื่องกำเนิด QR',
+    },
+    'cvaopv9c': {
+      'en': 'For You',
+      'th': 'ทั้งหมด',
+    },
+    'hnh7d5a5': {
       'en': 'Flower Field',
       'th': 'ทุ่งดอกไม้',
     },
-    'ej1jbw9i': {
+    '7ql7z722': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'tc3qsdn0': {
-      'en': 'Korean',
+    'pm50sf40': {
+      'en': 'Dune (Man)',
       'th': 'เกาหลี',
     },
-    'mzszpdgc': {
+    '58kfou77': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    'zug1j5i1': {
+    'xj70elkv': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'ypweb8au': {
+    '5jjo7ob6': {
       'en': 'Joan Miro',
       'th': 'นีออนไซไฟเลดี้',
     },
-    'cg1nucuy': {
+    'o13hwo66': {
       'en': 'Rainbow',
       'th': 'รุ้ง',
     },
-    '3jtwhlml': {
+    '7c7b9n3i': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    '31dnrm0e': {
-      'en': 'Cartoon',
+    '8cgkc3tb': {
+      'en': 'My Baby',
       'th': 'การ์ตูน',
     },
-    'd9b2hdum': {
+    '81ocbv4b': {
       'en': 'AI Video',
       'th': 'วิดีโอเอไอ',
     },
-    '7hsrk3o4': {
+    '84u1xcwn': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'esabicih': {
+    'm1cs05p3': {
       'en': 'Foodies',
       'th': 'นีออนไซไฟเลดี้',
     },
-    '1akpklqt': {
-      'en': 'Anime',
+    'ddqjtbeo': {
+      'en': 'CEO (Man)',
       'th': 'อะนิเมะ',
     },
-    'duzddpfs': {
+    'm2xjtzj9': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    '9742e68l': {
+    'eoz3xb7s': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    '7bvw1v7o': {
+    'i0du0u63': {
       'en': 'Biker',
       'th': 'ไบค์เกอร์',
     },
-    'g6u3wekh': {
+    '0akzg8v5': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'kclgdo2a': {
+    'ftz8aysj': {
       'en': 'Neon Sci-fi Lady',
       'th': 'นีออนไซไฟเลดี้',
     },
-    'slbi4hrd': {
+    'wh2zgy15': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'vn2f2j11': {
+    '7pkifqkk': {
       'en': 'Lunar Year',
       'th': 'ปีจันทรคติ',
     },
-    'g8ayiz4i': {
+    '90si6sw6': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'v3owgbjd': {
+    'lwhem43h': {
       'en': 'Cyberpunk',
       'th': 'นีออนไซไฟเลดี้',
     },
-    'wby7hhqy': {
+    '4mvqfhsp': {
       'en': 'Homey Cafe​',
       'th': 'โฮมมี คาเฟ่',
     },
-    '8tbgq2vk': {
+    'fgjugd14': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'ox1wxvb8': {
+    'tz2noshq': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    '8vctzokp': {
+    '76iow3uy': {
       'en': 'Galaxy',
       'th': 'นีออนไซไฟเลดี้',
     },
-    '0jk502pd': {
+    '4zmey3s4': {
       'en': 'Text to Image',
       'th': 'เครื่องกำเนิด QR',
     },
-    '8d1ox130': {
+    'tnpk7igf': {
       'en': 'Birthday Cat',
       'th': 'วันเกิดแมว',
     },
-    'aje5d39z': {
+    '4irl7t6q': {
       'en': 'Peach',
       'th': 'ลูกพีช',
     },
-    'vpb1hyex': {
+    '26cnhx8k': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    '5abp87fo': {
+    '50g8n0wo': {
       'en': 'Aquatic Sci-Fi',
       'th': 'ไซไฟทางน้ำ',
     },
-    'a85ymd5o': {
+    'd0023cmv': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'j432knps': {
+    'n70iehxw': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'hznb4esn': {
+    'cojtf3t9': {
       'en': 'Maneki Neko',
       'th': 'นีออนไซไฟเลดี้',
-    },
-    'fh5zwrd2': {
-      'en': 'Halloween',
-      'th': 'วันฮาโลวีน',
-    },
-    '1q8bvor6': {
-      'en': 'Christmas',
-      'th': 'คริสต์มาส',
-    },
-    'hgi9ic1s': {
-      'en': 'Studio',
-      'th': 'สตูดิโอ',
     },
     'y2t86e04': {
       'en': 'Home',
@@ -1962,6 +1979,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'xrrbwvd0': {
       'en': ' : Select a Theme',
       'th': ': เลือกธีม',
+    },
+    'fjw396to': {
+      'en': 'Christmas Tree',
+      'th': 'บ้านต้นไม้',
     },
     'rppvmpz1': {
       'en': 'Maneki Neko',
@@ -2060,7 +2081,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'สร้าง',
     },
     '3kqyfyvy': {
-      'en': 'Upload Image',
+      'en': 'QR Classic',
       'th': 'อัพโหลดรูปภาพ',
     },
     'byyluvi8': {
@@ -2164,35 +2185,36 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     '0b80se8z': {
       'en': 'Verification Code',
-      'th': 'สร้างบัญชี',
+      'th': 'รหัสยืนยัน',
     },
     '7lca2frp': {
       'en': 'Enter the 6 digits code that you received on your e-mail',
-      'th': '',
+      'th': 'กรอกรหัส 6 หลักที่คุณได้รับทางอีเมล์ของคุณ',
     },
     'tlry5c9v': {
       'en': 'Confirm',
-      'th': 'ส่งลิ้งค์',
+      'th': 'ยืนยัน',
     },
     'tjalbxdh': {
       'en': 'Resend Code',
-      'th': '',
+      'th': 'ส่งรหัสอีกครั้ง',
     },
     'szu0s2bz': {
       'en': 'Home',
-      'th': '',
+      'th': 'บ้าน',
     },
   },
-  // Forgotpassword
+  // ForgotPassword
   {
     'eu4hhnov': {
       'en': 'Forgot Password',
-      'th': 'สร้างบัญชี',
+      'th': 'ลืมรหัสผ่าน',
     },
     'vg6g2lyd': {
       'en':
-          'We will send you an email with a link to reset your password, please enter the email associated with your account below.',
-      'th': '',
+          'We will send you an email with a verification code to reset your password, please enter the email associated with your account below.',
+      'th':
+          'เราจะส่งอีเมลพร้อมรหัสยืนยันเพื่อรีเซ็ตรหัสผ่านของคุณ โปรดป้อนอีเมลที่เชื่อมโยงกับบัญชีของคุณด้านล่าง',
     },
     'zagqpa3u': {
       'en': 'Your email address...',
@@ -2203,12 +2225,118 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'กรอกอีเมล์ของคุณ...',
     },
     'a8f6j3tt': {
-      'en': 'Send Link',
-      'th': 'ส่งลิ้งค์',
+      'en': 'Send Code',
+      'th': 'ส่งรหัส',
     },
     '7pej2o29': {
       'en': 'Home',
-      'th': '',
+      'th': 'บ้าน',
+    },
+  },
+  // component
+  {
+    'yn62rk7e': {
+      'en': 'Page Title',
+      'th': 'ชื่อหน้า',
+    },
+    'h4w0kyfk': {
+      'en': 'Home',
+      'th': 'บ้าน',
+    },
+  },
+  // ResetPassword
+  {
+    'qi78yx1t': {
+      'en': 'Reset Password',
+      'th': 'รีเซ็ตรหัสผ่าน',
+    },
+    'cj96ka07': {
+      'en': 'Enter the 6 digits code that you received on your e-mail',
+      'th': 'กรอกรหัส 6 หลักที่คุณได้รับทางอีเมล์ของคุณ',
+    },
+    '2ejkrdkp': {
+      'en':
+          'Create New Password! Your New Password must be different from previously used password',
+      'th':
+          'สร้างรหัสผ่านใหม่! รหัสผ่านใหม่ของคุณจะต้องแตกต่างจากรหัสผ่านที่ใช้ก่อนหน้านี้',
+    },
+    '87nvrdcq': {
+      'en': 'Password',
+      'th': 'รหัสผ่าน',
+    },
+    'x3b3on8l': {
+      'en': 'Enter Your New Password',
+      'th': 'ป้อนรหัสผ่านใหม่ของคุณ',
+    },
+    '0lzo7jal': {
+      'en': 'Confirm Password',
+      'th': 'ยืนยันรหัสผ่าน',
+    },
+    'dxc3am3r': {
+      'en': 'Confirm Your New Password',
+      'th': 'ยืนยันรหัสผ่านใหม่ของคุณ',
+    },
+    '5i3da9yc': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    'ts2h8vij': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
+    'k4no2on1': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    'v5na5pti': {
+      'en': 'Invalid Email',
+      'th': 'อีเมลไม่ถูกต้อง',
+    },
+    'usov3ttx': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
+    'rhmy1or1': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    'npx8dqfm': {
+      'en': 'Password should contain at least 6 characters',
+      'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
+    },
+    '7hyh50pt': {
+      'en':
+          'Password must be at least 8 characters long and include an uppercase letter, a lowercase letter, a digit, and a special character (@\$!%*&).',
+      'th':
+          'รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษรและประกอบด้วยตัวอักษรพิมพ์ใหญ่ ตัวอักษรพิมพ์เล็ก ตัวเลข และอักขระพิเศษ (@\$!%*&)',
+    },
+    'etc90l6b': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
+    'fmu9wgza': {
+      'en': 'Field is required',
+      'th': 'ต้องระบุข้อมูล',
+    },
+    '267uwmaq': {
+      'en': 'Password should contain at least 6 characters',
+      'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
+    },
+    '0ejqxgi0': {
+      'en': 'Please choose an option from the dropdown',
+      'th': 'โปรดเลือกตัวเลือกจากเมนูแบบเลื่อนลง',
+    },
+    'x6uu3nh8': {
+      'en': 'Passwords don\'t match',
+      'th': 'รหัสผ่านไม่ตรงกัน',
+    },
+    'qvafujif': {
+      'en': 'Confirm',
+      'th': 'ยืนยัน',
+    },
+    'cjvece79': {
+      'en': 'Home',
+      'th': 'บ้าน',
     },
   },
   // footbar
@@ -2241,38 +2369,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'คู่มือการอัพโหลด',
     },
     'xs0xnczp': {
-      'en': 'Recomended For Best Results',
+      'en': 'Recomended',
       'th': 'แนะนำเพื่อผลลัพธ์ที่ดีที่สุด',
     },
     'z2455605': {
       'en':
-          '1.   Focusing on close-up selfies or portraits that feature only a single individual.',
+          'Take portraits or selfies of one person with different backgrounds, expressions, and face angles.',
       'th':
           '1. เน้นการถ่ายภาพเซลฟี่หรือภาพบุคคลในระยะใกล้ที่มีบุคคลเพียงคนเดียว',
     },
-    'chjsvns1': {
-      'en':
-          '2.  Include a diverse range of backgrounds, various facial expressions, and multiple angles of the face.',
-      'th':
-          '2. รวมพื้นหลังที่หลากหลาย การแสดงออกทางสีหน้า และมุมต่างๆ ของใบหน้า',
-    },
     '241o9vpb': {
-      'en': 'Don\'t Use',
+      'en': 'Avoid',
       'th': 'อย่าใช้',
     },
     'nyusm6zb': {
-      'en':
-          'Group or full body photos, burst shots, covered-faced, child photos, nudity.',
+      'en': 'Group or full body photos, covered-faced, nudity.',
       'th':
           'ภาพถ่ายหมู่หรือเต็มตัว, ภาพถ่ายต่อเนื่อง, ปิดหน้า, ภาพถ่ายเด็ก, ภาพเปลือย',
     },
-    'm78p8b2h': {
-      'en': 'Attention',
-      'th': 'ความสนใจ',
-    },
     'rmfea1sw': {
       'en':
-          'The AI may produce visual artifacts, change facial features, or generate images where the face is not visible.',
+          'You can rest assured that we will not store\nany photos on the service!',
       'th':
           'AI อาจสร้างสิ่งประดิษฐ์ทางการมองเห็น เปลี่ยนลักษณะใบหน้า หรือสร้างภาพที่มองไม่เห็นใบหน้า',
     },
@@ -2295,24 +2412,16 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // resultgenerate
   {
-    'yff5sonl': {
-      'en': 'Nation',
-      'th': 'ชาติ',
+    'v8jp45n7': {
+      'en': 'AI Portrait',
+      'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
     },
   },
   // Videoresult
   {
-    'edidf39d': {
-      'en': 'Cartoon',
-      'th': 'การ์ตูน',
-    },
-    'u1ib66n7': {
-      'en': '00:02',
-      'th': '00:02',
-    },
-    'qa0zoea5': {
-      'en': '00:15',
-      'th': '00:15',
+    '0l2phx3p': {
+      'en': 'AI Video (15 sec)',
+      'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
     },
   },
   // qrtoggle
@@ -2346,11 +2455,15 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ตัวอย่าง',
     },
   },
-  // QR_Code_1
+  // QR_Code
   {
-    'h48qjjdg': {
-      'en': 'Maneki Neko',
-      'th': 'มาเนกิเนโกะ',
+    'lh3nhfdb': {
+      'en': 'QR Code Generator',
+      'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
+    },
+    'ahu9xwr9': {
+      'en': 'Download',
+      'th': 'ดาวน์โหลด',
     },
   },
   // signinicon
@@ -2360,10 +2473,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'เข้าสู่ระบบ',
     },
   },
-  // Imageresult
+  // ImageResult
   {
     'wi8d4mya': {
-      'en': 'Create a space that seamlessly merges organic shapes',
+      'en': 'Text To Image',
       'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
     },
     '0acpismy': {
@@ -2377,10 +2490,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'hyoz44h1': {
       'en': 'Dimensions',
       'th': 'ขนาด',
-    },
-    'ig7uener': {
-      'en': '640X640',
-      'th': '640X640',
     },
     '7c7i5qm6': {
       'en': 'Created',
@@ -2519,7 +2628,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'g7t24qde': {
       'en': 'matthewbadertscher@gmail.com',
-      'th': '',
+      'th': 'matthewbadertscher@gmail.com',
     },
     '4c8rhvol': {
       'en': '60',
@@ -2631,7 +2740,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '33ny2oqd': {
       'en': '1024',
-      'th': '',
+      'th': '1024',
     },
     'ju5c4eza': {
       'en': 'Height (px)',
@@ -2643,14 +2752,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'irr48n1w': {
       'en': '1024',
-      'th': '',
-    },
-  },
-  // credit
-  {
-    '6x8qo4eu': {
-      'en': '60',
-      'th': '60',
+      'th': '1024',
     },
   },
   // deleteimage
@@ -2666,6 +2768,102 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'wl011z39': {
       'en': 'Cancel',
       'th': 'ยกเลิก',
+    },
+  },
+  // ConfirmSuccess
+  {
+    '0djyoyvo': {
+      'en': 'Successfully Verified!',
+      'th': 'ยืนยันสำเร็จแล้ว!',
+    },
+    'isk58ndp': {
+      'en': 'Go to Sign In',
+      'th': 'ไปที่ลงชื่อเข้าใช้',
+    },
+  },
+  // Waiting_Image
+  {
+    'buz4t63u': {
+      'en': 'Generating...',
+      'th': 'กำลังสร้าง...',
+    },
+    '82at0qfr': {
+      'en':
+          'You can close this window. Your photos will be waiting for you in \'My Pictures\'.',
+      'th':
+          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
+    },
+    'm5tbjet0': {
+      'en': 'Try More',
+      'th': 'ลองเพิ่มเติม',
+    },
+    'd5oo2601': {
+      'en': 'Go to My Pictures',
+      'th': 'ไปที่รูปภาพของฉัน',
+    },
+  },
+  // Done
+  {
+    'f8gopqgk': {
+      'en': 'Done',
+      'th': 'กำลังสร้าง...',
+    },
+  },
+  // Waiting_Portrait
+  {
+    '9ur2c4uz': {
+      'en': '~40 Min',
+      'th': '~2 นาที',
+    },
+    'vyj7bem7': {
+      'en': 'Generating...',
+      'th': 'กำลังสร้าง...',
+    },
+    'zjrc6f1f': {
+      'en':
+          'AI Portrait will take about 25 - 60 minutes. Feel free to close your web browser while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your browser and email.',
+      'th':
+          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
+    },
+    '5jv4rbcp': {
+      'en': 'Try More',
+      'th': 'ลองเพิ่มเติม',
+    },
+    '4qeajisn': {
+      'en': 'Go to My Pictures',
+      'th': 'ไปที่รูปภาพของฉัน',
+    },
+  },
+  // Waiting_Video
+  {
+    'pwr8skfh': {
+      'en': '~20 Min',
+      'th': '~2 นาที',
+    },
+    '6bj9djli': {
+      'en': 'Generating...',
+      'th': 'กำลังสร้าง...',
+    },
+    '432z3ft1': {
+      'en':
+          'AI Video generation will take about 15 - 20 minutes. Feel free to close your web browser while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your browser and an email.',
+      'th':
+          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
+    },
+    '8g632x07': {
+      'en': 'Try More',
+      'th': 'ลองเพิ่มเติม',
+    },
+    '3d54kjx6': {
+      'en': 'Go to My Pictures',
+      'th': 'ไปที่รูปภาพของฉัน',
+    },
+  },
+  // UploadImageError
+  {
+    '5kj550yq': {
+      'en': 'Attention: You can select maximum 10 photos',
+      'th': '',
     },
   },
   // Miscellaneous
@@ -2720,6 +2918,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': '',
     },
     'm5qp7nqi': {
+      'en': '',
+      'th': '',
+    },
+    'ooek7qy1': {
+      'en': '',
+      'th': '',
+    },
+    'w5so1dy4': {
       'en': '',
       'th': '',
     },

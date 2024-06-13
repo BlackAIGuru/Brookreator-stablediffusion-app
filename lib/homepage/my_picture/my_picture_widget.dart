@@ -1,11 +1,13 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
+import '/flutter_flow/flutter_flow_media_display.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_video_player.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:ui';
-import 'package:sticky_headers/sticky_headers.dart';
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +18,7 @@ class MyPictureWidget extends StatefulWidget {
   const MyPictureWidget({super.key});
 
   @override
-  _MyPictureWidgetState createState() => _MyPictureWidgetState();
+  State<MyPictureWidget> createState() => _MyPictureWidgetState();
 }
 
 class _MyPictureWidgetState extends State<MyPictureWidget>
@@ -46,15 +48,6 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -103,6 +96,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'NotoSansThai',
                               fontSize: 22.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                               useGoogleFonts: false,
                             ),
@@ -127,6 +121,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                 .override(
                                   fontFamily: 'NotoSansThai',
                                   fontSize: 15.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts: false,
                                 ),
@@ -142,7 +137,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                 children: [
                                   const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 10.0, 0.0),
+                                        0.0, 0.0, 7.0, 0.0),
                                     child: Icon(
                                       Icons.grid_view,
                                     ),
@@ -159,7 +154,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                 children: [
                                   const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        0.0, 0.0, 10.0, 0.0),
+                                        0.0, 0.0, 7.0, 0.0),
                                     child: Icon(
                                       Icons.favorite_border,
                                     ),
@@ -173,6 +168,9 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                               ),
                             ],
                             controller: _model.tabBarController,
+                            onTap: (i) async {
+                              [() async {}, () async {}][i]();
+                            },
                           ),
                         ),
                         Expanded(
@@ -180,1449 +178,34 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                             controller: _model.tabBarController,
                             children: [
                               KeepAliveWidgetWrapper(
-                                builder: (context) => SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      StickyHeader(
-                                        overlapHeaders: false,
-                                        header: Align(
-                                          alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
-                                          child: ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(0.0),
-                                            child: BackdropFilter(
-                                              filter: ImageFilter.blur(
-                                                sigmaX: 2.0,
-                                                sigmaY: 2.0,
-                                              ),
-                                              child: Padding(
-                                                padding: const EdgeInsetsDirectional
-                                                    .fromSTEB(
-                                                        0.0, 0.0, 0.0, 10.0),
-                                                child: FlutterFlowChoiceChips(
-                                                  options: [
-                                                    ChipData(FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'ioov88pm' /* All */,
-                                                    )),
-                                                    ChipData(FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'gwe9hta7' /* Text to Image */,
-                                                    )),
-                                                    ChipData(FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'gzyrgr19' /* AI Portrait */,
-                                                    )),
-                                                    ChipData(FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '5mriddn4' /* AI Video */,
-                                                    )),
-                                                    ChipData(FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      '8cs7u4wp' /* Preview */,
-                                                    )),
-                                                    ChipData(FFLocalizations.of(
-                                                            context)
-                                                        .getText(
-                                                      'p8t3sdsk' /* QR Generator */,
-                                                    ))
-                                                  ],
-                                                  onChanged: (val) => setState(
-                                                      () => _model
-                                                              .choiceChipsValue1 =
-                                                          val?.first),
-                                                  selectedChipStyle: ChipStyle(
-                                                    backgroundColor:
-                                                        const Color(0xFF3587D7),
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryBackground,
-                                                          fontSize: 14.0,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                    iconColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .primaryBackground,
-                                                    iconSize: 18.0,
-                                                    elevation: 4.0,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            15.0),
-                                                  ),
-                                                  unselectedChipStyle:
-                                                      ChipStyle(
-                                                    backgroundColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .alternate,
-                                                    textStyle: FlutterFlowTheme
-                                                            .of(context)
-                                                        .bodyMedium
-                                                        .override(
-                                                          fontFamily:
-                                                              'NotoSansThai',
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
-                                                              .secondaryText,
-                                                          fontWeight:
-                                                              FontWeight.w500,
-                                                          useGoogleFonts: false,
-                                                        ),
-                                                    iconColor:
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .secondaryText,
-                                                    iconSize: 18.0,
-                                                    elevation: 0.0,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            15.0),
-                                                  ),
-                                                  chipSpacing: 12.0,
-                                                  rowSpacing: 12.0,
-                                                  multiselect: false,
-                                                  initialized: _model
-                                                          .choiceChipsValue1 !=
-                                                      null,
-                                                  alignment:
-                                                      WrapAlignment.start,
-                                                  controller: _model
-                                                          .choiceChipsValueController1 ??=
-                                                      FormFieldController<
-                                                          List<String>>(
-                                                    [
-                                                      FFLocalizations.of(
-                                                              context)
-                                                          .getText(
-                                                        've1v279f' /* All */,
-                                                      )
-                                                    ],
-                                                  ),
-                                                  wrapped: true,
-                                                ),
-                                              ),
+                                builder: (context) =>
+                                    FutureBuilder<ApiCallResponse>(
+                                  future:
+                                      BrookreatorGroup.getAllImagesCall.call(
+                                    accessToken: FFAppState().AccessToken,
+                                  ),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return const Center(
+                                        child: SizedBox(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                              Color(0xFF1371FF),
                                             ),
                                           ),
                                         ),
-                                        content: Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  5.0, 0.0, 5.0, 0.0),
-                                          child: Builder(
-                                            builder: (context) {
-                                              if (_model.choiceChipsValue1 ==
-                                                  'All') {
-                                                return Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.7,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Expanded(
-                                                          child: MasonryGridView
-                                                              .builder(
-                                                            gridDelegate:
-                                                                const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                                              crossAxisCount: 3,
-                                                            ),
-                                                            crossAxisSpacing:
-                                                                9.0,
-                                                            mainAxisSpacing:
-                                                                9.0,
-                                                            itemCount: 10,
-                                                            itemBuilder:
-                                                                (context,
-                                                                    index) {
-                                                              return [
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Homey_Cafe.jpg',
-                                                                              width: 120.0,
-                                                                              height: 105.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Container(
-                                                                            width:
-                                                                                120.0,
-                                                                            height:
-                                                                                105.0,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              color: const Color(0xB3000000),
-                                                                              borderRadius: BorderRadius.circular(8.0),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                17.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Container(
-                                                                              width: 43.0,
-                                                                              height: 43.0,
-                                                                              decoration: BoxDecoration(
-                                                                                color: const Color(0x00FFFFFF),
-                                                                                shape: BoxShape.circle,
-                                                                                border: Border.all(
-                                                                                  color: const Color(0xFF4D74FF),
-                                                                                  width: 3.0,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                33.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                'yfss128c' /* ~2 min */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'NotoSansThai',
-                                                                                    fontSize: 8.0,
-                                                                                    fontWeight: FontWeight.w600,
-                                                                                    useGoogleFonts: false,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              -1.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                69.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                'bom45ihn' /* Generating... */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'NotoSansThai',
-                                                                                    fontSize: 7.0,
-                                                                                    fontWeight: FontWeight.w600,
-                                                                                    useGoogleFonts: false,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              -1.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                80.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                'fd4h3h20' /* Text to Image */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'NotoSansThai',
-                                                                                    fontSize: 6.0,
-                                                                                    fontWeight: FontWeight.w500,
-                                                                                    useGoogleFonts: false,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/269d7ca9-2c5e-4c64-a5bf-6763fd545c5b_1_(1).png',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Container(
-                                                                            width:
-                                                                                118.0,
-                                                                            height:
-                                                                                152.0,
-                                                                            decoration:
-                                                                                BoxDecoration(
-                                                                              color: const Color(0xB3000000),
-                                                                              borderRadius: BorderRadius.circular(8.0),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                38.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Container(
-                                                                              width: 43.0,
-                                                                              height: 43.0,
-                                                                              decoration: BoxDecoration(
-                                                                                color: const Color(0x00FFFFFF),
-                                                                                shape: BoxShape.circle,
-                                                                                border: Border.all(
-                                                                                  color: const Color(0xFF4D74FF),
-                                                                                  width: 3.0,
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              -1.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                100.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                'v29c2cfq' /* AI Video (15 sec) */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'NotoSansThai',
-                                                                                    fontSize: 6.0,
-                                                                                    fontWeight: FontWeight.w500,
-                                                                                    useGoogleFonts: false,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              -1.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                88.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                'bt3ob9v1' /* Generating... */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'NotoSansThai',
-                                                                                    fontSize: 7.0,
-                                                                                    fontWeight: FontWeight.w600,
-                                                                                    useGoogleFonts: false,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              -1.0),
-                                                                          child:
-                                                                              Padding(
-                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                                0.0,
-                                                                                54.0,
-                                                                                0.0,
-                                                                                0.0),
-                                                                            child:
-                                                                                Text(
-                                                                              FFLocalizations.of(context).getText(
-                                                                                'vd2zsndk' /* ~60 min */,
-                                                                              ),
-                                                                              style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                    fontFamily: 'NotoSansThai',
-                                                                                    fontSize: 8.0,
-                                                                                    fontWeight: FontWeight.w600,
-                                                                                    useGoogleFonts: false,
-                                                                                  ),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/6cb58acc5d59eb227155bdfed5574d06.png',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/03d3443385905de5fb7016e00c9eeb83.png',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Korean.jpg',
-                                                                              width: 118.0,
-                                                                              height: 150.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/173afd04a447095c3f83ae9c6cc62d64.png',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Rectangle_159.png',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/abc53e5e60b5585d70943477caa62354.png',
-                                                                              width: 118.0,
-                                                                              height: 225.0,
-                                                                              fit: BoxFit.cover,
-                                                                              alignment: const Alignment(0.0, 0.0),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Rectangle_152_(6).png',
-                                                                              width: 118.0,
-                                                                              height: 148.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Rectangle_154.png',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                              ][index]();
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                );
-                                              } else if (_model
-                                                      .choiceChipsValue1 ==
-                                                  'Text to Image') {
-                                                return Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.7,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Expanded(
-                                                          child: MasonryGridView
-                                                              .builder(
-                                                            gridDelegate:
-                                                                const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                                              crossAxisCount: 3,
-                                                            ),
-                                                            crossAxisSpacing:
-                                                                9.0,
-                                                            mainAxisSpacing:
-                                                                9.0,
-                                                            itemCount: 14,
-                                                            itemBuilder:
-                                                                (context,
-                                                                    index) {
-                                                              return [
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/t2idemo_5.png',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Prototype_Sketch.jpg',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/abc53e5e60b5585d70943477caa62354.png',
-                                                                              width: 118.0,
-                                                                              height: 150.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Utopia.jpg',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Rectangle_159.png',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/t2idemo_3.png',
-                                                                              width: 118.0,
-                                                                              height: 225.0,
-                                                                              fit: BoxFit.cover,
-                                                                              alignment: const Alignment(0.0, 0.0),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Dreamy_Globe.jpg',
-                                                                              width: 118.0,
-                                                                              height: 148.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Lazy_Peach.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Ancient-Ruins.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Wonderland.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Hunter.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Flower_Field.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/t2idemo_1.png',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Watercolor.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                              ][index]();
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                );
-                                              } else if (_model
-                                                      .choiceChipsValue1 ==
-                                                  'AI Portrait') {
-                                                return Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.7,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Expanded(
-                                                          child: MasonryGridView
-                                                              .builder(
-                                                            gridDelegate:
-                                                                const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                                              crossAxisCount: 3,
-                                                            ),
-                                                            crossAxisSpacing:
-                                                                9.0,
-                                                            mainAxisSpacing:
-                                                                9.0,
-                                                            itemCount: 5,
-                                                            itemBuilder:
-                                                                (context,
-                                                                    index) {
-                                                              return [
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Korean.jpg',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/03d3443385905de5fb7016e00c9eeb83.png',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/173afd04a447095c3f83ae9c6cc62d64.png',
-                                                                              width: 118.0,
-                                                                              height: 150.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/decbf62132239dadff8336a8c5d0e6b0.jpg',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/6cb58acc5d59eb227155bdfed5574d06.png',
-                                                                              width: 118.0,
-                                                                              height: 225.0,
-                                                                              fit: BoxFit.cover,
-                                                                              alignment: const Alignment(0.0, 0.0),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                              ][index]();
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                );
-                                              } else if (_model
-                                                      .choiceChipsValue1 ==
-                                                  'AI Video') {
-                                                return Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.7,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                  ),
-                                                );
-                                              } else if (_model
-                                                      .choiceChipsValue1 ==
-                                                  'Preview') {
-                                                return Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.7,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                  ),
-                                                );
-                                              } else {
-                                                return Padding(
-                                                  padding: const EdgeInsetsDirectional
-                                                      .fromSTEB(
-                                                          0.0, 0.0, 0.0, 10.0),
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    height: MediaQuery.sizeOf(
-                                                                context)
-                                                            .height *
-                                                        0.7,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                    child: Column(
-                                                      mainAxisSize:
-                                                          MainAxisSize.max,
-                                                      children: [
-                                                        Expanded(
-                                                          child: MasonryGridView
-                                                              .builder(
-                                                            gridDelegate:
-                                                                const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                                              crossAxisCount: 3,
-                                                            ),
-                                                            crossAxisSpacing:
-                                                                9.0,
-                                                            mainAxisSpacing:
-                                                                9.0,
-                                                            itemCount: 10,
-                                                            itemBuilder:
-                                                                (context,
-                                                                    index) {
-                                                              return [
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Tree_House.jpg',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Stormy_Night.jpg',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Neon_Camouflage.jpg',
-                                                                              width: 118.0,
-                                                                              height: 150.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Low_Poly.jpg',
-                                                                              width: 118.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Neon_Sci-fi_Lady.jpg',
-                                                                              width: 119.0,
-                                                                              height: 152.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Maneki_Neko.jpg',
-                                                                              width: 118.0,
-                                                                              height: 225.0,
-                                                                              fit: BoxFit.cover,
-                                                                              alignment: const Alignment(0.0, 0.0),
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Galaxy.jpg',
-                                                                              width: 118.0,
-                                                                              height: 148.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Joan_Miro.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Jade_Dragon.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                                () => Stack(
-                                                                      children: [
-                                                                        Align(
-                                                                          alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              ClipRRect(
-                                                                            borderRadius:
-                                                                                BorderRadius.circular(8.0),
-                                                                            child:
-                                                                                Image.asset(
-                                                                              'assets/images/Foodies.jpg',
-                                                                              width: 119.0,
-                                                                              height: 160.0,
-                                                                              fit: BoxFit.cover,
-                                                                            ),
-                                                                          ),
-                                                                        ),
-                                                                      ],
-                                                                    ),
-                                                              ][index]();
-                                                            },
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                  ),
-                                                );
-                                              }
-                                            },
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              KeepAliveWidgetWrapper(
-                                builder: (context) => SingleChildScrollView(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      StickyHeader(
-                                        overlapHeaders: false,
-                                        header: Padding(
+                                      );
+                                    }
+                                    final columnGetAllImagesResponse =
+                                        snapshot.data!;
+                                    return Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
@@ -1631,40 +214,69 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '2dt9z681' /* All */,
+                                                'l2lqzkc2' /* All */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '7v7oiah1' /* Text to Image */,
+                                                '0gu8q6iq' /* Text to Image */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                '56hvvyky' /* AI Portrait */,
+                                                '3suc45w9' /* AI Portrait */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'hhz4pioz' /* AI Video */,
+                                                'fcosdq2g' /* AI Video */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'lmuyi4r5' /* Preview */,
+                                                'ntguwb39' /* QR Generator */,
                                               )),
                                               ChipData(
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'wgdmalu7' /* QR Generator */,
+                                                'ksky8m77' /* QR Classic */,
                                               ))
                                             ],
-                                            onChanged: (val) => setState(() =>
-                                                _model.choiceChipsValue2 =
-                                                    val?.first),
+                                            onChanged: (val) async {
+                                              setState(() =>
+                                                  _model.mypicturechoiceValue =
+                                                      val?.firstOrNull);
+                                              _model.mypicturefiltervalue = () {
+                                                if (_model
+                                                        .mypicturechoiceValue ==
+                                                    'Text to Image') {
+                                                  return 'TEXT-TO-IMAGE';
+                                                } else if (_model
+                                                        .mypicturechoiceValue ==
+                                                    'AI Portrait') {
+                                                  return 'AI-PORTRAIT';
+                                                } else if (_model
+                                                        .mypicturechoiceValue ==
+                                                    'AI Video') {
+                                                  return 'VDO-TO-VDO';
+                                                } else if (_model
+                                                        .mypicturechoiceValue ==
+                                                    'QR Classic') {
+                                                  return 'QRCODE-LOGO';
+                                                } else if (_model
+                                                        .mypicturechoiceValue ==
+                                                    'QR Generator') {
+                                                  return 'AI-QRCODE';
+                                                } else {
+                                                  return '1';
+                                                }
+                                              }();
+                                              setState(() {});
+                                            },
                                             selectedChipStyle: ChipStyle(
                                               backgroundColor:
-                                                  const Color(0xFF3587D7),
+                                                  FlutterFlowTheme.of(context)
+                                                      .primary,
                                               textStyle: FlutterFlowTheme.of(
                                                       context)
                                                   .bodyMedium
@@ -1674,6 +286,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                             context)
                                                         .secondaryBackground,
                                                     fontSize: 14.0,
+                                                    letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                     useGoogleFonts: false,
                                                   ),
@@ -1697,6 +310,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                     color: FlutterFlowTheme.of(
                                                             context)
                                                         .secondaryText,
+                                                    letterSpacing: 0.0,
                                                     fontWeight: FontWeight.w500,
                                                     useGoogleFonts: false,
                                                   ),
@@ -1712,27 +326,384 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                             rowSpacing: 12.0,
                                             multiselect: false,
                                             initialized:
-                                                _model.choiceChipsValue2 !=
+                                                _model.mypicturechoiceValue !=
                                                     null,
                                             alignment: WrapAlignment.start,
                                             controller: _model
-                                                    .choiceChipsValueController2 ??=
+                                                    .mypicturechoiceValueController ??=
                                                 FormFieldController<
                                                     List<String>>(
                                               [
                                                 FFLocalizations.of(context)
                                                     .getText(
-                                                  '95fzlw6b' /* All */,
+                                                  'yx5o8805' /* All */,
                                                 )
                                               ],
                                             ),
                                             wrapped: true,
                                           ),
                                         ),
-                                        content: Container(),
-                                      ),
-                                    ],
+                                        Expanded(
+                                          child: Builder(
+                                            builder: (context) {
+                                              final mypicture = BrookreatorGroup
+                                                      .getAllImagesCall
+                                                      .images(
+                                                        columnGetAllImagesResponse
+                                                            .jsonBody,
+                                                      )
+                                                      ?.where((e) => _model
+                                                                  .mypicturechoiceValue ==
+                                                              'All'
+                                                          ? true
+                                                          : (_model
+                                                                  .mypicturefiltervalue ==
+                                                              getJsonField(
+                                                                e,
+                                                                r'''$.feature''',
+                                                              ).toString()))
+                                                      .toList()
+                                                      .toList() ??
+                                                  [];
+                                              return MasonryGridView.builder(
+                                                gridDelegate:
+                                                    const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                                  crossAxisCount: 3,
+                                                ),
+                                                crossAxisSpacing: 10.0,
+                                                mainAxisSpacing: 10.0,
+                                                itemCount: mypicture.length,
+                                                shrinkWrap: true,
+                                                itemBuilder:
+                                                    (context, mypictureIndex) {
+                                                  final mypictureItem =
+                                                      mypicture[mypictureIndex];
+                                                  return Stack(
+                                                    children: [
+                                                      FlutterFlowMediaDisplay(
+                                                        path: getJsonField(
+                                                          mypictureItem,
+                                                          r'''$.url''',
+                                                        ).toString(),
+                                                        imageBuilder: (path) =>
+                                                            ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                          child: Image.network(
+                                                            path,
+                                                            width: 300.0,
+                                                            height: random_data
+                                                                .randomInteger(
+                                                                    100, 200)
+                                                                .toDouble(),
+                                                            fit: BoxFit.cover,
+                                                          ),
+                                                        ),
+                                                        videoPlayerBuilder:
+                                                            (path) =>
+                                                                FlutterFlowVideoPlayer(
+                                                          path: path,
+                                                          width: 300.0,
+                                                          autoPlay: false,
+                                                          looping: true,
+                                                          showControls: true,
+                                                          allowFullScreen: true,
+                                                          allowPlaybackSpeedMenu:
+                                                              false,
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                ),
+                              ),
+                              KeepAliveWidgetWrapper(
+                                builder: (context) =>
+                                    FutureBuilder<ApiCallResponse>(
+                                  future: BrookreatorGroup.getAllFavouritesCall
+                                      .call(
+                                    accessToken: FFAppState().AccessToken,
                                   ),
+                                  builder: (context, snapshot) {
+                                    // Customize what your widget looks like when it's loading.
+                                    if (!snapshot.hasData) {
+                                      return const Center(
+                                        child: SizedBox(
+                                          width: 50.0,
+                                          height: 50.0,
+                                          child: CircularProgressIndicator(
+                                            valueColor:
+                                                AlwaysStoppedAnimation<Color>(
+                                              Color(0xFF1371FF),
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    }
+                                    final columnGetAllFavouritesResponse =
+                                        snapshot.data!;
+                                    return Column(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 10.0),
+                                          child: FlutterFlowChoiceChips(
+                                            options: [
+                                              ChipData(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'xynxi1s6' /* All */,
+                                              )),
+                                              ChipData(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'rx6vsfil' /* Text to Image */,
+                                              )),
+                                              ChipData(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'wv4mwaam' /* AI Portrait */,
+                                              )),
+                                              ChipData(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '7p9ksi9m' /* AI Video */,
+                                              )),
+                                              ChipData(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '4ug6f7qv' /* QR Generator */,
+                                              )),
+                                              ChipData(
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'wkvj0bbm' /* QR Classic */,
+                                              ))
+                                            ],
+                                            onChanged: (val) async {
+                                              setState(() =>
+                                                  _model.favouriteValue =
+                                                      val?.firstOrNull);
+                                              _model.favouritefiltervalue = () {
+                                                if (_model.favouriteValue ==
+                                                    'Text to Image') {
+                                                  return 'TEXT-TO-IMAGE';
+                                                } else if (_model
+                                                        .favouriteValue ==
+                                                    'AI Portrait') {
+                                                  return 'AI-PORTRAIT';
+                                                } else if (_model
+                                                        .favouriteValue ==
+                                                    'AI Video') {
+                                                  return 'VDO-TO-VDO';
+                                                } else if (_model
+                                                        .favouriteValue ==
+                                                    'QR Generator') {
+                                                  return 'AI-QRCODE';
+                                                } else if (_model
+                                                        .favouriteValue ==
+                                                    'QR Classic') {
+                                                  return 'QRCODE-LOGO';
+                                                } else {
+                                                  return '1';
+                                                }
+                                              }();
+                                              setState(() {});
+                                            },
+                                            selectedChipStyle: ChipStyle(
+                                              backgroundColor:
+                                                  const Color(0xFF3587D7),
+                                              textStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'NotoSansThai',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryBackground,
+                                                    fontSize: 14.0,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                              iconColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryBackground,
+                                              iconSize: 18.0,
+                                              elevation: 4.0,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            unselectedChipStyle: ChipStyle(
+                                              backgroundColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .alternate,
+                                              textStyle: FlutterFlowTheme.of(
+                                                      context)
+                                                  .bodyMedium
+                                                  .override(
+                                                    fontFamily: 'NotoSansThai',
+                                                    color: FlutterFlowTheme.of(
+                                                            context)
+                                                        .secondaryText,
+                                                    letterSpacing: 0.0,
+                                                    fontWeight: FontWeight.w500,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                              iconColor:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              iconSize: 18.0,
+                                              elevation: 0.0,
+                                              borderRadius:
+                                                  BorderRadius.circular(15.0),
+                                            ),
+                                            chipSpacing: 12.0,
+                                            rowSpacing: 12.0,
+                                            multiselect: false,
+                                            initialized:
+                                                _model.favouriteValue != null,
+                                            alignment: WrapAlignment.start,
+                                            controller: _model
+                                                    .favouriteValueController ??=
+                                                FormFieldController<
+                                                    List<String>>(
+                                              [
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                                  'cqo6i4fh' /* All */,
+                                                )
+                                              ],
+                                            ),
+                                            wrapped: true,
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Builder(
+                                            builder: (context) {
+                                              final favourite = BrookreatorGroup
+                                                      .getAllFavouritesCall
+                                                      .images(
+                                                        columnGetAllFavouritesResponse
+                                                            .jsonBody,
+                                                      )
+                                                      ?.where((e) => _model
+                                                                  .favouriteValue ==
+                                                              'All'
+                                                          ? true
+                                                          : (_model
+                                                                  .favouritefiltervalue ==
+                                                              getJsonField(
+                                                                e,
+                                                                r'''$.feature''',
+                                                              ).toString()))
+                                                      .toList()
+                                                      .toList() ??
+                                                  [];
+                                              return MasonryGridView.builder(
+                                                gridDelegate:
+                                                    const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                                  crossAxisCount: 3,
+                                                ),
+                                                crossAxisSpacing: 10.0,
+                                                mainAxisSpacing: 10.0,
+                                                itemCount: favourite.length,
+                                                shrinkWrap: true,
+                                                itemBuilder:
+                                                    (context, favouriteIndex) {
+                                                  final favouriteItem =
+                                                      favourite[favouriteIndex];
+                                                  return Stack(
+                                                    children: [
+                                                      InkWell(
+                                                        splashColor:
+                                                            Colors.transparent,
+                                                        focusColor:
+                                                            Colors.transparent,
+                                                        hoverColor:
+                                                            Colors.transparent,
+                                                        highlightColor:
+                                                            Colors.transparent,
+                                                        onTap: () async {
+                                                          await Navigator.push(
+                                                            context,
+                                                            PageTransition(
+                                                              type:
+                                                                  PageTransitionType
+                                                                      .fade,
+                                                              child:
+                                                                  FlutterFlowExpandedImageView(
+                                                                image: Image
+                                                                    .network(
+                                                                  getJsonField(
+                                                                    favouriteItem,
+                                                                    r'''$.url''',
+                                                                  ).toString(),
+                                                                  fit: BoxFit
+                                                                      .contain,
+                                                                ),
+                                                                allowRotation:
+                                                                    false,
+                                                                tag:
+                                                                    getJsonField(
+                                                                  favouriteItem,
+                                                                  r'''$.url''',
+                                                                ).toString(),
+                                                                useHeroAnimation:
+                                                                    true,
+                                                              ),
+                                                            ),
+                                                          );
+                                                        },
+                                                        child: Hero(
+                                                          tag: getJsonField(
+                                                            favouriteItem,
+                                                            r'''$.url''',
+                                                          ).toString(),
+                                                          transitionOnUserGestures:
+                                                              true,
+                                                          child: ClipRRect(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        8.0),
+                                                            child:
+                                                                Image.network(
+                                                              getJsonField(
+                                                                favouriteItem,
+                                                                r'''$.url''',
+                                                              ).toString(),
+                                                              width: 300.0,
+                                                              height: random_data
+                                                                  .randomInteger(
+                                                                      100, 200)
+                                                                  .toDouble(),
+                                                              fit: BoxFit.cover,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  );
+                                                },
+                                              );
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    );
+                                  },
                                 ),
                               ),
                             ],

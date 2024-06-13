@@ -5,7 +5,6 @@ import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'qrtoggle_model.dart';
 export 'qrtoggle_model.dart';
 
@@ -13,7 +12,7 @@ class QrtoggleWidget extends StatefulWidget {
   const QrtoggleWidget({super.key});
 
   @override
-  _QrtoggleWidgetState createState() => _QrtoggleWidgetState();
+  State<QrtoggleWidget> createState() => _QrtoggleWidgetState();
 }
 
 class _QrtoggleWidgetState extends State<QrtoggleWidget>
@@ -49,8 +48,6 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: 220.0,
@@ -66,6 +63,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
               labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
                     fontFamily: 'NotoSansThai',
                     fontSize: 11.0,
+                    letterSpacing: 0.0,
                     fontWeight: FontWeight.w500,
                     useGoogleFonts: false,
                   ),
@@ -73,6 +71,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                   FlutterFlowTheme.of(context).titleMedium.override(
                         fontFamily: 'Inter',
                         fontSize: 11.0,
+                        letterSpacing: 0.0,
                         fontWeight: FontWeight.w500,
                       ),
               labelColor: FlutterFlowTheme.of(context).primary,
@@ -125,6 +124,9 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                 ),
               ],
               controller: _model.tabBarController,
+              onTap: (i) async {
+                [() async {}, () async {}][i]();
+              },
             ),
           ),
           Expanded(
@@ -174,6 +176,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 12.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             useGoogleFonts: false,
                                           ),
@@ -191,6 +194,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                     const Duration(milliseconds: 2000),
                                     () => setState(() {}),
                                   ),
+                                  autofocus: false,
                                   textCapitalization: TextCapitalization.none,
                                   obscureText: false,
                                   decoration: InputDecoration(
@@ -200,6 +204,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                           fontFamily: 'NotoSansThai',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     alignLabelWithHint: false,
@@ -213,6 +218,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                           fontFamily: 'NotoSansThai',
                                           color: const Color(0xB36F6F6F),
                                           fontSize: 12.0,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     enabledBorder: OutlineInputBorder(
@@ -269,6 +275,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                         color: FlutterFlowTheme.of(context)
                                             .primaryText,
                                         fontSize: 12.0,
+                                        letterSpacing: 0.0,
                                         useGoogleFonts: false,
                                       ),
                                   textAlign: TextAlign.justify,
@@ -448,6 +455,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                             fontFamily:
                                                                 'NotoSansThai',
                                                             fontSize: 10.0,
+                                                            letterSpacing: 0.0,
                                                             fontWeight:
                                                                 FontWeight.w600,
                                                             useGoogleFonts:
@@ -482,6 +490,8 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                                         context)
                                                                     .secondaryText,
                                                                 fontSize: 8.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -520,6 +530,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                         fontFamily:
                                                             'NotoSansThai',
                                                         fontSize: 10.0,
+                                                        letterSpacing: 0.0,
                                                         fontWeight:
                                                             FontWeight.w500,
                                                         useGoogleFonts: false,

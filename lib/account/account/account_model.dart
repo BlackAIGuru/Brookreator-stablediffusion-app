@@ -1,4 +1,3 @@
-import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'account_widget.dart' show AccountWidget;
 import 'package:flutter/material.dart';
@@ -7,10 +6,8 @@ class AccountModel extends FlutterFlowModel<AccountWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // Stores action output result for [Backend Call - API (Account)] action in Account widget.
-  ApiCallResponse? accountInfo;
-
-  /// Initialization and disposal methods.
+  // Stores action output result for [Custom Action - signOut] action in Container widget.
+  bool? signoutResult;
 
   @override
   void initState(BuildContext context) {}
@@ -19,8 +16,4 @@ class AccountModel extends FlutterFlowModel<AccountWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

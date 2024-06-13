@@ -2,9 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'privacy_policy_model.dart';
 export 'privacy_policy_model.dart';
 
@@ -12,7 +10,7 @@ class PrivacyPolicyWidget extends StatefulWidget {
   const PrivacyPolicyWidget({super.key});
 
   @override
-  _PrivacyPolicyWidgetState createState() => _PrivacyPolicyWidgetState();
+  State<PrivacyPolicyWidget> createState() => _PrivacyPolicyWidgetState();
 }
 
 class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
@@ -35,17 +33,6 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -84,7 +71,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                   hoverColor: Colors.transparent,
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
-                                    context.pushNamed('Account');
+                                    context.safePop();
                                   },
                                   child: FaIcon(
                                     FontAwesomeIcons.chevronLeft,
@@ -105,6 +92,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                       .override(
                                         fontFamily: 'NotoSansThai',
                                         fontSize: 22.0,
+                                        letterSpacing: 0.0,
                                         fontWeight: FontWeight.bold,
                                         useGoogleFonts: false,
                                       ),
@@ -137,6 +125,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -157,6 +146,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -173,7 +163,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                         '9gpbnebb' /* If you have any questions or c... */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NotoSansThai',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -183,8 +178,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -200,6 +195,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -213,7 +209,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -224,8 +225,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -241,6 +242,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -254,7 +256,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -265,8 +272,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -282,6 +289,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -295,7 +303,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -310,7 +323,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                         'wxd2ra52' /* Upon receiving your questions ... */,
                                       ),
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NotoSansThai',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -333,6 +351,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -353,6 +372,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -378,6 +398,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -398,6 +419,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -418,6 +440,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -437,6 +460,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -456,6 +480,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -475,6 +500,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -499,6 +525,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -519,6 +546,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -539,6 +567,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -558,6 +587,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -577,6 +607,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -596,6 +627,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -615,6 +647,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -634,6 +667,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -653,6 +687,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -672,6 +707,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -691,6 +727,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -710,6 +747,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -729,6 +767,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -748,6 +787,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -767,6 +807,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -786,6 +827,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -805,6 +847,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -829,6 +872,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -849,6 +893,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -869,6 +914,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -888,6 +934,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -907,6 +954,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -926,6 +974,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -950,6 +999,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -970,6 +1020,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -994,6 +1045,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1015,6 +1067,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1035,6 +1088,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1055,6 +1109,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1075,6 +1130,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1100,6 +1156,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1121,6 +1178,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1141,6 +1199,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1166,6 +1225,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1187,6 +1247,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1212,6 +1273,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1233,6 +1295,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1258,6 +1321,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1279,6 +1343,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1304,6 +1369,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1325,6 +1391,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1350,6 +1417,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1371,6 +1439,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1391,6 +1460,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1416,6 +1486,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 15.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w600,
                                                 useGoogleFonts: false,
                                               ),
@@ -1437,6 +1508,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                               .override(
                                                 fontFamily: 'NotoSansThai',
                                                 fontSize: 14.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -1458,6 +1530,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -1483,6 +1556,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -1503,6 +1577,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             useGoogleFonts: false,
                                           ),
@@ -1523,6 +1598,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             useGoogleFonts: false,
                                           ),
@@ -1543,6 +1619,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             useGoogleFonts: false,
                                           ),
@@ -1563,6 +1640,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             useGoogleFonts: false,
                                           ),
@@ -1588,6 +1666,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -1608,6 +1687,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -1620,8 +1700,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -1637,6 +1717,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -1650,7 +1731,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -1661,8 +1747,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -1678,6 +1764,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -1691,7 +1778,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -1702,8 +1794,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -1719,6 +1811,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -1732,7 +1825,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -1756,6 +1854,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -1776,6 +1875,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -1796,6 +1896,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -1821,6 +1922,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -1841,6 +1943,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -1861,6 +1964,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -1881,6 +1985,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -1901,6 +2006,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -1920,6 +2026,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -1939,6 +2046,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -1958,6 +2066,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -1977,6 +2086,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                     ),
@@ -1996,6 +2106,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 15.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -2016,6 +2127,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -2036,6 +2148,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -2061,6 +2174,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 16.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w600,
                                             useGoogleFonts: false,
                                           ),
@@ -2081,6 +2195,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           .override(
                                             fontFamily: 'NotoSansThai',
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.normal,
                                             useGoogleFonts: false,
                                           ),
@@ -2093,8 +2208,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -2110,6 +2225,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -2123,7 +2239,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -2134,8 +2255,8 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         30.0, 5.0, 30.0, 0.0),
                                     child: RichText(
-                                      textScaleFactor: MediaQuery.of(context)
-                                          .textScaleFactor,
+                                      textScaler:
+                                          MediaQuery.of(context).textScaler,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -2151,6 +2272,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                           context)
                                                       .primaryText,
                                                   fontSize: 16.0,
+                                                  letterSpacing: 0.0,
                                                   fontWeight: FontWeight.bold,
                                                   useGoogleFonts: false,
                                                 ),
@@ -2164,7 +2286,12 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                           )
                                         ],
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyMedium,
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
@@ -2177,8 +2304,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                 padding: const EdgeInsetsDirectional.fromSTEB(
                                     30.0, 5.0, 30.0, 0.0),
                                 child: RichText(
-                                  textScaleFactor:
-                                      MediaQuery.of(context).textScaleFactor,
+                                  textScaler: MediaQuery.of(context).textScaler,
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
@@ -2194,6 +2320,7 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
                                               fontSize: 16.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.bold,
                                               useGoogleFonts: false,
                                             ),
@@ -2206,8 +2333,13 @@ class _PrivacyPolicyWidgetState extends State<PrivacyPolicyWidget> {
                                         style: const TextStyle(),
                                       )
                                     ],
-                                    style:
-                                        FlutterFlowTheme.of(context).bodyMedium,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'NotoSansThai',
+                                          letterSpacing: 0.0,
+                                          useGoogleFonts: false,
+                                        ),
                                   ),
                                 ),
                               ),

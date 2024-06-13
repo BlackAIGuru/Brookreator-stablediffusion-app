@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'slidebar_model.dart';
 export 'slidebar_model.dart';
 
@@ -9,7 +8,7 @@ class SlidebarWidget extends StatefulWidget {
   const SlidebarWidget({super.key});
 
   @override
-  _SlidebarWidgetState createState() => _SlidebarWidgetState();
+  State<SlidebarWidget> createState() => _SlidebarWidgetState();
 }
 
 class _SlidebarWidgetState extends State<SlidebarWidget> {
@@ -38,8 +37,6 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Padding(
       padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
       child: Column(
@@ -65,6 +62,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               fontFamily: 'NotoSansThai',
                               color: FlutterFlowTheme.of(context).primary,
                               fontSize: 15.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                               useGoogleFonts: false,
                             ),
@@ -77,6 +75,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'NotoSansThai',
+                          letterSpacing: 0.0,
                           fontWeight: FontWeight.bold,
                           useGoogleFonts: false,
                         ),
@@ -96,6 +95,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'NotoSansThai',
                       fontSize: 12.0,
+                      letterSpacing: 0.0,
                       useGoogleFonts: false,
                     ),
               ),
@@ -140,6 +140,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                                 .override(
                                   fontFamily: 'NotoSansThai',
                                   fontSize: 12.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),
@@ -152,6 +153,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -163,6 +165,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -174,6 +177,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -185,6 +189,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -196,6 +201,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -207,6 +213,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -218,6 +225,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -233,6 +241,7 @@ class _SlidebarWidgetState extends State<SlidebarWidget> {
                                 .override(
                                   fontFamily: 'NotoSansThai',
                                   fontSize: 12.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                           ),

@@ -3,6 +3,7 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'index.dart'; // Imports other custom actions
+import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom action code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
@@ -16,8 +17,8 @@ Future<String> signIn(String? username, String? password) async {
   }
 
   final userPool = CognitoUserPool(
-    'eu-north-1_var9qEjgx',
-    '6t53ud9fo1cqpbbpqvpbl05bbh',
+    'ap-southeast-1_EcXIqcvIo',
+    '29vo110iettqelkvbfn4sdo8cl',
   );
   final cognitoUser = CognitoUser(username, userPool);
   final authDetails = AuthenticationDetails(
@@ -30,14 +31,14 @@ Future<String> signIn(String? username, String? password) async {
         await cognitoUser.authenticateUser(authDetails);
 
     if (session == null) {
-      return 'Authentication failed, session is null';
+      return 'failed'; //Authentication failed, session is null
     }
 
     return session.getAccessToken().getJwtToken()!;
-  } on CognitoClientException catch (e) {
+  } on CognitoClientException {
     // Handle client exceptions like wrong username/password
-    return 'Wrong username or password';
+    return 'wrong'; //Wrong username or password
   } catch (e) {
-    return 'An unexpected error occurred';
+    return 'unexpected'; //n unexpected error occurred
   }
 }

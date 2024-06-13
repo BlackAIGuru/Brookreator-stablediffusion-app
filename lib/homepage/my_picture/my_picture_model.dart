@@ -4,6 +4,12 @@ import 'my_picture_widget.dart' show MyPictureWidget;
 import 'package:flutter/material.dart';
 
 class MyPictureModel extends FlutterFlowModel<MyPictureWidget> {
+  ///  Local state fields for this page.
+
+  String mypicturefiltervalue = '';
+
+  String favouritefiltervalue = '';
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
@@ -12,14 +18,17 @@ class MyPictureModel extends FlutterFlowModel<MyPictureWidget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  // State field(s) for ChoiceChips widget.
-  String? choiceChipsValue1;
-  FormFieldController<List<String>>? choiceChipsValueController1;
-  // State field(s) for ChoiceChips widget.
-  String? choiceChipsValue2;
-  FormFieldController<List<String>>? choiceChipsValueController2;
-
-  /// Initialization and disposal methods.
+  // State field(s) for mypicturechoice widget.
+  FormFieldController<List<String>>? mypicturechoiceValueController;
+  String? get mypicturechoiceValue =>
+      mypicturechoiceValueController?.value?.firstOrNull;
+  set mypicturechoiceValue(String? val) =>
+      mypicturechoiceValueController?.value = val != null ? [val] : [];
+  // State field(s) for favourite widget.
+  FormFieldController<List<String>>? favouriteValueController;
+  String? get favouriteValue => favouriteValueController?.value?.firstOrNull;
+  set favouriteValue(String? val) =>
+      favouriteValueController?.value = val != null ? [val] : [];
 
   @override
   void initState(BuildContext context) {}
@@ -29,8 +38,4 @@ class MyPictureModel extends FlutterFlowModel<MyPictureWidget> {
     unfocusNode.dispose();
     tabBarController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

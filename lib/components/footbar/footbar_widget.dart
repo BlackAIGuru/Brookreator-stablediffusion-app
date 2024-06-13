@@ -1,4 +1,3 @@
-import '/auth/custom_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +10,7 @@ class FootbarWidget extends StatefulWidget {
   const FootbarWidget({super.key});
 
   @override
-  _FootbarWidgetState createState() => _FootbarWidgetState();
+  State<FootbarWidget> createState() => _FootbarWidgetState();
 }
 
 class _FootbarWidgetState extends State<FootbarWidget> {
@@ -55,11 +54,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (loggedIn) {
-                      context.pushNamed('T2I_Start');
-                    } else {
-                      context.pushNamed('SignIn');
-                    }
+                    context.pushNamed('T2I');
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -87,6 +82,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
@@ -101,11 +97,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (loggedIn) {
-                      context.pushNamed('AIPortrait_Start');
-                    } else {
-                      context.pushNamed('SignIn');
-                    }
+                    context.pushNamed('AIPortrait');
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -136,6 +128,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
@@ -150,11 +143,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (loggedIn) {
-                      context.pushNamed('AIVideo_Start');
-                    } else {
-                      context.pushNamed('SignIn');
-                    }
+                    context.pushNamed('AIVideo');
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -185,6 +174,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
@@ -199,11 +189,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (loggedIn) {
-                      context.pushNamed('QR_Start');
-                    } else {
-                      context.pushNamed('SignIn');
-                    }
+                    context.pushNamed('QR_Start');
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -234,6 +220,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),
@@ -248,7 +235,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    if (loggedIn) {
+                    if (FFAppState().Logined) {
                       context.pushNamed('MyPicture');
                     } else {
                       context.pushNamed('SignIn');
@@ -280,6 +267,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),

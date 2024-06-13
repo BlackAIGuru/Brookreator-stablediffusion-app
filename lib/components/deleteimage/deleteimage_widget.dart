@@ -8,10 +8,15 @@ import 'deleteimage_model.dart';
 export 'deleteimage_model.dart';
 
 class DeleteimageWidget extends StatefulWidget {
-  const DeleteimageWidget({super.key});
+  const DeleteimageWidget({
+    super.key,
+    this.imageid,
+  });
+
+  final String? imageid;
 
   @override
-  _DeleteimageWidgetState createState() => _DeleteimageWidgetState();
+  State<DeleteimageWidget> createState() => _DeleteimageWidgetState();
 }
 
 class _DeleteimageWidgetState extends State<DeleteimageWidget> {
@@ -62,6 +67,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                       fontFamily: 'NotoSansThai',
                       fontSize: 17.0,
+                      letterSpacing: 0.0,
                       fontWeight: FontWeight.w600,
                       useGoogleFonts: false,
                     ),
@@ -75,9 +81,12 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                 children: [
                   FFButtonWidget(
                     onPressed: () async {
-                      _model.apiResultuos =
-                          await BrookreatorGroup.removeFavouritesCall.call();
-                      if ((_model.apiResultuos?.succeeded ?? true)) {
+                      _model.deleteReuslt =
+                          await BrookreatorGroup.deleteImageCall.call(
+                        accessToken: FFAppState().AccessToken,
+                        imageid: widget.imageid,
+                      );
+                      if ((_model.deleteReuslt?.succeeded ?? true)) {
                         Navigator.pop(context);
                       }
 
@@ -100,6 +109,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
                             fontSize: 14.0,
+                            letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
                       elevation: 3.0,
@@ -128,6 +138,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                                 fontFamily: 'NotoSansThai',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 14.0,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: false,
                               ),
                       elevation: 3.0,

@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'uploadvideobutton_model.dart';
 export 'uploadvideobutton_model.dart';
 
@@ -10,7 +9,7 @@ class UploadvideobuttonWidget extends StatefulWidget {
   const UploadvideobuttonWidget({super.key});
 
   @override
-  _UploadvideobuttonWidgetState createState() =>
+  State<UploadvideobuttonWidget> createState() =>
       _UploadvideobuttonWidgetState();
 }
 
@@ -38,8 +37,6 @@ class _UploadvideobuttonWidgetState extends State<UploadvideobuttonWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: InkWell(
@@ -132,6 +129,7 @@ class _UploadvideobuttonWidgetState extends State<UploadvideobuttonWidget> {
                             fontFamily: 'NotoSansThai',
                             color: Colors.black,
                             fontSize: 13.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: false,
                           ),
@@ -151,6 +149,7 @@ class _UploadvideobuttonWidgetState extends State<UploadvideobuttonWidget> {
                             fontFamily: 'NotoSansThai',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 10.0,
+                            letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
                     ),

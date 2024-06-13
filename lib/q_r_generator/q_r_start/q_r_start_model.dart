@@ -1,4 +1,5 @@
-import '/components/credit/credit_widget.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/components/signinicon/signinicon_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'q_r_start_widget.dart' show QRStartWidget;
 import 'package:carousel_slider/carousel_slider.dart';
@@ -7,17 +8,27 @@ import 'package:flutter/material.dart';
 class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   ///  Local state fields for this page.
 
-  int? qrscaleselected;
+  int? qrscaleselected = 10;
 
-  String logoselected = '';
+  String logoselected = 'none';
+
+  String uploadedQRPath = '';
+
+  String uploadedBgPath = '';
+
+  String uploadedLogoPath = '';
+
+  int themeId = 80;
+
+  int qrPromptSample = 6;
 
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   final formKey2 = GlobalKey<FormState>();
   final formKey1 = GlobalKey<FormState>();
-  // Model for credit component.
-  late CreditModel creditModel;
+  // Model for signinicon component.
+  late SigniniconModel signiniconModel;
   // State field(s) for QRgenerator widget.
   TabController? qRgeneratorController;
   int get qRgeneratorCurrentIndex =>
@@ -30,9 +41,10 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
 
   // State field(s) for prompt_link widget.
   FocusNode? promptLinkFocusNode;
-  TextEditingController? promptLinkController;
-  String? Function(BuildContext, String?)? promptLinkControllerValidator;
-  String? _promptLinkControllerValidator(BuildContext context, String? val) {
+  TextEditingController? promptLinkTextController;
+  String? Function(BuildContext, String?)? promptLinkTextControllerValidator;
+  String? _promptLinkTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         'c0ps9n3t' /* Field is required */,
@@ -47,17 +59,32 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     return null;
   }
 
+  // Stores action output result for [Custom Action - deleteUploadedFile] action in Icon widget.
+  bool? deleteresult1;
   bool isDataUploading1 = false;
   FFUploadedFile uploadedLocalFile1 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
+  // Stores action output result for [Backend Call - API (FileUploader)] action in qrprompt_qrupload widget.
+  ApiCallResponse? awsupload1;
   // State field(s) for qr_selectmodel widget.
   CarouselController? qrSelectmodelController;
-
   int qrSelectmodelCurrentIndex = 1;
 
   // State field(s) for slider widget.
   double? sliderValue;
+  // Stores action output result for [Custom Action - changeToIngeger] action in slider widget.
+  int? imagenumber;
+  // Stores action output result for [Custom Action - selectQRTheme] action in Button widget.
+  dynamic qRTheme;
+  // Stores action output result for [Backend Call - API (QRGenerate)] action in Button widget.
+  ApiCallResponse? requestSent;
+  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
+  ApiCallResponse? accountInfo1;
+  // Stores action output result for [Backend Call - API (QueueStatus)] action in Button widget.
+  ApiCallResponse? loopPrompt;
+  // Stores action output result for [Backend Call - API (GetGeneratedContents)] action in Button widget.
+  ApiCallResponse? qrResult;
   // State field(s) for UploadImage widget.
   TabController? uploadImageController;
   int get uploadImageCurrentIndex =>
@@ -65,9 +92,10 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
 
   // State field(s) for upload_link widget.
   FocusNode? uploadLinkFocusNode;
-  TextEditingController? uploadLinkController;
-  String? Function(BuildContext, String?)? uploadLinkControllerValidator;
-  String? _uploadLinkControllerValidator(BuildContext context, String? val) {
+  TextEditingController? uploadLinkTextController;
+  String? Function(BuildContext, String?)? uploadLinkTextControllerValidator;
+  String? _uploadLinkTextControllerValidator(
+      BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         'tizrmshi' /* Field is required */,
@@ -82,40 +110,55 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
     return null;
   }
 
+  // Stores action output result for [Custom Action - deleteUploadedFile] action in Icon widget.
+  bool? deleteresult2;
   bool isDataUploading2 = false;
   FFUploadedFile uploadedLocalFile2 =
       FFUploadedFile(bytes: Uint8List.fromList([]));
 
+  // Stores action output result for [Backend Call - API (FileUploader)] action in upload_qrupload widget.
+  ApiCallResponse? awsupload2;
+  // Stores action output result for [Custom Action - deleteUploadedFile] action in Icon widget.
+  bool? deleteresult3;
   bool isDataUploading3 = false;
-  List<FFUploadedFile> uploadedLocalFiles3 = [];
+  FFUploadedFile uploadedLocalFile3 =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
 
+  // Stores action output result for [Backend Call - API (FileUploader)] action in upload_bgupload widget.
+  ApiCallResponse? awsupload3;
+  // Stores action output result for [Custom Action - deleteUploadedFile] action in Icon widget.
+  bool? deleteresult4;
   bool isDataUploading4 = false;
-  List<FFUploadedFile> uploadedLocalFiles4 = [];
+  FFUploadedFile uploadedLocalFile4 =
+      FFUploadedFile(bytes: Uint8List.fromList([]));
 
-  /// Initialization and disposal methods.
+  // Stores action output result for [Backend Call - API (FileUploader)] action in upload_logoupload widget.
+  ApiCallResponse? awsupload4;
+  // Stores action output result for [Backend Call - API (QRLogoGenerate)] action in Button widget.
+  ApiCallResponse? requestSentlogo;
+  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
+  ApiCallResponse? accountInfoLogo;
+  // Stores action output result for [Backend Call - API (GetGeneratedContents)] action in Button widget.
+  ApiCallResponse? qrClassicResult;
 
   @override
   void initState(BuildContext context) {
-    creditModel = createModel(context, () => CreditModel());
-    promptLinkControllerValidator = _promptLinkControllerValidator;
-    uploadLinkControllerValidator = _uploadLinkControllerValidator;
+    signiniconModel = createModel(context, () => SigniniconModel());
+    promptLinkTextControllerValidator = _promptLinkTextControllerValidator;
+    uploadLinkTextControllerValidator = _uploadLinkTextControllerValidator;
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
-    creditModel.dispose();
+    signiniconModel.dispose();
     qRgeneratorController?.dispose();
     qRPromptController?.dispose();
     promptLinkFocusNode?.dispose();
-    promptLinkController?.dispose();
+    promptLinkTextController?.dispose();
 
     uploadImageController?.dispose();
     uploadLinkFocusNode?.dispose();
-    uploadLinkController?.dispose();
+    uploadLinkTextController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'card_model.dart';
 export 'card_model.dart';
 
@@ -10,7 +9,7 @@ class CardWidget extends StatefulWidget {
   const CardWidget({super.key});
 
   @override
-  _CardWidgetState createState() => _CardWidgetState();
+  State<CardWidget> createState() => _CardWidgetState();
 }
 
 class _CardWidgetState extends State<CardWidget> {
@@ -37,13 +36,11 @@ class _CardWidgetState extends State<CardWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Padding(
       padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
       child: Card(
         clipBehavior: Clip.antiAliasWithSaveLayer,
-        color: const Color(0xFF1371FF),
+        color: FlutterFlowTheme.of(context).primary,
         elevation: 4.0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
@@ -89,6 +86,7 @@ class _CardWidgetState extends State<CardWidget> {
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                             ),
@@ -119,6 +117,7 @@ class _CardWidgetState extends State<CardWidget> {
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     fontSize: 17.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
@@ -138,6 +137,7 @@ class _CardWidgetState extends State<CardWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                   fontSize: 12.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.normal,
                                   useGoogleFonts: false,
                                 ),
@@ -183,6 +183,7 @@ class _CardWidgetState extends State<CardWidget> {
                                     color: FlutterFlowTheme.of(context)
                                         .primaryBackground,
                                     fontSize: 25.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -232,6 +233,7 @@ class _CardWidgetState extends State<CardWidget> {
                                   color:
                                       FlutterFlowTheme.of(context).primaryText,
                                   fontSize: 14.0,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                             elevation: 3.0,

@@ -11,18 +11,16 @@ class ImagesizeModel extends FlutterFlowModel<ImagesizeWidget> {
   int? widthsize;
   // State field(s) for widthvalue widget.
   FocusNode? widthvalueFocusNode;
-  TextEditingController? widthvalueController;
-  String? Function(BuildContext, String?)? widthvalueControllerValidator;
+  TextEditingController? widthvalueTextController;
+  String? Function(BuildContext, String?)? widthvalueTextControllerValidator;
   // State field(s) for heightslider widget.
   double? heightsliderValue;
   // Stores action output result for [Custom Action - changeToIngeger] action in heightslider widget.
   int? heightsize;
   // State field(s) for heightvalue widget.
   FocusNode? heightvalueFocusNode;
-  TextEditingController? heightvalueController;
-  String? Function(BuildContext, String?)? heightvalueControllerValidator;
-
-  /// Initialization and disposal methods.
+  TextEditingController? heightvalueTextController;
+  String? Function(BuildContext, String?)? heightvalueTextControllerValidator;
 
   @override
   void initState(BuildContext context) {}
@@ -30,13 +28,9 @@ class ImagesizeModel extends FlutterFlowModel<ImagesizeWidget> {
   @override
   void dispose() {
     widthvalueFocusNode?.dispose();
-    widthvalueController?.dispose();
+    widthvalueTextController?.dispose();
 
     heightvalueFocusNode?.dispose();
-    heightvalueController?.dispose();
+    heightvalueTextController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

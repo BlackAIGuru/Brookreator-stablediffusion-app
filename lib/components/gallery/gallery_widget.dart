@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:provider/provider.dart';
 import 'gallery_model.dart';
 export 'gallery_model.dart';
 
@@ -11,7 +10,7 @@ class GalleryWidget extends StatefulWidget {
   const GalleryWidget({super.key});
 
   @override
-  _GalleryWidgetState createState() => _GalleryWidgetState();
+  State<GalleryWidget> createState() => _GalleryWidgetState();
 }
 
 class _GalleryWidgetState extends State<GalleryWidget>
@@ -45,8 +44,6 @@ class _GalleryWidgetState extends State<GalleryWidget>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Column(
       children: [
         Align(
@@ -56,6 +53,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
             labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
                   fontFamily: 'NotoSansThai',
                   fontSize: 11.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                   useGoogleFonts: false,
                 ),
@@ -99,6 +97,15 @@ class _GalleryWidgetState extends State<GalleryWidget>
               ),
             ],
             controller: _model.tabBarController,
+            onTap: (i) async {
+              [
+                () async {},
+                () async {},
+                () async {},
+                () async {},
+                () async {}
+              ][i]();
+            },
           ),
         ),
         Expanded(
@@ -116,7 +123,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                       ),
                       crossAxisSpacing: 9.0,
                       mainAxisSpacing: 9.0,
-                      itemCount: 10,
+                      itemCount: 2,
                       itemBuilder: (context, index) {
                         return [
                           () => Stack(
@@ -125,8 +132,8 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Homey_Cafe.jpg',
+                                      child: Image.network(
+                                        '',
                                         width: 120.0,
                                         height: 105.0,
                                         fit: BoxFit.cover,
@@ -178,6 +185,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                             .override(
                                               fontFamily: 'NotoSansThai',
                                               fontSize: 8.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: false,
                                             ),
@@ -198,6 +206,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                             .override(
                                               fontFamily: 'NotoSansThai',
                                               fontSize: 7.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: false,
                                             ),
@@ -218,6 +227,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                             .override(
                                               fontFamily: 'NotoSansThai',
                                               fontSize: 6.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
                                               useGoogleFonts: false,
                                             ),
@@ -232,8 +242,8 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                     alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/269d7ca9-2c5e-4c64-a5bf-6763fd545c5b_1_(1).png',
+                                      child: Image.network(
+                                        '',
                                         width: 118.0,
                                         height: 152.0,
                                         fit: BoxFit.cover,
@@ -285,6 +295,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                             .override(
                                               fontFamily: 'NotoSansThai',
                                               fontSize: 6.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w500,
                                               useGoogleFonts: false,
                                             ),
@@ -305,6 +316,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                             .override(
                                               fontFamily: 'NotoSansThai',
                                               fontSize: 7.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: false,
                                             ),
@@ -325,6 +337,7 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                             .override(
                                               fontFamily: 'NotoSansThai',
                                               fontSize: 8.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.w600,
                                               useGoogleFonts: false,
                                             ),
@@ -333,135 +346,6 @@ class _GalleryWidgetState extends State<GalleryWidget>
                                   ),
                                 ],
                               ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/6cb58acc5d59eb227155bdfed5574d06.png',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/03d3443385905de5fb7016e00c9eeb83.png',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Korean.jpg',
-                                        width: 118.0,
-                                        height: 150.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/173afd04a447095c3f83ae9c6cc62d64.png',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Rectangle_159.png',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/abc53e5e60b5585d70943477caa62354.png',
-                                        width: 118.0,
-                                        height: 225.0,
-                                        fit: BoxFit.cover,
-                                        alignment: const Alignment(0.0, 0.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Rectangle_152_(6).png',
-                                        width: 118.0,
-                                        height: 148.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Rectangle_154.png',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
                         ][index]();
                       },
                     ),
@@ -479,235 +363,9 @@ class _GalleryWidgetState extends State<GalleryWidget>
                       ),
                       crossAxisSpacing: 9.0,
                       mainAxisSpacing: 9.0,
-                      itemCount: 14,
+                      itemCount: 0,
                       itemBuilder: (context, index) {
-                        return [
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/t2idemo_5.png',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Prototype_Sketch.jpg',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/abc53e5e60b5585d70943477caa62354.png',
-                                        width: 118.0,
-                                        height: 150.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Utopia.jpg',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Rectangle_159.png',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/t2idemo_3.png',
-                                        width: 118.0,
-                                        height: 225.0,
-                                        fit: BoxFit.cover,
-                                        alignment: const Alignment(0.0, 0.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Dreamy_Globe.jpg',
-                                        width: 118.0,
-                                        height: 148.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Lazy_Peach.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Ancient-Ruins.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Wonderland.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Hunter.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Flower_Field.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/t2idemo_1.png',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Watercolor.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                        ][index]();
+                        return [][index]();
                       },
                     ),
                   ),
@@ -724,91 +382,9 @@ class _GalleryWidgetState extends State<GalleryWidget>
                       ),
                       crossAxisSpacing: 9.0,
                       mainAxisSpacing: 9.0,
-                      itemCount: 5,
+                      itemCount: 0,
                       itemBuilder: (context, index) {
-                        return [
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Korean.jpg',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/03d3443385905de5fb7016e00c9eeb83.png',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/173afd04a447095c3f83ae9c6cc62d64.png',
-                                        width: 118.0,
-                                        height: 150.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/decbf62132239dadff8336a8c5d0e6b0.jpg',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/6cb58acc5d59eb227155bdfed5574d06.png',
-                                        width: 118.0,
-                                        height: 225.0,
-                                        fit: BoxFit.cover,
-                                        alignment: const Alignment(0.0, 0.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                        ][index]();
+                        return [][index]();
                       },
                     ),
                   ),
@@ -826,171 +402,9 @@ class _GalleryWidgetState extends State<GalleryWidget>
                       ),
                       crossAxisSpacing: 9.0,
                       mainAxisSpacing: 9.0,
-                      itemCount: 10,
+                      itemCount: 0,
                       itemBuilder: (context, index) {
-                        return [
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Tree_House.jpg',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Stormy_Night.jpg',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Neon_Camouflage.jpg',
-                                        width: 118.0,
-                                        height: 150.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Low_Poly.jpg',
-                                        width: 118.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Neon_Sci-fi_Lady.jpg',
-                                        width: 119.0,
-                                        height: 152.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Maneki_Neko.jpg',
-                                        width: 118.0,
-                                        height: 225.0,
-                                        fit: BoxFit.cover,
-                                        alignment: const Alignment(0.0, 0.0),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Galaxy.jpg',
-                                        width: 118.0,
-                                        height: 148.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Joan_Miro.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Jade_Dragon.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                          () => Stack(
-                                children: [
-                                  Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: ClipRRect(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                      child: Image.asset(
-                                        'assets/images/Foodies.jpg',
-                                        width: 119.0,
-                                        height: 160.0,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                        ][index]();
+                        return [][index]();
                       },
                     ),
                   ),

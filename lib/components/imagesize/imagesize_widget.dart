@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'imagesize_model.dart';
 export 'imagesize_model.dart';
 
@@ -11,7 +10,7 @@ class ImagesizeWidget extends StatefulWidget {
   const ImagesizeWidget({super.key});
 
   @override
-  _ImagesizeWidgetState createState() => _ImagesizeWidgetState();
+  State<ImagesizeWidget> createState() => _ImagesizeWidgetState();
 }
 
 class _ImagesizeWidgetState extends State<ImagesizeWidget> {
@@ -28,32 +27,32 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
     super.initState();
     _model = createModel(context, () => ImagesizeModel());
 
-    _model.widthvalueController ??= TextEditingController();
+    _model.widthvalueTextController ??= TextEditingController();
     _model.widthvalueFocusNode ??= FocusNode();
     _model.widthvalueFocusNode!.addListener(
       () async {
         setState(() {
           _model.widthsliderValue =
-              double.parse(_model.widthvalueController.text);
+              double.parse(_model.widthvalueTextController.text);
         });
       },
     );
-    _model.heightvalueController ??= TextEditingController();
+    _model.heightvalueTextController ??= TextEditingController();
     _model.heightvalueFocusNode ??= FocusNode();
     _model.heightvalueFocusNode!.addListener(
       () async {
         setState(() {
           _model.heightsliderValue =
-              double.parse(_model.heightvalueController.text);
+              double.parse(_model.heightvalueTextController.text);
         });
       },
     );
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {
-          _model.widthvalueController?.text =
+          _model.widthvalueTextController?.text =
               FFLocalizations.of(context).getText(
             '33ny2oqd' /* 1024 */,
           );
-          _model.heightvalueController?.text =
+          _model.heightvalueTextController?.text =
               FFLocalizations.of(context).getText(
             'irr48n1w' /* 1024 */,
           );
@@ -69,8 +68,6 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
@@ -101,6 +98,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'NotoSansThai',
                               fontSize: 13.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
                               useGoogleFonts: false,
                             ),
@@ -119,6 +117,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -148,8 +147,12 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                           _model.widthsliderValue,
                         );
                         setState(() {
-                          _model.widthvalueController?.text =
+                          _model.widthvalueTextController?.text =
                               _model.widthsize!.toString();
+                          _model.widthvalueTextController?.selection =
+                              TextSelection.collapsed(
+                                  offset: _model
+                                      .widthvalueTextController!.text.length);
                         });
 
                         setState(() {});
@@ -164,59 +167,74 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                     child: SizedBox(
                       width: 60.0,
                       child: TextFormField(
-                        controller: _model.widthvalueController,
+                        controller: _model.widthvalueTextController,
                         focusNode: _model.widthvalueFocusNode,
                         onChanged: (_) => EasyDebounce.debounce(
-                          '_model.widthvalueController',
+                          '_model.widthvalueTextController',
                           const Duration(milliseconds: 2000),
                           () async {
                             setState(() {
                               _model.widthsliderValue = double.parse(
-                                  _model.widthvalueController.text);
+                                  _model.widthvalueTextController.text);
                             });
                           },
                         ),
                         onFieldSubmitted: (_) async {
                           setState(() {
-                            _model.widthsliderValue =
-                                double.parse(_model.widthvalueController.text);
+                            _model.widthsliderValue = double.parse(
+                                _model.widthvalueTextController.text);
                           });
                         },
+                        autofocus: false,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelStyle: FlutterFlowTheme.of(context).bodyMedium,
-                          hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                          labelStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                          hintStyle:
+                              FlutterFlowTheme.of(context).labelMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).secondaryText,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).primary,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                        validator: _model.widthvalueControllerValidator
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'NotoSansThai',
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                        validator: _model.widthvalueTextControllerValidator
                             .asValidator(context),
                       ),
                     ),
@@ -240,6 +258,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'NotoSansThai',
                               fontSize: 13.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
                               useGoogleFonts: false,
                             ),
@@ -258,6 +277,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                         ),
@@ -286,8 +306,12 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                           _model.heightsliderValue,
                         );
                         setState(() {
-                          _model.heightvalueController?.text =
+                          _model.heightvalueTextController?.text =
                               _model.heightsize!.toString();
+                          _model.heightvalueTextController?.selection =
+                              TextSelection.collapsed(
+                                  offset: _model
+                                      .heightvalueTextController!.text.length);
                         });
 
                         setState(() {});
@@ -302,59 +326,74 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                     child: SizedBox(
                       width: 60.0,
                       child: TextFormField(
-                        controller: _model.heightvalueController,
+                        controller: _model.heightvalueTextController,
                         focusNode: _model.heightvalueFocusNode,
                         onChanged: (_) => EasyDebounce.debounce(
-                          '_model.heightvalueController',
+                          '_model.heightvalueTextController',
                           const Duration(milliseconds: 2000),
                           () async {
                             setState(() {
                               _model.heightsliderValue = double.parse(
-                                  _model.heightvalueController.text);
+                                  _model.heightvalueTextController.text);
                             });
                           },
                         ),
                         onFieldSubmitted: (_) async {
                           setState(() {
-                            _model.heightsliderValue =
-                                double.parse(_model.heightvalueController.text);
+                            _model.heightsliderValue = double.parse(
+                                _model.heightvalueTextController.text);
                           });
                         },
+                        autofocus: false,
                         obscureText: false,
                         decoration: InputDecoration(
-                          labelStyle: FlutterFlowTheme.of(context).labelMedium,
-                          hintStyle: FlutterFlowTheme.of(context).labelMedium,
+                          labelStyle:
+                              FlutterFlowTheme.of(context).labelMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
+                          hintStyle:
+                              FlutterFlowTheme.of(context).labelMedium.override(
+                                    fontFamily: 'NotoSansThai',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
                           enabledBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).secondaryText,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                           focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).primary,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                           errorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                           focusedErrorBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                               color: FlutterFlowTheme.of(context).error,
                               width: 1.0,
                             ),
-                            borderRadius: BorderRadius.circular(0.0),
+                            borderRadius: BorderRadius.circular(5.0),
                           ),
                         ),
-                        style: FlutterFlowTheme.of(context).bodyMedium,
-                        validator: _model.heightvalueControllerValidator
+                        style: FlutterFlowTheme.of(context).bodyMedium.override(
+                              fontFamily: 'NotoSansThai',
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                        validator: _model.heightvalueTextControllerValidator
                             .asValidator(context),
                       ),
                     ),

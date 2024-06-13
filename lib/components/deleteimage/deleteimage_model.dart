@@ -6,18 +6,12 @@ import 'package:flutter/material.dart';
 class DeleteimageModel extends FlutterFlowModel<DeleteimageWidget> {
   ///  State fields for stateful widgets in this component.
 
-  // Stores action output result for [Backend Call - API (RemoveFavourites)] action in Button widget.
-  ApiCallResponse? apiResultuos;
-
-  /// Initialization and disposal methods.
+  // Stores action output result for [Backend Call - API (DeleteImage)] action in Button widget.
+  ApiCallResponse? deleteReuslt;
 
   @override
   void initState(BuildContext context) {}
 
   @override
   void dispose() {}
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -1,3 +1,4 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'sign_in_widget.dart' show SignInWidget;
 import 'package:flutter/material.dart';
@@ -9,13 +10,17 @@ class SignInModel extends FlutterFlowModel<SignInWidget> {
   final formKey = GlobalKey<FormState>();
   // State field(s) for email widget.
   FocusNode? emailFocusNode;
-  TextEditingController? emailController;
-  String? Function(BuildContext, String?)? emailControllerValidator;
-  String? _emailControllerValidator(BuildContext context, String? val) {
+  TextEditingController? emailTextController;
+  String? Function(BuildContext, String?)? emailTextControllerValidator;
+  String? _emailTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         '00ghj3vm' /* Field is required */,
       );
+    }
+
+    if (val.isEmpty) {
+      return 'Requires at least 1 characters.';
     }
 
     if (!RegExp(kTextValidatorEmailRegex).hasMatch(val)) {
@@ -28,10 +33,10 @@ class SignInModel extends FlutterFlowModel<SignInWidget> {
 
   // State field(s) for password widget.
   FocusNode? passwordFocusNode;
-  TextEditingController? passwordController;
+  TextEditingController? passwordTextController;
   late bool passwordVisibility;
-  String? Function(BuildContext, String?)? passwordControllerValidator;
-  String? _passwordControllerValidator(BuildContext context, String? val) {
+  String? Function(BuildContext, String?)? passwordTextControllerValidator;
+  String? _passwordTextControllerValidator(BuildContext context, String? val) {
     if (val == null || val.isEmpty) {
       return FFLocalizations.of(context).getText(
         '45rftazb' /* Field is required */,
@@ -48,28 +53,24 @@ class SignInModel extends FlutterFlowModel<SignInWidget> {
   }
 
   // Stores action output result for [Custom Action - signIn] action in Button widget.
-  String? accessToken;
-
-  /// Initialization and disposal methods.
+  String? sigininResult;
+  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
+  ApiCallResponse? accountInfo;
 
   @override
   void initState(BuildContext context) {
-    emailControllerValidator = _emailControllerValidator;
+    emailTextControllerValidator = _emailTextControllerValidator;
     passwordVisibility = false;
-    passwordControllerValidator = _passwordControllerValidator;
+    passwordTextControllerValidator = _passwordTextControllerValidator;
   }
 
   @override
   void dispose() {
     unfocusNode.dispose();
     emailFocusNode?.dispose();
-    emailController?.dispose();
+    emailTextController?.dispose();
 
     passwordFocusNode?.dispose();
-    passwordController?.dispose();
+    passwordTextController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

@@ -10,8 +10,6 @@ class GalleryModel extends FlutterFlowModel<GalleryWidget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {}
 
@@ -19,8 +17,4 @@ class GalleryModel extends FlutterFlowModel<GalleryWidget> {
   void dispose() {
     tabBarController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

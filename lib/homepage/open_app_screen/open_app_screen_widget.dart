@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'open_app_screen_model.dart';
 export 'open_app_screen_model.dart';
 
@@ -12,7 +10,7 @@ class OpenAppScreenWidget extends StatefulWidget {
   const OpenAppScreenWidget({super.key});
 
   @override
-  _OpenAppScreenWidgetState createState() => _OpenAppScreenWidgetState();
+  State<OpenAppScreenWidget> createState() => _OpenAppScreenWidgetState();
 }
 
 class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
@@ -35,17 +33,6 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -133,6 +120,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                                 return 27.0;
                                               }
                                             }(),
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: false,
                                           ),
@@ -155,6 +143,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                       ),
@@ -231,6 +220,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                                 return 27.0;
                                               }
                                             }(),
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: false,
                                           ),
@@ -253,6 +243,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                       ),
@@ -329,6 +320,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                                 return 27.0;
                                               }
                                             }(),
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: false,
                                           ),
@@ -351,6 +343,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                       ),
@@ -427,6 +420,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                                 return 27.0;
                                               }
                                             }(),
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.bold,
                                             useGoogleFonts: false,
                                           ),
@@ -449,6 +443,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .secondaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                       ),
@@ -503,6 +498,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'NotoSansThai',
                                 color: FlutterFlowTheme.of(context).info,
+                                letterSpacing: 0.0,
                                 fontWeight: FontWeight.w600,
                                 useGoogleFonts: false,
                               ),

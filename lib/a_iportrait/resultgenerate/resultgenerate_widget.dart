@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'resultgenerate_model.dart';
 export 'resultgenerate_model.dart';
 
@@ -12,7 +11,7 @@ class ResultgenerateWidget extends StatefulWidget {
   const ResultgenerateWidget({super.key});
 
   @override
-  _ResultgenerateWidgetState createState() => _ResultgenerateWidgetState();
+  State<ResultgenerateWidget> createState() => _ResultgenerateWidgetState();
 }
 
 class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
@@ -39,8 +38,6 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
@@ -65,53 +62,55 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             children: [
-              Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(28.0, 0.0, 0.0, 0.0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 12.0, 0.0),
-                        child: Text(
-                          FFLocalizations.of(context).getText(
-                            'yff5sonl' /* Nation */,
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Flexible(
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Text(
+                            FFLocalizations.of(context).getText(
+                              'v8jp45n7' /* AI Portrait */,
+                            ),
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'NotoSansThai',
+                                  fontSize: 23.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                  useGoogleFonts: false,
+                                ),
                           ),
-                          style: FlutterFlowTheme.of(context)
-                              .headlineMedium
-                              .override(
-                                fontFamily: 'Inter',
-                                color: const Color(0xFF2D2D2D),
-                                fontSize: 18.0,
-                                fontWeight: FontWeight.bold,
+                        ),
+                        Align(
+                          alignment: const AlignmentDirectional(1.0, -1.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 5.0, 0.0),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                Navigator.pop(context);
+                              },
+                              child: Icon(
+                                Icons.cancel,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 30.0,
                               ),
-                        ),
-                      ),
-                    ),
-                    Align(
-                      alignment: const AlignmentDirectional(1.0, -1.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            Navigator.pop(context);
-                          },
-                          child: Icon(
-                            Icons.close,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 30.0,
+                            ),
                           ),
                         ),
-                      ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               Padding(
                 padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 25.0, 0.0),
@@ -120,8 +119,8 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                   children: [
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/images/173afd04a447095c3f83ae9c6cc62d64.png',
+                      child: Image.network(
+                        '',
                         width: 375.0,
                         height: 515.0,
                         fit: BoxFit.cover,
@@ -146,8 +145,8 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/6cb58acc5d59eb227155bdfed5574d06.png',
+                                  child: Image.network(
+                                    '',
                                     width: 101.0,
                                     height: 130.0,
                                     fit: BoxFit.cover,
@@ -158,8 +157,8 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/03d3443385905de5fb7016e00c9eeb83.png',
+                                  child: Image.network(
+                                    '',
                                     width: 101.0,
                                     height: 130.0,
                                     fit: BoxFit.cover,
@@ -170,8 +169,8 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/Korean.jpg',
+                                  child: Image.network(
+                                    '',
                                     width: 101.0,
                                     height: 130.0,
                                     fit: BoxFit.cover,
@@ -182,8 +181,8 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                                 alignment: const AlignmentDirectional(0.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(8.0),
-                                  child: Image.asset(
-                                    'assets/images/173afd04a447095c3f83ae9c6cc62d64.png',
+                                  child: Image.network(
+                                    '',
                                     width: 101.0,
                                     height: 130.0,
                                     fit: BoxFit.cover,
@@ -216,10 +215,14 @@ class _ResultgenerateWidgetState extends State<ResultgenerateWidget> {
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Expanded(
-                            child: wrapWithModel(
-                              model: _model.buttongroup2Model,
-                              updateCallback: () => setState(() {}),
-                              child: const Buttongroup2Widget(),
+                            child: Padding(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
+                                  0.0, 0.0, 0.0, 20.0),
+                              child: wrapWithModel(
+                                model: _model.buttongroup2Model,
+                                updateCallback: () => setState(() {}),
+                                child: const Buttongroup2Widget(),
+                              ),
                             ),
                           ),
                         ],

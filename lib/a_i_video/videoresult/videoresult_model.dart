@@ -9,8 +9,6 @@ class VideoresultModel extends FlutterFlowModel<VideoresultWidget> {
   // Model for buttongroup_1 component.
   late Buttongroup1Model buttongroup1Model;
 
-  /// Initialization and disposal methods.
-
   @override
   void initState(BuildContext context) {
     buttongroup1Model = createModel(context, () => Buttongroup1Model());
@@ -20,8 +18,4 @@ class VideoresultModel extends FlutterFlowModel<VideoresultWidget> {
   void dispose() {
     buttongroup1Model.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

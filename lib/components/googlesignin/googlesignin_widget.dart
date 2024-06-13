@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'googlesignin_model.dart';
 export 'googlesignin_model.dart';
 
@@ -9,7 +8,7 @@ class GooglesigninWidget extends StatefulWidget {
   const GooglesigninWidget({super.key});
 
   @override
-  _GooglesigninWidgetState createState() => _GooglesigninWidgetState();
+  State<GooglesigninWidget> createState() => _GooglesigninWidgetState();
 }
 
 class _GooglesigninWidgetState extends State<GooglesigninWidget> {
@@ -36,8 +35,6 @@ class _GooglesigninWidgetState extends State<GooglesigninWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: SizedBox(

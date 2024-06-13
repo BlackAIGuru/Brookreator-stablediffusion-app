@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'tabbar_model.dart';
 export 'tabbar_model.dart';
 
@@ -10,7 +9,7 @@ class TabbarWidget extends StatefulWidget {
   const TabbarWidget({super.key});
 
   @override
-  _TabbarWidgetState createState() => _TabbarWidgetState();
+  State<TabbarWidget> createState() => _TabbarWidgetState();
 }
 
 class _TabbarWidgetState extends State<TabbarWidget>
@@ -44,8 +43,6 @@ class _TabbarWidgetState extends State<TabbarWidget>
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Column(
       children: [
         Align(
@@ -55,6 +52,7 @@ class _TabbarWidgetState extends State<TabbarWidget>
             labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
                   fontFamily: 'NotoSansThai',
                   fontSize: 12.0,
+                  letterSpacing: 0.0,
                   fontWeight: FontWeight.w600,
                   useGoogleFonts: false,
                 ),
@@ -98,6 +96,15 @@ class _TabbarWidgetState extends State<TabbarWidget>
               ),
             ],
             controller: _model.tabBarController,
+            onTap: (i) async {
+              [
+                () async {},
+                () async {},
+                () async {},
+                () async {},
+                () async {}
+              ][i]();
+            },
           ),
         ),
         Expanded(

@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'cropimage_model.dart';
 export 'cropimage_model.dart';
 
@@ -11,7 +10,7 @@ class CropimageWidget extends StatefulWidget {
   const CropimageWidget({super.key});
 
   @override
-  _CropimageWidgetState createState() => _CropimageWidgetState();
+  State<CropimageWidget> createState() => _CropimageWidgetState();
 }
 
 class _CropimageWidgetState extends State<CropimageWidget> {
@@ -38,8 +37,6 @@ class _CropimageWidgetState extends State<CropimageWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: Container(
@@ -81,6 +78,7 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                               fontFamily: 'NotoSansThai',
                               color: const Color(0xFF2D2D2D),
                               fontSize: 18.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                               useGoogleFonts: false,
                             ),
@@ -130,6 +128,7 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                               fontFamily: 'NotoSansThai',
                               color: FlutterFlowTheme.of(context).primaryText,
                               fontSize: 12.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.w500,
                               useGoogleFonts: false,
                             ),
@@ -141,15 +140,6 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                     height: 441.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10.0),
-                      child: Image.asset(
-                        'assets/images/decbf62132239dadff8336a8c5d0e6b0.jpg',
-                        width: 377.0,
-                        height: 441.0,
-                        fit: BoxFit.cover,
-                      ),
                     ),
                   ),
                 ],
@@ -173,10 +163,11 @@ class _CropimageWidgetState extends State<CropimageWidget> {
                         const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                     iconPadding:
                         const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                    color: const Color(0xFF406AFF),
+                    color: FlutterFlowTheme.of(context).primary,
                     textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                           fontFamily: 'NotoSansThai',
                           color: Colors.white,
+                          letterSpacing: 0.0,
                           useGoogleFonts: false,
                         ),
                     elevation: 3.0,

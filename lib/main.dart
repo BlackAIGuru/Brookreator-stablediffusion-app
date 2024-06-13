@@ -14,10 +14,12 @@ import 'flutter_flow/internationalization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  GoRouter.optionURLReflectsImperativeAPIs = true;
   usePathUrlStrategy();
   await initFirebase();
 
   await FlutterFlowTheme.initialize();
+
   await authManager.initialize();
 
   final appState = FFAppState(); // Initialize FFAppState
@@ -42,12 +44,13 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
-  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
-  late Stream<BrookreatorAuthUser> userStream;
+  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
 
   late AppStateNotifier _appStateNotifier;
   late GoRouter _router;
+
+  late Stream<BrookreatorAuthUser> userStream;
 
   @override
   void initState() {
@@ -56,7 +59,9 @@ class _MyAppState extends State<MyApp> {
     _appStateNotifier = AppStateNotifier.instance;
     _router = createRouter(_appStateNotifier);
     userStream = brookreatorAuthUserStream()
-      ..listen((user) => _appStateNotifier.update(user));
+      ..listen((user) {
+        _appStateNotifier.update(user);
+      });
 
     Future.delayed(
       const Duration(milliseconds: 2000),
@@ -104,6 +109,7 @@ class _MyAppState extends State<MyApp> {
           }),
           minThumbLength: 5.0,
         ),
+        useMaterial3: false,
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
@@ -121,6 +127,7 @@ class _MyAppState extends State<MyApp> {
           }),
           minThumbLength: 5.0,
         ),
+        useMaterial3: false,
       ),
       themeMode: _themeMode,
       routerConfig: _router,

@@ -1,7 +1,7 @@
-import '/components/credit/credit_widget.dart';
 import '/components/footbar/footbar_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'home_page_widget.dart' show HomePageWidget;
 import 'package:flutter/material.dart';
 
@@ -11,8 +11,6 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   final unfocusNode = FocusNode();
   // Model for signinicon component.
   late SigniniconModel signiniconModel;
-  // Model for credit component.
-  late CreditModel creditModel;
   // State field(s) for PageView widget.
   PageController? pageViewController;
 
@@ -21,20 +19,18 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
           pageViewController!.page != null
       ? pageViewController!.page!.round()
       : 0;
-  // State field(s) for TabBar widget.
-  TabController? tabBarController;
-  int get tabBarCurrentIndex =>
-      tabBarController != null ? tabBarController!.index : 0;
-
+  // State field(s) for ChoiceChips widget.
+  FormFieldController<List<String>>? choiceChipsValueController;
+  String? get choiceChipsValue =>
+      choiceChipsValueController?.value?.firstOrNull;
+  set choiceChipsValue(String? val) =>
+      choiceChipsValueController?.value = val != null ? [val] : [];
   // Model for footbar component.
   late FootbarModel footbarModel;
-
-  /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
     signiniconModel = createModel(context, () => SigniniconModel());
-    creditModel = createModel(context, () => CreditModel());
     footbarModel = createModel(context, () => FootbarModel());
   }
 
@@ -42,12 +38,6 @@ class HomePageModel extends FlutterFlowModel<HomePageWidget> {
   void dispose() {
     unfocusNode.dispose();
     signiniconModel.dispose();
-    creditModel.dispose();
-    tabBarController?.dispose();
     footbarModel.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

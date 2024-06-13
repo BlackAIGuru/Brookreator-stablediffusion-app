@@ -2,7 +2,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/upload_data.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'uploadbutton_model.dart';
 export 'uploadbutton_model.dart';
 
@@ -10,7 +9,7 @@ class UploadbuttonWidget extends StatefulWidget {
   const UploadbuttonWidget({super.key});
 
   @override
-  _UploadbuttonWidgetState createState() => _UploadbuttonWidgetState();
+  State<UploadbuttonWidget> createState() => _UploadbuttonWidgetState();
 }
 
 class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
@@ -37,8 +36,6 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: InkWell(
@@ -60,11 +57,6 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
             var selectedUploadedFiles = <FFUploadedFile>[];
 
             try {
-              showUploadMessage(
-                context,
-                'Uploading file...',
-                showLoading: true,
-              );
               selectedUploadedFiles = selectedMedia
                   .map((m) => FFUploadedFile(
                         name: m.storagePath.split('/').last,
@@ -75,17 +67,14 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                       ))
                   .toList();
             } finally {
-              ScaffoldMessenger.of(context).hideCurrentSnackBar();
               _model.isDataUploading = false;
             }
             if (selectedUploadedFiles.length == selectedMedia.length) {
               setState(() {
                 _model.uploadedLocalFiles = selectedUploadedFiles;
               });
-              showUploadMessage(context, 'Success!');
             } else {
               setState(() {});
-              showUploadMessage(context, 'Failed to upload data');
               return;
             }
           }
@@ -141,6 +130,7 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                             fontFamily: 'NotoSansThai',
                             color: Colors.black,
                             fontSize: 13.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: false,
                           ),
@@ -160,6 +150,7 @@ class _UploadbuttonWidgetState extends State<UploadbuttonWidget> {
                             fontFamily: 'NotoSansThai',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 10.0,
+                            letterSpacing: 0.0,
                             useGoogleFonts: false,
                           ),
                     ),

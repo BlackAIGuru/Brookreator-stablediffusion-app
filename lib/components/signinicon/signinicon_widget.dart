@@ -1,7 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'signinicon_model.dart';
 export 'signinicon_model.dart';
 
@@ -9,7 +8,7 @@ class SigniniconWidget extends StatefulWidget {
   const SigniniconWidget({super.key});
 
   @override
-  _SigniniconWidgetState createState() => _SigniniconWidgetState();
+  State<SigniniconWidget> createState() => _SigniniconWidgetState();
 }
 
 class _SigniniconWidgetState extends State<SigniniconWidget> {
@@ -36,8 +35,6 @@ class _SigniniconWidgetState extends State<SigniniconWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: InkWell(
@@ -77,18 +74,19 @@ class _SigniniconWidgetState extends State<SigniniconWidget> {
                             fontFamily: 'NotoSansThai',
                             color: FlutterFlowTheme.of(context).primaryText,
                             fontSize: 13.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: false,
                           ),
                     ),
                   ),
                 ),
-                const Expanded(
+                Expanded(
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Icon(
                       Icons.login,
-                      color: Color(0xFF406AFF),
+                      color: FlutterFlowTheme.of(context).primary,
                       size: 20.0,
                     ),
                   ),

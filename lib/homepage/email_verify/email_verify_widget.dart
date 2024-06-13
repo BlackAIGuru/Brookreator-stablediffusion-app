@@ -1,10 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/homepage/confirm_success/confirm_success_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'email_verify_model.dart';
@@ -13,15 +13,13 @@ export 'email_verify_model.dart';
 class EmailVerifyWidget extends StatefulWidget {
   const EmailVerifyWidget({
     super.key,
-    required this.email,
     required this.password,
   });
 
-  final String? email;
   final String? password;
 
   @override
-  _EmailVerifyWidgetState createState() => _EmailVerifyWidgetState();
+  State<EmailVerifyWidget> createState() => _EmailVerifyWidgetState();
 }
 
 class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
@@ -44,15 +42,6 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -98,6 +87,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                         style: FlutterFlowTheme.of(context).bodyLarge.override(
                               fontFamily: 'NotoSansThai',
                               fontSize: 22.0,
+                              letterSpacing: 0.0,
                               fontWeight: FontWeight.bold,
                               useGoogleFonts: false,
                             ),
@@ -123,6 +113,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 20.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
@@ -135,7 +126,12 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                           autoDisposeControllers: false,
                           appContext: context,
                           length: 6,
-                          textStyle: FlutterFlowTheme.of(context).bodyLarge,
+                          textStyle:
+                              FlutterFlowTheme.of(context).bodyLarge.override(
+                                    fontFamily: 'NotoSansThai',
+                                    letterSpacing: 0.0,
+                                    useGoogleFonts: false,
+                                  ),
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           enableActiveFill: false,
                           autoFocus: true,
@@ -178,56 +174,91 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                       ),
                       Align(
                         alignment: const AlignmentDirectional(0.0, 0.0),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              15.0, 25.0, 15.0, 0.0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              _model.confirmResult = await actions.confirmEmail(
-                                widget.email,
-                                _model.pinCodeController!.text,
-                              );
-                              if (_model.confirmResult!) {
-                                _model.token = await actions.signIn(
-                                  widget.email,
-                                  widget.password,
+                        child: Builder(
+                          builder: (context) => Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                15.0, 25.0, 15.0, 0.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                _model.confirmResult =
+                                    await actions.confirmEmail(
+                                  FFAppState().Email,
+                                  _model.pinCodeController!.text,
                                 );
-                                if (_model.token != null &&
-                                    _model.token != '') {
-                                  setState(() {
-                                    FFAppState().accessToken = _model.token!;
-                                  });
-
-                                  context.pushNamed('HomePage');
+                                if (_model.confirmResult!) {
+                                  await showDialog(
+                                    barrierColor: FlutterFlowTheme.of(context)
+                                        .backgroundComponents,
+                                    barrierDismissible: false,
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: const ConfirmSuccessWidget(),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Confirm Failed',
+                                        style: TextStyle(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                        ),
+                                      ),
+                                      duration: const Duration(milliseconds: 4000),
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .secondary,
+                                    ),
+                                  );
                                 }
-                              }
 
-                              setState(() {});
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'tlry5c9v' /* Confirm */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 325.0,
-                              height: 50.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'NotoSansThai',
-                                    fontSize: 17.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
+                                setState(() {});
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'tlry5c9v' /* Confirm */,
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
+                              options: FFButtonOptions(
+                                width: 325.0,
+                                height: 50.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).primary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'NotoSansThai',
+                                      fontSize: 17.0,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
                             ),
                           ),
                         ),
@@ -242,7 +273,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                           highlightColor: Colors.transparent,
                           onTap: () async {
                             await actions.resendCode(
-                              widget.email,
+                              FFAppState().Email,
                             );
                           },
                           child: Text(
@@ -255,6 +286,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                   fontFamily: 'NotoSansThai',
                                   color: FlutterFlowTheme.of(context).primary,
                                   fontSize: 16.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                   decoration: TextDecoration.underline,
                                   useGoogleFonts: false,

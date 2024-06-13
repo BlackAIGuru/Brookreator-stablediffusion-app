@@ -11,10 +11,6 @@ class EmailVerifyModel extends FlutterFlowModel<EmailVerifyWidget> {
   String? Function(BuildContext, String?)? pinCodeControllerValidator;
   // Stores action output result for [Custom Action - confirmEmail] action in send_link widget.
   bool? confirmResult;
-  // Stores action output result for [Custom Action - signIn] action in send_link widget.
-  String? token;
-
-  /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {
@@ -26,8 +22,4 @@ class EmailVerifyModel extends FlutterFlowModel<EmailVerifyWidget> {
     unfocusNode.dispose();
     pinCodeController?.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

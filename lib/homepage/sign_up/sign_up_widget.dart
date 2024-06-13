@@ -3,9 +3,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'sign_up_model.dart';
 export 'sign_up_model.dart';
 
@@ -13,7 +11,7 @@ class SignUpWidget extends StatefulWidget {
   const SignUpWidget({super.key});
 
   @override
-  _SignUpWidgetState createState() => _SignUpWidgetState();
+  State<SignUpWidget> createState() => _SignUpWidgetState();
 }
 
 class _SignUpWidgetState extends State<SignUpWidget> {
@@ -26,14 +24,17 @@ class _SignUpWidgetState extends State<SignUpWidget> {
     super.initState();
     _model = createModel(context, () => SignUpModel());
 
-    _model.nameController ??= TextEditingController();
+    _model.nameTextController ??= TextEditingController();
     _model.nameFocusNode ??= FocusNode();
 
-    _model.emailController ??= TextEditingController();
+    _model.emailTextController ??= TextEditingController();
     _model.emailFocusNode ??= FocusNode();
 
-    _model.passwordController ??= TextEditingController();
+    _model.passwordTextController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
+
+    _model.confirmpasswordTextController ??= TextEditingController();
+    _model.confirmpasswordFocusNode ??= FocusNode();
   }
 
   @override
@@ -45,17 +46,6 @@ class _SignUpWidgetState extends State<SignUpWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -101,6 +91,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -119,6 +110,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             fontFamily: 'NotoSansThai',
                             color: FlutterFlowTheme.of(context).primaryText,
                             fontSize: 16.0,
+                            letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                             useGoogleFonts: false,
                           ),
@@ -136,7 +128,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                           children: [
                             Form(
                               key: _model.formKey,
-                              autovalidateMode: AutovalidateMode.always,
+                              autovalidateMode: AutovalidateMode.disabled,
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -146,7 +138,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     child: SizedBox(
                                       width: 327.0,
                                       child: TextFormField(
-                                        controller: _model.nameController,
+                                        controller: _model.nameTextController,
                                         focusNode: _model.nameFocusNode,
                                         autofocus: true,
                                         autofillHints: const [AutofillHints.name],
@@ -166,6 +158,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           alignLabelWithHint: false,
@@ -180,6 +173,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     fontFamily: 'NotoSansThai',
                                                     color: const Color(0xB36F6F6F),
                                                     fontSize: 13.0,
+                                                    letterSpacing: 0.0,
                                                     useGoogleFonts: false,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -229,13 +223,14 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                         textAlign: TextAlign.start,
                                         keyboardType: TextInputType.name,
                                         cursorColor: const Color(0xFF0957DE),
                                         validator: _model
-                                            .nameControllerValidator
+                                            .nameTextControllerValidator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -246,7 +241,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     child: SizedBox(
                                       width: 327.0,
                                       child: TextFormField(
-                                        controller: _model.emailController,
+                                        controller: _model.emailTextController,
                                         focusNode: _model.emailFocusNode,
                                         autofocus: true,
                                         autofillHints: const [AutofillHints.email],
@@ -264,6 +259,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           alignLabelWithHint: false,
@@ -278,6 +274,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     fontFamily: 'NotoSansThai',
                                                     color: const Color(0xB36F6F6F),
                                                     fontSize: 13.0,
+                                                    letterSpacing: 0.0,
                                                     useGoogleFonts: false,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -327,6 +324,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                         textAlign: TextAlign.start,
@@ -334,7 +332,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                             TextInputType.emailAddress,
                                         cursorColor: const Color(0xFF0957DE),
                                         validator: _model
-                                            .emailControllerValidator
+                                            .emailTextControllerValidator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -345,7 +343,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     child: SizedBox(
                                       width: 327.0,
                                       child: TextFormField(
-                                        controller: _model.passwordController,
+                                        controller:
+                                            _model.passwordTextController,
                                         focusNode: _model.passwordFocusNode,
                                         autofocus: true,
                                         autofillHints: const [AutofillHints.email],
@@ -363,6 +362,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                 color:
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                           alignLabelWithHint: false,
@@ -377,6 +377,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                                     fontFamily: 'NotoSansThai',
                                                     color: const Color(0xB36F6F6F),
                                                     fontSize: 13.0,
+                                                    letterSpacing: 0.0,
                                                     useGoogleFonts: false,
                                                   ),
                                           enabledBorder: OutlineInputBorder(
@@ -442,12 +443,134 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                               color:
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                         textAlign: TextAlign.start,
                                         cursorColor: const Color(0xFF0957DE),
                                         validator: _model
-                                            .passwordControllerValidator
+                                            .passwordTextControllerValidator
+                                            .asValidator(context),
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 10.0, 0.0, 5.0),
+                                    child: SizedBox(
+                                      width: 327.0,
+                                      child: TextFormField(
+                                        controller: _model
+                                            .confirmpasswordTextController,
+                                        focusNode:
+                                            _model.confirmpasswordFocusNode,
+                                        autofocus: true,
+                                        autofillHints: const [AutofillHints.email],
+                                        obscureText:
+                                            !_model.confirmpasswordVisibility,
+                                        decoration: InputDecoration(
+                                          labelText: FFLocalizations.of(context)
+                                              .getText(
+                                            '1bi2afmh' /* Confirm Password */,
+                                          ),
+                                          labelStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .labelMedium
+                                              .override(
+                                                fontFamily: 'NotoSansThai',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryText,
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
+                                          alignLabelWithHint: false,
+                                          hintText: FFLocalizations.of(context)
+                                              .getText(
+                                            'eowkc6kv' /* Confirm Your Password */,
+                                          ),
+                                          hintStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMedium
+                                                  .override(
+                                                    fontFamily: 'NotoSansThai',
+                                                    color: const Color(0xB36F6F6F),
+                                                    fontSize: 13.0,
+                                                    letterSpacing: 0.0,
+                                                    useGoogleFonts: false,
+                                                  ),
+                                          enabledBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              width: 0.5,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderSide: const BorderSide(
+                                              color: Color(0xFF0957DE),
+                                              width: 0.5,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          errorBorder: OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
+                                              width: 0.5,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          focusedErrorBorder:
+                                              OutlineInputBorder(
+                                            borderSide: BorderSide(
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .error,
+                                              width: 0.5,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
+                                          suffixIcon: InkWell(
+                                            onTap: () => setState(
+                                              () => _model
+                                                      .confirmpasswordVisibility =
+                                                  !_model
+                                                      .confirmpasswordVisibility,
+                                            ),
+                                            focusNode:
+                                                FocusNode(skipTraversal: true),
+                                            child: Icon(
+                                              _model.confirmpasswordVisibility
+                                                  ? Icons.visibility_outlined
+                                                  : Icons
+                                                      .visibility_off_outlined,
+                                              color: Colors.black,
+                                              size: 20.0,
+                                            ),
+                                          ),
+                                        ),
+                                        style: FlutterFlowTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              letterSpacing: 0.0,
+                                              useGoogleFonts: false,
+                                            ),
+                                        textAlign: TextAlign.start,
+                                        cursorColor: const Color(0xFF0957DE),
+                                        validator: _model
+                                            .confirmpasswordTextControllerValidator
                                             .asValidator(context),
                                       ),
                                     ),
@@ -455,23 +578,25 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 ],
                               ),
                             ),
-                            Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: Text(
-                                FFLocalizations.of(context).getText(
-                                  '0a9ypit3' /* Password must be 8 and contain... */,
+                            if (_model.show ?? true)
+                              Align(
+                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                child: Text(
+                                  FFLocalizations.of(context).getText(
+                                    '0a9ypit3' /* Passwords don't match */,
+                                  ),
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'NotoSansThai',
+                                        color:
+                                            FlutterFlowTheme.of(context).error,
+                                        fontSize: 12.0,
+                                        letterSpacing: 0.0,
+                                        useGoogleFonts: false,
+                                      ),
                                 ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'NotoSansThai',
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      fontSize: 12.0,
-                                      useGoogleFonts: false,
-                                    ),
                               ),
-                            ),
                           ].divide(const SizedBox(height: 12.0)),
                         ),
                       ),
@@ -482,25 +607,51 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         const EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 20.0),
                     child: FFButtonWidget(
                       onPressed: () async {
-                        _model.signUpResult = await actions.signUp(
-                          _model.nameController.text,
-                          _model.emailController.text,
-                          _model.passwordController.text,
-                        );
-                        if (_model.signUpResult!) {
-                          context.pushNamed(
-                            'Email_Verify',
-                            queryParameters: {
-                              'email': serializeParam(
-                                _model.emailController.text,
-                                ParamType.String,
-                              ),
-                              'password': serializeParam(
-                                _model.passwordController.text,
-                                ParamType.String,
-                              ),
-                            }.withoutNulls,
+                        if (_model.formKey.currentState == null ||
+                            !_model.formKey.currentState!.validate()) {
+                          return;
+                        }
+                        if (_model.passwordTextController.text ==
+                            _model.confirmpasswordTextController.text) {
+                          _model.show = false;
+                          setState(() {});
+                          _model.signUpResult = await actions.signUp(
+                            _model.nameTextController.text,
+                            _model.emailTextController.text,
+                            _model.passwordTextController.text,
                           );
+                          if (_model.signUpResult!) {
+                            FFAppState().Email =
+                                _model.emailTextController.text;
+                            setState(() {});
+
+                            context.pushNamed(
+                              'Email_Verify',
+                              queryParameters: {
+                                'password': serializeParam(
+                                  _model.passwordTextController.text,
+                                  ParamType.String,
+                                ),
+                              }.withoutNulls,
+                            );
+                          } else {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                content: Text(
+                                  'error',
+                                  style: TextStyle(
+                                    color: FlutterFlowTheme.of(context).error,
+                                  ),
+                                ),
+                                duration: const Duration(milliseconds: 4000),
+                                backgroundColor:
+                                    FlutterFlowTheme.of(context).secondary,
+                              ),
+                            );
+                          }
+                        } else {
+                          _model.show = true;
+                          setState(() {});
                         }
 
                         setState(() {});
@@ -520,6 +671,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'NotoSansThai',
                                   color: Colors.white,
+                                  letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                         elevation: 3.0,
@@ -547,6 +699,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 fontFamily: 'NotoSansThai',
                                 color:
                                     FlutterFlowTheme.of(context).secondaryText,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: false,
                                 lineHeight: 1.4,
                               ),
@@ -633,6 +786,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -655,6 +809,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color:
                                           FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: false,
                                       lineHeight: 1.4,

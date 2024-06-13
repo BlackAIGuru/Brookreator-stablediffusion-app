@@ -3,7 +3,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'pageview_model.dart';
 export 'pageview_model.dart';
 
@@ -11,7 +10,7 @@ class PageviewWidget extends StatefulWidget {
   const PageviewWidget({super.key});
 
   @override
-  _PageviewWidgetState createState() => _PageviewWidgetState();
+  State<PageviewWidget> createState() => _PageviewWidgetState();
 }
 
 class _PageviewWidgetState extends State<PageviewWidget> {
@@ -38,8 +37,6 @@ class _PageviewWidgetState extends State<PageviewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    context.watch<FFAppState>();
-
     return SizedBox(
       width: double.infinity,
       height: double.infinity,
@@ -110,6 +107,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                         return 27.0;
                                       }
                                     }(),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -131,6 +129,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -199,6 +198,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                         return 27.0;
                                       }
                                     }(),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -220,6 +220,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -288,6 +289,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                         return 27.0;
                                       }
                                     }(),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -309,6 +311,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -377,6 +380,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                         return 27.0;
                                       }
                                     }(),
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -398,6 +402,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryText,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                               ),
@@ -424,6 +429,7 @@ class _PageviewWidgetState extends State<PageviewWidget> {
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.ease,
                 );
+                setState(() {});
               },
               effect: const smooth_page_indicator.ExpandingDotsEffect(
                 expansionFactor: 3.0,

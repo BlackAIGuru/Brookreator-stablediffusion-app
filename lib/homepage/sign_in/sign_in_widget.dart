@@ -1,9 +1,9 @@
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'sign_in_model.dart';
@@ -13,7 +13,7 @@ class SignInWidget extends StatefulWidget {
   const SignInWidget({super.key});
 
   @override
-  _SignInWidgetState createState() => _SignInWidgetState();
+  State<SignInWidget> createState() => _SignInWidgetState();
 }
 
 class _SignInWidgetState extends State<SignInWidget> {
@@ -26,10 +26,10 @@ class _SignInWidgetState extends State<SignInWidget> {
     super.initState();
     _model = createModel(context, () => SignInModel());
 
-    _model.emailController ??= TextEditingController();
+    _model.emailTextController ??= TextEditingController();
     _model.emailFocusNode ??= FocusNode();
 
-    _model.passwordController ??= TextEditingController();
+    _model.passwordTextController ??= TextEditingController();
     _model.passwordFocusNode ??= FocusNode();
   }
 
@@ -42,15 +42,6 @@ class _SignInWidgetState extends State<SignInWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -99,6 +90,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                               FlutterFlowTheme.of(context).bodyLarge.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -134,6 +126,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .secondaryText,
                                   fontSize: 16.0,
+                                  letterSpacing: 0.0,
                                   fontWeight: FontWeight.w500,
                                   useGoogleFonts: false,
                                 ),
@@ -141,7 +134,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                         ),
                         Form(
                           key: _model.formKey,
-                          autovalidateMode: AutovalidateMode.always,
+                          autovalidateMode: AutovalidateMode.disabled,
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -151,8 +144,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 child: SizedBox(
                                   width: 327.0,
                                   child: TextFormField(
-                                    controller: _model.emailController,
+                                    controller: _model.emailTextController,
                                     focusNode: _model.emailFocusNode,
+                                    autofocus: false,
                                     autofillHints: const [AutofillHints.email],
                                     obscureText: false,
                                     decoration: InputDecoration(
@@ -166,6 +160,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                             fontFamily: 'NotoSansThai',
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       alignLabelWithHint: false,
@@ -179,6 +174,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                             fontFamily: 'NotoSansThai',
                                             color: const Color(0xB36F6F6F),
                                             fontSize: 13.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -223,12 +219,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           fontFamily: 'NotoSansThai',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     textAlign: TextAlign.start,
                                     keyboardType: TextInputType.emailAddress,
                                     cursorColor: const Color(0xFF0957DE),
-                                    validator: _model.emailControllerValidator
+                                    validator: _model
+                                        .emailTextControllerValidator
                                         .asValidator(context),
                                   ),
                                 ),
@@ -239,8 +237,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 child: SizedBox(
                                   width: 327.0,
                                   child: TextFormField(
-                                    controller: _model.passwordController,
+                                    controller: _model.passwordTextController,
                                     focusNode: _model.passwordFocusNode,
+                                    autofocus: false,
                                     autofillHints: const [AutofillHints.password],
                                     obscureText: !_model.passwordVisibility,
                                     decoration: InputDecoration(
@@ -255,6 +254,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .secondaryText,
                                             fontSize: 14.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       alignLabelWithHint: false,
@@ -268,6 +268,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                             fontFamily: 'NotoSansThai',
                                             color: const Color(0xB36F6F6F),
                                             fontSize: 13.0,
+                                            letterSpacing: 0.0,
                                             useGoogleFonts: false,
                                           ),
                                       enabledBorder: OutlineInputBorder(
@@ -327,12 +328,13 @@ class _SignInWidgetState extends State<SignInWidget> {
                                           fontFamily: 'NotoSansThai',
                                           color: FlutterFlowTheme.of(context)
                                               .primaryText,
+                                          letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     textAlign: TextAlign.start,
                                     cursorColor: const Color(0xFF0957DE),
                                     validator: _model
-                                        .passwordControllerValidator
+                                        .passwordTextControllerValidator
                                         .asValidator(context),
                                   ),
                                 ),
@@ -351,7 +353,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('Forgotpassword');
+                                context.pushNamed('ForgotPassword');
                               },
                               child: Text(
                                 FFLocalizations.of(context).getText(
@@ -363,6 +365,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       fontFamily: 'NotoSansThai',
                                       color:
                                           FlutterFlowTheme.of(context).primary,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: false,
                                     ),
@@ -377,19 +380,52 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 10.0, 30.0, 10.0, 20.0),
                             child: FFButtonWidget(
                               onPressed: () async {
-                                _model.accessToken = await actions.signIn(
-                                  (_model.emailFocusNode?.hasFocus ?? false)
-                                      .toString(),
-                                  _model.passwordController.text,
+                                if (_model.formKey.currentState == null ||
+                                    !_model.formKey.currentState!.validate()) {
+                                  return;
+                                }
+                                _model.sigininResult = await actions.signIn(
+                                  _model.emailTextController.text,
+                                  _model.passwordTextController.text,
                                 );
-                                if (_model.accessToken != null &&
-                                    _model.accessToken != '') {
-                                  setState(() {
-                                    FFAppState().accessToken =
-                                        _model.accessToken!;
-                                  });
+                                if ((_model.sigininResult == 'failed') ||
+                                        (_model.sigininResult == 'wrong') ||
+                                        (_model.sigininResult == 'unexpected')
+                                    ? false
+                                    : true) {
+                                  FFAppState().AccessToken =
+                                      _model.sigininResult!;
+                                  FFAppState().Logined = true;
+                                  FFAppState().Email =
+                                      _model.emailTextController.text;
+                                  setState(() {});
+                                  _model.accountInfo =
+                                      await BrookreatorGroup.accountCall.call(
+                                    accessToken: FFAppState().AccessToken,
+                                  );
+                                  FFAppState().Credit =
+                                      BrookreatorGroup.accountCall.credit(
+                                    (_model.accountInfo?.jsonBody ?? ''),
+                                  )!;
+                                  setState(() {});
 
                                   context.pushNamed('HomePage');
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        _model.sigininResult!,
+                                        style: TextStyle(
+                                          color: FlutterFlowTheme.of(context)
+                                              .error,
+                                        ),
+                                      ),
+                                      duration: const Duration(milliseconds: 4000),
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .secondary,
+                                    ),
+                                  );
                                 }
 
                                 setState(() {});
@@ -410,6 +446,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       color: Colors.white,
+                                      letterSpacing: 0.0,
                                       useGoogleFonts: false,
                                     ),
                                 elevation: 3.0,
@@ -435,6 +472,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               fontFamily: 'NotoSansThai',
                               color: FlutterFlowTheme.of(context).secondaryText,
+                              letterSpacing: 0.0,
                               useGoogleFonts: false,
                               lineHeight: 1.4,
                             ),
@@ -456,7 +494,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                       print('Button pressed ...');
                                     },
                                     text: FFLocalizations.of(context).getText(
-                                      'ofmksrx0' /* Sign Up with Google */,
+                                      'ofmksrx0' /* Sign In with Google */,
                                     ),
                                     icon: const Icon(
                                       Icons.add,
@@ -521,6 +559,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context)
                                         .secondaryText,
+                                    letterSpacing: 0.0,
                                     useGoogleFonts: false,
                                   ),
                             ),
@@ -542,6 +581,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   .override(
                                     fontFamily: 'NotoSansThai',
                                     color: FlutterFlowTheme.of(context).primary,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                     lineHeight: 1.4,

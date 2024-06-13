@@ -2,9 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 import 'about_us_model.dart';
 export 'about_us_model.dart';
 
@@ -12,7 +10,7 @@ class AboutUsWidget extends StatefulWidget {
   const AboutUsWidget({super.key});
 
   @override
-  _AboutUsWidgetState createState() => _AboutUsWidgetState();
+  State<AboutUsWidget> createState() => _AboutUsWidgetState();
 }
 
 class _AboutUsWidgetState extends State<AboutUsWidget> {
@@ -35,17 +33,6 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
-    context.watch<FFAppState>();
-
     return GestureDetector(
       onTap: () => _model.unfocusNode.canRequestFocus
           ? FocusScope.of(context).requestFocus(_model.unfocusNode)
@@ -79,7 +66,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                               hoverColor: Colors.transparent,
                               highlightColor: Colors.transparent,
                               onTap: () async {
-                                context.pushNamed('Account');
+                                context.safePop();
                               },
                               child: FaIcon(
                                 FontAwesomeIcons.chevronLeft,
@@ -100,6 +87,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                   .override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 22.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                     useGoogleFonts: false,
                                   ),
@@ -131,6 +119,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
@@ -151,6 +140,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.normal,
                                           useGoogleFonts: false,
                                         ),
@@ -176,6 +166,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
@@ -196,6 +187,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.normal,
                                           useGoogleFonts: false,
                                         ),
@@ -221,6 +213,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
@@ -241,6 +234,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.normal,
                                           useGoogleFonts: false,
                                         ),
@@ -266,6 +260,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
@@ -286,6 +281,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 14.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.normal,
                                           useGoogleFonts: false,
                                         ),
@@ -308,6 +304,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       fontSize: 15.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w500,
                                       useGoogleFonts: false,
                                     ),
@@ -331,6 +328,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 16.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
@@ -351,6 +349,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         .override(
                                           fontFamily: 'NotoSansThai',
                                           fontSize: 15.0,
+                                          letterSpacing: 0.0,
                                           fontWeight: FontWeight.w600,
                                           useGoogleFonts: false,
                                         ),
@@ -363,8 +362,8 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 5.0, 30.0, 0.0),
                                   child: RichText(
-                                    textScaleFactor:
-                                        MediaQuery.of(context).textScaleFactor,
+                                    textScaler:
+                                        MediaQuery.of(context).textScaler,
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
@@ -380,6 +379,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts: false,
                                               ),
@@ -393,7 +393,12 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         )
                                       ],
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NotoSansThai',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -404,8 +409,8 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 5.0, 30.0, 0.0),
                                   child: RichText(
-                                    textScaleFactor:
-                                        MediaQuery.of(context).textScaleFactor,
+                                    textScaler:
+                                        MediaQuery.of(context).textScaler,
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
@@ -421,6 +426,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts: false,
                                               ),
@@ -434,7 +440,12 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         )
                                       ],
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NotoSansThai',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),
@@ -445,8 +456,8 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                   padding: const EdgeInsetsDirectional.fromSTEB(
                                       30.0, 5.0, 30.0, 0.0),
                                   child: RichText(
-                                    textScaleFactor:
-                                        MediaQuery.of(context).textScaleFactor,
+                                    textScaler:
+                                        MediaQuery.of(context).textScaler,
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
@@ -462,6 +473,7 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .primaryText,
                                                 fontSize: 16.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts: false,
                                               ),
@@ -475,7 +487,12 @@ class _AboutUsWidgetState extends State<AboutUsWidget> {
                                         )
                                       ],
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyMedium,
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'NotoSansThai',
+                                            letterSpacing: 0.0,
+                                            useGoogleFonts: false,
+                                          ),
                                     ),
                                   ),
                                 ),

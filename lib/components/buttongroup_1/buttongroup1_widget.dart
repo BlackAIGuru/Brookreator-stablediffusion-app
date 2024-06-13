@@ -1,8 +1,9 @@
+import '/backend/api_requests/api_calls.dart';
 import '/components/deleteimage/deleteimage_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -10,10 +11,15 @@ import 'buttongroup1_model.dart';
 export 'buttongroup1_model.dart';
 
 class Buttongroup1Widget extends StatefulWidget {
-  const Buttongroup1Widget({super.key});
+  const Buttongroup1Widget({
+    super.key,
+    this.imageId,
+  });
+
+  final List<String>? imageId;
 
   @override
-  _Buttongroup1WidgetState createState() => _Buttongroup1WidgetState();
+  State<Buttongroup1Widget> createState() => _Buttongroup1WidgetState();
 }
 
 class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
@@ -43,10 +49,10 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
       child: Container(
         width: double.infinity,
-        height: 35.0,
+        height: 40.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
@@ -74,8 +80,8 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                       size: 17.0,
                     ),
                     options: FFButtonOptions(
-                      width: 109.0,
-                      height: double.infinity,
+                      width: 110.0,
+                      height: 35.0,
                       padding: const EdgeInsets.all(0.0),
                       iconPadding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
@@ -85,11 +91,12 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                                 fontFamily: 'NotoSansThai',
                                 color: FlutterFlowTheme.of(context).primaryText,
                                 fontSize: 12.0,
+                                letterSpacing: 0.0,
                                 useGoogleFonts: false,
                               ),
                       borderSide: BorderSide(
                         color: FlutterFlowTheme.of(context).primary,
-                        width: 1.2,
+                        width: 1.0,
                       ),
                       borderRadius: BorderRadius.circular(50.0),
                     ),
@@ -101,31 +108,51 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                   alignment: const AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
                     padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                    child: Container(
-                      width: 33.0,
-                      height: 33.0,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: FlutterFlowTheme.of(context).secondaryText,
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        if (_model.toggleselected) {
+                          await actions.deleteFavourite(
+                            FFAppState().AccessToken,
+                            widget.imageId?.first,
+                          );
+                        } else {
+                          _model.apiResultvco =
+                              await BrookreatorGroup.addFavouritesCall.call(
+                            accessToken: FFAppState().AccessToken,
+                            imageIdsList: widget.imageId,
+                          );
+                        }
+
+                        _model.toggleselected = !_model.toggleselected;
+                        setState(() {});
+
+                        setState(() {});
+                      },
+                      child: Container(
+                        width: 33.0,
+                        height: 33.0,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: _model.toggleselected
+                                ? const Color(0xCDFF5963)
+                                : FlutterFlowTheme.of(context).secondaryText,
+                          ),
                         ),
-                      ),
-                      alignment: const AlignmentDirectional(0.0, 0.0),
-                      child: ToggleIcon(
-                        onPressed: () async {
-                          setState(() => FFAppState().toggleselected =
-                              !FFAppState().toggleselected);
-                        },
-                        value: FFAppState().toggleselected,
-                        onIcon: Icon(
-                          Icons.favorite_sharp,
-                          color: FlutterFlowTheme.of(context).primary,
-                          size: 15.0,
-                        ),
-                        offIcon: Icon(
-                          Icons.favorite_border,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 15.0,
+                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        child: Align(
+                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          child: Icon(
+                            Icons.favorite_sharp,
+                            color: _model.toggleselected
+                                ? const Color(0xCDFF5963)
+                                : FlutterFlowTheme.of(context).secondaryText,
+                            size: 19.0,
+                          ),
                         ),
                       ),
                     ),
@@ -158,7 +185,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                       text: '',
                       icon: const Icon(
                         FFIcons.kbin,
-                        color: Color(0xADFF5963),
+                        color: Color(0xCDFF5963),
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
@@ -175,6 +202,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                               fontFamily: 'NotoSansThai',
                               color: FlutterFlowTheme.of(context).primaryText,
                               fontSize: 60.0,
+                              letterSpacing: 0.0,
                               useGoogleFonts: false,
                             ),
                         borderRadius: BorderRadius.circular(30.0),

@@ -9,10 +9,7 @@ class OpenAppScreenModel extends FlutterFlowModel<OpenAppScreenWidget> {
   final unfocusNode = FocusNode();
   // State field(s) for Carousel widget.
   CarouselController? carouselController;
-
   int carouselCurrentIndex = 1;
-
-  /// Initialization and disposal methods.
 
   @override
   void initState(BuildContext context) {}
@@ -21,8 +18,4 @@ class OpenAppScreenModel extends FlutterFlowModel<OpenAppScreenWidget> {
   void dispose() {
     unfocusNode.dispose();
   }
-
-  /// Action blocks are added here.
-
-  /// Additional helper methods are added here.
 }

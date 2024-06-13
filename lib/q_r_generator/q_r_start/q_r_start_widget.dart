@@ -1,15 +1,17 @@
-import '/components/credit/credit_widget.dart';
+import '/backend/api_requests/api_calls.dart';
+import '/components/done/done_widget.dart';
+import '/components/signinicon/signinicon_widget.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
-import '/q_r_generator/q_r_code_1/q_r_code1_widget.dart';
-import '/q_r_generator/q_r_code_2/q_r_code2_widget.dart';
+import '/q_r_generator/q_r_code/q_r_code_widget.dart';
+import '/text2_image/waiting_image/waiting_image_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'q_r_start_model.dart';
@@ -19,7 +21,7 @@ class QRStartWidget extends StatefulWidget {
   const QRStartWidget({super.key});
 
   @override
-  _QRStartWidgetState createState() => _QRStartWidgetState();
+  State<QRStartWidget> createState() => _QRStartWidgetState();
 }
 
 class _QRStartWidgetState extends State<QRStartWidget>
@@ -43,7 +45,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
       length: 2,
       initialIndex: 0,
     )..addListener(() => setState(() {}));
-    _model.promptLinkController ??= TextEditingController();
+    _model.promptLinkTextController ??= TextEditingController();
     _model.promptLinkFocusNode ??= FocusNode();
 
     _model.uploadImageController = TabController(
@@ -51,7 +53,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
       length: 2,
       initialIndex: 0,
     )..addListener(() => setState(() {}));
-    _model.uploadLinkController ??= TextEditingController();
+    _model.uploadLinkTextController ??= TextEditingController();
     _model.uploadLinkFocusNode ??= FocusNode();
 
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
@@ -66,15 +68,6 @@ class _QRStartWidgetState extends State<QRStartWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -128,6 +121,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                 FlutterFlowTheme.of(context).bodyLarge.override(
                                       fontFamily: 'NotoSansThai',
                                       fontSize: 22.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: false,
                                     ),
@@ -135,18 +129,135 @@ class _QRStartWidgetState extends State<QRStartWidget>
                         ),
                         Align(
                           alignment: const AlignmentDirectional(1.0, 0.0),
-                          child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                0.0, 0.0, 10.0, 0.0),
-                            child: Container(
-                              height: 33.0,
-                              decoration: const BoxDecoration(),
-                              child: wrapWithModel(
-                                model: _model.creditModel,
-                                updateCallback: () => setState(() {}),
-                                child: const CreditWidget(),
-                              ),
-                            ),
+                          child: Builder(
+                            builder: (context) {
+                              if (!FFAppState().Logined) {
+                                return Align(
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 10.0, 0.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
+                                      children: [
+                                        wrapWithModel(
+                                          model: _model.signiniconModel,
+                                          updateCallback: () => setState(() {}),
+                                          child: const SigniniconWidget(),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              } else {
+                                return Align(
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        0.0, 0.0, 5.0, 0.0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.min,
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 5.0, 0.0),
+                                          child: InkWell(
+                                            splashColor: Colors.transparent,
+                                            focusColor: Colors.transparent,
+                                            hoverColor: Colors.transparent,
+                                            highlightColor: Colors.transparent,
+                                            onTap: () async {
+                                              context.pushNamed('Account');
+                                            },
+                                            child: Container(
+                                              width: 70.0,
+                                              height: 30.0,
+                                              decoration: BoxDecoration(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .secondaryBackground,
+                                                borderRadius:
+                                                    BorderRadius.circular(30.0),
+                                                shape: BoxShape.rectangle,
+                                                border: Border.all(
+                                                  color: const Color(0xFFE4E4E4),
+                                                ),
+                                              ),
+                                              child: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment.center,
+                                                children: [
+                                                  Flexible(
+                                                    child: Align(
+                                                      alignment:
+                                                          const AlignmentDirectional(
+                                                              0.0, 0.0),
+                                                      child: Text(
+                                                        FFAppState()
+                                                            .Credit
+                                                            .toString(),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                  fontSize:
+                                                                      16.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                  Align(
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                            1.0, 0.0),
+                                                    child: Padding(
+                                                      padding:
+                                                          const EdgeInsetsDirectional
+                                                              .fromSTEB(
+                                                                  0.0,
+                                                                  0.0,
+                                                                  5.0,
+                                                                  0.0),
+                                                      child: Icon(
+                                                        Icons
+                                                            .monetization_on_outlined,
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primary,
+                                                        size: 17.0,
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }
+                            },
                           ),
                         ),
                       ],
@@ -164,6 +275,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                               FlutterFlowTheme.of(context).titleMedium.override(
                                     fontFamily: 'NotoSansThai',
                                     fontSize: 12.0,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
@@ -192,11 +304,14 @@ class _QRStartWidgetState extends State<QRStartWidget>
                             ),
                             Tab(
                               text: FFLocalizations.of(context).getText(
-                                '3kqyfyvy' /* Upload Image */,
+                                '3kqyfyvy' /* QR Classic */,
                               ),
                             ),
                           ],
                           controller: _model.qRgeneratorController,
+                          onTap: (i) async {
+                            [() async {}, () async {}][i]();
+                          },
                         ),
                       ),
                       Expanded(
@@ -255,6 +370,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                       .primary,
                                                                   fontSize:
                                                                       15.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold,
@@ -278,6 +395,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .primaryText,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold,
@@ -309,6 +428,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         context)
                                                                     .error,
                                                                 fontSize: 15.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -343,6 +464,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         'NotoSansThai',
                                                                     fontSize:
                                                                         12.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
@@ -358,6 +481,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         'NotoSansThai',
                                                                     fontSize:
                                                                         12.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -455,6 +580,12 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                           ],
                                                           controller: _model
                                                               .qRPromptController,
+                                                          onTap: (i) async {
+                                                            [
+                                                              () async {},
+                                                              () async {}
+                                                            ][i]();
+                                                          },
                                                         ),
                                                       ),
                                                       Expanded(
@@ -524,6 +655,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'NotoSansThai',
                                                                                       fontSize: 12.0,
+                                                                                      letterSpacing: 0.0,
                                                                                       fontWeight: FontWeight.w500,
                                                                                       useGoogleFonts: false,
                                                                                     ),
@@ -539,19 +671,21 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 SizedBox(
                                                                               width: double.infinity,
                                                                               child: TextFormField(
-                                                                                controller: _model.promptLinkController,
+                                                                                controller: _model.promptLinkTextController,
                                                                                 focusNode: _model.promptLinkFocusNode,
                                                                                 onChanged: (_) => EasyDebounce.debounce(
-                                                                                  '_model.promptLinkController',
+                                                                                  '_model.promptLinkTextController',
                                                                                   const Duration(milliseconds: 2000),
                                                                                   () => setState(() {}),
                                                                                 ),
+                                                                                autofocus: false,
                                                                                 textCapitalization: TextCapitalization.none,
                                                                                 obscureText: false,
                                                                                 decoration: InputDecoration(
                                                                                   labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: 'NotoSansThai',
                                                                                         color: FlutterFlowTheme.of(context).primaryText,
+                                                                                        letterSpacing: 0.0,
                                                                                         useGoogleFonts: false,
                                                                                       ),
                                                                                   alignLabelWithHint: false,
@@ -562,6 +696,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         fontFamily: 'NotoSansThai',
                                                                                         color: const Color(0xB36F6F6F),
                                                                                         fontSize: 12.0,
+                                                                                        letterSpacing: 0.0,
                                                                                         useGoogleFonts: false,
                                                                                       ),
                                                                                   enabledBorder: OutlineInputBorder(
@@ -592,10 +727,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                     ),
                                                                                     borderRadius: BorderRadius.circular(10.0),
                                                                                   ),
-                                                                                  suffixIcon: _model.promptLinkController!.text.isNotEmpty
+                                                                                  suffixIcon: _model.promptLinkTextController!.text.isNotEmpty
                                                                                       ? InkWell(
                                                                                           onTap: () async {
-                                                                                            _model.promptLinkController?.clear();
+                                                                                            _model.promptLinkTextController?.clear();
                                                                                             setState(() {});
                                                                                           },
                                                                                           child: Icon(
@@ -610,12 +745,13 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                       fontFamily: 'NotoSansThai',
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                       fontSize: 12.0,
+                                                                                      letterSpacing: 0.0,
                                                                                       useGoogleFonts: false,
                                                                                     ),
                                                                                 textAlign: TextAlign.justify,
                                                                                 keyboardType: TextInputType.url,
                                                                                 cursorColor: FlutterFlowTheme.of(context).primary,
-                                                                                validator: _model.promptLinkControllerValidator.asValidator(context),
+                                                                                validator: _model.promptLinkTextControllerValidator.asValidator(context),
                                                                               ),
                                                                             ),
                                                                           ),
@@ -641,208 +777,288 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     MainAxisAlignment
                                                                         .spaceEvenly,
                                                                 children: [
-                                                                  Align(
-                                                                    alignment:
-                                                                        const AlignmentDirectional(
-                                                                            -1.0,
-                                                                            0.0),
-                                                                    child:
-                                                                        InkWell(
-                                                                      splashColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      focusColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      hoverColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      highlightColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      onTap:
-                                                                          () async {
-                                                                        final selectedMedia =
-                                                                            await selectMedia(
-                                                                          maxWidth:
-                                                                              1024.00,
-                                                                          maxHeight:
-                                                                              1024.00,
-                                                                          mediaSource:
-                                                                              MediaSource.photoGallery,
-                                                                          multiImage:
-                                                                              false,
-                                                                        );
-                                                                        if (selectedMedia !=
-                                                                                null &&
-                                                                            selectedMedia.every((m) =>
-                                                                                validateFileFormat(m.storagePath, context))) {
-                                                                          setState(() =>
-                                                                              _model.isDataUploading1 = true);
-                                                                          var selectedUploadedFiles =
-                                                                              <FFUploadedFile>[];
-
-                                                                          try {
-                                                                            selectedUploadedFiles = selectedMedia
-                                                                                .map((m) => FFUploadedFile(
-                                                                                      name: m.storagePath.split('/').last,
-                                                                                      bytes: m.bytes,
-                                                                                      height: m.dimensions?.height,
-                                                                                      width: m.dimensions?.width,
-                                                                                      blurHash: m.blurHash,
-                                                                                    ))
-                                                                                .toList();
-                                                                          } finally {
-                                                                            _model.isDataUploading1 =
-                                                                                false;
-                                                                          }
-                                                                          if (selectedUploadedFiles.length ==
-                                                                              selectedMedia.length) {
-                                                                            setState(() {
-                                                                              _model.uploadedLocalFile1 = selectedUploadedFiles.first;
-                                                                            });
-                                                                          } else {
-                                                                            setState(() {});
-                                                                            return;
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      child:
-                                                                          Container(
-                                                                        width:
-                                                                            280.0,
-                                                                        height:
-                                                                            125.0,
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                        ),
-                                                                        child:
-                                                                            Align(
+                                                                  Builder(
+                                                                    builder:
+                                                                        (context) {
+                                                                      if ((_model.uploadedLocalFile1.bytes?.isNotEmpty ??
+                                                                              false)) {
+                                                                        return Stack(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Stack(
-                                                                            children: [
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                              1.0,
+                                                                              -1.0),
+                                                                          children: [
+                                                                            Align(
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                              child: Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(70.0, 10.0, 10.0, 0.0),
                                                                                 child: ClipRRect(
-                                                                                  borderRadius: BorderRadius.circular(0.0),
-                                                                                  child: Image.asset(
-                                                                                    'assets/images/Rectangle_165.png',
-                                                                                    width: 250.0,
+                                                                                  borderRadius: BorderRadius.circular(8.0),
+                                                                                  child: Image.memory(
+                                                                                    _model.uploadedLocalFile1.bytes ?? Uint8List.fromList([]),
+                                                                                    width: 130.0,
+                                                                                    height: 130.0,
                                                                                     fit: BoxFit.cover,
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, -1.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
-                                                                                  child: ClipRRect(
-                                                                                    borderRadius: BorderRadius.circular(8.0),
-                                                                                    child: Image.asset(
-                                                                                      'assets/images/icons8-upload-to-cloud.gif',
-                                                                                      width: 25.0,
-                                                                                      height: 20.0,
-                                                                                      fit: BoxFit.contain,
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'zn7soqjk' /* Upload QR Code */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'NotoSansThai',
-                                                                                          color: Colors.black,
-                                                                                          fontSize: 10.0,
-                                                                                          fontWeight: FontWeight.w600,
-                                                                                          useGoogleFonts: false,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'z4u6h1n3' /* File types : PNG/JPG, maximum ... */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'NotoSansThai',
-                                                                                          color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                          fontSize: 8.0,
-                                                                                          useGoogleFonts: false,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  Flexible(
-                                                                    child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          const AlignmentDirectional(
-                                                                              1.0,
-                                                                              0.0),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            5.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Column(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.min,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.center,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                              child: Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  'aimxo22s' /* Example */,
-                                                                                ),
-                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: 'NotoSansThai',
-                                                                                      color: FlutterFlowTheme.of(context).primaryText,
-                                                                                      fontSize: MediaQuery.sizeOf(context).width < 375.0 ? 9.0 : 10.0,
-                                                                                      fontWeight: FontWeight.w500,
-                                                                                      useGoogleFonts: false,
-                                                                                    ),
-                                                                              ),
                                                                             ),
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                              child: ClipRRect(
-                                                                                borderRadius: BorderRadius.circular(8.0),
-                                                                                child: Image.asset(
-                                                                                  'assets/images/Example.jpg',
-                                                                                  width: 52.0,
-                                                                                  height: 52.0,
-                                                                                  fit: BoxFit.contain,
+                                                                              alignment: const AlignmentDirectional(1.0, -1.0),
+                                                                              child: InkWell(
+                                                                                splashColor: Colors.transparent,
+                                                                                focusColor: Colors.transparent,
+                                                                                hoverColor: Colors.transparent,
+                                                                                highlightColor: Colors.transparent,
+                                                                                onTap: () async {
+                                                                                  setState(() {
+                                                                                    _model.isDataUploading1 = false;
+                                                                                    _model.uploadedLocalFile1 = FFUploadedFile(bytes: Uint8List.fromList([]));
+                                                                                  });
+
+                                                                                  _model.deleteresult1 = await actions.deleteUploadedFile(
+                                                                                    FFAppState().AccessToken,
+                                                                                    _model.uploadedQRPath,
+                                                                                  );
+                                                                                  if (_model.deleteresult1!) {
+                                                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                                                      SnackBar(
+                                                                                        content: Text(
+                                                                                          'sucess',
+                                                                                          style: TextStyle(
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                          ),
+                                                                                        ),
+                                                                                        duration: const Duration(milliseconds: 4000),
+                                                                                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                      ),
+                                                                                    );
+                                                                                  } else {
+                                                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                                                      SnackBar(
+                                                                                        content: Text(
+                                                                                          'failed',
+                                                                                          style: TextStyle(
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                          ),
+                                                                                        ),
+                                                                                        duration: const Duration(milliseconds: 4000),
+                                                                                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                      ),
+                                                                                    );
+                                                                                  }
+
+                                                                                  setState(() {});
+                                                                                },
+                                                                                child: Icon(
+                                                                                  Icons.cancel_rounded,
+                                                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                  size: 24.0,
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ],
-                                                                        ),
+                                                                        );
+                                                                      } else {
+                                                                        return Align(
+                                                                          alignment: const AlignmentDirectional(
+                                                                              -1.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              if (FFAppState().Logined) {
+                                                                                final selectedMedia = await selectMedia(
+                                                                                  maxWidth: 1024.00,
+                                                                                  maxHeight: 1024.00,
+                                                                                  mediaSource: MediaSource.photoGallery,
+                                                                                  multiImage: false,
+                                                                                );
+                                                                                if (selectedMedia != null && selectedMedia.every((m) => validateFileFormat(m.storagePath, context))) {
+                                                                                  setState(() => _model.isDataUploading1 = true);
+                                                                                  var selectedUploadedFiles = <FFUploadedFile>[];
+
+                                                                                  try {
+                                                                                    selectedUploadedFiles = selectedMedia
+                                                                                        .map((m) => FFUploadedFile(
+                                                                                              name: m.storagePath.split('/').last,
+                                                                                              bytes: m.bytes,
+                                                                                              height: m.dimensions?.height,
+                                                                                              width: m.dimensions?.width,
+                                                                                              blurHash: m.blurHash,
+                                                                                            ))
+                                                                                        .toList();
+                                                                                  } finally {
+                                                                                    _model.isDataUploading1 = false;
+                                                                                  }
+                                                                                  if (selectedUploadedFiles.length == selectedMedia.length) {
+                                                                                    setState(() {
+                                                                                      _model.uploadedLocalFile1 = selectedUploadedFiles.first;
+                                                                                    });
+                                                                                  } else {
+                                                                                    setState(() {});
+                                                                                    return;
+                                                                                  }
+                                                                                }
+
+                                                                                _model.awsupload1 = await BrookreatorGroup.fileUploaderCall.call(
+                                                                                  accessToken: FFAppState().AccessToken,
+                                                                                  uploadedfile: _model.uploadedLocalFile1,
+                                                                                );
+                                                                                _model.uploadedQRPath = getJsonField(
+                                                                                  (_model.awsupload1?.jsonBody ?? ''),
+                                                                                  r'''$.result.filePath''',
+                                                                                ).toString();
+                                                                                setState(() {});
+                                                                              } else {
+                                                                                context.pushNamed('SignIn');
+                                                                              }
+
+                                                                              setState(() {});
+                                                                            },
+                                                                            child:
+                                                                                Container(
+                                                                              width: 280.0,
+                                                                              height: 125.0,
+                                                                              decoration: BoxDecoration(
+                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                              ),
+                                                                              child: Align(
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                child: Stack(
+                                                                                  children: [
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      child: ClipRRect(
+                                                                                        borderRadius: BorderRadius.circular(0.0),
+                                                                                        child: Image.asset(
+                                                                                          'assets/images/Rectangle_165.png',
+                                                                                          width: 250.0,
+                                                                                          fit: BoxFit.cover,
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, -1.0),
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                                                                        child: ClipRRect(
+                                                                                          borderRadius: BorderRadius.circular(8.0),
+                                                                                          child: Image.asset(
+                                                                                            'assets/images/icons8-upload-to-cloud.gif',
+                                                                                            width: 25.0,
+                                                                                            height: 20.0,
+                                                                                            fit: BoxFit.contain,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'zn7soqjk' /* Upload QR Code */,
+                                                                                          ),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'NotoSansThai',
+                                                                                                color: Colors.black,
+                                                                                                fontSize: 10.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                                fontWeight: FontWeight.w600,
+                                                                                                useGoogleFonts: false,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'z4u6h1n3' /* File types : PNG/JPG, maximum ... */,
+                                                                                          ),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'NotoSansThai',
+                                                                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                                fontSize: 8.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                                useGoogleFonts: false,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      }
+                                                                    },
+                                                                  ),
+                                                                  Align(
+                                                                    alignment:
+                                                                        const AlignmentDirectional(
+                                                                            1.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Padding(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          5.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.min,
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.center,
+                                                                        children: [
+                                                                          Align(
+                                                                            alignment:
+                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'aimxo22s' /* Example */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'NotoSansThai',
+                                                                                    color: FlutterFlowTheme.of(context).primaryText,
+                                                                                    fontSize: MediaQuery.sizeOf(context).width < 375.0 ? 9.0 : 10.0,
+                                                                                    letterSpacing: 0.0,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    useGoogleFonts: false,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                          Align(
+                                                                            alignment:
+                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                              child: Image.asset(
+                                                                                'assets/images/Example.jpg',
+                                                                                width: 52.0,
+                                                                                height: 52.0,
+                                                                                fit: BoxFit.contain,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
                                                                       ),
                                                                     ),
                                                                   ),
@@ -905,6 +1121,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         context)
                                                                     .primary,
                                                                 fontSize: 15.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold,
@@ -928,6 +1146,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         context)
                                                                     .primaryText,
                                                                 fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold,
@@ -974,6 +1194,144 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
+                                                                Align(
+                                                                  alignment:
+                                                                      const AlignmentDirectional(
+                                                                          0.0,
+                                                                          0.0),
+                                                                  child:
+                                                                      ClipRRect(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            10.0),
+                                                                    child: Image
+                                                                        .asset(
+                                                                      'assets/images/ChristmasTree.png',
+                                                                      width:
+                                                                          101.0,
+                                                                      height:
+                                                                          106.0,
+                                                                      fit: BoxFit
+                                                                          .cover,
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Container(
+                                                                  width: 100.0,
+                                                                  height: 40.0,
+                                                                  decoration:
+                                                                      const BoxDecoration(
+                                                                    gradient:
+                                                                        LinearGradient(
+                                                                      colors: [
+                                                                        Color(
+                                                                            0x04000000),
+                                                                        Color(
+                                                                            0xD4000000)
+                                                                      ],
+                                                                      stops: [
+                                                                        0.0,
+                                                                        1.0
+                                                                      ],
+                                                                      begin: AlignmentDirectional(
+                                                                          0.0,
+                                                                          -1.0),
+                                                                      end: AlignmentDirectional(
+                                                                          0,
+                                                                          1.0),
+                                                                    ),
+                                                                    borderRadius:
+                                                                        BorderRadius
+                                                                            .only(
+                                                                      bottomLeft:
+                                                                          Radius.circular(
+                                                                              10.0),
+                                                                      bottomRight:
+                                                                          Radius.circular(
+                                                                              10.0),
+                                                                      topLeft: Radius
+                                                                          .circular(
+                                                                              0.0),
+                                                                      topRight:
+                                                                          Radius.circular(
+                                                                              0.0),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                                Align(
+                                                                  alignment:
+                                                                      const AlignmentDirectional(
+                                                                          0.0,
+                                                                          1.0),
+                                                                  child:
+                                                                      Padding(
+                                                                    padding: const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            0.0,
+                                                                            0.0,
+                                                                            7.0),
+                                                                    child: Text(
+                                                                      FFLocalizations.of(
+                                                                              context)
+                                                                          .getText(
+                                                                        'fjw396to' /* Christmas Tree */,
+                                                                      ),
+                                                                      style: FlutterFlowTheme.of(
+                                                                              context)
+                                                                          .bodyMedium
+                                                                          .override(
+                                                                            fontFamily:
+                                                                                'NotoSansThai',
+                                                                            color:
+                                                                                FlutterFlowTheme.of(context).info,
+                                                                            fontSize:
+                                                                                12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
+                                                                            fontWeight:
+                                                                                FontWeight.w600,
+                                                                            useGoogleFonts:
+                                                                                false,
+                                                                          ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Container(
+                                                            width: 101.0,
+                                                            height: 106.0,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          10.0),
+                                                              border:
+                                                                  Border.all(
+                                                                color: _model
+                                                                            .qrSelectmodelCurrentIndex ==
+                                                                        1
+                                                                    ? FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primary
+                                                                    : const Color(
+                                                                        0xFFE4E4E4),
+                                                                width: 2.0,
+                                                              ),
+                                                            ),
+                                                            child: Stack(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.0, 1.0),
+                                                              children: [
                                                                 ClipRRect(
                                                                   borderRadius:
                                                                       BorderRadius
@@ -992,7 +1350,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1064,6 +1422,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1093,7 +1453,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        1
+                                                                        2
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1131,7 +1491,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1200,6 +1560,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1229,7 +1591,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        2
+                                                                        3
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1267,7 +1629,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1336,6 +1698,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1365,7 +1729,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        3
+                                                                        4
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1403,7 +1767,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1472,6 +1836,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1501,7 +1867,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        4
+                                                                        5
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1539,7 +1905,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1608,6 +1974,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1637,7 +2005,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        5
+                                                                        6
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1675,7 +2043,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1744,6 +2112,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1773,7 +2143,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        6
+                                                                        7
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1811,7 +2181,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -1880,6 +2250,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -1909,7 +2281,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        7
+                                                                        8
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -1947,7 +2319,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -2015,7 +2387,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
-                                                                                10.0,
+                                                                                9.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -2045,7 +2419,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        8
+                                                                        9
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -2083,7 +2457,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -2151,7 +2525,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             color:
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
-                                                                                12.0,
+                                                                                10.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -2181,7 +2557,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        9
+                                                                        10
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -2219,7 +2595,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -2288,6 +2664,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -2317,7 +2695,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrSelectmodelCurrentIndex ==
-                                                                        10
+                                                                        11
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -2355,7 +2733,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 ),
                                                                 Container(
                                                                   width: 100.0,
-                                                                  height: 58.0,
+                                                                  height: 40.0,
                                                                   decoration:
                                                                       const BoxDecoration(
                                                                     gradient:
@@ -2424,6 +2802,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 FlutterFlowTheme.of(context).info,
                                                                             fontSize:
                                                                                 12.0,
+                                                                            letterSpacing:
+                                                                                0.0,
                                                                             fontWeight:
                                                                                 FontWeight.w600,
                                                                             useGoogleFonts:
@@ -2455,6 +2835,55 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                             (index, _) async {
                                                           _model.qrSelectmodelCurrentIndex =
                                                               index;
+                                                          _model.themeId = () {
+                                                            if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                0) {
+                                                              return 81;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                1) {
+                                                              return 80;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                2) {
+                                                              return 90;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                3) {
+                                                              return 86;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                4) {
+                                                              return 88;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                5) {
+                                                              return 82;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                6) {
+                                                              return 83;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                7) {
+                                                              return 89;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                8) {
+                                                              return 84;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                9) {
+                                                              return 91;
+                                                            } else if (_model
+                                                                    .qrSelectmodelCurrentIndex ==
+                                                                10) {
+                                                              return 85;
+                                                            } else {
+                                                              return 87;
+                                                            }
+                                                          }();
                                                           setState(() {});
                                                         },
                                                       ),
@@ -2516,6 +2945,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                       .primary,
                                                                   fontSize:
                                                                       15.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold,
@@ -2536,6 +2967,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold,
@@ -2562,17 +2995,17 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                           .getText(
                                                         'd4e8xek1' /* Select number of images to gen... */,
                                                       ),
-                                                      style:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyMedium
-                                                              .override(
-                                                                fontFamily:
-                                                                    'NotoSansThai',
-                                                                fontSize: 12.0,
-                                                                useGoogleFonts:
-                                                                    false,
-                                                              ),
+                                                      style: FlutterFlowTheme
+                                                              .of(context)
+                                                          .bodyMedium
+                                                          .override(
+                                                            fontFamily:
+                                                                'NotoSansThai',
+                                                            fontSize: 12.0,
+                                                            letterSpacing: 0.0,
+                                                            useGoogleFonts:
+                                                                false,
+                                                          ),
                                                     ),
                                                   ),
                                                 ),
@@ -2599,13 +3032,25 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                             max: 9.0,
                                                             value: _model
                                                                     .sliderValue ??=
-                                                                5.0,
+                                                                6.0,
                                                             divisions: 8,
                                                             onChanged:
-                                                                (newValue) {
+                                                                (newValue) async {
                                                               setState(() =>
                                                                   _model.sliderValue =
                                                                       newValue);
+                                                              _model.imagenumber =
+                                                                  await actions
+                                                                      .changeToIngeger(
+                                                                _model
+                                                                    .sliderValue,
+                                                              );
+                                                              _model.qrPromptSample =
+                                                                  _model
+                                                                      .imagenumber!;
+                                                              setState(() {});
+
+                                                              setState(() {});
                                                             },
                                                           ),
                                                         ),
@@ -2647,6 +3092,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             'NotoSansThai',
                                                                         fontSize:
                                                                             12.0,
+                                                                        letterSpacing:
+                                                                            0.0,
                                                                         useGoogleFonts:
                                                                             false,
                                                                       ),
@@ -2666,6 +3113,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2684,6 +3133,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2702,6 +3153,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2720,6 +3173,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2738,6 +3193,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2756,6 +3213,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2774,6 +3233,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                           'NotoSansThai',
                                                                       fontSize:
                                                                           12.0,
+                                                                      letterSpacing:
+                                                                          0.0,
                                                                       useGoogleFonts:
                                                                           false,
                                                                     ),
@@ -2800,6 +3261,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             'NotoSansThai',
                                                                         fontSize:
                                                                             12.0,
+                                                                        letterSpacing:
+                                                                            0.0,
                                                                         useGoogleFonts:
                                                                             false,
                                                                       ),
@@ -2822,87 +3285,320 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                 ),
                                 Align(
                                   alignment: const AlignmentDirectional(0.0, 1.0),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 10.0, 10.0),
-                                    child: FFButtonWidget(
-                                      onPressed: !(_model
-                                                      .qRPromptCurrentIndex ==
-                                                  0
-                                              ? (_model.promptLinkController
-                                                          .text !=
-                                                      '')
-                                              : ((_model.uploadedLocalFile1
-                                                          .bytes?.isNotEmpty ??
-                                                      false)))
-                                          ? null
-                                          : () async {
-                                              await showModalBottomSheet(
-                                                isScrollControlled: true,
-                                                backgroundColor:
-                                                    Colors.transparent,
-                                                enableDrag: false,
-                                                context: context,
-                                                builder: (context) {
-                                                  return GestureDetector(
-                                                    onTap: () => _model
-                                                            .unfocusNode
-                                                            .canRequestFocus
-                                                        ? FocusScope.of(context)
-                                                            .requestFocus(_model
-                                                                .unfocusNode)
-                                                        : FocusScope.of(context)
-                                                            .unfocus(),
-                                                    child: Padding(
-                                                      padding: MediaQuery
-                                                          .viewInsetsOf(
-                                                              context),
-                                                      child: const SizedBox(
-                                                        height: 650.0,
-                                                        child: QRCode1Widget(),
-                                                      ),
-                                                    ),
+                                  child: Builder(
+                                    builder: (context) => Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 0.0, 10.0, 10.0),
+                                      child: FFButtonWidget(
+                                        onPressed: (_model
+                                                        .qRPromptCurrentIndex ==
+                                                    0
+                                                ? (_model.promptLinkTextController
+                                                            .text ==
+                                                        '')
+                                                : ((_model.uploadedLocalFile1
+                                                            .bytes?.isEmpty ??
+                                                        true)))
+                                            ? null
+                                            : () async {
+                                                if (FFAppState().Logined) {
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 3000));
+                                                  _model.qRTheme = await actions
+                                                      .selectQRTheme(
+                                                    _model
+                                                        .qrSelectmodelCurrentIndex,
                                                   );
-                                                },
-                                              ).then((value) =>
-                                                  safeSetState(() {}));
-                                            },
-                                      text: FFLocalizations.of(context).getText(
-                                        'muhcqo9z' /* Generate */,
-                                      ),
-                                      icon: const Icon(
-                                        Icons.auto_awesome_sharp,
-                                        size: 15.0,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 390.0,
-                                        height: 45.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            25.0, 0.0, 25.0, 0.0),
-                                        iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'NotoSansThai',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              useGoogleFonts: false,
-                                            ),
-                                        elevation: 3.0,
-                                        borderSide: const BorderSide(
-                                          color: Colors.transparent,
+                                                  FFAppState().Prompt =
+                                                      getJsonField(
+                                                    _model.qRTheme,
+                                                    r'''$.template''',
+                                                  ).toString();
+                                                  FFAppState().NegativePrompt =
+                                                      getJsonField(
+                                                    _model.qRTheme,
+                                                    r'''$.negative''',
+                                                  ).toString();
+                                                  setState(() {});
+                                                  _model.requestSent =
+                                                      await BrookreatorGroup
+                                                          .qRGenerateCall
+                                                          .call(
+                                                    accessToken: FFAppState()
+                                                        .AccessToken,
+                                                    prompt: FFAppState().Prompt,
+                                                    negativePrompt: FFAppState()
+                                                        .NegativePrompt,
+                                                    samples:
+                                                        _model.qrPromptSample,
+                                                    height: 768,
+                                                    width: 768,
+                                                    sampler: getJsonField(
+                                                      _model.qRTheme,
+                                                      r'''$.sampler''',
+                                                    ).toString(),
+                                                    steps: getJsonField(
+                                                      _model.qRTheme,
+                                                      r'''$.steps''',
+                                                    ),
+                                                    isQRCode: true,
+                                                    qrCodeContent: _model
+                                                                .qRPromptCurrentIndex ==
+                                                            0
+                                                        ? _model
+                                                            .promptLinkTextController
+                                                            .text
+                                                        : 'https://qr.codes/n9NmI3',
+                                                    qrCodeFilePath:
+                                                        _model.uploadedQRPath !=
+                                                                    ''
+                                                            ? _model
+                                                                .uploadedQRPath
+                                                            : '',
+                                                    cfgScale: getJsonField(
+                                                      _model.qRTheme,
+                                                      r'''$.aesthetic''',
+                                                    ),
+                                                    controlNetScale: 1.8,
+                                                    themeId: _model.themeId,
+                                                    engine: getJsonField(
+                                                      _model.qRTheme,
+                                                      r'''$.model''',
+                                                    ).toString(),
+                                                  );
+                                                  FFAppState().QRTxID =
+                                                      BrookreatorGroup
+                                                          .qRGenerateCall
+                                                          .textID(
+                                                    (_model.requestSent
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )!;
+                                                  setState(() {});
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (dialogContext) {
+                                                      return Dialog(
+                                                        elevation: 0,
+                                                        insetPadding:
+                                                            EdgeInsets.zero,
+                                                        backgroundColor:
+                                                            Colors.transparent,
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                    0.0, 0.0)
+                                                                .resolve(
+                                                                    Directionality.of(
+                                                                        context)),
+                                                        child: GestureDetector(
+                                                          onTap: () => _model
+                                                                  .unfocusNode
+                                                                  .canRequestFocus
+                                                              ? FocusScope.of(
+                                                                      context)
+                                                                  .requestFocus(
+                                                                      _model
+                                                                          .unfocusNode)
+                                                              : FocusScope.of(
+                                                                      context)
+                                                                  .unfocus(),
+                                                          child:
+                                                              WaitingImageWidget(
+                                                            time: () {
+                                                              if (_model
+                                                                      .qrPromptSample <=
+                                                                  2) {
+                                                                return 1;
+                                                              } else if ((_model
+                                                                          .qrPromptSample >
+                                                                      2) &&
+                                                                  (_model.qrPromptSample <=
+                                                                      4)) {
+                                                                return 3;
+                                                              } else {
+                                                                return 5;
+                                                              }
+                                                            }(),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ).then((value) =>
+                                                      setState(() {}));
+
+                                                  _model.accountInfo1 =
+                                                      await BrookreatorGroup
+                                                          .accountCall
+                                                          .call(
+                                                    accessToken: FFAppState()
+                                                        .AccessToken,
+                                                  );
+                                                  FFAppState().Credit =
+                                                      BrookreatorGroup
+                                                          .accountCall
+                                                          .credit(
+                                                    (_model.accountInfo1
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )!;
+                                                  setState(() {});
+                                                  while (true) {
+                                                    _model.loopPrompt =
+                                                        await BrookreatorGroup
+                                                            .queueStatusCall
+                                                            .call(
+                                                      accessToken: FFAppState()
+                                                          .AccessToken,
+                                                      txID: FFAppState().QRTxID,
+                                                    );
+                                                    if (BrookreatorGroup
+                                                            .queueStatusCall
+                                                            .status(
+                                                          (_model.loopPrompt
+                                                                  ?.jsonBody ??
+                                                              ''),
+                                                        ) ==
+                                                        'COMPLETED') {
+                                                      break;
+                                                    } else {
+                                                      await Future.delayed(
+                                                          const Duration(
+                                                              milliseconds:
+                                                                  2000));
+                                                    }
+                                                  }
+                                                  _model.qrResult =
+                                                      await BrookreatorGroup
+                                                          .getGeneratedContentsCall
+                                                          .call(
+                                                    accessToken: FFAppState()
+                                                        .AccessToken,
+                                                    txID: FFAppState().QRTxID,
+                                                  );
+                                                  Navigator.pop(context);
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (dialogContext) {
+                                                      return Dialog(
+                                                        elevation: 0,
+                                                        insetPadding:
+                                                            EdgeInsets.zero,
+                                                        backgroundColor:
+                                                            Colors.transparent,
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                    0.0, 0.0)
+                                                                .resolve(
+                                                                    Directionality.of(
+                                                                        context)),
+                                                        child: GestureDetector(
+                                                          onTap: () => _model
+                                                                  .unfocusNode
+                                                                  .canRequestFocus
+                                                              ? FocusScope.of(
+                                                                      context)
+                                                                  .requestFocus(
+                                                                      _model
+                                                                          .unfocusNode)
+                                                              : FocusScope.of(
+                                                                      context)
+                                                                  .unfocus(),
+                                                          child: const DoneWidget(),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ).then((value) =>
+                                                      setState(() {}));
+
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 2000));
+                                                  Navigator.pop(context);
+                                                  await showModalBottomSheet(
+                                                    isScrollControlled: true,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    enableDrag: false,
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return GestureDetector(
+                                                        onTap: () => _model
+                                                                .unfocusNode
+                                                                .canRequestFocus
+                                                            ? FocusScope.of(
+                                                                    context)
+                                                                .requestFocus(_model
+                                                                    .unfocusNode)
+                                                            : FocusScope.of(
+                                                                    context)
+                                                                .unfocus(),
+                                                        child: Padding(
+                                                          padding: MediaQuery
+                                                              .viewInsetsOf(
+                                                                  context),
+                                                          child: QRCodeWidget(
+                                                            qrResult:
+                                                                BrookreatorGroup
+                                                                    .getGeneratedContentsCall
+                                                                    .url(
+                                                              (_model.qrResult
+                                                                      ?.jsonBody ??
+                                                                  ''),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ).then((value) =>
+                                                      safeSetState(() {}));
+                                                } else {
+                                                  context.pushNamed('SignIn');
+                                                }
+
+                                                setState(() {});
+                                              },
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'muhcqo9z' /* Generate */,
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(25.0),
-                                        disabledColor: const Color(0x581371FF),
-                                        disabledTextColor:
-                                            FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
+                                        icon: const Icon(
+                                          Icons.auto_awesome_sharp,
+                                          size: 15.0,
+                                        ),
+                                        options: FFButtonOptions(
+                                          width: 390.0,
+                                          height: 45.0,
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  25.0, 0.0, 25.0, 0.0),
+                                          iconPadding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .titleSmall
+                                              .override(
+                                                fontFamily: 'NotoSansThai',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
+                                          elevation: 3.0,
+                                          borderSide: const BorderSide(
+                                            color: Colors.transparent,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(25.0),
+                                          disabledColor: const Color(0x581371FF),
+                                          disabledTextColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                        ),
                                       ),
                                     ),
                                   ),
@@ -2961,6 +3657,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                       .primary,
                                                                   fontSize:
                                                                       15.0,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold,
@@ -2984,6 +3682,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   color: FlutterFlowTheme.of(
                                                                           context)
                                                                       .primaryText,
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold,
@@ -3015,6 +3715,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         context)
                                                                     .error,
                                                                 fontSize: 15.0,
+                                                                letterSpacing:
+                                                                    0.0,
                                                                 useGoogleFonts:
                                                                     false,
                                                               ),
@@ -3049,6 +3751,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         'NotoSansThai',
                                                                     fontSize:
                                                                         12.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w600,
@@ -3064,6 +3768,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         'NotoSansThai',
                                                                     fontSize:
                                                                         12.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .w500,
@@ -3161,6 +3867,12 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                           ],
                                                           controller: _model
                                                               .uploadImageController,
+                                                          onTap: (i) async {
+                                                            [
+                                                              () async {},
+                                                              () async {}
+                                                            ][i]();
+                                                          },
                                                         ),
                                                       ),
                                                       Expanded(
@@ -3230,6 +3942,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 style: FlutterFlowTheme.of(context).bodyMedium.override(
                                                                                       fontFamily: 'NotoSansThai',
                                                                                       fontSize: 12.0,
+                                                                                      letterSpacing: 0.0,
                                                                                       fontWeight: FontWeight.w500,
                                                                                       useGoogleFonts: false,
                                                                                     ),
@@ -3245,19 +3958,21 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                 SizedBox(
                                                                               width: double.infinity,
                                                                               child: TextFormField(
-                                                                                controller: _model.uploadLinkController,
+                                                                                controller: _model.uploadLinkTextController,
                                                                                 focusNode: _model.uploadLinkFocusNode,
                                                                                 onChanged: (_) => EasyDebounce.debounce(
-                                                                                  '_model.uploadLinkController',
+                                                                                  '_model.uploadLinkTextController',
                                                                                   const Duration(milliseconds: 2000),
                                                                                   () => setState(() {}),
                                                                                 ),
+                                                                                autofocus: false,
                                                                                 textCapitalization: TextCapitalization.none,
                                                                                 obscureText: false,
                                                                                 decoration: InputDecoration(
                                                                                   labelStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: 'NotoSansThai',
                                                                                         color: FlutterFlowTheme.of(context).primaryText,
+                                                                                        letterSpacing: 0.0,
                                                                                         useGoogleFonts: false,
                                                                                       ),
                                                                                   alignLabelWithHint: false,
@@ -3268,6 +3983,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                         fontFamily: 'NotoSansThai',
                                                                                         color: const Color(0xB36F6F6F),
                                                                                         fontSize: 12.0,
+                                                                                        letterSpacing: 0.0,
                                                                                         useGoogleFonts: false,
                                                                                       ),
                                                                                   enabledBorder: OutlineInputBorder(
@@ -3298,10 +4014,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                     ),
                                                                                     borderRadius: BorderRadius.circular(10.0),
                                                                                   ),
-                                                                                  suffixIcon: _model.uploadLinkController!.text.isNotEmpty
+                                                                                  suffixIcon: _model.uploadLinkTextController!.text.isNotEmpty
                                                                                       ? InkWell(
                                                                                           onTap: () async {
-                                                                                            _model.uploadLinkController?.clear();
+                                                                                            _model.uploadLinkTextController?.clear();
                                                                                             setState(() {});
                                                                                           },
                                                                                           child: Icon(
@@ -3316,12 +4032,13 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                                       fontFamily: 'NotoSansThai',
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                       fontSize: 12.0,
+                                                                                      letterSpacing: 0.0,
                                                                                       useGoogleFonts: false,
                                                                                     ),
                                                                                 textAlign: TextAlign.justify,
                                                                                 keyboardType: TextInputType.url,
                                                                                 cursorColor: FlutterFlowTheme.of(context).primary,
-                                                                                validator: _model.uploadLinkControllerValidator.asValidator(context),
+                                                                                validator: _model.uploadLinkTextControllerValidator.asValidator(context),
                                                                               ),
                                                                             ),
                                                                           ),
@@ -3347,208 +4064,288 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     MainAxisAlignment
                                                                         .spaceEvenly,
                                                                 children: [
-                                                                  Align(
-                                                                    alignment:
-                                                                        const AlignmentDirectional(
-                                                                            -1.0,
-                                                                            0.0),
-                                                                    child:
-                                                                        InkWell(
-                                                                      splashColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      focusColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      hoverColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      highlightColor:
-                                                                          Colors
-                                                                              .transparent,
-                                                                      onTap:
-                                                                          () async {
-                                                                        final selectedMedia =
-                                                                            await selectMedia(
-                                                                          maxWidth:
-                                                                              1024.00,
-                                                                          maxHeight:
-                                                                              1024.00,
-                                                                          mediaSource:
-                                                                              MediaSource.photoGallery,
-                                                                          multiImage:
-                                                                              false,
-                                                                        );
-                                                                        if (selectedMedia !=
-                                                                                null &&
-                                                                            selectedMedia.every((m) =>
-                                                                                validateFileFormat(m.storagePath, context))) {
-                                                                          setState(() =>
-                                                                              _model.isDataUploading2 = true);
-                                                                          var selectedUploadedFiles =
-                                                                              <FFUploadedFile>[];
-
-                                                                          try {
-                                                                            selectedUploadedFiles = selectedMedia
-                                                                                .map((m) => FFUploadedFile(
-                                                                                      name: m.storagePath.split('/').last,
-                                                                                      bytes: m.bytes,
-                                                                                      height: m.dimensions?.height,
-                                                                                      width: m.dimensions?.width,
-                                                                                      blurHash: m.blurHash,
-                                                                                    ))
-                                                                                .toList();
-                                                                          } finally {
-                                                                            _model.isDataUploading2 =
-                                                                                false;
-                                                                          }
-                                                                          if (selectedUploadedFiles.length ==
-                                                                              selectedMedia.length) {
-                                                                            setState(() {
-                                                                              _model.uploadedLocalFile2 = selectedUploadedFiles.first;
-                                                                            });
-                                                                          } else {
-                                                                            setState(() {});
-                                                                            return;
-                                                                          }
-                                                                        }
-                                                                      },
-                                                                      child:
-                                                                          Container(
-                                                                        width:
-                                                                            280.0,
-                                                                        height:
-                                                                            125.0,
-                                                                        decoration:
-                                                                            BoxDecoration(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).secondaryBackground,
-                                                                        ),
-                                                                        child:
-                                                                            Align(
+                                                                  Builder(
+                                                                    builder:
+                                                                        (context) {
+                                                                      if ((_model.uploadedLocalFile2.bytes?.isNotEmpty ??
+                                                                              false)) {
+                                                                        return Stack(
                                                                           alignment: const AlignmentDirectional(
-                                                                              0.0,
-                                                                              0.0),
-                                                                          child:
-                                                                              Stack(
-                                                                            children: [
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                              1.0,
+                                                                              -1.0),
+                                                                          children: [
+                                                                            Align(
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                              child: Padding(
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(70.0, 10.0, 10.0, 0.0),
                                                                                 child: ClipRRect(
-                                                                                  borderRadius: BorderRadius.circular(0.0),
-                                                                                  child: Image.asset(
-                                                                                    'assets/images/Rectangle_165.png',
-                                                                                    width: 250.0,
+                                                                                  borderRadius: BorderRadius.circular(8.0),
+                                                                                  child: Image.memory(
+                                                                                    _model.uploadedLocalFile2.bytes ?? Uint8List.fromList([]),
+                                                                                    width: 130.0,
+                                                                                    height: 130.0,
                                                                                     fit: BoxFit.cover,
                                                                                   ),
                                                                                 ),
                                                                               ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, -1.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
-                                                                                  child: ClipRRect(
-                                                                                    borderRadius: BorderRadius.circular(8.0),
-                                                                                    child: Image.asset(
-                                                                                      'assets/images/icons8-upload-to-cloud.gif',
-                                                                                      width: 25.0,
-                                                                                      height: 20.0,
-                                                                                      fit: BoxFit.contain,
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'y06z8i14' /* Upload QR Code */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'NotoSansThai',
-                                                                                          color: Colors.black,
-                                                                                          fontSize: 10.0,
-                                                                                          fontWeight: FontWeight.w600,
-                                                                                          useGoogleFonts: false,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'y1296ksn' /* File types : PNG/JPG, maximum ... */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                          fontFamily: 'NotoSansThai',
-                                                                                          color: FlutterFlowTheme.of(context).secondaryText,
-                                                                                          fontSize: 8.0,
-                                                                                          useGoogleFonts: false,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                  Flexible(
-                                                                    child:
-                                                                        Align(
-                                                                      alignment:
-                                                                          const AlignmentDirectional(
-                                                                              1.0,
-                                                                              0.0),
-                                                                      child:
-                                                                          Padding(
-                                                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                                                            0.0,
-                                                                            0.0,
-                                                                            5.0,
-                                                                            0.0),
-                                                                        child:
-                                                                            Column(
-                                                                          mainAxisSize:
-                                                                              MainAxisSize.min,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.center,
-                                                                          children: [
-                                                                            Align(
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                              child: Text(
-                                                                                FFLocalizations.of(context).getText(
-                                                                                  'yutr9l0r' /* Example */,
-                                                                                ),
-                                                                                style: FlutterFlowTheme.of(context).bodyMedium.override(
-                                                                                      fontFamily: 'NotoSansThai',
-                                                                                      color: FlutterFlowTheme.of(context).primaryText,
-                                                                                      fontSize: MediaQuery.sizeOf(context).width < 375.0 ? 9.0 : 10.0,
-                                                                                      fontWeight: FontWeight.w500,
-                                                                                      useGoogleFonts: false,
-                                                                                    ),
-                                                                              ),
                                                                             ),
                                                                             Align(
-                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                              child: ClipRRect(
-                                                                                borderRadius: BorderRadius.circular(8.0),
-                                                                                child: Image.asset(
-                                                                                  'assets/images/Example.jpg',
-                                                                                  width: 52.0,
-                                                                                  height: 52.0,
-                                                                                  fit: BoxFit.contain,
+                                                                              alignment: const AlignmentDirectional(1.0, -1.0),
+                                                                              child: InkWell(
+                                                                                splashColor: Colors.transparent,
+                                                                                focusColor: Colors.transparent,
+                                                                                hoverColor: Colors.transparent,
+                                                                                highlightColor: Colors.transparent,
+                                                                                onTap: () async {
+                                                                                  setState(() {
+                                                                                    _model.isDataUploading2 = false;
+                                                                                    _model.uploadedLocalFile2 = FFUploadedFile(bytes: Uint8List.fromList([]));
+                                                                                  });
+
+                                                                                  _model.deleteresult2 = await actions.deleteUploadedFile(
+                                                                                    FFAppState().AccessToken,
+                                                                                    _model.uploadedQRPath,
+                                                                                  );
+                                                                                  if (_model.deleteresult2!) {
+                                                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                                                      SnackBar(
+                                                                                        content: Text(
+                                                                                          'sucess',
+                                                                                          style: TextStyle(
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                          ),
+                                                                                        ),
+                                                                                        duration: const Duration(milliseconds: 4000),
+                                                                                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                      ),
+                                                                                    );
+                                                                                  } else {
+                                                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                                                      SnackBar(
+                                                                                        content: Text(
+                                                                                          'failed',
+                                                                                          style: TextStyle(
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                          ),
+                                                                                        ),
+                                                                                        duration: const Duration(milliseconds: 4000),
+                                                                                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                      ),
+                                                                                    );
+                                                                                  }
+
+                                                                                  setState(() {});
+                                                                                },
+                                                                                child: Icon(
+                                                                                  Icons.cancel_rounded,
+                                                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                  size: 24.0,
                                                                                 ),
                                                                               ),
                                                                             ),
                                                                           ],
-                                                                        ),
+                                                                        );
+                                                                      } else {
+                                                                        return Align(
+                                                                          alignment: const AlignmentDirectional(
+                                                                              -1.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              InkWell(
+                                                                            splashColor:
+                                                                                Colors.transparent,
+                                                                            focusColor:
+                                                                                Colors.transparent,
+                                                                            hoverColor:
+                                                                                Colors.transparent,
+                                                                            highlightColor:
+                                                                                Colors.transparent,
+                                                                            onTap:
+                                                                                () async {
+                                                                              if (FFAppState().Logined) {
+                                                                                final selectedMedia = await selectMedia(
+                                                                                  maxWidth: 1024.00,
+                                                                                  maxHeight: 1024.00,
+                                                                                  mediaSource: MediaSource.photoGallery,
+                                                                                  multiImage: false,
+                                                                                );
+                                                                                if (selectedMedia != null && selectedMedia.every((m) => validateFileFormat(m.storagePath, context))) {
+                                                                                  setState(() => _model.isDataUploading2 = true);
+                                                                                  var selectedUploadedFiles = <FFUploadedFile>[];
+
+                                                                                  try {
+                                                                                    selectedUploadedFiles = selectedMedia
+                                                                                        .map((m) => FFUploadedFile(
+                                                                                              name: m.storagePath.split('/').last,
+                                                                                              bytes: m.bytes,
+                                                                                              height: m.dimensions?.height,
+                                                                                              width: m.dimensions?.width,
+                                                                                              blurHash: m.blurHash,
+                                                                                            ))
+                                                                                        .toList();
+                                                                                  } finally {
+                                                                                    _model.isDataUploading2 = false;
+                                                                                  }
+                                                                                  if (selectedUploadedFiles.length == selectedMedia.length) {
+                                                                                    setState(() {
+                                                                                      _model.uploadedLocalFile2 = selectedUploadedFiles.first;
+                                                                                    });
+                                                                                  } else {
+                                                                                    setState(() {});
+                                                                                    return;
+                                                                                  }
+                                                                                }
+
+                                                                                _model.awsupload2 = await BrookreatorGroup.fileUploaderCall.call(
+                                                                                  accessToken: FFAppState().AccessToken,
+                                                                                  uploadedfile: _model.uploadedLocalFile2,
+                                                                                );
+                                                                                _model.uploadedQRPath = getJsonField(
+                                                                                  (_model.awsupload2?.jsonBody ?? ''),
+                                                                                  r'''$.result.filePath''',
+                                                                                ).toString();
+                                                                                setState(() {});
+                                                                              } else {
+                                                                                context.pushNamed('SignIn');
+                                                                              }
+
+                                                                              setState(() {});
+                                                                            },
+                                                                            child:
+                                                                                Container(
+                                                                              width: 280.0,
+                                                                              height: 125.0,
+                                                                              decoration: BoxDecoration(
+                                                                                color: FlutterFlowTheme.of(context).secondaryBackground,
+                                                                              ),
+                                                                              child: Align(
+                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                child: Stack(
+                                                                                  children: [
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      child: ClipRRect(
+                                                                                        borderRadius: BorderRadius.circular(0.0),
+                                                                                        child: Image.asset(
+                                                                                          'assets/images/Rectangle_165.png',
+                                                                                          width: 250.0,
+                                                                                          fit: BoxFit.cover,
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, -1.0),
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                                                                        child: ClipRRect(
+                                                                                          borderRadius: BorderRadius.circular(8.0),
+                                                                                          child: Image.asset(
+                                                                                            'assets/images/icons8-upload-to-cloud.gif',
+                                                                                            width: 25.0,
+                                                                                            height: 20.0,
+                                                                                            fit: BoxFit.contain,
+                                                                                          ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'y06z8i14' /* Upload QR Code */,
+                                                                                          ),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'NotoSansThai',
+                                                                                                color: Colors.black,
+                                                                                                fontSize: 10.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                                fontWeight: FontWeight.w600,
+                                                                                                useGoogleFonts: false,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                    Align(
+                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                                                                      child: Padding(
+                                                                                        padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                                                                                        child: Text(
+                                                                                          FFLocalizations.of(context).getText(
+                                                                                            'y1296ksn' /* File types : PNG/JPG, maximum ... */,
+                                                                                          ),
+                                                                                          style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                                fontFamily: 'NotoSansThai',
+                                                                                                color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                                fontSize: 8.0,
+                                                                                                letterSpacing: 0.0,
+                                                                                                useGoogleFonts: false,
+                                                                                              ),
+                                                                                        ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
+                                                                                ),
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        );
+                                                                      }
+                                                                    },
+                                                                  ),
+                                                                  Align(
+                                                                    alignment:
+                                                                        const AlignmentDirectional(
+                                                                            1.0,
+                                                                            0.0),
+                                                                    child:
+                                                                        Padding(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          0.0,
+                                                                          0.0,
+                                                                          5.0,
+                                                                          0.0),
+                                                                      child:
+                                                                          Column(
+                                                                        mainAxisSize:
+                                                                            MainAxisSize.min,
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.center,
+                                                                        children: [
+                                                                          Align(
+                                                                            alignment:
+                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'yutr9l0r' /* Example */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'NotoSansThai',
+                                                                                    color: FlutterFlowTheme.of(context).primaryText,
+                                                                                    fontSize: MediaQuery.sizeOf(context).width < 375.0 ? 9.0 : 10.0,
+                                                                                    letterSpacing: 0.0,
+                                                                                    fontWeight: FontWeight.w500,
+                                                                                    useGoogleFonts: false,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                          Align(
+                                                                            alignment:
+                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                              child: Image.asset(
+                                                                                'assets/images/Example.jpg',
+                                                                                width: 52.0,
+                                                                                height: 52.0,
+                                                                                fit: BoxFit.contain,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ],
                                                                       ),
                                                                     ),
                                                                   ),
@@ -3599,10 +4396,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   0.0,
                                                                   0.0),
                                                       child: RichText(
-                                                        textScaleFactor:
+                                                        textScaler:
                                                             MediaQuery.of(
                                                                     context)
-                                                                .textScaleFactor,
+                                                                .textScaler,
                                                         text: TextSpan(
                                                           children: [
                                                             TextSpan(
@@ -3622,6 +4419,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                         .primary,
                                                                     fontSize:
                                                                         15.0,
+                                                                    letterSpacing:
+                                                                        0.0,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold,
@@ -3650,7 +4449,15 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                           ],
                                                           style: FlutterFlowTheme
                                                                   .of(context)
-                                                              .bodyMedium,
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                         ),
                                                       ),
                                                     ),
@@ -3680,6 +4487,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'NotoSansThai',
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
@@ -3689,245 +4498,377 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                  Align(
-                                                    alignment:
-                                                        const AlignmentDirectional(
-                                                            0.0, 0.0),
-                                                    child: Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          final selectedMedia =
-                                                              await selectMedia(
-                                                            maxWidth: 1024.00,
-                                                            maxHeight: 1024.00,
-                                                            mediaSource:
-                                                                MediaSource
-                                                                    .photoGallery,
-                                                            multiImage: true,
-                                                          );
-                                                          if (selectedMedia !=
-                                                                  null &&
-                                                              selectedMedia.every((m) =>
-                                                                  validateFileFormat(
-                                                                      m.storagePath,
-                                                                      context))) {
-                                                            setState(() => _model
-                                                                    .isDataUploading3 =
-                                                                true);
-                                                            var selectedUploadedFiles =
-                                                                <FFUploadedFile>[];
-
-                                                            try {
-                                                              showUploadMessage(
-                                                                context,
-                                                                'Uploading file...',
-                                                                showLoading:
-                                                                    true,
-                                                              );
-                                                              selectedUploadedFiles =
-                                                                  selectedMedia
-                                                                      .map((m) =>
-                                                                          FFUploadedFile(
-                                                                            name:
-                                                                                m.storagePath.split('/').last,
-                                                                            bytes:
-                                                                                m.bytes,
-                                                                            height:
-                                                                                m.dimensions?.height,
-                                                                            width:
-                                                                                m.dimensions?.width,
-                                                                            blurHash:
-                                                                                m.blurHash,
-                                                                          ))
-                                                                      .toList();
-                                                            } finally {
-                                                              ScaffoldMessenger
-                                                                      .of(context)
-                                                                  .hideCurrentSnackBar();
-                                                              _model.isDataUploading3 =
-                                                                  false;
-                                                            }
-                                                            if (selectedUploadedFiles
-                                                                    .length ==
-                                                                selectedMedia
-                                                                    .length) {
-                                                              setState(() {
-                                                                _model.uploadedLocalFiles3 =
-                                                                    selectedUploadedFiles;
-                                                              });
-                                                              showUploadMessage(
-                                                                  context,
-                                                                  'Success!');
-                                                            } else {
-                                                              setState(() {});
-                                                              showUploadMessage(
-                                                                  context,
-                                                                  'Failed to upload data');
-                                                              return;
-                                                            }
-                                                          }
-                                                        },
-                                                        child: Container(
-                                                          width: 310.0,
-                                                          height: 140.0,
+                                                  Builder(
+                                                    builder: (context) {
+                                                      if ((_model
+                                                                  .uploadedLocalFile3
+                                                                  .bytes
+                                                                  ?.isNotEmpty ??
+                                                              false)) {
+                                                        return Container(
+                                                          width: 200.0,
+                                                          height: 200.0,
                                                           decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Align(
+                                                              const BoxDecoration(),
+                                                          child: Stack(
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Stack(
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
+                                                                    1.0, -1.0),
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        0.0,
+                                                                        0.0),
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          10.0,
+                                                                          10.0,
+                                                                          10.0,
                                                                           0.0),
                                                                   child:
                                                                       ClipRRect(
                                                                     borderRadius:
                                                                         BorderRadius.circular(
-                                                                            0.0),
+                                                                            8.0),
                                                                     child: Image
-                                                                        .asset(
-                                                                      'assets/images/Rectangle_165.png',
+                                                                        .memory(
+                                                                      _model.uploadedLocalFile3
+                                                                              .bytes ??
+                                                                          Uint8List.fromList(
+                                                                              []),
                                                                       width:
-                                                                          300.0,
+                                                                          200.0,
                                                                       height:
-                                                                          127.0,
+                                                                          200.0,
                                                                       fit: BoxFit
                                                                           .cover,
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
-                                                                          -1.0),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            40.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    child:
-                                                                        ClipRRect(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              8.0),
-                                                                      child: Image
-                                                                          .asset(
-                                                                        'assets/images/icons8-upload-to-cloud.gif',
-                                                                        width:
-                                                                            35.0,
-                                                                        height:
-                                                                            30.0,
-                                                                        fit: BoxFit
-                                                                            .contain,
-                                                                      ),
-                                                                    ),
+                                                              ),
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        1.0,
+                                                                        -1.0),
+                                                                child: InkWell(
+                                                                  splashColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  focusColor: Colors
+                                                                      .transparent,
+                                                                  hoverColor: Colors
+                                                                      .transparent,
+                                                                  highlightColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  onTap:
+                                                                      () async {
+                                                                    setState(
+                                                                        () {
+                                                                      _model.isDataUploading3 =
+                                                                          false;
+                                                                      _model.uploadedLocalFile3 =
+                                                                          FFUploadedFile(
+                                                                              bytes: Uint8List.fromList([]));
+                                                                    });
+
+                                                                    _model.deleteresult3 =
+                                                                        await actions
+                                                                            .deleteUploadedFile(
+                                                                      FFAppState()
+                                                                          .AccessToken,
+                                                                      _model
+                                                                          .uploadedBgPath,
+                                                                    );
+                                                                    if (_model
+                                                                        .deleteresult3!) {
+                                                                      ScaffoldMessenger.of(
+                                                                              context)
+                                                                          .showSnackBar(
+                                                                        SnackBar(
+                                                                          content:
+                                                                              Text(
+                                                                            'sucess',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                            ),
+                                                                          ),
+                                                                          duration:
+                                                                              const Duration(milliseconds: 4000),
+                                                                          backgroundColor:
+                                                                              FlutterFlowTheme.of(context).secondary,
+                                                                        ),
+                                                                      );
+                                                                    } else {
+                                                                      ScaffoldMessenger.of(
+                                                                              context)
+                                                                          .showSnackBar(
+                                                                        SnackBar(
+                                                                          content:
+                                                                              Text(
+                                                                            'failed',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                            ),
+                                                                          ),
+                                                                          duration:
+                                                                              const Duration(milliseconds: 4000),
+                                                                          backgroundColor:
+                                                                              FlutterFlowTheme.of(context).secondary,
+                                                                        ),
+                                                                      );
+                                                                    }
+
+                                                                    setState(
+                                                                        () {});
+                                                                  },
+                                                                  child: Icon(
+                                                                    Icons
+                                                                        .cancel_rounded,
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryText,
+                                                                    size: 24.0,
                                                                   ),
                                                                 ),
-                                                                Align(
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        );
+                                                      } else {
+                                                        return Align(
+                                                          alignment:
+                                                              const AlignmentDirectional(
+                                                                  0.0, 0.0),
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsetsDirectional
+                                                                    .fromSTEB(
+                                                                        0.0,
+                                                                        10.0,
+                                                                        0.0,
+                                                                        0.0),
+                                                            child: InkWell(
+                                                              splashColor: Colors
+                                                                  .transparent,
+                                                              focusColor: Colors
+                                                                  .transparent,
+                                                              hoverColor: Colors
+                                                                  .transparent,
+                                                              highlightColor:
+                                                                  Colors
+                                                                      .transparent,
+                                                              onTap: () async {
+                                                                if (FFAppState()
+                                                                    .Logined) {
+                                                                  final selectedMedia =
+                                                                      await selectMedia(
+                                                                    maxWidth:
+                                                                        1024.00,
+                                                                    maxHeight:
+                                                                        1024.00,
+                                                                    mediaSource:
+                                                                        MediaSource
+                                                                            .photoGallery,
+                                                                    multiImage:
+                                                                        false,
+                                                                  );
+                                                                  if (selectedMedia !=
+                                                                          null &&
+                                                                      selectedMedia.every((m) => validateFileFormat(
+                                                                          m.storagePath,
+                                                                          context))) {
+                                                                    setState(() =>
+                                                                        _model.isDataUploading3 =
+                                                                            true);
+                                                                    var selectedUploadedFiles =
+                                                                        <FFUploadedFile>[];
+
+                                                                    try {
+                                                                      selectedUploadedFiles = selectedMedia
+                                                                          .map((m) => FFUploadedFile(
+                                                                                name: m.storagePath.split('/').last,
+                                                                                bytes: m.bytes,
+                                                                                height: m.dimensions?.height,
+                                                                                width: m.dimensions?.width,
+                                                                                blurHash: m.blurHash,
+                                                                              ))
+                                                                          .toList();
+                                                                    } finally {
+                                                                      _model.isDataUploading3 =
+                                                                          false;
+                                                                    }
+                                                                    if (selectedUploadedFiles
+                                                                            .length ==
+                                                                        selectedMedia
+                                                                            .length) {
+                                                                      setState(
+                                                                          () {
+                                                                        _model.uploadedLocalFile3 =
+                                                                            selectedUploadedFiles.first;
+                                                                      });
+                                                                    } else {
+                                                                      setState(
+                                                                          () {});
+                                                                      return;
+                                                                    }
+                                                                  }
+
+                                                                  _model.awsupload3 =
+                                                                      await BrookreatorGroup
+                                                                          .fileUploaderCall
+                                                                          .call(
+                                                                    accessToken:
+                                                                        FFAppState()
+                                                                            .AccessToken,
+                                                                    uploadedfile:
+                                                                        _model
+                                                                            .uploadedLocalFile3,
+                                                                  );
+                                                                  _model.uploadedBgPath =
+                                                                      getJsonField(
+                                                                    (_model.awsupload3
+                                                                            ?.jsonBody ??
+                                                                        ''),
+                                                                    r'''$.result.filePath''',
+                                                                  ).toString();
+                                                                  setState(
+                                                                      () {});
+                                                                } else {
+                                                                  context.pushNamed(
+                                                                      'SignIn');
+                                                                }
+
+                                                                setState(() {});
+                                                              },
+                                                              child: Container(
+                                                                width: 310.0,
+                                                                height: 140.0,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .secondaryBackground,
+                                                                ),
+                                                                child: Align(
                                                                   alignment:
                                                                       const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            10.0,
+                                                                  child: Stack(
+                                                                    children: [
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
-                                                                    child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'ty6h3aka' /* Upload Background */,
-                                                                      ),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'NotoSansThai',
-                                                                            color:
-                                                                                Colors.black,
-                                                                            fontSize:
-                                                                                13.0,
-                                                                            fontWeight:
-                                                                                FontWeight.w600,
-                                                                            useGoogleFonts:
-                                                                                false,
+                                                                        child:
+                                                                            ClipRRect(
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(0.0),
+                                                                          child:
+                                                                              Image.asset(
+                                                                            'assets/images/Rectangle_165.png',
+                                                                            width:
+                                                                                300.0,
+                                                                            height:
+                                                                                127.0,
+                                                                            fit:
+                                                                                BoxFit.cover,
                                                                           ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
+                                                                        ),
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
-                                                                            45.0,
+                                                                            -1.0),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              40.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              ClipRRect(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(8.0),
+                                                                            child:
+                                                                                Image.asset(
+                                                                              'assets/images/icons8-upload-to-cloud.gif',
+                                                                              width: 35.0,
+                                                                              height: 30.0,
+                                                                              fit: BoxFit.contain,
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
-                                                                    child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'khr69jq2' /* File types : PNG/JPG, maximum ... */,
-                                                                      ),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'NotoSansThai',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            fontSize:
-                                                                                10.0,
-                                                                            useGoogleFonts:
-                                                                                false,
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              10.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'ty6h3aka' /* Upload Background */,
+                                                                            ),
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  fontFamily: 'NotoSansThai',
+                                                                                  color: Colors.black,
+                                                                                  fontSize: 13.0,
+                                                                                  letterSpacing: 0.0,
+                                                                                  fontWeight: FontWeight.w600,
+                                                                                  useGoogleFonts: false,
+                                                                                ),
                                                                           ),
-                                                                    ),
+                                                                        ),
+                                                                      ),
+                                                                      Align(
+                                                                        alignment: const AlignmentDirectional(
+                                                                            0.0,
+                                                                            0.0),
+                                                                        child:
+                                                                            Padding(
+                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                              0.0,
+                                                                              45.0,
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Text(
+                                                                            FFLocalizations.of(context).getText(
+                                                                              'khr69jq2' /* File types : PNG/JPG, maximum ... */,
+                                                                            ),
+                                                                            style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                  fontFamily: 'NotoSansThai',
+                                                                                  color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                  fontSize: 10.0,
+                                                                                  letterSpacing: 0.0,
+                                                                                  useGoogleFonts: false,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ),
+                                                                    ],
                                                                   ),
                                                                 ),
-                                                              ],
+                                                              ),
                                                             ),
                                                           ),
-                                                        ),
-                                                      ),
-                                                    ),
+                                                        );
+                                                      }
+                                                    },
                                                   ),
                                                   Align(
                                                     alignment:
@@ -3954,6 +4895,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'NotoSansThai',
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
@@ -3985,10 +4928,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                           highlightColor: Colors
                                                               .transparent,
                                                           onTap: () async {
-                                                            setState(() {
-                                                              _model.qrscaleselected =
-                                                                  1;
-                                                            });
+                                                            _model.qrscaleselected =
+                                                                10;
+                                                            setState(() {});
                                                           },
                                                           child: Container(
                                                             width: 85.0,
@@ -4006,7 +4948,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                   Border.all(
                                                                 color: _model
                                                                             .qrscaleselected ==
-                                                                        1
+                                                                        10
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
@@ -4055,10 +4997,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 Colors
                                                                     .transparent,
                                                             onTap: () async {
-                                                              setState(() {
-                                                                _model.qrscaleselected =
-                                                                    2;
-                                                              });
+                                                              _model.qrscaleselected =
+                                                                  5;
+                                                              setState(() {});
                                                             },
                                                             child: Container(
                                                               width: 85.0,
@@ -4076,7 +5017,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     Border.all(
                                                                   color: _model
                                                                               .qrscaleselected ==
-                                                                          2
+                                                                          5
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
@@ -4129,10 +5070,9 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 Colors
                                                                     .transparent,
                                                             onTap: () async {
-                                                              setState(() {
-                                                                _model.qrscaleselected =
-                                                                    3;
-                                                              });
+                                                              _model.qrscaleselected =
+                                                                  0;
+                                                              setState(() {});
                                                             },
                                                             child: Container(
                                                               width: 85.0,
@@ -4150,7 +5090,7 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                     Border.all(
                                                                   color: _model
                                                                               .qrscaleselected ==
-                                                                          3
+                                                                          0
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
@@ -4212,6 +5152,8 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                 .override(
                                                                   fontFamily:
                                                                       'NotoSansThai',
+                                                                  letterSpacing:
+                                                                      0.0,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .w600,
@@ -4303,11 +5245,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'none';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'none';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4376,11 +5317,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'facebook';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'facebook';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4445,11 +5385,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'instogram';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'instogram';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4514,11 +5453,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'line';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'line';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4583,11 +5521,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'twitter';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'twitter';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4652,11 +5589,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'linkedin';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'linkedin';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4721,11 +5657,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'github';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'github';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4790,11 +5725,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'youtube';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'youtube';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4859,11 +5793,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'tiktok';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'tiktok';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4928,11 +5861,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'telegram';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'telegram';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -4997,11 +5929,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'whatsapp';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'whatsapp';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -5066,11 +5997,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'map';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'map';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -5135,11 +6065,10 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                                             .transparent,
                                                                     onTap:
                                                                         () async {
+                                                                      _model.logoselected =
+                                                                          'promptpay';
                                                                       setState(
-                                                                          () {
-                                                                        _model.logoselected =
-                                                                            'promptpay';
-                                                                      });
+                                                                          () {});
                                                                     },
                                                                     child:
                                                                         Container(
@@ -5190,245 +6119,381 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                  Align(
-                                                    alignment:
-                                                        const AlignmentDirectional(
-                                                            0.0, 0.0),
-                                                    child: Padding(
-                                                      padding:
-                                                          const EdgeInsetsDirectional
-                                                              .fromSTEB(
-                                                                  0.0,
-                                                                  10.0,
-                                                                  0.0,
-                                                                  0.0),
-                                                      child: InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          final selectedMedia =
-                                                              await selectMedia(
-                                                            maxWidth: 1024.00,
-                                                            maxHeight: 1024.00,
-                                                            mediaSource:
-                                                                MediaSource
-                                                                    .photoGallery,
-                                                            multiImage: true,
-                                                          );
-                                                          if (selectedMedia !=
-                                                                  null &&
-                                                              selectedMedia.every((m) =>
-                                                                  validateFileFormat(
-                                                                      m.storagePath,
-                                                                      context))) {
-                                                            setState(() => _model
-                                                                    .isDataUploading4 =
-                                                                true);
-                                                            var selectedUploadedFiles =
-                                                                <FFUploadedFile>[];
-
-                                                            try {
-                                                              showUploadMessage(
-                                                                context,
-                                                                'Uploading file...',
-                                                                showLoading:
-                                                                    true,
-                                                              );
-                                                              selectedUploadedFiles =
-                                                                  selectedMedia
-                                                                      .map((m) =>
-                                                                          FFUploadedFile(
-                                                                            name:
-                                                                                m.storagePath.split('/').last,
-                                                                            bytes:
-                                                                                m.bytes,
-                                                                            height:
-                                                                                m.dimensions?.height,
-                                                                            width:
-                                                                                m.dimensions?.width,
-                                                                            blurHash:
-                                                                                m.blurHash,
-                                                                          ))
-                                                                      .toList();
-                                                            } finally {
-                                                              ScaffoldMessenger
-                                                                      .of(context)
-                                                                  .hideCurrentSnackBar();
-                                                              _model.isDataUploading4 =
-                                                                  false;
-                                                            }
-                                                            if (selectedUploadedFiles
-                                                                    .length ==
-                                                                selectedMedia
-                                                                    .length) {
-                                                              setState(() {
-                                                                _model.uploadedLocalFiles4 =
-                                                                    selectedUploadedFiles;
-                                                              });
-                                                              showUploadMessage(
-                                                                  context,
-                                                                  'Success!');
-                                                            } else {
-                                                              setState(() {});
-                                                              showUploadMessage(
-                                                                  context,
-                                                                  'Failed to upload data');
-                                                              return;
-                                                            }
-                                                          }
-                                                        },
-                                                        child: Container(
-                                                          width: 310.0,
-                                                          height: 140.0,
+                                                  Builder(
+                                                    builder: (context) {
+                                                      if ((_model
+                                                                  .uploadedLocalFile4
+                                                                  .bytes
+                                                                  ?.isNotEmpty ??
+                                                              false)) {
+                                                        return Container(
+                                                          width: 200.0,
+                                                          height: 200.0,
                                                           decoration:
-                                                              BoxDecoration(
-                                                            color: FlutterFlowTheme
-                                                                    .of(context)
-                                                                .secondaryBackground,
-                                                          ),
-                                                          child: Align(
+                                                              const BoxDecoration(),
+                                                          child: Stack(
                                                             alignment:
                                                                 const AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Stack(
-                                                              children: [
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
+                                                                    1.0, -1.0),
+                                                            children: [
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        0.0,
+                                                                        0.0),
+                                                                child: Padding(
+                                                                  padding: const EdgeInsetsDirectional
+                                                                      .fromSTEB(
+                                                                          10.0,
+                                                                          10.0,
+                                                                          10.0,
                                                                           0.0),
                                                                   child:
                                                                       ClipRRect(
                                                                     borderRadius:
                                                                         BorderRadius.circular(
-                                                                            0.0),
+                                                                            8.0),
                                                                     child: Image
-                                                                        .asset(
-                                                                      'assets/images/Rectangle_165.png',
+                                                                        .memory(
+                                                                      _model.uploadedLocalFile4
+                                                                              .bytes ??
+                                                                          Uint8List.fromList(
+                                                                              []),
                                                                       width:
-                                                                          300.0,
+                                                                          200.0,
                                                                       height:
-                                                                          127.0,
+                                                                          200.0,
                                                                       fit: BoxFit
                                                                           .cover,
                                                                     ),
                                                                   ),
                                                                 ),
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
+                                                              ),
+                                                              Align(
+                                                                alignment:
+                                                                    const AlignmentDirectional(
+                                                                        1.0,
+                                                                        -1.0),
+                                                                child: InkWell(
+                                                                  splashColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  focusColor: Colors
+                                                                      .transparent,
+                                                                  hoverColor: Colors
+                                                                      .transparent,
+                                                                  highlightColor:
+                                                                      Colors
+                                                                          .transparent,
+                                                                  onTap:
+                                                                      () async {
+                                                                    setState(
+                                                                        () {
+                                                                      _model.isDataUploading4 =
+                                                                          false;
+                                                                      _model.uploadedLocalFile4 =
+                                                                          FFUploadedFile(
+                                                                              bytes: Uint8List.fromList([]));
+                                                                    });
+
+                                                                    _model.deleteresult4 =
+                                                                        await actions
+                                                                            .deleteUploadedFile(
+                                                                      FFAppState()
+                                                                          .AccessToken,
+                                                                      _model
+                                                                          .uploadedQRPath,
+                                                                    );
+                                                                    if (_model
+                                                                        .deleteresult4!) {
+                                                                      ScaffoldMessenger.of(
+                                                                              context)
+                                                                          .showSnackBar(
+                                                                        SnackBar(
+                                                                          content:
+                                                                              Text(
+                                                                            'sucess',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                            ),
+                                                                          ),
+                                                                          duration:
+                                                                              const Duration(milliseconds: 4000),
+                                                                          backgroundColor:
+                                                                              FlutterFlowTheme.of(context).secondary,
+                                                                        ),
+                                                                      );
+                                                                    } else {
+                                                                      ScaffoldMessenger.of(
+                                                                              context)
+                                                                          .showSnackBar(
+                                                                        SnackBar(
+                                                                          content:
+                                                                              Text(
+                                                                            'failed',
+                                                                            style:
+                                                                                TextStyle(
+                                                                              color: FlutterFlowTheme.of(context).primaryText,
+                                                                            ),
+                                                                          ),
+                                                                          duration:
+                                                                              const Duration(milliseconds: 4000),
+                                                                          backgroundColor:
+                                                                              FlutterFlowTheme.of(context).secondary,
+                                                                        ),
+                                                                      );
+                                                                    }
+
+                                                                    setState(
+                                                                        () {});
+                                                                  },
+                                                                  child: Icon(
+                                                                    Icons
+                                                                        .cancel_rounded,
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryText,
+                                                                    size: 24.0,
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                            ],
+                                                          ),
+                                                        );
+                                                      } else {
+                                                        return Visibility(
+                                                          visible: _model
+                                                                  .logoselected ==
+                                                              'none',
+                                                          child: Align(
+                                                            alignment:
+                                                                const AlignmentDirectional(
+                                                                    0.0, 0.0),
+                                                            child: Padding(
+                                                              padding:
+                                                                  const EdgeInsetsDirectional
+                                                                      .fromSTEB(
                                                                           0.0,
-                                                                          -1.0),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            40.0,
+                                                                          10.0,
+                                                                          0.0,
+                                                                          0.0),
+                                                              child: InkWell(
+                                                                splashColor: Colors
+                                                                    .transparent,
+                                                                focusColor: Colors
+                                                                    .transparent,
+                                                                hoverColor: Colors
+                                                                    .transparent,
+                                                                highlightColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                onTap:
+                                                                    () async {
+                                                                  if (FFAppState()
+                                                                      .Logined) {
+                                                                    final selectedMedia =
+                                                                        await selectMedia(
+                                                                      maxWidth:
+                                                                          1024.00,
+                                                                      maxHeight:
+                                                                          1024.00,
+                                                                      mediaSource:
+                                                                          MediaSource
+                                                                              .photoGallery,
+                                                                      multiImage:
+                                                                          false,
+                                                                    );
+                                                                    if (selectedMedia !=
+                                                                            null &&
+                                                                        selectedMedia.every((m) => validateFileFormat(
+                                                                            m.storagePath,
+                                                                            context))) {
+                                                                      setState(() =>
+                                                                          _model.isDataUploading4 =
+                                                                              true);
+                                                                      var selectedUploadedFiles =
+                                                                          <FFUploadedFile>[];
+
+                                                                      try {
+                                                                        selectedUploadedFiles = selectedMedia
+                                                                            .map((m) => FFUploadedFile(
+                                                                                  name: m.storagePath.split('/').last,
+                                                                                  bytes: m.bytes,
+                                                                                  height: m.dimensions?.height,
+                                                                                  width: m.dimensions?.width,
+                                                                                  blurHash: m.blurHash,
+                                                                                ))
+                                                                            .toList();
+                                                                      } finally {
+                                                                        _model.isDataUploading4 =
+                                                                            false;
+                                                                      }
+                                                                      if (selectedUploadedFiles
+                                                                              .length ==
+                                                                          selectedMedia
+                                                                              .length) {
+                                                                        setState(
+                                                                            () {
+                                                                          _model.uploadedLocalFile4 =
+                                                                              selectedUploadedFiles.first;
+                                                                        });
+                                                                      } else {
+                                                                        setState(
+                                                                            () {});
+                                                                        return;
+                                                                      }
+                                                                    }
+
+                                                                    _model.awsupload4 =
+                                                                        await BrookreatorGroup
+                                                                            .fileUploaderCall
+                                                                            .call(
+                                                                      accessToken:
+                                                                          FFAppState()
+                                                                              .AccessToken,
+                                                                      uploadedfile:
+                                                                          _model
+                                                                              .uploadedLocalFile4,
+                                                                    );
+                                                                    _model.uploadedLogoPath =
+                                                                        getJsonField(
+                                                                      (_model.awsupload4
+                                                                              ?.jsonBody ??
+                                                                          ''),
+                                                                      r'''$.result.filePath''',
+                                                                    ).toString();
+                                                                    setState(
+                                                                        () {});
+                                                                  } else {
+                                                                    context.pushNamed(
+                                                                        'SignIn');
+                                                                  }
+
+                                                                  setState(
+                                                                      () {});
+                                                                },
+                                                                child:
+                                                                    Container(
+                                                                  width: 310.0,
+                                                                  height: 140.0,
+                                                                  decoration:
+                                                                      BoxDecoration(
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .secondaryBackground,
+                                                                  ),
+                                                                  child: Align(
+                                                                    alignment:
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
-                                                                        ClipRRect(
-                                                                      borderRadius:
-                                                                          BorderRadius.circular(
-                                                                              8.0),
-                                                                      child: Image
-                                                                          .asset(
-                                                                        'assets/images/icons8-upload-to-cloud.gif',
-                                                                        width:
-                                                                            35.0,
-                                                                        height:
-                                                                            30.0,
-                                                                        fit: BoxFit
-                                                                            .contain,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            10.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        'gr4nh9g7' /* Upload Logo */,
-                                                                      ),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'NotoSansThai',
-                                                                            color:
-                                                                                Colors.black,
-                                                                            fontSize:
-                                                                                13.0,
-                                                                            fontWeight:
-                                                                                FontWeight.w600,
-                                                                            useGoogleFonts:
-                                                                                false,
+                                                                        Stack(
+                                                                      children: [
+                                                                        Align(
+                                                                          alignment: const AlignmentDirectional(
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              ClipRRect(
+                                                                            borderRadius:
+                                                                                BorderRadius.circular(0.0),
+                                                                            child:
+                                                                                Image.asset(
+                                                                              'assets/images/Rectangle_165.png',
+                                                                              width: 300.0,
+                                                                              height: 127.0,
+                                                                              fit: BoxFit.cover,
+                                                                            ),
                                                                           ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                                Align(
-                                                                  alignment:
-                                                                      const AlignmentDirectional(
-                                                                          0.0,
-                                                                          0.0),
-                                                                  child:
-                                                                      Padding(
-                                                                    padding: const EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0.0,
-                                                                            45.0,
-                                                                            0.0,
-                                                                            0.0),
-                                                                    child: Text(
-                                                                      FFLocalizations.of(
-                                                                              context)
-                                                                          .getText(
-                                                                        '181b71mp' /* File types : PNG/JPG, maximum ... */,
-                                                                      ),
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyMedium
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'NotoSansThai',
-                                                                            color:
-                                                                                FlutterFlowTheme.of(context).secondaryText,
-                                                                            fontSize:
+                                                                        ),
+                                                                        Align(
+                                                                          alignment: const AlignmentDirectional(
+                                                                              0.0,
+                                                                              -1.0),
+                                                                          child:
+                                                                              Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                40.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                ClipRRect(
+                                                                              borderRadius: BorderRadius.circular(8.0),
+                                                                              child: Image.asset(
+                                                                                'assets/images/icons8-upload-to-cloud.gif',
+                                                                                width: 35.0,
+                                                                                height: 30.0,
+                                                                                fit: BoxFit.contain,
+                                                                              ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                        Align(
+                                                                          alignment: const AlignmentDirectional(
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
                                                                                 10.0,
-                                                                            useGoogleFonts:
-                                                                                false,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                'gr4nh9g7' /* Upload Logo */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'NotoSansThai',
+                                                                                    color: Colors.black,
+                                                                                    fontSize: 13.0,
+                                                                                    letterSpacing: 0.0,
+                                                                                    fontWeight: FontWeight.w600,
+                                                                                    useGoogleFonts: false,
+                                                                                  ),
+                                                                            ),
                                                                           ),
+                                                                        ),
+                                                                        Align(
+                                                                          alignment: const AlignmentDirectional(
+                                                                              0.0,
+                                                                              0.0),
+                                                                          child:
+                                                                              Padding(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                                0.0,
+                                                                                45.0,
+                                                                                0.0,
+                                                                                0.0),
+                                                                            child:
+                                                                                Text(
+                                                                              FFLocalizations.of(context).getText(
+                                                                                '181b71mp' /* File types : PNG/JPG, maximum ... */,
+                                                                              ),
+                                                                              style: FlutterFlowTheme.of(context).bodyMedium.override(
+                                                                                    fontFamily: 'NotoSansThai',
+                                                                                    color: FlutterFlowTheme.of(context).secondaryText,
+                                                                                    fontSize: 10.0,
+                                                                                    letterSpacing: 0.0,
+                                                                                    useGoogleFonts: false,
+                                                                                  ),
+                                                                            ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
                                                                     ),
                                                                   ),
                                                                 ),
-                                                              ],
+                                                              ),
                                                             ),
                                                           ),
-                                                        ),
-                                                      ),
-                                                    ),
+                                                        );
+                                                      }
+                                                    },
                                                   ),
                                                 ],
                                               ),
@@ -5441,87 +6506,307 @@ class _QRStartWidgetState extends State<QRStartWidget>
                                 ),
                                 Align(
                                   alignment: const AlignmentDirectional(0.0, 1.0),
-                                  child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 0.0, 10.0, 10.0),
-                                    child: FFButtonWidget(
-                                      onPressed: !(_model
-                                                      .uploadImageCurrentIndex ==
-                                                  0
-                                              ? (_model.uploadLinkController
-                                                          .text !=
-                                                      '')
-                                              : ((_model.uploadedLocalFile2
-                                                          .bytes?.isNotEmpty ??
-                                                      false)))
-                                          ? null
-                                          : () async {
-                                              await showModalBottomSheet(
-                                                isScrollControlled: true,
-                                                backgroundColor:
-                                                    Colors.transparent,
-                                                enableDrag: false,
-                                                context: context,
-                                                builder: (context) {
-                                                  return GestureDetector(
-                                                    onTap: () => _model
-                                                            .unfocusNode
-                                                            .canRequestFocus
-                                                        ? FocusScope.of(context)
-                                                            .requestFocus(_model
-                                                                .unfocusNode)
-                                                        : FocusScope.of(context)
-                                                            .unfocus(),
-                                                    child: Padding(
-                                                      padding: MediaQuery
-                                                          .viewInsetsOf(
-                                                              context),
-                                                      child: const SizedBox(
-                                                        height: 650.0,
-                                                        child: QRCode2Widget(),
-                                                      ),
-                                                    ),
+                                  child: Builder(
+                                    builder: (context) => Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 0.0, 10.0, 10.0),
+                                      child: FFButtonWidget(
+                                        onPressed: (_model
+                                                        .uploadImageCurrentIndex ==
+                                                    0
+                                                ? (_model.uploadLinkTextController
+                                                            .text ==
+                                                        '')
+                                                : ((_model.uploadedLocalFile2
+                                                            .bytes?.isEmpty ??
+                                                        true)))
+                                            ? null
+                                            : () async {
+                                                if (FFAppState().Logined) {
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 3000));
+                                                  _model.requestSentlogo =
+                                                      await BrookreatorGroup
+                                                          .qRLogoGenerateCall
+                                                          .call(
+                                                    qrCodeFilePath: (_model
+                                                                    .uploadedLocalFile2
+                                                                    .bytes
+                                                                    ?.isNotEmpty ??
+                                                                false)
+                                                        ? _model.uploadedQRPath
+                                                        : '',
+                                                    qrCodeContent: _model
+                                                        .uploadLinkTextController
+                                                        .text,
+                                                    backgroundImageFilePath:
+                                                        (_model
+                                                                        .uploadedLocalFile3
+                                                                        .bytes
+                                                                        ?.isNotEmpty ??
+                                                                    false)
+                                                            ? _model
+                                                                .uploadedBgPath
+                                                            : '',
+                                                    qrScale:
+                                                        _model.qrscaleselected,
+                                                    accessToken: FFAppState()
+                                                        .AccessToken,
+                                                    logoImageFilePath: () {
+                                                      if (_model.logoselected ==
+                                                          'facebook') {
+                                                        return 'logo/facebook.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'instogram') {
+                                                        return 'logo/ig.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'line') {
+                                                        return 'logo/line.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'twitter') {
+                                                        return 'logo/twitter.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'linkedin') {
+                                                        return 'logo/linkedin.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'github') {
+                                                        return 'logo/github.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'youtube') {
+                                                        return 'logo/youtube.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'tiktok') {
+                                                        return 'logo/tiktok.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'telegram') {
+                                                        return 'logo/telegram.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'whatsapp') {
+                                                        return 'logo/whatsapp.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'map') {
+                                                        return 'logo/maps.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'promptpay') {
+                                                        return 'logo/promptpay.png';
+                                                      } else if (_model
+                                                              .logoselected ==
+                                                          'none') {
+                                                        return '';
+                                                      } else {
+                                                        return _model
+                                                            .uploadedLogoPath;
+                                                      }
+                                                    }(),
                                                   );
-                                                },
-                                              ).then((value) =>
-                                                  safeSetState(() {}));
-                                            },
-                                      text: FFLocalizations.of(context).getText(
-                                        'wlrwielk' /* Generate */,
-                                      ),
-                                      icon: const Icon(
-                                        Icons.auto_awesome_sharp,
-                                        size: 15.0,
-                                      ),
-                                      options: FFButtonOptions(
-                                        width: 390.0,
-                                        height: 45.0,
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
-                                            25.0, 0.0, 25.0, 0.0),
-                                        iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
-                                                0.0, 0.0, 0.0, 0.0),
-                                        color: FlutterFlowTheme.of(context)
-                                            .primary,
-                                        textStyle: FlutterFlowTheme.of(context)
-                                            .titleSmall
-                                            .override(
-                                              fontFamily: 'NotoSansThai',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              useGoogleFonts: false,
-                                            ),
-                                        elevation: 3.0,
-                                        borderSide: const BorderSide(
-                                          color: Colors.transparent,
+                                                  FFAppState().QRTxID =
+                                                      BrookreatorGroup
+                                                          .qRLogoGenerateCall
+                                                          .txID(
+                                                    (_model.requestSentlogo
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )!;
+                                                  setState(() {});
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (dialogContext) {
+                                                      return Dialog(
+                                                        elevation: 0,
+                                                        insetPadding:
+                                                            EdgeInsets.zero,
+                                                        backgroundColor:
+                                                            Colors.transparent,
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                    0.0, 0.0)
+                                                                .resolve(
+                                                                    Directionality.of(
+                                                                        context)),
+                                                        child: GestureDetector(
+                                                          onTap: () => _model
+                                                                  .unfocusNode
+                                                                  .canRequestFocus
+                                                              ? FocusScope.of(
+                                                                      context)
+                                                                  .requestFocus(
+                                                                      _model
+                                                                          .unfocusNode)
+                                                              : FocusScope.of(
+                                                                      context)
+                                                                  .unfocus(),
+                                                          child:
+                                                              const WaitingImageWidget(
+                                                            time: 1,
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ).then((value) =>
+                                                      setState(() {}));
+
+                                                  _model.accountInfoLogo =
+                                                      await BrookreatorGroup
+                                                          .accountCall
+                                                          .call(
+                                                    accessToken: FFAppState()
+                                                        .AccessToken,
+                                                  );
+                                                  FFAppState().Credit =
+                                                      BrookreatorGroup
+                                                          .accountCall
+                                                          .credit(
+                                                    (_model.accountInfoLogo
+                                                            ?.jsonBody ??
+                                                        ''),
+                                                  )!;
+                                                  setState(() {});
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 15000));
+                                                  _model.qrClassicResult =
+                                                      await BrookreatorGroup
+                                                          .getGeneratedContentsCall
+                                                          .call(
+                                                    accessToken: FFAppState()
+                                                        .AccessToken,
+                                                    txID: FFAppState().QRTxID,
+                                                  );
+                                                  Navigator.pop(context);
+                                                  showDialog(
+                                                    context: context,
+                                                    builder: (dialogContext) {
+                                                      return Dialog(
+                                                        elevation: 0,
+                                                        insetPadding:
+                                                            EdgeInsets.zero,
+                                                        backgroundColor:
+                                                            Colors.transparent,
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                    0.0, 0.0)
+                                                                .resolve(
+                                                                    Directionality.of(
+                                                                        context)),
+                                                        child: GestureDetector(
+                                                          onTap: () => _model
+                                                                  .unfocusNode
+                                                                  .canRequestFocus
+                                                              ? FocusScope.of(
+                                                                      context)
+                                                                  .requestFocus(
+                                                                      _model
+                                                                          .unfocusNode)
+                                                              : FocusScope.of(
+                                                                      context)
+                                                                  .unfocus(),
+                                                          child: const DoneWidget(),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ).then((value) =>
+                                                      setState(() {}));
+
+                                                  await Future.delayed(
+                                                      const Duration(
+                                                          milliseconds: 2000));
+                                                  Navigator.pop(context);
+                                                  await showModalBottomSheet(
+                                                    isScrollControlled: true,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    enableDrag: false,
+                                                    context: context,
+                                                    builder: (context) {
+                                                      return GestureDetector(
+                                                        onTap: () => _model
+                                                                .unfocusNode
+                                                                .canRequestFocus
+                                                            ? FocusScope.of(
+                                                                    context)
+                                                                .requestFocus(_model
+                                                                    .unfocusNode)
+                                                            : FocusScope.of(
+                                                                    context)
+                                                                .unfocus(),
+                                                        child: Padding(
+                                                          padding: MediaQuery
+                                                              .viewInsetsOf(
+                                                                  context),
+                                                          child: QRCodeWidget(
+                                                            qrResult:
+                                                                BrookreatorGroup
+                                                                    .getGeneratedContentsCall
+                                                                    .url(
+                                                              (_model.qrClassicResult
+                                                                      ?.jsonBody ??
+                                                                  ''),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      );
+                                                    },
+                                                  ).then((value) =>
+                                                      safeSetState(() {}));
+                                                } else {
+                                                  context.pushNamed('SignIn');
+                                                }
+
+                                                setState(() {});
+                                              },
+                                        text:
+                                            FFLocalizations.of(context).getText(
+                                          'wlrwielk' /* Generate */,
                                         ),
-                                        borderRadius:
-                                            BorderRadius.circular(25.0),
-                                        disabledColor: const Color(0x581371FF),
-                                        disabledTextColor:
-                                            FlutterFlowTheme.of(context)
-                                                .secondaryBackground,
+                                        icon: const Icon(
+                                          Icons.auto_awesome_sharp,
+                                          size: 15.0,
+                                        ),
+                                        options: FFButtonOptions(
+                                          width: 390.0,
+                                          height: 45.0,
+                                          padding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  25.0, 0.0, 25.0, 0.0),
+                                          iconPadding:
+                                              const EdgeInsetsDirectional.fromSTEB(
+                                                  0.0, 0.0, 0.0, 0.0),
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .titleSmall
+                                              .override(
+                                                fontFamily: 'NotoSansThai',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryBackground,
+                                                letterSpacing: 0.0,
+                                                useGoogleFonts: false,
+                                              ),
+                                          elevation: 3.0,
+                                          borderSide: const BorderSide(
+                                            color: Colors.transparent,
+                                          ),
+                                          borderRadius:
+                                              BorderRadius.circular(25.0),
+                                          disabledColor: const Color(0x581371FF),
+                                          disabledTextColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryBackground,
+                                        ),
                                       ),
                                     ),
                                   ),

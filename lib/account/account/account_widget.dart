@@ -1,12 +1,9 @@
-import '/auth/custom_auth/auth_util.dart';
-import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
@@ -17,7 +14,7 @@ class AccountWidget extends StatefulWidget {
   const AccountWidget({super.key});
 
   @override
-  _AccountWidgetState createState() => _AccountWidgetState();
+  State<AccountWidget> createState() => _AccountWidgetState();
 }
 
 class _AccountWidgetState extends State<AccountWidget> {
@@ -29,14 +26,6 @@ class _AccountWidgetState extends State<AccountWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => AccountModel());
-
-    // On page load action.
-    SchedulerBinding.instance.addPostFrameCallback((_) async {
-      _model.accountInfo = await BrookreatorGroup.accountCall.call();
-      if ((_model.accountInfo?.succeeded ?? true)) {
-        await Future.delayed(const Duration(milliseconds: 1000));
-      }
-    });
   }
 
   @override
@@ -48,15 +37,6 @@ class _AccountWidgetState extends State<AccountWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (isiOS) {
-      SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-          statusBarBrightness: Theme.of(context).brightness,
-          systemStatusBarContrastEnforced: true,
-        ),
-      );
-    }
-
     context.watch<FFAppState>();
 
     return GestureDetector(
@@ -114,6 +94,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       fontSize: 22.0,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.bold,
                                       useGoogleFonts: false,
                                     ),
@@ -130,7 +111,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                       const EdgeInsetsDirectional.fromSTEB(20.0, 50.0, 20.0, 0.0),
                   child: Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
-                    color: const Color(0xFF1371FF),
+                    color: FlutterFlowTheme.of(context).primary,
                     elevation: 4.0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),
@@ -178,6 +159,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .secondaryText,
                                                 fontSize: 20.0,
+                                                letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
                                         ),
@@ -200,12 +182,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                       MainAxisAlignment.spaceAround,
                                   children: [
                                     Text(
-                                      BrookreatorGroup.accountCall
-                                          .name(
-                                            (_model.accountInfo?.jsonBody ??
-                                                ''),
-                                          )
-                                          .toString(),
+                                      FFLocalizations.of(context).getText(
+                                        '61noq1so' /* John Smith */,
+                                      ),
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -213,6 +192,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                             color: FlutterFlowTheme.of(context)
                                                 .primaryBackground,
                                             fontSize: 17.0,
+                                            letterSpacing: 0.0,
                                             fontWeight: FontWeight.w500,
                                             useGoogleFonts: false,
                                           ),
@@ -221,12 +201,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                       padding: const EdgeInsetsDirectional.fromSTEB(
                                           5.0, 5.0, 5.0, 0.0),
                                       child: Text(
-                                        BrookreatorGroup.accountCall
-                                            .email(
-                                              (_model.accountInfo?.jsonBody ??
-                                                  ''),
-                                            )
-                                            .toString(),
+                                        FFAppState().Email,
                                         textAlign: TextAlign.center,
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
@@ -236,6 +211,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .primaryBackground,
                                               fontSize: 12.0,
+                                              letterSpacing: 0.0,
                                               fontWeight: FontWeight.normal,
                                               useGoogleFonts: false,
                                             ),
@@ -273,12 +249,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
                                         child: Text(
-                                          BrookreatorGroup.accountCall
-                                              .credit(
-                                                (_model.accountInfo?.jsonBody ??
-                                                    ''),
-                                              )
-                                              .toString(),
+                                          FFAppState().Credit.toString(),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -287,6 +258,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .primaryBackground,
                                                 fontSize: 25.0,
+                                                letterSpacing: 0.0,
                                                 fontWeight: FontWeight.bold,
                                                 useGoogleFonts: false,
                                               ),
@@ -341,6 +313,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .primaryText,
                                               fontSize: 14.0,
+                                              letterSpacing: 0.0,
                                               useGoogleFonts: false,
                                             ),
                                         elevation: 3.0,
@@ -382,7 +355,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
-                              offset: Offset(0.0, 2.0),
+                              offset: Offset(
+                                0.0,
+                                2.0,
+                              ),
                             )
                           ],
                           borderRadius: BorderRadius.circular(15.0),
@@ -412,6 +388,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                   .override(
                                     fontFamily: 'NotoSansThai',
                                     color: Colors.black,
+                                    letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,
                                     useGoogleFonts: false,
                                   ),
@@ -488,7 +465,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(15.0),
@@ -518,6 +498,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       color: Colors.black,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
@@ -557,7 +538,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(15.0),
@@ -587,6 +571,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       color: Colors.black,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
@@ -609,11 +594,17 @@ class _AccountWidgetState extends State<AccountWidget> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        GoRouter.of(context).prepareAuthEvent();
-                        await authManager.signOut();
-                        GoRouter.of(context).clearRedirectLocation();
+                        _model.signoutResult = await actions.signOut(
+                          FFAppState().Email,
+                        );
+                        if (_model.signoutResult!) {
+                          FFAppState().Logined = false;
+                          setState(() {});
 
-                        context.goNamedAuth('OpenAppScreen', context.mounted);
+                          context.pushNamed('OpenAppScreen');
+                        }
+
+                        setState(() {});
                       },
                       child: Material(
                         color: Colors.transparent,
@@ -630,7 +621,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
-                                offset: Offset(0.0, 2.0),
+                                offset: Offset(
+                                  0.0,
+                                  2.0,
+                                ),
                               )
                             ],
                             borderRadius: BorderRadius.circular(15.0),
@@ -660,6 +654,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     .override(
                                       fontFamily: 'NotoSansThai',
                                       color: Colors.black,
+                                      letterSpacing: 0.0,
                                       fontWeight: FontWeight.w600,
                                       useGoogleFonts: false,
                                     ),
