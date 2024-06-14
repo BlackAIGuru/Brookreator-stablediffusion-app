@@ -4,19 +4,24 @@ import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'upload_image_error_model.dart';
-export 'upload_image_error_model.dart';
+import 'error_message_model.dart';
+export 'error_message_model.dart';
 
-class UploadImageErrorWidget extends StatefulWidget {
-  const UploadImageErrorWidget({super.key});
+class ErrorMessageWidget extends StatefulWidget {
+  const ErrorMessageWidget({
+    super.key,
+    required this.alertInfo,
+  });
+
+  final String? alertInfo;
 
   @override
-  State<UploadImageErrorWidget> createState() => _UploadImageErrorWidgetState();
+  State<ErrorMessageWidget> createState() => _ErrorMessageWidgetState();
 }
 
-class _UploadImageErrorWidgetState extends State<UploadImageErrorWidget>
+class _ErrorMessageWidgetState extends State<ErrorMessageWidget>
     with TickerProviderStateMixin {
-  late UploadImageErrorModel _model;
+  late ErrorMessageModel _model;
 
   final animationsMap = <String, AnimationInfo>{};
 
@@ -29,7 +34,7 @@ class _UploadImageErrorWidgetState extends State<UploadImageErrorWidget>
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => UploadImageErrorModel());
+    _model = createModel(context, () => ErrorMessageModel());
 
     animationsMap.addAll({
       'containerOnPageLoadAnimation': AnimationInfo(
@@ -41,6 +46,13 @@ class _UploadImageErrorWidgetState extends State<UploadImageErrorWidget>
             duration: 600.0.ms,
             begin: const Offset(0.0, -80.0),
             end: const Offset(0.0, 0.0),
+          ),
+          FadeEffect(
+            curve: Curves.easeInOut,
+            delay: 0.0.ms,
+            duration: 600.0.ms,
+            begin: 0.0,
+            end: 1.0,
           ),
         ],
       ),
@@ -68,7 +80,7 @@ class _UploadImageErrorWidgetState extends State<UploadImageErrorWidget>
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 5.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -77,12 +89,13 @@ class _UploadImageErrorWidgetState extends State<UploadImageErrorWidget>
                   color: FlutterFlowTheme.of(context).primaryBtnText,
                   size: 22.0,
                 ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                Expanded(
                   child: Text(
-                    FFLocalizations.of(context).getText(
-                      '5kj550yq' /* Attention: You can select maxi... */,
+                    valueOrDefault<String>(
+                      widget.alertInfo,
+                      'Unexpected Error',
                     ),
+                    textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'NotoSansThai',
                           color: FlutterFlowTheme.of(context).primaryBtnText,
@@ -92,20 +105,18 @@ class _UploadImageErrorWidgetState extends State<UploadImageErrorWidget>
                         ),
                   ),
                 ),
-                Expanded(
-                  child: InkWell(
-                    splashColor: Colors.transparent,
-                    focusColor: Colors.transparent,
-                    hoverColor: Colors.transparent,
-                    highlightColor: Colors.transparent,
-                    onTap: () async {
-                      Navigator.pop(context);
-                    },
-                    child: Icon(
-                      Icons.close_outlined,
-                      color: FlutterFlowTheme.of(context).info,
-                      size: 30.0,
-                    ),
+                InkWell(
+                  splashColor: Colors.transparent,
+                  focusColor: Colors.transparent,
+                  hoverColor: Colors.transparent,
+                  highlightColor: Colors.transparent,
+                  onTap: () async {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(
+                    Icons.close_outlined,
+                    color: FlutterFlowTheme.of(context).info,
+                    size: 30.0,
                   ),
                 ),
               ],

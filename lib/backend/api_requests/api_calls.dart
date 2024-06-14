@@ -41,6 +41,8 @@ class BrookreatorGroup {
   static TrainingStatusCall trainingStatusCall = TrainingStatusCall();
   static GetModelsCall getModelsCall = GetModelsCall();
   static DeleteModelsCall deleteModelsCall = DeleteModelsCall();
+  static DownloadImageCall downloadImageCall = DownloadImageCall();
+  static DownloadBulkCall downloadBulkCall = DownloadBulkCall();
 }
 
 class AccountCall {
@@ -371,17 +373,18 @@ class GetAllFavouritesCall {
 
 class AddFavouritesCall {
   Future<ApiCallResponse> call({
-    List<String>? imageIdsList,
+    String? imageIds = '',
     String? accessToken = '',
   }) async {
     final baseUrl = BrookreatorGroup.getBaseUrl(
       accessToken: accessToken,
     );
-    final imageIds = _serializeList(imageIdsList);
 
     final ffApiRequestBody = '''
 {
-  "imageIds": $imageIds
+  "imageIds": [
+    "$imageIds"
+  ]
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'AddFavourites',
@@ -1181,6 +1184,67 @@ class DeleteModelsCall {
         'Authorization': 'Bearer $accessToken',
       },
       params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class DownloadImageCall {
+  Future<ApiCallResponse> call({
+    String? imageId = '',
+    String? accessToken = '',
+  }) async {
+    final baseUrl = BrookreatorGroup.getBaseUrl(
+      accessToken: accessToken,
+    );
+
+    return ApiManager.instance.makeApiCall(
+      callName: 'DownloadImage',
+      apiUrl: '$baseUrl/downloads/image/$imageId',
+      callType: ApiCallType.GET,
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer $accessToken',
+      },
+      params: {},
+      returnBody: true,
+      encodeBodyUtf8: false,
+      decodeUtf8: false,
+      cache: false,
+      alwaysAllowBody: false,
+    );
+  }
+}
+
+class DownloadBulkCall {
+  Future<ApiCallResponse> call({
+    List<String>? imageIdsList,
+    String? accessToken = '',
+  }) async {
+    final baseUrl = BrookreatorGroup.getBaseUrl(
+      accessToken: accessToken,
+    );
+    final imageIds = _serializeList(imageIdsList);
+
+    final ffApiRequestBody = '''
+{
+  "imageIds": $imageIds
+}''';
+    return ApiManager.instance.makeApiCall(
+      callName: 'DownloadBulk',
+      apiUrl: '$baseUrl/downloads/images',
+      callType: ApiCallType.POST,
+      headers: {
+        'Accept': 'application/json',
+        'Authorization': 'Bearer $accessToken',
+      },
+      params: {},
+      body: ffApiRequestBody,
+      bodyType: BodyType.JSON,
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,

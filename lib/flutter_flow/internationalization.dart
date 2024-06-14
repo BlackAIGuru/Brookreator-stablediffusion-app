@@ -886,7 +886,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // SignIn
   {
-    'hojft2la': {
+    'adhwio15': {
       'en': 'Sign In',
       'th': 'สร้างบัญชี',
     },
@@ -946,9 +946,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Or sign in using your social profile',
       'th': 'หรือลงชื่อเข้าใช้โดยใช้โปรไฟล์โซเชียลของคุณ',
     },
-    'ofmksrx0': {
+    'vetbtfjc': {
       'en': 'Sign In with Google',
-      'th': 'ลงทะเบียนกับ Google',
+      'th': '',
     },
     '9n4exasd': {
       'en': 'Don’t have account? ',
@@ -965,7 +965,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // SignUp
   {
-    'ud5635oj': {
+    'mp6524ym': {
       'en': 'Create Account',
       'th': 'สร้างบัญชี',
     },
@@ -1067,9 +1067,9 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Or sign up using your social profile',
       'th': 'หรือลงทะเบียนโดยใช้โปรไฟล์โซเชียลของคุณ',
     },
-    'fwb0oypn': {
-      'en': 'Sign Up with Google',
-      'th': 'ลงทะเบียนกับ Google',
+    'ujkah9vg': {
+      'en': 'Sign In with Google',
+      'th': '',
     },
     'o8gu7sqm': {
       'en': 'Already have an account?',
@@ -1161,37 +1161,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // OpenAppScreen
   {
-    'nzy7zcnf': {
+    'm92gk66o': {
       'en': 'Elevating Creativity Through the Power of AI.',
       'th': 'ยกระดับความคิดสร้างสรรค์ด้วยพลังของ AI',
     },
-    '7yug9dw7': {
+    'tajdbu3v': {
       'en':
           'Listen to the latest music releases and buy music event only using Disc. app',
       'th': 'ฟังเพลงใหม่ล่าสุดและซื้อกิจกรรมเพลงโดยใช้แผ่นดิสก์เท่านั้น แอป',
     },
-    'oi7gcyle': {
+    '99ekuucy': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    '7wa9jgnc': {
+    '7e3393h9': {
       'en': 'Easily create an image from scratch with our AI image',
       'th': 'สร้างภาพตั้งแต่เริ่มต้นได้อย่างง่ายดายด้วยภาพ AI ของเรา',
     },
-    '0k53rj16': {
+    '4xig9fzf': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    'vpwopjvs': {
+    'eonl44sa': {
       'en':
           'Train your own AI model to create limitless personalized portraits',
       'th': 'ฝึกฝนโมเดล AI ของคุณเองเพื่อสร้างภาพบุคคลแบบไม่จำกัด',
     },
-    'hj4vg9b1': {
+    'zbxhcunp': {
       'en': 'AI Video (15 sec)',
       'th': 'วิดีโอ AI (15 วินาที)',
     },
-    '2ivryl3j': {
+    'fdeibmfb': {
       'en': 'Change your video to your favorite style',
       'th': 'เปลี่ยนวิดีโอของคุณให้เป็นสไตล์ที่คุณชื่นชอบ',
     },
@@ -1744,10 +1744,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'yr0n1ge2': {
       'en': 'For You',
       'th': 'ทั้งหมด',
-    },
-    '83hkyq8r': {
-      'en': 'Halloween',
-      'th': 'ข้อความเป็นรูปภาพ',
     },
     'lwhs3xxc': {
       'en': 'Christmas',
@@ -2417,7 +2413,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
     },
   },
-  // Videoresult
+  // videoresult
   {
     '0l2phx3p': {
       'en': 'AI Video (15 sec)',
@@ -2473,7 +2469,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'เข้าสู่ระบบ',
     },
   },
-  // ImageResult
+  // imageResult
   {
     'wi8d4mya': {
       'en': 'Text To Image',
@@ -2721,13 +2717,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ประเภทไฟล์ : MP4/MOV/HEVC ขนาดสูงสุด : 40 MB',
     },
   },
-  // googlesignin
-  {
-    'n1rj6vvv': {
-      'en': 'Sign in with Google',
-      'th': 'ลงชื่อเข้าใช้งานด้วย Google',
-    },
-  },
   // imagesize
   {
     '8zjuhx80': {
@@ -2770,7 +2759,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ยกเลิก',
     },
   },
-  // ConfirmSuccess
+  // confirmSuccess
   {
     '0djyoyvo': {
       'en': 'Successfully Verified!',
@@ -2781,7 +2770,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ไปที่ลงชื่อเข้าใช้',
     },
   },
-  // Waiting_Image
+  // waiting_Image
   {
     'buz4t63u': {
       'en': 'Generating...',
@@ -2802,14 +2791,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ไปที่รูปภาพของฉัน',
     },
   },
-  // Done
+  // done
   {
     'f8gopqgk': {
       'en': 'Done',
       'th': 'กำลังสร้าง...',
     },
   },
-  // Waiting_Portrait
+  // waiting_Portrait
   {
     '9ur2c4uz': {
       'en': '~40 Min',
@@ -2834,7 +2823,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ไปที่รูปภาพของฉัน',
     },
   },
-  // Waiting_Video
+  // waiting_Video
   {
     'pwr8skfh': {
       'en': '~20 Min',
@@ -2857,13 +2846,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '3d54kjx6': {
       'en': 'Go to My Pictures',
       'th': 'ไปที่รูปภาพของฉัน',
-    },
-  },
-  // UploadImageError
-  {
-    '5kj550yq': {
-      'en': 'Attention: You can select maximum 10 photos',
-      'th': '',
     },
   },
   // Miscellaneous

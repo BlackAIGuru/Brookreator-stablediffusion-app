@@ -1,4 +1,4 @@
-import '/a_iportrait/upload_image_error/upload_image_error_widget.dart';
+import '/a_iportrait/error_message/error_message_widget.dart';
 import '/a_iportrait/uplodingguide/uplodingguide_widget.dart';
 import '/a_iportrait/waiting_portrait/waiting_portrait_widget.dart';
 import '/backend/api_requests/api_calls.dart';
@@ -1835,7 +1835,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                             width:
                                                                                 double.infinity,
                                                                             child:
-                                                                                UploadImageErrorWidget(),
+                                                                                ErrorMessageWidget(
+                                                                              alertInfo: 'Attention: You can select maximum 10 photos',
+                                                                            ),
                                                                           ),
                                                                         ),
                                                                       );

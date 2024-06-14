@@ -1,3 +1,4 @@
+import '/a_iportrait/error_message/error_message_widget.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/components/deleteimage/deleteimage_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -14,9 +15,11 @@ class Buttongroup1Widget extends StatefulWidget {
   const Buttongroup1Widget({
     super.key,
     this.imageId,
+    this.imageUrl,
   });
 
-  final List<String>? imageId;
+  final String? imageId;
+  final String? imageUrl;
 
   @override
   State<Buttongroup1Widget> createState() => _Buttongroup1WidgetState();
@@ -49,7 +52,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
+      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 40.0,
@@ -65,40 +68,66 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
             children: [
               Align(
                 alignment: const AlignmentDirectional(-1.0, 0.0),
-                child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
-                  child: FFButtonWidget(
-                    onPressed: () {
-                      print('Button pressed ...');
-                    },
-                    text: FFLocalizations.of(context).getText(
-                      'zfgqbfxi' /* Download */,
-                    ),
-                    icon: Icon(
-                      Icons.file_download_outlined,
-                      color: FlutterFlowTheme.of(context).primary,
-                      size: 17.0,
-                    ),
-                    options: FFButtonOptions(
-                      width: 110.0,
-                      height: 35.0,
-                      padding: const EdgeInsets.all(0.0),
-                      iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: FlutterFlowTheme.of(context).primaryBackground,
-                      textStyle:
-                          FlutterFlowTheme.of(context).titleSmall.override(
-                                fontFamily: 'NotoSansThai',
-                                color: FlutterFlowTheme.of(context).primaryText,
-                                fontSize: 12.0,
-                                letterSpacing: 0.0,
-                                useGoogleFonts: false,
-                              ),
-                      borderSide: BorderSide(
-                        color: FlutterFlowTheme.of(context).primary,
-                        width: 1.0,
+                child: Builder(
+                  builder: (context) => Padding(
+                    padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                    child: FFButtonWidget(
+                      onPressed: () async {
+                        _model.apiResultlk0 =
+                            await BrookreatorGroup.downloadImageCall.call(
+                          accessToken: FFAppState().AccessToken,
+                          imageId: widget.imageId,
+                        );
+                        if (!(_model.apiResultlk0?.succeeded ?? true)) {
+                          await showDialog(
+                            context: context,
+                            builder: (dialogContext) {
+                              return Dialog(
+                                elevation: 0,
+                                insetPadding: EdgeInsets.zero,
+                                backgroundColor: Colors.transparent,
+                                alignment: const AlignmentDirectional(0.0, 0.0)
+                                    .resolve(Directionality.of(context)),
+                                child: const ErrorMessageWidget(
+                                  alertInfo: 'Download failed',
+                                ),
+                              );
+                            },
+                          ).then((value) => setState(() {}));
+                        }
+
+                        setState(() {});
+                      },
+                      text: FFLocalizations.of(context).getText(
+                        'zfgqbfxi' /* Download */,
                       ),
-                      borderRadius: BorderRadius.circular(50.0),
+                      icon: Icon(
+                        Icons.file_download_outlined,
+                        color: FlutterFlowTheme.of(context).primary,
+                        size: 17.0,
+                      ),
+                      options: FFButtonOptions(
+                        width: 110.0,
+                        height: 35.0,
+                        padding: const EdgeInsets.all(0.0),
+                        iconPadding:
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'NotoSansThai',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              fontSize: 12.0,
+                              letterSpacing: 0.0,
+                              useGoogleFonts: false,
+                            ),
+                        borderSide: BorderSide(
+                          color: FlutterFlowTheme.of(context).primary,
+                          width: 1.0,
+                        ),
+                        borderRadius: BorderRadius.circular(50.0),
+                      ),
                     ),
                   ),
                 ),
@@ -117,13 +146,13 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                         if (_model.toggleselected) {
                           await actions.deleteFavourite(
                             FFAppState().AccessToken,
-                            widget.imageId?.first,
+                            widget.imageId,
                           );
                         } else {
                           _model.apiResultvco =
                               await BrookreatorGroup.addFavouritesCall.call(
                             accessToken: FFAppState().AccessToken,
-                            imageIdsList: widget.imageId,
+                            imageIds: widget.imageId,
                           );
                         }
 
@@ -175,9 +204,11 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                           followerAnchor: const AlignmentDirectional(0.0, 0.0)
                               .resolve(Directionality.of(context)),
                           builder: (dialogContext) {
-                            return const Material(
+                            return Material(
                               color: Colors.transparent,
-                              child: DeleteimageWidget(),
+                              child: DeleteimageWidget(
+                                imageid: widget.imageId,
+                              ),
                             );
                           },
                         ).then((value) => setState(() {}));

@@ -1434,12 +1434,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                           FFLocalizations.of(
                                                                   context)
                                                               .getText(
-                                                        '83hkyq8r' /* Halloween */,
-                                                      )),
-                                                      ChipData(
-                                                          FFLocalizations.of(
-                                                                  context)
-                                                              .getText(
                                                         'lwhs3xxc' /* Christmas */,
                                                       )),
                                                       ChipData(

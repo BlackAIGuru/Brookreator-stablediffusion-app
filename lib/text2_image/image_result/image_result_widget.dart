@@ -13,10 +13,12 @@ export 'image_result_model.dart';
 class ImageResultWidget extends StatefulWidget {
   const ImageResultWidget({
     super.key,
-    this.imageResult,
+    this.resultImageUrls,
+    this.resultImageIDs,
   });
 
-  final List<String>? imageResult;
+  final List<String>? resultImageUrls;
+  final List<String>? resultImageIDs;
 
   @override
   State<ImageResultWidget> createState() => _ImageResultWidgetState();
@@ -128,7 +130,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                           alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                10.0, 10.0, 10.0, 0.0),
+                                10.0, 10.0, 10.0, 10.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
                               focusColor: Colors.transparent,
@@ -141,12 +143,12 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                     type: PageTransitionType.fade,
                                     child: FlutterFlowExpandedImageView(
                                       image: Image.network(
-                                        widget.imageResult![
+                                        widget.resultImageUrls![
                                             _model.imagecurrentindex],
                                         fit: BoxFit.contain,
                                       ),
                                       allowRotation: false,
-                                      tag: widget.imageResult![
+                                      tag: widget.resultImageUrls![
                                           _model.imagecurrentindex],
                                       useHeroAnimation: true,
                                     ),
@@ -155,13 +157,13 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                               },
                               child: Hero(
                                 tag: widget
-                                    .imageResult![_model.imagecurrentindex],
+                                    .resultImageUrls![_model.imagecurrentindex],
                                 transitionOnUserGestures: true,
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Image.network(
-                                    widget
-                                        .imageResult![_model.imagecurrentindex],
+                                    widget.resultImageUrls![
+                                        _model.imagecurrentindex],
                                     width: double.infinity,
                                     height: 342.0,
                                     fit: BoxFit.cover,
@@ -174,14 +176,20 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                         wrapWithModel(
                           model: _model.buttongroup1Model,
                           updateCallback: () => setState(() {}),
-                          child: const Buttongroup1Widget(),
+                          child: Buttongroup1Widget(
+                            imageId: widget
+                                .resultImageIDs?[_model.imagecurrentindex],
+                            imageUrl: widget
+                                .resultImageUrls?[_model.imagecurrentindex],
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 20.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
-                              final images = widget.imageResult?.toList() ?? [];
+                              final images =
+                                  widget.resultImageUrls?.toList() ?? [];
                               return SizedBox(
                                 width: double.infinity,
                                 height: 106.0,
@@ -506,7 +514,9 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                     child: wrapWithModel(
                       model: _model.buttongroup2Model,
                       updateCallback: () => setState(() {}),
-                      child: const Buttongroup2Widget(),
+                      child: Buttongroup2Widget(
+                        imageIds: widget.resultImageIDs,
+                      ),
                     ),
                   ),
                 ],

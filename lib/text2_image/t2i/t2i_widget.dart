@@ -432,7 +432,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           BorderRadius.circular(
                                                               10.0),
                                                       child: Image.asset(
-                                                        'assets/images/None.png',
+                                                        'assets/images/None_T2I.png',
                                                         width: double.infinity,
                                                         height: double.infinity,
                                                         fit: BoxFit.cover,
@@ -5795,9 +5795,15 @@ class _T2iWidgetState extends State<T2iWidget> {
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
                                         child: ImageResultWidget(
-                                          imageResult: BrookreatorGroup
+                                          resultImageUrls: BrookreatorGroup
                                               .getGeneratedContentsCall
                                               .url(
+                                            (_model.gettingImages?.jsonBody ??
+                                                ''),
+                                          ),
+                                          resultImageIDs: BrookreatorGroup
+                                              .getGeneratedContentsCall
+                                              .imageId(
                                             (_model.gettingImages?.jsonBody ??
                                                 ''),
                                           ),

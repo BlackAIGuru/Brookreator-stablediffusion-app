@@ -1,12 +1,20 @@
+import '/a_iportrait/error_message/error_message_widget.dart';
+import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'buttongroup2_model.dart';
 export 'buttongroup2_model.dart';
 
 class Buttongroup2Widget extends StatefulWidget {
-  const Buttongroup2Widget({super.key});
+  const Buttongroup2Widget({
+    super.key,
+    this.imageIds,
+  });
+
+  final List<String>? imageIds;
 
   @override
   State<Buttongroup2Widget> createState() => _Buttongroup2WidgetState();
@@ -36,6 +44,8 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
 
   @override
   Widget build(BuildContext context) {
+    context.watch<FFAppState>();
+
     return Align(
       alignment: const AlignmentDirectional(0.0, 0.0),
       child: Row(
@@ -110,35 +120,61 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(25.0, 0.0, 0.0, 0.0),
-            child: FFButtonWidget(
-              onPressed: () {
-                print('Button pressed ...');
-              },
-              text: FFLocalizations.of(context).getText(
-                'b3mptfhp' /* Download All */,
-              ),
-              options: FFButtonOptions(
-                width: MediaQuery.sizeOf(context).width * 0.4,
-                height: 35.0,
-                padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
-                iconPadding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                color: FlutterFlowTheme.of(context).primary,
-                textStyle: FlutterFlowTheme.of(context).titleSmall.override(
-                      fontFamily: 'NotoSansThai',
-                      color: Colors.white,
-                      fontSize: 14.0,
-                      letterSpacing: 0.0,
-                      fontWeight: FontWeight.w600,
-                      useGoogleFonts: false,
-                    ),
-                elevation: 3.0,
-                borderSide: const BorderSide(
-                  color: Colors.transparent,
-                  width: 1.0,
+          Builder(
+            builder: (context) => Padding(
+              padding: const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+              child: FFButtonWidget(
+                onPressed: () async {
+                  _model.apiResultlf8 =
+                      await BrookreatorGroup.downloadBulkCall.call(
+                    accessToken: FFAppState().AccessToken,
+                    imageIdsList: widget.imageIds,
+                  );
+                  if (!(_model.apiResultlf8?.succeeded ?? true)) {
+                    await showDialog(
+                      context: context,
+                      builder: (dialogContext) {
+                        return Dialog(
+                          elevation: 0,
+                          insetPadding: EdgeInsets.zero,
+                          backgroundColor: Colors.transparent,
+                          alignment: const AlignmentDirectional(0.0, 0.0)
+                              .resolve(Directionality.of(context)),
+                          child: const ErrorMessageWidget(
+                            alertInfo: 'Download failed',
+                          ),
+                        );
+                      },
+                    ).then((value) => setState(() {}));
+                  }
+
+                  setState(() {});
+                },
+                text: FFLocalizations.of(context).getText(
+                  'b3mptfhp' /* Download All */,
                 ),
-                borderRadius: BorderRadius.circular(26.0),
+                options: FFButtonOptions(
+                  width: MediaQuery.sizeOf(context).width * 0.4,
+                  height: 35.0,
+                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  iconPadding:
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                  color: FlutterFlowTheme.of(context).primary,
+                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                        fontFamily: 'NotoSansThai',
+                        color: Colors.white,
+                        fontSize: 14.0,
+                        letterSpacing: 0.0,
+                        fontWeight: FontWeight.w600,
+                        useGoogleFonts: false,
+                      ),
+                  elevation: 3.0,
+                  borderSide: const BorderSide(
+                    color: Colors.transparent,
+                    width: 1.0,
+                  ),
+                  borderRadius: BorderRadius.circular(26.0),
+                ),
               ),
             ),
           ),

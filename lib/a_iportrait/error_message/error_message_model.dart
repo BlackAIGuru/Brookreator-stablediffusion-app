@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'upload_image_error_widget.dart' show UploadImageErrorWidget;
+import 'error_message_widget.dart' show ErrorMessageWidget;
 import 'package:flutter/material.dart';
 
-class UploadImageErrorModel extends FlutterFlowModel<UploadImageErrorWidget> {
+class ErrorMessageModel extends FlutterFlowModel<ErrorMessageWidget> {
   @override
   void initState(BuildContext context) {}
 
