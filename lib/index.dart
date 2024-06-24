@@ -15,7 +15,8 @@ export '/a_iportrait/a_i_portrait/a_i_portrait_widget.dart'
     show AIPortraitWidget;
 export '/a_i_video/a_i_video/a_i_video_widget.dart' show AIVideoWidget;
 export '/homepage/home_page/home_page_widget.dart' show HomePageWidget;
-export '/q_r_generator/q_r_start/q_r_start_widget.dart' show QRStartWidget;
+export '/q_r_generator/q_r_generate/q_r_generate_widget.dart'
+    show QRGenerateWidget;
 export '/homepage/email_verify/email_verify_widget.dart' show EmailVerifyWidget;
 export '/homepage/forgot_password/forgot_password_widget.dart'
     show ForgotPasswordWidget;

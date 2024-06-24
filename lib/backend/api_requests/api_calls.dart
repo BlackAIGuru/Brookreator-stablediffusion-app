@@ -1,4 +1,5 @@
 import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -66,6 +67,7 @@ class AccountCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -90,6 +92,8 @@ class AccountCall {
 
 class GetAllImagesCall {
   Future<ApiCallResponse> call({
+    int? offset,
+    int? limit,
     String? accessToken = '',
   }) async {
     final baseUrl = BrookreatorGroup.getBaseUrl(
@@ -104,11 +108,15 @@ class GetAllImagesCall {
         'Accept': 'application/json',
         'Authorization': 'Bearer $accessToken',
       },
-      params: {},
+      params: {
+        'offset': offset,
+        'limit': limit,
+      },
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -267,6 +275,7 @@ class GetAllFavouritesCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -401,6 +410,7 @@ class AddFavouritesCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -462,6 +472,7 @@ class QRGenerateCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -502,6 +513,7 @@ class PortraitUploaderCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -573,6 +585,7 @@ class PortraitTrainingImageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -585,7 +598,7 @@ class PortraitGenerateCall {
     List<int>? clipSkipsList,
     List<int>? heightList,
     List<int>? widthList,
-    List<String>? loraModelIdsList,
+    String? loraModelIds = '',
     List<String>? modelList,
     List<String>? negativeAdetailersList,
     List<String>? negativePromptList,
@@ -605,7 +618,6 @@ class PortraitGenerateCall {
     final clipSkips = _serializeList(clipSkipsList);
     final height = _serializeList(heightList);
     final width = _serializeList(widthList);
-    final loraModelIds = _serializeList(loraModelIdsList);
     final model = _serializeList(modelList);
     final negativeAdetailers = _serializeList(negativeAdetailersList);
     final negativePrompt = _serializeList(negativePromptList);
@@ -649,6 +661,7 @@ class PortraitGenerateCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -685,6 +698,7 @@ class FileUploaderCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -726,6 +740,7 @@ class QRLogoGenerateCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -772,6 +787,7 @@ class DeleteImageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -835,6 +851,7 @@ class AIVideoGenerateCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -891,6 +908,7 @@ class TextToImageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -926,6 +944,7 @@ class ThemeCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -953,6 +972,7 @@ class GetGeneratedContentsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -1053,6 +1073,7 @@ class QueueStatusCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -1088,6 +1109,7 @@ class AllQueuesCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -1114,6 +1136,7 @@ class TrainingStatusCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -1140,30 +1163,56 @@ class GetModelsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
 
-  int? modelID(dynamic response) => castToType<int>(getJsonField(
+  List<int>? modelID(dynamic response) => (getJsonField(
         response,
         r'''$.result[:].id''',
-      ));
-  String? trainingID(dynamic response) => castToType<String>(getJsonField(
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<int>(x))
+          .withoutNulls
+          .toList();
+  List<String>? trainingID(dynamic response) => (getJsonField(
         response,
         r'''$.result[:].training_id''',
-      ));
-  String? modelName(dynamic response) => castToType<String>(getJsonField(
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? modelName(dynamic response) => (getJsonField(
         response,
         r'''$.result[:].name''',
-      ));
-  String? modelCoverImage(dynamic response) => castToType<String>(getJsonField(
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? modelCoverImage(dynamic response) => (getJsonField(
         response,
         r'''$.result[:].cover_image''',
-      ));
-  String? modelStatus(dynamic response) => castToType<String>(getJsonField(
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? modelStatus(dynamic response) => (getJsonField(
         response,
         r'''$.result[:].status''',
-      ));
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class DeleteModelsCall {
@@ -1188,6 +1237,7 @@ class DeleteModelsCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -1215,6 +1265,7 @@ class DownloadImageCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }
@@ -1249,6 +1300,7 @@ class DownloadBulkCall {
       encodeBodyUtf8: false,
       decodeUtf8: false,
       cache: false,
+      isStreamingApi: false,
       alwaysAllowBody: false,
     );
   }

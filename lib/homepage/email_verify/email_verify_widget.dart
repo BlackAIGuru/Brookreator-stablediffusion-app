@@ -1,3 +1,5 @@
+import '/components/message_error/message_error_widget.dart';
+import '/components/message_success/message_success_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -60,21 +62,33 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
               children: [
                 Stack(
                   children: [
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 3.0, 0.0, 0.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.safePop();
-                        },
-                        child: FaIcon(
-                          FontAwesomeIcons.chevronLeft,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 22.0,
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.safePop();
+                      },
+                      child: Container(
+                        decoration: const BoxDecoration(),
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              20.0, 3.0, 0.0, 0.0),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.safePop();
+                            },
+                            child: FaIcon(
+                              FontAwesomeIcons.chevronLeft,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 22.0,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -177,7 +191,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                         child: Builder(
                           builder: (context) => Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                15.0, 25.0, 15.0, 0.0),
+                                10.0, 30.0, 10.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
                                 _model.confirmResult =
@@ -189,7 +203,6 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                   await showDialog(
                                     barrierColor: FlutterFlowTheme.of(context)
                                         .backgroundComponents,
-                                    barrierDismissible: false,
                                     context: context,
                                     builder: (dialogContext) {
                                       return Dialog(
@@ -214,21 +227,41 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                     },
                                   ).then((value) => setState(() {}));
                                 } else {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        'Confirm Failed',
-                                        style: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
+                                  showDialog(
+                                    barrierColor: Colors.transparent,
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, -1.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: SizedBox(
+                                            height: 100.0,
+                                            width: double.infinity,
+                                            child: MessageErrorWidget(
+                                              alertInfo:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'ljd6kd1d' /* Confirm failed */,
+                                              ),
+                                            ),
+                                          ),
                                         ),
-                                      ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .secondary,
-                                    ),
-                                  );
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
                                 }
 
                                 setState(() {});
@@ -257,40 +290,111 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
-                                borderRadius: BorderRadius.circular(12.0),
+                                borderRadius: BorderRadius.circular(8.0),
                               ),
                             ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            await actions.resendCode(
-                              FFAppState().Email,
-                            );
-                          },
-                          child: Text(
-                            FFLocalizations.of(context).getText(
-                              'tjalbxdh' /* Resend Code */,
+                      Builder(
+                        builder: (context) => Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              0.0, 10.0, 0.0, 0.0),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              _model.resendresult = await actions.resendCode(
+                                FFAppState().Email,
+                              );
+                              if (_model.resendresult!) {
+                                showDialog(
+                                  barrierColor: Colors.transparent,
+                                  context: context,
+                                  builder: (dialogContext) {
+                                    return Dialog(
+                                      elevation: 0,
+                                      insetPadding: EdgeInsets.zero,
+                                      backgroundColor: Colors.transparent,
+                                      alignment: const AlignmentDirectional(0.0, -1.0)
+                                          .resolve(Directionality.of(context)),
+                                      child: GestureDetector(
+                                        onTap: () => _model
+                                                .unfocusNode.canRequestFocus
+                                            ? FocusScope.of(context)
+                                                .requestFocus(
+                                                    _model.unfocusNode)
+                                            : FocusScope.of(context).unfocus(),
+                                        child: SizedBox(
+                                          height: 100.0,
+                                          width: double.infinity,
+                                          child: MessageSuccessWidget(
+                                            alertInfo:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'tymaubzj' /* Resent code successfully */,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ).then((value) => setState(() {}));
+                              } else {
+                                showDialog(
+                                  barrierColor: Colors.transparent,
+                                  context: context,
+                                  builder: (dialogContext) {
+                                    return Dialog(
+                                      elevation: 0,
+                                      insetPadding: EdgeInsets.zero,
+                                      backgroundColor: Colors.transparent,
+                                      alignment: const AlignmentDirectional(0.0, -1.0)
+                                          .resolve(Directionality.of(context)),
+                                      child: GestureDetector(
+                                        onTap: () => _model
+                                                .unfocusNode.canRequestFocus
+                                            ? FocusScope.of(context)
+                                                .requestFocus(
+                                                    _model.unfocusNode)
+                                            : FocusScope.of(context).unfocus(),
+                                        child: SizedBox(
+                                          height: 100.0,
+                                          width: double.infinity,
+                                          child: MessageErrorWidget(
+                                            alertInfo:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'zeextm2b' /* Sending code failed */,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                ).then((value) => setState(() {}));
+                              }
+
+                              setState(() {});
+                            },
+                            child: Text(
+                              FFLocalizations.of(context).getText(
+                                'tjalbxdh' /* Resend Code */,
+                              ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'NotoSansThai',
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    fontSize: 16.0,
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.w500,
+                                    decoration: TextDecoration.underline,
+                                    useGoogleFonts: false,
+                                  ),
                             ),
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'NotoSansThai',
-                                  color: FlutterFlowTheme.of(context).primary,
-                                  fontSize: 16.0,
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.w500,
-                                  decoration: TextDecoration.underline,
-                                  useGoogleFonts: false,
-                                ),
                           ),
                         ),
                       ),

@@ -888,7 +888,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'adhwio15': {
       'en': 'Sign In',
-      'th': 'สร้างบัญชี',
+      'th': 'เข้าสู่ระบบ',
     },
     'l7owweah': {
       'en': 'Please sign in to your account',
@@ -942,13 +942,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Sign In',
       'th': 'เข้าสู่ระบบ',
     },
+    '6fsqzzl1': {
+      'en': 'Welcome to brookreator!',
+      'th': 'ยินดีต้อนรับสู่ brookreator!',
+    },
     '2u35ewui': {
       'en': 'Or sign in using your social profile',
       'th': 'หรือลงชื่อเข้าใช้โดยใช้โปรไฟล์โซเชียลของคุณ',
     },
     'vetbtfjc': {
       'en': 'Sign In with Google',
-      'th': '',
+      'th': 'เข้าสู่ระบบด้วย Google',
     },
     '9n4exasd': {
       'en': 'Don’t have account? ',
@@ -1029,15 +1033,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Field is required',
       'th': 'ต้องระบุข้อมูล',
     },
-    'qltl6zk3': {
-      'en': 'Password should contain at least 6 characters',
-      'th': 'รหัสผ่านควรมีอย่างน้อย 6 ตัวอักษร',
-    },
     '35qxvaxv': {
-      'en':
-          'Must be 8+ characters with number, symbol, capital and small letter.',
+      'en': 'Use 8+ chars with number, symbol, uppercase & lowercase',
       'th':
-          'รหัสผ่านต้องมีความยาวอย่างน้อย 8 ตัวอักษรและประกอบด้วยตัวอักษรพิมพ์ใหญ่ ตัวอักษรพิมพ์เล็ก ตัวเลข และอักขระพิเศษ (@\$!%*&)',
+          'ต้องเป็นอักขระ 8 ตัวขึ้นไป พร้อมด้วยตัวเลข สัญลักษณ์ ตัวพิมพ์ใหญ่ และอักษรตัวเล็ก',
     },
     'jrvvbq55': {
       'en': 'Please choose an option from the dropdown',
@@ -1063,13 +1062,17 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Sign Up',
       'th': 'ลงชื่อ',
     },
+    'cddsnpsc': {
+      'en': 'Sign up failed. This account with the given email already exists.',
+      'th': 'ลงทะเบียนล้มเหลว. บัญชีนี้มีอีเมลที่ระบุอยู่แล้ว',
+    },
     'x2g332ku': {
       'en': 'Or sign up using your social profile',
       'th': 'หรือลงทะเบียนโดยใช้โปรไฟล์โซเชียลของคุณ',
     },
     'ujkah9vg': {
       'en': 'Sign In with Google',
-      'th': '',
+      'th': 'เข้าสู่ระบบด้วย Google',
     },
     'o8gu7sqm': {
       'en': 'Already have an account?',
@@ -1112,11 +1115,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ntguwb39': {
       'en': 'QR Generator',
-      'th': 'ดูตัวอย่าง',
+      'th': 'เครื่องกำเนิด QR',
     },
     'ksky8m77': {
       'en': 'QR Classic',
-      'th': '',
+      'th': 'QR คลาสสิค',
     },
     'yx5o8805': {
       'en': 'All',
@@ -1144,11 +1147,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '4ug6f7qv': {
       'en': 'QR Generator',
-      'th': 'ดูตัวอย่าง',
+      'th': 'เครื่องกำเนิด QR',
     },
     'wkvj0bbm': {
       'en': 'QR Classic',
-      'th': '',
+      'th': 'QR คลาสสิค',
     },
     'cqo6i4fh': {
       'en': 'All',
@@ -1322,7 +1325,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'Anime, portrait of a person, light smile, with wind, masterpiece, best quality, movie poster illustration, an extremely delicate, beautifully detailed sunny sky, straw hat, clear sky, epic clouds, farm, beautiful detailed eyes, on the flower field, summer clothes, (fine fabric emphasis:1.4), (watercolor:0.6), (dark brown eyes colour)',
       'th':
-          'Create a space that seamlessly merges organic shapes, natural materials, and a soft color palette to transport customers into a zen-like atmosphere perfect for deep conversations over exquisite coffee',
+          'Anime, portrait of a person, light smile, with wind, masterpiece, best quality, movie poster illustration, an extremely delicate, beautifully detailed sunny sky, straw hat, clear sky, epic clouds, farm, beautiful detailed eyes, on the flower field, summer clothes, (fine fabric emphasis:1.4), (watercolor:0.6), (dark brown eyes colour)',
     },
     'w5pcslz9': {
       'en': 'Unwanted Keywords (Optional)',
@@ -1341,7 +1344,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en':
           'EasyNegative, UnrealisticDream, BadDream, bad anatomy, natural skin, blemish, moles, skin spots, crooked teeth, ugly teeth, weird teeth, weird hands, weird arm​, multiples, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
       'th':
-          'EasyNegative, multiple bodies, extra arms, extra legs, distorted, ugly, unrealistic, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
+          'EasyNegative, UnrealisticDream, BadDream, bad anatomy, natural skin, blemish, moles, skin spots, crooked teeth, ugly teeth, weird teeth, weird hands, weird arm​, multiples, duplicate, deform, extra, Deep Negative, bad_prompt_version2, bad-artist, bad-artist-anime, bad-quality, nudity, nsfw',
     },
     '5xre5825': {
       'en': 'Aspect Ratio',
@@ -1377,7 +1380,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'bcjm1o9k': {
       'en': 'Width (px)',
-      'th': 'ความกว้าง (พิกเซล)',
+      'th': 'ความกว้าง (px)',
     },
     'iyh29fah': {
       'en': 'The width of the generated image.',
@@ -1389,11 +1392,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '2nhukpmo': {
       'en': '1024',
-      'th': '1024',
+      'th': '1,024',
     },
     'qmel9n5q': {
       'en': 'Height (px)',
-      'th': 'ความสูง (พิกเซล)',
+      'th': 'ความสูง (px)',
     },
     'w8ywkcs2': {
       'en': 'The heigth of the generated image.',
@@ -1405,7 +1408,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '11pyz6zz': {
       'en': '1024',
-      'th': '1024',
+      'th': '1,024',
     },
     '76nh3gbv': {
       'en': 'Step 3',
@@ -1455,6 +1458,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '9',
       'th': '9',
     },
+    'yf2268lk': {
+      'en': 'Sending image generating request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'c7bk53ww': {
+      'en':
+          'You can close this window. Your photos will be waiting for you in \'My Pictures\'.',
+      'th':
+          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
+    },
+    '8zl7uhai': {
+      'en': 'Failed to get generated images.',
+      'th': 'ไม่สามารถสร้างภาพได้',
+    },
     'f61rugif': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -1464,7 +1481,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   {
     'b2phjhxr': {
       'en': 'AI Portrait',
-      'th': 'ข้อความเป็นรูปภาพ',
+      'th': 'ภาพบุคคล AI',
     },
     '8cnbq8m0': {
       'en': 'Step 1',
@@ -1476,39 +1493,39 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'ruqi4myz': {
       'en': 'Summer (Women)',
-      'th': '',
+      'th': 'ฤดูร้อน (หญิง)',
     },
     'qf5woorf': {
       'en': 'Summer (Man)',
-      'th': '',
+      'th': 'ฤดูร้อน (ชาย)',
     },
     '76zwa9le': {
       'en': 'Dune (Women)',
-      'th': '',
+      'th': 'ดูน (หญิง)',
     },
     'lnhax2jc': {
       'en': 'Dune (Man)',
-      'th': '',
+      'th': 'ดูน (ชาย)',
     },
     'ij795nco': {
       'en': 'CEO (Women)',
-      'th': '',
+      'th': 'ซีอีโอ (ผู้หญิง)',
     },
     '0579uhv5': {
       'en': 'CEO (Man)',
-      'th': '',
+      'th': 'ซีอีโอ (ชาย)',
     },
     '2yheczmp': {
       'en': 'My Baby',
-      'th': '',
+      'th': 'ลูกของฉัน',
     },
     'qgivmrxp': {
       'en': 'Holiday (Women)',
-      'th': '',
+      'th': 'ฮอลิเดย์ (หญิง)',
     },
     'thbee5oz': {
       'en': 'Holiday (Man)',
-      'th': '',
+      'th': 'วันหยุด (ชาย)',
     },
     'awkbn8ct': {
       'en': 'Step 2',
@@ -1518,9 +1535,23 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': ' : Generate Image',
       'th': ': สร้างภาพ',
     },
+    'qs2rgyco': {
+      'en': 'Your Model',
+      'th': 'โมเดลของคุณ',
+    },
+    'f3jgm251': {
+      'en': 'Uploaded Images',
+      'th': 'รูปภาพที่อัปโหลด',
+    },
     'fww31o1t': {
       'en': 'Model Name',
       'th': 'ชื่อรุ่น',
+    },
+    'nvsfxj02': {
+      'en':
+          'Specify the model name for generating AI portrait photos and AI videos. You have the option to create up to 5 models.',
+      'th':
+          'ระบุชื่อรุ่นสำหรับการสร้างภาพถ่ายบุคคล AI และวิดีโอ AI คุณมีตัวเลือกในการสร้างโมเดลได้สูงสุด 5 แบบ',
     },
     '32i9wk82': {
       'en': '',
@@ -1544,7 +1575,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '6387pz0w': {
       'en': 'Please select 10 photos of your face to build model.',
-      'th': 'โปรดเลือกรูปถ่ายใบหน้าของคุณ 12 รูปเพื่อสร้างแบบจำลอง',
+      'th': 'โปรดเลือกรูปถ่ายใบหน้าของคุณ 10 รูปเพื่อสร้างแบบจำลอง',
     },
     'vyi68vw1': {
       'en': 'Upload Images',
@@ -1553,6 +1584,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2eury0tz': {
       'en': 'File types : PNG/JPG, maximum size : 8 MB',
       'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    '2jooaz83': {
+      'en': 'Attention: You can select maximum 10 photos',
+      'th': 'ข้อควรสนใจ: คุณสามารถเลือกรูปภาพได้สูงสุด 10 รูป',
+    },
+    'ilby4ahe': {
+      'en': 'Select Model',
+      'th': 'ชื่อรุ่น',
+    },
+    '8b3cp7i0': {
+      'en':
+          'The data will be stored for 1 month and will be automatically deleted.',
+      'th': 'ข้อมูลจะถูกเก็บไว้เป็นเวลา 1 เดือนและจะถูกลบโดยอัตโนมัติ',
+    },
+    'cnqd9vrp': {
+      'en': 'Option 1',
+      'th': 'ตัวเลือกที่ 1',
+    },
+    'fzknakcx': {
+      'en': 'Please select model',
+      'th': 'กรุณาเลือกรุ่น',
+    },
+    'xsunnkon': {
+      'en': 'Search for an item...',
+      'th': 'ค้นหารายการ...',
     },
     '56xppndv': {
       'en': 'Uploading Guide',
@@ -1606,6 +1662,46 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': '9',
       'th': '9',
     },
+    'uo0uwwf3': {
+      'en': 'Sending portrait generating request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'rtuhe6ad': {
+      'en':
+          'AI Portrait will take about 25 - 60 minutes. Feel free to close this window while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your app and email.',
+      'th':
+          'AI Portrait จะใช้เวลาประมาณ 25 - 60 นาที อย่าลังเลที่จะปิดหน้าต่างนี้ในขณะที่หน้าต่างกำลังทำงานอยู่ ไม่ต้องกังวล เราจะแจ้งให้คุณทราบด้วยการแจ้งเตือนในแอปและอีเมลของคุณ',
+    },
+    'qk6mc5i9': {
+      'en': 'Failed to get generated images.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'asb3u5l4': {
+      'en': 'AI Portrait',
+      'th': 'ภาพบุคคล AI',
+    },
+    'zkueeefb': {
+      'en': 'Sending image training request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'nlmrjl9b': {
+      'en': 'Sending portrait generating request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'gd9dumqy': {
+      'en':
+          'AI Portrait will take about 25 - 60 minutes. Feel free to close this window while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your app and email.',
+      'th':
+          'AI Portrait จะใช้เวลาประมาณ 25 - 60 นาที อย่าลังเลที่จะปิดหน้าต่างนี้ในขณะที่หน้าต่างกำลังทำงานอยู่ ไม่ต้องกังวล เราจะแจ้งให้คุณทราบด้วยการแจ้งเตือนในแอปและอีเมลของคุณ',
+    },
+    'l0i7bg7f': {
+      'en': 'Failed to get generated images.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'lam99c9f': {
+      'en': 'AI Portrait',
+      'th': 'ภาพบุคคล AI',
+    },
     'oltds1oq': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -1657,6 +1753,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'File types : MP4/MOV/HEVC, maximum size : 40 MB',
       'th': 'ประเภทไฟล์ : MP4/MOV/HEVC ขนาดสูงสุด : 40 MB',
     },
+    'uhg6tqjc': {
+      'en': 'Video upload failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'tbnd7meh': {
+      'en': 'Video has been uploaded successfully.',
+      'th': 'อัปโหลดวิดีโอสำเร็จแล้ว',
+    },
     '7n77pygb': {
       'en': 'Step 3',
       'th': 'ขั้นตอนที่ 3',
@@ -1680,6 +1784,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'bky6xqnc': {
       'en': '( 100 Credits )',
       'th': '( 100 หน่วยกิต )',
+    },
+    '9rz7zzyk': {
+      'en': 'Sending video generating request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'n9jjngvz': {
+      'en':
+          'AI Video generation will take about 15 - 20 minutes. Feel free to close this window while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your app and an email.',
+      'th':
+          'การสร้างวิดีโอ AI จะใช้เวลาประมาณ 15 - 20 นาที อย่าลังเลที่จะปิดหน้าต่างนี้ในขณะที่หน้าต่างกำลังทำงานอยู่ ไม่ต้องกังวล เราจะแจ้งให้คุณทราบด้วยการแจ้งเตือนในแอปและอีเมลของคุณ',
+    },
+    '95dzw2vk': {
+      'en': 'Failed to get generated video.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
     },
     '2oa3mnak': {
       'en': 'Home',
@@ -1711,7 +1829,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '2gndfmdr': {
       'en':
           'Train your own AI model to create limitless personalized portraits',
-      'th': 'ฝึกฝนโมเดล AI ของคุณเองเพื่อสร้างภาพบุคคลแบบไม่จำกัด',
+      'th': 'ฝึกฝนโมเดล AI ของคุณเองเพื่อสร้างภาพบุคคลแบบไร้ขีดจำกัด',
     },
     '2tlrq4by': {
       'en': 'Try Now',
@@ -1743,27 +1861,27 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'yr0n1ge2': {
       'en': 'For You',
-      'th': 'ทั้งหมด',
+      'th': 'สำหรับคุณ',
     },
     'lwhs3xxc': {
       'en': 'Christmas',
-      'th': 'ภาพบุคคล AI',
+      'th': 'คริสต์มาส',
     },
     'j4pp44th': {
       'en': 'Studio',
-      'th': 'วิดีโอเอไอ',
+      'th': 'สตูดิโอ',
     },
     'm1pqrl1k': {
       'en': 'Video',
-      'th': 'ดูตัวอย่าง',
+      'th': 'วีดีโอ',
     },
     '8pqxw1et': {
       'en': 'Animi',
-      'th': 'เครื่องกำเนิด QR',
+      'th': 'อานิมิ',
     },
     'cvaopv9c': {
       'en': 'For You',
-      'th': 'ทั้งหมด',
+      'th': 'สำหรับคุณ',
     },
     'hnh7d5a5': {
       'en': 'Flower Field',
@@ -1775,7 +1893,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'pm50sf40': {
       'en': 'Dune (Man)',
-      'th': 'เกาหลี',
+      'th': 'ดูน (ชาย)',
     },
     '58kfou77': {
       'en': 'AI Portrait',
@@ -1787,7 +1905,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '5jjo7ob6': {
       'en': 'Joan Miro',
-      'th': 'นีออนไซไฟเลดี้',
+      'th': 'โจน มิโร',
     },
     'o13hwo66': {
       'en': 'Rainbow',
@@ -1799,7 +1917,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '8cgkc3tb': {
       'en': 'My Baby',
-      'th': 'การ์ตูน',
+      'th': 'ลูกของฉัน',
     },
     '81ocbv4b': {
       'en': 'AI Video',
@@ -1811,11 +1929,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'm1cs05p3': {
       'en': 'Foodies',
-      'th': 'นีออนไซไฟเลดี้',
+      'th': 'นักชิม',
     },
     'ddqjtbeo': {
       'en': 'CEO (Man)',
-      'th': 'อะนิเมะ',
+      'th': 'ซีอีโอ (ชาย)',
     },
     'm2xjtzj9': {
       'en': 'AI Portrait',
@@ -1851,7 +1969,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'lwhem43h': {
       'en': 'Cyberpunk',
-      'th': 'นีออนไซไฟเลดี้',
+      'th': 'ไซเบอร์พังค์',
     },
     '4mvqfhsp': {
       'en': 'Homey Cafe​',
@@ -1867,11 +1985,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     '76iow3uy': {
       'en': 'Galaxy',
-      'th': 'นีออนไซไฟเลดี้',
+      'th': 'กาแล็กซี',
     },
     '4zmey3s4': {
       'en': 'Text to Image',
-      'th': 'เครื่องกำเนิด QR',
+      'th': 'ข้อความเป็นรูปภาพ',
     },
     'tnpk7igf': {
       'en': 'Birthday Cat',
@@ -1899,14 +2017,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     },
     'cojtf3t9': {
       'en': 'Maneki Neko',
-      'th': 'นีออนไซไฟเลดี้',
+      'th': 'มาเนกิเนโกะ',
     },
     'y2t86e04': {
       'en': 'Home',
       'th': 'บ้าน',
     },
   },
-  // QR_Start
+  // QR_Generate
   {
     'sungsi2p': {
       'en': 'QR Generator',
@@ -1963,6 +2081,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'z4u6h1n3': {
       'en': 'File types : PNG/JPG, maximum size : 8 MB',
       'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
+    },
+    'kk0365e8': {
+      'en': 'QR code upload failed.',
+      'th': 'การอัปโหลดรูปภาพโลโก้ล้มเหลว',
+    },
+    'h6dj5agk': {
+      'en': 'QR Code has been uploaded successfully.',
+      'th': 'อัปโหลดรหัส QR สำเร็จแล้ว',
     },
     'aimxo22s': {
       'en': 'Example',
@@ -2076,6 +2202,20 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Generate',
       'th': 'สร้าง',
     },
+    'oblfzqil': {
+      'en': 'Sending image generating request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'ywj23t6h': {
+      'en':
+          'You can close this window. Your photos will be waiting for you in \'My Pictures\'.',
+      'th':
+          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
+    },
+    'grf7uvm1': {
+      'en': 'Failed to get generated images.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
     '3kqyfyvy': {
       'en': 'QR Classic',
       'th': 'อัพโหลดรูปภาพ',
@@ -2128,6 +2268,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'File types : PNG/JPG, maximum size : 8 MB',
       'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
     },
+    '04bccq7k': {
+      'en': 'QR code upload failed.',
+      'th': 'การอัปโหลดภาพพื้นหลังล้มเหลว',
+    },
+    'm6752gni': {
+      'en': 'QR Code has been uploaded successfully.',
+      'th': 'อัปโหลดรหัส QR สำเร็จแล้ว',
+    },
     'yutr9l0r': {
       'en': 'Example',
       'th': 'ตัวอย่าง',
@@ -2152,6 +2300,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'File types : PNG/JPG, maximum size : 8 MB',
       'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
     },
+    '00qqhedu': {
+      'en': 'Background image upload failed.',
+      'th': 'การอัปโหลดภาพพื้นหลังล้มเหลว',
+    },
+    '6m58qn5n': {
+      'en': 'Background image has been uploaded successfully.',
+      'th': 'อัปโหลดภาพพื้นหลังสำเร็จแล้ว',
+    },
     'rbtfccaa': {
       'en': 'QR Scale',
       'th': 'มาตราส่วน QR',
@@ -2168,9 +2324,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'File types : PNG/JPG, maximum size : 8 MB',
       'th': 'ประเภทไฟล์ : PNG/JPG ขนาดสูงสุด : 8 MB',
     },
+    'lua83pyu': {
+      'en': 'Logo image upload failed.',
+      'th': 'การอัปโหลดรูปภาพโลโก้ล้มเหลว',
+    },
+    'aewjl5nw': {
+      'en': 'Logo image has been uploaded successfully.',
+      'th': 'อัปโหลดภาพโลโก้สำเร็จแล้ว',
+    },
     'wlrwielk': {
       'en': 'Generate',
       'th': 'สร้าง',
+    },
+    'mghyk1q2': {
+      'en': 'Sending image generating request failed.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
+    },
+    'ub2o7pm4': {
+      'en':
+          'You can close this window. Your photos will be waiting for you in \'My Pictures\'.',
+      'th':
+          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
+    },
+    'o651c1wi': {
+      'en': 'Failed to get generated images.',
+      'th': 'การส่งคำขอสร้างรูปภาพล้มเหลว',
     },
     'vhjv3b3z': {
       'en': 'Home',
@@ -2191,9 +2369,21 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Confirm',
       'th': 'ยืนยัน',
     },
+    'ljd6kd1d': {
+      'en': 'Confirm failed',
+      'th': 'ยืนยันล้มเหลว',
+    },
     'tjalbxdh': {
       'en': 'Resend Code',
       'th': 'ส่งรหัสอีกครั้ง',
+    },
+    'zeextm2b': {
+      'en': 'Sending code failed',
+      'th': 'การส่งรหัสล้มเหลว',
+    },
+    'tymaubzj': {
+      'en': 'Resent code successfully',
+      'th': 'ส่งรหัสอีกครั้งสำเร็จแล้ว',
     },
     'szu0s2bz': {
       'en': 'Home',
@@ -2223,6 +2413,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'a8f6j3tt': {
       'en': 'Send Code',
       'th': 'ส่งรหัส',
+    },
+    'qix2dt6j': {
+      'en': 'Sending code failed',
+      'th': 'การส่งรหัสล้มเหลว',
+    },
+    'ojadzthi': {
+      'en': 'Sent code successfully',
+      'th': 'ส่งรหัสเรียบร้อยแล้ว',
     },
     '7pej2o29': {
       'en': 'Home',
@@ -2330,6 +2528,14 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Confirm',
       'th': 'ยืนยัน',
     },
+    'er8pycms': {
+      'en': 'Unexpected error!',
+      'th': 'เกิดข้อผิดพลาดที่ไม่คาดคิด!',
+    },
+    'gpi6akus': {
+      'en': 'Password change successful',
+      'th': 'เปลี่ยนรหัสผ่านสำเร็จ',
+    },
     'cjvece79': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -2406,14 +2612,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ครอบตัด',
     },
   },
-  // resultgenerate
-  {
-    'v8jp45n7': {
-      'en': 'AI Portrait',
-      'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
-    },
-  },
-  // videoresult
+  // videoResult
   {
     '0l2phx3p': {
       'en': 'AI Video (15 sec)',
@@ -2451,17 +2650,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ตัวอย่าง',
     },
   },
-  // QR_Code
-  {
-    'lh3nhfdb': {
-      'en': 'QR Code Generator',
-      'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
-    },
-    'ahu9xwr9': {
-      'en': 'Download',
-      'th': 'ดาวน์โหลด',
-    },
-  },
   // signinicon
   {
     'sivaokxw': {
@@ -2471,10 +2659,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
   },
   // imageResult
   {
-    'wi8d4mya': {
-      'en': 'Text To Image',
-      'th': 'สร้างพื้นที่ที่ผสานรูปทรงออร์แกนิกเข้าด้วยกันอย่างลงตัว',
-    },
     '0acpismy': {
       'en': 'Image description',
       'th': 'คำอธิบายรูปภาพ',
@@ -2658,43 +2842,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'เครื่องกำเนิด QR',
     },
   },
-  // pageview
-  {
-    'c5xnegfs': {
-      'en': 'Elevating Creativity Through the Power of AI.',
-      'th': 'ยกระดับความคิดสร้างสรรค์ด้วยพลังของ AI',
-    },
-    'f59ilcd9': {
-      'en':
-          'Listen to the latest music releases and buy music event only using Disc. app',
-      'th': 'ฟังเพลงใหม่ล่าสุดและซื้อกิจกรรมเพลงโดยใช้แผ่นดิสก์เท่านั้น แอป',
-    },
-    'a1pemtg8': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'vfgyn5xd': {
-      'en': 'Easily create an image from scratch with our AI image',
-      'th': 'สร้างภาพตั้งแต่เริ่มต้นได้อย่างง่ายดายด้วยภาพ AI ของเรา',
-    },
-    '1kiogx7a': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
-    'fgxp6qur': {
-      'en':
-          'Train your own AI model to create limitless personalized portraits',
-      'th': 'ฝึกฝนโมเดล AI ของคุณเองเพื่อสร้างภาพบุคคลแบบไม่จำกัด',
-    },
-    '2brcooge': {
-      'en': 'AI Video (15 sec)',
-      'th': 'วิดีโอ AI (15 วินาที)',
-    },
-    '6ducqbc1': {
-      'en': 'Change your video to your favorite style',
-      'th': 'เปลี่ยนวิดีโอของคุณให้เป็นสไตล์ที่คุณชื่นชอบ',
-    },
-  },
   // uploadbutton
   {
     'txzummh5': {
@@ -2744,7 +2891,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': '1024',
     },
   },
-  // deleteimage
+  // deleteconfirm
   {
     'ca0h5lq6': {
       'en': 'Are you sure?',
@@ -2770,17 +2917,11 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ไปที่ลงชื่อเข้าใช้',
     },
   },
-  // waiting_Image
+  // waiting
   {
     'buz4t63u': {
       'en': 'Generating...',
       'th': 'กำลังสร้าง...',
-    },
-    '82at0qfr': {
-      'en':
-          'You can close this window. Your photos will be waiting for you in \'My Pictures\'.',
-      'th':
-          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
     },
     'm5tbjet0': {
       'en': 'Try More',
@@ -2796,56 +2937,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f8gopqgk': {
       'en': 'Done',
       'th': 'กำลังสร้าง...',
-    },
-  },
-  // waiting_Portrait
-  {
-    '9ur2c4uz': {
-      'en': '~40 Min',
-      'th': '~2 นาที',
-    },
-    'vyj7bem7': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    'zjrc6f1f': {
-      'en':
-          'AI Portrait will take about 25 - 60 minutes. Feel free to close your web browser while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your browser and email.',
-      'th':
-          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
-    },
-    '5jv4rbcp': {
-      'en': 'Try More',
-      'th': 'ลองเพิ่มเติม',
-    },
-    '4qeajisn': {
-      'en': 'Go to My Pictures',
-      'th': 'ไปที่รูปภาพของฉัน',
-    },
-  },
-  // waiting_Video
-  {
-    'pwr8skfh': {
-      'en': '~20 Min',
-      'th': '~2 นาที',
-    },
-    '6bj9djli': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    '432z3ft1': {
-      'en':
-          'AI Video generation will take about 15 - 20 minutes. Feel free to close your web browser while it\'s running. Don\'t worry, we\'ll keep you updated with a notification in your browser and an email.',
-      'th':
-          'คุณสามารถปิดหน้าต่างนี้ได้. รูปภาพของคุณจะรอคุณอยู่ใน \'รูปภาพของฉัน\'',
-    },
-    '8g632x07': {
-      'en': 'Try More',
-      'th': 'ลองเพิ่มเติม',
-    },
-    '3d54kjx6': {
-      'en': 'Go to My Pictures',
-      'th': 'ไปที่รูปภาพของฉัน',
     },
   },
   // Miscellaneous

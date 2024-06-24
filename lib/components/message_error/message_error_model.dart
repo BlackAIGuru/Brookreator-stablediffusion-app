@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'error_message_widget.dart' show ErrorMessageWidget;
+import 'message_error_widget.dart' show MessageErrorWidget;
 import 'package:flutter/material.dart';
 
-class ErrorMessageModel extends FlutterFlowModel<ErrorMessageWidget> {
+class MessageErrorModel extends FlutterFlowModel<MessageErrorWidget> {
   @override
   void initState(BuildContext context) {}
 

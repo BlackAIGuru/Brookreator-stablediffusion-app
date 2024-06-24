@@ -3,11 +3,11 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:flutter/material.dart';
-import 'videoresult_model.dart';
-export 'videoresult_model.dart';
+import 'video_result_model.dart';
+export 'video_result_model.dart';
 
-class VideoresultWidget extends StatefulWidget {
-  const VideoresultWidget({
+class VideoResultWidget extends StatefulWidget {
+  const VideoResultWidget({
     super.key,
     this.videoResultUrl,
   });
@@ -15,11 +15,11 @@ class VideoresultWidget extends StatefulWidget {
   final String? videoResultUrl;
 
   @override
-  State<VideoresultWidget> createState() => _VideoresultWidgetState();
+  State<VideoResultWidget> createState() => _VideoResultWidgetState();
 }
 
-class _VideoresultWidgetState extends State<VideoresultWidget> {
-  late VideoresultModel _model;
+class _VideoResultWidgetState extends State<VideoResultWidget> {
+  late VideoResultModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -30,7 +30,7 @@ class _VideoresultWidgetState extends State<VideoresultWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => VideoresultModel());
+    _model = createModel(context, () => VideoResultModel());
   }
 
   @override

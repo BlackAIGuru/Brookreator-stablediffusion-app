@@ -1,8 +1,10 @@
-import '/a_i_video/videoresult/videoresult_widget.dart';
-import '/a_i_video/waiting_video/waiting_video_widget.dart';
+import '/a_i_video/video_result/video_result_widget.dart';
 import '/backend/api_requests/api_calls.dart';
 import '/components/done/done_widget.dart';
+import '/components/message_error/message_error_widget.dart';
+import '/components/message_success/message_success_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
+import '/components/waiting/waiting_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
@@ -65,7 +67,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 100.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -83,22 +85,34 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                             ),
                             child: Stack(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 3.0, 0.0, 0.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed('HomePage');
-                                    },
-                                    child: FaIcon(
-                                      FontAwesomeIcons.chevronLeft,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      size: 22.0,
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('HomePage');
+                                  },
+                                  child: Container(
+                                    decoration: const BoxDecoration(),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 3.0, 0.0, 0.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed('HomePage');
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.chevronLeft,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 22.0,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -397,7 +411,8 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                             const AlignmentDirectional(
                                                                 0.0, 1.0),
                                                         child: Container(
-                                                          width: 100.0,
+                                                          width:
+                                                              double.infinity,
                                                           height: 30.0,
                                                           decoration:
                                                               const BoxDecoration(
@@ -823,296 +838,358 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                               return Align(
                                                 alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
-                                                child: InkWell(
-                                                  splashColor:
-                                                      Colors.transparent,
-                                                  focusColor:
-                                                      Colors.transparent,
-                                                  hoverColor:
-                                                      Colors.transparent,
-                                                  highlightColor:
-                                                      Colors.transparent,
-                                                  onTap: () async {
-                                                    if (FFAppState().Logined) {
-                                                      final selectedMedia =
-                                                          await selectMediaWithSourceBottomSheet(
-                                                        context: context,
-                                                        allowPhoto: false,
-                                                        allowVideo: true,
-                                                      );
-                                                      if (selectedMedia !=
-                                                              null &&
-                                                          selectedMedia.every((m) =>
-                                                              validateFileFormat(
-                                                                  m.storagePath,
-                                                                  context))) {
-                                                        setState(() => _model
-                                                                .isDataUploading =
-                                                            true);
-                                                        var selectedUploadedFiles =
-                                                            <FFUploadedFile>[];
+                                                child: Builder(
+                                                  builder: (context) => InkWell(
+                                                    splashColor:
+                                                        Colors.transparent,
+                                                    focusColor:
+                                                        Colors.transparent,
+                                                    hoverColor:
+                                                        Colors.transparent,
+                                                    highlightColor:
+                                                        Colors.transparent,
+                                                    onTap: () async {
+                                                      if (FFAppState()
+                                                          .Logined) {
+                                                        final selectedMedia =
+                                                            await selectMediaWithSourceBottomSheet(
+                                                          context: context,
+                                                          allowPhoto: false,
+                                                          allowVideo: true,
+                                                        );
+                                                        if (selectedMedia !=
+                                                                null &&
+                                                            selectedMedia.every((m) =>
+                                                                validateFileFormat(
+                                                                    m.storagePath,
+                                                                    context))) {
+                                                          setState(() => _model
+                                                                  .isDataUploading =
+                                                              true);
+                                                          var selectedUploadedFiles =
+                                                              <FFUploadedFile>[];
 
-                                                        try {
-                                                          selectedUploadedFiles =
+                                                          try {
+                                                            selectedUploadedFiles =
+                                                                selectedMedia
+                                                                    .map((m) =>
+                                                                        FFUploadedFile(
+                                                                          name: m
+                                                                              .storagePath
+                                                                              .split('/')
+                                                                              .last,
+                                                                          bytes:
+                                                                              m.bytes,
+                                                                          height: m
+                                                                              .dimensions
+                                                                              ?.height,
+                                                                          width: m
+                                                                              .dimensions
+                                                                              ?.width,
+                                                                          blurHash:
+                                                                              m.blurHash,
+                                                                        ))
+                                                                    .toList();
+                                                          } finally {
+                                                            _model.isDataUploading =
+                                                                false;
+                                                          }
+                                                          if (selectedUploadedFiles
+                                                                  .length ==
                                                               selectedMedia
-                                                                  .map((m) =>
-                                                                      FFUploadedFile(
-                                                                        name: m
-                                                                            .storagePath
-                                                                            .split('/')
-                                                                            .last,
-                                                                        bytes: m
-                                                                            .bytes,
-                                                                        height: m
-                                                                            .dimensions
-                                                                            ?.height,
-                                                                        width: m
-                                                                            .dimensions
-                                                                            ?.width,
-                                                                        blurHash:
-                                                                            m.blurHash,
-                                                                      ))
-                                                                  .toList();
-                                                        } finally {
-                                                          _model.isDataUploading =
-                                                              false;
+                                                                  .length) {
+                                                            setState(() {
+                                                              _model.uploadedLocalFile =
+                                                                  selectedUploadedFiles
+                                                                      .first;
+                                                            });
+                                                          } else {
+                                                            setState(() {});
+                                                            return;
+                                                          }
                                                         }
-                                                        if (selectedUploadedFiles
-                                                                .length ==
-                                                            selectedMedia
-                                                                .length) {
-                                                          setState(() {
-                                                            _model.uploadedLocalFile =
-                                                                selectedUploadedFiles
-                                                                    .first;
-                                                          });
-                                                        } else {
-                                                          setState(() {});
-                                                          return;
-                                                        }
-                                                      }
 
-                                                      _model.videoupload =
-                                                          await BrookreatorGroup
-                                                              .fileUploaderCall
-                                                              .call(
-                                                        accessToken:
-                                                            FFAppState()
-                                                                .AccessToken,
-                                                        uploadedfile: _model
-                                                            .uploadedLocalFile,
-                                                      );
-                                                      if ((_model.videoupload
-                                                              ?.succeeded ??
-                                                          true)) {
-                                                        ScaffoldMessenger.of(
-                                                                context)
-                                                            .showSnackBar(
-                                                          SnackBar(
-                                                            content: Text(
+                                                        _model.videoupload =
+                                                            await BrookreatorGroup
+                                                                .fileUploaderCall
+                                                                .call(
+                                                          accessToken:
+                                                              FFAppState()
+                                                                  .AccessToken,
+                                                          uploadedfile: _model
+                                                              .uploadedLocalFile,
+                                                        );
+
+                                                        if ((_model.videoupload
+                                                                ?.succeeded ??
+                                                            true)) {
+                                                          _model.uploadedvideopath =
                                                               getJsonField(
-                                                                (_model.videoupload
-                                                                        ?.jsonBody ??
-                                                                    ''),
-                                                                r'''$.result.filePath''',
-                                                              ).toString(),
-                                                              style: TextStyle(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryText,
-                                                              ),
-                                                            ),
-                                                            duration: const Duration(
-                                                                milliseconds:
-                                                                    4000),
-                                                            backgroundColor:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondary,
-                                                          ),
-                                                        );
-                                                        _model.uploadedvideopath =
-                                                            getJsonField(
-                                                          (_model.videoupload
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                          r'''$.result.filePath''',
-                                                        ).toString();
-                                                        _model.uploadedvideoshow =
-                                                            getJsonField(
-                                                          (_model.videoupload
-                                                                  ?.jsonBody ??
-                                                              ''),
-                                                          r'''$.result.publicLink''',
-                                                        ).toString();
-                                                        setState(() {});
+                                                            (_model.videoupload
+                                                                    ?.jsonBody ??
+                                                                ''),
+                                                            r'''$.result.filePath''',
+                                                          ).toString();
+                                                          _model.uploadedvideoshow =
+                                                              getJsonField(
+                                                            (_model.videoupload
+                                                                    ?.jsonBody ??
+                                                                ''),
+                                                            r'''$.result.publicLink''',
+                                                          ).toString();
+                                                          setState(() {});
+                                                          showDialog(
+                                                            barrierColor: Colors
+                                                                .transparent,
+                                                            context: context,
+                                                            builder:
+                                                                (dialogContext) {
+                                                              return Dialog(
+                                                                elevation: 0,
+                                                                insetPadding:
+                                                                    EdgeInsets
+                                                                        .zero,
+                                                                backgroundColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                alignment: const AlignmentDirectional(
+                                                                        0.0,
+                                                                        -1.0)
+                                                                    .resolve(
+                                                                        Directionality.of(
+                                                                            context)),
+                                                                child:
+                                                                    GestureDetector(
+                                                                  onTap: () => _model
+                                                                          .unfocusNode
+                                                                          .canRequestFocus
+                                                                      ? FocusScope.of(
+                                                                              context)
+                                                                          .requestFocus(_model
+                                                                              .unfocusNode)
+                                                                      : FocusScope.of(
+                                                                              context)
+                                                                          .unfocus(),
+                                                                  child:
+                                                                      SizedBox(
+                                                                    height:
+                                                                        100.0,
+                                                                    width: double
+                                                                        .infinity,
+                                                                    child:
+                                                                        MessageSuccessWidget(
+                                                                      alertInfo:
+                                                                          FFLocalizations.of(context)
+                                                                              .getText(
+                                                                        'tbnd7meh' /* Video has been uploaded succes... */,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                          ).then((value) =>
+                                                              setState(() {}));
+                                                        } else {
+                                                          showDialog(
+                                                            barrierColor: Colors
+                                                                .transparent,
+                                                            context: context,
+                                                            builder:
+                                                                (dialogContext) {
+                                                              return Dialog(
+                                                                elevation: 0,
+                                                                insetPadding:
+                                                                    EdgeInsets
+                                                                        .zero,
+                                                                backgroundColor:
+                                                                    Colors
+                                                                        .transparent,
+                                                                alignment: const AlignmentDirectional(
+                                                                        0.0,
+                                                                        -1.0)
+                                                                    .resolve(
+                                                                        Directionality.of(
+                                                                            context)),
+                                                                child:
+                                                                    GestureDetector(
+                                                                  onTap: () => _model
+                                                                          .unfocusNode
+                                                                          .canRequestFocus
+                                                                      ? FocusScope.of(
+                                                                              context)
+                                                                          .requestFocus(_model
+                                                                              .unfocusNode)
+                                                                      : FocusScope.of(
+                                                                              context)
+                                                                          .unfocus(),
+                                                                  child:
+                                                                      SizedBox(
+                                                                    height:
+                                                                        100.0,
+                                                                    width: double
+                                                                        .infinity,
+                                                                    child:
+                                                                        MessageErrorWidget(
+                                                                      alertInfo:
+                                                                          FFLocalizations.of(context)
+                                                                              .getText(
+                                                                        'uhg6tqjc' /* Video upload failed. */,
+                                                                      ),
+                                                                    ),
+                                                                  ),
+                                                                ),
+                                                              );
+                                                            },
+                                                          ).then((value) =>
+                                                              setState(() {}));
+                                                        }
                                                       } else {
-                                                        ScaffoldMessenger.of(
-                                                                context)
-                                                            .showSnackBar(
-                                                          SnackBar(
-                                                            content: Text(
-                                                              'error',
-                                                              style: TextStyle(
-                                                                color: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .primaryText,
-                                                              ),
-                                                            ),
-                                                            duration: const Duration(
-                                                                milliseconds:
-                                                                    4000),
-                                                            backgroundColor:
-                                                                FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .secondary,
-                                                          ),
-                                                        );
+                                                        context.pushNamed(
+                                                            'SignIn');
                                                       }
-                                                    } else {
-                                                      context
-                                                          .pushNamed('SignIn');
-                                                    }
 
-                                                    setState(() {});
-                                                  },
-                                                  child: Container(
-                                                    width: 310.0,
-                                                    height: 140.0,
-                                                    decoration: BoxDecoration(
-                                                      color: FlutterFlowTheme
-                                                              .of(context)
-                                                          .secondaryBackground,
-                                                    ),
-                                                    child: Align(
-                                                      alignment:
-                                                          const AlignmentDirectional(
-                                                              0.0, 0.0),
-                                                      child: Stack(
-                                                        children: [
-                                                          Align(
-                                                            alignment:
-                                                                const AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: ClipRRect(
-                                                              borderRadius:
-                                                                  BorderRadius
-                                                                      .circular(
-                                                                          0.0),
-                                                              child:
-                                                                  Image.asset(
-                                                                'assets/images/Rectangle_165.png',
-                                                                width: 300.0,
-                                                                fit: BoxFit
-                                                                    .cover,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          Align(
-                                                            alignment:
-                                                                const AlignmentDirectional(
-                                                                    0.0, -1.0),
-                                                            child: Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          40.0,
-                                                                          0.0,
-                                                                          0.0),
+                                                      setState(() {});
+                                                    },
+                                                    child: Container(
+                                                      width: 310.0,
+                                                      height: 140.0,
+                                                      decoration: BoxDecoration(
+                                                        color: FlutterFlowTheme
+                                                                .of(context)
+                                                            .secondaryBackground,
+                                                      ),
+                                                      child: Align(
+                                                        alignment:
+                                                            const AlignmentDirectional(
+                                                                0.0, 0.0),
+                                                        child: Stack(
+                                                          children: [
+                                                            Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.0, 0.0),
                                                               child: ClipRRect(
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
-                                                                            8.0),
+                                                                            0.0),
                                                                 child:
                                                                     Image.asset(
-                                                                  'assets/images/icons8-upload-to-cloud.gif',
-                                                                  width: 35.0,
-                                                                  height: 30.0,
+                                                                  'assets/images/Rectangle_165.png',
+                                                                  width: 300.0,
                                                                   fit: BoxFit
-                                                                      .contain,
+                                                                      .cover,
                                                                 ),
                                                               ),
                                                             ),
-                                                          ),
-                                                          Align(
-                                                            alignment:
-                                                                const AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          10.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'i76l8beh' /* Upload Video */,
+                                                            Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.0,
+                                                                      -1.0),
+                                                              child: Padding(
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            40.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                child:
+                                                                    ClipRRect(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              8.0),
+                                                                  child: Image
+                                                                      .asset(
+                                                                    'assets/images/icons8-upload-to-cloud.gif',
+                                                                    width: 35.0,
+                                                                    height:
+                                                                        30.0,
+                                                                    fit: BoxFit
+                                                                        .contain,
+                                                                  ),
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'NotoSansThai',
-                                                                      color: Colors
-                                                                          .black,
-                                                                      fontSize:
-                                                                          13.0,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w600,
-                                                                      useGoogleFonts:
-                                                                          false,
-                                                                    ),
                                                               ),
                                                             ),
-                                                          ),
-                                                          Align(
-                                                            alignment:
-                                                                const AlignmentDirectional(
-                                                                    0.0, 0.0),
-                                                            child: Padding(
-                                                              padding:
-                                                                  const EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          0.0,
-                                                                          45.0,
-                                                                          0.0,
-                                                                          0.0),
-                                                              child: Text(
-                                                                FFLocalizations.of(
-                                                                        context)
-                                                                    .getText(
-                                                                  'dyg9ne0e' /* File types : MP4/MOV/HEVC, max... */,
+                                                            Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.0, 0.0),
+                                                              child: Padding(
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            10.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'i76l8beh' /* Upload Video */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'NotoSansThai',
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontSize:
+                                                                            13.0,
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        fontWeight:
+                                                                            FontWeight.w600,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
                                                                 ),
-                                                                style: FlutterFlowTheme.of(
-                                                                        context)
-                                                                    .bodyMedium
-                                                                    .override(
-                                                                      fontFamily:
-                                                                          'NotoSansThai',
-                                                                      color: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .secondaryText,
-                                                                      fontSize:
-                                                                          10.0,
-                                                                      letterSpacing:
-                                                                          0.0,
-                                                                      useGoogleFonts:
-                                                                          false,
-                                                                    ),
                                                               ),
                                                             ),
-                                                          ),
-                                                        ],
+                                                            Align(
+                                                              alignment:
+                                                                  const AlignmentDirectional(
+                                                                      0.0, 0.0),
+                                                              child: Padding(
+                                                                padding:
+                                                                    const EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            0.0,
+                                                                            45.0,
+                                                                            0.0,
+                                                                            0.0),
+                                                                child: Text(
+                                                                  FFLocalizations.of(
+                                                                          context)
+                                                                      .getText(
+                                                                    'dyg9ne0e' /* File types : MP4/MOV/HEVC, max... */,
+                                                                  ),
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyMedium
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'NotoSansThai',
+                                                                        color: FlutterFlowTheme.of(context)
+                                                                            .secondaryText,
+                                                                        fontSize:
+                                                                            10.0,
+                                                                        letterSpacing:
+                                                                            0.0,
+                                                                        useGoogleFonts:
+                                                                            false,
+                                                                      ),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -1545,15 +1622,6 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                           ? null
                           : () async {
                               if (FFAppState().Logined) {
-                                _model.accountInfo =
-                                    await BrookreatorGroup.accountCall.call(
-                                  accessToken: FFAppState().AccessToken,
-                                );
-                                FFAppState().Credit =
-                                    BrookreatorGroup.accountCall.credit(
-                                  (_model.accountInfo?.jsonBody ?? ''),
-                                )!;
-                                setState(() {});
                                 _model.aiVideoGenerate = await BrookreatorGroup
                                     .aIVideoGenerateCall
                                     .call(
@@ -1576,57 +1644,19 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                   txID: _model.txID,
                                   steps: '30',
                                 );
+
                                 if ((_model.aiVideoGenerate?.succeeded ??
                                     true)) {
-                                  await showDialog(
-                                    context: context,
-                                    builder: (dialogContext) {
-                                      return Dialog(
-                                        elevation: 0,
-                                        insetPadding: EdgeInsets.zero,
-                                        backgroundColor: Colors.transparent,
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0)
-                                                .resolve(
-                                                    Directionality.of(context)),
-                                        child: GestureDetector(
-                                          onTap: () => _model
-                                                  .unfocusNode.canRequestFocus
-                                              ? FocusScope.of(context)
-                                                  .requestFocus(
-                                                      _model.unfocusNode)
-                                              : FocusScope.of(context)
-                                                  .unfocus(),
-                                          child: const WaitingVideoWidget(),
-                                        ),
-                                      );
-                                    },
-                                  ).then((value) => setState(() {}));
-
-                                  while (true) {
-                                    _model.loop = await BrookreatorGroup
-                                        .queueStatusCall
-                                        .call(
-                                      accessToken: FFAppState().AccessToken,
-                                      txID: _model.txID,
-                                    );
-                                    if (BrookreatorGroup.queueStatusCall.status(
-                                          (_model.loop?.jsonBody ?? ''),
-                                        ) ==
-                                        'COMPLETED') {
-                                      break;
-                                    } else {
-                                      await Future.delayed(
-                                          const Duration(milliseconds: 2000));
-                                    }
-                                  }
-                                  _model.gettingVideo = await BrookreatorGroup
-                                      .getGeneratedContentsCall
-                                      .call(
+                                  _model.accountInfo =
+                                      await BrookreatorGroup.accountCall.call(
                                     accessToken: FFAppState().AccessToken,
-                                    txID: _model.txID,
                                   );
-                                  Navigator.pop(context);
+
+                                  FFAppState().Credit =
+                                      BrookreatorGroup.accountCall.credit(
+                                    (_model.accountInfo?.jsonBody ?? ''),
+                                  )!;
+                                  setState(() {});
                                   showDialog(
                                     context: context,
                                     builder: (dialogContext) {
@@ -1646,59 +1676,180 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                       _model.unfocusNode)
                                               : FocusScope.of(context)
                                                   .unfocus(),
-                                          child: const DoneWidget(),
-                                        ),
-                                      );
-                                    },
-                                  ).then((value) => setState(() {}));
-
-                                  await Future.delayed(
-                                      const Duration(milliseconds: 2000));
-                                  Navigator.pop(context);
-                                  await showModalBottomSheet(
-                                    isScrollControlled: true,
-                                    backgroundColor: Colors.transparent,
-                                    enableDrag: false,
-                                    context: context,
-                                    builder: (context) {
-                                      return GestureDetector(
-                                        onTap: () => _model
-                                                .unfocusNode.canRequestFocus
-                                            ? FocusScope.of(context)
-                                                .requestFocus(
-                                                    _model.unfocusNode)
-                                            : FocusScope.of(context).unfocus(),
-                                        child: Padding(
-                                          padding:
-                                              MediaQuery.viewInsetsOf(context),
-                                          child: VideoresultWidget(
-                                            videoResultUrl: BrookreatorGroup
-                                                .getGeneratedContentsCall
-                                                .vdoUrl(
-                                              (_model.gettingVideo?.jsonBody ??
-                                                  ''),
+                                          child: WaitingWidget(
+                                            time: 20,
+                                            contents:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'n9jjngvz' /* AI Video generation will take ... */,
                                             ),
                                           ),
                                         ),
                                       );
                                     },
-                                  ).then((value) => safeSetState(() {}));
-                                } else {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        'failed',
-                                        style: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryText,
-                                        ),
-                                      ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .secondary,
-                                    ),
+                                  ).then((value) => setState(() {}));
+
+                                  while (true) {
+                                    _model.loop = await BrookreatorGroup
+                                        .queueStatusCall
+                                        .call(
+                                      accessToken: FFAppState().AccessToken,
+                                      txID: _model.txID,
+                                    );
+
+                                    if (BrookreatorGroup.queueStatusCall.status(
+                                          (_model.loop?.jsonBody ?? ''),
+                                        ) ==
+                                        'COMPLETED') {
+                                      break;
+                                    } else {
+                                      await Future.delayed(
+                                          const Duration(milliseconds: 2000));
+                                    }
+                                  }
+                                  await Future.delayed(
+                                      const Duration(milliseconds: 3000));
+                                  _model.gettingVideo = await BrookreatorGroup
+                                      .getGeneratedContentsCall
+                                      .call(
+                                    accessToken: FFAppState().AccessToken,
+                                    txID: _model.txID,
                                   );
+
+                                  if ((_model.gettingVideo?.succeeded ??
+                                      true)) {
+                                    Navigator.pop(context);
+                                    showDialog(
+                                      context: context,
+                                      builder: (dialogContext) {
+                                        return Dialog(
+                                          elevation: 0,
+                                          insetPadding: EdgeInsets.zero,
+                                          backgroundColor: Colors.transparent,
+                                          alignment: const AlignmentDirectional(
+                                                  0.0, 0.0)
+                                              .resolve(
+                                                  Directionality.of(context)),
+                                          child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: const DoneWidget(),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => setState(() {}));
+
+                                    await Future.delayed(
+                                        const Duration(milliseconds: 2000));
+                                    Navigator.pop(context);
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
+                                      backgroundColor: Colors.transparent,
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: Padding(
+                                            padding: MediaQuery.viewInsetsOf(
+                                                context),
+                                            child: VideoResultWidget(
+                                              videoResultUrl: BrookreatorGroup
+                                                  .getGeneratedContentsCall
+                                                  .vdoUrl(
+                                                (_model.gettingVideo
+                                                        ?.jsonBody ??
+                                                    ''),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(() {}));
+                                  } else {
+                                    showDialog(
+                                      barrierColor: Colors.transparent,
+                                      context: context,
+                                      builder: (dialogContext) {
+                                        return Dialog(
+                                          elevation: 0,
+                                          insetPadding: EdgeInsets.zero,
+                                          backgroundColor: Colors.transparent,
+                                          alignment: const AlignmentDirectional(
+                                                  0.0, -1.0)
+                                              .resolve(
+                                                  Directionality.of(context)),
+                                          child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: SizedBox(
+                                              height: 100.0,
+                                              width: double.infinity,
+                                              child: MessageErrorWidget(
+                                                alertInfo:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  '95dzw2vk' /* Failed to get generated video. */,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => setState(() {}));
+                                  }
+                                } else {
+                                  showDialog(
+                                    barrierColor: Colors.transparent,
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, -1.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: SizedBox(
+                                            height: 100.0,
+                                            width: double.infinity,
+                                            child: MessageErrorWidget(
+                                              alertInfo:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                '9rz7zzyk' /* Sending video generating reque... */,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
                                 }
                               } else {
                                 context.pushNamed('SignIn');

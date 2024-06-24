@@ -64,17 +64,15 @@ class SignUpModel extends FlutterFlowModel<SignUpWidget> {
       );
     }
 
-    if (val.length < 6) {
-      return FFLocalizations.of(context).getText(
-        'qltl6zk3' /* Password should contain at lea... */,
-      );
+    if (val.isEmpty) {
+      return 'Requires at least 1 characters.';
     }
 
     if (!RegExp(
             '^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@\$!%*?&])[A-Za-z\\d@\$!%*?&]{8,}\$')
         .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
-        '35qxvaxv' /* Must be 8+ characters with num... */,
+        '35qxvaxv' /* Use 8+ chars with number, symb... */,
       );
     }
     return null;

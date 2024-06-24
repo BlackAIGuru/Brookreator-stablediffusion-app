@@ -1,11 +1,12 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/done/done_widget.dart';
+import '/components/message_error/message_error_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
+import '/components/waiting/waiting_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/text2_image/image_result/image_result_widget.dart';
-import '/text2_image/waiting_image/waiting_image_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -119,7 +120,7 @@ class _T2iWidgetState extends State<T2iWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 100.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -138,22 +139,34 @@ class _T2iWidgetState extends State<T2iWidget> {
                             ),
                             child: Stack(
                               children: [
-                                Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      10.0, 3.0, 0.0, 0.0),
-                                  child: InkWell(
-                                    splashColor: Colors.transparent,
-                                    focusColor: Colors.transparent,
-                                    hoverColor: Colors.transparent,
-                                    highlightColor: Colors.transparent,
-                                    onTap: () async {
-                                      context.pushNamed('HomePage');
-                                    },
-                                    child: FaIcon(
-                                      FontAwesomeIcons.chevronLeft,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryText,
-                                      size: 22.0,
+                                InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.pushNamed('HomePage');
+                                  },
+                                  child: Container(
+                                    decoration: const BoxDecoration(),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          10.0, 3.0, 0.0, 0.0),
+                                      child: InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed('HomePage');
+                                        },
+                                        child: FaIcon(
+                                          FontAwesomeIcons.chevronLeft,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          size: 22.0,
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -5683,135 +5696,235 @@ class _T2iWidgetState extends State<T2iWidget> {
                                   steps: 25,
                                   themeId: _model.themeId,
                                 );
-                                FFAppState().T2ITxID =
-                                    BrookreatorGroup.textToImageCall.textID(
-                                  (_model.requestSent?.jsonBody ?? ''),
-                                )!;
-                                setState(() {});
-                                showDialog(
-                                  context: context,
-                                  builder: (dialogContext) {
-                                    return Dialog(
-                                      elevation: 0,
-                                      insetPadding: EdgeInsets.zero,
-                                      backgroundColor: Colors.transparent,
-                                      alignment: const AlignmentDirectional(0.0, 0.0)
-                                          .resolve(Directionality.of(context)),
-                                      child: GestureDetector(
-                                        onTap: () => _model
-                                                .unfocusNode.canRequestFocus
-                                            ? FocusScope.of(context)
-                                                .requestFocus(
-                                                    _model.unfocusNode)
-                                            : FocusScope.of(context).unfocus(),
-                                        child: WaitingImageWidget(
-                                          time: () {
-                                            if (_model.sample <= 2) {
-                                              return 1;
-                                            } else if ((_model.sample > 2) &&
-                                                (_model.sample <= 4)) {
-                                              return 3;
-                                            } else {
-                                              return 5;
-                                            }
-                                          }(),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ).then((value) => setState(() {}));
 
-                                _model.accountInfo =
-                                    await BrookreatorGroup.accountCall.call(
-                                  accessToken: FFAppState().AccessToken,
-                                );
-                                FFAppState().Credit =
-                                    BrookreatorGroup.accountCall.credit(
-                                  (_model.accountInfo?.jsonBody ?? ''),
-                                )!;
-                                setState(() {});
-                                while (true) {
-                                  _model.loop = await BrookreatorGroup
-                                      .queueStatusCall
+                                if ((_model.requestSent?.succeeded ?? true)) {
+                                  FFAppState().T2ITxID =
+                                      BrookreatorGroup.textToImageCall.textID(
+                                    (_model.requestSent?.jsonBody ?? ''),
+                                  )!;
+                                  setState(() {});
+                                  _model.accountInfo =
+                                      await BrookreatorGroup.accountCall.call(
+                                    accessToken: FFAppState().AccessToken,
+                                  );
+
+                                  FFAppState().Credit =
+                                      BrookreatorGroup.accountCall.credit(
+                                    (_model.accountInfo?.jsonBody ?? ''),
+                                  )!;
+                                  setState(() {});
+                                  showDialog(
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: WaitingWidget(
+                                            time: () {
+                                              if (_model.sample <= 2) {
+                                                return 1;
+                                              } else if ((_model.sample > 2) &&
+                                                  (_model.sample <= 4)) {
+                                                return 3;
+                                              } else {
+                                                return 5;
+                                              }
+                                            }(),
+                                            contents:
+                                                FFLocalizations.of(context)
+                                                    .getText(
+                                              'c7bk53ww' /* You can close this window. You... */,
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+
+                                  while (true) {
+                                    _model.loop = await BrookreatorGroup
+                                        .queueStatusCall
+                                        .call(
+                                      accessToken: FFAppState().AccessToken,
+                                      txID: FFAppState().T2ITxID,
+                                    );
+
+                                    if (BrookreatorGroup.queueStatusCall.status(
+                                          (_model.loop?.jsonBody ?? ''),
+                                        ) ==
+                                        'COMPLETED') {
+                                      break;
+                                    } else {
+                                      await Future.delayed(
+                                          const Duration(milliseconds: 2000));
+                                    }
+                                  }
+                                  await Future.delayed(
+                                      const Duration(milliseconds: 3000));
+                                  _model.gettingImages = await BrookreatorGroup
+                                      .getGeneratedContentsCall
                                       .call(
                                     accessToken: FFAppState().AccessToken,
                                     txID: FFAppState().T2ITxID,
                                   );
-                                  if (BrookreatorGroup.queueStatusCall.status(
-                                        (_model.loop?.jsonBody ?? ''),
-                                      ) ==
-                                      'COMPLETED') {
-                                    break;
-                                  } else {
+
+                                  if ((_model.gettingImages?.succeeded ??
+                                      true)) {
+                                    Navigator.pop(context);
+                                    showDialog(
+                                      context: context,
+                                      builder: (dialogContext) {
+                                        return Dialog(
+                                          elevation: 0,
+                                          insetPadding: EdgeInsets.zero,
+                                          backgroundColor: Colors.transparent,
+                                          alignment: const AlignmentDirectional(
+                                                  0.0, 0.0)
+                                              .resolve(
+                                                  Directionality.of(context)),
+                                          child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: const DoneWidget(),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => setState(() {}));
+
                                     await Future.delayed(
                                         const Duration(milliseconds: 2000));
-                                  }
-                                }
-                                _model.gettingImages = await BrookreatorGroup
-                                    .getGeneratedContentsCall
-                                    .call(
-                                  accessToken: FFAppState().AccessToken,
-                                  txID: FFAppState().T2ITxID,
-                                );
-                                Navigator.pop(context);
-                                showDialog(
-                                  context: context,
-                                  builder: (dialogContext) {
-                                    return Dialog(
-                                      elevation: 0,
-                                      insetPadding: EdgeInsets.zero,
+                                    Navigator.pop(context);
+                                    await showModalBottomSheet(
+                                      isScrollControlled: true,
                                       backgroundColor: Colors.transparent,
-                                      alignment: const AlignmentDirectional(0.0, 0.0)
-                                          .resolve(Directionality.of(context)),
-                                      child: GestureDetector(
-                                        onTap: () => _model
-                                                .unfocusNode.canRequestFocus
-                                            ? FocusScope.of(context)
-                                                .requestFocus(
-                                                    _model.unfocusNode)
-                                            : FocusScope.of(context).unfocus(),
-                                        child: const DoneWidget(),
-                                      ),
-                                    );
-                                  },
-                                ).then((value) => setState(() {}));
-
-                                await Future.delayed(
-                                    const Duration(milliseconds: 2000));
-                                Navigator.pop(context);
-                                await showModalBottomSheet(
-                                  isScrollControlled: true,
-                                  backgroundColor: Colors.transparent,
-                                  enableDrag: false,
-                                  context: context,
-                                  builder: (context) {
-                                    return GestureDetector(
-                                      onTap: () => _model
-                                              .unfocusNode.canRequestFocus
-                                          ? FocusScope.of(context)
-                                              .requestFocus(_model.unfocusNode)
-                                          : FocusScope.of(context).unfocus(),
-                                      child: Padding(
-                                        padding:
-                                            MediaQuery.viewInsetsOf(context),
-                                        child: ImageResultWidget(
-                                          resultImageUrls: BrookreatorGroup
-                                              .getGeneratedContentsCall
-                                              .url(
-                                            (_model.gettingImages?.jsonBody ??
-                                                ''),
+                                      enableDrag: false,
+                                      context: context,
+                                      builder: (context) {
+                                        return GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: Padding(
+                                            padding: MediaQuery.viewInsetsOf(
+                                                context),
+                                            child: ImageResultWidget(
+                                              resultImageUrls: BrookreatorGroup
+                                                  .getGeneratedContentsCall
+                                                  .url(
+                                                (_model.gettingImages
+                                                        ?.jsonBody ??
+                                                    ''),
+                                              ),
+                                              resultImageIDs: BrookreatorGroup
+                                                  .getGeneratedContentsCall
+                                                  .imageId(
+                                                (_model.gettingImages
+                                                        ?.jsonBody ??
+                                                    ''),
+                                              ),
+                                              title: 'Text To Image',
+                                              isT2I: true,
+                                            ),
                                           ),
-                                          resultImageIDs: BrookreatorGroup
-                                              .getGeneratedContentsCall
-                                              .imageId(
-                                            (_model.gettingImages?.jsonBody ??
-                                                ''),
+                                        );
+                                      },
+                                    ).then((value) => safeSetState(() {}));
+                                  } else {
+                                    showDialog(
+                                      barrierColor: Colors.transparent,
+                                      context: context,
+                                      builder: (dialogContext) {
+                                        return Dialog(
+                                          elevation: 0,
+                                          insetPadding: EdgeInsets.zero,
+                                          backgroundColor: Colors.transparent,
+                                          alignment: const AlignmentDirectional(
+                                                  0.0, -1.0)
+                                              .resolve(
+                                                  Directionality.of(context)),
+                                          child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: SizedBox(
+                                              height: 100.0,
+                                              width: double.infinity,
+                                              child: MessageErrorWidget(
+                                                alertInfo:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  '8zl7uhai' /* Failed to get generated images... */,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => setState(() {}));
+                                  }
+                                } else {
+                                  showDialog(
+                                    barrierColor: Colors.transparent,
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, -1.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: SizedBox(
+                                            height: 100.0,
+                                            width: double.infinity,
+                                            child: MessageErrorWidget(
+                                              alertInfo:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'yf2268lk' /* Sending image generating reque... */,
+                                              ),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    );
-                                  },
-                                ).then((value) => safeSetState(() {}));
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+                                }
                               } else {
                                 context.pushNamed('SignIn');
                               }

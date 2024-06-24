@@ -3,23 +3,25 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'waiting_image_model.dart';
-export 'waiting_image_model.dart';
+import 'waiting_model.dart';
+export 'waiting_model.dart';
 
-class WaitingImageWidget extends StatefulWidget {
-  const WaitingImageWidget({
+class WaitingWidget extends StatefulWidget {
+  const WaitingWidget({
     super.key,
     required this.time,
+    required this.contents,
   });
 
   final int? time;
+  final String? contents;
 
   @override
-  State<WaitingImageWidget> createState() => _WaitingImageWidgetState();
+  State<WaitingWidget> createState() => _WaitingWidgetState();
 }
 
-class _WaitingImageWidgetState extends State<WaitingImageWidget> {
-  late WaitingImageModel _model;
+class _WaitingWidgetState extends State<WaitingWidget> {
+  late WaitingModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -30,7 +32,7 @@ class _WaitingImageWidgetState extends State<WaitingImageWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => WaitingImageModel());
+    _model = createModel(context, () => WaitingModel());
   }
 
   @override
@@ -82,8 +84,8 @@ class _WaitingImageWidgetState extends State<WaitingImageWidget> {
                 Align(
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
-                    width: 120.0,
-                    height: 120.0,
+                    width: 140.0,
+                    height: 140.0,
                     decoration: BoxDecoration(
                       color: const Color(0x00FFFFFF),
                       shape: BoxShape.circle,
@@ -94,9 +96,9 @@ class _WaitingImageWidgetState extends State<WaitingImageWidget> {
                     child: Stack(
                       children: [
                         Lottie.asset(
-                          'assets/lottie_animations/Animation_-_1698194538579.json',
-                          width: 150.0,
-                          height: 150.0,
+                          'assets/lottie_animations/Loading.json',
+                          width: 140.0,
+                          height: 140.0,
                           fit: BoxFit.cover,
                           animate: true,
                         ),
@@ -142,10 +144,11 @@ class _WaitingImageWidgetState extends State<WaitingImageWidget> {
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(65.0, 0.0, 65.0, 50.0),
+                        const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 50.0),
                     child: Text(
-                      FFLocalizations.of(context).getText(
-                        '82at0qfr' /* You can close this window. You... */,
+                      valueOrDefault<String>(
+                        widget.contents,
+                        'You can close this window. Your photos will be waiting for you in \'My Pictures\'.',
                       ),
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).titleMedium.override(

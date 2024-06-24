@@ -488,7 +488,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                 expansionFactor: 3.0,
                                 spacing: 8.0,
                                 radius: 16.0,
-                                dotWidth: 16.0,
+                                dotWidth: 12.0,
                                 dotHeight: 8.0,
                                 dotColor: FlutterFlowTheme.of(context).accent1,
                                 activeDotColor:
@@ -516,7 +516,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                       ),
                       options: FFButtonOptions(
                         width: 327.0,
-                        height: 52.0,
+                        height: 50.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             24.0, 13.0, 24.0, 13.0),
                         iconPadding:

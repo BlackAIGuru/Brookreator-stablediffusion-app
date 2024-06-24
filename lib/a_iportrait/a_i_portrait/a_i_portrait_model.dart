@@ -1,6 +1,7 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/signinicon/signinicon_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/form_field_controller.dart';
 import 'a_i_portrait_widget.dart' show AIPortraitWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
 
   int uploadindex = 0;
 
-  String uuid = '';
+  String uuid = 'a';
 
   List<String> awsuploadedimages = [];
   void addToAwsuploadedimages(String item) => awsuploadedimages.add(item);
@@ -79,14 +80,7 @@ class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
   void updateHeightAtIndex(int index, Function(int) updateFn) =>
       height[index] = updateFn(height[index]);
 
-  List<String> loraModelIds = [];
-  void addToLoraModelIds(String item) => loraModelIds.add(item);
-  void removeFromLoraModelIds(String item) => loraModelIds.remove(item);
-  void removeAtIndexFromLoraModelIds(int index) => loraModelIds.removeAt(index);
-  void insertAtIndexInLoraModelIds(int index, String item) =>
-      loraModelIds.insert(index, item);
-  void updateLoraModelIdsAtIndex(int index, Function(String) updateFn) =>
-      loraModelIds[index] = updateFn(loraModelIds[index]);
+  String? loraModelIds;
 
   List<String> model = [];
   void addToModel(String item) => model.add(item);
@@ -186,11 +180,45 @@ class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
   void updateGeneratedIDAtIndex(int index, Function(String) updateFn) =>
       generatedID[index] = updateFn(generatedID[index]);
 
+  List<String> loramodelid = [];
+  void addToLoramodelid(String item) => loramodelid.add(item);
+  void removeFromLoramodelid(String item) => loramodelid.remove(item);
+  void removeAtIndexFromLoramodelid(int index) => loramodelid.removeAt(index);
+  void insertAtIndexInLoramodelid(int index, String item) =>
+      loramodelid.insert(index, item);
+  void updateLoramodelidAtIndex(int index, Function(String) updateFn) =>
+      loramodelid[index] = updateFn(loramodelid[index]);
+
+  int position = 1;
+
+  bool show = false;
+
+  List<String> modelName = [];
+  void addToModelName(String item) => modelName.add(item);
+  void removeFromModelName(String item) => modelName.remove(item);
+  void removeAtIndexFromModelName(int index) => modelName.removeAt(index);
+  void insertAtIndexInModelName(int index, String item) =>
+      modelName.insert(index, item);
+  void updateModelNameAtIndex(int index, Function(String) updateFn) =>
+      modelName[index] = updateFn(modelName[index]);
+
+  List<String> modelTrainingId = [];
+  void addToModelTrainingId(String item) => modelTrainingId.add(item);
+  void removeFromModelTrainingId(String item) => modelTrainingId.remove(item);
+  void removeAtIndexFromModelTrainingId(int index) =>
+      modelTrainingId.removeAt(index);
+  void insertAtIndexInModelTrainingId(int index, String item) =>
+      modelTrainingId.insert(index, item);
+  void updateModelTrainingIdAtIndex(int index, Function(String) updateFn) =>
+      modelTrainingId[index] = updateFn(modelTrainingId[index]);
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   // Stores action output result for [Custom Action - getUuid] action in AIPortrait widget.
   String? getuuidresult;
+  // Stores action output result for [Backend Call - API (GetModels)] action in AIPortrait widget.
+  ApiCallResponse? gettingmodel;
   // Model for signinicon component.
   late SigniniconModel signiniconModel;
   // State field(s) for selectStyle widget.
@@ -208,14 +236,37 @@ class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
 
   // Stores action output result for [Backend Call - API (PortraitUploader)] action in upload widget.
   ApiCallResponse? awsuploadresult;
+  // State field(s) for DropDown widget.
+  String? dropDownValue;
+  FormFieldController<String>? dropDownValueController;
   // State field(s) for aiportraitslider widget.
   double? aiportraitsliderValue;
   // Stores action output result for [Custom Action - changeToIngeger] action in aiportraitslider widget.
   int? imagenumber;
+  // Stores action output result for [Custom Action - selectPortraitTheme] action in Button widget.
+  dynamic portraitTheme;
   // Stores action output result for [Backend Call - API (PortraitTrainingImage)] action in Button widget.
   ApiCallResponse? trainingresult;
+  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
+  ApiCallResponse? accountInfo;
   // Stores action output result for [Backend Call - API (PortraitGenerate)] action in Button widget.
   ApiCallResponse? apiResultnk5;
+  // Stores action output result for [Backend Call - API (QueueStatus)] action in Button widget.
+  ApiCallResponse? loop;
+  // Stores action output result for [Backend Call - API (GetGeneratedContents)] action in Button widget.
+  ApiCallResponse? gettingImages;
+  // Stores action output result for [Custom Action - getUuid] action in Button widget.
+  String? getuuidresultAgain;
+  // Stores action output result for [Custom Action - selectPortraitTheme] action in Button widget.
+  dynamic portraitThemeModel;
+  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
+  ApiCallResponse? accountInfoModel;
+  // Stores action output result for [Backend Call - API (PortraitGenerate)] action in Button widget.
+  ApiCallResponse? apiResultnk5Model;
+  // Stores action output result for [Backend Call - API (QueueStatus)] action in Button widget.
+  ApiCallResponse? loopModel;
+  // Stores action output result for [Backend Call - API (GetGeneratedContents)] action in Button widget.
+  ApiCallResponse? gettingImagesModel;
 
   @override
   void initState(BuildContext context) {

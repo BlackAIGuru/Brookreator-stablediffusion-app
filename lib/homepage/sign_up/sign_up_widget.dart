@@ -1,3 +1,4 @@
+import '/components/message_error/message_error_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -70,22 +71,34 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       ),
                       child: Stack(
                         children: [
-                          Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
-                                20.0, 3.0, 0.0, 0.0),
-                            child: InkWell(
-                              splashColor: Colors.transparent,
-                              focusColor: Colors.transparent,
-                              hoverColor: Colors.transparent,
-                              highlightColor: Colors.transparent,
-                              onTap: () async {
-                                context.safePop();
-                              },
-                              child: FaIcon(
-                                FontAwesomeIcons.chevronLeft,
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                                size: 22.0,
+                          InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.safePop();
+                            },
+                            child: Container(
+                              decoration: const BoxDecoration(),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    20.0, 3.0, 0.0, 0.0),
+                                child: InkWell(
+                                  splashColor: Colors.transparent,
+                                  focusColor: Colors.transparent,
+                                  hoverColor: Colors.transparent,
+                                  highlightColor: Colors.transparent,
+                                  onTap: () async {
+                                    context.safePop();
+                                  },
+                                  child: FaIcon(
+                                    FontAwesomeIcons.chevronLeft,
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryText,
+                                    size: 22.0,
+                                  ),
+                                ),
                               ),
                             ),
                           ),
@@ -151,7 +164,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 0.0, 10.0),
                                         child: SizedBox(
-                                          width: 327.0,
+                                          width: 330.0,
                                           child: TextFormField(
                                             controller:
                                                 _model.nameTextController,
@@ -257,7 +270,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                         padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 10.0),
                                         child: SizedBox(
-                                          width: 327.0,
+                                          width: 330.0,
                                           child: TextFormField(
                                             controller:
                                                 _model.emailTextController,
@@ -362,9 +375,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 5.0),
+                                            0.0, 10.0, 0.0, 10.0),
                                         child: SizedBox(
-                                          width: 327.0,
+                                          width: 330.0,
                                           child: TextFormField(
                                             controller:
                                                 _model.passwordTextController,
@@ -487,9 +500,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 5.0),
+                                            0.0, 10.0, 0.0, 0.0),
                                         child: SizedBox(
-                                          width: 327.0,
+                                          width: 330.0,
                                           child: TextFormField(
                                             controller: _model
                                                 .confirmpasswordTextController,
@@ -637,87 +650,109 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             ),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              10.0, 30.0, 10.0, 20.0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              if (_model.formKey.currentState == null ||
-                                  !_model.formKey.currentState!.validate()) {
-                                return;
-                              }
-                              if (_model.passwordTextController.text ==
-                                  _model.confirmpasswordTextController.text) {
-                                _model.show = false;
-                                setState(() {});
-                                _model.signUpResult = await actions.signUp(
-                                  _model.nameTextController.text,
-                                  _model.emailTextController.text,
-                                  _model.passwordTextController.text,
-                                );
-                                if (_model.signUpResult!) {
-                                  FFAppState().Email =
-                                      _model.emailTextController.text;
-                                  setState(() {});
-
-                                  context.pushNamed(
-                                    'Email_Verify',
-                                    queryParameters: {
-                                      'password': serializeParam(
-                                        _model.passwordTextController.text,
-                                        ParamType.String,
-                                      ),
-                                    }.withoutNulls,
-                                  );
-                                } else {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        'error',
-                                        style: TextStyle(
-                                          color: FlutterFlowTheme.of(context)
-                                              .error,
-                                        ),
-                                      ),
-                                      duration: const Duration(milliseconds: 4000),
-                                      backgroundColor:
-                                          FlutterFlowTheme.of(context)
-                                              .secondary,
-                                    ),
-                                  );
+                        Builder(
+                          builder: (context) => Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                10.0, 30.0, 10.0, 20.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                if (_model.formKey.currentState == null ||
+                                    !_model.formKey.currentState!.validate()) {
+                                  return;
                                 }
-                              } else {
-                                _model.show = true;
-                                setState(() {});
-                              }
+                                if (_model.passwordTextController.text ==
+                                    _model.confirmpasswordTextController.text) {
+                                  _model.show = false;
+                                  setState(() {});
+                                  _model.signUpResult = await actions.signUp(
+                                    _model.nameTextController.text,
+                                    _model.emailTextController.text,
+                                    _model.passwordTextController.text,
+                                  );
+                                  if (_model.signUpResult!) {
+                                    FFAppState().Email =
+                                        _model.emailTextController.text;
+                                    setState(() {});
 
-                              setState(() {});
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'mj981gg7' /* Sign Up */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 320.0,
-                              height: 50.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  24.0, 0.0, 24.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'NotoSansThai',
-                                    color: Colors.white,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
+                                    context.pushNamed(
+                                      'Email_Verify',
+                                      queryParameters: {
+                                        'password': serializeParam(
+                                          _model.passwordTextController.text,
+                                          ParamType.String,
+                                        ),
+                                      }.withoutNulls,
+                                    );
+                                  } else {
+                                    showDialog(
+                                      barrierColor: Colors.transparent,
+                                      context: context,
+                                      builder: (dialogContext) {
+                                        return Dialog(
+                                          elevation: 0,
+                                          insetPadding: EdgeInsets.zero,
+                                          backgroundColor: Colors.transparent,
+                                          alignment: const AlignmentDirectional(
+                                                  0.0, -1.0)
+                                              .resolve(
+                                                  Directionality.of(context)),
+                                          child: GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: SizedBox(
+                                              height: 100.0,
+                                              width: double.infinity,
+                                              child: MessageErrorWidget(
+                                                alertInfo:
+                                                    FFLocalizations.of(context)
+                                                        .getText(
+                                                  'cddsnpsc' /* Sign up failed. This account w... */,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        );
+                                      },
+                                    ).then((value) => setState(() {}));
+                                  }
+                                } else {
+                                  _model.show = true;
+                                  setState(() {});
+                                }
+
+                                setState(() {});
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'mj981gg7' /* Sign Up */,
                               ),
-                              borderRadius: BorderRadius.circular(8.0),
+                              options: FFButtonOptions(
+                                width: 320.0,
+                                height: 50.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    24.0, 0.0, 24.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).primary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'NotoSansThai',
+                                      color: Colors.white,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             ),
                           ),
                         ),

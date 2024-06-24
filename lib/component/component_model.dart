@@ -3,6 +3,10 @@ import 'component_widget.dart' show ComponentWidget;
 import 'package:flutter/material.dart';
 
 class ComponentModel extends FlutterFlowModel<ComponentWidget> {
+  ///  Local state fields for this page.
+
+  int postion = -1;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

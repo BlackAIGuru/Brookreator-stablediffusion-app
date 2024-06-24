@@ -1,9 +1,9 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'deleteimage_widget.dart' show DeleteimageWidget;
+import 'deleteconfirm_widget.dart' show DeleteconfirmWidget;
 import 'package:flutter/material.dart';
 
-class DeleteimageModel extends FlutterFlowModel<DeleteimageWidget> {
+class DeleteconfirmModel extends FlutterFlowModel<DeleteconfirmWidget> {
   ///  State fields for stateful widgets in this component.
 
   // Stores action output result for [Backend Call - API (DeleteImage)] action in Button widget.

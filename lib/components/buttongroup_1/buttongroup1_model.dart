@@ -10,8 +10,6 @@ class Buttongroup1Model extends FlutterFlowModel<Buttongroup1Widget> {
 
   ///  State fields for stateful widgets in this component.
 
-  // Stores action output result for [Backend Call - API (DownloadImage)] action in Button widget.
-  ApiCallResponse? apiResultlk0;
   // Stores action output result for [Backend Call - API (AddFavourites)] action in Container widget.
   ApiCallResponse? apiResultvco;
 

@@ -1285,7 +1285,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onPressed:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         text: FFLocalizations.of(context)
                                                                             .getText(
@@ -1402,6 +1402,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                         .secondaryBackground,
                                   ),
                                   child: SingleChildScrollView(
+                                    primary: false,
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
@@ -1560,8 +1561,10 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                     5.0, 0.0, 5.0, 0.0),
                                             child: Builder(
                                               builder: (context) {
-                                                if (_model.choiceChipsValue ==
-                                                    'For You') {
+                                                if ((_model.choiceChipsValue ==
+                                                        'For You') ||
+                                                    (_model.choiceChipsValue ==
+                                                        'สำหรับคุณ')) {
                                                   return Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -1786,7 +1789,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2039,7 +2042,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2292,7 +2295,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2465,7 +2468,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2635,7 +2638,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2985,7 +2988,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Start');
+                                                                              .pushNamed('QR_Generate');
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -3063,9 +3066,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       ),
                                                     ),
                                                   );
-                                                } else if (_model
-                                                        .choiceChipsValue ==
-                                                    'Halloween') {
+                                                } else if ((_model
+                                                            .choiceChipsValue ==
+                                                        'Christmas') ||
+                                                    (_model.choiceChipsValue ==
+                                                        'คริสต์มาส')) {
                                                   return Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -3089,9 +3094,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       ),
                                                     ),
                                                   );
-                                                } else if (_model
-                                                        .choiceChipsValue ==
-                                                    'Christmas') {
+                                                } else if ((_model
+                                                            .choiceChipsValue ==
+                                                        'Studio') ||
+                                                    (_model.choiceChipsValue ==
+                                                        'สตูดิโอ')) {
                                                   return Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional
@@ -3115,35 +3122,11 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                       ),
                                                     ),
                                                   );
-                                                } else if (_model
-                                                        .choiceChipsValue ==
-                                                    'Studio') {
-                                                  return Padding(
-                                                    padding:
-                                                        const EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                0.0, 10.0),
-                                                    child: Container(
-                                                      width: double.infinity,
-                                                      height: MediaQuery.sizeOf(
-                                                                  context)
-                                                              .height *
-                                                          0.7,
-                                                      decoration: BoxDecoration(
-                                                        color: FlutterFlowTheme
-                                                                .of(context)
-                                                            .secondaryBackground,
-                                                      ),
-                                                      child: const Column(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [],
-                                                      ),
-                                                    ),
-                                                  );
-                                                } else if (_model
-                                                        .choiceChipsValue ==
-                                                    'Video') {
+                                                } else if ((_model
+                                                            .choiceChipsValue ==
+                                                        'Video') ||
+                                                    (_model.choiceChipsValue ==
+                                                        'วีดีโอ')) {
                                                   return Padding(
                                                     padding:
                                                         const EdgeInsetsDirectional

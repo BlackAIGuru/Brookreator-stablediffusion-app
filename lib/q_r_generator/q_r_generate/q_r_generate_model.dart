@@ -1,11 +1,11 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/signinicon/signinicon_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'q_r_start_widget.dart' show QRStartWidget;
+import 'q_r_generate_widget.dart' show QRGenerateWidget;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
-class QRStartModel extends FlutterFlowModel<QRStartWidget> {
+class QRGenerateModel extends FlutterFlowModel<QRGenerateWidget> {
   ///  Local state fields for this page.
 
   int? qrscaleselected = 10;
@@ -80,7 +80,7 @@ class QRStartModel extends FlutterFlowModel<QRStartWidget> {
   // Stores action output result for [Backend Call - API (QRGenerate)] action in Button widget.
   ApiCallResponse? requestSent;
   // Stores action output result for [Backend Call - API (Account)] action in Button widget.
-  ApiCallResponse? accountInfo1;
+  ApiCallResponse? accountInfoPrompt;
   // Stores action output result for [Backend Call - API (QueueStatus)] action in Button widget.
   ApiCallResponse? loopPrompt;
   // Stores action output result for [Backend Call - API (GetGeneratedContents)] action in Button widget.

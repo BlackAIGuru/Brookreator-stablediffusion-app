@@ -1,4 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/message_error/message_error_widget.dart';
+import '/components/message_success/message_success_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -74,22 +76,34 @@ class _SignInWidgetState extends State<SignInWidget> {
                           alignment: const AlignmentDirectional(-1.0, 0.0),
                           child: Stack(
                             children: [
-                              Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 3.0, 0.0, 0.0),
-                                child: InkWell(
-                                  splashColor: Colors.transparent,
-                                  focusColor: Colors.transparent,
-                                  hoverColor: Colors.transparent,
-                                  highlightColor: Colors.transparent,
-                                  onTap: () async {
-                                    context.safePop();
-                                  },
-                                  child: FaIcon(
-                                    FontAwesomeIcons.chevronLeft,
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    size: 22.0,
+                              InkWell(
+                                splashColor: Colors.transparent,
+                                focusColor: Colors.transparent,
+                                hoverColor: Colors.transparent,
+                                highlightColor: Colors.transparent,
+                                onTap: () async {
+                                  context.safePop();
+                                },
+                                child: Container(
+                                  decoration: const BoxDecoration(),
+                                  child: Padding(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                        20.0, 3.0, 0.0, 0.0),
+                                    child: InkWell(
+                                      splashColor: Colors.transparent,
+                                      focusColor: Colors.transparent,
+                                      hoverColor: Colors.transparent,
+                                      highlightColor: Colors.transparent,
+                                      onTap: () async {
+                                        context.safePop();
+                                      },
+                                      child: FaIcon(
+                                        FontAwesomeIcons.chevronLeft,
+                                        color: FlutterFlowTheme.of(context)
+                                            .secondaryText,
+                                        size: 22.0,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -161,7 +175,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 10.0),
                                           child: SizedBox(
-                                            width: 327.0,
+                                            width: 330.0,
                                             child: TextFormField(
                                               controller:
                                                   _model.emailTextController,
@@ -279,7 +293,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 0.0),
                                           child: SizedBox(
-                                            width: 327.0,
+                                            width: 330.0,
                                             child: TextFormField(
                                               controller:
                                                   _model.passwordTextController,
@@ -449,106 +463,187 @@ class _SignInWidgetState extends State<SignInWidget> {
                                   ),
                                   Align(
                                     alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
-                                          10.0, 30.0, 10.0, 20.0),
-                                      child: FFButtonWidget(
-                                        onPressed: () async {
-                                          if (_model.formKey.currentState ==
-                                                  null ||
-                                              !_model.formKey.currentState!
-                                                  .validate()) {
-                                            return;
-                                          }
-                                          _model.sigininResult =
-                                              await actions.signIn(
-                                            _model.emailTextController.text,
-                                            _model.passwordTextController.text,
-                                          );
-                                          if ((_model.sigininResult ==
-                                                      'failed') ||
-                                                  (_model.sigininResult ==
-                                                      'wrong') ||
-                                                  (_model.sigininResult ==
-                                                      'unexpected')
-                                              ? false
-                                              : true) {
-                                            FFAppState().AccessToken =
-                                                _model.sigininResult!;
-                                            FFAppState().Logined = true;
-                                            FFAppState().Email =
-                                                _model.emailTextController.text;
-                                            setState(() {});
-                                            _model.accountInfo =
-                                                await BrookreatorGroup
-                                                    .accountCall
-                                                    .call(
-                                              accessToken:
-                                                  FFAppState().AccessToken,
+                                    child: Builder(
+                                      builder: (context) => Padding(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                            10.0, 30.0, 10.0, 20.0),
+                                        child: FFButtonWidget(
+                                          onPressed: () async {
+                                            if (_model.formKey.currentState ==
+                                                    null ||
+                                                !_model.formKey.currentState!
+                                                    .validate()) {
+                                              return;
+                                            }
+                                            _model.sigininResult =
+                                                await actions.signIn(
+                                              _model.emailTextController.text,
+                                              _model
+                                                  .passwordTextController.text,
                                             );
-                                            FFAppState().Credit =
-                                                BrookreatorGroup.accountCall
-                                                    .credit(
-                                              (_model.accountInfo?.jsonBody ??
-                                                  ''),
-                                            )!;
+                                            if ((_model.sigininResult ==
+                                                        'failed') ||
+                                                    (_model.sigininResult ==
+                                                        'wrong') ||
+                                                    (_model.sigininResult ==
+                                                        'unexpected')
+                                                ? false
+                                                : true) {
+                                              showDialog(
+                                                barrierColor:
+                                                    Colors.transparent,
+                                                context: context,
+                                                builder: (dialogContext) {
+                                                  return Dialog(
+                                                    elevation: 0,
+                                                    insetPadding:
+                                                        EdgeInsets.zero,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                                0.0, -1.0)
+                                                            .resolve(
+                                                                Directionality.of(
+                                                                    context)),
+                                                    child: GestureDetector(
+                                                      onTap: () => _model
+                                                              .unfocusNode
+                                                              .canRequestFocus
+                                                          ? FocusScope.of(
+                                                                  context)
+                                                              .requestFocus(_model
+                                                                  .unfocusNode)
+                                                          : FocusScope.of(
+                                                                  context)
+                                                              .unfocus(),
+                                                      child: SizedBox(
+                                                        height: 100.0,
+                                                        width: double.infinity,
+                                                        child:
+                                                            MessageSuccessWidget(
+                                                          alertInfo:
+                                                              FFLocalizations.of(
+                                                                      context)
+                                                                  .getText(
+                                                            '6fsqzzl1' /* Welcome to brookreator! */,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                              ).then(
+                                                  (value) => setState(() {}));
+
+                                              FFAppState().AccessToken =
+                                                  _model.sigininResult!;
+                                              FFAppState().Logined = true;
+                                              FFAppState().Email = _model
+                                                  .emailTextController.text;
+                                              setState(() {});
+                                              _model.accountInfo =
+                                                  await BrookreatorGroup
+                                                      .accountCall
+                                                      .call(
+                                                accessToken:
+                                                    FFAppState().AccessToken,
+                                              );
+
+                                              FFAppState().Credit =
+                                                  BrookreatorGroup.accountCall
+                                                      .credit(
+                                                (_model.accountInfo?.jsonBody ??
+                                                    ''),
+                                              )!;
+                                              setState(() {});
+
+                                              context.pushNamed('HomePage');
+                                            } else {
+                                              showDialog(
+                                                barrierColor:
+                                                    Colors.transparent,
+                                                context: context,
+                                                builder: (dialogContext) {
+                                                  return Dialog(
+                                                    elevation: 0,
+                                                    insetPadding:
+                                                        EdgeInsets.zero,
+                                                    backgroundColor:
+                                                        Colors.transparent,
+                                                    alignment:
+                                                        const AlignmentDirectional(
+                                                                0.0, -1.0)
+                                                            .resolve(
+                                                                Directionality.of(
+                                                                    context)),
+                                                    child: GestureDetector(
+                                                      onTap: () => _model
+                                                              .unfocusNode
+                                                              .canRequestFocus
+                                                          ? FocusScope.of(
+                                                                  context)
+                                                              .requestFocus(_model
+                                                                  .unfocusNode)
+                                                          : FocusScope.of(
+                                                                  context)
+                                                              .unfocus(),
+                                                      child: SizedBox(
+                                                        height: 100.0,
+                                                        width: double.infinity,
+                                                        child:
+                                                            MessageErrorWidget(
+                                                          alertInfo:
+                                                              valueOrDefault<
+                                                                  String>(
+                                                            _model
+                                                                .sigininResult,
+                                                            'Unexpected error',
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  );
+                                                },
+                                              ).then(
+                                                  (value) => setState(() {}));
+                                            }
+
                                             setState(() {});
-
-                                            context.pushNamed('HomePage');
-                                          } else {
-                                            ScaffoldMessenger.of(context)
-                                                .showSnackBar(
-                                              SnackBar(
-                                                content: Text(
-                                                  _model.sigininResult!,
-                                                  style: TextStyle(
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
-                                                        .error,
-                                                  ),
-                                                ),
-                                                duration: const Duration(
-                                                    milliseconds: 4000),
-                                                backgroundColor:
-                                                    FlutterFlowTheme.of(context)
-                                                        .secondary,
-                                              ),
-                                            );
-                                          }
-
-                                          setState(() {});
-                                        },
-                                        text:
-                                            FFLocalizations.of(context).getText(
-                                          'h6trimte' /* Sign In */,
-                                        ),
-                                        options: FFButtonOptions(
-                                          width: 320.0,
-                                          height: 50.0,
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  24.0, 0.0, 24.0, 0.0),
-                                          iconPadding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 0.0),
-                                          color: FlutterFlowTheme.of(context)
-                                              .primary,
-                                          textStyle:
-                                              FlutterFlowTheme.of(context)
-                                                  .titleSmall
-                                                  .override(
-                                                    fontFamily: 'NotoSansThai',
-                                                    color: Colors.white,
-                                                    letterSpacing: 0.0,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                          elevation: 3.0,
-                                          borderSide: const BorderSide(
-                                            color: Colors.transparent,
-                                            width: 1.0,
+                                          },
+                                          text: FFLocalizations.of(context)
+                                              .getText(
+                                            'h6trimte' /* Sign In */,
                                           ),
-                                          borderRadius:
-                                              BorderRadius.circular(8.0),
+                                          options: FFButtonOptions(
+                                            width: 320.0,
+                                            height: 50.0,
+                                            padding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    24.0, 0.0, 24.0, 0.0),
+                                            iconPadding:
+                                                const EdgeInsetsDirectional.fromSTEB(
+                                                    0.0, 0.0, 0.0, 0.0),
+                                            color: FlutterFlowTheme.of(context)
+                                                .primary,
+                                            textStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .titleSmall
+                                                    .override(
+                                                      fontFamily:
+                                                          'NotoSansThai',
+                                                      color: Colors.white,
+                                                      letterSpacing: 0.0,
+                                                      useGoogleFonts: false,
+                                                    ),
+                                            elevation: 3.0,
+                                            borderSide: const BorderSide(
+                                              color: Colors.transparent,
+                                              width: 1.0,
+                                            ),
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          ),
                                         ),
                                       ),
                                     ),

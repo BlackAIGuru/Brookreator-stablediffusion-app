@@ -189,7 +189,7 @@ class _FootbarWidgetState extends State<FootbarWidget> {
                   hoverColor: Colors.transparent,
                   highlightColor: Colors.transparent,
                   onTap: () async {
-                    context.pushNamed('QR_Start');
+                    context.pushNamed('QR_Generate');
                   },
                   child: Column(
                     mainAxisSize: MainAxisSize.max,

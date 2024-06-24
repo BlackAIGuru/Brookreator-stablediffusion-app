@@ -1,5 +1,5 @@
-import '/a_iportrait/error_message/error_message_widget.dart';
 import '/backend/api_requests/api_calls.dart';
+import '/components/message_error/message_error_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -130,6 +130,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                     accessToken: FFAppState().AccessToken,
                     imageIdsList: widget.imageIds,
                   );
+
                   if (!(_model.apiResultlf8?.succeeded ?? true)) {
                     await showDialog(
                       context: context,
@@ -140,7 +141,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                           backgroundColor: Colors.transparent,
                           alignment: const AlignmentDirectional(0.0, 0.0)
                               .resolve(Directionality.of(context)),
-                          child: const ErrorMessageWidget(
+                          child: const MessageErrorWidget(
                             alertInfo: 'Download failed',
                           ),
                         );

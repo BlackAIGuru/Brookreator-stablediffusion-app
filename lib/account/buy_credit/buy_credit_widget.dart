@@ -57,21 +57,34 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                   child: Stack(
                     children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(20.0, 3.0, 0.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.safePop();
-                          },
-                          child: FaIcon(
-                            FontAwesomeIcons.chevronLeft,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 22.0,
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.safePop();
+                        },
+                        child: Container(
+                          decoration: const BoxDecoration(),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                20.0, 3.0, 0.0, 0.0),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.safePop();
+                              },
+                              child: FaIcon(
+                                FontAwesomeIcons.chevronLeft,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 22.0,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -884,7 +897,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 40.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () {
                         print('Button pressed ...');
@@ -893,8 +906,8 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         'hj0ndkrb' /* Continue */,
                       ),
                       options: FFButtonOptions(
-                        width: 390.0,
-                        height: 45.0,
+                        width: 320.0,
+                        height: 50.0,
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
                         iconPadding:
@@ -911,7 +924,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                           color: Colors.transparent,
                           width: 1.0,
                         ),
-                        borderRadius: BorderRadius.circular(25.0),
+                        borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
                   ),

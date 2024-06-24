@@ -32,10 +32,10 @@ class AIVideoModel extends FlutterFlowModel<AIVideoWidget> {
 
   // Stores action output result for [Backend Call - API (FileUploader)] action in Container widget.
   ApiCallResponse? videoupload;
-  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
-  ApiCallResponse? accountInfo;
   // Stores action output result for [Backend Call - API (AIVideoGenerate)] action in Button widget.
   ApiCallResponse? aiVideoGenerate;
+  // Stores action output result for [Backend Call - API (Account)] action in Button widget.
+  ApiCallResponse? accountInfo;
   // Stores action output result for [Backend Call - API (QueueStatus)] action in Button widget.
   ApiCallResponse? loop;
   // Stores action output result for [Backend Call - API (GetGeneratedContents)] action in Button widget.

@@ -4,11 +4,11 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'deleteimage_model.dart';
-export 'deleteimage_model.dart';
+import 'deleteconfirm_model.dart';
+export 'deleteconfirm_model.dart';
 
-class DeleteimageWidget extends StatefulWidget {
-  const DeleteimageWidget({
+class DeleteconfirmWidget extends StatefulWidget {
+  const DeleteconfirmWidget({
     super.key,
     this.imageid,
   });
@@ -16,11 +16,11 @@ class DeleteimageWidget extends StatefulWidget {
   final String? imageid;
 
   @override
-  State<DeleteimageWidget> createState() => _DeleteimageWidgetState();
+  State<DeleteconfirmWidget> createState() => _DeleteconfirmWidgetState();
 }
 
-class _DeleteimageWidgetState extends State<DeleteimageWidget> {
-  late DeleteimageModel _model;
+class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
+  late DeleteconfirmModel _model;
 
   @override
   void setState(VoidCallback callback) {
@@ -31,7 +31,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => DeleteimageModel());
+    _model = createModel(context, () => DeleteconfirmModel());
   }
 
   @override
@@ -86,6 +86,7 @@ class _DeleteimageWidgetState extends State<DeleteimageWidget> {
                         accessToken: FFAppState().AccessToken,
                         imageid: widget.imageid,
                       );
+
                       if ((_model.deleteReuslt?.succeeded ?? true)) {
                         Navigator.pop(context);
                       }

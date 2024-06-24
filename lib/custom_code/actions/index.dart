@@ -9,6 +9,7 @@ export 'select_t2_i_theme_prompt.dart' show selectT2IThemePrompt;
 export 'select_t2_i_theme_negative.dart' show selectT2IThemeNegative;
 export 'select_t2_i_theme.dart' show selectT2ITheme;
 export 'sign_out.dart' show signOut;
+export 'select_portrait_theme.dart' show selectPortraitTheme;
 export 'delay.dart' show delay;
 export 'select_q_r_theme.dart' show selectQRTheme;
 export 'get_uuid.dart' show getUuid;

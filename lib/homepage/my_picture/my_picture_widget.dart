@@ -1,15 +1,16 @@
 import '/backend/api_requests/api_calls.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
-import '/flutter_flow/flutter_flow_expanded_image_view.dart';
 import '/flutter_flow/flutter_flow_media_display.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/custom_functions.dart' as functions;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:provider/provider.dart';
 import 'my_picture_model.dart';
 export 'my_picture_model.dart';
@@ -68,21 +69,34 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                   children: [
                     Align(
                       alignment: const AlignmentDirectional(-1.0, 0.0),
-                      child: Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(20.0, 3.0, 0.0, 0.0),
-                        child: InkWell(
-                          splashColor: Colors.transparent,
-                          focusColor: Colors.transparent,
-                          hoverColor: Colors.transparent,
-                          highlightColor: Colors.transparent,
-                          onTap: () async {
-                            context.safePop();
-                          },
-                          child: FaIcon(
-                            FontAwesomeIcons.chevronLeft,
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            size: 22.0,
+                      child: InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.safePop();
+                        },
+                        child: Container(
+                          decoration: const BoxDecoration(),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                20.0, 3.0, 0.0, 0.0),
+                            child: InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.safePop();
+                              },
+                              child: FaIcon(
+                                FontAwesomeIcons.chevronLeft,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryText,
+                                size: 22.0,
+                              ),
+                            ),
                           ),
                         ),
                       ),
@@ -178,252 +192,241 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                             controller: _model.tabBarController,
                             children: [
                               KeepAliveWidgetWrapper(
-                                builder: (context) =>
-                                    FutureBuilder<ApiCallResponse>(
-                                  future:
-                                      BrookreatorGroup.getAllImagesCall.call(
-                                    accessToken: FFAppState().AccessToken,
-                                  ),
-                                  builder: (context, snapshot) {
-                                    // Customize what your widget looks like when it's loading.
-                                    if (!snapshot.hasData) {
-                                      return const Center(
-                                        child: SizedBox(
-                                          width: 50.0,
-                                          height: 50.0,
-                                          child: CircularProgressIndicator(
-                                            valueColor:
-                                                AlwaysStoppedAnimation<Color>(
-                                              Color(0xFF1371FF),
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    }
-                                    final columnGetAllImagesResponse =
-                                        snapshot.data!;
-                                    return Column(
-                                      mainAxisSize: MainAxisSize.max,
-                                      children: [
-                                        Padding(
-                                          padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 0.0, 0.0, 10.0),
-                                          child: FlutterFlowChoiceChips(
-                                            options: [
-                                              ChipData(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                'l2lqzkc2' /* All */,
-                                              )),
-                                              ChipData(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                '0gu8q6iq' /* Text to Image */,
-                                              )),
-                                              ChipData(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                '3suc45w9' /* AI Portrait */,
-                                              )),
-                                              ChipData(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                'fcosdq2g' /* AI Video */,
-                                              )),
-                                              ChipData(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                'ntguwb39' /* QR Generator */,
-                                              )),
-                                              ChipData(
-                                                  FFLocalizations.of(context)
-                                                      .getText(
-                                                'ksky8m77' /* QR Classic */,
-                                              ))
-                                            ],
-                                            onChanged: (val) async {
-                                              setState(() =>
-                                                  _model.mypicturechoiceValue =
-                                                      val?.firstOrNull);
-                                              _model.mypicturefiltervalue = () {
-                                                if (_model
+                                builder: (context) => Column(
+                                  mainAxisSize: MainAxisSize.max,
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 0.0, 10.0),
+                                      child: FlutterFlowChoiceChips(
+                                        options: [
+                                          ChipData(FFLocalizations.of(context)
+                                              .getText(
+                                            'l2lqzkc2' /* All */,
+                                          )),
+                                          ChipData(FFLocalizations.of(context)
+                                              .getText(
+                                            '0gu8q6iq' /* Text to Image */,
+                                          )),
+                                          ChipData(FFLocalizations.of(context)
+                                              .getText(
+                                            '3suc45w9' /* AI Portrait */,
+                                          )),
+                                          ChipData(FFLocalizations.of(context)
+                                              .getText(
+                                            'fcosdq2g' /* AI Video */,
+                                          )),
+                                          ChipData(FFLocalizations.of(context)
+                                              .getText(
+                                            'ntguwb39' /* QR Generator */,
+                                          )),
+                                          ChipData(FFLocalizations.of(context)
+                                              .getText(
+                                            'ksky8m77' /* QR Classic */,
+                                          ))
+                                        ],
+                                        onChanged: (val) async {
+                                          setState(() =>
+                                              _model.mypicturechoiceValue =
+                                                  val?.firstOrNull);
+                                          _model.mypicturefiltervalue = () {
+                                            if ((_model.mypicturechoiceValue ==
+                                                    'Text to Image') ||
+                                                (_model.mypicturechoiceValue ==
+                                                    'ข้อความเป็นรูปภาพ')) {
+                                              return 'TEXT-TO-IMAGE';
+                                            } else if ((_model
                                                         .mypicturechoiceValue ==
-                                                    'Text to Image') {
-                                                  return 'TEXT-TO-IMAGE';
-                                                } else if (_model
+                                                    'AI Portrait') ||
+                                                (_model.mypicturechoiceValue ==
+                                                    'ภาพบุคคล AI')) {
+                                              return 'AI-PORTRAIT';
+                                            } else if ((_model
                                                         .mypicturechoiceValue ==
-                                                    'AI Portrait') {
-                                                  return 'AI-PORTRAIT';
-                                                } else if (_model
+                                                    'AI Video') ||
+                                                (_model.mypicturechoiceValue ==
+                                                    'วิดีโอเอไอ')) {
+                                              return 'VDO-TO-VDO';
+                                            } else if ((_model
                                                         .mypicturechoiceValue ==
-                                                    'AI Video') {
-                                                  return 'VDO-TO-VDO';
-                                                } else if (_model
+                                                    'QR Classic') ||
+                                                (_model.mypicturechoiceValue ==
+                                                    'QR คลาสสิค')) {
+                                              return 'QRCODE-LOGO';
+                                            } else if ((_model
                                                         .mypicturechoiceValue ==
-                                                    'QR Classic') {
-                                                  return 'QRCODE-LOGO';
-                                                } else if (_model
-                                                        .mypicturechoiceValue ==
-                                                    'QR Generator') {
-                                                  return 'AI-QRCODE';
-                                                } else {
-                                                  return '1';
-                                                }
-                                              }();
-                                              setState(() {});
-                                            },
-                                            selectedChipStyle: ChipStyle(
-                                              backgroundColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primary,
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'NotoSansThai',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
+                                                    'QR Generator') ||
+                                                (_model.mypicturechoiceValue ==
+                                                    'เครื่องกำเนิด QR')) {
+                                              return 'AI-QRCODE';
+                                            } else {
+                                              return '1';
+                                            }
+                                          }();
+                                          setState(() {});
+                                        },
+                                        selectedChipStyle: ChipStyle(
+                                          backgroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primary,
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'NotoSansThai',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
                                                         .secondaryBackground,
-                                                    fontSize: 14.0,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                              iconColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              iconSize: 18.0,
-                                              elevation: 4.0,
-                                              borderRadius:
-                                                  BorderRadius.circular(15.0),
-                                            ),
-                                            unselectedChipStyle: ChipStyle(
-                                              backgroundColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .alternate,
-                                              textStyle: FlutterFlowTheme.of(
-                                                      context)
-                                                  .bodyMedium
-                                                  .override(
-                                                    fontFamily: 'NotoSansThai',
-                                                    color: FlutterFlowTheme.of(
-                                                            context)
+                                                fontSize: 14.0,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
+                                              ),
+                                          iconColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .primaryBackground,
+                                          iconSize: 18.0,
+                                          elevation: 4.0,
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                        ),
+                                        unselectedChipStyle: ChipStyle(
+                                          backgroundColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .alternate,
+                                          textStyle: FlutterFlowTheme.of(
+                                                  context)
+                                              .bodyMedium
+                                              .override(
+                                                fontFamily: 'NotoSansThai',
+                                                color:
+                                                    FlutterFlowTheme.of(context)
                                                         .secondaryText,
-                                                    letterSpacing: 0.0,
-                                                    fontWeight: FontWeight.w500,
-                                                    useGoogleFonts: false,
-                                                  ),
-                                              iconColor:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              iconSize: 18.0,
-                                              elevation: 0.0,
-                                              borderRadius:
-                                                  BorderRadius.circular(15.0),
-                                            ),
-                                            chipSpacing: 12.0,
-                                            rowSpacing: 12.0,
-                                            multiselect: false,
-                                            initialized:
-                                                _model.mypicturechoiceValue !=
-                                                    null,
-                                            alignment: WrapAlignment.start,
-                                            controller: _model
-                                                    .mypicturechoiceValueController ??=
-                                                FormFieldController<
-                                                    List<String>>(
-                                              [
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                                  'yx5o8805' /* All */,
-                                                )
-                                              ],
-                                            ),
-                                            wrapped: true,
+                                                letterSpacing: 0.0,
+                                                fontWeight: FontWeight.w500,
+                                                useGoogleFonts: false,
+                                              ),
+                                          iconColor:
+                                              FlutterFlowTheme.of(context)
+                                                  .secondaryText,
+                                          iconSize: 18.0,
+                                          elevation: 0.0,
+                                          borderRadius:
+                                              BorderRadius.circular(15.0),
+                                        ),
+                                        chipSpacing: 12.0,
+                                        rowSpacing: 12.0,
+                                        multiselect: false,
+                                        initialized:
+                                            _model.mypicturechoiceValue != null,
+                                        alignment: WrapAlignment.start,
+                                        controller: _model
+                                                .mypicturechoiceValueController ??=
+                                            FormFieldController<List<String>>(
+                                          [
+                                            FFLocalizations.of(context).getText(
+                                              'yx5o8805' /* All */,
+                                            )
+                                          ],
+                                        ),
+                                        wrapped: true,
+                                      ),
+                                    ),
+                                    Expanded(
+                                      child: PagedMasonryGridView<
+                                          ApiPagingParams, dynamic>.count(
+                                        pagingController:
+                                            _model.setStaggeredViewController1(
+                                          (nextPageMarker) => BrookreatorGroup
+                                              .getAllImagesCall
+                                              .call(
+                                            accessToken:
+                                                FFAppState().AccessToken,
+                                            offset: functions.multipletwenty(
+                                                nextPageMarker.nextPageNumber),
+                                            limit: 20,
                                           ),
                                         ),
-                                        Expanded(
-                                          child: Builder(
-                                            builder: (context) {
-                                              final mypicture = BrookreatorGroup
-                                                      .getAllImagesCall
-                                                      .images(
-                                                        columnGetAllImagesResponse
-                                                            .jsonBody,
-                                                      )
-                                                      ?.where((e) => _model
-                                                                  .mypicturechoiceValue ==
-                                                              'All'
-                                                          ? true
-                                                          : (_model
-                                                                  .mypicturefiltervalue ==
-                                                              getJsonField(
-                                                                e,
-                                                                r'''$.feature''',
-                                                              ).toString()))
-                                                      .toList()
-                                                      .toList() ??
-                                                  [];
-                                              return MasonryGridView.builder(
-                                                gridDelegate:
-                                                    const SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                                                  crossAxisCount: 3,
+                                        crossAxisCount: 3,
+                                        crossAxisSpacing: 10.0,
+                                        mainAxisSpacing: 10.0,
+                                        shrinkWrap: true,
+                                        builderDelegate:
+                                            PagedChildBuilderDelegate<dynamic>(
+                                          // Customize what your widget looks like when it's loading the first page.
+                                          firstPageProgressIndicatorBuilder:
+                                              (_) => const Center(
+                                            child: SizedBox(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(
+                                                  Color(0xFF1371FF),
                                                 ),
-                                                crossAxisSpacing: 10.0,
-                                                mainAxisSpacing: 10.0,
-                                                itemCount: mypicture.length,
-                                                shrinkWrap: true,
-                                                itemBuilder:
-                                                    (context, mypictureIndex) {
-                                                  final mypictureItem =
-                                                      mypicture[mypictureIndex];
-                                                  return Stack(
-                                                    children: [
-                                                      FlutterFlowMediaDisplay(
-                                                        path: getJsonField(
-                                                          mypictureItem,
-                                                          r'''$.url''',
-                                                        ).toString(),
-                                                        imageBuilder: (path) =>
-                                                            ClipRRect(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      8.0),
-                                                          child: Image.network(
-                                                            path,
-                                                            width: 300.0,
-                                                            height: random_data
-                                                                .randomInteger(
-                                                                    100, 200)
-                                                                .toDouble(),
-                                                            fit: BoxFit.cover,
-                                                          ),
-                                                        ),
-                                                        videoPlayerBuilder:
-                                                            (path) =>
-                                                                FlutterFlowVideoPlayer(
-                                                          path: path,
-                                                          width: 300.0,
-                                                          autoPlay: false,
-                                                          looping: true,
-                                                          showControls: true,
-                                                          allowFullScreen: true,
-                                                          allowPlaybackSpeedMenu:
-                                                              false,
-                                                        ),
-                                                      ),
-                                                    ],
-                                                  );
-                                                },
-                                              );
-                                            },
+                                              ),
+                                            ),
                                           ),
+                                          // Customize what your widget looks like when it's loading another page.
+                                          newPageProgressIndicatorBuilder:
+                                              (_) => const Center(
+                                            child: SizedBox(
+                                              width: 50.0,
+                                              height: 50.0,
+                                              child: CircularProgressIndicator(
+                                                valueColor:
+                                                    AlwaysStoppedAnimation<
+                                                        Color>(
+                                                  Color(0xFF1371FF),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+
+                                          itemBuilder:
+                                              (context, _, mypictureIndex) {
+                                            final mypictureItem = _model
+                                                .staggeredViewPagingController1!
+                                                .itemList![mypictureIndex];
+                                            return Stack(
+                                              children: [
+                                                FlutterFlowMediaDisplay(
+                                                  path: mypictureItem,
+                                                  imageBuilder: (path) =>
+                                                      ClipRRect(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8.0),
+                                                    child: Image.network(
+                                                      path,
+                                                      width: double.infinity,
+                                                      height: random_data
+                                                          .randomInteger(
+                                                              100, 200)
+                                                          .toDouble(),
+                                                      fit: BoxFit.cover,
+                                                    ),
+                                                  ),
+                                                  videoPlayerBuilder: (path) =>
+                                                      FlutterFlowVideoPlayer(
+                                                    path: path,
+                                                    width: 300.0,
+                                                    autoPlay: false,
+                                                    looping: true,
+                                                    showControls: true,
+                                                    allowFullScreen: true,
+                                                    allowPlaybackSpeedMenu:
+                                                        false,
+                                                  ),
+                                                ),
+                                              ],
+                                            );
+                                          },
                                         ),
-                                      ],
-                                    );
-                                  },
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               KeepAliveWidgetWrapper(
@@ -496,24 +499,34 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                   _model.favouriteValue =
                                                       val?.firstOrNull);
                                               _model.favouritefiltervalue = () {
-                                                if (_model.favouriteValue ==
-                                                    'Text to Image') {
+                                                if ((_model.favouriteValue ==
+                                                        'Text to Image') ||
+                                                    (_model.favouriteValue ==
+                                                        'ข้อความเป็นรูปภาพ')) {
                                                   return 'TEXT-TO-IMAGE';
-                                                } else if (_model
-                                                        .favouriteValue ==
-                                                    'AI Portrait') {
+                                                } else if ((_model
+                                                            .favouriteValue ==
+                                                        'AI Portrait') ||
+                                                    (_model.favouriteValue ==
+                                                        'ภาพบุคคล AI')) {
                                                   return 'AI-PORTRAIT';
-                                                } else if (_model
-                                                        .favouriteValue ==
-                                                    'AI Video') {
+                                                } else if ((_model
+                                                            .favouriteValue ==
+                                                        'AI Video') ||
+                                                    (_model.favouriteValue ==
+                                                        'วิดีโอเอไอ')) {
                                                   return 'VDO-TO-VDO';
-                                                } else if (_model
-                                                        .favouriteValue ==
-                                                    'QR Generator') {
+                                                } else if ((_model
+                                                            .favouriteValue ==
+                                                        'QR Generator') ||
+                                                    (_model.favouriteValue ==
+                                                        'เครื่องกำเนิด QR')) {
                                                   return 'AI-QRCODE';
-                                                } else if (_model
-                                                        .favouriteValue ==
-                                                    'QR Classic') {
+                                                } else if ((_model
+                                                            .favouriteValue ==
+                                                        'QR Classic') &&
+                                                    (_model.favouriteValue ==
+                                                        'QR คลาสสิค')) {
                                                   return 'QRCODE-LOGO';
                                                 } else {
                                                   return '1';
@@ -598,9 +611,11 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                         columnGetAllFavouritesResponse
                                                             .jsonBody,
                                                       )
-                                                      ?.where((e) => _model
-                                                                  .favouriteValue ==
-                                                              'All'
+                                                      ?.where((e) => (_model
+                                                                      .favouriteValue ==
+                                                                  'All') ||
+                                                              (_model.favouriteValue ==
+                                                                  'ทั้งหมด')
                                                           ? true
                                                           : (_model
                                                                   .favouritefiltervalue ==
@@ -624,77 +639,31 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                     (context, favouriteIndex) {
                                                   final favouriteItem =
                                                       favourite[favouriteIndex];
-                                                  return Stack(
-                                                    children: [
-                                                      InkWell(
-                                                        splashColor:
-                                                            Colors.transparent,
-                                                        focusColor:
-                                                            Colors.transparent,
-                                                        hoverColor:
-                                                            Colors.transparent,
-                                                        highlightColor:
-                                                            Colors.transparent,
-                                                        onTap: () async {
-                                                          await Navigator.push(
-                                                            context,
-                                                            PageTransition(
-                                                              type:
-                                                                  PageTransitionType
-                                                                      .fade,
-                                                              child:
-                                                                  FlutterFlowExpandedImageView(
-                                                                image: Image
-                                                                    .network(
-                                                                  getJsonField(
-                                                                    favouriteItem,
-                                                                    r'''$.url''',
-                                                                  ).toString(),
-                                                                  fit: BoxFit
-                                                                      .contain,
-                                                                ),
-                                                                allowRotation:
-                                                                    false,
-                                                                tag:
-                                                                    getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.url''',
-                                                                ).toString(),
-                                                                useHeroAnimation:
-                                                                    true,
-                                                              ),
-                                                            ),
-                                                          );
-                                                        },
-                                                        child: Hero(
-                                                          tag: getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.url''',
-                                                          ).toString(),
-                                                          transitionOnUserGestures:
-                                                              true,
-                                                          child: ClipRRect(
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        8.0),
-                                                            child:
-                                                                Image.network(
-                                                              getJsonField(
-                                                                favouriteItem,
-                                                                r'''$.url''',
-                                                              ).toString(),
-                                                              width: 300.0,
-                                                              height: random_data
-                                                                  .randomInteger(
-                                                                      100, 200)
-                                                                  .toDouble(),
-                                                              fit: BoxFit.cover,
-                                                            ),
+                                                  return SizedBox(
+                                                    width: double.infinity,
+                                                    child: Stack(
+                                                      children: [
+                                                        ClipRRect(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      8.0),
+                                                          child: Image.network(
+                                                            getJsonField(
+                                                              favouriteItem,
+                                                              r'''$.url''',
+                                                            ).toString(),
+                                                            width:
+                                                                double.infinity,
+                                                            height: random_data
+                                                                .randomInteger(
+                                                                    100, 200)
+                                                                .toDouble(),
+                                                            fit: BoxFit.cover,
                                                           ),
                                                         ),
-                                                      ),
-                                                    ],
+                                                      ],
+                                                    ),
                                                   );
                                                 },
                                               );

@@ -1,3 +1,5 @@
+import '/components/message_error/message_error_widget.dart';
+import '/components/message_success/message_success_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
@@ -53,21 +55,33 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
               children: [
                 Stack(
                   children: [
-                    Padding(
-                      padding:
-                          const EdgeInsetsDirectional.fromSTEB(20.0, 3.0, 0.0, 0.0),
-                      child: InkWell(
-                        splashColor: Colors.transparent,
-                        focusColor: Colors.transparent,
-                        hoverColor: Colors.transparent,
-                        highlightColor: Colors.transparent,
-                        onTap: () async {
-                          context.safePop();
-                        },
-                        child: FaIcon(
-                          FontAwesomeIcons.chevronLeft,
-                          color: FlutterFlowTheme.of(context).secondaryText,
-                          size: 22.0,
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.safePop();
+                      },
+                      child: Container(
+                        decoration: const BoxDecoration(),
+                        child: Padding(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
+                              20.0, 3.0, 0.0, 0.0),
+                          child: InkWell(
+                            splashColor: Colors.transparent,
+                            focusColor: Colors.transparent,
+                            hoverColor: Colors.transparent,
+                            highlightColor: Colors.transparent,
+                            onTap: () async {
+                              context.safePop();
+                            },
+                            child: FaIcon(
+                              FontAwesomeIcons.chevronLeft,
+                              color: FlutterFlowTheme.of(context).secondaryText,
+                              size: 22.0,
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -194,69 +208,128 @@ class _ForgotPasswordWidgetState extends State<ForgotPasswordWidget> {
                       ),
                       Align(
                         alignment: const AlignmentDirectional(0.0, 0.0),
-                        child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
-                              15.0, 25.0, 15.0, 0.0),
-                          child: FFButtonWidget(
-                            onPressed: () async {
-                              _model.forgotpasswordresult =
-                                  await actions.forgotPassword(
-                                _model.emailAddressTextController.text,
-                              );
-                              if (_model.forgotpasswordresult!) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      'Sent code successfully',
-                                      style: TextStyle(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryText,
+                        child: Builder(
+                          builder: (context) => Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                10.0, 30.0, 10.0, 0.0),
+                            child: FFButtonWidget(
+                              onPressed: () async {
+                                _model.forgotpasswordresult =
+                                    await actions.forgotPassword(
+                                  _model.emailAddressTextController.text,
+                                );
+                                if (_model.forgotpasswordresult!) {
+                                  showDialog(
+                                    barrierColor: Colors.transparent,
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, -1.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: SizedBox(
+                                            height: 100.0,
+                                            width: double.infinity,
+                                            child: MessageSuccessWidget(
+                                              alertInfo:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'ojadzthi' /* Sent code successfully */,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+
+                                  context.pushNamed(
+                                    'ResetPassword',
+                                    queryParameters: {
+                                      'email': serializeParam(
+                                        _model.emailAddressTextController.text,
+                                        ParamType.String,
                                       ),
-                                    ),
-                                    duration: const Duration(milliseconds: 2550),
-                                    backgroundColor:
-                                        FlutterFlowTheme.of(context).secondary,
-                                  ),
-                                );
+                                    }.withoutNulls,
+                                  );
+                                } else {
+                                  showDialog(
+                                    barrierColor: Colors.transparent,
+                                    context: context,
+                                    builder: (dialogContext) {
+                                      return Dialog(
+                                        elevation: 0,
+                                        insetPadding: EdgeInsets.zero,
+                                        backgroundColor: Colors.transparent,
+                                        alignment:
+                                            const AlignmentDirectional(0.0, -1.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                        child: GestureDetector(
+                                          onTap: () => _model
+                                                  .unfocusNode.canRequestFocus
+                                              ? FocusScope.of(context)
+                                                  .requestFocus(
+                                                      _model.unfocusNode)
+                                              : FocusScope.of(context)
+                                                  .unfocus(),
+                                          child: SizedBox(
+                                            height: 100.0,
+                                            width: double.infinity,
+                                            child: MessageErrorWidget(
+                                              alertInfo:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'qix2dt6j' /* Sending code failed */,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  ).then((value) => setState(() {}));
+                                }
 
-                                context.pushNamed(
-                                  'ResetPassword',
-                                  queryParameters: {
-                                    'email': serializeParam(
-                                      _model.emailAddressTextController.text,
-                                      ParamType.String,
-                                    ),
-                                  }.withoutNulls,
-                                );
-                              }
-
-                              setState(() {});
-                            },
-                            text: FFLocalizations.of(context).getText(
-                              'a8f6j3tt' /* Send Code */,
-                            ),
-                            options: FFButtonOptions(
-                              width: 325.0,
-                              height: 50.0,
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
-                                  0.0, 0.0, 0.0, 0.0),
-                              color: FlutterFlowTheme.of(context).primary,
-                              textStyle: FlutterFlowTheme.of(context)
-                                  .titleSmall
-                                  .override(
-                                    fontFamily: 'NotoSansThai',
-                                    fontSize: 17.0,
-                                    letterSpacing: 0.0,
-                                    useGoogleFonts: false,
-                                  ),
-                              elevation: 3.0,
-                              borderSide: const BorderSide(
-                                color: Colors.transparent,
-                                width: 1.0,
+                                setState(() {});
+                              },
+                              text: FFLocalizations.of(context).getText(
+                                'a8f6j3tt' /* Send Code */,
                               ),
-                              borderRadius: BorderRadius.circular(12.0),
+                              options: FFButtonOptions(
+                                width: 325.0,
+                                height: 50.0,
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                                color: FlutterFlowTheme.of(context).primary,
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .titleSmall
+                                    .override(
+                                      fontFamily: 'NotoSansThai',
+                                      fontSize: 17.0,
+                                      letterSpacing: 0.0,
+                                      useGoogleFonts: false,
+                                    ),
+                                elevation: 3.0,
+                                borderSide: const BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1.0,
+                                ),
+                                borderRadius: BorderRadius.circular(8.0),
+                              ),
                             ),
                           ),
                         ),

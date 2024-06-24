@@ -49,9 +49,9 @@ class _ComponentWidgetState extends State<ComponentWidget> {
               borderRadius: 30.0,
               borderWidth: 1.0,
               buttonSize: 60.0,
-              icon: const Icon(
+              icon: Icon(
                 Icons.chevron_left,
-                color: Color(0xFF464646),
+                color: FlutterFlowTheme.of(context).primary,
                 size: 30.0,
               ),
               onPressed: () async {
@@ -75,6 +75,13 @@ class _ComponentWidgetState extends State<ComponentWidget> {
               expandedTitleScale: 1.0,
             ),
             elevation: 0.0,
+          ),
+        ),
+        body: const SafeArea(
+          top: true,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [],
           ),
         ),
       ),

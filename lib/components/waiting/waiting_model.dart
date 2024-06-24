@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'waiting_image_widget.dart' show WaitingImageWidget;
+import 'waiting_widget.dart' show WaitingWidget;
 import 'package:flutter/material.dart';
 
-class WaitingImageModel extends FlutterFlowModel<WaitingImageWidget> {
+class WaitingModel extends FlutterFlowModel<WaitingWidget> {
   @override
   void initState(BuildContext context) {}
 
