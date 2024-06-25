@@ -51,7 +51,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set prompt(List<String>? val) => _prompt = val;
 
   void updatePrompt(Function(List<String>) updateFn) {
-    updateFn(prompt ??= []);
+    updateFn(_prompt ??= []);
   }
 
   bool hasPrompt() => _prompt != null;
@@ -62,7 +62,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set negativePrompt(List<String>? val) => _negativePrompt = val;
 
   void updateNegativePrompt(Function(List<String>) updateFn) {
-    updateFn(negativePrompt ??= []);
+    updateFn(_negativePrompt ??= []);
   }
 
   bool hasNegativePrompt() => _negativePrompt != null;
@@ -73,7 +73,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set adetailerPrompts(List<String>? val) => _adetailerPrompts = val;
 
   void updateAdetailerPrompts(Function(List<String>) updateFn) {
-    updateFn(adetailerPrompts ??= []);
+    updateFn(_adetailerPrompts ??= []);
   }
 
   bool hasAdetailerPrompts() => _adetailerPrompts != null;
@@ -84,7 +84,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set negativeAdetailers(List<String>? val) => _negativeAdetailers = val;
 
   void updateNegativeAdetailers(Function(List<String>) updateFn) {
-    updateFn(negativeAdetailers ??= []);
+    updateFn(_negativeAdetailers ??= []);
   }
 
   bool hasNegativeAdetailers() => _negativeAdetailers != null;
@@ -95,7 +95,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set sample(List<int>? val) => _sample = val;
 
   void updateSample(Function(List<int>) updateFn) {
-    updateFn(sample ??= []);
+    updateFn(_sample ??= []);
   }
 
   bool hasSample() => _sample != null;
@@ -106,7 +106,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set model(List<String>? val) => _model = val;
 
   void updateModel(Function(List<String>) updateFn) {
-    updateFn(model ??= []);
+    updateFn(_model ??= []);
   }
 
   bool hasModel() => _model != null;
@@ -117,7 +117,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set height(List<int>? val) => _height = val;
 
   void updateHeight(Function(List<int>) updateFn) {
-    updateFn(height ??= []);
+    updateFn(_height ??= []);
   }
 
   bool hasHeight() => _height != null;
@@ -128,7 +128,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set width(List<int>? val) => _width = val;
 
   void updateWidth(Function(List<int>) updateFn) {
-    updateFn(width ??= []);
+    updateFn(_width ??= []);
   }
 
   bool hasWidth() => _width != null;
@@ -139,7 +139,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set sampler(List<String>? val) => _sampler = val;
 
   void updateSampler(Function(List<String>) updateFn) {
-    updateFn(sampler ??= []);
+    updateFn(_sampler ??= []);
   }
 
   bool hasSampler() => _sampler != null;
@@ -150,7 +150,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set steps(List<int>? val) => _steps = val;
 
   void updateSteps(Function(List<int>) updateFn) {
-    updateFn(steps ??= []);
+    updateFn(_steps ??= []);
   }
 
   bool hasSteps() => _steps != null;
@@ -161,7 +161,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set cfgScale(List<int>? val) => _cfgScale = val;
 
   void updateCfgScale(Function(List<int>) updateFn) {
-    updateFn(cfgScale ??= []);
+    updateFn(_cfgScale ??= []);
   }
 
   bool hasCfgScale() => _cfgScale != null;
@@ -172,7 +172,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set clipSkips(List<int>? val) => _clipSkips = val;
 
   void updateClipSkips(Function(List<int>) updateFn) {
-    updateFn(clipSkips ??= []);
+    updateFn(_clipSkips ??= []);
   }
 
   bool hasClipSkips() => _clipSkips != null;
@@ -183,7 +183,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set poses(List<String>? val) => _poses = val;
 
   void updatePoses(Function(List<String>) updateFn) {
-    updateFn(poses ??= []);
+    updateFn(_poses ??= []);
   }
 
   bool hasPoses() => _poses != null;
@@ -194,7 +194,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set seed(List<String>? val) => _seed = val;
 
   void updateSeed(Function(List<String>) updateFn) {
-    updateFn(seed ??= []);
+    updateFn(_seed ??= []);
   }
 
   bool hasSeed() => _seed != null;
@@ -205,7 +205,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set loraModelIds(List<String>? val) => _loraModelIds = val;
 
   void updateLoraModelIds(Function(List<String>) updateFn) {
-    updateFn(loraModelIds ??= []);
+    updateFn(_loraModelIds ??= []);
   }
 
   bool hasLoraModelIds() => _loraModelIds != null;
@@ -216,7 +216,7 @@ class DfsfsStruct extends FFFirebaseStruct {
   set themeIds(List<int>? val) => _themeIds = val;
 
   void updateThemeIds(Function(List<int>) updateFn) {
-    updateFn(themeIds ??= []);
+    updateFn(_themeIds ??= []);
   }
 
   bool hasThemeIds() => _themeIds != null;

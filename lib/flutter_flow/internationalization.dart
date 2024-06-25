@@ -2596,22 +2596,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
           'AI อาจสร้างสิ่งประดิษฐ์ทางการมองเห็น เปลี่ยนลักษณะใบหน้า หรือสร้างภาพที่มองไม่เห็นใบหน้า',
     },
   },
-  // cropimage
-  {
-    '18ujzwlc': {
-      'en': 'Crop Image',
-      'th': 'ครอบตัดรูปภาพ',
-    },
-    'qa9m6x2r': {
-      'en':
-          'Please zoom the photo to adjust to the best size, showing your head and shoulders',
-      'th': 'โปรดซูมภาพเพื่อปรับขนาดให้ดีที่สุด โดยแสดงศีรษะและไหล่ของคุณ',
-    },
-    'evyft6it': {
-      'en': 'Crop',
-      'th': 'ครอบตัด',
-    },
-  },
   // videoResult
   {
     '0l2phx3p': {
@@ -2731,53 +2715,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': '9',
     },
   },
-  // gallery
-  {
-    'vt7w39k7': {
-      'en': 'All',
-      'th': 'ทั้งหมด',
-    },
-    'xzwajxt0': {
-      'en': '~2 min',
-      'th': '~2 นาที',
-    },
-    'm8lljh53': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    '2wh65zu7': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'ssejxo6q': {
-      'en': 'AI Video (15 sec)',
-      'th': 'วิดีโอ AI (15 วินาที)',
-    },
-    '0w7636ue': {
-      'en': 'Generating...',
-      'th': 'กำลังสร้าง...',
-    },
-    '42sh4p4l': {
-      'en': '~60 min',
-      'th': '~60 นาที',
-    },
-    'zegvkznd': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    't1mh6kcx': {
-      'en': 'AI Portrait',
-      'th': 'ภาพเหมือนของเอไอ',
-    },
-    'clp8uj6i': {
-      'en': 'AI Video',
-      'th': 'วิดีโอเอไอ',
-    },
-    'tapgaa06': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
-    },
-  },
   // buttongroup_1
   {
     'zfgqbfxi': {
@@ -2817,29 +2754,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'csrbfjr1': {
       'en': 'Buy Credit',
       'th': 'ซื้อเครดิต',
-    },
-  },
-  // tabbar
-  {
-    '9mcftlua': {
-      'en': 'All',
-      'th': 'ทั้งหมด',
-    },
-    'ey2ii5pn': {
-      'en': 'Text to Image',
-      'th': 'ข้อความเป็นรูปภาพ',
-    },
-    'unj4zim0': {
-      'en': 'AI portrait',
-      'th': 'ภาพเหมือนของเอไอ',
-    },
-    'zxesm7qp': {
-      'en': 'AI Video',
-      'th': 'วิดีโอเอไอ',
-    },
-    'yh3v81af': {
-      'en': 'QR Generator',
-      'th': 'เครื่องกำเนิด QR',
     },
   },
   // uploadbutton

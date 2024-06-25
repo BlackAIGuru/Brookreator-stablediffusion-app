@@ -65,7 +65,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                 width: MediaQuery.sizeOf(context).width * 0.4,
                 height: 35.0,
                 decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  color: FlutterFlowTheme.of(context).info,
                   borderRadius: BorderRadius.circular(27.0),
                   shape: BoxShape.rectangle,
                   border: Border.all(
@@ -105,6 +105,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'NotoSansThai',
+                                    color: Colors.black,
                                     fontSize: 12.0,
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.w600,

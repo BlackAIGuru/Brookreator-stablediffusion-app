@@ -5937,7 +5937,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                       )} Credits )',
                       icon: Icon(
                         Icons.auto_awesome_sharp,
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FlutterFlowTheme.of(context).info,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
@@ -5951,16 +5951,14 @@ class _T2iWidgetState extends State<T2iWidget> {
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'NotoSansThai',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
+                                  color: FlutterFlowTheme.of(context).info,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
                         elevation: 3.0,
                         borderRadius: BorderRadius.circular(25.0),
                         disabledColor: const Color(0x581371FF),
-                        disabledTextColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                        disabledTextColor: FlutterFlowTheme.of(context).info,
                       ),
                     ),
                   ),

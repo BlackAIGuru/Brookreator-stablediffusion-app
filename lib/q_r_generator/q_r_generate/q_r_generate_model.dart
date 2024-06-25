@@ -8,19 +8,21 @@ import 'package:flutter/material.dart';
 class QRGenerateModel extends FlutterFlowModel<QRGenerateWidget> {
   ///  Local state fields for this page.
 
-  int? qrscaleselected = 10;
+  int qrscaleselected = 10;
 
   String logoselected = 'none';
 
-  String uploadedQRPath = '';
+  String? uploadedQRPath = '';
 
-  String uploadedBgPath = '';
+  String? uploadedBgPath = '';
 
-  String uploadedLogoPath = '';
+  String? uploadedLogoPath = '';
 
   int themeId = 80;
 
   int qrPromptSample = 6;
+
+  String? uploadedQRPathClassic;
 
   ///  State fields for stateful widgets in this page.
 

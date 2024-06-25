@@ -85,7 +85,7 @@ class _MessageSuccessWidgetState extends State<MessageSuccessWidget>
               children: [
                 Icon(
                   Icons.check_circle_rounded,
-                  color: FlutterFlowTheme.of(context).primaryBtnText,
+                  color: FlutterFlowTheme.of(context).info,
                   size: 25.0,
                 ),
                 Expanded(
@@ -97,7 +97,7 @@ class _MessageSuccessWidgetState extends State<MessageSuccessWidget>
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'NotoSansThai',
-                          color: FlutterFlowTheme.of(context).primaryBtnText,
+                          color: FlutterFlowTheme.of(context).info,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: false,

@@ -494,7 +494,7 @@ class _ResetPasswordWidgetState extends State<ResetPasswordWidget> {
                                 },
                               ).then((value) => setState(() {}));
 
-                              context.pushNamed('SignIn');
+                              context.goNamed('SignIn');
                             } else {
                               showDialog(
                                 barrierColor: Colors.transparent,

@@ -48,7 +48,7 @@ class _InfoWidgetState extends State<InfoWidget> {
           width: 330.0,
           height: 70.0,
           decoration: BoxDecoration(
-            color: const Color(0xED181818),
+            color: FlutterFlowTheme.of(context).primaryText,
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Align(

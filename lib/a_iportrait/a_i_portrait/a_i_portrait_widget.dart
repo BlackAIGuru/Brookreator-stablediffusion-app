@@ -2591,6 +2591,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                   .override(
                                                                     fontFamily:
                                                                         'NotoSansThai',
+                                                                    color: FlutterFlowTheme.of(
+                                                                            context)
+                                                                        .primaryText,
                                                                     letterSpacing:
                                                                         0.0,
                                                                     useGoogleFonts:
@@ -2610,10 +2613,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                 .secondaryText,
                                                             size: 24.0,
                                                           ),
-                                                          fillColor:
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .info,
+                                                          fillColor: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryBackground,
                                                           elevation: 2.0,
                                                           borderColor:
                                                               FlutterFlowTheme.of(
@@ -3901,7 +3903,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                               )).toString()} Credits )',
                       icon: Icon(
                         Icons.auto_awesome_sharp,
-                        color: FlutterFlowTheme.of(context).primaryBackground,
+                        color: FlutterFlowTheme.of(context).info,
                         size: 15.0,
                       ),
                       options: FFButtonOptions(
@@ -3915,8 +3917,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
                                   fontFamily: 'NotoSansThai',
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
+                                  color: FlutterFlowTheme.of(context).info,
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
@@ -3926,8 +3927,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                         ),
                         borderRadius: BorderRadius.circular(25.0),
                         disabledColor: const Color(0x581371FF),
-                        disabledTextColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                        disabledTextColor: FlutterFlowTheme.of(context).info,
                       ),
                     ),
                   ),

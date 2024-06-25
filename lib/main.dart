@@ -96,13 +96,13 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         brightness: Brightness.light,
         scrollbarTheme: ScrollbarThemeData(
-          thickness: MaterialStateProperty.all(3.0),
+          thickness: WidgetStateProperty.all(3.0),
           radius: const Radius.circular(30.0),
-          thumbColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.dragged)) {
+          thumbColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.dragged)) {
               return const Color(0xff1371ff);
             }
-            if (states.contains(MaterialState.hovered)) {
+            if (states.contains(WidgetState.hovered)) {
               return const Color(0xff1371ff);
             }
             return const Color(0xff1371ff);
@@ -114,13 +114,13 @@ class _MyAppState extends State<MyApp> {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
         scrollbarTheme: ScrollbarThemeData(
-          thickness: MaterialStateProperty.all(3.0),
+          thickness: WidgetStateProperty.all(3.0),
           radius: const Radius.circular(30.0),
-          thumbColor: MaterialStateProperty.resolveWith((states) {
-            if (states.contains(MaterialState.dragged)) {
+          thumbColor: WidgetStateProperty.resolveWith((states) {
+            if (states.contains(WidgetState.dragged)) {
               return const Color(0xff1371ff);
             }
-            if (states.contains(MaterialState.hovered)) {
+            if (states.contains(WidgetState.hovered)) {
               return const Color(0xff1371ff);
             }
             return const Color(0xff1371ff);

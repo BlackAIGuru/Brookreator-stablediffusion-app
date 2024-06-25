@@ -862,6 +862,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                     );
                                                                                   }
 
+                                                                                  _model.uploadedQRPath = '';
+                                                                                  setState(() {});
+
                                                                                   setState(() {});
                                                                                 },
                                                                                 child: Icon(
@@ -888,11 +891,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                               highlightColor: Colors.transparent,
                                                                               onTap: () async {
                                                                                 if (FFAppState().Logined) {
-                                                                                  final selectedMedia = await selectMedia(
-                                                                                    maxWidth: 1024.00,
-                                                                                    maxHeight: 1024.00,
-                                                                                    mediaSource: MediaSource.photoGallery,
-                                                                                    multiImage: false,
+                                                                                  final selectedMedia = await selectMediaWithSourceBottomSheet(
+                                                                                    context: context,
+                                                                                    allowPhoto: true,
                                                                                   );
                                                                                   if (selectedMedia != null && selectedMedia.every((m) => validateFileFormat(m.storagePath, context))) {
                                                                                     setState(() => _model.isDataUploading1 = true);
@@ -932,6 +933,18 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                       r'''$.result.filePath''',
                                                                                     ).toString();
                                                                                     setState(() {});
+                                                                                    ScaffoldMessenger.of(context).showSnackBar(
+                                                                                      SnackBar(
+                                                                                        content: Text(
+                                                                                          'dsfdsfs',
+                                                                                          style: TextStyle(
+                                                                                            color: FlutterFlowTheme.of(context).primaryText,
+                                                                                          ),
+                                                                                        ),
+                                                                                        duration: const Duration(milliseconds: 4000),
+                                                                                        backgroundColor: FlutterFlowTheme.of(context).secondary,
+                                                                                      ),
+                                                                                    );
                                                                                     showDialog(
                                                                                       barrierColor: Colors.transparent,
                                                                                       context: context,
@@ -3360,9 +3373,15 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 ? (_model.promptLinkTextController
                                                             .text ==
                                                         '')
-                                                : ((_model.uploadedLocalFile1
-                                                            .bytes?.isEmpty ??
-                                                        true)))
+                                                : (((_model
+                                                                .uploadedLocalFile1
+                                                                .bytes
+                                                                ?.isEmpty ??
+                                                            true)) ||
+                                                    (_model.uploadedQRPath ==
+                                                            null ||
+                                                        _model.uploadedQRPath ==
+                                                            '')))
                                             ? null
                                             : () async {
                                                 if (FFAppState().Logined) {
@@ -3416,6 +3435,8 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         : 'https://qr.codes/n9NmI3',
                                                     qrCodeFilePath:
                                                         _model.uploadedQRPath !=
+                                                                    null &&
+                                                                _model.uploadedQRPath !=
                                                                     ''
                                                             ? _model
                                                                 .uploadedQRPath
@@ -3769,8 +3790,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                             FFLocalizations.of(context).getText(
                                           'muhcqo9z' /* Generate */,
                                         ),
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.auto_awesome_sharp,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           size: 15.0,
                                         ),
                                         options: FFButtonOptions(
@@ -3791,7 +3814,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
+                                                        .info,
                                                 letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
@@ -3803,8 +3826,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                               BorderRadius.circular(25.0),
                                           disabledColor: const Color(0x581371FF),
                                           disabledTextColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryBackground,
+                                              FlutterFlowTheme.of(context).info,
                                         ),
                                       ),
                                     ),
@@ -4341,6 +4363,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                     );
                                                                                   }
 
+                                                                                  _model.uploadedQRPathClassic = null;
+                                                                                  setState(() {});
+
                                                                                   setState(() {});
                                                                                 },
                                                                                 child: Icon(
@@ -4367,11 +4392,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                               highlightColor: Colors.transparent,
                                                                               onTap: () async {
                                                                                 if (FFAppState().Logined) {
-                                                                                  final selectedMedia = await selectMedia(
-                                                                                    maxWidth: 1024.00,
-                                                                                    maxHeight: 1024.00,
-                                                                                    mediaSource: MediaSource.photoGallery,
-                                                                                    multiImage: false,
+                                                                                  final selectedMedia = await selectMediaWithSourceBottomSheet(
+                                                                                    context: context,
+                                                                                    allowPhoto: true,
                                                                                   );
                                                                                   if (selectedMedia != null && selectedMedia.every((m) => validateFileFormat(m.storagePath, context))) {
                                                                                     setState(() => _model.isDataUploading2 = true);
@@ -4406,6 +4429,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                   );
 
                                                                                   if ((_model.awsupload2?.succeeded ?? true)) {
+                                                                                    _model.uploadedQRPathClassic = getJsonField(
+                                                                                      (_model.awsupload2?.jsonBody ?? ''),
+                                                                                      r'''$.result.filePath''',
+                                                                                    ).toString();
+                                                                                    setState(() {});
                                                                                     showDialog(
                                                                                       barrierColor: Colors.transparent,
                                                                                       context: context,
@@ -4430,12 +4458,6 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         );
                                                                                       },
                                                                                     ).then((value) => setState(() {}));
-
-                                                                                    _model.uploadedQRPath = getJsonField(
-                                                                                      (_model.awsupload2?.jsonBody ?? ''),
-                                                                                      r'''$.result.filePath''',
-                                                                                    ).toString();
-                                                                                    setState(() {});
                                                                                   } else {
                                                                                     showDialog(
                                                                                       barrierColor: Colors.transparent,
@@ -4881,6 +4903,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       );
                                                                     }
 
+                                                                    _model.uploadedBgPath =
+                                                                        '';
+                                                                    setState(
+                                                                        () {});
+
                                                                     setState(
                                                                         () {});
                                                                   },
@@ -4928,16 +4955,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   if (FFAppState()
                                                                       .Logined) {
                                                                     final selectedMedia =
-                                                                        await selectMedia(
-                                                                      maxWidth:
-                                                                          1024.00,
-                                                                      maxHeight:
-                                                                          1024.00,
-                                                                      mediaSource:
-                                                                          MediaSource
-                                                                              .photoGallery,
-                                                                      multiImage:
-                                                                          false,
+                                                                        await selectMediaWithSourceBottomSheet(
+                                                                      context:
+                                                                          context,
+                                                                      allowPhoto:
+                                                                          true,
                                                                     );
                                                                     if (selectedMedia !=
                                                                             null &&
@@ -6579,6 +6601,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       );
                                                                     }
 
+                                                                    _model.uploadedLogoPath =
+                                                                        '';
+                                                                    setState(
+                                                                        () {});
+
                                                                     setState(
                                                                         () {});
                                                                   },
@@ -6631,15 +6658,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     if (FFAppState()
                                                                         .Logined) {
                                                                       final selectedMedia =
-                                                                          await selectMedia(
-                                                                        maxWidth:
-                                                                            1024.00,
-                                                                        maxHeight:
-                                                                            1024.00,
-                                                                        mediaSource:
-                                                                            MediaSource.photoGallery,
-                                                                        multiImage:
-                                                                            false,
+                                                                          await selectMediaWithSourceBottomSheet(
+                                                                        context:
+                                                                            context,
+                                                                        allowPhoto:
+                                                                            true,
                                                                       );
                                                                       if (selectedMedia !=
                                                                               null &&
@@ -6894,9 +6917,15 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 ? (_model.uploadLinkTextController
                                                             .text ==
                                                         '')
-                                                : ((_model.uploadedLocalFile2
-                                                            .bytes?.isEmpty ??
-                                                        true)))
+                                                : (((_model
+                                                                .uploadedLocalFile2
+                                                                .bytes
+                                                                ?.isEmpty ??
+                                                            true)) ||
+                                                    (_model.uploadedQRPathClassic ==
+                                                            null ||
+                                                        _model.uploadedQRPathClassic ==
+                                                            '')))
                                             ? null
                                             : () async {
                                                 if (FFAppState().Logined) {
@@ -6912,7 +6941,8 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     .bytes
                                                                     ?.isNotEmpty ??
                                                                 false)
-                                                        ? _model.uploadedQRPath
+                                                        ? _model
+                                                            .uploadedQRPathClassic
                                                         : '',
                                                     qrCodeContent: _model
                                                         .uploadLinkTextController
@@ -7280,8 +7310,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                             FFLocalizations.of(context).getText(
                                           'wlrwielk' /* Generate */,
                                         ),
-                                        icon: const Icon(
+                                        icon: Icon(
                                           Icons.auto_awesome_sharp,
+                                          color:
+                                              FlutterFlowTheme.of(context).info,
                                           size: 15.0,
                                         ),
                                         options: FFButtonOptions(
@@ -7302,7 +7334,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 fontFamily: 'NotoSansThai',
                                                 color:
                                                     FlutterFlowTheme.of(context)
-                                                        .primaryBackground,
+                                                        .info,
                                                 letterSpacing: 0.0,
                                                 useGoogleFonts: false,
                                               ),
@@ -7314,8 +7346,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                               BorderRadius.circular(25.0),
                                           disabledColor: const Color(0x581371FF),
                                           disabledTextColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryBackground,
+                                              FlutterFlowTheme.of(context).info,
                                         ),
                                       ),
                                     ),

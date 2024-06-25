@@ -86,7 +86,7 @@ class _MessageErrorWidgetState extends State<MessageErrorWidget>
               children: [
                 FaIcon(
                   FontAwesomeIcons.exclamationCircle,
-                  color: FlutterFlowTheme.of(context).primaryBtnText,
+                  color: FlutterFlowTheme.of(context).info,
                   size: 22.0,
                 ),
                 Expanded(
@@ -98,7 +98,7 @@ class _MessageErrorWidgetState extends State<MessageErrorWidget>
                     textAlign: TextAlign.center,
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
                           fontFamily: 'NotoSansThai',
-                          color: FlutterFlowTheme.of(context).primaryBtnText,
+                          color: FlutterFlowTheme.of(context).info,
                           letterSpacing: 0.0,
                           fontWeight: FontWeight.w500,
                           useGoogleFonts: false,

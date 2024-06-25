@@ -558,7 +558,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                               )!;
                                               setState(() {});
 
-                                              context.pushNamed('HomePage');
+                                              context.goNamed('HomePage');
                                             } else {
                                               showDialog(
                                                 barrierColor:

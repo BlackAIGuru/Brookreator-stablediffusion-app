@@ -145,7 +145,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               .bodyMedium
                                               .override(
                                                 fontFamily: 'NotoSansThai',
-                                                color: Colors.black,
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
                                                 fontSize: 16.0,
                                                 letterSpacing: 0.0,
                                                 fontWeight: FontWeight.w500,
@@ -244,7 +246,8 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                         height: 126.0,
                                         decoration: BoxDecoration(
                                           color: _model.selectpackage == 1
-                                              ? const Color(0xFFF0F4FA)
+                                              ? FlutterFlowTheme.of(context)
+                                                  .info
                                               : FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           borderRadius:
@@ -357,6 +360,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
+                                                          color: Colors.black,
                                                           letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
@@ -385,8 +389,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'NotoSansThai',
-                                                            color: const Color(
-                                                                0xD3000000),
+                                                            color: Colors.black,
                                                             fontSize: 14.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
@@ -429,7 +432,8 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                         height: 126.0,
                                         decoration: BoxDecoration(
                                           color: _model.selectpackage == 2
-                                              ? const Color(0xFFF0F4FA)
+                                              ? FlutterFlowTheme.of(context)
+                                                  .info
                                               : FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           borderRadius:
@@ -540,6 +544,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
+                                                          color: Colors.black,
                                                           letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
@@ -633,8 +638,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'NotoSansThai',
-                                                            color: const Color(
-                                                                0xD3000000),
+                                                            color: Colors.black,
                                                             fontSize: 14.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
@@ -677,7 +681,8 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                         height: 126.0,
                                         decoration: BoxDecoration(
                                           color: _model.selectpackage == 3
-                                              ? const Color(0xFFF0F4FA)
+                                              ? FlutterFlowTheme.of(context)
+                                                  .info
                                               : FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           borderRadius:
@@ -780,6 +785,8 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                       .override(
                                                         fontFamily:
                                                             'NotoSansThai',
+                                                        color:
+                                                            const Color(0xFF080808),
                                                         letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
@@ -864,8 +871,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'NotoSansThai',
-                                                            color: const Color(
-                                                                0xD3000000),
+                                                            color: Colors.black,
                                                             fontSize: 14.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
