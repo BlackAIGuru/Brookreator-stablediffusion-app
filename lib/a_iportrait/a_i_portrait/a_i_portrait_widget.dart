@@ -30,7 +30,12 @@ import 'a_i_portrait_model.dart';
 export 'a_i_portrait_model.dart';
 
 class AIPortraitWidget extends StatefulWidget {
-  const AIPortraitWidget({super.key});
+  const AIPortraitWidget({
+    super.key,
+    int? modelindex,
+  }) : modelindex = modelindex ?? 1;
+
+  final int modelindex;
 
   @override
   State<AIPortraitWidget> createState() => _AIPortraitWidgetState();
@@ -48,6 +53,11 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await _model.selectStyleController?.animateToPage(
+        widget.modelindex,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
       _model.getuuidresult = await actions.getUuid();
       _model.uuid = _model.getuuidresult!;
       setState(() {});
@@ -1207,7 +1217,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                 width: 310.0,
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0xCCE0E3E7),
+                                                  color: const Color(0x9BE0E3E7),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           30.0),

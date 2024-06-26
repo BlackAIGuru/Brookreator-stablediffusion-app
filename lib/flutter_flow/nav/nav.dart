@@ -141,7 +141,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'AIPortrait',
           path: '/aIPortrait',
-          builder: (context, params) => const AIPortraitWidget(),
+          builder: (context, params) => AIPortraitWidget(
+            modelindex: params.getParam(
+              'modelindex',
+              ParamType.int,
+            ),
+          ),
         ),
         FFRoute(
           name: 'AIVideo',
@@ -156,7 +161,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'QR_Generate',
           path: '/qRGenerate',
-          builder: (context, params) => const QRGenerateWidget(),
+          builder: (context, params) => QRGenerateWidget(
+            modelindex: params.getParam(
+              'modelindex',
+              ParamType.int,
+            ),
+          ),
         ),
         FFRoute(
           name: 'Email_Verify',

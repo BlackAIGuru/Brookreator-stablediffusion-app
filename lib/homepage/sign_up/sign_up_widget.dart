@@ -162,9 +162,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                     children: [
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 0.0, 0.0, 10.0),
+                                            10.0, 0.0, 10.0, 10.0),
                                         child: SizedBox(
-                                          width: 330.0,
+                                          width: 340.0,
                                           child: TextFormField(
                                             controller:
                                                 _model.nameTextController,
@@ -268,9 +268,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 10.0),
+                                            10.0, 10.0, 10.0, 10.0),
                                         child: SizedBox(
-                                          width: 330.0,
+                                          width: 340.0,
                                           child: TextFormField(
                                             controller:
                                                 _model.emailTextController,
@@ -375,9 +375,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 10.0),
+                                            10.0, 10.0, 10.0, 10.0),
                                         child: SizedBox(
-                                          width: 330.0,
+                                          width: 340.0,
                                           child: TextFormField(
                                             controller:
                                                 _model.passwordTextController,
@@ -500,9 +500,9 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsetsDirectional.fromSTEB(
-                                            0.0, 10.0, 0.0, 0.0),
+                                            10.0, 10.0, 10.0, 0.0),
                                         child: SizedBox(
-                                          width: 330.0,
+                                          width: 340.0,
                                           child: TextFormField(
                                             controller: _model
                                                 .confirmpasswordTextController,

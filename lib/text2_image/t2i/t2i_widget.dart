@@ -22,10 +22,10 @@ export 't2i_model.dart';
 class T2iWidget extends StatefulWidget {
   const T2iWidget({
     super.key,
-    this.modelindex,
-  });
+    int? modelindex,
+  }) : modelindex = modelindex ?? 1;
 
-  final int? modelindex;
+  final int modelindex;
 
   @override
   State<T2iWidget> createState() => _T2iWidgetState();
@@ -44,7 +44,7 @@ class _T2iWidgetState extends State<T2iWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await _model.selectModelController?.animateToPage(
-        widget.modelindex!,
+        widget.modelindex,
         duration: const Duration(milliseconds: 500),
         curve: Curves.ease,
       );

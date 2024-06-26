@@ -1707,7 +1707,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('AIPortrait');
+                                                                              .pushNamed(
+                                                                            'AIPortrait',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                3,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -1789,7 +1798,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Generate');
+                                                                              .pushNamed(
+                                                                            'QR_Generate',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                6,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -1962,7 +1980,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('AIVideo');
+                                                                              .pushNamed(
+                                                                            'AIPortrait',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                6,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2012,7 +2039,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                                       alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                       child: Text(
                                                                                         FFLocalizations.of(context).getText(
-                                                                                          '81ocbv4b' /* AI Video */,
+                                                                                          '81ocbv4b' /* AI Portrait */,
                                                                                         ),
                                                                                         textAlign: TextAlign.center,
                                                                                         style: FlutterFlowTheme.of(context).titleSmall.override(
@@ -2042,7 +2069,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Generate');
+                                                                              .pushNamed(
+                                                                            'QR_Generate',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                3,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2124,7 +2160,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('AIPortrait');
+                                                                              .pushNamed(
+                                                                            'AIPortrait',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                5,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2295,7 +2340,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Generate');
+                                                                              .pushNamed(
+                                                                            'QR_Generate',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                9,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2468,7 +2522,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Generate');
+                                                                              .pushNamed(
+                                                                            'QR_Generate',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                2,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2638,7 +2701,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Generate');
+                                                                              .pushNamed(
+                                                                            'QR_Generate',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                5,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(
@@ -2988,7 +3060,16 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                         onTap:
                                                                             () async {
                                                                           context
-                                                                              .pushNamed('QR_Generate');
+                                                                              .pushNamed(
+                                                                            'QR_Generate',
+                                                                            queryParameters:
+                                                                                {
+                                                                              'modelindex': serializeParam(
+                                                                                1,
+                                                                                ParamType.int,
+                                                                              ),
+                                                                            }.withoutNulls,
+                                                                          );
                                                                         },
                                                                         child:
                                                                             SizedBox(

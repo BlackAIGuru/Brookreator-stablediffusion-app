@@ -53,7 +53,9 @@ class QRGenerateModel extends FlutterFlowModel<QRGenerateWidget> {
       );
     }
 
-    if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
+    if (!RegExp(
+            '^(https:\\/\\/www\\.|http:\\/\\/www\\.)[a-zA-Z\\d]([a-zA-Z\\d-]*[a-zA-Z\\d])*(\\.[a-zA-Z]{2,})(:\\d+)?(\\/[-a-zA-Z\\d%_.~+]*)*(\\?[;&a-zA-Z\\d%_.~+=-]*)?(\\#[-a-zA-Z\\d_]*)?\$')
+        .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
         'xsnj5w6b' /* URL not correct */,
       );
@@ -104,7 +106,9 @@ class QRGenerateModel extends FlutterFlowModel<QRGenerateWidget> {
       );
     }
 
-    if (!RegExp(kTextValidatorWebsiteRegex).hasMatch(val)) {
+    if (!RegExp(
+            '^(https:\\/\\/www\\.|http:\\/\\/www\\.)[a-zA-Z\\d]([a-zA-Z\\d-]*[a-zA-Z\\d])*(\\.[a-zA-Z]{2,})(:\\d+)?(\\/[-a-zA-Z\\d%_.~+]*)*(\\?[;&a-zA-Z\\d%_.~+=-]*)?(\\#[-a-zA-Z\\d_]*)?\$')
+        .hasMatch(val)) {
       return FFLocalizations.of(context).getText(
         '7ww4ggwo' /* URL not correct */,
       );

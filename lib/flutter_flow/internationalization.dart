@@ -1920,7 +1920,7 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'th': 'ลูกของฉัน',
     },
     '81ocbv4b': {
-      'en': 'AI Video',
+      'en': 'AI Portrait',
       'th': 'วิดีโอเอไอ',
     },
     '84u1xcwn': {
@@ -2085,10 +2085,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'kk0365e8': {
       'en': 'QR code upload failed.',
       'th': 'การอัปโหลดรูปภาพโลโก้ล้มเหลว',
-    },
-    'h6dj5agk': {
-      'en': 'QR Code has been uploaded successfully.',
-      'th': 'อัปโหลดรหัส QR สำเร็จแล้ว',
     },
     'aimxo22s': {
       'en': 'Example',
@@ -2272,10 +2268,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'QR code upload failed.',
       'th': 'การอัปโหลดภาพพื้นหลังล้มเหลว',
     },
-    'm6752gni': {
-      'en': 'QR Code has been uploaded successfully.',
-      'th': 'อัปโหลดรหัส QR สำเร็จแล้ว',
-    },
     'yutr9l0r': {
       'en': 'Example',
       'th': 'ตัวอย่าง',
@@ -2304,10 +2296,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Background image upload failed.',
       'th': 'การอัปโหลดภาพพื้นหลังล้มเหลว',
     },
-    '6m58qn5n': {
-      'en': 'Background image has been uploaded successfully.',
-      'th': 'อัปโหลดภาพพื้นหลังสำเร็จแล้ว',
-    },
     'rbtfccaa': {
       'en': 'QR Scale',
       'th': 'มาตราส่วน QR',
@@ -2327,10 +2315,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'lua83pyu': {
       'en': 'Logo image upload failed.',
       'th': 'การอัปโหลดรูปภาพโลโก้ล้มเหลว',
-    },
-    'aewjl5nw': {
-      'en': 'Logo image has been uploaded successfully.',
-      'th': 'อัปโหลดภาพโลโก้สำเร็จแล้ว',
     },
     'wlrwielk': {
       'en': 'Generate',

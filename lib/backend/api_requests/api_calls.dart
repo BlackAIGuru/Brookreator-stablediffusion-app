@@ -92,8 +92,6 @@ class AccountCall {
 
 class GetAllImagesCall {
   Future<ApiCallResponse> call({
-    int? offset,
-    int? limit,
     String? accessToken = '',
   }) async {
     final baseUrl = BrookreatorGroup.getBaseUrl(
@@ -108,10 +106,7 @@ class GetAllImagesCall {
         'Accept': 'application/json',
         'Authorization': 'Bearer $accessToken',
       },
-      params: {
-        'offset': offset,
-        'limit': limit,
-      },
+      params: {},
       returnBody: true,
       encodeBodyUtf8: false,
       decodeUtf8: false,
@@ -252,6 +247,24 @@ class GetAllImagesCall {
         r'''$.result.images[:].deletedAt''',
         true,
       ) as List?;
+  List<String>? tdID(dynamic response) => (getJsonField(
+        response,
+        r'''$.result.images[:].txID''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? userID(dynamic response) => (getJsonField(
+        response,
+        r'''$.result.images[:].userId''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class GetAllFavouritesCall {
@@ -424,7 +437,7 @@ class QRGenerateCall {
     int? width,
     String? sampler = '',
     int? steps,
-    double? cfgScale,
+    int? cfgScale,
     String? negativePrompt = '',
     bool? isQRCode,
     String? initImageFilePath = '',

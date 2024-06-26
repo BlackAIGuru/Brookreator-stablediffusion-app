@@ -173,9 +173,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 10.0, 0.0, 10.0),
+                                                  10.0, 10.0, 10.0, 10.0),
                                           child: SizedBox(
-                                            width: 330.0,
+                                            width: 340.0,
                                             child: TextFormField(
                                               controller:
                                                   _model.emailTextController,
@@ -291,9 +291,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                         Padding(
                                           padding:
                                               const EdgeInsetsDirectional.fromSTEB(
-                                                  0.0, 10.0, 0.0, 0.0),
+                                                  10.0, 10.0, 10.0, 0.0),
                                           child: SizedBox(
-                                            width: 330.0,
+                                            width: 340.0,
                                             child: TextFormField(
                                               controller:
                                                   _model.passwordTextController,

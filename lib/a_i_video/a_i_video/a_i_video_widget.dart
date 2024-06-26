@@ -11,6 +11,7 @@ import '/flutter_flow/flutter_flow_video_player.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/upload_data.dart';
 import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
@@ -1631,7 +1632,8 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                       : 'SMOOTH',
                                   cfgScale: 7,
                                   clipSkips: 2,
-                                  endPoint: 8525,
+                                  endPoint:
+                                      random_data.randomInteger(1000, 9999),
                                   model: 'cardosAnime_v20',
                                   nPrompt: 'EasyNegative, FastNegativeV2',
                                   prompt:

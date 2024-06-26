@@ -1,7 +1,6 @@
 import '/backend/api_requests/api_calls.dart';
 import '/components/done/done_widget.dart';
 import '/components/message_error/message_error_widget.dart';
-import '/components/message_success/message_success_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
 import '/components/waiting/waiting_widget.dart';
 import '/flutter_flow/flutter_flow_button_tabbar.dart';
@@ -14,13 +13,19 @@ import '/custom_code/actions/index.dart' as actions;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'q_r_generate_model.dart';
 export 'q_r_generate_model.dart';
 
 class QRGenerateWidget extends StatefulWidget {
-  const QRGenerateWidget({super.key});
+  const QRGenerateWidget({
+    super.key,
+    int? modelindex,
+  }) : modelindex = modelindex ?? 1;
+
+  final int modelindex;
 
   @override
   State<QRGenerateWidget> createState() => _QRGenerateWidgetState();
@@ -36,6 +41,15 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
   void initState() {
     super.initState();
     _model = createModel(context, () => QRGenerateModel());
+
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      await _model.qrSelectmodelController?.animateToPage(
+        widget.modelindex,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
+    });
 
     _model.qRgeneratorController = TabController(
       vsync: this,
@@ -893,6 +907,8 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                 if (FFAppState().Logined) {
                                                                                   final selectedMedia = await selectMediaWithSourceBottomSheet(
                                                                                     context: context,
+                                                                                    maxWidth: 1024.00,
+                                                                                    maxHeight: 1024.00,
                                                                                     allowPhoto: true,
                                                                                   );
                                                                                   if (selectedMedia != null && selectedMedia.every((m) => validateFileFormat(m.storagePath, context))) {
@@ -933,42 +949,6 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                       r'''$.result.filePath''',
                                                                                     ).toString();
                                                                                     setState(() {});
-                                                                                    ScaffoldMessenger.of(context).showSnackBar(
-                                                                                      SnackBar(
-                                                                                        content: Text(
-                                                                                          'dsfdsfs',
-                                                                                          style: TextStyle(
-                                                                                            color: FlutterFlowTheme.of(context).primaryText,
-                                                                                          ),
-                                                                                        ),
-                                                                                        duration: const Duration(milliseconds: 4000),
-                                                                                        backgroundColor: FlutterFlowTheme.of(context).secondary,
-                                                                                      ),
-                                                                                    );
-                                                                                    showDialog(
-                                                                                      barrierColor: Colors.transparent,
-                                                                                      context: context,
-                                                                                      builder: (dialogContext) {
-                                                                                        return Dialog(
-                                                                                          elevation: 0,
-                                                                                          insetPadding: EdgeInsets.zero,
-                                                                                          backgroundColor: Colors.transparent,
-                                                                                          alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
-                                                                                          child: GestureDetector(
-                                                                                            onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                            child: SizedBox(
-                                                                                              height: 100.0,
-                                                                                              width: double.infinity,
-                                                                                              child: MessageSuccessWidget(
-                                                                                                alertInfo: FFLocalizations.of(context).getText(
-                                                                                                  'h6dj5agk' /* QR Code has been uploaded succ... */,
-                                                                                                ),
-                                                                                              ),
-                                                                                            ),
-                                                                                          ),
-                                                                                        );
-                                                                                      },
-                                                                                    ).then((value) => setState(() {}));
                                                                                   } else {
                                                                                     showDialog(
                                                                                       barrierColor: Colors.transparent,
@@ -3385,9 +3365,6 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                             ? null
                                             : () async {
                                                 if (FFAppState().Logined) {
-                                                  await Future.delayed(
-                                                      const Duration(
-                                                          milliseconds: 3000));
                                                   _model.qRTheme = await actions
                                                       .selectQRTheme(
                                                     _model
@@ -3445,7 +3422,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       _model.qRTheme,
                                                       r'''$.aesthetic''',
                                                     ),
-                                                    controlNetScale: 1.8,
+                                                    controlNetScale:
+                                                        getJsonField(
+                                                      _model.qRTheme,
+                                                      r'''$.control_weight''',
+                                                    ),
                                                     themeId: _model.themeId,
                                                     engine: getJsonField(
                                                       _model.qRTheme,
@@ -3626,6 +3607,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           const Duration(
                                                               milliseconds:
                                                                   2000));
+                                                      _model.uploadedQRPath =
+                                                          '';
+                                                      setState(() {});
+                                                      setState(() {
+                                                        _model.isDataUploading1 =
+                                                            false;
+                                                        _model.uploadedLocalFile1 =
+                                                            FFUploadedFile(
+                                                                bytes: Uint8List
+                                                                    .fromList(
+                                                                        []));
+                                                      });
+
                                                       Navigator.pop(context);
                                                       await showModalBottomSheet(
                                                         isScrollControlled:
@@ -4394,6 +4388,8 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                 if (FFAppState().Logined) {
                                                                                   final selectedMedia = await selectMediaWithSourceBottomSheet(
                                                                                     context: context,
+                                                                                    maxWidth: 1024.00,
+                                                                                    maxHeight: 1024.00,
                                                                                     allowPhoto: true,
                                                                                   );
                                                                                   if (selectedMedia != null && selectedMedia.every((m) => validateFileFormat(m.storagePath, context))) {
@@ -4434,30 +4430,6 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                       r'''$.result.filePath''',
                                                                                     ).toString();
                                                                                     setState(() {});
-                                                                                    showDialog(
-                                                                                      barrierColor: Colors.transparent,
-                                                                                      context: context,
-                                                                                      builder: (dialogContext) {
-                                                                                        return Dialog(
-                                                                                          elevation: 0,
-                                                                                          insetPadding: EdgeInsets.zero,
-                                                                                          backgroundColor: Colors.transparent,
-                                                                                          alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
-                                                                                          child: GestureDetector(
-                                                                                            onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                            child: SizedBox(
-                                                                                              height: 100.0,
-                                                                                              width: double.infinity,
-                                                                                              child: MessageSuccessWidget(
-                                                                                                alertInfo: FFLocalizations.of(context).getText(
-                                                                                                  'm6752gni' /* QR Code has been uploaded succ... */,
-                                                                                                ),
-                                                                                              ),
-                                                                                            ),
-                                                                                          ),
-                                                                                        );
-                                                                                      },
-                                                                                    ).then((value) => setState(() {}));
                                                                                   } else {
                                                                                     showDialog(
                                                                                       barrierColor: Colors.transparent,
@@ -4958,6 +4930,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         await selectMediaWithSourceBottomSheet(
                                                                       context:
                                                                           context,
+                                                                      maxWidth:
+                                                                          1024.00,
+                                                                      maxHeight:
+                                                                          1024.00,
                                                                       allowPhoto:
                                                                           true,
                                                                     );
@@ -5026,40 +5002,6 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       ).toString();
                                                                       setState(
                                                                           () {});
-                                                                      showDialog(
-                                                                        barrierColor:
-                                                                            Colors.transparent,
-                                                                        context:
-                                                                            context,
-                                                                        builder:
-                                                                            (dialogContext) {
-                                                                          return Dialog(
-                                                                            elevation:
-                                                                                0,
-                                                                            insetPadding:
-                                                                                EdgeInsets.zero,
-                                                                            backgroundColor:
-                                                                                Colors.transparent,
-                                                                            alignment:
-                                                                                const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
-                                                                            child:
-                                                                                GestureDetector(
-                                                                              onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                              child: SizedBox(
-                                                                                height: 100.0,
-                                                                                width: double.infinity,
-                                                                                child: MessageSuccessWidget(
-                                                                                  alertInfo: FFLocalizations.of(context).getText(
-                                                                                    '6m58qn5n' /* Background image has been uplo... */,
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ),
-                                                                          );
-                                                                        },
-                                                                      ).then((value) =>
-                                                                          setState(
-                                                                              () {}));
                                                                     } else {
                                                                       showDialog(
                                                                         barrierColor:
@@ -6661,6 +6603,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           await selectMediaWithSourceBottomSheet(
                                                                         context:
                                                                             context,
+                                                                        maxWidth:
+                                                                            1024.00,
+                                                                        maxHeight:
+                                                                            1024.00,
                                                                         allowPhoto:
                                                                             true,
                                                                       );
@@ -6724,34 +6670,6 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         ).toString();
                                                                         setState(
                                                                             () {});
-                                                                        showDialog(
-                                                                          barrierColor:
-                                                                              Colors.transparent,
-                                                                          context:
-                                                                              context,
-                                                                          builder:
-                                                                              (dialogContext) {
-                                                                            return Dialog(
-                                                                              elevation: 0,
-                                                                              insetPadding: EdgeInsets.zero,
-                                                                              backgroundColor: Colors.transparent,
-                                                                              alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
-                                                                              child: GestureDetector(
-                                                                                onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: SizedBox(
-                                                                                  height: 100.0,
-                                                                                  width: double.infinity,
-                                                                                  child: MessageSuccessWidget(
-                                                                                    alertInfo: FFLocalizations.of(context).getText(
-                                                                                      'aewjl5nw' /* Logo image has been uploaded s... */,
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            );
-                                                                          },
-                                                                        ).then((value) =>
-                                                                            setState(() {}));
                                                                       } else {
                                                                         showDialog(
                                                                           barrierColor:
@@ -7150,6 +7068,43 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           const Duration(
                                                               milliseconds:
                                                                   2000));
+                                                      _model.uploadedQRPathClassic =
+                                                          null;
+                                                      _model.uploadedLogoPath =
+                                                          '';
+                                                      _model.uploadedBgPath =
+                                                          '';
+                                                      setState(() {});
+                                                      setState(() {
+                                                        _model.isDataUploading3 =
+                                                            false;
+                                                        _model.uploadedLocalFile3 =
+                                                            FFUploadedFile(
+                                                                bytes: Uint8List
+                                                                    .fromList(
+                                                                        []));
+                                                      });
+
+                                                      setState(() {
+                                                        _model.isDataUploading4 =
+                                                            false;
+                                                        _model.uploadedLocalFile4 =
+                                                            FFUploadedFile(
+                                                                bytes: Uint8List
+                                                                    .fromList(
+                                                                        []));
+                                                      });
+
+                                                      setState(() {
+                                                        _model.isDataUploading2 =
+                                                            false;
+                                                        _model.uploadedLocalFile2 =
+                                                            FFUploadedFile(
+                                                                bytes: Uint8List
+                                                                    .fromList(
+                                                                        []));
+                                                      });
+
                                                       Navigator.pop(context);
                                                       await showModalBottomSheet(
                                                         isScrollControlled:
