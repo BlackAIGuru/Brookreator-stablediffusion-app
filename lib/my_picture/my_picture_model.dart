@@ -1,3 +1,5 @@
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'my_picture_widget.dart' show MyPictureWidget;
@@ -9,6 +11,26 @@ class MyPictureModel extends FlutterFlowModel<MyPictureWidget> {
   String mypicturefiltervalue = '';
 
   String favouritefiltervalue = '';
+
+  List<dynamic> imageurl = [];
+  void addToImageurl(dynamic item) => imageurl.add(item);
+  void removeFromImageurl(dynamic item) => imageurl.remove(item);
+  void removeAtIndexFromImageurl(int index) => imageurl.removeAt(index);
+  void insertAtIndexInImageurl(int index, dynamic item) =>
+      imageurl.insert(index, item);
+  void updateImageurlAtIndex(int index, Function(dynamic) updateFn) =>
+      imageurl[index] = updateFn(imageurl[index]);
+
+  List<ResultTypeStruct> resultimages = [];
+  void addToResultimages(ResultTypeStruct item) => resultimages.add(item);
+  void removeFromResultimages(ResultTypeStruct item) =>
+      resultimages.remove(item);
+  void removeAtIndexFromResultimages(int index) => resultimages.removeAt(index);
+  void insertAtIndexInResultimages(int index, ResultTypeStruct item) =>
+      resultimages.insert(index, item);
+  void updateResultimagesAtIndex(
+          int index, Function(ResultTypeStruct) updateFn) =>
+      resultimages[index] = updateFn(resultimages[index]);
 
   ///  State fields for stateful widgets in this page.
 

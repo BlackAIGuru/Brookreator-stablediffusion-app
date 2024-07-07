@@ -1706,7 +1706,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                       break;
                                     } else {
                                       await Future.delayed(
-                                          const Duration(milliseconds: 2000));
+                                          const Duration(milliseconds: 7000));
                                     }
                                   }
                                   await Future.delayed(

@@ -5672,118 +5672,49 @@ class _T2iWidgetState extends State<T2iWidget> {
                           ? null
                           : () async {
                               if (FFAppState().Logined) {
-                                _model.theme = await actions.selectT2ITheme(
-                                  _model.selectModelCurrentIndex,
-                                );
-                                FFAppState().Prompt =
-                                    _model.promptTextController.text;
-                                FFAppState().NegativePrompt =
-                                    _model.negativepromptTextController.text;
-                                FFAppState().ImageWidth = int.parse(
-                                    _model.widthvalueTextController.text);
-                                FFAppState().ImageHeight = int.parse(
-                                    _model.heightvalueTextController.text);
-                                setState(() {});
-                                _model.requestSent =
-                                    await BrookreatorGroup.textToImageCall.call(
-                                  cfgScale: 7,
-                                  width: FFAppState().ImageWidth,
-                                  height: FFAppState().ImageHeight,
-                                  prompt: FFAppState().Prompt,
-                                  negativePrompt: FFAppState().NegativePrompt,
-                                  samples: _model.sample,
-                                  accessToken: FFAppState().AccessToken,
-                                  steps: 25,
-                                  themeId: _model.themeId,
-                                );
-
-                                if ((_model.requestSent?.succeeded ?? true)) {
-                                  FFAppState().T2ITxID =
-                                      BrookreatorGroup.textToImageCall.textID(
-                                    (_model.requestSent?.jsonBody ?? ''),
-                                  )!;
+                                if (FFAppState().Credit > 0) {
+                                  _model.theme = await actions.selectT2ITheme(
+                                    _model.selectModelCurrentIndex,
+                                  );
+                                  FFAppState().Prompt =
+                                      _model.promptTextController.text;
+                                  FFAppState().NegativePrompt =
+                                      _model.negativepromptTextController.text;
+                                  FFAppState().ImageWidth = int.parse(
+                                      _model.widthvalueTextController.text);
+                                  FFAppState().ImageHeight = int.parse(
+                                      _model.heightvalueTextController.text);
                                   setState(() {});
-                                  _model.accountInfo =
-                                      await BrookreatorGroup.accountCall.call(
+                                  _model.requestSent = await BrookreatorGroup
+                                      .textToImageCall
+                                      .call(
+                                    cfgScale: 7,
+                                    width: FFAppState().ImageWidth,
+                                    height: FFAppState().ImageHeight,
+                                    prompt: FFAppState().Prompt,
+                                    negativePrompt: FFAppState().NegativePrompt,
+                                    samples: _model.sample,
                                     accessToken: FFAppState().AccessToken,
+                                    steps: 25,
+                                    themeId: _model.themeId,
                                   );
 
-                                  FFAppState().Credit =
-                                      BrookreatorGroup.accountCall.credit(
-                                    (_model.accountInfo?.jsonBody ?? ''),
-                                  )!;
-                                  setState(() {});
-                                  showDialog(
-                                    context: context,
-                                    builder: (dialogContext) {
-                                      return Dialog(
-                                        elevation: 0,
-                                        insetPadding: EdgeInsets.zero,
-                                        backgroundColor: Colors.transparent,
-                                        alignment:
-                                            const AlignmentDirectional(0.0, 0.0)
-                                                .resolve(
-                                                    Directionality.of(context)),
-                                        child: GestureDetector(
-                                          onTap: () => _model
-                                                  .unfocusNode.canRequestFocus
-                                              ? FocusScope.of(context)
-                                                  .requestFocus(
-                                                      _model.unfocusNode)
-                                              : FocusScope.of(context)
-                                                  .unfocus(),
-                                          child: WaitingWidget(
-                                            time: () {
-                                              if (_model.sample <= 2) {
-                                                return 1;
-                                              } else if ((_model.sample > 2) &&
-                                                  (_model.sample <= 4)) {
-                                                return 3;
-                                              } else {
-                                                return 5;
-                                              }
-                                            }(),
-                                            contents:
-                                                FFLocalizations.of(context)
-                                                    .getText(
-                                              'c7bk53ww' /* You can close this window. You... */,
-                                            ),
-                                          ),
-                                        ),
-                                      );
-                                    },
-                                  ).then((value) => setState(() {}));
-
-                                  while (true) {
-                                    _model.loop = await BrookreatorGroup
-                                        .queueStatusCall
-                                        .call(
+                                  if ((_model.requestSent?.succeeded ?? true)) {
+                                    FFAppState().T2ITxID =
+                                        BrookreatorGroup.textToImageCall.textID(
+                                      (_model.requestSent?.jsonBody ?? ''),
+                                    )!;
+                                    setState(() {});
+                                    _model.accountInfo =
+                                        await BrookreatorGroup.accountCall.call(
                                       accessToken: FFAppState().AccessToken,
-                                      txID: FFAppState().T2ITxID,
                                     );
 
-                                    if (BrookreatorGroup.queueStatusCall.status(
-                                          (_model.loop?.jsonBody ?? ''),
-                                        ) ==
-                                        'COMPLETED') {
-                                      break;
-                                    } else {
-                                      await Future.delayed(
-                                          const Duration(milliseconds: 2000));
-                                    }
-                                  }
-                                  await Future.delayed(
-                                      const Duration(milliseconds: 3000));
-                                  _model.gettingImages = await BrookreatorGroup
-                                      .getGeneratedContentsCall
-                                      .call(
-                                    accessToken: FFAppState().AccessToken,
-                                    txID: FFAppState().T2ITxID,
-                                  );
-
-                                  if ((_model.gettingImages?.succeeded ??
-                                      true)) {
-                                    Navigator.pop(context);
+                                    FFAppState().Credit =
+                                        BrookreatorGroup.accountCall.credit(
+                                      (_model.accountInfo?.jsonBody ?? ''),
+                                    )!;
+                                    setState(() {});
                                     showDialog(
                                       context: context,
                                       builder: (dialogContext) {
@@ -5803,54 +5734,165 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: const DoneWidget(),
+                                            child: WaitingWidget(
+                                              time: () {
+                                                if (_model.sample <= 2) {
+                                                  return 1;
+                                                } else if ((_model.sample >
+                                                        2) &&
+                                                    (_model.sample <= 4)) {
+                                                  return 3;
+                                                } else {
+                                                  return 5;
+                                                }
+                                              }(),
+                                              contents:
+                                                  FFLocalizations.of(context)
+                                                      .getText(
+                                                'c7bk53ww' /* You can close this window. You... */,
+                                              ),
+                                            ),
                                           ),
                                         );
                                       },
                                     ).then((value) => setState(() {}));
 
+                                    while (true) {
+                                      _model.loop = await BrookreatorGroup
+                                          .queueStatusCall
+                                          .call(
+                                        accessToken: FFAppState().AccessToken,
+                                        txID: FFAppState().T2ITxID,
+                                      );
+
+                                      if (BrookreatorGroup.queueStatusCall
+                                              .status(
+                                            (_model.loop?.jsonBody ?? ''),
+                                          ) ==
+                                          'COMPLETED') {
+                                        break;
+                                      } else {
+                                        await Future.delayed(
+                                            const Duration(milliseconds: 3000));
+                                      }
+                                    }
                                     await Future.delayed(
-                                        const Duration(milliseconds: 2000));
-                                    Navigator.pop(context);
-                                    await showModalBottomSheet(
-                                      isScrollControlled: true,
-                                      backgroundColor: Colors.transparent,
-                                      enableDrag: false,
-                                      context: context,
-                                      builder: (context) {
-                                        return GestureDetector(
-                                          onTap: () => _model
-                                                  .unfocusNode.canRequestFocus
-                                              ? FocusScope.of(context)
-                                                  .requestFocus(
-                                                      _model.unfocusNode)
-                                              : FocusScope.of(context)
-                                                  .unfocus(),
-                                          child: Padding(
-                                            padding: MediaQuery.viewInsetsOf(
-                                                context),
-                                            child: ImageResultWidget(
-                                              resultImageUrls: BrookreatorGroup
-                                                  .getGeneratedContentsCall
-                                                  .url(
-                                                (_model.gettingImages
-                                                        ?.jsonBody ??
-                                                    ''),
-                                              ),
-                                              resultImageIDs: BrookreatorGroup
-                                                  .getGeneratedContentsCall
-                                                  .imageId(
-                                                (_model.gettingImages
-                                                        ?.jsonBody ??
-                                                    ''),
-                                              ),
-                                              title: 'Text To Image',
-                                              isT2I: true,
+                                        const Duration(milliseconds: 3000));
+                                    _model.gettingImages =
+                                        await BrookreatorGroup
+                                            .getGeneratedContentsCall
+                                            .call(
+                                      accessToken: FFAppState().AccessToken,
+                                      txID: FFAppState().T2ITxID,
+                                    );
+
+                                    if ((_model.gettingImages?.succeeded ??
+                                        true)) {
+                                      Navigator.pop(context);
+                                      showDialog(
+                                        context: context,
+                                        builder: (dialogContext) {
+                                          return Dialog(
+                                            elevation: 0,
+                                            insetPadding: EdgeInsets.zero,
+                                            backgroundColor: Colors.transparent,
+                                            alignment: const AlignmentDirectional(
+                                                    0.0, 0.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                            child: GestureDetector(
+                                              onTap: () => _model.unfocusNode
+                                                      .canRequestFocus
+                                                  ? FocusScope.of(context)
+                                                      .requestFocus(
+                                                          _model.unfocusNode)
+                                                  : FocusScope.of(context)
+                                                      .unfocus(),
+                                              child: const DoneWidget(),
                                             ),
-                                          ),
-                                        );
-                                      },
-                                    ).then((value) => safeSetState(() {}));
+                                          );
+                                        },
+                                      ).then((value) => setState(() {}));
+
+                                      await Future.delayed(
+                                          const Duration(milliseconds: 2000));
+                                      Navigator.pop(context);
+                                      await showModalBottomSheet(
+                                        isScrollControlled: true,
+                                        backgroundColor: Colors.transparent,
+                                        enableDrag: false,
+                                        context: context,
+                                        builder: (context) {
+                                          return GestureDetector(
+                                            onTap: () => _model
+                                                    .unfocusNode.canRequestFocus
+                                                ? FocusScope.of(context)
+                                                    .requestFocus(
+                                                        _model.unfocusNode)
+                                                : FocusScope.of(context)
+                                                    .unfocus(),
+                                            child: Padding(
+                                              padding: MediaQuery.viewInsetsOf(
+                                                  context),
+                                              child: ImageResultWidget(
+                                                resultImageUrls: BrookreatorGroup
+                                                    .getGeneratedContentsCall
+                                                    .url(
+                                                  (_model.gettingImages
+                                                          ?.jsonBody ??
+                                                      ''),
+                                                ),
+                                                resultImageIDs: BrookreatorGroup
+                                                    .getGeneratedContentsCall
+                                                    .imageId(
+                                                  (_model.gettingImages
+                                                          ?.jsonBody ??
+                                                      ''),
+                                                ),
+                                                title: 'Text To Image',
+                                                isT2I: true,
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ).then((value) => safeSetState(() {}));
+                                    } else {
+                                      showDialog(
+                                        barrierColor: Colors.transparent,
+                                        context: context,
+                                        builder: (dialogContext) {
+                                          return Dialog(
+                                            elevation: 0,
+                                            insetPadding: EdgeInsets.zero,
+                                            backgroundColor: Colors.transparent,
+                                            alignment: const AlignmentDirectional(
+                                                    0.0, -1.0)
+                                                .resolve(
+                                                    Directionality.of(context)),
+                                            child: GestureDetector(
+                                              onTap: () => _model.unfocusNode
+                                                      .canRequestFocus
+                                                  ? FocusScope.of(context)
+                                                      .requestFocus(
+                                                          _model.unfocusNode)
+                                                  : FocusScope.of(context)
+                                                      .unfocus(),
+                                              child: SizedBox(
+                                                height: 100.0,
+                                                width: double.infinity,
+                                                child: MessageErrorWidget(
+                                                  alertInfo: FFLocalizations.of(
+                                                          context)
+                                                      .getText(
+                                                    '8zl7uhai' /* Failed to get generated images... */,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ).then((value) => setState(() {}));
+                                    }
                                   } else {
                                     showDialog(
                                       barrierColor: Colors.transparent,
@@ -5879,7 +5921,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                 alertInfo:
                                                     FFLocalizations.of(context)
                                                         .getText(
-                                                  '8zl7uhai' /* Failed to get generated images... */,
+                                                  'yf2268lk' /* Sending image generating reque... */,
                                                 ),
                                               ),
                                             ),
@@ -5889,8 +5931,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                     ).then((value) => setState(() {}));
                                   }
                                 } else {
-                                  showDialog(
-                                    barrierColor: Colors.transparent,
+                                  await showDialog(
                                     context: context,
                                     builder: (dialogContext) {
                                       return Dialog(
@@ -5898,7 +5939,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            const AlignmentDirectional(0.0, -1.0)
+                                            const AlignmentDirectional(0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         child: GestureDetector(
@@ -5916,7 +5957,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                               alertInfo:
                                                   FFLocalizations.of(context)
                                                       .getText(
-                                                'yf2268lk' /* Sending image generating reque... */,
+                                                'mpib2j5m' /* Not enough credits. */,
                                               ),
                                             ),
                                           ),

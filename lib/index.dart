@@ -7,7 +7,7 @@ export '/account/privacy_policy/privacy_policy_widget.dart'
 export '/homepage/settings/settings_widget.dart' show SettingsWidget;
 export '/homepage/sign_in/sign_in_widget.dart' show SignInWidget;
 export '/homepage/sign_up/sign_up_widget.dart' show SignUpWidget;
-export '/homepage/my_picture/my_picture_widget.dart' show MyPictureWidget;
+export '/my_picture/my_picture_widget.dart' show MyPictureWidget;
 export '/homepage/open_app_screen/open_app_screen_widget.dart'
     show OpenAppScreenWidget;
 export '/text2_image/t2i/t2i_widget.dart' show T2iWidget;

@@ -3546,7 +3546,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         await Future.delayed(
                                                             const Duration(
                                                                 milliseconds:
-                                                                    2000));
+                                                                    3000));
                                                       }
                                                     }
                                                     await Future.delayed(

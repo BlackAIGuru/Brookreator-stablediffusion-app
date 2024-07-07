@@ -1097,31 +1097,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'My Pictures',
       'th': 'รูปภาพของฉัน',
     },
-    'l2lqzkc2': {
+    'sdy6ut5b': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
-    '0gu8q6iq': {
+    'isgdai2p': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    '3suc45w9': {
+    'qngelbbc': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    'fcosdq2g': {
+    'ycicfm5u': {
       'en': 'AI Video',
       'th': 'วิดีโอเอไอ',
     },
-    'ntguwb39': {
+    'pye0l2zv': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'ksky8m77': {
+    '5asxvq2w': {
       'en': 'QR Classic',
       'th': 'QR คลาสสิค',
     },
-    'yx5o8805': {
+    'ix7x34s7': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
@@ -1129,31 +1129,31 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Favourite',
       'th': 'ที่ชื่นชอบ',
     },
-    'xynxi1s6': {
+    'j1pwp3jk': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
-    'rx6vsfil': {
+    'o0uzyh9d': {
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'wv4mwaam': {
+    'cy5w7bk3': {
       'en': 'AI Portrait',
       'th': 'ภาพบุคคล AI',
     },
-    '7p9ksi9m': {
+    'w3edk7mh': {
       'en': 'AI Video',
       'th': 'วิดีโอเอไอ',
     },
-    '4ug6f7qv': {
+    'mhec7gbg': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',
     },
-    'wkvj0bbm': {
+    't9gghbm0': {
       'en': 'QR Classic',
       'th': 'QR คลาสสิค',
     },
-    'cqo6i4fh': {
+    '1dllr0hx': {
       'en': 'All',
       'th': 'ทั้งหมด',
     },
@@ -1457,6 +1457,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     '42xmirxf': {
       'en': '9',
       'th': '9',
+    },
+    'mpib2j5m': {
+      'en': 'Not enough credits.',
+      'th': '',
     },
     'yf2268lk': {
       'en': 'Sending image generating request failed.',
@@ -2417,6 +2421,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Page Title',
       'th': 'ชื่อหน้า',
     },
+    'pa1i7hr4': {
+      'en': 'Button',
+      'th': '',
+    },
     'h4w0kyfk': {
       'en': 'Home',
       'th': 'บ้าน',
@@ -2835,6 +2843,37 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'f8gopqgk': {
       'en': 'Done',
       'th': 'กำลังสร้าง...',
+    },
+  },
+  // detailedInfo
+  {
+    'xdsusjcy': {
+      'en': 'Image description',
+      'th': 'คำอธิบายรูปภาพ',
+    },
+    't4zoty7n': {
+      'en': 'Unwanted Keywords (Optional)',
+      'th': 'คำหลักที่ไม่ต้องการ (ไม่บังคับ)',
+    },
+    'xpcodjbm': {
+      'en': 'Dimensions',
+      'th': 'ขนาด',
+    },
+    'k0q1d2he': {
+      'en': 'Created',
+      'th': 'สร้าง',
+    },
+  },
+  // noenoughcredit
+  {
+    'vdd2pgn0': {
+      'en': 'Not Enough Credits',
+      'th': '',
+    },
+    '5eh3hngy': {
+      'en':
+          'You do not have enough credits to use this feature please add morecredits',
+      'th': '',
     },
   },
   // Miscellaneous

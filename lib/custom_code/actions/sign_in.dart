@@ -14,7 +14,7 @@ import 'package:amazon_cognito_identity_dart_2/cognito.dart';
 Future<String> signIn(String? username, String? password) async {
   // Add your function code here!
   if (username == null || password == null) {
-    return 'Username or password is null'; // Or handle this scenario appropriately
+    return 'Username or password is null.'; // Or handle this scenario appropriately
   }
 
   final userPool = CognitoUserPool(
@@ -32,14 +32,14 @@ Future<String> signIn(String? username, String? password) async {
         await cognitoUser.authenticateUser(authDetails);
 
     if (session == null) {
-      return 'failed'; //Authentication failed, session is null
+      return 'Authentication failed, session is null.'; //Authentication failed, session is null
     }
 
     return session.getAccessToken().getJwtToken()!;
   } on CognitoClientException {
     // Handle client exceptions like wrong username/password
-    return 'wrong'; //Wrong username or password
+    return 'Incorrect username or password.'; //Wrong username or password
   } catch (e) {
-    return 'unexpected'; //n unexpected error occurred
+    return 'User does not exist.'; //n unexpected error occurred
   }
 }

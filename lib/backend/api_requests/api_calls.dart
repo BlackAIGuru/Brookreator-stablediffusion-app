@@ -391,6 +391,24 @@ class GetAllFavouritesCall {
         response,
         r'''$.result.images[:].txID''',
       ));
+  List<String>? createdDate(dynamic response) => (getJsonField(
+        response,
+        r'''$.result.images[:].createdAt''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
+  List<String>? videoUrl(dynamic response) => (getJsonField(
+        response,
+        r'''$.result.images[:].vdoUrl''',
+        true,
+      ) as List?)
+          ?.withoutNulls
+          .map((x) => castToType<String>(x))
+          .withoutNulls
+          .toList();
 }
 
 class AddFavouritesCall {

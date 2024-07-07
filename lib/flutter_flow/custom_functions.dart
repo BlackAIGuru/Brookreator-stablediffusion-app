@@ -57,3 +57,26 @@ String makingNestedList(List<String> inputList) {
   // Convert the resulting list of lists to a JSON string
   return jsonEncode(resultList);
 }
+
+String? getDate(String? input) {
+  DateTime parsedDate = DateTime.parse(input!);
+  String formattedDate =
+      "${parsedDate.day.toString().padLeft(2, '0')}/${parsedDate.month.toString().padLeft(2, '0')}/${parsedDate.year}";
+  return formattedDate;
+}
+
+String? getInitails(String? inputName) {
+  List<String> nameParts = inputName!.split(' ');
+
+  // Initialize an empty string to hold the initials
+  String initials = '';
+
+  // Loop through the parts and get the first character of each
+  for (String part in nameParts) {
+    if (part.isNotEmpty) {
+      initials += part[0].toUpperCase();
+    }
+  }
+
+  return initials;
+}

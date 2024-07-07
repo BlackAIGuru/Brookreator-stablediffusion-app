@@ -247,7 +247,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                         decoration: BoxDecoration(
                                           color: _model.selectpackage == 1
                                               ? FlutterFlowTheme.of(context)
-                                                  .info
+                                                  .primaryBackground
                                               : FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           borderRadius:
@@ -433,7 +433,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                         decoration: BoxDecoration(
                                           color: _model.selectpackage == 2
                                               ? FlutterFlowTheme.of(context)
-                                                  .info
+                                                  .primaryBackground
                                               : FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           borderRadius:
@@ -682,7 +682,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                         decoration: BoxDecoration(
                                           color: _model.selectpackage == 3
                                               ? FlutterFlowTheme.of(context)
-                                                  .info
+                                                  .primaryBackground
                                               : FlutterFlowTheme.of(context)
                                                   .secondaryBackground,
                                           borderRadius:

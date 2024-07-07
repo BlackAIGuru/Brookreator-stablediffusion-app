@@ -3322,7 +3322,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                           break;
                                         } else {
                                           await Future.delayed(const Duration(
-                                              milliseconds: 2000));
+                                              milliseconds: 7000));
                                         }
                                       }
                                       await Future.delayed(
@@ -3471,7 +3471,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         FFLocalizations.of(
                                                                 context)
                                                             .getText(
-                                                      'qk6mc5i9' /* Failed to get generated images... */,
+                                                      'l0i7bg7f' /* Failed to get generated images... */,
                                                     ),
                                                   ),
                                                 ),
@@ -3714,7 +3714,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                         break;
                                       } else {
                                         await Future.delayed(
-                                            const Duration(milliseconds: 2000));
+                                            const Duration(milliseconds: 3000));
                                       }
                                     }
                                     await Future.delayed(
