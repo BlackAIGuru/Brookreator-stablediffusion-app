@@ -6,6 +6,7 @@ import '/custom_code/actions/index.dart' as actions;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'account_model.dart';
 export 'account_model.dart';
@@ -49,7 +50,7 @@ class _AccountWidgetState extends State<AccountWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -73,9 +74,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                 context.pushNamed('HomePage');
                               },
                               child: Container(
-                                decoration: const BoxDecoration(),
+                                decoration: BoxDecoration(),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 3.0, 0.0, 0.0),
                                   child: InkWell(
                                     splashColor: Colors.transparent,
@@ -96,7 +97,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Text(
                                 FFLocalizations.of(context).getText(
                                   'b5lrz3hz' /* Account */,
@@ -120,7 +121,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(20.0, 50.0, 20.0, 0.0),
+                      EdgeInsetsDirectional.fromSTEB(20.0, 50.0, 20.0, 0.0),
                   child: Card(
                     clipBehavior: Clip.antiAliasWithSaveLayer,
                     color: FlutterFlowTheme.of(context).primary,
@@ -139,26 +140,26 @@ class _AccountWidgetState extends State<AccountWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           Align(
-                            alignment: const AlignmentDirectional(-1.0, 0.0),
+                            alignment: AlignmentDirectional(-1.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   20.0, 20.0, 0.0, 20.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Container(
                                       width: 50.0,
                                       height: 50.0,
-                                      decoration: const BoxDecoration(
+                                      decoration: BoxDecoration(
                                         color: Color(0xFFE0E0E0),
                                         shape: BoxShape.circle,
                                       ),
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
                                             'sbcpsa53' /* NA */,
@@ -184,9 +185,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                           ),
                           Flexible(
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 10.0),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.min,
@@ -210,7 +211,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                           ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           5.0, 5.0, 5.0, 0.0),
                                       child: Text(
                                         FFAppState().Email,
@@ -244,9 +245,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(1.0, 0.0),
+                            alignment: AlignmentDirectional(1.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   10.0, 0.0, 15.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
@@ -258,7 +259,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 5.0, 0.0),
                                         child: Text(
                                           FFAppState().Credit.toString(),
@@ -278,10 +279,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 5.0, 0.0, 0.0),
                                           child: ClipRRect(
                                             borderRadius:
@@ -291,7 +292,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                               width: 15.0,
                                               height: 15.0,
                                               fit: BoxFit.contain,
-                                              alignment: const Alignment(0.0, 0.0),
+                                              alignment: Alignment(0.0, 0.0),
                                             ),
                                           ),
                                         ),
@@ -299,7 +300,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                     ],
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: FFButtonWidget(
                                       onPressed: () async {
@@ -311,9 +312,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                                       options: FFButtonOptions(
                                         width: 90.0,
                                         height: 27.0,
-                                        padding: const EdgeInsets.all(0.0),
+                                        padding: EdgeInsets.all(0.0),
                                         iconPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 0.0, 0.0, 0.0, 0.0),
                                         color: FlutterFlowTheme.of(context)
                                             .primaryBackground,
@@ -329,7 +330,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                                               useGoogleFonts: false,
                                             ),
                                         elevation: 3.0,
-                                        borderSide: const BorderSide(
+                                        borderSide: BorderSide(
                                           color: Colors.transparent,
                                           width: 1.0,
                                         ),
@@ -348,10 +349,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 10.0),
                     child: Material(
                       color: Colors.transparent,
                       elevation: 3.0,
@@ -362,8 +363,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                         width: 330.0,
                         height: 45.0,
                         decoration: BoxDecoration(
-                          color: const Color(0xFFF4F4F4),
-                          boxShadow: const [
+                          color: Color(0xFFF4F4F4),
+                          boxShadow: [
                             BoxShadow(
                               blurRadius: 4.0,
                               color: Color(0x33000000),
@@ -379,7 +380,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   15.0, 0.0, 15.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
@@ -407,9 +408,9 @@ class _AccountWidgetState extends State<AccountWidget> {
                             ),
                             Flexible(
                               child: Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
+                                alignment: AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 1.0, 0.0),
                                   child: FlutterFlowLanguageSelector(
                                     width: 150.0,
@@ -450,10 +451,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -472,8 +473,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                           width: 330.0,
                           height: 45.0,
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F4F4),
-                            boxShadow: const [
+                            color: Color(0xFFF4F4F4),
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -489,7 +490,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
@@ -523,10 +524,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -545,8 +546,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                           width: 330.0,
                           height: 45.0,
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F4F4),
-                            boxShadow: const [
+                            color: Color(0xFFF4F4F4),
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -562,7 +563,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
@@ -596,10 +597,10 @@ class _AccountWidgetState extends State<AccountWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -628,8 +629,8 @@ class _AccountWidgetState extends State<AccountWidget> {
                           width: 330.0,
                           height: 45.0,
                           decoration: BoxDecoration(
-                            color: const Color(0xFFF4F4F4),
-                            boxShadow: const [
+                            color: Color(0xFFF4F4F4),
+                            boxShadow: [
                               BoxShadow(
                                 blurRadius: 4.0,
                                 color: Color(0x33000000),
@@ -645,7 +646,7 @@ class _AccountWidgetState extends State<AccountWidget> {
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),

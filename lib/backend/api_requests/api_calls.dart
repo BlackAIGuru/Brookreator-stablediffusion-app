@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:typed_data';
+import '../schema/structs/index.dart';
 
 import 'package:flutter/foundation.dart';
 
@@ -56,11 +58,11 @@ class AccountCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'Account',
-      apiUrl: '$baseUrl/account',
+      apiUrl: '${baseUrl}/account',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -100,11 +102,11 @@ class GetAllImagesCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'GetAllImages',
-      apiUrl: '$baseUrl/account/images',
+      apiUrl: '${baseUrl}/account/images',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -277,11 +279,11 @@ class GetAllFavouritesCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'GetAllFavourites',
-      apiUrl: '$baseUrl/account/favorites?offset=0&limit=500',
+      apiUrl: '${baseUrl}/account/favorites?offset=0&limit=500',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -423,16 +425,16 @@ class AddFavouritesCall {
     final ffApiRequestBody = '''
 {
   "imageIds": [
-    "$imageIds"
+    "${imageIds}"
   ]
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'AddFavourites',
-      apiUrl: '$baseUrl/account/favorites',
+      apiUrl: '${baseUrl}/account/favorites',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -472,29 +474,29 @@ class QRGenerateCall {
 
     final ffApiRequestBody = '''
 {
-  "prompt": "$prompt",
-  "samples": $samples,
-  "height": $height,
-  "width": $width,
-  "sampler": "$sampler",
-  "steps": $steps,
-  "cfgScale": $cfgScale,
-  "negativePrompt": "$negativePrompt",
-  "isQRCode": $isQRCode,
-  "initImageFilePath": "$initImageFilePath",
-  "qrCodeContent": "$qrCodeContent",
-  "qrCodeFilePath": "$qrCodeFilePath",
-  "controlNetScale": $controlNetScale,
-  "engine": "$engine",
-  "themeId": $themeId
+  "prompt": "${prompt}",
+  "samples": ${samples},
+  "height": ${height},
+  "width": ${width},
+  "sampler": "${sampler}",
+  "steps": ${steps},
+  "cfgScale": ${cfgScale},
+  "negativePrompt": "${negativePrompt}",
+  "isQRCode": ${isQRCode},
+  "initImageFilePath": "${initImageFilePath}",
+  "qrCodeContent": "${qrCodeContent}",
+  "qrCodeFilePath": "${qrCodeFilePath}",
+  "controlNetScale": ${controlNetScale},
+  "engine": "${engine}",
+  "themeId": ${themeId}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'QRGenerate',
-      apiUrl: '$baseUrl/t2i/generate',
+      apiUrl: '${baseUrl}/t2i/generate',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -530,11 +532,11 @@ class PortraitUploaderCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'PortraitUploader',
-      apiUrl: '$baseUrl/i2i/upload/$uuid',
+      apiUrl: '${baseUrl}/i2i/upload/${uuid}',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {
         'file': portraitupload,
@@ -585,29 +587,29 @@ class PortraitTrainingImageCall {
 
     final ffApiRequestBody = '''
 {
-  "images": $images,
-  "styles": $styles,
-  "modelKey": "$modelKey",
-  "lang": "$lang",
-  "negatives": $negatives,
-  "samplers": $samplers,
-  "steps": $steps,
-  "models": $models,
-  "aesthetics": $aesthetics,
-  "width": $width,
-  "height": $height,
-  "seed": "$seed",
-  "poses": $poses,
-  "clip_skips": $clipSkips,
-  "isTrainingOnly": $isTrainingOnly
+  "images": ${images},
+  "styles": ${styles},
+  "modelKey": "${modelKey}",
+  "lang": "${lang}",
+  "negatives": ${negatives},
+  "samplers": ${samplers},
+  "steps": ${steps},
+  "models": ${models},
+  "aesthetics": ${aesthetics},
+  "width": ${width},
+  "height": ${height},
+  "seed": "${seed}",
+  "poses": ${poses},
+  "clip_skips": ${clipSkips},
+  "isTrainingOnly": ${isTrainingOnly}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'PortraitTrainingImage',
-      apiUrl: '$baseUrl/i2i/trainingImage/$uuid',
+      apiUrl: '${baseUrl}/i2i/trainingImage/${uuid}',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -661,29 +663,29 @@ class PortraitGenerateCall {
 
     final ffApiRequestBody = '''
 {
-  "adetailerPrompts": $adetailerPrompts,
-  "cfgScale": $cfgScale,
-  "clipSkips": $clipSkips,
-  "height": $height,
-  "width": $width,
-  "loraModelIds": $loraModelIds,
-  "model": $model,
-  "negativeAdetailers": $negativeAdetailers,
-  "negativePrompt": $negativePrompt,
-  "prompt": $prompt,
-  "sample": $sample,
-  "sampler": $sampler,
-  "seed": $seed,
-  "steps": $steps,
-  "themeIds": $themeIds
+  "adetailerPrompts": ${adetailerPrompts},
+  "cfgScale": ${cfgScale},
+  "clipSkips": ${clipSkips},
+  "height": ${height},
+  "width": ${width},
+  "loraModelIds": ${loraModelIds},
+  "model": ${model},
+  "negativeAdetailers": ${negativeAdetailers},
+  "negativePrompt": ${negativePrompt},
+  "prompt": ${prompt},
+  "sample": ${sample},
+  "sampler": ${sampler},
+  "seed": ${seed},
+  "steps": ${steps},
+  "themeIds": ${themeIds}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'PortraitGenerate',
-      apiUrl: '$baseUrl/t2i/generate/v2',
+      apiUrl: '${baseUrl}/t2i/generate/v2',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -715,11 +717,11 @@ class FileUploaderCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'FileUploader',
-      apiUrl: '$baseUrl/account/files',
+      apiUrl: '${baseUrl}/account/files',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {
         'file': uploadedfile,
@@ -750,19 +752,19 @@ class QRLogoGenerateCall {
 
     final ffApiRequestBody = '''
 {
-  "backgroundImageFilePath": "$backgroundImageFilePath",
-  "logoImageFilePath": "$logoImageFilePath",
-  "qrCodeFilePath": "$qrCodeFilePath",
-  "qrCodeContent": "$qrCodeContent",
-  "qrScale": $qrScale
+  "backgroundImageFilePath": "${backgroundImageFilePath}",
+  "logoImageFilePath": "${logoImageFilePath}",
+  "qrCodeFilePath": "${qrCodeFilePath}",
+  "qrCodeContent": "${qrCodeContent}",
+  "qrScale": ${qrScale}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'QRLogoGenerate',
-      apiUrl: '$baseUrl/qrlg/generate',
+      apiUrl: '${baseUrl}/qrlg/generate',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -805,11 +807,11 @@ class DeleteImageCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'DeleteImage',
-      apiUrl: '$baseUrl/account/images/$imageid',
+      apiUrl: '${baseUrl}/account/images/${imageid}',
       callType: ApiCallType.DELETE,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {
         'imageid': imageid,
@@ -850,30 +852,30 @@ class AIVideoGenerateCall {
 
     final ffApiRequestBody = '''
 {
-  "cfgScale": $cfgScale,
-  "endPoint": $endPoint,
-  "clipSkips": $clipSkips,
-  "loraModelID": "$loraModelID",
-  "model": "$model",
-  "nPrompt": "$nPrompt",
-  "prompt": "$prompt",
-  "samplers": "$samplers",
-  "startPoint": $startPoint,
-  "startTransitionPoint": $startTransitionPoint,
-  "txID": "$txID",
-  "vdoPath": "$vdoPath",
-  "vdoToVdoSupType": "$vdoToVdoSupType",
-  "vdoToVdoType": "$vdoToVdoType",
-  "steps": "$steps",
-  "themeId": $themeId
+  "cfgScale": ${cfgScale},
+  "endPoint": ${endPoint},
+  "clipSkips": ${clipSkips},
+  "loraModelID": "${loraModelID}",
+  "model": "${model}",
+  "nPrompt": "${nPrompt}",
+  "prompt": "${prompt}",
+  "samplers": "${samplers}",
+  "startPoint": ${startPoint},
+  "startTransitionPoint": ${startTransitionPoint},
+  "txID": "${txID}",
+  "vdoPath": "${vdoPath}",
+  "vdoToVdoSupType": "${vdoToVdoSupType}",
+  "vdoToVdoType": "${vdoToVdoType}",
+  "steps": "${steps}",
+  "themeId": ${themeId}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'AIVideoGenerate',
-      apiUrl: '$baseUrl/v2v/generate',
+      apiUrl: '${baseUrl}/v2v/generate',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -913,24 +915,24 @@ class TextToImageCall {
 
     final ffApiRequestBody = '''
 {
-  "cfgScale": $cfgScale,
-  "engine": "$engine",
-  "width": $width,
-  "height": $height,
-  "prompt": "$prompt",
-  "negativePrompt": "$negativePrompt",
-  "sampler": "$sampler",
-  "samples": $samples,
-  "steps": $steps,
-  "themeId": $themeId
+  "cfgScale": ${cfgScale},
+  "engine": "${engine}",
+  "width": ${width},
+  "height": ${height},
+  "prompt": "${prompt}",
+  "negativePrompt": "${negativePrompt}",
+  "sampler": "${sampler}",
+  "samples": ${samples},
+  "steps": ${steps},
+  "themeId": ${themeId}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'TextToImage',
-      apiUrl: '$baseUrl/t2i/generate',
+      apiUrl: '${baseUrl}/t2i/generate',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,
@@ -964,11 +966,11 @@ class ThemeCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'Theme',
-      apiUrl: '$baseUrl/theme',
+      apiUrl: '${baseUrl}/theme',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -992,11 +994,11 @@ class GetGeneratedContentsCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'GetGeneratedContents',
-      apiUrl: '$baseUrl/account/images?offset=0&txIDs=$txID',
+      apiUrl: '${baseUrl}/account/images?offset=0&txIDs=${txID}',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1093,11 +1095,11 @@ class QueueStatusCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'QueueStatus',
-      apiUrl: '$baseUrl/account/queues/$txID',
+      apiUrl: '${baseUrl}/account/queues/${txID}',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1129,11 +1131,11 @@ class AllQueuesCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'AllQueues',
-      apiUrl: '$baseUrl/progress/queues',
+      apiUrl: '${baseUrl}/progress/queues',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1156,11 +1158,11 @@ class TrainingStatusCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'TrainingStatus',
-      apiUrl: '$baseUrl/i2i/training',
+      apiUrl: '${baseUrl}/i2i/training',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1183,11 +1185,11 @@ class GetModelsCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'GetModels',
-      apiUrl: '$baseUrl/account/models',
+      apiUrl: '${baseUrl}/account/models',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1257,11 +1259,11 @@ class DeleteModelsCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'DeleteModels',
-      apiUrl: '$baseUrl/account/models/$modelId',
+      apiUrl: '${baseUrl}/account/models/${modelId}',
       callType: ApiCallType.DELETE,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1285,11 +1287,11 @@ class DownloadImageCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'DownloadImage',
-      apiUrl: '$baseUrl/downloads/image/$imageId',
+      apiUrl: '${baseUrl}/downloads/image/${imageId}',
       callType: ApiCallType.GET,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       returnBody: true,
@@ -1314,15 +1316,15 @@ class DownloadBulkCall {
 
     final ffApiRequestBody = '''
 {
-  "imageIds": $imageIds
+  "imageIds": ${imageIds}
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'DownloadBulk',
-      apiUrl: '$baseUrl/downloads/images',
+      apiUrl: '${baseUrl}/downloads/images',
       callType: ApiCallType.POST,
       headers: {
         'Accept': 'application/json',
-        'Authorization': 'Bearer $accessToken',
+        'Authorization': 'Bearer ${accessToken}',
       },
       params: {},
       body: ffApiRequestBody,

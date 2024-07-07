@@ -2062,6 +2062,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'https://www.example.com/my-long-url',
       'th': 'https://www.example.com/my-long-url',
     },
+    'yf8xw5je': {
+      'en': 'https://',
+      'th': '',
+    },
     'c0ps9n3t': {
       'en': 'Field is required',
       'th': 'ต้องระบุข้อมูล',
@@ -2243,6 +2247,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pbueixs6': {
       'en': 'https://www.example.com/my-long-url',
       'th': 'https://www.example.com/my-long-url',
+    },
+    '80p3qjl5': {
+      'en': 'https://',
+      'th': '',
     },
     'tizrmshi': {
       'en': 'Field is required',

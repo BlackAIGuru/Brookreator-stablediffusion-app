@@ -1,10 +1,34 @@
+import '/a_iportrait/uplodingguide/uplodingguide_widget.dart';
 import '/backend/api_requests/api_calls.dart';
+import '/components/done/done_widget.dart';
+import '/components/info/info_widget.dart';
+import '/components/message_error/message_error_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
+import '/components/waiting/waiting_widget.dart';
+import '/flutter_flow/flutter_flow_drop_down.dart';
+import '/flutter_flow/flutter_flow_expanded_image_view.dart';
+import '/flutter_flow/flutter_flow_icon_button.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
+import '/flutter_flow/upload_data.dart';
+import '/text2_image/image_result/image_result_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
+import '/flutter_flow/custom_functions.dart' as functions;
 import 'a_i_portrait_widget.dart' show AIPortraitWidget;
+import 'package:sticky_headers/sticky_headers.dart';
+import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+import 'package:page_transition/page_transition.dart';
+import 'package:provider/provider.dart';
 
 class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
   ///  Local state fields for this page.
@@ -244,7 +268,7 @@ class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
   // Stores action output result for [Custom Action - changeToIngeger] action in aiportraitslider widget.
   int? imagenumber;
   // Stores action output result for [Custom Action - selectPortraitTheme] action in Button widget.
-  dynamic portraitTheme;
+  dynamic? portraitTheme;
   // Stores action output result for [Backend Call - API (PortraitTrainingImage)] action in Button widget.
   ApiCallResponse? trainingresult;
   // Stores action output result for [Backend Call - API (Account)] action in Button widget.
@@ -258,7 +282,7 @@ class AIPortraitModel extends FlutterFlowModel<AIPortraitWidget> {
   // Stores action output result for [Custom Action - getUuid] action in Button widget.
   String? getuuidresultAgain;
   // Stores action output result for [Custom Action - selectPortraitTheme] action in Button widget.
-  dynamic portraitThemeModel;
+  dynamic? portraitThemeModel;
   // Stores action output result for [Backend Call - API (Account)] action in Button widget.
   ApiCallResponse? accountInfoModel;
   // Stores action output result for [Backend Call - API (PortraitGenerate)] action in Button widget.

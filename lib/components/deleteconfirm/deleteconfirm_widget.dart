@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'deleteconfirm_model.dart';
 export 'deleteconfirm_model.dart';
@@ -52,14 +53,14 @@ class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
         color: FlutterFlowTheme.of(context).secondaryBackground,
         borderRadius: BorderRadius.circular(20.0),
       ),
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Align(
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Text(
                 FFLocalizations.of(context).getText(
                   'ca0h5lq6' /* Are you sure? */,
@@ -74,7 +75,7 @@ class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
               ),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -99,10 +100,10 @@ class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
                     options: FFButtonOptions(
                       width: MediaQuery.sizeOf(context).width * 0.2,
                       height: 30.0,
-                      padding: const EdgeInsets.all(0.0),
+                      padding: EdgeInsets.all(0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                      color: const Color(0xCCFF5963),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: Color(0xCCFF5963),
                       textStyle: FlutterFlowTheme.of(context)
                           .titleSmall
                           .override(
@@ -114,7 +115,7 @@ class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
                             useGoogleFonts: false,
                           ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                       ),
                       borderRadius: BorderRadius.circular(20.0),
@@ -130,9 +131,9 @@ class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
                     options: FFButtonOptions(
                       width: MediaQuery.sizeOf(context).width * 0.2,
                       height: 30.0,
-                      padding: const EdgeInsets.all(0.0),
+                      padding: EdgeInsets.all(0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).alternate,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -143,7 +144,7 @@ class _DeleteconfirmWidgetState extends State<DeleteconfirmWidget> {
                                 useGoogleFonts: false,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                       ),
                       borderRadius: BorderRadius.circular(20.0),

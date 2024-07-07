@@ -5,6 +5,8 @@ import '/flutter_flow/upload_data.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'qrtoggle_model.dart';
 export 'qrtoggle_model.dart';
 
@@ -57,7 +59,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
       child: Column(
         children: [
           Align(
-            alignment: const Alignment(0.0, 0),
+            alignment: Alignment(0.0, 0),
             child: FlutterFlowButtonTabBar(
               useToggleButtonStyle: true,
               labelStyle: FlutterFlowTheme.of(context).titleMedium.override(
@@ -77,19 +79,19 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
               labelColor: FlutterFlowTheme.of(context).primary,
               unselectedLabelColor: FlutterFlowTheme.of(context).primaryText,
               backgroundColor: Colors.white,
-              unselectedBackgroundColor: const Color(0xFFEDEDED),
-              borderColor: const Color(0xFFEDEDED),
+              unselectedBackgroundColor: Color(0xFFEDEDED),
+              borderColor: Color(0xFFEDEDED),
               unselectedBorderColor: FlutterFlowTheme.of(context).alternate,
               borderWidth: 5.0,
               borderRadius: 20.0,
               elevation: 0.0,
-              buttonMargin: const EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
-              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 12.0, 10.0, 15.0),
+              buttonMargin: EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 8.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(10.0, 12.0, 10.0, 15.0),
               tabs: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Padding(
+                    Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
                       child: FaIcon(
@@ -107,7 +109,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Padding(
+                    Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
                       child: Icon(
@@ -134,7 +136,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
               controller: _model.tabBarController,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -146,18 +148,18 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                           color: FlutterFlowTheme.of(context).primaryBackground,
                           borderRadius: BorderRadius.circular(5.0),
                           border: Border.all(
-                            color: const Color(0xFFE4E4E4),
+                            color: Color(0xFFE4E4E4),
                             width: 1.0,
                           ),
                         ),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: Container(
                                   width: 304.0,
                                   height: 37.0,
@@ -166,7 +168,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                         .primaryBackground,
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(-1.0, 0.0),
+                                    alignment: AlignmentDirectional(-1.0, 0.0),
                                     child: Text(
                                       FFLocalizations.of(context).getText(
                                         'hitiyv6x' /* Example : https://www.example.... */,
@@ -184,14 +186,14 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                   ),
                                 ),
                               ),
-                              SizedBox(
+                              Container(
                                 width: double.infinity,
                                 child: TextFormField(
                                   controller: _model.textController,
                                   focusNode: _model.textFieldFocusNode,
                                   onChanged: (_) => EasyDebounce.debounce(
                                     '_model.textController',
-                                    const Duration(milliseconds: 2000),
+                                    Duration(milliseconds: 2000),
                                     () => setState(() {}),
                                   ),
                                   autofocus: false,
@@ -216,20 +218,20 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                         .labelMedium
                                         .override(
                                           fontFamily: 'NotoSansThai',
-                                          color: const Color(0xB36F6F6F),
+                                          color: Color(0xB36F6F6F),
                                           fontSize: 12.0,
                                           letterSpacing: 0.0,
                                           useGoogleFonts: false,
                                         ),
                                     enabledBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xB36F6F6F),
                                         width: 1.0,
                                       ),
                                       borderRadius: BorderRadius.circular(8.0),
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: const BorderSide(
+                                      borderSide: BorderSide(
                                         color: Color(0xFF0957DE),
                                         width: 1.0,
                                       ),
@@ -279,7 +281,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                         useGoogleFonts: false,
                                       ),
                                   textAlign: TextAlign.justify,
-                                  cursorColor: const Color(0xFF0957DE),
+                                  cursorColor: Color(0xFF0957DE),
                                   validator: _model.textControllerValidator
                                       .asValidator(context),
                                 ),
@@ -292,13 +294,13 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Container(
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 130.0,
@@ -307,13 +309,13 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                 FlutterFlowTheme.of(context).primaryBackground,
                             borderRadius: BorderRadius.circular(5.0),
                             border: Border.all(
-                              color: const Color(0xFFE4E4E4),
+                              color: Color(0xFFE4E4E4),
                               width: 1.0,
                             ),
                           ),
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 0.0, 10.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -324,7 +326,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                   children: [
                                     Align(
                                       alignment:
-                                          const AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
                                         focusColor: Colors.transparent,
@@ -393,12 +395,12 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Stack(
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: ClipRRect(
                                                     borderRadius:
@@ -413,11 +415,11 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 40.0,
                                                                 0.0, 0.0),
                                                     child: ClipRRect(
@@ -435,11 +437,11 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 5.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -466,11 +468,11 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 35.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -507,16 +509,16 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                     Flexible(
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(1.0, 0.0),
+                                            AlignmentDirectional(1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Text(
                                                   FFLocalizations.of(context)
@@ -538,7 +540,7 @@ class _QrtoggleWidgetState extends State<QrtoggleWidget>
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: ClipRRect(
                                                   borderRadius:

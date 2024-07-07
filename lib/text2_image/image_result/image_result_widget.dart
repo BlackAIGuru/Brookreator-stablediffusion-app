@@ -7,6 +7,10 @@ import 'package:sticky_headers/sticky_headers.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_blurhash/flutter_blurhash.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:octo_image/octo_image.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'image_result_model.dart';
 export 'image_result_model.dart';
@@ -18,7 +22,7 @@ class ImageResultWidget extends StatefulWidget {
     this.resultImageIDs,
     required this.title,
     bool? isT2I,
-  }) : isT2I = isT2I ?? false;
+  }) : this.isT2I = isT2I ?? false;
 
   final List<String>? resultImageUrls;
   final List<String>? resultImageIDs;
@@ -56,9 +60,9 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: const AlignmentDirectional(0.0, 1.0),
+      alignment: AlignmentDirectional(0.0, 1.0),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
         child: Container(
           width: double.infinity,
           constraints: BoxConstraints(
@@ -66,7 +70,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
           ),
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
-            borderRadius: const BorderRadius.only(
+            borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
               topLeft: Radius.circular(20.0),
@@ -74,7 +78,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
             ),
           ),
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
             child: SingleChildScrollView(
               primary: false,
               child: Column(
@@ -94,7 +98,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                             child: Stack(
                               children: [
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     valueOrDefault<String>(
                                       widget.title,
@@ -112,9 +116,9 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(1.0, -1.0),
+                                  alignment: AlignmentDirectional(1.0, -1.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -143,9 +147,9 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -208,13 +212,13 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: Builder(
                             builder: (context) {
                               final images =
                                   widget.resultImageUrls?.toList() ?? [];
-                              return SizedBox(
+                              return Container(
                                 width: double.infinity,
                                 height: 106.0,
                                 child: CarouselSlider.builder(
@@ -228,7 +232,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                               BorderRadius.circular(10.0),
                                           child: Image.network(
                                             valueOrDefault<String>(
-                                              imagesItem,
+                                              '${imagesItem}',
                                               'https://picsum.photos/seed/793/600',
                                             ),
                                             width: 101.0,
@@ -266,7 +270,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                         ),
                         if (widget.isT2I)
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 10.0, 10.0, 10.0),
                             child: SingleChildScrollView(
                               primary: false,
@@ -278,10 +282,10 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, -1.0),
+                                            AlignmentDirectional(-1.0, -1.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 7.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -322,9 +326,9 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                     ],
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, -1.0),
+                                    alignment: AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         FFAppState().Prompt,
@@ -341,17 +345,17 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, -1.0),
+                                              AlignmentDirectional(-1.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 7.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -396,9 +400,9 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                     ),
                                   ),
                                   Align(
-                                    alignment: const AlignmentDirectional(-1.0, -1.0),
+                                    alignment: AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         FFAppState().NegativePrompt,
@@ -414,7 +418,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                       ),
                                     ),
                                   ),
-                                  const Divider(
+                                  Divider(
                                     thickness: 1.0,
                                     indent: 10.0,
                                     endIndent: 10.0,
@@ -428,7 +432,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, -1.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -453,7 +457,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, -1.0),
                                               child: Text(
                                                 '${FFAppState().ImageWidth.toString()}x${FFAppState().ImageHeight.toString()}',
@@ -482,7 +486,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, -1.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -507,7 +511,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   -1.0, -1.0),
                                               child: Text(
                                                 FFLocalizations.of(context)
@@ -545,7 +549,7 @@ class _ImageResultWidgetState extends State<ImageResultWidget> {
                   ),
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                     child: wrapWithModel(
                       model: _model.buttongroup2Model,
                       updateCallback: () => setState(() {}),

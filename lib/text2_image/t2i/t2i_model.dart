@@ -1,9 +1,23 @@
 import '/backend/api_requests/api_calls.dart';
+import '/components/done/done_widget.dart';
+import '/components/message_error/message_error_widget.dart';
 import '/components/signinicon/signinicon_widget.dart';
+import '/components/waiting/waiting_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import '/text2_image/image_result/image_result_widget.dart';
+import '/custom_code/actions/index.dart' as actions;
+import 'package:sticky_headers/sticky_headers.dart';
 import 't2i_widget.dart' show T2iWidget;
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter/services.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class T2iModel extends FlutterFlowModel<T2iWidget> {
   ///  Local state fields for this page.
@@ -65,7 +79,7 @@ class T2iModel extends FlutterFlowModel<T2iWidget> {
   // Stores action output result for [Custom Action - changeToIngeger] action in t2islider widget.
   int? imagenumber;
   // Stores action output result for [Custom Action - selectT2ITheme] action in Button widget.
-  dynamic theme;
+  dynamic? theme;
   // Stores action output result for [Backend Call - API (TextToImage)] action in Button widget.
   ApiCallResponse? requestSent;
   // Stores action output result for [Backend Call - API (Account)] action in Button widget.

@@ -5,6 +5,8 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'open_app_screen_model.dart';
 export 'open_app_screen_model.dart';
 
@@ -30,14 +32,14 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
       while (true) {
         await Future.delayed(const Duration(milliseconds: 4000));
         await _model.pageViewController?.nextPage(
-          duration: const Duration(milliseconds: 300),
+          duration: Duration(milliseconds: 300),
           curve: Curves.ease,
         );
         if (_model.pageViewCurrentIndex == 3) {
           await Future.delayed(const Duration(milliseconds: 4000));
           await _model.pageViewController?.animateToPage(
             0,
-            duration: const Duration(milliseconds: 500),
+            duration: Duration(milliseconds: 500),
             curve: Curves.ease,
           );
         }
@@ -64,19 +66,19 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
         body: SafeArea(
           top: true,
           child: Align(
-            alignment: const AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Expanded(
-                  child: SizedBox(
+                  child: Container(
                     width: double.infinity,
                     height: 500.0,
                     child: Stack(
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 40.0),
                           child: PageView(
                             controller: _model.pageViewController ??=
@@ -95,9 +97,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 10.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -116,7 +118,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           20.0, 10.0, 20.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -153,9 +155,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             20.0, 5.0, 20.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -190,9 +192,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 10.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -211,7 +213,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           20.0, 10.0, 20.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -248,9 +250,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             20.0, 5.0, 20.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -285,9 +287,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 10.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -306,7 +308,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           20.0, 10.0, 20.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -343,9 +345,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             20.0, 5.0, 20.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -380,9 +382,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 10.0),
                                         child: ClipRRect(
                                           borderRadius:
@@ -401,7 +403,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           20.0, 10.0, 20.0, 0.0),
                                       child: Text(
                                         FFLocalizations.of(context).getText(
@@ -438,9 +440,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             20.0, 5.0, 20.0, 0.0),
                                         child: Text(
                                           FFLocalizations.of(context).getText(
@@ -467,9 +469,9 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.0, 1.0),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 16.0),
                             child: smooth_page_indicator.SmoothPageIndicator(
                               controller: _model.pageViewController ??=
@@ -479,7 +481,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                               onDotClicked: (i) async {
                                 await _model.pageViewController!.animateToPage(
                                   i,
-                                  duration: const Duration(milliseconds: 500),
+                                  duration: Duration(milliseconds: 500),
                                   curve: Curves.ease,
                                 );
                                 setState(() {});
@@ -503,10 +505,10 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 1.0),
+                  alignment: AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(50.0, 100.0, 50.0, 50.0),
+                        EdgeInsetsDirectional.fromSTEB(50.0, 100.0, 50.0, 50.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         context.pushNamed('HomePage');
@@ -517,10 +519,10 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                       options: FFButtonOptions(
                         width: 327.0,
                         height: 50.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             24.0, 13.0, 24.0, 13.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -531,7 +533,7 @@ class _OpenAppScreenWidgetState extends State<OpenAppScreenWidget> {
                                   useGoogleFonts: false,
                                 ),
                         elevation: 3.0,
-                        borderSide: const BorderSide(
+                        borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

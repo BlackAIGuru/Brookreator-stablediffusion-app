@@ -1,9 +1,11 @@
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'settings_model.dart';
 export 'settings_model.dart';
@@ -47,7 +49,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -57,7 +59,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     Stack(
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
                             focusColor: Colors.transparent,
@@ -67,9 +69,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                               context.safePop();
                             },
                             child: Container(
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 3.0, 0.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
@@ -91,7 +93,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'o6etembj' /* Setting */,
@@ -110,7 +112,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(34.0, 15.0, 34.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(34.0, 15.0, 34.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -123,13 +125,13 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           width: MediaQuery.sizeOf(context).width * 1.0,
                           height: 48.0,
                           decoration: BoxDecoration(
-                            color: const Color(0xFF1371FF),
+                            color: Color(0xFF1371FF),
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             children: [
-                              const Align(
+                              Align(
                                 alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
@@ -162,7 +164,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -186,7 +188,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     22.0, 0.0, 15.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
@@ -220,7 +222,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
                       child: Container(
                         width: MediaQuery.sizeOf(context).width * 1.0,
                         height: 48.0,
@@ -232,7 +234,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   22.0, 0.0, 15.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
@@ -261,9 +263,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             ),
                             Flexible(
                               child: Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
+                                alignment: AlignmentDirectional(1.0, 0.0),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 1.0, 0.0),
                                   child: FlutterFlowLanguageSelector(
                                     width: 150.0,
@@ -303,7 +305,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -323,7 +325,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     22.0, 0.0, 15.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
@@ -357,7 +359,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(34.0, 0.0, 34.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -377,7 +379,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     22.0, 0.0, 15.0, 0.0),
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(0.0),
@@ -409,7 +411,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         ),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ),
               ],
             ),

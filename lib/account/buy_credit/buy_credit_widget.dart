@@ -1,8 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'buy_credit_model.dart';
 export 'buy_credit_model.dart';
@@ -46,7 +48,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -66,9 +68,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                           context.safePop();
                         },
                         child: Container(
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 3.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -89,7 +91,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'h28j8xmv' /* Buy Credit */,
@@ -105,9 +107,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 20.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -126,7 +128,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                 borderRadius: BorderRadius.circular(30.0),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
-                                  color: const Color(0xFFE4E4E4),
+                                  color: Color(0xFFE4E4E4),
                                 ),
                               ),
                               child: Row(
@@ -135,9 +137,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                 children: [
                                   Flexible(
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             5.0, 0.0, 0.0, 0.0),
                                         child: Text(
                                           FFAppState().Credit.toString(),
@@ -159,7 +161,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                   ),
                                   Flexible(
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.monetization_on_outlined,
                                         color: FlutterFlowTheme.of(context)
@@ -178,7 +180,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
@@ -197,13 +199,13 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: const AlignmentDirectional(0.0, -1.0),
+                          alignment: AlignmentDirectional(0.0, -1.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'bycdemw8' /* Choose a package that fits you... */,
@@ -218,7 +220,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 25.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -226,9 +228,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                             children: [
                               Flexible(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -256,15 +258,15 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                             color: _model.selectpackage == 1
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : const Color(0xFFD9D9D9),
+                                                : Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             mainAxisAlignment:
@@ -273,11 +275,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -307,7 +309,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: RichText(
                                                   textScaler:
@@ -347,7 +349,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           '0562251r' /*  THB */,
                                                         ),
-                                                        style: const TextStyle(
+                                                        style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontSize: 12.0,
@@ -370,11 +372,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Text(
@@ -412,9 +414,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                               ),
                               Flexible(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -442,26 +444,26 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                             color: _model.selectpackage == 2
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : const Color(0xFFD9D9D9),
+                                                : Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -491,7 +493,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: RichText(
                                                   textScaler:
@@ -531,7 +533,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           'nrio6a1h' /*  THB */,
                                                         ),
-                                                        style: const TextStyle(
+                                                        style: TextStyle(
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontSize: 12.0,
@@ -552,7 +554,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: RichText(
                                                   textScaler:
@@ -595,7 +597,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           'ufevgb07' /*  Save 10% */,
                                                         ),
-                                                        style: const TextStyle(
+                                                        style: TextStyle(
                                                           color:
                                                               Color(0xFFFF0000),
                                                           fontWeight:
@@ -619,11 +621,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Text(
@@ -661,9 +663,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                               ),
                               Flexible(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  alignment: AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -691,26 +693,26 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                             color: _model.selectpackage == 3
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : const Color(0xFFD9D9D9),
+                                                : Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -772,7 +774,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         '0fn8rm9s' /*  THB */,
                                                       ),
-                                                      style: const TextStyle(
+                                                      style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         fontSize: 12.0,
@@ -786,7 +788,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         fontFamily:
                                                             'NotoSansThai',
                                                         color:
-                                                            const Color(0xFF080808),
+                                                            Color(0xFF080808),
                                                         letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
@@ -829,7 +831,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         '4ukxfhmk' /*  Save 50% */,
                                                       ),
-                                                      style: const TextStyle(
+                                                      style: TextStyle(
                                                         color:
                                                             Color(0xFFFF0000),
                                                         fontWeight:
@@ -852,11 +854,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Text(
@@ -900,10 +902,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 1.0),
+                  alignment: AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () {
                         print('Button pressed ...');
@@ -914,10 +916,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                       options: FFButtonOptions(
                         width: 320.0,
                         height: 50.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -926,7 +928,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
-                        borderSide: const BorderSide(
+                        borderSide: BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

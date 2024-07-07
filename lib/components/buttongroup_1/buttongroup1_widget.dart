@@ -6,6 +6,7 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'buttongroup1_model.dart';
 export 'buttongroup1_model.dart';
@@ -51,24 +52,24 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
     context.watch<FFAppState>();
 
     return Padding(
-      padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+      padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 40.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: Align(
-          alignment: const AlignmentDirectional(0.0, 0.0),
+          alignment: AlignmentDirectional(0.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Align(
-                alignment: const AlignmentDirectional(-1.0, 0.0),
+                alignment: AlignmentDirectional(-1.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       await launchURL(widget.imageUrl!);
@@ -84,9 +85,9 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                     options: FFButtonOptions(
                       width: 110.0,
                       height: 35.0,
-                      padding: const EdgeInsets.all(0.0),
+                      padding: EdgeInsets.all(0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primaryBackground,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -107,9 +108,9 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
               ),
               Flexible(
                 child: Align(
-                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                  alignment: AlignmentDirectional(-1.0, 0.0),
                   child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -141,17 +142,17 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                           shape: BoxShape.circle,
                           border: Border.all(
                             color: _model.toggleselected
-                                ? const Color(0xCDFF5963)
+                                ? Color(0xCDFF5963)
                                 : FlutterFlowTheme.of(context).secondaryText,
                           ),
                         ),
-                        alignment: const AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.0, 0.0),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             Icons.favorite_sharp,
                             color: _model.toggleselected
-                                ? const Color(0xCDFF5963)
+                                ? Color(0xCDFF5963)
                                 : FlutterFlowTheme.of(context).secondaryText,
                             size: 19.0,
                           ),
@@ -162,19 +163,19 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(1.0, 0.0),
+                alignment: AlignmentDirectional(1.0, 0.0),
                 child: Builder(
                   builder: (context) => Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () async {
                         await showAlignedDialog(
                           context: context,
                           isGlobal: false,
                           avoidOverflow: true,
-                          targetAnchor: const AlignmentDirectional(-1.0, 1.0)
+                          targetAnchor: AlignmentDirectional(-1.0, 1.0)
                               .resolve(Directionality.of(context)),
-                          followerAnchor: const AlignmentDirectional(0.0, 0.0)
+                          followerAnchor: AlignmentDirectional(0.0, 0.0)
                               .resolve(Directionality.of(context)),
                           builder: (dialogContext) {
                             return Material(
@@ -187,7 +188,7 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                         ).then((value) => setState(() {}));
                       },
                       text: '',
-                      icon: const Icon(
+                      icon: Icon(
                         FFIcons.kbin,
                         color: Color(0xCDFF5963),
                         size: 15.0,
@@ -196,10 +197,10 @@ class _Buttongroup1WidgetState extends State<Buttongroup1Widget> {
                         width: 50.0,
                         height: 28.0,
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(7.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(7.0, 0.0, 0.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                        color: const Color(0x42FF5963),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                        color: Color(0x42FF5963),
                         textStyle: FlutterFlowTheme.of(context)
                             .titleSmall
                             .override(

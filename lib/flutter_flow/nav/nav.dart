@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import '/backend/backend.dart';
 import '/backend/schema/structs/index.dart';
@@ -8,8 +10,12 @@ import '/backend/schema/structs/index.dart';
 import '/auth/custom_auth/custom_auth_user_provider.dart';
 
 import '/index.dart';
+import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/lat_lng.dart';
+import '/flutter_flow/place.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'serialization_util.dart';
 
 export 'package:go_router/go_router.dart';
 export 'serialization_util.dart';
@@ -74,59 +80,59 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? const HomePageWidget() : const OpenAppScreenWidget(),
+          appStateNotifier.loggedIn ? HomePageWidget() : OpenAppScreenWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? const HomePageWidget()
-              : const OpenAppScreenWidget(),
+              ? HomePageWidget()
+              : OpenAppScreenWidget(),
         ),
         FFRoute(
           name: 'Buy_Credit',
           path: '/buyCredit',
-          builder: (context, params) => const BuyCreditWidget(),
+          builder: (context, params) => BuyCreditWidget(),
         ),
         FFRoute(
           name: 'Account',
           path: '/account',
-          builder: (context, params) => const AccountWidget(),
+          builder: (context, params) => AccountWidget(),
         ),
         FFRoute(
           name: 'About_Us',
           path: '/aboutUs',
-          builder: (context, params) => const AboutUsWidget(),
+          builder: (context, params) => AboutUsWidget(),
         ),
         FFRoute(
           name: 'Privacy_Policy',
           path: '/privacyPolicy',
-          builder: (context, params) => const PrivacyPolicyWidget(),
+          builder: (context, params) => PrivacyPolicyWidget(),
         ),
         FFRoute(
           name: 'Settings',
           path: '/settings',
-          builder: (context, params) => const SettingsWidget(),
+          builder: (context, params) => SettingsWidget(),
         ),
         FFRoute(
           name: 'SignIn',
           path: '/signIn',
-          builder: (context, params) => const SignInWidget(),
+          builder: (context, params) => SignInWidget(),
         ),
         FFRoute(
           name: 'SignUp',
           path: '/signUp',
-          builder: (context, params) => const SignUpWidget(),
+          builder: (context, params) => SignUpWidget(),
         ),
         FFRoute(
           name: 'MyPicture',
           path: '/myPicture',
-          builder: (context, params) => const MyPictureWidget(),
+          builder: (context, params) => MyPictureWidget(),
         ),
         FFRoute(
           name: 'OpenAppScreen',
           path: '/openAppScreen',
-          builder: (context, params) => const OpenAppScreenWidget(),
+          builder: (context, params) => OpenAppScreenWidget(),
         ),
         FFRoute(
           name: 'T2I',
@@ -151,12 +157,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'AIVideo',
           path: '/aIVideo',
-          builder: (context, params) => const AIVideoWidget(),
+          builder: (context, params) => AIVideoWidget(),
         ),
         FFRoute(
           name: 'HomePage',
           path: '/homePage',
-          builder: (context, params) => const HomePageWidget(),
+          builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
           name: 'QR_Generate',
@@ -181,12 +187,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'ForgotPassword',
           path: '/forgotPassword',
-          builder: (context, params) => const ForgotPasswordWidget(),
+          builder: (context, params) => ForgotPasswordWidget(),
         ),
         FFRoute(
           name: 'component',
           path: '/component',
-          builder: (context, params) => const ComponentWidget(),
+          builder: (context, params) => ComponentWidget(),
         ),
         FFRoute(
           name: 'ResetPassword',
@@ -433,7 +439,7 @@ class TransitionInfo {
   final Duration duration;
   final Alignment? alignment;
 
-  static TransitionInfo appDefault() => const TransitionInfo(hasTransition: false);
+  static TransitionInfo appDefault() => TransitionInfo(hasTransition: false);
 }
 
 class RootPageContext {

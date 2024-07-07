@@ -20,11 +20,13 @@ import 'package:sticky_headers/sticky_headers.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_debounce/easy_debounce.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 import 'a_i_portrait_model.dart';
 export 'a_i_portrait_model.dart';
@@ -33,7 +35,7 @@ class AIPortraitWidget extends StatefulWidget {
   const AIPortraitWidget({
     super.key,
     int? modelindex,
-  }) : modelindex = modelindex ?? 1;
+  }) : this.modelindex = modelindex ?? 1;
 
   final int modelindex;
 
@@ -55,7 +57,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await _model.selectStyleController?.animateToPage(
         widget.modelindex,
-        duration: const Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 500),
         curve: Curves.ease,
       );
       _model.getuuidresult = await actions.getUuid();
@@ -128,7 +130,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -136,7 +138,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                       StickyHeader(
                         overlapHeaders: false,
                         header: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 0.0),
                           child: Container(
                             decoration: BoxDecoration(
@@ -155,9 +157,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                     context.pushNamed('HomePage');
                                   },
                                   child: Container(
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 3.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -178,7 +180,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'b2phjhxr' /* AI Portrait */,
@@ -195,16 +197,16 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  alignment: AlignmentDirectional(1.0, 0.0),
                                   child: Builder(
                                     builder: (context) {
                                       if (!FFAppState().Logined) {
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -215,7 +217,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   model: _model.signiniconModel,
                                                   updateCallback: () =>
                                                       setState(() {}),
-                                                  child: const SigniniconWidget(),
+                                                  child: SigniniconWidget(),
                                                 ),
                                               ],
                                             ),
@@ -224,10 +226,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                       } else {
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 5.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -235,7 +237,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   MainAxisAlignment.end,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 5.0, 0.0),
                                                   child: InkWell(
@@ -265,7 +267,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             BoxShape.rectangle,
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFE4E4E4),
+                                                              Color(0xFFE4E4E4),
                                                         ),
                                                       ),
                                                       child: Row(
@@ -278,7 +280,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           Flexible(
                                                             child: Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Text(
                                                                 FFAppState()
@@ -308,11 +310,11 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -346,7 +348,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                           ),
                         ),
                         content: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               15.0, 10.0, 15.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
@@ -361,13 +363,13 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 10.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             15.0, 0.0, 0.0, 10.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
@@ -412,16 +414,16 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                           ],
                                         ),
                                       ),
-                                      SizedBox(
+                                      Container(
                                         width: double.infinity,
                                         height: 180.0,
                                         child: CarouselSlider(
                                           items: [
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 0.0, 0.0),
                                                 child: Container(
@@ -438,7 +440,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                       width: 2.0,
                                                     ),
                                                   ),
@@ -448,7 +450,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     3.0,
@@ -470,7 +472,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                       Expanded(
                                                         child: Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
@@ -506,7 +508,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -522,7 +524,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -532,7 +534,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -553,7 +555,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -581,7 +583,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -597,7 +599,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -607,7 +609,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -628,7 +630,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -656,7 +658,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -672,7 +674,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -682,7 +684,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -703,7 +705,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -731,7 +733,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -747,7 +749,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -757,7 +759,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -778,7 +780,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -806,7 +808,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -822,7 +824,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -832,7 +834,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -853,7 +855,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -881,7 +883,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -897,7 +899,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -907,7 +909,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -928,7 +930,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -956,7 +958,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -972,7 +974,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -982,7 +984,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -1003,7 +1005,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -1031,7 +1033,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: 120.0,
@@ -1047,7 +1049,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -1057,7 +1059,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   3.0,
@@ -1078,7 +1080,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     Expanded(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Text(
                                                           FFLocalizations.of(
@@ -1132,7 +1134,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -1143,24 +1145,24 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 10.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 0.0, 0.0, 10.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -1208,16 +1210,16 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                         if (_model.show)
                                           Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 0.0, 0.0, 10.0),
                                               child: Container(
                                                 width: 310.0,
                                                 height: 50.0,
                                                 decoration: BoxDecoration(
-                                                  color: const Color(0x9BE0E3E7),
+                                                  color: Color(0x9BE0E3E7),
                                                   borderRadius:
                                                       BorderRadius.circular(
                                                           30.0),
@@ -1236,7 +1238,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                               0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     5.0,
                                                                     0.0,
@@ -1244,7 +1246,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                     0.0),
                                                         child:
                                                             AnimatedContainer(
-                                                          duration: const Duration(
+                                                          duration: Duration(
                                                               milliseconds:
                                                                   2000),
                                                           curve: Curves.easeIn,
@@ -1265,7 +1267,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Row(
                                                         mainAxisSize:
@@ -1306,14 +1308,14 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                   FFButtonOptions(
                                                                 height: 50.0,
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1342,13 +1344,13 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
                                                                 ),
                                                                 borderRadius:
-                                                                    const BorderRadius
+                                                                    BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -1398,14 +1400,14 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                   FFButtonOptions(
                                                                 height: 50.0,
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
                                                                             0.0,
                                                                             0.0),
                                                                 iconPadding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1434,13 +1436,13 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                     ),
                                                                 elevation: 0.0,
                                                                 borderSide:
-                                                                    const BorderSide(
+                                                                    BorderSide(
                                                                   color: Colors
                                                                       .transparent,
                                                                   width: 1.0,
                                                                 ),
                                                                 borderRadius:
-                                                                    const BorderRadius
+                                                                    BorderRadius
                                                                         .only(
                                                                   bottomLeft: Radius
                                                                       .circular(
@@ -1470,7 +1472,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                           builder: (context) {
                                             if (_model.position == 1) {
                                               return Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 10.0, 0.0),
                                                 child: Container(
@@ -1483,12 +1485,12 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         BorderRadius.circular(
                                                             10.0),
                                                     border: Border.all(
-                                                      color: const Color(0xFFDFDFDF),
+                                                      color: Color(0xFFDFDFDF),
                                                     ),
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 15.0,
                                                                 10.0,
@@ -1500,7 +1502,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -1513,7 +1515,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Text(
@@ -1543,7 +1545,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                 builder:
                                                                     (context) =>
                                                                         Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -1575,9 +1577,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                         avoidOverflow:
                                                                             true,
                                                                         targetAnchor:
-                                                                            const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                            AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
                                                                         followerAnchor:
-                                                                            const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                         builder:
                                                                             (dialogContext) {
                                                                           return Material(
@@ -1586,7 +1588,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                             child:
                                                                                 GestureDetector(
                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                              child: SizedBox(
+                                                                              child: Container(
                                                                                 height: 70.0,
                                                                                 width: 330.0,
                                                                                 child: InfoWidget(
@@ -1619,11 +1621,11 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1639,7 +1641,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                   EasyDebounce
                                                                       .debounce(
                                                                 '_model.modelnameTextController',
-                                                                const Duration(
+                                                                Duration(
                                                                     milliseconds:
                                                                         2000),
                                                                 () => setState(
@@ -1661,7 +1663,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                           fontFamily:
                                                                               'Inter',
                                                                           color:
-                                                                              const Color(0xB36F6F6F),
+                                                                              Color(0xB36F6F6F),
                                                                           letterSpacing:
                                                                               0.0,
                                                                         ),
@@ -1683,7 +1685,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFFDFDFDF),
                                                                     width: 2.0,
@@ -1696,7 +1698,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                 focusedBorder:
                                                                     OutlineInputBorder(
                                                                   borderSide:
-                                                                      const BorderSide(
+                                                                      BorderSide(
                                                                     color: Color(
                                                                         0xFF0957DE),
                                                                     width: 2.0,
@@ -1735,7 +1737,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                               10.0),
                                                                 ),
                                                                 contentPadding:
-                                                                    const EdgeInsets
+                                                                    EdgeInsets
                                                                         .all(
                                                                             9.0),
                                                                 suffixIcon: _model
@@ -1752,7 +1754,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                               () {});
                                                                         },
                                                                         child:
-                                                                            const Icon(
+                                                                            Icon(
                                                                           Icons
                                                                               .clear,
                                                                           size:
@@ -1797,11 +1799,11 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       -1.0,
                                                                       0.0),
                                                               child: Padding(
-                                                                padding: const EdgeInsetsDirectional
+                                                                padding: EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         10.0,
@@ -1884,7 +1886,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                 10)
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             5.0,
                                                                             0.0,
@@ -1903,11 +1905,11 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                const EdgeInsetsDirectional
+                                                                EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -1937,7 +1939,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           ),
                                                         ),
                                                         if (_model
-                                                                .uploadedimages.isNotEmpty)
+                                                                .uploadedimages
+                                                                .length >=
+                                                            1)
                                                           Builder(
                                                             builder: (context) {
                                                               final uploadedImages =
@@ -1950,7 +1954,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                     EdgeInsets
                                                                         .zero,
                                                                 gridDelegate:
-                                                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                                                    SliverGridDelegateWithFixedCrossAxisCount(
                                                                   crossAxisCount:
                                                                       3,
                                                                   crossAxisSpacing:
@@ -1976,7 +1980,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                   return Stack(
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                         child:
@@ -2027,7 +2031,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             1.1,
                                                                             -1.1),
                                                                         child:
@@ -2070,7 +2074,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                     ),
                                                                                   ),
-                                                                                  duration: const Duration(milliseconds: 4000),
+                                                                                  duration: Duration(milliseconds: 4000),
                                                                                   backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                 ),
                                                                               );
@@ -2083,7 +2087,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                                       color: FlutterFlowTheme.of(context).primaryText,
                                                                                     ),
                                                                                   ),
-                                                                                  duration: const Duration(milliseconds: 4000),
+                                                                                  duration: Duration(milliseconds: 4000),
                                                                                   backgroundColor: FlutterFlowTheme.of(context).error,
                                                                                 ),
                                                                               );
@@ -2095,7 +2099,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                       ),
                                                                       if (false)
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               -1.1,
                                                                               1.1),
                                                                           child:
@@ -2124,7 +2128,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                         ),
                                                                       if (false)
                                                                         Align(
-                                                                          alignment: const AlignmentDirectional(
+                                                                          alignment: AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -2152,14 +2156,14 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             10)
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Builder(
                                                               builder:
                                                                   (context) =>
                                                                       Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -2243,10 +2247,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
+                                                                              alignment: AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: SizedBox(
+                                                                                child: Container(
                                                                                   height: 100.0,
                                                                                   width: double.infinity,
                                                                                   child: MessageErrorWidget(
@@ -2334,7 +2338,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          const AlignmentDirectional(
+                                                                          AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -2342,7 +2346,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                                AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 ClipRRect(
                                                                               borderRadius: BorderRadius.circular(0.0),
@@ -2355,10 +2359,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(0.0, -1.0),
+                                                                                AlignmentDirectional(0.0, -1.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                                                                               child: ClipRRect(
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                 child: Image.asset(
@@ -2372,10 +2376,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                                AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   'vyi68vw1' /* Upload Images */,
@@ -2393,10 +2397,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                const AlignmentDirectional(0.0, 0.0),
+                                                                                AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
+                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   '2eury0tz' /* File types : PNG/JPG, maximum ... */,
@@ -2426,7 +2430,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               );
                                             } else {
                                               return Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 10.0, 0.0),
                                                 child: Container(
@@ -2439,12 +2443,12 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         BorderRadius.circular(
                                                             10.0),
                                                     border: Border.all(
-                                                      color: const Color(0xFFDFDFDF),
+                                                      color: Color(0xFFDFDFDF),
                                                     ),
                                                   ),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(
                                                                 15.0,
                                                                 10.0,
@@ -2456,7 +2460,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                       children: [
                                                         Padding(
                                                           padding:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -2469,7 +2473,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Text(
@@ -2499,7 +2503,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                 builder:
                                                                     (context) =>
                                                                         Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           5.0,
                                                                           0.0,
@@ -2531,9 +2535,9 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                         avoidOverflow:
                                                                             true,
                                                                         targetAnchor:
-                                                                            const AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
+                                                                            AlignmentDirectional(-1.0, 1.0).resolve(Directionality.of(context)),
                                                                         followerAnchor:
-                                                                            const AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
+                                                                            AlignmentDirectional(0.0, 0.0).resolve(Directionality.of(context)),
                                                                         builder:
                                                                             (dialogContext) {
                                                                           return Material(
@@ -2542,7 +2546,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                                             child:
                                                                                 GestureDetector(
                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                              child: SizedBox(
+                                                                              child: Container(
                                                                                 height: 70.0,
                                                                                 width: 330.0,
                                                                                 child: InfoWidget(
@@ -2634,7 +2638,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           borderWidth: 2.0,
                                                           borderRadius: 9.0,
                                                           margin:
-                                                              const EdgeInsetsDirectional
+                                                              EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       16.0,
                                                                       4.0,
@@ -2669,7 +2673,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                         if (_model.position == 1)
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 10.0, 15.0, 10.0),
                                             child: FFButtonWidget(
                                               onPressed: () async {
@@ -2678,7 +2682,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   backgroundColor:
                                                       Colors.transparent,
                                                   barrierColor:
-                                                      const Color(0xCD000000),
+                                                      Color(0xCD000000),
                                                   context: context,
                                                   builder: (context) {
                                                     return GestureDetector(
@@ -2696,7 +2700,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         padding: MediaQuery
                                                             .viewInsetsOf(
                                                                 context),
-                                                        child: const SizedBox(
+                                                        child: Container(
                                                           height: 860.0,
                                                           child:
                                                               UplodingguideWidget(),
@@ -2711,7 +2715,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   .getText(
                                                 '56xppndv' /* Uploading Guide */,
                                               ),
-                                              icon: const Icon(
+                                              icon: Icon(
                                                 Icons.light_mode,
                                                 color: Color(0xFFF79803),
                                                 size: 15.0,
@@ -2719,14 +2723,14 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               options: FFButtonOptions(
                                                 width: 300.0,
                                                 height: 37.0,
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         25.0, 0.0, 25.0, 0.0),
                                                 iconPadding:
-                                                    const EdgeInsetsDirectional
+                                                    EdgeInsetsDirectional
                                                         .fromSTEB(
                                                             0.0, 0.0, 0.0, 0.0),
-                                                color: const Color(0xFFFFF8EE),
+                                                color: Color(0xFFFFF8EE),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .titleSmall
@@ -2741,7 +2745,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           useGoogleFonts: false,
                                                         ),
                                                 elevation: 3.0,
-                                                borderSide: const BorderSide(
+                                                borderSide: BorderSide(
                                                   color: Color(0x45FFB240),
                                                   width: 1.0,
                                                 ),
@@ -2756,7 +2760,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -2767,28 +2771,28 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 10.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, 0.0),
+                                              AlignmentDirectional(-1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     5.0, 0.0, 0.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -2839,10 +2843,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(-1.0, -1.0),
+                                              AlignmentDirectional(-1.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 5.0, 0.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -2869,7 +2873,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Slider(
                                                     activeColor:
@@ -2906,7 +2910,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                   ),
                                                 ),
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 40.0, 0.0, 0.0),
                                                   child: Row(
@@ -2918,7 +2922,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                     children: [
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     25.0,
                                                                     0.0,
@@ -3079,7 +3083,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -3126,17 +3130,19 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Builder(
                   builder: (context) => Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                     child: FFButtonWidget(
                       onPressed: (_model.position == -1
                               ? (_model.dropDownValue == null ||
                                   _model.dropDownValue == '')
                               : ((_model.uploadedimages.length != 10) ||
                                   (_model.modelnameTextController.text ==
+                                          null ||
+                                      _model.modelnameTextController.text ==
                                           '')))
                           ? null
                           : () async {
@@ -3271,7 +3277,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: const AlignmentDirectional(
+                                            alignment: AlignmentDirectional(
                                                     0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
@@ -3348,7 +3354,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -3360,7 +3366,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             _model.unfocusNode)
                                                     : FocusScope.of(context)
                                                         .unfocus(),
-                                                child: const DoneWidget(),
+                                                child: DoneWidget(),
                                               ),
                                             );
                                           },
@@ -3451,7 +3457,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                               insetPadding: EdgeInsets.zero,
                                               backgroundColor:
                                                   Colors.transparent,
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                       0.0, -1.0)
                                                   .resolve(Directionality.of(
                                                       context)),
@@ -3463,7 +3469,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                             _model.unfocusNode)
                                                     : FocusScope.of(context)
                                                         .unfocus(),
-                                                child: SizedBox(
+                                                child: Container(
                                                   height: 100.0,
                                                   width: double.infinity,
                                                   child: MessageErrorWidget(
@@ -3489,7 +3495,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: const AlignmentDirectional(
+                                            alignment: AlignmentDirectional(
                                                     0.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
@@ -3501,7 +3507,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           _model.unfocusNode)
                                                   : FocusScope.of(context)
                                                       .unfocus(),
-                                              child: SizedBox(
+                                              child: Container(
                                                 height: 100.0,
                                                 width: double.infinity,
                                                 child: MessageErrorWidget(
@@ -3526,7 +3532,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, -1.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -3538,7 +3544,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: SizedBox(
+                                            child: Container(
                                               height: 100.0,
                                               width: double.infinity,
                                               child: MessageErrorWidget(
@@ -3663,7 +3669,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -3738,7 +3744,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: const AlignmentDirectional(
+                                            alignment: AlignmentDirectional(
                                                     0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
@@ -3750,7 +3756,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           _model.unfocusNode)
                                                   : FocusScope.of(context)
                                                       .unfocus(),
-                                              child: const DoneWidget(),
+                                              child: DoneWidget(),
                                             ),
                                           );
                                         },
@@ -3834,7 +3840,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: const AlignmentDirectional(
+                                            alignment: AlignmentDirectional(
                                                     0.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
@@ -3846,7 +3852,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                           _model.unfocusNode)
                                                   : FocusScope.of(context)
                                                       .unfocus(),
-                                              child: SizedBox(
+                                              child: Container(
                                                 height: 100.0,
                                                 width: double.infinity,
                                                 child: MessageErrorWidget(
@@ -3871,7 +3877,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, -1.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -3883,7 +3889,7 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: SizedBox(
+                                            child: Container(
                                               height: 100.0,
                                               width: double.infinity,
                                               child: MessageErrorWidget(
@@ -3919,10 +3925,10 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                       options: FFButtonOptions(
                         width: 390.0,
                         height: 45.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -3932,11 +3938,11 @@ class _AIPortraitWidgetState extends State<AIPortraitWidget> {
                                   useGoogleFonts: false,
                                 ),
                         elevation: 3.0,
-                        borderSide: const BorderSide(
+                        borderSide: BorderSide(
                           color: Colors.transparent,
                         ),
                         borderRadius: BorderRadius.circular(25.0),
-                        disabledColor: const Color(0x581371FF),
+                        disabledColor: Color(0x581371FF),
                         disabledTextColor: FlutterFlowTheme.of(context).info,
                       ),
                     ),

@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 't2i_model.dart';
 export 't2i_model.dart';
@@ -23,7 +24,7 @@ class T2iWidget extends StatefulWidget {
   const T2iWidget({
     super.key,
     int? modelindex,
-  }) : modelindex = modelindex ?? 1;
+  }) : this.modelindex = modelindex ?? 1;
 
   final int modelindex;
 
@@ -45,7 +46,7 @@ class _T2iWidgetState extends State<T2iWidget> {
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await _model.selectModelController?.animateToPage(
         widget.modelindex,
-        duration: const Duration(milliseconds: 500),
+        duration: Duration(milliseconds: 500),
         curve: Curves.ease,
       );
     });
@@ -120,7 +121,7 @@ class _T2iWidgetState extends State<T2iWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -128,7 +129,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                       StickyHeader(
                         overlapHeaders: false,
                         header: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 0.0),
                           child: Container(
                             width: double.infinity,
@@ -148,9 +149,9 @@ class _T2iWidgetState extends State<T2iWidget> {
                                     context.pushNamed('HomePage');
                                   },
                                   child: Container(
-                                    decoration: const BoxDecoration(),
+                                    decoration: BoxDecoration(),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           10.0, 3.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -171,7 +172,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       '0hp2lrj7' /* Text to Image */,
@@ -188,16 +189,16 @@ class _T2iWidgetState extends State<T2iWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                                  alignment: AlignmentDirectional(1.0, 0.0),
                                   child: Builder(
                                     builder: (context) {
                                       if (!FFAppState().Logined) {
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -208,7 +209,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   model: _model.signiniconModel,
                                                   updateCallback: () =>
                                                       setState(() {}),
-                                                  child: const SigniniconWidget(),
+                                                  child: SigniniconWidget(),
                                                 ),
                                               ],
                                             ),
@@ -217,10 +218,10 @@ class _T2iWidgetState extends State<T2iWidget> {
                                       } else {
                                         return Align(
                                           alignment:
-                                              const AlignmentDirectional(1.0, 0.0),
+                                              AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 5.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -228,7 +229,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   MainAxisAlignment.end,
                                               children: [
                                                 Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           0.0, 0.0, 5.0, 0.0),
                                                   child: InkWell(
@@ -258,7 +259,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                             BoxShape.rectangle,
                                                         border: Border.all(
                                                           color:
-                                                              const Color(0xFFE4E4E4),
+                                                              Color(0xFFE4E4E4),
                                                         ),
                                                       ),
                                                       child: Row(
@@ -271,7 +272,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           Flexible(
                                                             child: Align(
                                                               alignment:
-                                                                  const AlignmentDirectional(
+                                                                  AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Text(
                                                                 FFAppState()
@@ -301,11 +302,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ),
                                                           Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     1.0, 0.0),
                                                             child: Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -342,7 +343,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   15.0, 10.0, 15.0, 10.0),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -353,17 +354,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 10.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
@@ -410,7 +411,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                           ),
                                         ),
                                       ),
-                                      SizedBox(
+                                      Container(
                                         width: double.infinity,
                                         height: 140.0,
                                         child: CarouselSlider(
@@ -428,17 +429,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -454,12 +455,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -494,11 +495,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -549,12 +550,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   ClipRRect(
@@ -570,12 +571,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -610,11 +611,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -665,12 +666,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   ClipRRect(
@@ -686,12 +687,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -726,11 +727,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -781,12 +782,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   ClipRRect(
@@ -802,12 +803,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -842,11 +843,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -885,7 +886,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                               ),
                                             ),
                                             Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Container(
                                                 width: double.infinity,
@@ -901,18 +902,18 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : const Color(0xFFE4E4E4),
+                                                            : Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
                                                 child: Stack(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: ClipRRect(
                                                         borderRadius:
@@ -930,13 +931,13 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 1.0),
                                                       child: Container(
                                                         width: double.infinity,
                                                         height: 25.0,
                                                         decoration:
-                                                            const BoxDecoration(
+                                                            BoxDecoration(
                                                           gradient:
                                                               LinearGradient(
                                                             colors: [
@@ -971,11 +972,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               0.0, 1.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1025,17 +1026,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1051,12 +1052,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1091,11 +1092,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1146,17 +1147,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1172,12 +1173,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1212,11 +1213,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1267,17 +1268,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1293,12 +1294,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1333,11 +1334,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1388,17 +1389,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1414,12 +1415,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1454,11 +1455,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1509,17 +1510,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1535,14 +1536,14 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
                                                       decoration: BoxDecoration(
                                                         gradient:
-                                                            const LinearGradient(
+                                                            LinearGradient(
                                                           colors: [
                                                             Color(0x04000000),
                                                             Color(0xD4000000)
@@ -1556,7 +1557,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                   0, 1.0),
                                                         ),
                                                         borderRadius:
-                                                            const BorderRadius.only(
+                                                            BorderRadius.only(
                                                           bottomLeft:
                                                               Radius.circular(
                                                                   10.0),
@@ -1578,7 +1579,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       .of(
                                                                           context)
                                                                   .primary
-                                                              : const Color(
+                                                              : Color(
                                                                   0xFFE4E4E4),
                                                         ),
                                                       ),
@@ -1586,11 +1587,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1641,17 +1642,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1667,12 +1668,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1707,11 +1708,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1762,17 +1763,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1788,12 +1789,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1828,11 +1829,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -1883,17 +1884,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -1909,12 +1910,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -1949,11 +1950,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2004,17 +2005,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2030,12 +2031,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2070,11 +2071,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2125,17 +2126,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2151,12 +2152,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2191,11 +2192,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2246,17 +2247,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2272,12 +2273,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2312,11 +2313,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2367,17 +2368,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2393,12 +2394,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2433,11 +2434,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2488,17 +2489,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2514,12 +2515,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2554,11 +2555,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2609,17 +2610,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2635,12 +2636,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2675,11 +2676,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2730,17 +2731,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2756,12 +2757,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2796,11 +2797,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -2851,17 +2852,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : const Color(0xFFE4E4E4),
+                                                          : Color(0xFFE4E4E4),
                                                   width: 2.0,
                                                 ),
                                               ),
                                               child: Stack(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: ClipRRect(
                                                       borderRadius:
@@ -2877,12 +2878,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Container(
                                                       width: double.infinity,
                                                       height: 25.0,
-                                                      decoration: const BoxDecoration(
+                                                      decoration: BoxDecoration(
                                                         gradient:
                                                             LinearGradient(
                                                           colors: [
@@ -2917,11 +2918,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        const AlignmentDirectional(
+                                                        AlignmentDirectional(
                                                             0.0, 1.0),
                                                     child: Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -3098,15 +3099,15 @@ class _T2iWidgetState extends State<T2iWidget> {
                                           ),
                                         ),
                                       ),
-                                    ].divide(const SizedBox(height: 24.0)),
+                                    ].divide(SizedBox(height: 24.0)),
                                   ),
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     15.0, 0.0, 15.0, 10.0),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -3117,7 +3118,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                   child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.0, 0.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -3125,21 +3126,21 @@ class _T2iWidgetState extends State<T2iWidget> {
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     10.0, 10.0, 10.0, 5.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(5.0, 0.0,
                                                                 0.0, 10.0),
                                                     child: Row(
@@ -3148,7 +3149,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
@@ -3202,7 +3203,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                                SizedBox(
+                                                Container(
                                                   width: double.infinity,
                                                   child: TextFormField(
                                                     controller: _model
@@ -3212,7 +3213,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     onChanged: (_) =>
                                                         EasyDebounce.debounce(
                                                       '_model.promptTextController',
-                                                      const Duration(
+                                                      Duration(
                                                           milliseconds: 2000),
                                                       () => setState(() {}),
                                                     ),
@@ -3234,7 +3235,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xB36F6F6F),
                                                                 fontSize: 12.0,
                                                                 letterSpacing:
@@ -3256,7 +3257,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xB36F6F6F),
                                                                 fontSize: 12.0,
                                                                 letterSpacing:
@@ -3266,7 +3267,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               ),
                                                       enabledBorder:
                                                           OutlineInputBorder(
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color:
                                                               Color(0xB36F6F6F),
                                                           width: 1.0,
@@ -3277,7 +3278,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                       ),
                                                       focusedBorder:
                                                           OutlineInputBorder(
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color:
                                                               Color(0xFF0957DE),
                                                           width: 1.0,
@@ -3351,7 +3352,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                         MaxLengthEnforcement
                                                             .none,
                                                     cursorColor:
-                                                        const Color(0xFF0957DE),
+                                                        Color(0xFF0957DE),
                                                     validator: _model
                                                         .promptTextControllerValidator
                                                         .asValidator(context),
@@ -3359,11 +3360,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 5.0),
                                                     child: Text(
@@ -3390,11 +3391,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 10.0),
                                                     child: Text(
@@ -3422,7 +3423,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     ),
                                                   ),
                                                 ),
-                                                SizedBox(
+                                                Container(
                                                   width: double.infinity,
                                                   child: TextFormField(
                                                     controller: _model
@@ -3432,7 +3433,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     onChanged: (_) =>
                                                         EasyDebounce.debounce(
                                                       '_model.negativepromptTextController',
-                                                      const Duration(
+                                                      Duration(
                                                           milliseconds: 2000),
                                                       () => setState(() {}),
                                                     ),
@@ -3471,7 +3472,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               .override(
                                                                 fontFamily:
                                                                     'NotoSansThai',
-                                                                color: const Color(
+                                                                color: Color(
                                                                     0xB36F6F6F),
                                                                 fontSize: 12.0,
                                                                 letterSpacing:
@@ -3481,7 +3482,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               ),
                                                       enabledBorder:
                                                           OutlineInputBorder(
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color:
                                                               Color(0xB36F6F6F),
                                                           width: 1.0,
@@ -3492,7 +3493,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                       ),
                                                       focusedBorder:
                                                           OutlineInputBorder(
-                                                        borderSide: const BorderSide(
+                                                        borderSide: BorderSide(
                                                           color:
                                                               Color(0xFF0957DE),
                                                           width: 1.0,
@@ -3562,7 +3563,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     textAlign: TextAlign.start,
                                                     maxLines: null,
                                                     cursorColor:
-                                                        const Color(0xFF0957DE),
+                                                        Color(0xFF0957DE),
                                                     validator: _model
                                                         .negativepromptTextControllerValidator
                                                         .asValidator(context),
@@ -3570,11 +3571,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 10.0,
                                                                 0.0, 5.0),
                                                     child: Text(
@@ -3601,7 +3602,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Text(
                                                     FFLocalizations.of(context)
@@ -3628,7 +3629,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   10.0, 0.0, 10.0, 0.0),
                                           child: Container(
                                             width: double.infinity,
@@ -3652,7 +3653,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -3723,14 +3724,14 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                   0.35,
                                                           height: 35.0,
                                                           constraints:
-                                                              const BoxConstraints(
+                                                              BoxConstraints(
                                                             maxWidth: 200.0,
                                                           ),
                                                           decoration:
                                                               BoxDecoration(
                                                             color: _model.selectsize ==
                                                                     1
-                                                                ? const Color(
+                                                                ? Color(
                                                                     0xFFF0F4FA)
                                                                 : FlutterFlowTheme.of(
                                                                         context)
@@ -3746,17 +3747,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                   ? FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary
-                                                                  : const Color(
+                                                                  : Color(
                                                                       0xFFE4E4E4),
                                                               width: 2.0,
                                                             ),
                                                           ),
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Align(
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -3765,12 +3766,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      const AlignmentDirectional(
+                                                                      AlignmentDirectional(
                                                                           -1.0,
                                                                           0.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: const EdgeInsetsDirectional
+                                                                    padding: EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3786,9 +3787,9 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           BoxDecoration(
                                                                         color: _model.selectsize ==
                                                                                 1
-                                                                            ? const Color(0xFFF0F4FA)
+                                                                            ? Color(0xFFF0F4FA)
                                                                             : FlutterFlowTheme.of(context).secondaryBackground,
-                                                                        boxShadow: const [
+                                                                        boxShadow: [
                                                                           BoxShadow(
                                                                             blurRadius:
                                                                                 2.0,
@@ -3905,7 +3906,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 0.35,
                                                         height: 35.0,
                                                         constraints:
-                                                            const BoxConstraints(
+                                                            BoxConstraints(
                                                           maxWidth: 200.0,
                                                         ),
                                                         decoration:
@@ -3913,7 +3914,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           color: _model
                                                                       .selectsize ==
                                                                   2
-                                                              ? const Color(
+                                                              ? Color(
                                                                   0xFFF0F4FA)
                                                               : FlutterFlowTheme
                                                                       .of(context)
@@ -3929,17 +3930,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
-                                                                : const Color(
+                                                                : Color(
                                                                     0xFFE4E4E4),
                                                             width: 2.0,
                                                           ),
                                                         ),
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Align(
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -3948,7 +3949,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3962,11 +3963,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       BoxDecoration(
                                                                     color: _model.selectsize ==
                                                                             2
-                                                                        ? const Color(
+                                                                        ? Color(
                                                                             0xFFF0F4FA)
                                                                         : FlutterFlowTheme.of(context)
                                                                             .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             2.0,
@@ -4033,7 +4034,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -4104,14 +4105,14 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                   0.35,
                                                           height: 35.0,
                                                           constraints:
-                                                              const BoxConstraints(
+                                                              BoxConstraints(
                                                             maxWidth: 200.0,
                                                           ),
                                                           decoration:
                                                               BoxDecoration(
                                                             color: _model.selectsize ==
                                                                     3
-                                                                ? const Color(
+                                                                ? Color(
                                                                     0xFFF0F4FA)
                                                                 : FlutterFlowTheme.of(
                                                                         context)
@@ -4127,13 +4128,13 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                   ? FlutterFlowTheme.of(
                                                                           context)
                                                                       .primary
-                                                                  : const Color(
+                                                                  : Color(
                                                                       0xFFE4E4E4),
                                                               width: 2.0,
                                                             ),
                                                           ),
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Row(
                                                             mainAxisSize:
@@ -4142,7 +4143,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    const EdgeInsetsDirectional
+                                                                    EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -4156,11 +4157,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       BoxDecoration(
                                                                     color: _model.selectsize ==
                                                                             3
-                                                                        ? const Color(
+                                                                        ? Color(
                                                                             0xFFF0F4FA)
                                                                         : FlutterFlowTheme.of(context)
                                                                             .secondaryBackground,
-                                                                    boxShadow: const [
+                                                                    boxShadow: [
                                                                       BoxShadow(
                                                                         blurRadius:
                                                                             2.0,
@@ -4279,7 +4280,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 0.35,
                                                         height: 35.0,
                                                         constraints:
-                                                            const BoxConstraints(
+                                                            BoxConstraints(
                                                           maxWidth: 200.0,
                                                         ),
                                                         decoration:
@@ -4287,7 +4288,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           color: _model
                                                                       .selectsize ==
                                                                   4
-                                                              ? const Color(
+                                                              ? Color(
                                                                   0xFFF0F4FA)
                                                               : FlutterFlowTheme
                                                                       .of(context)
@@ -4303,13 +4304,13 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 ? FlutterFlowTheme.of(
                                                                         context)
                                                                     .primary
-                                                                : const Color(
+                                                                : Color(
                                                                     0xFFE4E4E4),
                                                             width: 2.0,
                                                           ),
                                                         ),
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Row(
                                                           mainAxisSize:
@@ -4317,7 +4318,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           children: [
                                                             Padding(
                                                               padding:
-                                                                  const EdgeInsetsDirectional
+                                                                  EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4331,12 +4332,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                   color: _model
                                                                               .selectsize ==
                                                                           4
-                                                                      ? const Color(
+                                                                      ? Color(
                                                                           0xFFF0F4FA)
                                                                       : FlutterFlowTheme.of(
                                                                               context)
                                                                           .secondaryBackground,
-                                                                  boxShadow: const [
+                                                                  boxShadow: [
                                                                     BoxShadow(
                                                                       blurRadius:
                                                                           2.0,
@@ -4404,7 +4405,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     Flexible(
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -4476,7 +4477,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 0.35,
                                                             height: 35.0,
                                                             constraints:
-                                                                const BoxConstraints(
+                                                                BoxConstraints(
                                                               maxWidth: 200.0,
                                                             ),
                                                             decoration:
@@ -4484,7 +4485,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               color: _model
                                                                           .selectsize ==
                                                                       5
-                                                                  ? const Color(
+                                                                  ? Color(
                                                                       0xFFF0F4FA)
                                                                   : FlutterFlowTheme.of(
                                                                           context)
@@ -4501,13 +4502,13 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : const Color(
+                                                                    : Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             alignment:
-                                                                const AlignmentDirectional(
+                                                                AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Row(
                                                               mainAxisSize:
@@ -4515,7 +4516,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       .min,
                                                               children: [
                                                                 Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           0.0,
@@ -4530,11 +4531,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         BoxDecoration(
                                                                       color: _model.selectsize ==
                                                                               5
-                                                                          ? const Color(
+                                                                          ? Color(
                                                                               0xFFF0F4FA)
                                                                           : FlutterFlowTheme.of(context)
                                                                               .secondaryBackground,
-                                                                      boxShadow: const [
+                                                                      boxShadow: [
                                                                         BoxShadow(
                                                                           blurRadius:
                                                                               2.0,
@@ -4598,7 +4599,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 0.35,
                                                         height: 35.0,
                                                         constraints:
-                                                            const BoxConstraints(
+                                                            BoxConstraints(
                                                           maxWidth: 200.0,
                                                         ),
                                                         decoration:
@@ -4617,7 +4618,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           ),
                                                         ),
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                       ),
                                                     ),
@@ -4629,13 +4630,13 @@ class _T2iWidgetState extends State<T2iWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 10.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         10.0, 0.0, 10.0, 0.0),
                                                 child: Row(
@@ -4644,11 +4645,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          const AlignmentDirectional(
+                                                          AlignmentDirectional(
                                                               -1.0, 0.0),
                                                       child: Padding(
                                                         padding:
-                                                            const EdgeInsetsDirectional
+                                                            EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     10.0,
                                                                     0.0,
@@ -4681,7 +4682,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     Flexible(
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 1.0, 0.0),
                                                         child: Switch.adaptive(
                                                           value: _model
@@ -4690,8 +4691,8 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               (newValue) async {
                                                             setState(() => _model
                                                                     .manualswitchValue =
-                                                                newValue);
-                                                            if (newValue) {
+                                                                newValue!);
+                                                            if (newValue!) {
                                                               _model.selectsize =
                                                                   0;
                                                               setState(() {});
@@ -4702,7 +4703,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       context)
                                                                   .primary,
                                                           activeTrackColor:
-                                                              const Color(0x8A0957DE),
+                                                              Color(0x8A0957DE),
                                                           inactiveTrackColor:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -4721,19 +4722,19 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   true)
                                                 Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        const EdgeInsetsDirectional
+                                                        EdgeInsetsDirectional
                                                             .fromSTEB(10.0, 0.0,
                                                                 10.0, 0.0),
                                                     child: Container(
                                                       decoration:
-                                                          const BoxDecoration(),
+                                                          BoxDecoration(),
                                                       child: Align(
                                                         alignment:
-                                                            const AlignmentDirectional(
+                                                            AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Container(
                                                           width:
@@ -4746,7 +4747,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 .secondaryBackground,
                                                           ),
                                                           alignment:
-                                                              const AlignmentDirectional(
+                                                              AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Column(
                                                             mainAxisSize:
@@ -4758,11 +4759,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -4777,7 +4778,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                             .start,
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
@@ -4798,12 +4799,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               5.0,
                                                                               0.0,
@@ -4836,7 +4837,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 children: [
                                                                   Flexible(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width: double
                                                                           .infinity,
                                                                       child:
@@ -4875,7 +4876,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  SizedBox(
+                                                                  Container(
                                                                     width: 55.0,
                                                                     child:
                                                                         TextFormField(
@@ -4889,7 +4890,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           (_) =>
                                                                               EasyDebounce.debounce(
                                                                         '_model.widthvalueTextController',
-                                                                        const Duration(
+                                                                        Duration(
                                                                             milliseconds:
                                                                                 2000),
                                                                         () async {
@@ -4939,7 +4940,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                             .labelMedium
                                                                             .override(
                                                                               fontFamily: 'NotoSansThai',
-                                                                              color: const Color(0xB36F6F6F),
+                                                                              color: Color(0xB36F6F6F),
                                                                               fontSize: 12.0,
                                                                               letterSpacing: 0.0,
                                                                               useGoogleFonts: false,
@@ -4947,7 +4948,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         enabledBorder:
                                                                             OutlineInputBorder(
                                                                           borderSide:
-                                                                              const BorderSide(
+                                                                              BorderSide(
                                                                             color:
                                                                                 Color(0xB36F6F6F),
                                                                             width:
@@ -4959,7 +4960,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         focusedBorder:
                                                                             OutlineInputBorder(
                                                                           borderSide:
-                                                                              const BorderSide(
+                                                                              BorderSide(
                                                                             color:
                                                                                 Color(0xFF0957DE),
                                                                             width:
@@ -4992,7 +4993,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           borderRadius:
                                                                               BorderRadius.circular(5.0),
                                                                         ),
-                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -5017,7 +5018,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           TextAlign
                                                                               .center,
                                                                       cursorColor:
-                                                                          const Color(
+                                                                          Color(
                                                                               0xFF0957DE),
                                                                       validator: _model
                                                                           .widthvalueTextControllerValidator
@@ -5029,11 +5030,11 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    const AlignmentDirectional(
+                                                                    AlignmentDirectional(
                                                                         -1.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: const EdgeInsetsDirectional
+                                                                  padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           15.0,
                                                                           0.0,
@@ -5045,7 +5046,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                             .max,
                                                                     children: [
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
@@ -5066,12 +5067,12 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         ),
                                                                       ),
                                                                       Align(
-                                                                        alignment: const AlignmentDirectional(
+                                                                        alignment: AlignmentDirectional(
                                                                             -1.0,
                                                                             0.0),
                                                                         child:
                                                                             Padding(
-                                                                          padding: const EdgeInsetsDirectional.fromSTEB(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
                                                                               0.0,
                                                                               5.0,
                                                                               0.0,
@@ -5101,7 +5102,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                 children: [
                                                                   Flexible(
                                                                     child:
-                                                                        SizedBox(
+                                                                        Container(
                                                                       width: double
                                                                           .infinity,
                                                                       child:
@@ -5140,7 +5141,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                       ),
                                                                     ),
                                                                   ),
-                                                                  SizedBox(
+                                                                  Container(
                                                                     width: 55.0,
                                                                     child:
                                                                         TextFormField(
@@ -5154,7 +5155,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           (_) =>
                                                                               EasyDebounce.debounce(
                                                                         '_model.heightvalueTextController',
-                                                                        const Duration(
+                                                                        Duration(
                                                                             milliseconds:
                                                                                 2000),
                                                                         () async {
@@ -5200,7 +5201,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                             .labelMedium
                                                                             .override(
                                                                               fontFamily: 'NotoSansThai',
-                                                                              color: const Color(0xB36F6F6F),
+                                                                              color: Color(0xB36F6F6F),
                                                                               fontSize: 12.0,
                                                                               letterSpacing: 0.0,
                                                                               useGoogleFonts: false,
@@ -5208,7 +5209,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         enabledBorder:
                                                                             OutlineInputBorder(
                                                                           borderSide:
-                                                                              const BorderSide(
+                                                                              BorderSide(
                                                                             color:
                                                                                 Color(0xB36F6F6F),
                                                                             width:
@@ -5220,7 +5221,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                         focusedBorder:
                                                                             OutlineInputBorder(
                                                                           borderSide:
-                                                                              const BorderSide(
+                                                                              BorderSide(
                                                                             color:
                                                                                 Color(0xFF0957DE),
                                                                             width:
@@ -5253,7 +5254,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           borderRadius:
                                                                               BorderRadius.circular(5.0),
                                                                         ),
-                                                                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                                                                        contentPadding: EdgeInsetsDirectional.fromSTEB(
                                                                             0.0,
                                                                             10.0,
                                                                             0.0,
@@ -5278,7 +5279,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                                           TextAlign
                                                                               .center,
                                                                       cursorColor:
-                                                                          const Color(
+                                                                          Color(
                                                                               0xFF0957DE),
                                                                       validator: _model
                                                                           .heightvalueTextControllerValidator
@@ -5305,7 +5306,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   15.0, 0.0, 15.0, 0.0),
                               child: Card(
                                 clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -5316,26 +5317,26 @@ class _T2iWidgetState extends State<T2iWidget> {
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 10.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, 0.0),
+                                            AlignmentDirectional(-1.0, 0.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   5.0, 0.0, 0.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: const EdgeInsetsDirectional
+                                                  padding: EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           10.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -5384,10 +5385,10 @@ class _T2iWidgetState extends State<T2iWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-1.0, -1.0),
+                                            AlignmentDirectional(-1.0, -1.0),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 5.0, 0.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -5410,7 +5411,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                           Stack(
                                             children: [
                                               Align(
-                                                alignment: const AlignmentDirectional(
+                                                alignment: AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Slider(
                                                   activeColor:
@@ -5448,7 +5449,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                 ),
                                               ),
                                               Padding(
-                                                padding: const EdgeInsetsDirectional
+                                                padding: EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 40.0, 0.0, 0.0),
                                                 child: Row(
@@ -5460,7 +5461,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   25.0,
                                                                   0.0,
@@ -5614,7 +5615,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                     ),
                                                     Padding(
                                                       padding:
-                                                          const EdgeInsetsDirectional
+                                                          EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -5660,14 +5661,17 @@ class _T2iWidgetState extends State<T2iWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Builder(
                   builder: (context) => Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                     child: FFButtonWidget(
-                      onPressed: ((_model.promptTextController.text == '') ||
+                      onPressed: ((_model.promptTextController.text == null ||
+                                  _model.promptTextController.text == '') ||
                               (_model.negativepromptTextController.text ==
+                                      null ||
+                                  _model.negativepromptTextController.text ==
                                       ''))
                           ? null
                           : () async {
@@ -5722,7 +5726,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -5796,7 +5800,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: const AlignmentDirectional(
+                                            alignment: AlignmentDirectional(
                                                     0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
@@ -5808,7 +5812,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           _model.unfocusNode)
                                                   : FocusScope.of(context)
                                                       .unfocus(),
-                                              child: const DoneWidget(),
+                                              child: DoneWidget(),
                                             ),
                                           );
                                         },
@@ -5865,7 +5869,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                             elevation: 0,
                                             insetPadding: EdgeInsets.zero,
                                             backgroundColor: Colors.transparent,
-                                            alignment: const AlignmentDirectional(
+                                            alignment: AlignmentDirectional(
                                                     0.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
@@ -5877,7 +5881,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                           _model.unfocusNode)
                                                   : FocusScope.of(context)
                                                       .unfocus(),
-                                              child: SizedBox(
+                                              child: Container(
                                                 height: 100.0,
                                                 width: double.infinity,
                                                 child: MessageErrorWidget(
@@ -5902,7 +5906,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, -1.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -5914,7 +5918,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: SizedBox(
+                                            child: Container(
                                               height: 100.0,
                                               width: double.infinity,
                                               child: MessageErrorWidget(
@@ -5939,7 +5943,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0)
+                                            AlignmentDirectional(0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         child: GestureDetector(
@@ -5950,7 +5954,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                                       _model.unfocusNode)
                                               : FocusScope.of(context)
                                                   .unfocus(),
-                                          child: SizedBox(
+                                          child: Container(
                                             height: 100.0,
                                             width: double.infinity,
                                             child: MessageErrorWidget(
@@ -5984,10 +5988,10 @@ class _T2iWidgetState extends State<T2iWidget> {
                       options: FFButtonOptions(
                         width: 390.0,
                         height: 45.0,
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
                         iconPadding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -5998,7 +6002,7 @@ class _T2iWidgetState extends State<T2iWidget> {
                                 ),
                         elevation: 3.0,
                         borderRadius: BorderRadius.circular(25.0),
-                        disabledColor: const Color(0x581371FF),
+                        disabledColor: Color(0x581371FF),
                         disabledTextColor: FlutterFlowTheme.of(context).info,
                       ),
                     ),

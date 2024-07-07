@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'imagesize_model.dart';
 export 'imagesize_model.dart';
 
@@ -69,28 +71,28 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: double.infinity,
         height: 200.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground,
         ),
-        alignment: const AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Align(
-              alignment: const AlignmentDirectional(-1.0, 0.0),
+              alignment: AlignmentDirectional(-1.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '8zjuhx80' /* Width (px) */,
@@ -105,10 +107,10 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             '2cup3of9' /* The width of the generated ima... */,
@@ -132,7 +134,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Flexible(
-                  child: SizedBox(
+                  child: Container(
                     width: double.infinity,
                     child: Slider(
                       activeColor: FlutterFlowTheme.of(context).primary,
@@ -161,17 +163,17 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 1.0, 0.0),
-                    child: SizedBox(
+                    padding: EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 1.0, 0.0),
+                    child: Container(
                       width: 60.0,
                       child: TextFormField(
                         controller: _model.widthvalueTextController,
                         focusNode: _model.widthvalueFocusNode,
                         onChanged: (_) => EasyDebounce.debounce(
                           '_model.widthvalueTextController',
-                          const Duration(milliseconds: 2000),
+                          Duration(milliseconds: 2000),
                           () async {
                             setState(() {
                               _model.widthsliderValue = double.parse(
@@ -243,14 +245,14 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
               ],
             ),
             Align(
-              alignment: const AlignmentDirectional(-1.0, 0.0),
+              alignment: AlignmentDirectional(-1.0, 0.0),
               child: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'ju5c4eza' /* Height (px) */,
@@ -265,10 +267,10 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'fpjsyedb' /* The heigth of the generated im... */,
@@ -291,7 +293,7 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Flexible(
-                  child: SizedBox(
+                  child: Container(
                     width: double.infinity,
                     child: Slider(
                       activeColor: FlutterFlowTheme.of(context).primary,
@@ -320,17 +322,17 @@ class _ImagesizeWidgetState extends State<ImagesizeWidget> {
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 1.0, 0.0),
-                    child: SizedBox(
+                    padding: EdgeInsetsDirectional.fromSTEB(1.0, 0.0, 1.0, 0.0),
+                    child: Container(
                       width: 60.0,
                       child: TextFormField(
                         controller: _model.heightvalueTextController,
                         focusNode: _model.heightvalueFocusNode,
                         onChanged: (_) => EasyDebounce.debounce(
                           '_model.heightvalueTextController',
-                          const Duration(milliseconds: 2000),
+                          Duration(milliseconds: 2000),
                           () async {
                             setState(() {
                               _model.heightsliderValue = double.parse(

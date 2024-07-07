@@ -1,12 +1,16 @@
 import '/backend/api_requests/api_calls.dart';
+import '/backend/backend.dart';
+import '/backend/schema/structs/index.dart';
 import '/components/imagelist_widget.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'my_picture_model.dart';
 export 'my_picture_model.dart';
@@ -57,14 +61,14 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Stack(
                   children: [
                     Align(
-                      alignment: const AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -74,9 +78,9 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                           context.safePop();
                         },
                         child: Container(
-                          decoration: const BoxDecoration(),
+                          decoration: BoxDecoration(),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 3.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -98,7 +102,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                       ),
                     ),
                     Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '2dj0k2yh' /* My Pictures */,
@@ -117,11 +121,11 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                 Expanded(
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                     child: Column(
                       children: [
                         Align(
-                          alignment: const Alignment(0.0, 0),
+                          alignment: Alignment(0.0, 0),
                           child: TabBar(
                             labelColor: FlutterFlowTheme.of(context).primary,
                             unselectedLabelColor:
@@ -135,17 +139,17 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts: false,
                                 ),
-                            unselectedLabelStyle: const TextStyle(),
+                            unselectedLabelStyle: TextStyle(),
                             indicatorColor:
                                 FlutterFlowTheme.of(context).primary,
                             indicatorWeight: 3.0,
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 10.0, 20.0, 10.0),
                             tabs: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 7.0, 0.0),
                                     child: Icon(
@@ -162,7 +166,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  const Padding(
+                                  Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 7.0, 0.0),
                                     child: Icon(
@@ -197,7 +201,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                   builder: (context, snapshot) {
                                     // Customize what your widget looks like when it's loading.
                                     if (!snapshot.hasData) {
-                                      return const Center(
+                                      return Center(
                                         child: SizedBox(
                                           width: 50.0,
                                           height: 50.0,
@@ -218,10 +222,10 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: FlutterFlowChoiceChips(
                                               options: [
@@ -413,11 +417,11 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                               r'''$.feature''',
                                                             ).toString()))
                                                     .toList()
-                                                    .toList() ??
+                                                    ?.toList() ??
                                                 [];
                                             return MasonryGridView.builder(
                                               gridDelegate:
-                                                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                                  SliverSimpleGridDelegateWithFixedCrossAxisCount(
                                                 crossAxisCount: 3,
                                               ),
                                               crossAxisSpacing: 10.0,
@@ -546,7 +550,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                   builder: (context, snapshot) {
                                     // Customize what your widget looks like when it's loading.
                                     if (!snapshot.hasData) {
-                                      return const Center(
+                                      return Center(
                                         child: SizedBox(
                                           width: 50.0,
                                           height: 50.0,
@@ -567,10 +571,10 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                       children: [
                                         Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: FlutterFlowChoiceChips(
                                               options: [
@@ -648,7 +652,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                               },
                                               selectedChipStyle: ChipStyle(
                                                 backgroundColor:
-                                                    const Color(0xFF3587D7),
+                                                    Color(0xFF3587D7),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -741,11 +745,11 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                               r'''$.feature''',
                                                             ).toString()))
                                                     .toList()
-                                                    .toList() ??
+                                                    ?.toList() ??
                                                 [];
                                             return MasonryGridView.builder(
                                               gridDelegate:
-                                                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                                  SliverSimpleGridDelegateWithFixedCrossAxisCount(
                                                 crossAxisCount: 3,
                                               ),
                                               crossAxisSpacing: 10.0,
@@ -766,7 +770,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                   highlightColor:
                                                       Colors.transparent,
                                                   onTap: () async {},
-                                                  child: SizedBox(
+                                                  child: Container(
                                                     width: double.infinity,
                                                     child: Stack(
                                                       children: [
