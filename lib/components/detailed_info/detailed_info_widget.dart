@@ -6,9 +6,6 @@ import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'detailed_info_model.dart';
 export 'detailed_info_model.dart';
 
@@ -25,8 +22,8 @@ class DetailedInfoWidget extends StatefulWidget {
     required this.height,
     required this.createdDate,
     bool? isVideo,
-  })  : this.isImage = isImage ?? false,
-        this.isVideo = isVideo ?? false;
+  })  : isImage = isImage ?? false,
+        isVideo = isVideo ?? false;
 
   final String? imageUrl;
   final String? imageID;
@@ -68,9 +65,9 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 1.0),
+      alignment: const AlignmentDirectional(0.0, 1.0),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 5.0, 0.0),
         child: Container(
           width: double.infinity,
           constraints: BoxConstraints(
@@ -78,7 +75,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
           ),
           decoration: BoxDecoration(
             color: FlutterFlowTheme.of(context).secondaryBackground,
-            borderRadius: BorderRadius.only(
+            borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(0.0),
               bottomRight: Radius.circular(0.0),
               topLeft: Radius.circular(20.0),
@@ -86,7 +83,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
             ),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
             child: SingleChildScrollView(
               primary: false,
               child: Column(
@@ -106,7 +103,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                             child: Stack(
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     valueOrDefault<String>(
                                       widget.title,
@@ -124,9 +121,9 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1.0, -1.0),
+                                  alignment: const AlignmentDirectional(1.0, -1.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -155,16 +152,16 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           child: Container(
                             width: double.infinity,
                             height: 350.0,
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Stack(
                               children: [
                                 if (!widget.isVideo)
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
                                       focusColor: Colors.transparent,
@@ -217,7 +214,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                   ),
                                 if (widget.isVideo)
                                   Align(
-                                    alignment: AlignmentDirectional(0.0, 1.0),
+                                    alignment: const AlignmentDirectional(0.0, 1.0),
                                     child: FlutterFlowVideoPlayer(
                                       path: '${widget.imageUrl}',
                                       videoType: VideoType.network,
@@ -242,7 +239,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 10.0, 10.0, 10.0),
                           child: SingleChildScrollView(
                             primary: false,
@@ -255,10 +252,10 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, -1.0),
+                                            const AlignmentDirectional(-1.0, -1.0),
                                         child: Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 7.0, 0.0),
                                           child: Text(
                                             FFLocalizations.of(context).getText(
@@ -300,9 +297,9 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                   ),
                                 if (widget.isImage)
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, -1.0),
+                                    alignment: const AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         valueOrDefault<String>(
@@ -323,17 +320,17 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                   ),
                                 if (widget.isImage)
                                   Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, -1.0),
+                                              const AlignmentDirectional(-1.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 7.0, 0.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -379,9 +376,9 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                   ),
                                 if (widget.isImage)
                                   Align(
-                                    alignment: AlignmentDirectional(-1.0, -1.0),
+                                    alignment: const AlignmentDirectional(-1.0, -1.0),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           0.0, 5.0, 0.0, 0.0),
                                       child: Text(
                                         valueOrDefault<String>(
@@ -400,7 +397,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                       ),
                                     ),
                                   ),
-                                Divider(
+                                const Divider(
                                   thickness: 1.0,
                                   indent: 3.0,
                                   endIndent: 3.0,
@@ -416,7 +413,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -1.0, -1.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -439,7 +436,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                             ),
                                           ),
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -1.0, -1.0),
                                             child: Text(
                                               '${widget.width?.toString()}x${widget.height?.toString()}',
@@ -466,7 +463,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                         mainAxisSize: MainAxisSize.min,
                                         children: [
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -1.0, -1.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -489,7 +486,7 @@ class _DetailedInfoWidgetState extends State<DetailedInfoWidget> {
                                             ),
                                           ),
                                           Align(
-                                            alignment: AlignmentDirectional(
+                                            alignment: const AlignmentDirectional(
                                                 -1.0, -1.0),
                                             child: Text(
                                               valueOrDefault<String>(

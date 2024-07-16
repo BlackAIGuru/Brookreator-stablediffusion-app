@@ -1,14 +1,6 @@
-import '/components/message_error/message_error_widget.dart';
-import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import '/custom_code/actions/index.dart' as actions;
-import 'package:sticky_headers/sticky_headers.dart';
 import 'sign_up_widget.dart' show SignUpWidget;
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 class SignUpModel extends FlutterFlowModel<SignUpWidget> {
   ///  Local state fields for this page.
@@ -30,7 +22,7 @@ class SignUpModel extends FlutterFlowModel<SignUpWidget> {
       );
     }
 
-    if (val.length < 1) {
+    if (val.isEmpty) {
       return 'Requires at least 1 characters.';
     }
 
@@ -48,7 +40,7 @@ class SignUpModel extends FlutterFlowModel<SignUpWidget> {
       );
     }
 
-    if (val.length < 1) {
+    if (val.isEmpty) {
       return 'Requires at least 1 characters.';
     }
 
@@ -72,7 +64,7 @@ class SignUpModel extends FlutterFlowModel<SignUpWidget> {
       );
     }
 
-    if (val.length < 1) {
+    if (val.isEmpty) {
       return 'Requires at least 1 characters.';
     }
 

@@ -12,11 +12,9 @@ import '/text2_image/image_result/image_result_widget.dart';
 import '/custom_code/actions/index.dart' as actions;
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'q_r_generate_model.dart';
 export 'q_r_generate_model.dart';
@@ -25,7 +23,7 @@ class QRGenerateWidget extends StatefulWidget {
   const QRGenerateWidget({
     super.key,
     int? modelindex,
-  }) : this.modelindex = modelindex ?? 1;
+  }) : modelindex = modelindex ?? 1;
 
   final int modelindex;
 
@@ -48,7 +46,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       await _model.qrSelectmodelController?.animateToPage(
         widget.modelindex,
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.ease,
       );
     });
@@ -107,12 +105,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground,
@@ -129,9 +127,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                             context.pushNamed('HomePage');
                           },
                           child: Container(
-                            decoration: BoxDecoration(),
+                            decoration: const BoxDecoration(),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   10.0, 3.0, 0.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -152,7 +150,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'sungsi2p' /* QR Generator */,
@@ -168,14 +166,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: const AlignmentDirectional(1.0, 0.0),
                           child: Builder(
                             builder: (context) {
                               if (!FFAppState().Logined) {
                                 return Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 10.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -185,7 +183,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                         wrapWithModel(
                                           model: _model.signiniconModel,
                                           updateCallback: () => setState(() {}),
-                                          child: SigniniconWidget(),
+                                          child: const SigniniconWidget(),
                                         ),
                                       ],
                                     ),
@@ -193,9 +191,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                 );
                               } else {
                                 return Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.min,
@@ -203,7 +201,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: InkWell(
                                             splashColor: Colors.transparent,
@@ -224,7 +222,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                     BorderRadius.circular(30.0),
                                                 shape: BoxShape.rectangle,
                                                 border: Border.all(
-                                                  color: Color(0xFFE4E4E4),
+                                                  color: const Color(0xFFE4E4E4),
                                                 ),
                                               ),
                                               child: Row(
@@ -235,7 +233,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   Flexible(
                                                     child: Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child: Text(
                                                         FFAppState()
@@ -266,11 +264,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             1.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   0.0,
                                                                   0.0,
@@ -308,7 +306,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                   child: Column(
                     children: [
                       Align(
-                        alignment: Alignment(0.0, 0),
+                        alignment: const Alignment(0.0, 0),
                         child: FlutterFlowButtonTabBar(
                           useToggleButtonStyle: true,
                           labelStyle:
@@ -319,12 +317,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                     fontWeight: FontWeight.w500,
                                     useGoogleFonts: false,
                                   ),
-                          unselectedLabelStyle: TextStyle(),
+                          unselectedLabelStyle: const TextStyle(),
                           labelColor:
                               FlutterFlowTheme.of(context).primaryBackground,
                           unselectedLabelColor: Colors.black,
                           backgroundColor: FlutterFlowTheme.of(context).primary,
-                          unselectedBackgroundColor: Color(0xFFEDEDED),
+                          unselectedBackgroundColor: const Color(0xFFEDEDED),
                           borderColor:
                               FlutterFlowTheme.of(context).primaryBackground,
                           unselectedBorderColor:
@@ -332,9 +330,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                           borderWidth: 0.0,
                           borderRadius: 20.0,
                           elevation: 0.0,
-                          buttonMargin: EdgeInsetsDirectional.fromSTEB(
+                          buttonMargin: const EdgeInsetsDirectional.fromSTEB(
                               8.0, 0.0, 8.0, 0.0),
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 25.0, 20.0, 10.0),
                           tabs: [
                             Tab(
@@ -361,7 +359,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                             Stack(
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 80.0),
                                   child: SingleChildScrollView(
                                     child: Column(
@@ -379,13 +377,13 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           15.0, 0.0, 0.0, 0.0),
                                                   child: Row(
@@ -446,7 +444,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     0.0,
@@ -490,7 +488,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            Alignment(0.0, 0),
+                                                            const Alignment(0.0, 0),
                                                         child:
                                                             FlutterFlowButtonTabBar(
                                                           useToggleButtonStyle:
@@ -538,9 +536,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           backgroundColor:
                                                               Colors.white,
                                                           unselectedBackgroundColor:
-                                                              Color(0xFFEDEDED),
+                                                              const Color(0xFFEDEDED),
                                                           borderColor:
-                                                              Color(0xFFEDEDED),
+                                                              const Color(0xFFEDEDED),
                                                           unselectedBorderColor:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -549,14 +547,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           borderRadius: 20.0,
                                                           elevation: 0.0,
                                                           buttonMargin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
                                                                       8.0,
                                                                       0.0),
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -568,7 +566,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   MainAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Padding(
+                                                                const Padding(
                                                                   padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
@@ -595,7 +593,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   MainAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Padding(
+                                                                const Padding(
                                                                   padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
@@ -636,7 +634,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             Stack(
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -660,19 +658,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFE4E4E4),
                                                                         width:
                                                                             1.0,
                                                                       ),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           15.0,
                                                                           0.0,
                                                                           15.0,
@@ -684,10 +682,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(-1.0, 0.0),
+                                                                                const AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 5.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 5.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   'fgx0zqza' /* Example : https://www.example.... */,
@@ -706,16 +704,16 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             key:
                                                                                 _model.formKey2,
                                                                             autovalidateMode:
-                                                                                AutovalidateMode.always,
+                                                                                AutovalidateMode.disabled,
                                                                             child:
-                                                                                Container(
+                                                                                SizedBox(
                                                                               width: double.infinity,
                                                                               child: TextFormField(
                                                                                 controller: _model.promptLinkTextController,
                                                                                 focusNode: _model.promptLinkFocusNode,
                                                                                 onChanged: (_) => EasyDebounce.debounce(
                                                                                   '_model.promptLinkTextController',
-                                                                                  Duration(milliseconds: 2000),
+                                                                                  const Duration(milliseconds: 2000),
                                                                                   () => setState(() {}),
                                                                                 ),
                                                                                 autofocus: false,
@@ -734,13 +732,13 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                   ),
                                                                                   hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: 'NotoSansThai',
-                                                                                        color: Color(0xB36F6F6F),
+                                                                                        color: const Color(0xB36F6F6F),
                                                                                         fontSize: 12.0,
                                                                                         letterSpacing: 0.0,
                                                                                         useGoogleFonts: false,
                                                                                       ),
                                                                                   enabledBorder: OutlineInputBorder(
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Color(0xB36F6F6F),
                                                                                       width: 1.0,
                                                                                     ),
@@ -820,19 +818,17 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   Builder(
                                                                     builder:
                                                                         (context) {
-                                                                      if (_model.uploadedLocalFile1 !=
-                                                                              null &&
-                                                                          (_model.uploadedLocalFile1.bytes?.isNotEmpty ??
+                                                                      if ((_model.uploadedLocalFile1.bytes?.isNotEmpty ??
                                                                               false)) {
                                                                         return Stack(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               1.0,
                                                                               -1.0),
                                                                           children: [
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(70.0, 10.0, 10.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(70.0, 10.0, 10.0, 0.0),
                                                                                 child: ClipRRect(
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                   child: Image.memory(
@@ -845,7 +841,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                               ),
                                                                             ),
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(1.0, -1.0),
+                                                                              alignment: const AlignmentDirectional(1.0, -1.0),
                                                                               child: InkWell(
                                                                                 splashColor: Colors.transparent,
                                                                                 focusColor: Colors.transparent,
@@ -870,7 +866,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                             color: FlutterFlowTheme.of(context).primaryText,
                                                                                           ),
                                                                                         ),
-                                                                                        duration: Duration(milliseconds: 4000),
+                                                                                        duration: const Duration(milliseconds: 4000),
                                                                                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                       ),
                                                                                     );
@@ -883,7 +879,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                             color: FlutterFlowTheme.of(context).primaryText,
                                                                                           ),
                                                                                         ),
-                                                                                        duration: Duration(milliseconds: 4000),
+                                                                                        duration: const Duration(milliseconds: 4000),
                                                                                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                       ),
                                                                                     );
@@ -905,7 +901,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         );
                                                                       } else {
                                                                         return Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -971,10 +967,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                           elevation: 0,
                                                                                           insetPadding: EdgeInsets.zero,
                                                                                           backgroundColor: Colors.transparent,
-                                                                                          alignment: AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
+                                                                                          alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
                                                                                           child: GestureDetector(
                                                                                             onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                            child: Container(
+                                                                                            child: SizedBox(
                                                                                               height: 100.0,
                                                                                               width: double.infinity,
                                                                                               child: MessageErrorWidget(
@@ -1001,11 +997,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: ClipRRect(
                                                                                           borderRadius: BorderRadius.circular(0.0),
                                                                                           child: Image.asset(
@@ -1016,9 +1012,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                                                                                           child: ClipRRect(
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                             child: Image.asset(
@@ -1031,9 +1027,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                           child: Text(
                                                                                             FFLocalizations.of(context).getText(
                                                                                               'zn7soqjk' /* Upload QR Code */,
@@ -1050,9 +1046,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                                                                                           child: Text(
                                                                                             FFLocalizations.of(context).getText(
                                                                                               'z4u6h1n3' /* File types : PNG/JPG, maximum ... */,
@@ -1079,12 +1075,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           5.0,
@@ -1098,7 +1094,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
@@ -1116,7 +1112,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 ClipRRect(
                                                                               borderRadius: BorderRadius.circular(8.0),
@@ -1147,7 +1143,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 10.0),
                                           child: Card(
                                             clipBehavior:
@@ -1160,7 +1156,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   BorderRadius.circular(10.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 10.0),
                                               child: Column(
@@ -1168,7 +1164,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 children: [
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(15.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Row(
@@ -1228,14 +1224,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       ],
                                                     ),
                                                   ),
-                                                  Container(
+                                                  SizedBox(
                                                     width: double.infinity,
                                                     height: 106.0,
                                                     child: CarouselSlider(
                                                       items: [
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -1254,19 +1250,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -1290,7 +1286,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -1330,12 +1326,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1373,7 +1369,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -1392,14 +1388,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 ClipRRect(
@@ -1422,7 +1418,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -1462,12 +1458,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1508,7 +1504,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -1527,19 +1523,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -1563,7 +1559,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -1603,12 +1599,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1646,7 +1642,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -1665,19 +1661,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -1701,7 +1697,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -1741,12 +1737,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1784,7 +1780,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -1803,19 +1799,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -1839,7 +1835,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -1879,12 +1875,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -1922,7 +1918,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -1941,19 +1937,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -1977,7 +1973,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2017,12 +2013,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2060,7 +2056,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -2079,19 +2075,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -2115,7 +2111,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2155,12 +2151,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2198,7 +2194,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -2217,19 +2213,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -2253,7 +2249,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2293,12 +2289,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2336,7 +2332,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -2355,19 +2351,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -2391,7 +2387,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2431,12 +2427,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2474,7 +2470,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -2493,19 +2489,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -2529,7 +2525,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2569,12 +2565,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2612,7 +2608,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -2631,19 +2627,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -2667,7 +2663,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2707,12 +2703,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2750,7 +2746,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Container(
                                                             width: 101.0,
@@ -2769,19 +2765,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Stack(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 1.0),
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -2805,7 +2801,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   width: 100.0,
                                                                   height: 40.0,
                                                                   decoration:
-                                                                      BoxDecoration(
+                                                                      const BoxDecoration(
                                                                     gradient:
                                                                         LinearGradient(
                                                                       colors: [
@@ -2845,12 +2841,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           1.0),
                                                                   child:
                                                                       Padding(
-                                                                    padding: EdgeInsetsDirectional
+                                                                    padding: const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -2976,18 +2972,18 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, 0.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(15.0, 0.0,
                                                                 0.0, 0.0),
                                                     child: Row(
@@ -2996,7 +2992,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   -1.0, 0.0),
                                                           child: Text(
                                                             FFLocalizations.of(
@@ -3052,11 +3048,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 ),
                                                 Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           -1.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(15.0, 5.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -3087,7 +3083,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       children: [
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Slider(
                                                             activeColor:
@@ -3126,7 +3122,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       40.0,
@@ -3142,7 +3138,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             children: [
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             25.0,
                                                                             0.0,
@@ -3311,7 +3307,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                               ),
                                                               Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             0.0,
@@ -3354,10 +3350,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: const AlignmentDirectional(0.0, 1.0),
                                   child: Builder(
                                     builder: (context) => Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 10.0),
                                       child: FFButtonWidget(
                                         onPressed: (_model
@@ -3365,13 +3361,8 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                     0
                                                 ? (_model.promptLinkTextController
                                                             .text ==
-                                                        null ||
-                                                    _model.promptLinkTextController
-                                                            .text ==
                                                         '')
-                                                : ((_model.uploadedLocalFile1 ==
-                                                            null ||
-                                                        (_model
+                                                : (((_model
                                                                 .uploadedLocalFile1
                                                                 .bytes
                                                                 ?.isEmpty ??
@@ -3383,6 +3374,18 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                             ? null
                                             : () async {
                                                 if (FFAppState().Logined) {
+                                                  if (_model
+                                                          .qRPromptCurrentIndex ==
+                                                      0) {
+                                                    if (_model.formKey2
+                                                                .currentState ==
+                                                            null ||
+                                                        !_model.formKey2
+                                                            .currentState!
+                                                            .validate()) {
+                                                      return;
+                                                    }
+                                                  }
                                                   _model.qRTheme = await actions
                                                       .selectQRTheme(
                                                     _model
@@ -3491,7 +3494,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
-                                                          alignment: AlignmentDirectional(
+                                                          alignment: const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -3595,7 +3598,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: AlignmentDirectional(
+                                                            alignment: const AlignmentDirectional(
                                                                     0.0, 0.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -3614,7 +3617,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           context)
                                                                       .unfocus(),
                                                               child:
-                                                                  DoneWidget(),
+                                                                  const DoneWidget(),
                                                             ),
                                                           );
                                                         },
@@ -3704,7 +3707,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: AlignmentDirectional(
+                                                            alignment: const AlignmentDirectional(
                                                                     0.0, -1.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -3722,7 +3725,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   : FocusScope.of(
                                                                           context)
                                                                       .unfocus(),
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 height: 100.0,
                                                                 width: double
                                                                     .infinity,
@@ -3754,7 +3757,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
-                                                          alignment: AlignmentDirectional(
+                                                          alignment: const AlignmentDirectional(
                                                                   0.0, -1.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -3772,7 +3775,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 : FocusScope.of(
                                                                         context)
                                                                     .unfocus(),
-                                                            child: Container(
+                                                            child: SizedBox(
                                                               height: 100.0,
                                                               width: double
                                                                   .infinity,
@@ -3812,10 +3815,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                           width: 390.0,
                                           height: 45.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   25.0, 0.0, 25.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
@@ -3831,12 +3834,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 useGoogleFonts: false,
                                               ),
                                           elevation: 3.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(25.0),
-                                          disabledColor: Color(0x581371FF),
+                                          disabledColor: const Color(0x581371FF),
                                           disabledTextColor:
                                               FlutterFlowTheme.of(context).info,
                                         ),
@@ -3849,7 +3852,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                             Stack(
                               children: [
                                 Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       15.0, 0.0, 15.0, 80.0),
                                   child: SingleChildScrollView(
                                     child: Column(
@@ -3867,13 +3870,13 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                           ),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 10.0, 0.0, 10.0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
                                                 Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           15.0, 0.0, 0.0, 0.0),
                                                   child: Row(
@@ -3934,7 +3937,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       ),
                                                       Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     3.0,
                                                                     0.0,
@@ -3978,7 +3981,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                     children: [
                                                       Align(
                                                         alignment:
-                                                            Alignment(0.0, 0),
+                                                            const Alignment(0.0, 0),
                                                         child:
                                                             FlutterFlowButtonTabBar(
                                                           useToggleButtonStyle:
@@ -4026,9 +4029,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           backgroundColor:
                                                               Colors.white,
                                                           unselectedBackgroundColor:
-                                                              Color(0xFFEDEDED),
+                                                              const Color(0xFFEDEDED),
                                                           borderColor:
-                                                              Color(0xFFEDEDED),
+                                                              const Color(0xFFEDEDED),
                                                           unselectedBorderColor:
                                                               FlutterFlowTheme.of(
                                                                       context)
@@ -4037,14 +4040,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           borderRadius: 20.0,
                                                           elevation: 0.0,
                                                           buttonMargin:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       8.0,
                                                                       0.0,
                                                                       8.0,
                                                                       0.0),
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       10.0,
                                                                       10.0,
@@ -4056,7 +4059,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   MainAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Padding(
+                                                                const Padding(
                                                                   padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
@@ -4083,7 +4086,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   MainAxisAlignment
                                                                       .center,
                                                               children: [
-                                                                Padding(
+                                                                const Padding(
                                                                   padding: EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
@@ -4124,7 +4127,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             Stack(
                                                               children: [
                                                                 Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           0.0,
@@ -4148,19 +4151,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       border:
                                                                           Border
                                                                               .all(
-                                                                        color: Color(
+                                                                        color: const Color(
                                                                             0xFFE4E4E4),
                                                                         width:
                                                                             1.0,
                                                                       ),
                                                                     ),
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           15.0,
                                                                           0.0,
                                                                           15.0,
@@ -4172,10 +4175,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(-1.0, 0.0),
+                                                                                const AlignmentDirectional(-1.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 5.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(5.0, 0.0, 0.0, 5.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   '6ji7vegj' /* Example : https://www.example.... */,
@@ -4196,14 +4199,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             autovalidateMode:
                                                                                 AutovalidateMode.always,
                                                                             child:
-                                                                                Container(
+                                                                                SizedBox(
                                                                               width: double.infinity,
                                                                               child: TextFormField(
                                                                                 controller: _model.uploadLinkTextController,
                                                                                 focusNode: _model.uploadLinkFocusNode,
                                                                                 onChanged: (_) => EasyDebounce.debounce(
                                                                                   '_model.uploadLinkTextController',
-                                                                                  Duration(milliseconds: 2000),
+                                                                                  const Duration(milliseconds: 2000),
                                                                                   () => setState(() {}),
                                                                                 ),
                                                                                 autofocus: false,
@@ -4222,13 +4225,13 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                   ),
                                                                                   hintStyle: FlutterFlowTheme.of(context).labelMedium.override(
                                                                                         fontFamily: 'NotoSansThai',
-                                                                                        color: Color(0xB36F6F6F),
+                                                                                        color: const Color(0xB36F6F6F),
                                                                                         fontSize: 12.0,
                                                                                         letterSpacing: 0.0,
                                                                                         useGoogleFonts: false,
                                                                                       ),
                                                                                   enabledBorder: OutlineInputBorder(
-                                                                                    borderSide: BorderSide(
+                                                                                    borderSide: const BorderSide(
                                                                                       color: Color(0xB36F6F6F),
                                                                                       width: 1.0,
                                                                                     ),
@@ -4308,19 +4311,17 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   Builder(
                                                                     builder:
                                                                         (context) {
-                                                                      if (_model.uploadedLocalFile2 !=
-                                                                              null &&
-                                                                          (_model.uploadedLocalFile2.bytes?.isNotEmpty ??
+                                                                      if ((_model.uploadedLocalFile2.bytes?.isNotEmpty ??
                                                                               false)) {
                                                                         return Stack(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               1.0,
                                                                               -1.0),
                                                                           children: [
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(0.0, 0.0),
+                                                                              alignment: const AlignmentDirectional(0.0, 0.0),
                                                                               child: Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(70.0, 10.0, 10.0, 0.0),
+                                                                                padding: const EdgeInsetsDirectional.fromSTEB(70.0, 10.0, 10.0, 0.0),
                                                                                 child: ClipRRect(
                                                                                   borderRadius: BorderRadius.circular(8.0),
                                                                                   child: Image.memory(
@@ -4333,7 +4334,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                               ),
                                                                             ),
                                                                             Align(
-                                                                              alignment: AlignmentDirectional(1.0, -1.0),
+                                                                              alignment: const AlignmentDirectional(1.0, -1.0),
                                                                               child: InkWell(
                                                                                 splashColor: Colors.transparent,
                                                                                 focusColor: Colors.transparent,
@@ -4358,7 +4359,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                             color: FlutterFlowTheme.of(context).primaryText,
                                                                                           ),
                                                                                         ),
-                                                                                        duration: Duration(milliseconds: 4000),
+                                                                                        duration: const Duration(milliseconds: 4000),
                                                                                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                       ),
                                                                                     );
@@ -4371,7 +4372,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                             color: FlutterFlowTheme.of(context).primaryText,
                                                                                           ),
                                                                                         ),
-                                                                                        duration: Duration(milliseconds: 4000),
+                                                                                        duration: const Duration(milliseconds: 4000),
                                                                                         backgroundColor: FlutterFlowTheme.of(context).secondary,
                                                                                       ),
                                                                                     );
@@ -4393,7 +4394,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         );
                                                                       } else {
                                                                         return Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               -1.0,
                                                                               0.0),
                                                                           child:
@@ -4459,10 +4460,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                           elevation: 0,
                                                                                           insetPadding: EdgeInsets.zero,
                                                                                           backgroundColor: Colors.transparent,
-                                                                                          alignment: AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
+                                                                                          alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
                                                                                           child: GestureDetector(
                                                                                             onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                            child: Container(
+                                                                                            child: SizedBox(
                                                                                               height: 100.0,
                                                                                               width: double.infinity,
                                                                                               child: MessageErrorWidget(
@@ -4489,11 +4490,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                   color: FlutterFlowTheme.of(context).secondaryBackground,
                                                                                 ),
                                                                                 child: Align(
-                                                                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                   child: Stack(
                                                                                     children: [
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: ClipRRect(
                                                                                           borderRadius: BorderRadius.circular(0.0),
                                                                                           child: Image.asset(
@@ -4504,9 +4505,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, -1.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, -1.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                                                                                           child: ClipRRect(
                                                                                             borderRadius: BorderRadius.circular(8.0),
                                                                                             child: Image.asset(
@@ -4519,9 +4520,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
                                                                                           child: Text(
                                                                                             FFLocalizations.of(context).getText(
                                                                                               'y06z8i14' /* Upload QR Code */,
@@ -4538,9 +4539,9 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                                         ),
                                                                                       ),
                                                                                       Align(
-                                                                                        alignment: AlignmentDirectional(0.0, 0.0),
+                                                                                        alignment: const AlignmentDirectional(0.0, 0.0),
                                                                                         child: Padding(
-                                                                                          padding: EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
+                                                                                          padding: const EdgeInsetsDirectional.fromSTEB(0.0, 35.0, 0.0, 0.0),
                                                                                           child: Text(
                                                                                             FFLocalizations.of(context).getText(
                                                                                               'y1296ksn' /* File types : PNG/JPG, maximum ... */,
@@ -4567,12 +4568,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   ),
                                                                   Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             1.0,
                                                                             0.0),
                                                                     child:
                                                                         Padding(
-                                                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                                                           0.0,
                                                                           0.0,
                                                                           5.0,
@@ -4586,7 +4587,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Text(
                                                                               FFLocalizations.of(context).getText(
@@ -4604,7 +4605,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 ClipRRect(
                                                                               borderRadius: BorderRadius.circular(8.0),
@@ -4635,7 +4636,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 10.0, 0.0, 10.0),
                                           child: Card(
                                             clipBehavior:
@@ -4648,7 +4649,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   BorderRadius.circular(10.0),
                                             ),
                                             child: Padding(
-                                              padding: EdgeInsetsDirectional
+                                              padding: const EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 10.0, 0.0, 10.0),
                                               child: Column(
@@ -4656,11 +4657,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 children: [
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, -1.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   15.0,
                                                                   0.0,
@@ -4735,11 +4736,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, -1.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   25.0,
                                                                   10.0,
@@ -4771,9 +4772,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Builder(
                                                     builder: (context) {
-                                                      if (_model.uploadedLocalFile3 !=
-                                                              null &&
-                                                          (_model
+                                                      if ((_model
                                                                   .uploadedLocalFile3
                                                                   .bytes
                                                                   ?.isNotEmpty ??
@@ -4782,19 +4781,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           width: 200.0,
                                                           height: 200.0,
                                                           decoration:
-                                                              BoxDecoration(),
+                                                              const BoxDecoration(),
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.0, -1.0),
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -4823,7 +4822,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         -1.0),
                                                                 child: InkWell(
@@ -4871,7 +4870,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             ),
                                                                           ),
                                                                           duration:
-                                                                              Duration(milliseconds: 4000),
+                                                                              const Duration(milliseconds: 4000),
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).secondary,
                                                                         ),
@@ -4890,7 +4889,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             ),
                                                                           ),
                                                                           duration:
-                                                                              Duration(milliseconds: 4000),
+                                                                              const Duration(milliseconds: 4000),
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).secondary,
                                                                         ),
@@ -4921,14 +4920,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       } else {
                                                         return Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Builder(
                                                             builder:
                                                                 (context) =>
                                                                     Padding(
                                                               padding:
-                                                                  EdgeInsetsDirectional
+                                                                  const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           0.0,
                                                                           10.0,
@@ -5040,11 +5039,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             backgroundColor:
                                                                                 Colors.transparent,
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
+                                                                                const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
                                                                             child:
                                                                                 GestureDetector(
                                                                               onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                              child: Container(
+                                                                              child: SizedBox(
                                                                                 height: 100.0,
                                                                                 width: double.infinity,
                                                                                 child: MessageErrorWidget(
@@ -5080,14 +5079,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   ),
                                                                   child: Align(
                                                                     alignment:
-                                                                        AlignmentDirectional(
+                                                                        const AlignmentDirectional(
                                                                             0.0,
                                                                             0.0),
                                                                     child:
                                                                         Stack(
                                                                       children: [
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
@@ -5104,12 +5103,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               -1.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 40.0,
                                                                                 0.0,
@@ -5127,12 +5126,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 10.0,
                                                                                 0.0,
@@ -5154,12 +5153,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                         ),
                                                                         Align(
-                                                                          alignment: AlignmentDirectional(
+                                                                          alignment: const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                           child:
                                                                               Padding(
-                                                                            padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            padding: const EdgeInsetsDirectional.fromSTEB(
                                                                                 0.0,
                                                                                 45.0,
                                                                                 0.0,
@@ -5192,11 +5191,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, -1.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   25.0,
                                                                   15.0,
@@ -5228,7 +5227,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Row(
@@ -5272,14 +5271,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     ? FlutterFlowTheme.of(
                                                                             context)
                                                                         .primary
-                                                                    : Color(
+                                                                    : const Color(
                                                                         0xFFE4E4E4),
                                                                 width: 2.0,
                                                               ),
                                                             ),
                                                             child: Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: ClipRRect(
                                                                 borderRadius:
@@ -5300,7 +5299,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       30.0,
                                                                       0.0,
@@ -5341,14 +5340,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
-                                                                      : Color(
+                                                                      : const Color(
                                                                           0xFFE4E4E4),
                                                                   width: 2.0,
                                                                 ),
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child:
@@ -5373,7 +5372,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         ),
                                                         Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       30.0,
                                                                       0.0,
@@ -5414,14 +5413,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       ? FlutterFlowTheme.of(
                                                                               context)
                                                                           .primary
-                                                                      : Color(
+                                                                      : const Color(
                                                                           0xFFE4E4E4),
                                                                   width: 2.0,
                                                                 ),
                                                               ),
                                                               child: Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child:
@@ -5449,11 +5448,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             -1.0, -1.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   25.0,
                                                                   15.0,
@@ -5485,11 +5484,11 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   30.0,
                                                                   15.0,
@@ -5514,22 +5513,22 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           ),
                                                         ),
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   0.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsets.all(
+                                                                const EdgeInsets.all(
                                                                     5.0),
                                                             child: GridView(
                                                               padding:
                                                                   EdgeInsets
                                                                       .zero,
                                                               gridDelegate:
-                                                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                                                  const SliverGridDelegateWithFixedCrossAxisCount(
                                                                 crossAxisCount:
                                                                     5,
                                                                 crossAxisSpacing:
@@ -5546,7 +5545,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                               children: [
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5584,19 +5583,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'none'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
                                                                       ),
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -5618,7 +5617,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5656,7 +5655,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'facebook'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -5664,7 +5663,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -5686,7 +5685,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5724,7 +5723,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'instogram'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -5732,7 +5731,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -5754,7 +5753,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5792,7 +5791,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'line'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -5800,7 +5799,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -5822,7 +5821,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5860,7 +5859,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'twitter'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -5868,7 +5867,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -5890,7 +5889,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5928,7 +5927,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'linkedin'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -5936,7 +5935,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -5958,7 +5957,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -5996,7 +5995,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'github'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6004,7 +6003,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6026,7 +6025,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -6064,7 +6063,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'youtube'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6072,7 +6071,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6094,7 +6093,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -6132,7 +6131,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'tiktok'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6140,7 +6139,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6162,7 +6161,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -6200,7 +6199,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'telegram'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6208,7 +6207,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6230,7 +6229,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -6268,7 +6267,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'whatsapp'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6276,7 +6275,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6298,7 +6297,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -6336,7 +6335,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'map'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6344,7 +6343,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6366,7 +6365,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 ),
                                                                 Align(
                                                                   alignment:
-                                                                      AlignmentDirectional(
+                                                                      const AlignmentDirectional(
                                                                           0.0,
                                                                           0.0),
                                                                   child:
@@ -6404,7 +6403,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             Border.all(
                                                                           color: _model.logoselected == 'promptpay'
                                                                               ? FlutterFlowTheme.of(context).primary
-                                                                              : Color(0xFFE4E4E4),
+                                                                              : const Color(0xFFE4E4E4),
                                                                           width:
                                                                               2.0,
                                                                         ),
@@ -6412,7 +6411,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                       child:
                                                                           Padding(
                                                                         padding:
-                                                                            EdgeInsets.all(5.0),
+                                                                            const EdgeInsets.all(5.0),
                                                                         child:
                                                                             ClipRRect(
                                                                           borderRadius:
@@ -6441,9 +6440,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                   ),
                                                   Builder(
                                                     builder: (context) {
-                                                      if (_model.uploadedLocalFile4 !=
-                                                              null &&
-                                                          (_model
+                                                      if ((_model
                                                                   .uploadedLocalFile4
                                                                   .bytes
                                                                   ?.isNotEmpty ??
@@ -6452,19 +6449,19 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           width: 200.0,
                                                           height: 200.0,
                                                           decoration:
-                                                              BoxDecoration(),
+                                                              const BoxDecoration(),
                                                           child: Stack(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     1.0, -1.0),
                                                             children: [
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         0.0,
                                                                         0.0),
                                                                 child: Padding(
-                                                                  padding: EdgeInsetsDirectional
+                                                                  padding: const EdgeInsetsDirectional
                                                                       .fromSTEB(
                                                                           10.0,
                                                                           10.0,
@@ -6493,7 +6490,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                               ),
                                                               Align(
                                                                 alignment:
-                                                                    AlignmentDirectional(
+                                                                    const AlignmentDirectional(
                                                                         1.0,
                                                                         -1.0),
                                                                 child: InkWell(
@@ -6541,7 +6538,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             ),
                                                                           ),
                                                                           duration:
-                                                                              Duration(milliseconds: 4000),
+                                                                              const Duration(milliseconds: 4000),
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).secondary,
                                                                         ),
@@ -6560,7 +6557,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                             ),
                                                                           ),
                                                                           duration:
-                                                                              Duration(milliseconds: 4000),
+                                                                              const Duration(milliseconds: 4000),
                                                                           backgroundColor:
                                                                               FlutterFlowTheme.of(context).secondary,
                                                                         ),
@@ -6595,14 +6592,14 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                               'none',
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Builder(
                                                               builder:
                                                                   (context) =>
                                                                       Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -6706,10 +6703,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                               elevation: 0,
                                                                               insetPadding: EdgeInsets.zero,
                                                                               backgroundColor: Colors.transparent,
-                                                                              alignment: AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
+                                                                              alignment: const AlignmentDirectional(0.0, -1.0).resolve(Directionality.of(context)),
                                                                               child: GestureDetector(
                                                                                 onTap: () => _model.unfocusNode.canRequestFocus ? FocusScope.of(context).requestFocus(_model.unfocusNode) : FocusScope.of(context).unfocus(),
-                                                                                child: Container(
+                                                                                child: SizedBox(
                                                                                   height: 100.0,
                                                                                   width: double.infinity,
                                                                                   child: MessageErrorWidget(
@@ -6747,7 +6744,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                     child:
                                                                         Align(
                                                                       alignment:
-                                                                          AlignmentDirectional(
+                                                                          const AlignmentDirectional(
                                                                               0.0,
                                                                               0.0),
                                                                       child:
@@ -6755,7 +6752,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                         children: [
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 ClipRRect(
                                                                               borderRadius: BorderRadius.circular(0.0),
@@ -6769,10 +6766,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, -1.0),
+                                                                                const AlignmentDirectional(0.0, -1.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                                                                               child: ClipRRect(
                                                                                 borderRadius: BorderRadius.circular(8.0),
                                                                                 child: Image.asset(
@@ -6786,10 +6783,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   'gr4nh9g7' /* Upload Logo */,
@@ -6807,10 +6804,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           ),
                                                                           Align(
                                                                             alignment:
-                                                                                AlignmentDirectional(0.0, 0.0),
+                                                                                const AlignmentDirectional(0.0, 0.0),
                                                                             child:
                                                                                 Padding(
-                                                                              padding: EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
+                                                                              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 45.0, 0.0, 0.0),
                                                                               child: Text(
                                                                                 FFLocalizations.of(context).getText(
                                                                                   '181b71mp' /* File types : PNG/JPG, maximum ... */,
@@ -6847,10 +6844,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: const AlignmentDirectional(0.0, 1.0),
                                   child: Builder(
                                     builder: (context) => Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 0.0, 10.0, 10.0),
                                       child: FFButtonWidget(
                                         onPressed: (_model
@@ -6858,13 +6855,8 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                     0
                                                 ? (_model.uploadLinkTextController
                                                             .text ==
-                                                        null ||
-                                                    _model.uploadLinkTextController
-                                                            .text ==
                                                         '')
-                                                : ((_model.uploadedLocalFile2 ==
-                                                            null ||
-                                                        (_model
+                                                : (((_model
                                                                 .uploadedLocalFile2
                                                                 .bytes
                                                                 ?.isEmpty ??
@@ -6876,6 +6868,18 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                             ? null
                                             : () async {
                                                 if (FFAppState().Logined) {
+                                                  if (_model
+                                                          .uploadImageCurrentIndex ==
+                                                      0) {
+                                                    if (_model.formKey1
+                                                                .currentState ==
+                                                            null ||
+                                                        !_model.formKey1
+                                                            .currentState!
+                                                            .validate()) {
+                                                      return;
+                                                    }
+                                                  }
                                                   await Future.delayed(
                                                       const Duration(
                                                           milliseconds: 3000));
@@ -6883,10 +6887,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                       await BrookreatorGroup
                                                           .qRLogoGenerateCall
                                                           .call(
-                                                    qrCodeFilePath: _model
-                                                                    .uploadedLocalFile2 !=
-                                                                null &&
-                                                            (_model
+                                                    qrCodeFilePath: (_model
                                                                     .uploadedLocalFile2
                                                                     .bytes
                                                                     ?.isNotEmpty ??
@@ -6898,9 +6899,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                         .uploadLinkTextController
                                                         .text,
                                                     backgroundImageFilePath:
-                                                        _model.uploadedLocalFile3 !=
-                                                                    null &&
-                                                                (_model
+                                                        (_model
                                                                         .uploadedLocalFile3
                                                                         .bytes
                                                                         ?.isNotEmpty ??
@@ -7010,7 +7009,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
-                                                          alignment: AlignmentDirectional(
+                                                          alignment: const AlignmentDirectional(
                                                                   0.0, 0.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -7072,7 +7071,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: AlignmentDirectional(
+                                                            alignment: const AlignmentDirectional(
                                                                     0.0, 0.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -7091,7 +7090,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                           context)
                                                                       .unfocus(),
                                                               child:
-                                                                  DoneWidget(),
+                                                                  const DoneWidget(),
                                                             ),
                                                           );
                                                         },
@@ -7203,7 +7202,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                             backgroundColor:
                                                                 Colors
                                                                     .transparent,
-                                                            alignment: AlignmentDirectional(
+                                                            alignment: const AlignmentDirectional(
                                                                     0.0, -1.0)
                                                                 .resolve(
                                                                     Directionality.of(
@@ -7221,7 +7220,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                   : FocusScope.of(
                                                                           context)
                                                                       .unfocus(),
-                                                              child: Container(
+                                                              child: SizedBox(
                                                                 height: 100.0,
                                                                 width: double
                                                                     .infinity,
@@ -7251,7 +7250,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                           backgroundColor:
                                                               Colors
                                                                   .transparent,
-                                                          alignment: AlignmentDirectional(
+                                                          alignment: const AlignmentDirectional(
                                                                   0.0, -1.0)
                                                               .resolve(
                                                                   Directionality.of(
@@ -7269,7 +7268,7 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                                 : FocusScope.of(
                                                                         context)
                                                                     .unfocus(),
-                                                            child: Container(
+                                                            child: SizedBox(
                                                               height: 100.0,
                                                               width: double
                                                                   .infinity,
@@ -7309,10 +7308,10 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                           width: 390.0,
                                           height: 45.0,
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   25.0, 0.0, 25.0, 0.0),
                                           iconPadding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 0.0, 0.0),
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
@@ -7328,12 +7327,12 @@ class _QRGenerateWidgetState extends State<QRGenerateWidget>
                                                 useGoogleFonts: false,
                                               ),
                                           elevation: 3.0,
-                                          borderSide: BorderSide(
+                                          borderSide: const BorderSide(
                                             color: Colors.transparent,
                                           ),
                                           borderRadius:
                                               BorderRadius.circular(25.0),
-                                          disabledColor: Color(0x581371FF),
+                                          disabledColor: const Color(0x581371FF),
                                           disabledTextColor:
                                               FlutterFlowTheme.of(context).info,
                                         ),

@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'info_model.dart';
 export 'info_model.dart';
 
@@ -43,9 +41,9 @@ class _InfoWidgetState extends State<InfoWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, -1.0),
+      alignment: const AlignmentDirectional(0.0, -1.0),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 0.0),
         child: Container(
           width: 330.0,
           height: 70.0,
@@ -54,9 +52,9 @@ class _InfoWidgetState extends State<InfoWidget> {
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Align(
-            alignment: AlignmentDirectional(-1.0, 0.0),
+            alignment: const AlignmentDirectional(-1.0, 0.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 5.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 10.0, 5.0),
               child: Text(
                 valueOrDefault<String>(
                   widget.info,

@@ -1503,14 +1503,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Summer (Man)',
       'th': 'ฤดูร้อน (ชาย)',
     },
-    '76zwa9le': {
-      'en': 'Dune (Women)',
-      'th': 'ดูน (หญิง)',
-    },
-    'lnhax2jc': {
-      'en': 'Dune (Man)',
-      'th': 'ดูน (ชาย)',
-    },
     'ij795nco': {
       'en': 'CEO (Women)',
       'th': 'ซีอีโอ (ผู้หญิง)',
@@ -1665,6 +1657,10 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
     'pvbme7ut': {
       'en': '9',
       'th': '9',
+    },
+    '5yp3vfbg': {
+      'en': 'Generate',
+      'th': 'สร้าง ( 6 หน่วยกิต )',
     },
     'uo0uwwf3': {
       'en': 'Sending portrait generating request failed.',

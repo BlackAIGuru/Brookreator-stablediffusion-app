@@ -3,8 +3,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_video_player.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'video_result_model.dart';
 export 'video_result_model.dart';
 
@@ -45,22 +43,22 @@ class _VideoResultWidgetState extends State<VideoResultWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 1.0),
+      alignment: const AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: double.infinity,
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           maxWidth: 570.0,
         ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
           ),
           border: Border.all(
-            color: Color(0xFFE0E3E7),
+            color: const Color(0xFFE0E3E7),
           ),
         ),
         child: SingleChildScrollView(
@@ -68,7 +66,7 @@ class _VideoResultWidgetState extends State<VideoResultWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -76,7 +74,7 @@ class _VideoResultWidgetState extends State<VideoResultWidget> {
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 '0l2phx3p' /* AI Video (15 sec) */,
@@ -93,9 +91,9 @@ class _VideoResultWidgetState extends State<VideoResultWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(1.0, -1.0),
+                            alignment: const AlignmentDirectional(1.0, -1.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 5.0, 0.0),
                               child: InkWell(
                                 splashColor: Colors.transparent,
@@ -121,7 +119,7 @@ class _VideoResultWidgetState extends State<VideoResultWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 20.0),
                 child: FlutterFlowVideoPlayer(
                   path: widget.videoResultUrl!,
                   videoType: VideoType.network,
@@ -134,11 +132,11 @@ class _VideoResultWidgetState extends State<VideoResultWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                 child: wrapWithModel(
                   model: _model.buttongroup1Model,
                   updateCallback: () => setState(() {}),
-                  child: Buttongroup1Widget(),
+                  child: const Buttongroup1Widget(),
                 ),
               ),
             ],

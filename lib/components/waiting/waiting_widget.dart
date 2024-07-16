@@ -2,9 +2,7 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
 import 'waiting_model.dart';
 export 'waiting_model.dart';
 
@@ -49,15 +47,15 @@ class _WaitingWidgetState extends State<WaitingWidget> {
     return Container(
       width: MediaQuery.sizeOf(context).width * 1.0,
       height: MediaQuery.sizeOf(context).height * 1.0,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xCA000000),
       ),
       child: Stack(
         children: [
           Align(
-            alignment: AlignmentDirectional(-1.0, -1.0),
+            alignment: const AlignmentDirectional(-1.0, -1.0),
             child: Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
               child: InkWell(
                 splashColor: Colors.transparent,
                 focusColor: Colors.transparent,
@@ -79,20 +77,20 @@ class _WaitingWidgetState extends State<WaitingWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Container(
                     width: 140.0,
                     height: 140.0,
                     decoration: BoxDecoration(
-                      color: Color(0x00FFFFFF),
+                      color: const Color(0x00FFFFFF),
                       shape: BoxShape.circle,
                       border: Border.all(
-                        color: Color(0x00FFFFFF),
+                        color: const Color(0x00FFFFFF),
                       ),
                     ),
                     child: Stack(
@@ -105,7 +103,7 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                           animate: true,
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             '~${widget.time?.toString()} Min',
                             textAlign: TextAlign.center,
@@ -124,10 +122,10 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 15.0),
+                        const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 15.0),
                     child: Text(
                       FFLocalizations.of(context).getText(
                         'buz4t63u' /* Generating... */,
@@ -143,10 +141,10 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 50.0),
+                        const EdgeInsetsDirectional.fromSTEB(40.0, 0.0, 40.0, 50.0),
                     child: Text(
                       valueOrDefault<String>(
                         widget.contents,
@@ -163,7 +161,7 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -171,7 +169,7 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: FFButtonWidget(
                             onPressed: () async {
                               context.goNamed('HomePage');
@@ -182,11 +180,11 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                             options: FFButtonOptions(
                               width: 134.0,
                               height: 31.0,
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   24.0, 0.0, 24.0, 0.0),
-                              iconPadding: EdgeInsetsDirectional.fromSTEB(
+                              iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 0.0),
-                              color: Color(0xFF4D74FF),
+                              color: const Color(0xFF4D74FF),
                               textStyle: FlutterFlowTheme.of(context)
                                   .titleSmall
                                   .override(
@@ -198,7 +196,7 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                                     useGoogleFonts: false,
                                   ),
                               elevation: 3.0,
-                              borderSide: BorderSide(
+                              borderSide: const BorderSide(
                                 color: Color(0xFF5A7FFF),
                                 width: 1.2,
                               ),
@@ -216,8 +214,8 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                           options: FFButtonOptions(
                             width: 134.0,
                             height: 31.0,
-                            padding: EdgeInsets.all(0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsets.all(0.0),
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
                             color: Colors.white,
                             textStyle: FlutterFlowTheme.of(context)
@@ -231,14 +229,14 @@ class _WaitingWidgetState extends State<WaitingWidget> {
                                   useGoogleFonts: false,
                                 ),
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Color(0xFF5A7FFF),
                               width: 1.2,
                             ),
                             borderRadius: BorderRadius.circular(27.0),
                           ),
                         ),
-                      ].divide(SizedBox(width: 18.0)),
+                      ].divide(const SizedBox(width: 18.0)),
                     ),
                   ),
                 ),

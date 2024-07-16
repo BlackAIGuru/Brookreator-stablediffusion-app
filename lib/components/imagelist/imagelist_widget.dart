@@ -4,8 +4,6 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/flutter_flow/random_data_util.dart' as random_data;
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'imagelist_model.dart';
 export 'imagelist_model.dart';
 
@@ -116,8 +114,9 @@ class _ImagelistWidgetState extends State<ImagelistWidget> {
                 fit: BoxFit.cover,
               ),
             ),
-            if ((widget.type == 'AI-QRCODE') || (widget.type == 'QRCODE-LOGO'))
-              Align(
+            if ((widget.type == 'AI-QRCODE') ||
+                (widget.type == 'QRCODE-LOGO'))
+              const Align(
                 alignment: AlignmentDirectional(1.0, 1.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 5.0),
@@ -129,7 +128,7 @@ class _ImagelistWidgetState extends State<ImagelistWidget> {
                 ),
               ),
             if (widget.type == 'AI-PORTRAIT')
-              Align(
+              const Align(
                 alignment: AlignmentDirectional(1.0, 1.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 5.0),
@@ -141,7 +140,7 @@ class _ImagelistWidgetState extends State<ImagelistWidget> {
                 ),
               ),
             if (widget.type == 'VDO-TO-VDO')
-              Align(
+              const Align(
                 alignment: AlignmentDirectional(1.0, 1.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 5.0),
@@ -153,7 +152,7 @@ class _ImagelistWidgetState extends State<ImagelistWidget> {
                 ),
               ),
             if (widget.type == 'TEXT-TO-IMAGE')
-              Align(
+              const Align(
                 alignment: AlignmentDirectional(1.0, 1.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 5.0),

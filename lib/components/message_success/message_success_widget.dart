@@ -1,12 +1,8 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'message_success_model.dart';
 export 'message_success_model.dart';
 
@@ -47,8 +43,8 @@ class _MessageSuccessWidgetState extends State<MessageSuccessWidget>
             curve: Curves.easeInOut,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: Offset(0.0, -80.0),
-            end: Offset(0.0, 0.0),
+            begin: const Offset(0.0, -80.0),
+            end: const Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -72,9 +68,9 @@ class _MessageSuccessWidgetState extends State<MessageSuccessWidget>
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, -1.0),
+      alignment: const AlignmentDirectional(0.0, -1.0),
       child: Padding(
-        padding: EdgeInsetsDirectional.fromSTEB(7.0, 15.0, 7.0, 0.0),
+        padding: const EdgeInsetsDirectional.fromSTEB(7.0, 15.0, 7.0, 0.0),
         child: Container(
           width: double.infinity,
           height: 50.0,
@@ -83,7 +79,7 @@ class _MessageSuccessWidgetState extends State<MessageSuccessWidget>
             borderRadius: BorderRadius.circular(10.0),
           ),
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 5.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 5.0, 0.0),
             child: Row(
               mainAxisSize: MainAxisSize.max,
               children: [

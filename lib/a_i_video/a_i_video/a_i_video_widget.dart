@@ -16,7 +16,6 @@ import 'package:sticky_headers/sticky_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'a_i_video_model.dart';
 export 'a_i_video_model.dart';
@@ -69,7 +68,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
           child: Stack(
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 80.0),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -77,7 +76,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                       StickyHeader(
                         overlapHeaders: false,
                         header: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               10.0, 0.0, 10.0, 0.0),
                           child: Container(
                             decoration: BoxDecoration(
@@ -96,9 +95,9 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                     context.pushNamed('HomePage');
                                   },
                                   child: Container(
-                                    decoration: BoxDecoration(),
+                                    decoration: const BoxDecoration(),
                                     child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
                                           10.0, 3.0, 0.0, 0.0),
                                       child: InkWell(
                                         splashColor: Colors.transparent,
@@ -119,7 +118,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     FFLocalizations.of(context).getText(
                                       'niine03l' /* AI Video (15 sec) */,
@@ -136,16 +135,16 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Builder(
                                     builder: (context) {
                                       if (!FFAppState().Logined) {
                                         return Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 10.0, 0.0),
                                             child: Row(
                                               mainAxisSize: MainAxisSize.min,
@@ -156,7 +155,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                   model: _model.signiniconModel,
                                                   updateCallback: () =>
                                                       setState(() {}),
-                                                  child: SigniniconWidget(),
+                                                  child: const SigniniconWidget(),
                                                 ),
                                               ],
                                             ),
@@ -165,14 +164,14 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                       } else {
                                         return Align(
                                           alignment:
-                                              AlignmentDirectional(1.0, 0.0),
+                                              const AlignmentDirectional(1.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             mainAxisAlignment:
                                                 MainAxisAlignment.end,
                                             children: [
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         0.0, 0.0, 5.0, 0.0),
                                                 child: InkWell(
@@ -201,7 +200,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                       shape: BoxShape.rectangle,
                                                       border: Border.all(
                                                         color:
-                                                            Color(0xFFE4E4E4),
+                                                            const Color(0xFFE4E4E4),
                                                       ),
                                                     ),
                                                     child: Row(
@@ -214,7 +213,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         Flexible(
                                                           child: Align(
                                                             alignment:
-                                                                AlignmentDirectional(
+                                                                const AlignmentDirectional(
                                                                     0.0, 0.0),
                                                             child: Text(
                                                               FFAppState()
@@ -244,11 +243,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         ),
                                                         Align(
                                                           alignment:
-                                                              AlignmentDirectional(
+                                                              const AlignmentDirectional(
                                                                   1.0, 0.0),
                                                           child: Padding(
                                                             padding:
-                                                                EdgeInsetsDirectional
+                                                                const EdgeInsetsDirectional
                                                                     .fromSTEB(
                                                                         0.0,
                                                                         0.0,
@@ -281,14 +280,14 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                           ),
                         ),
                         content: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               15.0, 10.0, 15.0, 0.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -299,14 +298,14 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 10.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   15.0, 0.0, 0.0, 20.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -357,7 +356,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              EdgeInsetsDirectional.fromSTEB(
+                                              const EdgeInsetsDirectional.fromSTEB(
                                                   30.0, 0.0, 30.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
@@ -391,7 +390,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                           ? FlutterFlowTheme.of(
                                                                   context)
                                                               .primary
-                                                          : Color(0xFFE4E4E4),
+                                                          : const Color(0xFFE4E4E4),
                                                       width: 2.0,
                                                     ),
                                                   ),
@@ -410,14 +409,14 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 1.0),
                                                         child: Container(
                                                           width:
                                                               double.infinity,
                                                           height: 30.0,
                                                           decoration:
-                                                              BoxDecoration(
+                                                              const BoxDecoration(
                                                             gradient:
                                                                 LinearGradient(
                                                               colors: [
@@ -457,11 +456,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                       ),
                                                       Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 1.0),
                                                         child: Padding(
                                                           padding:
-                                                              EdgeInsetsDirectional
+                                                              const EdgeInsetsDirectional
                                                                   .fromSTEB(
                                                                       0.0,
                                                                       0.0,
@@ -500,7 +499,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Container(
                                                   width: 115.0,
@@ -513,19 +512,19 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         BorderRadius.circular(
                                                             10.0),
                                                     border: Border.all(
-                                                      color: Color(0xFFE4E4E4),
+                                                      color: const Color(0xFFE4E4E4),
                                                     ),
                                                   ),
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Align(
                                                     alignment:
-                                                        AlignmentDirectional(
+                                                        const AlignmentDirectional(
                                                             0.0, 0.0),
                                                     child: Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   3.0,
                                                                   0.0,
@@ -559,7 +558,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(SizedBox(width: 14.0)),
+                                            ].divide(const SizedBox(width: 14.0)),
                                           ),
                                         ),
                                       ],
@@ -568,7 +567,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 10.0),
                                 child: Card(
                                   clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -579,22 +578,22 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 10.0),
                                     child: Column(
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, 0.0),
+                                              const AlignmentDirectional(-1.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.min,
                                             children: [
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     -1.0, 0.0),
                                                 child: Padding(
-                                                  padding: EdgeInsetsDirectional
+                                                  padding: const EdgeInsetsDirectional
                                                       .fromSTEB(
                                                           15.0, 0.0, 0.0, 0.0),
                                                   child: Text(
@@ -638,7 +637,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         ),
                                               ),
                                               Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         3.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -667,10 +666,10 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                         ),
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(-1.0, -1.0),
+                                              const AlignmentDirectional(-1.0, -1.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     15.0, 5.0, 0.0, 10.0),
                                             child: Text(
                                               FFLocalizations.of(context)
@@ -694,9 +693,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                         ),
                                         Builder(
                                           builder: (context) {
-                                            if ((_model.uploadedLocalFile !=
-                                                        null &&
-                                                    (_model
+                                            if (((_model
                                                             .uploadedLocalFile
                                                             .bytes
                                                             ?.isNotEmpty ??
@@ -705,14 +702,14 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         null &&
                                                     _model.uploadedvideoshow !=
                                                         '')) {
-                                              return Container(
+                                              return SizedBox(
                                                 width: 275.0,
                                                 height: 400.0,
                                                 child: Stack(
                                                   children: [
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 0.0),
                                                       child:
                                                           FlutterFlowVideoPlayer(
@@ -738,7 +735,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               1.0, -1.0),
                                                       child: InkWell(
                                                         splashColor:
@@ -786,7 +783,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                                         .primaryText,
                                                                   ),
                                                                 ),
-                                                                duration: Duration(
+                                                                duration: const Duration(
                                                                     milliseconds:
                                                                         4000),
                                                                 backgroundColor:
@@ -809,7 +806,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                                         .primaryText,
                                                                   ),
                                                                 ),
-                                                                duration: Duration(
+                                                                duration: const Duration(
                                                                     milliseconds:
                                                                         4000),
                                                                 backgroundColor:
@@ -840,7 +837,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                               );
                                             } else {
                                               return Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: Builder(
                                                   builder: (context) => InkWell(
@@ -956,7 +953,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: AlignmentDirectional(
+                                                                alignment: const AlignmentDirectional(
                                                                         0.0,
                                                                         -1.0)
                                                                     .resolve(
@@ -975,7 +972,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                                               context)
                                                                           .unfocus(),
                                                                   child:
-                                                                      Container(
+                                                                      SizedBox(
                                                                     height:
                                                                         100.0,
                                                                     width: double
@@ -1009,7 +1006,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                                 backgroundColor:
                                                                     Colors
                                                                         .transparent,
-                                                                alignment: AlignmentDirectional(
+                                                                alignment: const AlignmentDirectional(
                                                                         0.0,
                                                                         -1.0)
                                                                     .resolve(
@@ -1028,7 +1025,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                                               context)
                                                                           .unfocus(),
                                                                   child:
-                                                                      Container(
+                                                                      SizedBox(
                                                                     height:
                                                                         100.0,
                                                                     width: double
@@ -1065,13 +1062,13 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                       ),
                                                       child: Align(
                                                         alignment:
-                                                            AlignmentDirectional(
+                                                            const AlignmentDirectional(
                                                                 0.0, 0.0),
                                                         child: Stack(
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: ClipRRect(
                                                                 borderRadius:
@@ -1089,12 +1086,12 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0,
                                                                       -1.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             40.0,
@@ -1120,11 +1117,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             10.0,
@@ -1158,11 +1155,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                             ),
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Padding(
                                                                 padding:
-                                                                    EdgeInsetsDirectional
+                                                                    const EdgeInsetsDirectional
                                                                         .fromSTEB(
                                                                             0.0,
                                                                             45.0,
@@ -1216,7 +1213,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                  padding: const EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 10.0),
                                   child: Column(
                                     mainAxisSize: MainAxisSize.max,
@@ -1224,15 +1221,15 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(-1.0, 0.0),
+                                            const AlignmentDirectional(-1.0, 0.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.min,
                                           children: [
                                             Align(
-                                              alignment: AlignmentDirectional(
+                                              alignment: const AlignmentDirectional(
                                                   -1.0, 0.0),
                                               child: Padding(
-                                                padding: EdgeInsetsDirectional
+                                                padding: const EdgeInsetsDirectional
                                                     .fromSTEB(
                                                         15.0, 0.0, 0.0, 0.0),
                                                 child: Text(
@@ -1278,7 +1275,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                         ),
                                       ),
                                       Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                        padding: const EdgeInsetsDirectional.fromSTEB(
                                             0.0, 10.0, 0.0, 10.0),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.min,
@@ -1312,13 +1309,13 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : Color(0xFFE4E4E4),
+                                                            : const Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
                                                 child: Stack(
                                                   children: [
-                                                    Align(
+                                                    const Align(
                                                       alignment:
                                                           AlignmentDirectional(
                                                               0.0, 0.0),
@@ -1343,11 +1340,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 1.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1362,7 +1359,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                           children: [
                                                             Align(
                                                               alignment:
-                                                                  AlignmentDirectional(
+                                                                  const AlignmentDirectional(
                                                                       0.0, 0.0),
                                                               child: Text(
                                                                 FFLocalizations.of(
@@ -1439,7 +1436,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         width: double.infinity,
                                                         height: double.infinity,
                                                         decoration:
-                                                            BoxDecoration(
+                                                            const BoxDecoration(
                                                           color:
                                                               Color(0x00060606),
                                                         ),
@@ -1476,7 +1473,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                             ? FlutterFlowTheme
                                                                     .of(context)
                                                                 .primary
-                                                            : Color(0xFFE4E4E4),
+                                                            : const Color(0xFFE4E4E4),
                                                     width: 2.0,
                                                   ),
                                                 ),
@@ -1484,7 +1481,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                   children: [
                                                     Padding(
                                                       padding:
-                                                          EdgeInsetsDirectional
+                                                          const EdgeInsetsDirectional
                                                               .fromSTEB(
                                                                   8.0,
                                                                   1.0,
@@ -1522,11 +1519,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                     ),
                                                     Align(
                                                       alignment:
-                                                          AlignmentDirectional(
+                                                          const AlignmentDirectional(
                                                               0.0, 1.0),
                                                       child: Padding(
                                                         padding:
-                                                            EdgeInsetsDirectional
+                                                            const EdgeInsetsDirectional
                                                                 .fromSTEB(
                                                                     0.0,
                                                                     0.0,
@@ -1599,7 +1596,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                 ),
                                               ),
                                             ),
-                                          ].divide(SizedBox(width: 15.0)),
+                                          ].divide(const SizedBox(width: 15.0)),
                                         ),
                                       ),
                                     ],
@@ -1615,11 +1612,11 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Builder(
                   builder: (context) => Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                     child: FFButtonWidget(
                       onPressed: (_model.uploadedvideoshow == null ||
                               _model.uploadedvideoshow == '')
@@ -1670,7 +1667,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0)
+                                            const AlignmentDirectional(0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         child: GestureDetector(
@@ -1731,7 +1728,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -1743,7 +1740,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: DoneWidget(),
+                                            child: const DoneWidget(),
                                           ),
                                         );
                                       },
@@ -1791,7 +1788,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: AlignmentDirectional(
+                                          alignment: const AlignmentDirectional(
                                                   0.0, -1.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -1803,7 +1800,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                         _model.unfocusNode)
                                                 : FocusScope.of(context)
                                                     .unfocus(),
-                                            child: Container(
+                                            child: SizedBox(
                                               height: 100.0,
                                               width: double.infinity,
                                               child: MessageErrorWidget(
@@ -1829,7 +1826,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            AlignmentDirectional(0.0, -1.0)
+                                            const AlignmentDirectional(0.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         child: GestureDetector(
@@ -1840,7 +1837,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                                       _model.unfocusNode)
                                               : FocusScope.of(context)
                                                   .unfocus(),
-                                          child: Container(
+                                          child: SizedBox(
                                             height: 100.0,
                                             width: double.infinity,
                                             child: MessageErrorWidget(
@@ -1872,10 +1869,10 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                       options: FFButtonOptions(
                         width: 390.0,
                         height: 45.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -1886,7 +1883,7 @@ class _AIVideoWidgetState extends State<AIVideoWidget> {
                                 ),
                         elevation: 3.0,
                         borderRadius: BorderRadius.circular(25.0),
-                        disabledColor: Color(0x581371FF),
+                        disabledColor: const Color(0x581371FF),
                         disabledTextColor: FlutterFlowTheme.of(context).info,
                       ),
                     ),

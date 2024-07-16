@@ -4,7 +4,6 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'buttongroup2_model.dart';
 export 'buttongroup2_model.dart';
@@ -48,7 +47,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: const AlignmentDirectional(0.0, 0.0),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -70,20 +69,20 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                   borderRadius: BorderRadius.circular(27.0),
                   shape: BoxShape.rectangle,
                   border: Border.all(
-                    color: Color(0x816F6F6F),
+                    color: const Color(0x816F6F6F),
                   ),
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Stack(
                     children: [
                       Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 5.0, 0.0),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(0.0),
@@ -97,7 +96,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               FFLocalizations.of(context).getText(
                                 'rbh8sny6' /* My Pictures */,
@@ -124,7 +123,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
           ),
           Builder(
             builder: (context) => Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 0.0, 0.0),
               child: FFButtonWidget(
                 onPressed: () async {
                   _model.apiResultlf8 =
@@ -141,9 +140,9 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                           elevation: 0,
                           insetPadding: EdgeInsets.zero,
                           backgroundColor: Colors.transparent,
-                          alignment: AlignmentDirectional(0.0, 0.0)
+                          alignment: const AlignmentDirectional(0.0, 0.0)
                               .resolve(Directionality.of(context)),
-                          child: MessageErrorWidget(
+                          child: const MessageErrorWidget(
                             alertInfo: 'Download failed',
                           ),
                         );
@@ -159,9 +158,9 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                 options: FFButtonOptions(
                   width: MediaQuery.sizeOf(context).width * 0.4,
                   height: 35.0,
-                  padding: EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                   iconPadding:
-                      EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                   color: FlutterFlowTheme.of(context).primary,
                   textStyle: FlutterFlowTheme.of(context).titleSmall.override(
                         fontFamily: 'NotoSansThai',
@@ -172,7 +171,7 @@ class _Buttongroup2WidgetState extends State<Buttongroup2Widget> {
                         useGoogleFonts: false,
                       ),
                   elevation: 3.0,
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                     color: Colors.transparent,
                     width: 1.0,
                   ),

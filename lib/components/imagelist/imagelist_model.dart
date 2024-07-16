@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'signinicon_widget.dart' show SigniniconWidget;
+import 'imagelist_widget.dart' show ImagelistWidget;
 import 'package:flutter/material.dart';
 
-class SigniniconModel extends FlutterFlowModel<SigniniconWidget> {
+class ImagelistModel extends FlutterFlowModel<ImagelistWidget> {
   @override
   void initState(BuildContext context) {}
 

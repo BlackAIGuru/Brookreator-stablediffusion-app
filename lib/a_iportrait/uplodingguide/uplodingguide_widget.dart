@@ -1,8 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'uplodingguide_model.dart';
 export 'uplodingguide_model.dart';
 
@@ -38,23 +36,23 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: AlignmentDirectional(0.0, 1.0),
+      alignment: const AlignmentDirectional(0.0, 1.0),
       child: Container(
         width: double.infinity,
         height: 580.0,
-        constraints: BoxConstraints(
+        constraints: const BoxConstraints(
           maxWidth: 570.0,
         ),
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).primaryBackground,
-          borderRadius: BorderRadius.only(
+          borderRadius: const BorderRadius.only(
             bottomLeft: Radius.circular(0.0),
             bottomRight: Radius.circular(0.0),
             topLeft: Radius.circular(20.0),
             topRight: Radius.circular(20.0),
           ),
           border: Border.all(
-            color: Color(0xFFE0E3E7),
+            color: const Color(0xFFE0E3E7),
           ),
         ),
         child: SingleChildScrollView(
@@ -62,13 +60,13 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 10.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 10.0, 0.0, 10.0),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Icon(
                         Icons.light_mode,
                         color: FlutterFlowTheme.of(context).primary,
@@ -77,7 +75,7 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: const AlignmentDirectional(-1.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'sea1hok6' /* Uploading Guide */,
@@ -96,10 +94,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(1.0, -1.0),
+                      alignment: const AlignmentDirectional(1.0, -1.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 5.0, 15.0),
                         child: InkWell(
                           splashColor: Colors.transparent,
                           focusColor: Colors.transparent,
@@ -120,15 +118,15 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -137,10 +135,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                               width: 23.0,
                               height: 23.0,
                               decoration: BoxDecoration(
-                                color: Color(0xFFE4FBE2),
+                                color: const Color(0xFFE4FBE2),
                                 borderRadius: BorderRadius.circular(50.0),
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.check,
                                 color: Color(0xFF028827),
                                 size: 18.0,
@@ -160,13 +158,13 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                                     useGoogleFonts: false,
                                   ),
                             ),
-                          ].divide(SizedBox(width: 10.0)),
+                          ].divide(const SizedBox(width: 10.0)),
                         ),
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
+                          const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           'z2455605' /* Take portraits or selfies of o... */,
@@ -182,10 +180,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
@@ -222,14 +220,14 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                       ),
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 5.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -237,10 +235,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                             width: 23.0,
                             height: 23.0,
                             decoration: BoxDecoration(
-                              color: Color(0xFFFFE5E5),
+                              color: const Color(0xFFFFE5E5),
                               borderRadius: BorderRadius.circular(50.0),
                             ),
-                            child: Icon(
+                            child: const Icon(
                               Icons.close,
                               color: Color(0xFFFF0000),
                               size: 18.0,
@@ -259,14 +257,14 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                                       useGoogleFonts: false,
                                     ),
                           ),
-                        ].divide(SizedBox(width: 10.0)),
+                        ].divide(const SizedBox(width: 10.0)),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(10.0, 5.0, 0.0, 5.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'nyusm6zb' /* Group or full body photos, cov... */,
@@ -286,10 +284,10 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 5.0),
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           child: Row(
@@ -326,16 +324,16 @@ class _UplodingguideWidgetState extends State<UplodingguideWidget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                            ].divide(SizedBox(width: 10.0)),
+                            ].divide(const SizedBox(width: 10.0)),
                           ),
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 5.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'rmfea1sw' /* You can rest assured that we w... */,

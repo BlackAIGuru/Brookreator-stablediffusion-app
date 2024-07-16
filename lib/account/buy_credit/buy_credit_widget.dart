@@ -1,10 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'buy_credit_model.dart';
 export 'buy_credit_model.dart';
@@ -48,7 +46,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -68,9 +66,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                           context.safePop();
                         },
                         child: Container(
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 3.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -91,7 +89,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
                             'h28j8xmv' /* Buy Credit */,
@@ -107,9 +105,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1.0, 0.0),
+                        alignment: const AlignmentDirectional(1.0, 0.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 20.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -128,7 +126,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                 borderRadius: BorderRadius.circular(30.0),
                                 shape: BoxShape.rectangle,
                                 border: Border.all(
-                                  color: Color(0xFFE4E4E4),
+                                  color: const Color(0xFFE4E4E4),
                                 ),
                               ),
                               child: Row(
@@ -137,36 +135,34 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                 children: [
                                   Flexible(
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
-                                      child: Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            5.0, 0.0, 0.0, 0.0),
-                                        child: Text(
-                                          FFAppState().Credit.toString(),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyMedium
-                                              .override(
-                                                fontFamily: 'NotoSansThai',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .primaryText,
-                                                fontSize: 16.0,
-                                                letterSpacing: 0.0,
-                                                fontWeight: FontWeight.w500,
-                                                useGoogleFonts: false,
-                                              ),
-                                        ),
+                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      child: Text(
+                                        FFAppState().Credit.toString(),
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              fontFamily: 'NotoSansThai',
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              fontSize: 16.0,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.w500,
+                                              useGoogleFonts: false,
+                                            ),
                                       ),
                                     ),
                                   ),
-                                  Flexible(
-                                    child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                  Align(
+                                    alignment: const AlignmentDirectional(1.0, 0.0),
+                                    child: Padding(
+                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                          0.0, 0.0, 5.0, 0.0),
                                       child: Icon(
                                         Icons.monetization_on_outlined,
                                         color: FlutterFlowTheme.of(context)
                                             .primary,
-                                        size: 24.0,
+                                        size: 17.0,
                                       ),
                                     ),
                                   ),
@@ -180,7 +176,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(8.0),
                     child: Image.asset(
@@ -199,13 +195,13 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(15.0, 0.0, 15.0, 0.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, -1.0),
+                          alignment: const AlignmentDirectional(0.0, -1.0),
                           child: Text(
                             FFLocalizations.of(context).getText(
                               'bycdemw8' /* Choose a package that fits you... */,
@@ -220,7 +216,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 25.0, 0.0, 0.0),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
@@ -228,9 +224,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                             children: [
                               Flexible(
                                 child: Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: const AlignmentDirectional(-1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -258,15 +254,15 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                             color: _model.selectpackage == 1
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : Color(0xFFD9D9D9),
+                                                : const Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.min,
                                             mainAxisAlignment:
@@ -275,11 +271,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -309,7 +305,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: RichText(
                                                   textScaler:
@@ -324,23 +320,26 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           'rb8fnomz' /* 199 */,
                                                         ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 19.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                  fontSize:
+                                                                      19.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
                                                       TextSpan(
                                                         text:
@@ -350,6 +349,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           '0562251r' /*  THB */,
                                                         ),
                                                         style: TextStyle(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontSize: 12.0,
@@ -362,7 +364,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
-                                                          color: Colors.black,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                           letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
@@ -372,11 +376,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Text(
@@ -385,21 +389,25 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         'fggs6k94' /* 200 credits */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'NotoSansThai',
-                                                            color: Colors.black,
-                                                            fontSize: 14.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
                                                   ),
                                                 ),
@@ -414,9 +422,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                               ),
                               Flexible(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 5.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -444,26 +452,26 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                             color: _model.selectpackage == 2
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : Color(0xFFD9D9D9),
+                                                : const Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -493,7 +501,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: RichText(
                                                   textScaler:
@@ -508,23 +516,26 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           '1wneynnl' /* 449 */,
                                                         ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 19.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                  fontSize:
+                                                                      19.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
                                                       TextSpan(
                                                         text:
@@ -534,6 +545,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           'nrio6a1h' /*  THB */,
                                                         ),
                                                         style: TextStyle(
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                           fontWeight:
                                                               FontWeight.w600,
                                                           fontSize: 12.0,
@@ -546,7 +560,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'NotoSansThai',
-                                                          color: Colors.black,
+                                                          color: FlutterFlowTheme
+                                                                  .of(context)
+                                                              .primaryText,
                                                           letterSpacing: 0.0,
                                                           useGoogleFonts: false,
                                                         ),
@@ -554,7 +570,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                 ),
                                               ),
                                               Align(
-                                                alignment: AlignmentDirectional(
+                                                alignment: const AlignmentDirectional(
                                                     0.0, 0.0),
                                                 child: RichText(
                                                   textScaler:
@@ -569,26 +585,28 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           'dpobhju6' /* 497 THB */,
                                                         ),
-                                                        style: FlutterFlowTheme
-                                                                .of(context)
-                                                            .bodyMedium
-                                                            .override(
-                                                              fontFamily:
-                                                                  'NotoSansThai',
-                                                              color:
-                                                                  Colors.black,
-                                                              fontSize: 8.0,
-                                                              letterSpacing:
-                                                                  0.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .normal,
-                                                              decoration:
-                                                                  TextDecoration
-                                                                      .lineThrough,
-                                                              useGoogleFonts:
-                                                                  false,
-                                                            ),
+                                                        style:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .bodyMedium
+                                                                .override(
+                                                                  fontFamily:
+                                                                      'NotoSansThai',
+                                                                  color: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .primaryText,
+                                                                  fontSize: 8.0,
+                                                                  letterSpacing:
+                                                                      0.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .normal,
+                                                                  decoration:
+                                                                      TextDecoration
+                                                                          .lineThrough,
+                                                                  useGoogleFonts:
+                                                                      false,
+                                                                ),
                                                       ),
                                                       TextSpan(
                                                         text:
@@ -597,7 +615,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                                 .getText(
                                                           'ufevgb07' /*  Save 10% */,
                                                         ),
-                                                        style: TextStyle(
+                                                        style: const TextStyle(
                                                           color:
                                                               Color(0xFFFF0000),
                                                           fontWeight:
@@ -621,11 +639,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Text(
@@ -634,21 +652,25 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         '2b15eog9' /* 500 credits */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'NotoSansThai',
-                                                            color: Colors.black,
-                                                            fontSize: 14.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
                                                   ),
                                                 ),
@@ -663,9 +685,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                               ),
                               Flexible(
                                 child: Align(
-                                  alignment: AlignmentDirectional(1.0, 0.0),
+                                  alignment: const AlignmentDirectional(1.0, 0.0),
                                   child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                    padding: const EdgeInsetsDirectional.fromSTEB(
                                         5.0, 0.0, 0.0, 0.0),
                                     child: InkWell(
                                       splashColor: Colors.transparent,
@@ -693,26 +715,26 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                             color: _model.selectpackage == 3
                                                 ? FlutterFlowTheme.of(context)
                                                     .primary
-                                                : Color(0xFFD9D9D9),
+                                                : const Color(0xFFD9D9D9),
                                             width: 2.0,
                                           ),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            const AlignmentDirectional(0.0, 0.0),
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Column(
                                             mainAxisSize: MainAxisSize.max,
                                             children: [
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, -1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 15.0,
                                                                 0.0, 0.0),
                                                     child: Text(
@@ -759,7 +781,9 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .override(
                                                             fontFamily:
                                                                 'NotoSansThai',
-                                                            color: Colors.black,
+                                                            color: FlutterFlowTheme
+                                                                    .of(context)
+                                                                .primaryText,
                                                             fontSize: 19.0,
                                                             letterSpacing: 0.0,
                                                             fontWeight:
@@ -775,6 +799,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         '0fn8rm9s' /*  THB */,
                                                       ),
                                                       style: TextStyle(
+                                                        color:
+                                                            FlutterFlowTheme.of(
+                                                                    context)
+                                                                .primaryText,
                                                         fontWeight:
                                                             FontWeight.w600,
                                                         fontSize: 12.0,
@@ -788,7 +816,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                         fontFamily:
                                                             'NotoSansThai',
                                                         color:
-                                                            Color(0xFF080808),
+                                                            const Color(0xFF080808),
                                                         letterSpacing: 0.0,
                                                         useGoogleFonts: false,
                                                       ),
@@ -806,24 +834,28 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         'mkng8rqa' /* 1200 THB */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'NotoSansThai',
-                                                            color: Colors.black,
-                                                            fontSize: 8.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            decoration:
-                                                                TextDecoration
-                                                                    .lineThrough,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontSize: 8.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                decoration:
+                                                                    TextDecoration
+                                                                        .lineThrough,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
                                                     TextSpan(
                                                       text: FFLocalizations.of(
@@ -831,7 +863,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         '4ukxfhmk' /*  Save 50% */,
                                                       ),
-                                                      style: TextStyle(
+                                                      style: const TextStyle(
                                                         color:
                                                             Color(0xFFFF0000),
                                                         fontWeight:
@@ -854,11 +886,11 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                               Flexible(
                                                 child: Align(
                                                   alignment:
-                                                      AlignmentDirectional(
+                                                      const AlignmentDirectional(
                                                           0.0, 1.0),
                                                   child: Padding(
                                                     padding:
-                                                        EdgeInsetsDirectional
+                                                        const EdgeInsetsDirectional
                                                             .fromSTEB(0.0, 0.0,
                                                                 0.0, 15.0),
                                                     child: Text(
@@ -867,21 +899,25 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                                           .getText(
                                                         'lc42w9yf' /* 1200 credits */,
                                                       ),
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyMedium
-                                                          .override(
-                                                            fontFamily:
-                                                                'NotoSansThai',
-                                                            color: Colors.black,
-                                                            fontSize: 14.0,
-                                                            letterSpacing: 0.0,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .normal,
-                                                            useGoogleFonts:
-                                                                false,
-                                                          ),
+                                                      style:
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyMedium
+                                                              .override(
+                                                                fontFamily:
+                                                                    'NotoSansThai',
+                                                                color: FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .primaryText,
+                                                                fontSize: 14.0,
+                                                                letterSpacing:
+                                                                    0.0,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .normal,
+                                                                useGoogleFonts:
+                                                                    false,
+                                                              ),
                                                     ),
                                                   ),
                                                 ),
@@ -902,10 +938,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 1.0),
+                  alignment: const AlignmentDirectional(0.0, 1.0),
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 30.0, 10.0, 0.0),
                     child: FFButtonWidget(
                       onPressed: () {
                         print('Button pressed ...');
@@ -916,10 +952,10 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                       options: FFButtonOptions(
                         width: 320.0,
                         height: 50.0,
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             25.0, 0.0, 25.0, 0.0),
                         iconPadding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: FlutterFlowTheme.of(context).primary,
                         textStyle:
                             FlutterFlowTheme.of(context).titleSmall.override(
@@ -928,7 +964,7 @@ class _BuyCreditWidgetState extends State<BuyCreditWidget> {
                                   letterSpacing: 0.0,
                                   useGoogleFonts: false,
                                 ),
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                           color: Colors.transparent,
                           width: 1.0,
                         ),

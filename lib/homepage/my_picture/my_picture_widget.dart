@@ -1,16 +1,12 @@
 import '/backend/api_requests/api_calls.dart';
-import '/backend/backend.dart';
-import '/backend/schema/structs/index.dart';
-import '/components/imagelist_widget.dart';
+import '/components/imagelist/imagelist_widget.dart';
 import '/flutter_flow/flutter_flow_choice_chips.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'my_picture_model.dart';
 export 'my_picture_model.dart';
@@ -61,14 +57,14 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
                 Stack(
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -78,9 +74,9 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                           context.safePop();
                         },
                         child: Container(
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 3.0, 0.0, 0.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -102,7 +98,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '2dj0k2yh' /* My Pictures */,
@@ -121,11 +117,11 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
+                        const EdgeInsetsDirectional.fromSTEB(10.0, 0.0, 10.0, 10.0),
                     child: Column(
                       children: [
                         Align(
-                          alignment: Alignment(0.0, 0),
+                          alignment: const Alignment(0.0, 0),
                           child: TabBar(
                             labelColor: FlutterFlowTheme.of(context).primary,
                             unselectedLabelColor:
@@ -139,17 +135,17 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                   fontWeight: FontWeight.w600,
                                   useGoogleFonts: false,
                                 ),
-                            unselectedLabelStyle: TextStyle(),
+                            unselectedLabelStyle: const TextStyle(),
                             indicatorColor:
                                 FlutterFlowTheme.of(context).primary,
                             indicatorWeight: 3.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 20.0, 10.0, 20.0, 10.0),
                             tabs: [
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 7.0, 0.0),
                                     child: Icon(
@@ -166,7 +162,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Padding(
+                                  const Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 7.0, 0.0),
                                     child: Icon(
@@ -201,7 +197,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                   builder: (context, snapshot) {
                                     // Customize what your widget looks like when it's loading.
                                     if (!snapshot.hasData) {
-                                      return Center(
+                                      return const Center(
                                         child: SizedBox(
                                           width: 50.0,
                                           height: 50.0,
@@ -216,16 +212,17 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                     }
                                     final listViewGetAllImagesResponse =
                                         snapshot.data!;
+
                                     return ListView(
                                       padding: EdgeInsets.zero,
                                       scrollDirection: Axis.vertical,
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: FlutterFlowChoiceChips(
                                               options: [
@@ -417,11 +414,12 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                               r'''$.feature''',
                                                             ).toString()))
                                                     .toList()
-                                                    ?.toList() ??
+                                                    .toList() ??
                                                 [];
+
                                             return MasonryGridView.builder(
                                               gridDelegate:
-                                                  SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
                                                 crossAxisCount: 3,
                                               ),
                                               crossAxisSpacing: 10.0,
@@ -550,7 +548,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                   builder: (context, snapshot) {
                                     // Customize what your widget looks like when it's loading.
                                     if (!snapshot.hasData) {
-                                      return Center(
+                                      return const Center(
                                         child: SizedBox(
                                           width: 50.0,
                                           height: 50.0,
@@ -565,16 +563,17 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                     }
                                     final listViewGetAllFavouritesResponse =
                                         snapshot.data!;
+
                                     return ListView(
                                       padding: EdgeInsets.zero,
                                       scrollDirection: Axis.vertical,
                                       children: [
                                         Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              const AlignmentDirectional(0.0, 0.0),
                                           child: Padding(
                                             padding:
-                                                EdgeInsetsDirectional.fromSTEB(
+                                                const EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 0.0, 0.0, 10.0),
                                             child: FlutterFlowChoiceChips(
                                               options: [
@@ -652,7 +651,7 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                               },
                                               selectedChipStyle: ChipStyle(
                                                 backgroundColor:
-                                                    Color(0xFF3587D7),
+                                                    const Color(0xFF3587D7),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
@@ -745,11 +744,12 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                               r'''$.feature''',
                                                             ).toString()))
                                                     .toList()
-                                                    ?.toList() ??
+                                                    .toList() ??
                                                 [];
+
                                             return MasonryGridView.builder(
                                               gridDelegate:
-                                                  SliverSimpleGridDelegateWithFixedCrossAxisCount(
+                                                  const SliverSimpleGridDelegateWithFixedCrossAxisCount(
                                                 crossAxisCount: 3,
                                               ),
                                               crossAxisSpacing: 10.0,
@@ -760,118 +760,107 @@ class _MyPictureWidgetState extends State<MyPictureWidget>
                                                   (context, favouriteIndex) {
                                                 final favouriteItem =
                                                     favourite[favouriteIndex];
-                                                return InkWell(
-                                                  splashColor:
-                                                      Colors.transparent,
-                                                  focusColor:
-                                                      Colors.transparent,
-                                                  hoverColor:
-                                                      Colors.transparent,
-                                                  highlightColor:
-                                                      Colors.transparent,
-                                                  onTap: () async {},
-                                                  child: Container(
-                                                    width: double.infinity,
-                                                    child: Stack(
-                                                      children: [
-                                                        ImagelistWidget(
-                                                          key: Key(
-                                                              'Keyq33_${favouriteIndex}_of_${favourite.length}'),
-                                                          imageUrl: (BrookreatorGroup
-                                                                      .getAllFavouritesCall
-                                                                      .feature(
-                                                                    listViewGetAllFavouritesResponse
-                                                                        .jsonBody,
-                                                                  )?[favouriteIndex]) ==
-                                                                  'VDO-TO-VDO'
-                                                              ? getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.vdoUrl''',
-                                                                ).toString()
-                                                              : getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.url''',
-                                                                ).toString(),
-                                                          type: getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.feature''',
-                                                          ).toString(),
-                                                          imageId: getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.imageId''',
-                                                          ).toString(),
-                                                          title: () {
-                                                            if ('TEXT-TO-IMAGE' ==
-                                                                getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.feature''',
-                                                                ).toString()) {
-                                                              return 'Text to Image';
-                                                            } else if ('AI-PORTRAIT' ==
-                                                                getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.feature''',
-                                                                ).toString()) {
-                                                              return 'AI Portrait';
-                                                            } else if ('VDO-TO-VDO' ==
-                                                                getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.feature''',
-                                                                ).toString()) {
-                                                              return 'AI Video';
-                                                            } else if ('AI-QRCODE' ==
-                                                                getJsonField(
-                                                                  favouriteItem,
-                                                                  r'''$.feature''',
-                                                                ).toString()) {
-                                                              return 'QR Generator';
-                                                            } else {
-                                                              return 'QR Classic';
-                                                            }
-                                                          }(),
-                                                          isImage: (BrookreatorGroup
-                                                                      .getAllFavouritesCall
-                                                                      .feature(
-                                                                    listViewGetAllFavouritesResponse
-                                                                        .jsonBody,
-                                                                  )?[favouriteIndex]) ==
-                                                                  'TEXT-TO-IMAGE'
-                                                              ? true
-                                                              : false,
-                                                          prompt: getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.prompt''',
-                                                          ).toString(),
-                                                          negativePrompt:
+                                                return SizedBox(
+                                                  width: double.infinity,
+                                                  child: Stack(
+                                                    children: [
+                                                      ImagelistWidget(
+                                                        key: Key(
+                                                            'Keyq33_${favouriteIndex}_of_${favourite.length}'),
+                                                        imageUrl: (BrookreatorGroup
+                                                                    .getAllFavouritesCall
+                                                                    .feature(
+                                                                  listViewGetAllFavouritesResponse
+                                                                      .jsonBody,
+                                                                )?[favouriteIndex]) ==
+                                                                'VDO-TO-VDO'
+                                                            ? getJsonField(
+                                                                favouriteItem,
+                                                                r'''$.vdoUrl''',
+                                                              ).toString()
+                                                            : getJsonField(
+                                                                favouriteItem,
+                                                                r'''$.url''',
+                                                              ).toString(),
+                                                        type: getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.feature''',
+                                                        ).toString(),
+                                                        imageId: getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.imageId''',
+                                                        ).toString(),
+                                                        title: () {
+                                                          if ('TEXT-TO-IMAGE' ==
                                                               getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.negativePrompt''',
-                                                          ).toString(),
-                                                          width: getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.width''',
-                                                          ),
-                                                          height: getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.height''',
-                                                          ),
-                                                          createdDate:
+                                                                favouriteItem,
+                                                                r'''$.feature''',
+                                                              ).toString()) {
+                                                            return 'Text to Image';
+                                                          } else if ('AI-PORTRAIT' ==
                                                               getJsonField(
-                                                            favouriteItem,
-                                                            r'''$.createdAt''',
-                                                          ).toString(),
-                                                          isVideo: (BrookreatorGroup
-                                                                      .getAllFavouritesCall
-                                                                      .feature(
-                                                                    listViewGetAllFavouritesResponse
-                                                                        .jsonBody,
-                                                                  )?[favouriteIndex]) ==
-                                                                  'VDO-TO-VDO'
-                                                              ? true
-                                                              : false,
+                                                                favouriteItem,
+                                                                r'''$.feature''',
+                                                              ).toString()) {
+                                                            return 'AI Portrait';
+                                                          } else if ('VDO-TO-VDO' ==
+                                                              getJsonField(
+                                                                favouriteItem,
+                                                                r'''$.feature''',
+                                                              ).toString()) {
+                                                            return 'AI Video';
+                                                          } else if ('AI-QRCODE' ==
+                                                              getJsonField(
+                                                                favouriteItem,
+                                                                r'''$.feature''',
+                                                              ).toString()) {
+                                                            return 'QR Generator';
+                                                          } else {
+                                                            return 'QR Classic';
+                                                          }
+                                                        }(),
+                                                        isImage: (BrookreatorGroup
+                                                                    .getAllFavouritesCall
+                                                                    .feature(
+                                                                  listViewGetAllFavouritesResponse
+                                                                      .jsonBody,
+                                                                )?[favouriteIndex]) ==
+                                                                'TEXT-TO-IMAGE'
+                                                            ? true
+                                                            : false,
+                                                        prompt: getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.prompt''',
+                                                        ).toString(),
+                                                        negativePrompt:
+                                                            getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.negativePrompt''',
+                                                        ).toString(),
+                                                        width: getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.width''',
                                                         ),
-                                                      ],
-                                                    ),
+                                                        height: getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.height''',
+                                                        ),
+                                                        createdDate:
+                                                            getJsonField(
+                                                          favouriteItem,
+                                                          r'''$.createdAt''',
+                                                        ).toString(),
+                                                        isVideo: (BrookreatorGroup
+                                                                    .getAllFavouritesCall
+                                                                    .feature(
+                                                                  listViewGetAllFavouritesResponse
+                                                                      .jsonBody,
+                                                                )?[favouriteIndex]) ==
+                                                                'VDO-TO-VDO'
+                                                            ? true
+                                                            : false,
+                                                      ),
+                                                    ],
                                                   ),
                                                 );
                                               },

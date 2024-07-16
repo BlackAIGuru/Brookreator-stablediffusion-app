@@ -8,7 +8,6 @@ import '/custom_code/actions/index.dart' as actions;
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'email_verify_model.dart';
 export 'email_verify_model.dart';
@@ -57,7 +56,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -72,9 +71,9 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                         context.safePop();
                       },
                       child: Container(
-                        decoration: BoxDecoration(),
+                        decoration: const BoxDecoration(),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               20.0, 3.0, 0.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -94,7 +93,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Text(
                         FFLocalizations.of(context).getText(
                           '0b80se8z' /* Verification Code */,
@@ -112,12 +111,12 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                 ),
                 Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 0.0),
+                      const EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             20.0, 0.0, 20.0, 0.0),
                         child: Text(
                           FFLocalizations.of(context).getText(
@@ -136,7 +135,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
                         child: PinCodeTextField(
                           autoDisposeControllers: false,
                           appContext: context,
@@ -161,7 +160,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                             fieldHeight: 44.0,
                             fieldWidth: 44.0,
                             borderWidth: 2.0,
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               bottomLeft: Radius.circular(12.0),
                               bottomRight: Radius.circular(12.0),
                               topLeft: Radius.circular(12.0),
@@ -188,10 +187,10 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: const AlignmentDirectional(0.0, 0.0),
                         child: Builder(
                           builder: (context) => Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 10.0, 30.0, 10.0, 0.0),
                             child: FFButtonWidget(
                               onPressed: () async {
@@ -211,7 +210,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0)
+                                            const AlignmentDirectional(0.0, 0.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         child: GestureDetector(
@@ -222,7 +221,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                                       _model.unfocusNode)
                                               : FocusScope.of(context)
                                                   .unfocus(),
-                                          child: ConfirmSuccessWidget(),
+                                          child: const ConfirmSuccessWidget(),
                                         ),
                                       );
                                     },
@@ -237,7 +236,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                         insetPadding: EdgeInsets.zero,
                                         backgroundColor: Colors.transparent,
                                         alignment:
-                                            AlignmentDirectional(0.0, -1.0)
+                                            const AlignmentDirectional(0.0, -1.0)
                                                 .resolve(
                                                     Directionality.of(context)),
                                         child: GestureDetector(
@@ -248,7 +247,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                                       _model.unfocusNode)
                                               : FocusScope.of(context)
                                                   .unfocus(),
-                                          child: Container(
+                                          child: SizedBox(
                                             height: 100.0,
                                             width: double.infinity,
                                             child: MessageErrorWidget(
@@ -273,9 +272,9 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                               options: FFButtonOptions(
                                 width: 325.0,
                                 height: 50.0,
-                                padding: EdgeInsetsDirectional.fromSTEB(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
-                                iconPadding: EdgeInsetsDirectional.fromSTEB(
+                                iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 0.0),
                                 color: FlutterFlowTheme.of(context).primary,
                                 textStyle: FlutterFlowTheme.of(context)
@@ -287,7 +286,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                       useGoogleFonts: false,
                                     ),
                                 elevation: 3.0,
-                                borderSide: BorderSide(
+                                borderSide: const BorderSide(
                                   color: Colors.transparent,
                                   width: 1.0,
                                 ),
@@ -299,7 +298,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                       ),
                       Builder(
                         builder: (context) => Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               0.0, 10.0, 0.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -319,7 +318,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                       elevation: 0,
                                       insetPadding: EdgeInsets.zero,
                                       backgroundColor: Colors.transparent,
-                                      alignment: AlignmentDirectional(0.0, -1.0)
+                                      alignment: const AlignmentDirectional(0.0, -1.0)
                                           .resolve(Directionality.of(context)),
                                       child: GestureDetector(
                                         onTap: () => _model
@@ -328,7 +327,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                                 .requestFocus(
                                                     _model.unfocusNode)
                                             : FocusScope.of(context).unfocus(),
-                                        child: Container(
+                                        child: SizedBox(
                                           height: 100.0,
                                           width: double.infinity,
                                           child: MessageSuccessWidget(
@@ -352,7 +351,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                       elevation: 0,
                                       insetPadding: EdgeInsets.zero,
                                       backgroundColor: Colors.transparent,
-                                      alignment: AlignmentDirectional(0.0, -1.0)
+                                      alignment: const AlignmentDirectional(0.0, -1.0)
                                           .resolve(Directionality.of(context)),
                                       child: GestureDetector(
                                         onTap: () => _model
@@ -361,7 +360,7 @@ class _EmailVerifyWidgetState extends State<EmailVerifyWidget> {
                                                 .requestFocus(
                                                     _model.unfocusNode)
                                             : FocusScope.of(context).unfocus(),
-                                        child: Container(
+                                        child: SizedBox(
                                           height: 100.0,
                                           width: double.infinity,
                                           child: MessageErrorWidget(
