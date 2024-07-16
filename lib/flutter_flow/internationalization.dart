@@ -1891,14 +1891,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'en': 'Text to Image',
       'th': 'ข้อความเป็นรูปภาพ',
     },
-    'pm50sf40': {
-      'en': 'Dune (Man)',
-      'th': 'ดูน (ชาย)',
-    },
-    '58kfou77': {
-      'en': 'AI Portrait',
-      'th': 'ภาพบุคคล AI',
-    },
     'xj70elkv': {
       'en': 'QR Generator',
       'th': 'เครื่องกำเนิด QR',

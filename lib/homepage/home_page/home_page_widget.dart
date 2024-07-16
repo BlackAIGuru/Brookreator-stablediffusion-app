@@ -1598,7 +1598,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                   9.0,
                                                               mainAxisSpacing:
                                                                   9.0,
-                                                              itemCount: 17,
+                                                              itemCount: 16,
                                                               itemBuilder:
                                                                   (context,
                                                                       index) {
@@ -1679,97 +1679,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                                       child: Text(
                                                                                         FFLocalizations.of(context).getText(
                                                                                           '7ql7z722' /* Text to Image */,
-                                                                                        ),
-                                                                                        style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                              fontFamily: 'NotoSansThai',
-                                                                                              fontSize: 6.0,
-                                                                                              letterSpacing: 0.0,
-                                                                                              useGoogleFonts: false,
-                                                                                            ),
-                                                                                      ),
-                                                                                    ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                        ),
-                                                                      ),
-                                                                  () => InkWell(
-                                                                        splashColor:
-                                                                            Colors.transparent,
-                                                                        focusColor:
-                                                                            Colors.transparent,
-                                                                        hoverColor:
-                                                                            Colors.transparent,
-                                                                        highlightColor:
-                                                                            Colors.transparent,
-                                                                        onTap:
-                                                                            () async {
-                                                                          context
-                                                                              .pushNamed(
-                                                                            'AIPortrait',
-                                                                            queryParameters:
-                                                                                {
-                                                                              'modelindex': serializeParam(
-                                                                                3,
-                                                                                ParamType.int,
-                                                                              ),
-                                                                            }.withoutNulls,
-                                                                          );
-                                                                        },
-                                                                        child:
-                                                                            SizedBox(
-                                                                          width:
-                                                                              MediaQuery.sizeOf(context).width * 0.3,
-                                                                          child:
-                                                                              Stack(
-                                                                            children: [
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                child: ClipRRect(
-                                                                                  borderRadius: BorderRadius.circular(8.0),
-                                                                                  child: Image.asset(
-                                                                                    'assets/images/Dune(Man).png',
-                                                                                    width: MediaQuery.sizeOf(context).width * 0.3,
-                                                                                    height: 152.0,
-                                                                                    fit: BoxFit.cover,
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(10.0, 113.0, 0.0, 0.0),
-                                                                                  child: Text(
-                                                                                    FFLocalizations.of(context).getText(
-                                                                                      'pm50sf40' /* Dune (Man) */,
-                                                                                    ),
-                                                                                    style: FlutterFlowTheme.of(context).titleSmall.override(
-                                                                                          fontFamily: 'NotoSansThai',
-                                                                                          fontSize: 10.0,
-                                                                                          letterSpacing: 0.0,
-                                                                                          useGoogleFonts: false,
-                                                                                        ),
-                                                                                  ),
-                                                                                ),
-                                                                              ),
-                                                                              Align(
-                                                                                alignment: const AlignmentDirectional(-1.0, 0.0),
-                                                                                child: Padding(
-                                                                                  padding: const EdgeInsetsDirectional.fromSTEB(9.0, 130.0, 0.0, 0.0),
-                                                                                  child: Container(
-                                                                                    width: 38.0,
-                                                                                    height: 10.0,
-                                                                                    decoration: BoxDecoration(
-                                                                                      color: const Color(0x94000000),
-                                                                                      borderRadius: BorderRadius.circular(20.0),
-                                                                                    ),
-                                                                                    child: Align(
-                                                                                      alignment: const AlignmentDirectional(0.0, 0.0),
-                                                                                      child: Text(
-                                                                                        FFLocalizations.of(context).getText(
-                                                                                          '58kfou77' /* AI Portrait */,
                                                                                         ),
                                                                                         style: FlutterFlowTheme.of(context).titleSmall.override(
                                                                                               fontFamily: 'NotoSansThai',
@@ -1985,7 +1894,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                             queryParameters:
                                                                                 {
                                                                               'modelindex': serializeParam(
-                                                                                6,
+                                                                                4,
                                                                                 ParamType.int,
                                                                               ),
                                                                             }.withoutNulls,
@@ -2165,7 +2074,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                                             queryParameters:
                                                                                 {
                                                                               'modelindex': serializeParam(
-                                                                                5,
+                                                                                3,
                                                                                 ParamType.int,
                                                                               ),
                                                                             }.withoutNulls,
